@@ -4,7 +4,7 @@
 var btnContainer = document.getElementById("nav-menu");
 
 // Get all buttons with class="nav-link" inside the container
-var btns = btnContainer.getElementsByClassName("nav-link");
+var btns = btnContainer.getElementsByClassName("nav-item");
 
 // Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {

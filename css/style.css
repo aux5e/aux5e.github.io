@@ -104,9 +104,14 @@ select {
     margin-top: 8px;
 }
 
+.active .nav-link {
+    color: #e40712;
+    font-weight: 600;
+}
+
 .site-title {
-	font-weight: 700;
-	letter-spacing: 0.3px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
 }
 
 .site-title-alt {
