@@ -8,6 +8,17 @@ $(function () {
 });
 
 /** ADD CLASS "active" ON MENU LINK */
+$(function () {
+    var current = pageName + ".html";
+    $('.nav-item li a').each(function () {
+        var $this = $(this);
+        // if the current path is like this link, make it active
+        if ($this.attr('href').indexOf(current) !== -1) {
+            $this.addClass('active');
+        }
+    })
+})
+
 $(document).ready(function () {
     $('.nav-item a').click(function () {
         //removing the previous selected menu state
