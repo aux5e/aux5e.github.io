@@ -1,0 +1,44 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl">
+                <div id="header-menu">
+					<nav class="navbar navbar-dark bg-dark navbar-expand-lg"  style="background-color: #111!important;">
+						<a class="navbar-brand site-title" href="https://5esrd.azurewebsites.net/">
+							<span class="site-title-alt">Aux.</span>5e
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						  <span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item">
+									<a class="nav-link <?php if ($pageName=='racas') echo 'active'; ?>" href="/racas.php">Raças</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link <?php if ($pageName=='classes') echo 'active'; ?>" href="/classes.php">Classes</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link <?php if ($pageName=='lista-de-magias') echo 'active'; ?>" href="/lista-de-magias.php">Magias</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link <?php if ($pageName=='antecedentes') echo 'active'; ?>" href="/antecedentes.php">Antecedentes</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link <?php if ($pageName=='talentos') echo 'active'; ?>" href="/talentos.php">Talentos</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link <?php if ($pageName=='itens') echo 'active'; ?>" href="/equipamento.php">Equipamento</a>
+								</li>
+							</ul>
+							<span class="navbar-text">
+							<a class="btn btn-light btn-qref" href="https://5esrd.azurewebsites.net/comprar-por-ponto.php" role="button"><i class="fas fa-calculator"style="color: #e40712;"></i></a>
+							<a class="btn btn-light btn-qref" href="https://5esrd.azurewebsites.net/quickref/" role="button"><i class="fas fa-dice-d20"></i> QuickRef</a>
+							</span>
+						</div>
+					</nav>
+				</div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<?php
+
+$conjuracao = true;
+$popover = true;
+$getObj = htmlspecialchars($_GET["nome"]);
+
+if ($conjuracao == true) {
+	include('/home/site/wwwroot/data/magias.php');
+	$magiasObj = json_decode($jsonobj);
+	$jsonUrl = file_get_contents('https://5esrd.azurewebsites.net/data/magias-noescape.json');
+	$magiasJson = json_decode($jsonUrl);
+}
+
+$pageName = 'magias';
+$pageTitle = ($magiasObj->$getObj->nome . ' - Magias');
+	
+?>
+
+<?php include('/home/site/wwwroot/partial/head.php'); ?>
+ 
+<body>
+
+<?php include('/home/site/wwwroot/partial/header.php'); ?>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xl">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="https://5esrd.azurewebsites.net/">Home</a></li>
+					<li class="breadcrumb-item" aria-current="page"><a href="javascript:history.back()">Magias</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><?php echo $magiasObj->$getObj->nome; ?></li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+</div>
+
+<div id="informacoes" class="container">
+	<div class="col-xl">
+		<div class="row nome-magia-top">
+			<div>
+				<h2><?php echo $magiasObj->$getObj->nome; ?><?php if ($magiasObj->$getObj->concentracao == true) { echo ' <span class="concentSpan2"></span>';}?> <?php echo ' <span class="magiaInglesNome">('.$magiasJson->data->$getObj->nome_ingles.')</span>'; ?></h2>
+			</div>
+		</div>
+		<div class="row magia-details">
+			<div class="col-sm-8 magia-col-details">
+				<div class="magia-details-top">
+					<div class="row">
+						<div class="col-4">
+							<label><b>Círculo</b></label>
+							<p><?php if ($magiasObj->$getObj->circulo != 0) {echo $magiasObj->$getObj->circulo . 'º círculo';} else {echo 'Truque';} ?></p>
+						</div>
+						<div class="col-4">
+							<label><b>Escola</b></label>
+							<p><?php echo $magiasObj->$getObj->escola; ?><?php if ($magiasObj->$getObj->ritual == true) { echo ' (ritual)';}?></p>
+						</div>
+						<div class="col-4">
+							<label><b>Tempo de Conjuração</b></label>
+							<p><?php echo $magiasObj->$getObj->tempo_conjuracao; ?></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-4">
+							<label><b>Alcance</b></label>
+							<p><?php echo $magiasObj->$getObj->alcance; ?></p>
+						</div>
+						<div class="col-4">
+							<label><b>Duração</b></label>
+							<p><?php echo $magiasObj->$getObj->duracao; ?></p>
+						</div>
+						<div class="col-4">
+							<label><b>Componentes</b></label>
+							<p><?php echo $magiasObj->$getObj->componentes; ?><?php if (isset($magiasObj->$getObj->componentes_extra)) {echo ' *';}?></p>
+						</div>
+					</div>
+				</div>
+				<div class="divisor-magia"></div>
+				<div class="magia-details-content">
+					<label><b>Descrição</b></label> <?php echo $magiasObj->$getObj->descricao; ?>
+					<?php if(isset($magiasObj->$getObj->componentes_extra)) {echo '<small style="padding-top: 20px; font-style: italic;">* - ' . $magiasObj->$getObj->componentes_extra . '</small>';} ?>
+					<div style="padding-top: 40px;">
+						<p><span style="font-weight: 600;">Classes:</span><?php if($magiasObj->$getObj->bardo == true) {echo '<span class="badge class-badge badge-light">Bardo</span>';}?><?php if($magiasObj->$getObj->bruxo == true) {echo '<span class="badge class-badge badge-light">Bruxo</span>';}?><?php if($magiasObj->$getObj->clerigo == true) {echo '<span class="badge class-badge badge-light">Clérigo</span>';}?><?php if($magiasObj->$getObj->druida == true) {echo '<span class="badge class-badge badge-light">Druida</span>';}?><?php if($magiasObj->$getObj->feiticeiro == true) {echo '<span class="badge class-badge badge-light">Feiticeiro</span>';}?><?php if($magiasObj->$getObj->guardiao == true) {echo '<span class="badge class-badge badge-light">Guardião</span>';}?><?php if($magiasObj->$getObj->ladino == true) {echo '<span class="badge class-badge badge-light">Ladino</span>';}?><?php if($magiasObj->$getObj->mago == true) {echo '<span class="badge class-badge badge-light">Mago</span>';}?><?php if($magiasObj->$getObj->paladino == true) {echo '<span class="badge class-badge badge-light">Paladino</span>';}?></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 magia-col-image">
+				<?php
+					if ($magiasObj->$getObj->escola == 'Encantamento') {
+						echo '<img src="/imagens/escola-encantamento.png" class="img-escola-magia img-fluid">';
+					} elseif ($magiasObj->$getObj->escola == 'Abjuração') {
+						echo '<img src="/imagens/escola-abjuracao.png" class="img-escola-magia img-fluid">';
+					} elseif ($magiasObj->$getObj->escola == 'Adivinhação') {
+						echo '<img src="/imagens/escola-adivinhacao.png" class="img-escola-magia img-fluid">';
+					} elseif ($magiasObj->$getObj->escola == 'Evocação') {
+						echo '<img src="/imagens/escola-evocacao.png" class="img-escola-magia img-fluid">';
+					} elseif ($magiasObj->$getObj->escola == 'Ilusão') {
+						echo '<img src="/imagens/escola-ilusao.png" class="img-escola-magia img-fluid">';
+					} elseif ($magiasObj->$getObj->escola == 'Invocação') {
+						echo '<img src="/imagens/escola-invocacao.png" class="img-escola-magia img-fluid">';
+					} elseif ($magiasObj->$getObj->escola == 'Necromancia') {
+						echo '<img src="/imagens/escola-necromancia.png" class="img-escola-magia img-fluid">';
+					} elseif ($magiasObj->$getObj->escola == 'Transmutação') {
+						echo '<img src="/imagens/escola-transmutacao.png" class="img-escola-magia img-fluid">';
+					} else {
+						echo '<img src="/imagens/escola-null.png" class="img-escola-magia">';
+					}
+				?>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<?php include('/home/site/wwwroot/partial/footer.php'); ?>

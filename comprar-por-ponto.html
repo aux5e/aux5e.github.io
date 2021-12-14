@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<?php
+    $pageName = 'comprar-por-pontos';
+    $pageTitle = 'Comprar por Pontos';
+    
+?>
+
+<?php include('/home/site/wwwroot/partial/head.php'); ?>
+
+<body>
+
+    <?php include('/home/site/wwwroot/partial/header.php'); ?>
+
+    <div class="container">
+        <div class="title">
+            <h1 class="titulo-detalhes" style="margin-bottom: 22px;">Personalizando os Valores dos Atributos</h1>
+        </div>
+        <div>
+            <div style="float: right; padding: 20px 15px 12px; background-color: #f9f9f9; color: #333; width: 220px; text-align: center; vertical-align: middle; margin-bottom: 18px; border: 1px solid #d8d8d8;">
+                <h6 style="font-family: 'Roboto Condensed'; font-size: 20px; font-weight: 600;">Total de Pontos: <span style="font-size: 22px;"><span class="TotalCost" id="TotalCost">0</span>/<span id="AvailablePointsTotal">27</span></span></h6>
+            </div>
+            <div style="float: right; padding: 19px 15px 0; margin-bottom: 18px;">
+                <input type="button" title="Reset allocated points" class="Reset btn btn-dark btn-lg" value="Resetar" onclick="pointsReset()">
+            </div>
+        </div>
+        <div>
+            <div class="Main">
+                <div class="houseRules" style="display: none;">
+                    <div class="houseCenter">
+                        <div class="houseCont">
+                            <dl class="house">
+                                <dt>Available Points</dt>
+                                <dd>
+                                    <div class="inputCont">
+                                        <table>
+                                            <tbody>
+                                                <tr class="updown">
+                                                    <td>
+                                                        <input type="number" id="AvailablePoints" name="AvailablePoints" value="27" min="1" max="99" step="1" readonly="Readonly" onchange="getTotals(), pointsReset()">
+                                                    </td>
+                                                    <td class="updownCont">
+                                                        <button class="up" onclick="increment(event)" value="AvailablePoints"></button>
+                                                        <button class="down" onclick="decrement(event)" value="AvailablePoints"></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </dd>
+                                <dt>Maximum Purchasable Attribute Before Bonuses</dt>
+                                <dd>
+                                    <div class="inputCont">
+                                        <table>
+                                            <tbody>
+                                                <tr class="updown">
+                                                    <td>
+                                                        <input type="number" id="AttributeMax" name="AttributeMax" value="15" min="9" max="18" step="1" readonly="Readonly" onchange="getTotals(), pointsReset()">
+                                                    </td>
+                                                    <td class="updownCont">
+                                                        <button class="up" onclick="increment(event)" value="AttributeMax"></button>
+                                                        <button class="down" onclick="decrement(event)" value="AttributeMax"></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </dd>
+                                <dt>Minimum Purchasable Attribute Before Bonuses</dt>
+                                <dd>
+                                    <div class="inputCont">
+                                        <table>
+                                            <tbody>
+                                                <tr class="updown">
+                                                    <td>
+                                                        <input type="number" id="AttributeMin" name="AttributeMin" value="8" min="3" max="15" step="1" readonly="Readonly" onchange="getTotals(), pointsReset()">
+                                                    </td>
+                                                    <td class="updownCont">
+                                                        <button class="up" onclick="increment(event)" value="AttributeMin"></button>
+                                                        <button class="down" onclick="decrement(event)" value="AttributeMin"></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </dd>
+                                <br>
+                                <dd><input type="button" value="Full Reset" title="Resets all settings and choices" class="FullReset" onclick="fullReset()"></dd>
+                            </dl>
+                        </div>
+                        <div class="costCont">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding-bottom: 40px;"></td>
+                                        <td>Adjust Point Costs</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="customCost">
+                                <tbody>
+                                    <tr class="downup">
+                                        <td class="costChange">18 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value18" value="19" min="0" max="50" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="18"></button>
+                                            <button class="down" onclick="decrease(event)" value="18"></button>
+                                        </td>
+                                        <td class="costChange">17 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value17" value="15" min="0" max="45" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="17"></button>
+                                            <button class="down" onclick="decrease(event)" value="17"></button>
+                                        </td>
+                                        <td class="costChange">16 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value16" value="12" min="0" max="40" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="16"></button>
+                                            <button class="down" onclick="decrease(event)" value="16"></button>
+                                        </td>
+                                        <td class="costChange">15 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value15" value="9" min="0" max="35" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="15"></button>
+                                            <button class="down" onclick="decrease(event)" value="15"></button>
+                                        </td>
+                                    </tr>
+                                    <tr class="downup">
+                                        <td class="costChange">14 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value14" value="7" min="0" max="30" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="14"></button>
+                                            <button class="down" onclick="decrease(event)" value="14"></button>
+                                        </td>
+                                        <td class="costChange">13 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value13" value="5" min="0" max="25" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="13"></button>
+                                            <button class="down" onclick="decrease(event)" value="13"></button>
+                                        </td>
+                                        <td class="costChange">12 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value12" value="4" min="0" max="20" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="12"></button>
+                                            <button class="down" onclick="decrease(event)" value="12"></button>
+                                        </td>
+                                        <td class="costChange">11 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value11" value="3" min="0" max="15" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="11"></button>
+                                            <button class="down" onclick="decrease(event)" value="11"></button>
+                                        </td>
+                                    </tr>
+                                    <tr class="downup">
+                                        <td class="costChange">10 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value10" value="2" min="0" max="10" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="10"></button>
+                                            <button class="down" onclick="decrease(event)" value="10"></button>
+                                        </td>
+                                        <td class="costChange">&nbsp;9 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value9" value="1" min="0" max="5" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="9"></button>
+                                            <button class="down" onclick="decrease(event)" value="9"></button>
+                                        </td>
+                                        <td class="costChange">&nbsp;8 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value8" value="0" min="0" max="0" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="8"></button>
+                                            <button class="down" onclick="decrease(event)" value="8"></button>
+                                        </td>
+                                        <td class="costChange">&nbsp;7 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value7" value="-1" min="-5" max="0" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="7"></button>
+                                            <button class="down" onclick="decrease(event)" value="7"></button>
+                                        </td>
+                                    </tr>
+                                    <tr class="downup">
+                                        <td class="costChange">&nbsp;6 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value6" value="-2" min="-10" max="0" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="6"></button>
+                                            <button class="down" onclick="decrease(event)" value="6"></button>
+                                        </td>
+                                        <td class="costChange">&nbsp;5 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value5" value="-4" min="-15" max="0" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="5"></button>
+                                            <button class="down" onclick="decrease(event)" value="5"></button>
+                                        </td>
+                                        <td class="costChange">&nbsp;4 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value4" value="-6" min="-20" max="0" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="4"></button>
+                                            <button class="down" onclick="decrease(event)" value="4"></button>
+                                        </td>
+                                        <td class="costChange">&nbsp;3 :</td>
+                                        <td>
+                                            <input type="number" id="costCount" class="value3" value="-9" min="-25" max="0" step="1" readonly="Readonly">
+                                        </td>
+                                        <td class="updownCont">
+                                            <button class="up" onclick="increase(event)" value="3"></button>
+                                            <button class="down" onclick="decrease(event)" value="3"></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="points" style="display: block;">
+                    <div style="display:none;" class="table-responsive">
+                        <table class="Selection table table-bordered table-striped">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 25%;">Select Race:</td>
+                                    <td style="width: 25%;" id="SelectRace"><select id="Race" class="Race" onchange="getRace()" style="width: 90%;">
+                                            <option id="OptionSelect" value="Select Race" data-rchoice="select" disabled="" selected="">Select</option>
+                                            <option value="CustomRace" data-rchoice="customrace">Custom Race</option>
+                                            <option value="Aarakocra" data-rchoice="aarakocra">Aarakocra</option>
+                                            <option value="Aasimar" data-rchoice="aasimar">Aasimar</option>
+                                            <option value="Bugbear" data-rchoice="bugbear">Bugbear</option>
+                                            <option value="Centaur" data-rchoice="centaur">Centaur</option>
+                                            <option value="Changeling" data-rchoice="changeling">Changeling</option>
+                                            <option value="Dragonborn" data-rchoice="dragonborn">Dragonborn</option>
+                                            <option value="Dwarf" data-rchoice="dwarf">Dwarf</option>
+                                            <option value="Elf" data-rchoice="elf">Elf</option>
+                                            <option value="Firbolg" data-rchoice="firbolg">Firbolg</option>
+                                            <option value="Genasi" data-rchoice="genasi">Genasi</option>
+                                            <option value="Gith" data-rchoice="gith">Gith</option>
+                                            <option value="Gnome" data-rchoice="gnome">Gnome</option>
+                                            <option value="Goblin" data-rchoice="goblin">Goblin</option>
+                                            <option value="Goliath" data-rchoice="goliath">Goliath</option>
+                                            <option value="Grung" data-rchoice="grung">Grung</option>
+                                            <option value="HalfElf" data-rchoice="halfelf">Half-Elf</option>
+                                            <option value="HalfOrc" data-rchoice="halforc">Half-Orc</option>
+                                            <option value="Halfling" data-rchoice="halfling">Halfling</option>
+                                            <option value="Hobgoblin" data-rchoice="hobgoblin">Hobgoblin</option>
+                                            <option value="Human" data-rchoice="human">Human</option>
+                                            <option value="Kalashtar" data-rchoice="kalashtar">Kalashtar</option>
+                                            <option value="Kenku" data-rchoice="kenku">Kenku</option>
+                                            <option value="Kobold" data-rchoice="kobold">Kobold</option>
+                                            <option value="Leonin" data-rchoice="leonin">Leonin</option>
+                                            <option value="Lizardfolk" data-rchoice="lizardfolk">Lizardfolk</option>
+                                            <option value="Locathah" data-rchoice="locathah">Locathah</option>
+                                            <option value="Loxodon" data-rchoice="loxodon">Loxodon</option>
+                                            <option value="Minotaur" data-rchoice="minotaur">Minotaur</option>
+                                            <option value="Orc" data-rchoice="orc">Orc</option>
+                                            <option value="Satyr" data-rchoice="satyr">Satyr</option>
+                                            <option value="Shifter" data-rchoice="shifter">Shifter</option>
+                                            <option value="SimicHybrid" data-rchoice="simichybrid">Simic Hybrid</option>
+                                            <option value="Tabaxi" data-rchoice="tabaxi">Tabaxi</option>
+                                            <option value="Tiefling" data-rchoice="tiefling">Tiefling</option>
+                                            <option value="Tortle" data-rchoice="tortle">Tortle</option>
+                                            <option value="Triton" data-rchoice="triton">Triton</option>
+                                            <option value="Vedalken" data-rchoice="vedalken">Vedalken</option>
+                                            <option value="Warforged" data-rchoice="warforged">Warforged</option>
+                                            <option value="YuanTi" data-rchoice="yuanti">Yuan-Ti Pureblood</option>
+                                        </select></td>
+                                    <td style="width: 25%;" id="SubraceOption"></td>
+                                    <td style="width: 25%;" id="SelectSubrace"></td>
+                                </tr>
+                                <tr id="abilityOptions">
+                                    <td style="display: none;" id="AbilityOption1">Ability Score #1:</td>
+                                    <td style="display: none;" id="AbilityMod1"><select id="ability1" style="width: 90%;">
+                                            <option value="selected">Select Attribute</option>
+                                            <option value="RacialStr">Strength</option>
+                                            <option value="RacialDex">Dexterity</option>
+                                            <option value="RacialCon">Constitution</option>
+                                            <option value="RacialInt">Intelligence</option>
+                                            <option value="RacialWis">Wisdom</option>
+                                            <option value="RacialCha">Charisma</option>
+                                        </select></td>
+                                    <td style="display: none;" id="AbilityOption2">Ability Score #2:</td>
+                                    <td style="display: none;" id="AbilityMod2"><select id="ability2" style="width: 90%;">
+                                            <option value="selected">Select Attribute</option>
+                                            <option value="RacialStr">Strength</option>
+                                            <option value="RacialDex">Dexterity</option>
+                                            <option value="RacialCon">Constitution</option>
+                                            <option value="RacialInt">Intelligence</option>
+                                            <option value="RacialWis">Wisdom</option>
+                                            <option value="RacialCha">Charisma</option>
+                                        </select></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="stats table-responsive">
+                        <table class="selection table table-bordered table-striped">
+                            <thead>
+                                <tr class="attributetop">
+                                    <th style="width: 20%; padding: 40px 20px!important;" scope="col">Atributo</th>
+                                    <th style="width: 15%; padding: 40px 20px!important;" class="text-center" scope="col">Valor</th>
+                                    <th style="width: 8%; display:none;"></th>
+                                    <th style="width: 12%; display:none;">Racial Bonus</th>
+                                    <th style="width: 8%; display:none;"></th>
+                                    <th style="width: 12%; display:none;">Total Score</th>
+                                    <th style="width: 12%; padding: 40px 20px!important;" class="text-center" scope="col">Modificador</th>
+                                    <th style="width: 15%; padding: 40px 20px!important;" class="text-center" scope="col">Custo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="attributeodd">
+                                    <td class="align-middle;">Força</td>
+                                    <td style="text-align: center;">
+                                        <div class="inputCont">
+                                            <div>
+                                                <div>
+                                                    <div class="updown">
+                                                        <div class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="AttributeStr" name="AttributeStr" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </div>
+                                                        <div class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="AttributeStr"></button>
+                                                            <button class="down" onclick="decrement(event)" value="AttributeStr"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">+</td>
+                                    <td style="text-align: center; display:none;" id="RaceStr">
+                                        <span id="RacialStr" style="display:none;">0</span>
+                                        <div id="customStr" class="inputCont" style="display:none">
+                                            <table>
+                                                <tbody>
+                                                    <tr class="updown">
+                                                        <td class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="RacialStr" value="0" min="-4" max="4" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </td>
+                                                        <td class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="RacialStr"></button>
+                                                            <button class="down" onclick="decrement(event)" value="RacialStr"></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">=</td>
+                                    <td style="text-align: center; display:none;" class="Total"><span id="TotalStr">8</span></td>
+                                    <td style="text-align: center; align-middle;" class="Modifier"><span id="ModifierStr">-1</span></td>
+                                    <td style="text-align: center; align-middle;"><span id="PointcostStr">0</span></td>
+                                </tr>
+                                <tr class="attributeeven">
+                                    <td style="align-middle;">Destreza</td>
+                                    <td style="text-align: center;">
+                                        <div class="inputCont">
+                                            <div>
+                                                <div>
+                                                    <div class="updown">
+                                                        <div class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="AttributeDex" name="AttributeDex" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </div>
+                                                        <div class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="AttributeDex"></button>
+                                                            <button class="down" onclick="decrement(event)" value="AttributeDex"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">+</td>
+                                    <td style="text-align: center; display:none;" id="RaceDex">
+                                        <span id="RacialDex" style="display:none;">0</span>
+                                        <div id="customDex" class="inputCont" style="display:none">
+                                            <table>
+                                                <tbody>
+                                                    <tr class="updown">
+                                                        <td class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="RacialDex" value="0" min="-4" max="4" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </td>
+                                                        <td class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="RacialDex"></button>
+                                                            <button class="down" onclick="decrement(event)" value="RacialDex"></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">=</td>
+                                    <td style="text-align: center; display:none;" class="Total"><span id="TotalDex">8</span></td>
+                                    <td style="text-align: center; align-middle;" class="Modifier"><span id="ModifierDex">-1</span></td>
+                                    <td style="text-align: center; align-middle;"><span id="PointcostDex">0</span></td>
+                                </tr>
+                                <tr class="attributeodd">
+                                    <td style="align-middle;">Constituição</td>
+                                    <td style="text-align: center;">
+                                        <div class="inputCont">
+                                            <div>
+                                                <div>
+                                                    <div class="updown">
+                                                        <div class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="AttributeCon" name="AttributeCon" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </div>
+                                                        <div class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="AttributeCon"></button>
+                                                            <button class="down" onclick="decrement(event)" value="AttributeCon"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">+</td>
+                                    <td style="text-align: center; display:none;" id="RaceCon">
+                                        <span id="RacialCon">0</span>
+                                        <div id="customCon" class="inputCont" style="display:none;">
+                                            <table>
+                                                <tbody>
+                                                    <tr class="updown">
+                                                        <td class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="RacialCon" value="0" min="-4" max="4" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </td>
+                                                        <td class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="RacialCon"></button>
+                                                            <button class="down" onclick="decrement(event)" value="RacialCon"></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">=</td>
+                                    <td style="text-align: center; display:none;" class="Total"><span id="TotalCon">8</span></td>
+                                    <td style="text-align: center; align-middle;" class="Modifier"><span id="ModifierCon">-1</span></td>
+                                    <td style="text-align: center; align-middle;"><span id="PointcostCon">0</span></td>
+                                </tr>
+                                <tr class="attributeeven">
+                                    <td style="align-middle;">Inteligência</td>
+                                    <td style="text-align: center;">
+                                        <div class="inputCont">
+                                            <div>
+                                                <div>
+                                                    <div class="updown">
+                                                        <div class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="AttributeInt" name="AttributeInt" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </div>
+                                                        <div class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="AttributeInt"></button>
+                                                            <button class="down" onclick="decrement(event)" value="AttributeInt"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">+</td>
+                                    <td style="text-align: center; display:none;" id="RaceInt">
+                                        <span id="RacialInt">0</span>
+                                        <div id="customInt" class="inputCont" style="display:none">
+                                            <table>
+                                                <tbody>
+                                                    <tr class="updown">
+                                                        <td class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="RacialInt" value="0" min="-4" max="4" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </td>
+                                                        <td class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="RacialInt"></button>
+                                                            <button class="down" onclick="decrement(event)" value="RacialInt"></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">=</td>
+                                    <td style="text-align: center; display:none;" class="Total"><span id="TotalInt">8</span></td>
+                                    <td style="text-align: center; align-middle;" class="Modifier"><span id="ModifierInt">-1</span></td>
+                                    <td style="text-align: center; align-middle;"><span id="PointcostInt">0</span></td>
+                                </tr>
+                                <tr class="attributeodd">
+                                    <td style="align-middle;">Sabedoria</td>
+                                    <td style="text-align: center;">
+                                        <div class="inputCont">
+                                            <div>
+                                                <div>
+                                                    <div class="updown">
+                                                        <div class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="AttributeWis" name="AttributeWis" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </div>
+                                                        <div class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="AttributeWis"></button>
+                                                            <button class="down" onclick="decrement(event)" value="AttributeWis"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">+</td>
+                                    <td style="text-align: center; display:none;" id="RaceWis">
+                                        <span id="RacialWis">0</span>
+                                        <div id="customWis" class="inputCont" style="display:none">
+                                            <table>
+                                                <tbody>
+                                                    <tr class="updown">
+                                                        <td class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="RacialWis" value="0" min="-4" max="4" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </td>
+                                                        <td class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="RacialWis"></button>
+                                                            <button class="down" onclick="decrement(event)" value="RacialWis"></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">=</td>
+                                    <td style="text-align: center; display:none;" class="Total"><span id="TotalWis">8</span></td>
+                                    <td style="text-align: center; align-middle;" class="Modifier"><span id="ModifierWis">-1</span></td>
+                                    <td style="text-align: center; align-middle;"><span id="PointcostWis">0</span></td>
+                                </tr>
+                                <tr class="attributeeven">
+                                    <td style="align-middle;">Carisma</td>
+                                    <td style="text-align: center;">
+                                        <div class="inputCont">
+                                            <div>
+                                                <div>
+                                                    <div class="updown">
+                                                        <div class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="AttributeCha" name="AttributeCha" value="8" min="8" max="15" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </div>
+                                                        <div class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="AttributeCha"></button>
+                                                            <button class="down" onclick="decrement(event)" value="AttributeCha"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">+</td>
+                                    <td style="text-align: center; display:none;" id="RaceCha">
+                                        <span id="RacialCha">0</span>
+                                        <div id="customCha" class="inputCont" style="display:none">
+                                            <table>
+                                                <tbody>
+                                                    <tr class="updown">
+                                                        <td class="abilityCount" id="abilityCount">
+                                                            <input type="number" id="RacialCha" value="0" min="-4" max="4" step="1" readonly="Readonly" onchange="getTotals()">
+                                                        </td>
+                                                        <td class="updownCont">
+                                                            <button class="up" onclick="increment(event)" value="RacialCha"></button>
+                                                            <button class="down" onclick="decrement(event)" value="RacialCha"></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; display:none;">=</td>
+                                    <td style="text-align: center; display:none;" class="Total"><span id="TotalCha">8</span></td>
+                                    <td style="text-align: center; align-middle;" class="Modifier"><span id="ModifierCha">-1</span></td>
+                                    <td style="text-align: center; align-middle;"><span id="PointcostCha">0</span></td>
+                                </tr>
+
+                                <tr style="display:none;">
+                                    <td></td>
+                                    <td style="text-align: center; align-middle;"></td>
+                                    <td style="display:none;"></td>
+                                    <td style="display:none;"></td>
+                                    <td style="display:none;"></td>
+                                    <td style="display:none;"></td>
+                                    <td style="text-align: center; align-middle;">
+                                        <h6 style="font-family: 'Roboto Condensed'; display:none;">Total de Pontos</h6>
+                                    </td>
+                                    <td style="text-align: center;"><span style="display:none;"><span class="TotalCost" id="TotalCost">0</span>/<span id="AvailablePointsTotal">27</span></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="margin-top: 16px;">
+                            <p><b>Conjunto padrão de valores:</b> 15, 14, 13, 12, 10, 8</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include('/home/site/wwwroot/partial/footer.php'); ?>
