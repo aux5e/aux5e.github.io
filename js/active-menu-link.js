@@ -1,3 +1,5 @@
+/** ACTIVE MENU LINK */
+
 // Get the container element
 var btnContainer = document.getElementById("navbarSupportedContent");
 
@@ -12,3 +14,13 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
+
+/** INCLUDE HTML FILE */
+
+$(function () {
+    var includes = $('[data-include]');
+    jQuery.each(includes, function () {
+        var file = '/partial/' + $(this).data('include') + '.html';
+        $(this).load(file);
+    });
+});
