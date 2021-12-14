@@ -1,9 +1,9 @@
 /** ADD CLASS "active" ON MENU LINK */
 
 // Get the container element
-var btnContainer = document.getElementById("navbarSupportedContent");
+var btnContainer = document.getElementById("nav-menu");
 
-// Get all buttons with class="btn" inside the container
+// Get all buttons with class="nav-link" inside the container
 var btns = btnContainer.getElementsByClassName("nav-link");
 
 // Loop through the buttons and add the active class to the current/clicked button
