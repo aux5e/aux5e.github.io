@@ -134,7 +134,13 @@ function remove_accents($string) {
 		var popover = true;
 		var getObj; //htmlspecialchars($_GET["nome"]);
 
-        const magiasJson = await(await fetch('/data/magias.json')).json();
+        async function load() {
+            let url = 'https://aux5e.github.io/data/magias.json';
+            let magiasJson = await (await fetch(url)).json();
+        }
+
+        load();
+
 		console.log(magiasJson);
 	</script>
 
