@@ -134,40 +134,18 @@ function remove_accents($string) {
 		var popover = true;
 		var getObj; //htmlspecialchars($_GET["nome"]);
 
-		const headerTable = document.getElementById('');
-		const section = document.querySelector('section');
+        const headerTable = document.getElementById('');
+        const section = document.querySelector('section');
 
-        async function loadIntoTable(url, table) {
-            const tableBody = table.querySelectior("tbody");
-            const response = await fetch(url);
-            const magiasJson = await response.json();
+		let requestURL = 'https://aux5e.github.io/data/magias.json';
+        let request = new XMLHttpRequest();
+		request.open('GET', requestURL);
+        request.responseType = 'json';
+		request.send();
 
-            console.log(magiasJson);
+		request.onload = function () {
+            const magiasJson = request.response;
         }
-
-		//let requestURL = 'https://aux5e.github.io/data/magias.json';
-		//let request = new XMLHttpRequest();
-		//request.open('GET', requestURL);
-		//request.responseType = 'json';
-		//request.send();
-
-		//request.onload = function () {
-		//	const  = request.response;
-		//}
-
-		//var r = new Array(), j = -1;
-		//for (var key = 0, size = magiasJson[data].length; key < size; key++) {
-		//	r[++j] = '<tr><td>';
-		//	r[++j] = data[key][0];
-		//	r[++j] = '</td><td class="whatever1">';
-		//	r[++j] = data[key][1];
-		//	r[++j] = '</td><td class="whatever2">';
-		//	r[++j] = data[key][2];
-		//	r[++j] = '</td></tr>';
-		//}
-		//$('#dataTable').html(r.join(''));
-
-		
 	</script>
 
 	<div data-include="header"></div>
@@ -257,23 +235,38 @@ function remove_accents($string) {
 	<div id="lista-de-magias" class="container">
 		<h1 class="titulo-detalhes" style="margin-bottom: 22px;">Lista de Magias</h1>
 
+		<?php
 
-
-		<table id="table-lista-de-magias" class="display table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
+		if (count($magiasJson["data"])) {
+		echo '<table id="table-lista-de-magias" class="display table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
+			';
+			echo '
 			<thead>
+				';
+				echo '
 				<tr>
-					<th scope="col" class="align-middle">Círculo</th>
-					<th scope="col" class="align-middle">Nome</th>
-					<th scope="col" class="align-middle" style="display:none;">Em Inglês</th>
-					<th scope="col" class="align-middle">Duração</th>
-					<th scope="col" class="align-middle">Alcance</th>
-					<th scope="col" class="align-middle">Tempo de Conjuração</th>
-				</tr>
-			</thead>
+					';
+					echo '
+					<th scope="col" class="align-middle">Círculo</th>';
+					echo '
+					<th scope="col" class="align-middle">Nome</th>';
+					echo '
+					<th scope="col" class="align-middle" style="display:none;">Em Inglês</th>';
+					echo '
+					<th scope="col" class="align-middle">Duração</th>';
+					echo '
+					<th scope="col" class="align-middle">Alcance</th>';
+					echo '
+					<th scope="col" class="align-middle">Tempo de Conjuração</th>';
+					echo '
+				</tr>';
+				echo '
+			</thead>';
+			echo '
 			<tbody>
+				';
 
-				
-				<!--foreach ($magiasJson["data"] as $entry) {
+				foreach ($magiasJson["data"] as $entry) {
 				echo '
 				<tr ';
 				echo ' onclick="window.location=\'';
@@ -319,10 +312,15 @@ function remove_accents($string) {
 
 					echo '
 				</tr>';
-				}-->
+				}
 
-			</tbody>
-		</table>
+				echo '
+			</tbody>';
+			echo '
+		</table>';
+		}
+
+		?>
 
 	</div>
 
