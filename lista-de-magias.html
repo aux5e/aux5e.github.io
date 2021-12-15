@@ -75,13 +75,21 @@
 	</script>
 </head>
 
+<script>
+	var popover = true;
+    var getObj; //htmlspecialchars($_GET["nome"]);
+
+	const magiasJson = JSON.parse('/data/magias.json');
+	console.log(magiasJson);
+</script>
+
 <!-- <?php
 $conjuracao = true;
 $popover = true;
 $getObj = htmlspecialchars($_GET["nome"]);
 
 if ($conjuracao == true) {
-	$jsonUrl = file_get_contents('https://aux5e.github.io/data/magias-noescape.json');
+	$jsonUrl = file_get_contents('https://aux5e.github.io/data/magias.json');
 	$magiasJson = json_decode($jsonUrl,true);
 }
 /** Função para retirar os acentos e letras maisculas dos nomes das magias */
