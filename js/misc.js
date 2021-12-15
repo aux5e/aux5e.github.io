@@ -8,13 +8,13 @@ $(function () {
 });
 
 /** ADD CLASS "active" ON MENU LINK */
-$(function ($) {
-    var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
-    $('#nav-menu .nav-item a').each(function () {
-        if (this.href === path) {
-            $(this).addClass('active');
-        }
-    });
+jQuery(function ($) {
+    var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
+    $(".navbar-nav > li > a").each(function () {
+        if ($(this).attr("href") == pgurl || $(this).attr("href") == '')
+            $(this).addClass("active");
+        // $(this).parent("li").addClass("active");
+    })
 });
 
 
