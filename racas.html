@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
-    <link rel="icon" href="../imagens/favicon.png">
+    <link rel="icon" href="/imagens/favicon.png">
     <script>
         var pageName = 'racas';
-        var pageTitle = 'Informações Relevantes';
+        var pageTitle = 'Raças';
+        var pageGroup = 'root';
 
-        document.write("<title>" + pageTitle + "- Raças</title>");
+        document.write("<title>" + pageTitle + "- Aux.5e</title>");
     </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/misc.js" type="text/javascript"></script>
     <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
-    <!-- <?php if ($pageGroup='classes' || 'racas' || 'detalhes') echo '<script src="/js/active-menu-link.js" type="text/javascript"></script>' ?> -->
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
     <script type="text/javascript">
@@ -60,22 +60,26 @@
 
 
         });
-    </script>
-    <!-- <?php if ($pageGroup == 'detalhes') echo '<script>$(document).ready(function(){var o=$(".col-9").height()-$(".secondary-content").height();$(window).scroll(function(){var t=$(this).scrollTop();$(".secondary-content").height();t<=150?$(".secondary-content").css({position:"absolute",top:"0"}):t>=o?$(".secondary-content").css({position:"absolute",bottom:"0",top:"auto"}):$(".secondary-content").css({position:"fixed",top:"20px"})})});</script>' ?>
-    <?php
-        if ($pageGroup == 'listasMagias') {
-            echo '<script>';
-            echo '$(document).ready(function() {';
-            echo '$(\'#table-lista-de-magias\').DataTable({';
-                echo 'responsive: true,';
-                echo 'language: {';
-                    echo 'url: "/data/dataTables.ptbr.json"';
-                echo '}});';
-            echo '});';
-            echo '</script>';
+    
+        if (pageGroup !== 'undefined' && pageGroup == 'detalhes') {
+            var detalhesScript = '$(document).ready(function(){var o=$(".col-9").height()-$(".secondary-content").height();$(window).scroll(function(){var t=$(this).scrollTop();$(".secondary-content").height();t<=150?$(".secondary-content").css({position:"absolute",top:"0"}):t>=o?$(".secondary-content").css({position:"absolute",bottom:"0",top:"auto"}):$(".secondary-content").css({position:"fixed",top:"20px"})})});';
+            
+            document.write(detalhesScript);
         }
-    ?>
-    <?php if ($pageName == 'comprar-por-pontos') echo '<script src="https://5esrd.azurewebsites.net/js/comprar-por-ponto.js"></script>'; ?> -->
+
+        if (pageGroup !== 'undefined' && pageGroup == 'listasMagias') {
+            var listaMagiasScript = '$(document).ready(function() {';
+            listaMagiasScript += '$(document).ready(function() {';
+            listaMagiasScript += '$(\'#table-lista-de-magias\').DataTable({';
+            listaMagiasScript += 'responsive: true,';
+            listaMagiasScript += 'language: {';
+            listaMagiasScript += 'url: "/data/dataTables.ptbr.json"';
+            listaMagiasScript += '}});';
+            listaMagiasScript += '});';
+
+            document.write(listaMagiasScript);
+        }
+    </script>
 </head>
  
 <body>
@@ -104,7 +108,7 @@
                     <p>Audazes e resistentes, os anões são conhecidos como guerreiros hábeis, mineradores e artífices da pedra e do metal.</p>
                     <h6 class="small"><b>Traços Raciais</b></h6>
                     <p class="small">+2 Constituição, Visão no Escuro, Resistência a Toxinas, Treinamento Anão em Combate, Conhecimento de Pedras</p>
-                    <p><a href="/racas/anao.php" class="btn btn-phb btn-lg">Veja detalhes</a></p>
+                    <p><a href="/racas/anao.html" class="btn btn-phb btn-lg">Veja detalhes</a></p>
                 </div>
             </div>
         </div>
@@ -115,7 +119,7 @@
                     <p>Os elfos são um povo mágico e de graça sobrenatural que vive no mundo mas a ele não pertence inteiramente.</p>
                     <h6 class="small"><b>Traços Raciais</b></h6>
                     <p class="small">+2 Destreza, Visão no Escuro, Sentidos Aguçados, Ancestralidade Feérica, Transe</p>
-                    <p><a href="/racas/elfo.php" class="btn btn-phb btn-lg">Veja detalhes</a></p>
+                    <p><a href="/racas/elfo.html" class="btn btn-phb btn-lg">Veja detalhes</a></p>
                 </div>
             </div>
         </div>
@@ -126,7 +130,7 @@
                     <p>Os humanos são o povo mais adaptável e ambicioso entre as raças comuns. Seja qual for a sua motivação, os humanos são os inovadores, os empreendedores e os pioneiros do mundo.</p>
                     <h6 class="small"><b>Traços Raciais</b></h6>
                     <p class="small">+1 em todos os atributos, Idioma Extra</p>
-                    <p><a href="/racas/humano.php" class="btn btn-phb btn-lg">Veja detalhes</a></p>
+                    <p><a href="/racas/humano.html" class="btn btn-phb btn-lg">Veja detalhes</a></p>
                 </div>
             </div>
         </div>
@@ -140,7 +144,7 @@
                     <p>Para sobreviver em um mundo repleto de criaturas grandes, os pequeninos evitam ser notados, ou, quando falham, evitam conflitos.</p>
                     <h6 class="small"><b>Traços Raciais</b></h6>
                     <p class="small">+2 Destreza, Sortudo, Corajoso, Agilidade Pequenina</p>
-                    <p><a href="/racas/pequenino.php" class="btn btn-phb btn-lg">Veja detalhes</a></p>
+                    <p><a href="/racas/pequenino.html" class="btn btn-phb btn-lg">Veja detalhes</a></p>
                 </div>
             </div>
         </div>
@@ -151,7 +155,7 @@
                     <p>Os draconatos se parecem muito com dragões humanoides, embora lhes faltem asas ou caudas.</p>
                     <h6 class="small"><b>Traços Raciais</b></h6>
                     <p class="small">+2 Força, +1 Carisma, Herança Dracônica, Ataque de Sopro, Resistência a Dano</p>
-                    <p><a href="/racas/draconato.php" class="btn btn-phb btn-lg">Veja detalhes</a></p>
+                    <p><a href="/racas/draconato.html" class="btn btn-phb btn-lg">Veja detalhes</a></p>
                 </div>
             </div>
         </div>
@@ -162,7 +166,7 @@
                     <p>A energia e o entusiasmo de um gnomo pela vida reluzem em cada centímetro do seu corpo diminuto.</p>
                     <h6 class="small"><b>Traços Raciais</b></h6>
                     <p class="small">+2 Inteligência, Visão no Escuro, Astúcia de Gnomo</p>
-                    <p><a href="/racas/gnomo.php" class="btn btn-phb btn-lg">Veja detalhes</a></p>
+                    <p><a href="/racas/gnomo.html" class="btn btn-phb btn-lg">Veja detalhes</a></p>
                 </div>
             </div>
         </div>
@@ -176,7 +180,7 @@
                     <p>Os meio-elfos combinam o que alguns dizem ser as melhores qualidades de seus pais elfos e humanos.</p>
                     <h6 class="small"><b>Traços Raciais</b></h6>
                     <p class="small">+2 Carisma, +1 em dois outros atributos, Visão no Escuro, Ancestralidade Feérica, Versatilidade com Perícias</p>
-                    <p><a href="/racas/meio-elfo.php" class="btn btn-phb btn-lg">Veja detalhes</a></p>
+                    <p><a href="/racas/meio-elfo.html" class="btn btn-phb btn-lg">Veja detalhes</a></p>
                 </div>
             </div>
         </div>
@@ -187,7 +191,7 @@
                     <p>A pigmentação cinzenta dos meio-orcs, suas testas avantajadas, mandíbulas e dentes salientes e corpos maciços tornam flagrante a sua herança orc.</p>
                     <h6 class="small"><b>Traços Raciais</b></h6>
                     <p class="small">+2 Força, +1 Constituição, Visão no Escuro, Ameaçador, Vigor Implacável, Ataques Selvagens</p>
-                    <p><a href="/racas/meio-orc.php" class="btn btn-phb btn-lg">Veja detalhes</a></p>
+                    <p><a href="/racas/meio-orc.html" class="btn btn-phb btn-lg">Veja detalhes</a></p>
                 </div>
             </div>   
         </div>
@@ -198,7 +202,7 @@
                     <p>Ser recebido com olhares e sussurros, sofrer violência e insultos na rua, ver desconfiança e medo em todos os olhares: esse é o destino de todo tiferino.</p>
                     <h6 class="small"><b>Traços Raciais</b></h6>
                     <p class="small">+2 Carisma, +1 Inteligência, Visão no Escuro, Resistência Infernal, Legado Infernal</p>
-                    <p><a href="/racas/tiferinos.php" class="btn btn-phb btn-lg">Veja detalhes</a></p>
+                    <p><a href="/racas/tiferinos.html" class="btn btn-phb btn-lg">Veja detalhes</a></p>
                 </div>
             </div>
         </div>

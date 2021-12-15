@@ -15,35 +15,85 @@
 								<li class="nav-item">
 									<script>
 										var currentpath = location.pathname;
-										var pageNameUrl = "/" + pageName + ".html";
-										var menuRacas = '<a class="nav-link>';
-										if (currentpath == pageNameUrl) {
-											menuRacas += 'active';
-                                        }
+										var pageNameUrl1 = "/" + "racas" + ".html";
+										var menuRacas = '<a class="nav-link';
+										if (currentpath == pageNameUrl1) {
+											menuRacas += ' active';
+										}
 										menuRacas += '" href="/racas.html">Raças</a>';
-                                        document.write(menuRacas);
+                                        $("#menuRacas").html(menuRacas);
 									</script>
-									<!--<a class="nav-link" href="/racas.html">Raças</a>-->
+									<div id="menuRacas"></div>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="/classes.html">Classes</a>
+									<script>
+										var currentpath = location.pathname;
+										var pageNameUrl2 = "/" + "classes" + ".html";
+										var menuClasses = '<a class="nav-link';
+										if (currentpath == pageNameUrl2) {
+											menuClasses += ' active';
+										}
+										menuClasses += '" href="/classes.html">Classes</a>';
+                                        $("#menuClasses").html(menuClasses);
+									</script>
+									<div id="menuClasses"></div>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="/lista-de-magias.html">Magias</a>
+									<script>
+										var currentpath = location.pathname;
+										var pageNameUrl3 = "/" + "lista-de-magias" + ".html";
+										var menuMagias = '<a class="nav-link';
+										if (currentpath == pageNameUrl3) {
+											menuMagias += ' active';
+										}
+										menuMagias += '" href="/lista-de-magias.html">Magias</a>';
+                                        $("#menuMagias").html(menuMagias);
+									</script>
+									<div id="menuMagias"></div>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="/antecedentes.html">Antecedentes</a>
+									<script>
+										var currentpath = location.pathname;
+										var pageNameUrl4 = "/" + "antecedentes" + ".html";
+										var menuAntecedentes = '<a class="nav-link';
+										if (currentpath == pageNameUrl4) {
+											menuAntecedentes += ' active';
+										}
+										menuAntecedentes += '" href="/antecedentes.html">Antecedentes</a>';
+                                        $("#menuAntecedentes").html(menuAntecedentes);
+									</script>
+									<div id="menuAntecedentes"></div>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="/talentos.html">Talentos</a>
+									<script>
+										var currentpath = location.pathname;
+										var pageNameUrl5 = "/" + "talentos" + ".html";
+										var menuTalentos = '<a class="nav-link';
+										if (currentpath == pageNameUrl5) {
+											menuTalentos += ' active';
+										}
+										menuTalentos += '" href="/talentos.html">Talentos</a>';
+                                        $("#menuTalentos").html(menuTalentos);
+									</script>
+									<div id="menuTalentos"></div>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="/equipamento.html">Equipamento</a>
+									<script>
+										var currentpath = location.pathname;
+										var pageNameUrl6 = "/" + "equipamento" + ".html";
+										var menuEquipamento = '<a class="nav-link';
+										if (currentpath == pageNameUrl6) {
+											menuEquipamento += ' active';
+										}
+										menuEquipamento += '" href="/equipamento.html">Equipamento</a>';
+                                        $("#menuEquipamento").html(menuEquipamento);
+									</script>
+									<div id="menuEquipamento"></div>
 								</li>
 							</ul>
 							<span class="navbar-text">
-							<a class="btn btn-light btn-qref" href="https://aux5e.github.io/comprar-por-ponto.php" role="button"><i class="fas fa-calculator"style="color: #e40712;"></i></a>
-							<a class="btn btn-light btn-qref" href="https://aux5e.github.io/quickref/" role="button"><i class="fas fa-dice-d20"></i> QuickRef</a>
+							<a class="btn btn-light btn-qref" href="/comprar-por-ponto.html" role="button"><i class="fas fa-calculator"style="color: #e40712;"></i></a>
+							<a class="btn btn-light btn-qref" href="/quickref/" role="button"><i class="fas fa-dice-d20"></i> QuickRef</a>
 							</span>
 						</div>
 					</nav>

@@ -1,16 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php
-    $pageName = 'equipamento';
-    $pageTitle = 'Equipamento - Informações Relevantes';
-    $pageGroup = 'detalhes';
-?>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
+    <link rel="icon" href="/imagens/favicon.png">
+    <script>
+        var pageName = 'equipamento';
+        var pageTitle = 'Equipamento';
+        var pageGroup = 'detalhes';
 
-<?php include('/home/site/wwwroot/partial/head.php'); ?>
+        document.write("<title>" + pageTitle + "- Aux.5e</title>");
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/misc.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.magia-hover').tooltip({
+                track: true,
+                open: function (event, ui) {
+                    var userid = this.id;
+
+                    $.ajax({
+                        url: '/data/magias-popover.php',
+                        type: 'post',
+                        data: {
+                            userid: userid
+                        },
+                        success: function (response) {
+
+                            // Setting content option
+                            $("#" + userid).tooltip('option', 'content', response);
+
+                        }
+                    });
+                }
+            });
+
+            $('.magia-hover').mouseout(function () {
+                // re-initializing tooltip
+                $(this).attr('title', 'Carregando...');
+                $(this).tooltip();
+                $('.ui-helper-hidden-accessible').hide();
+                //$('.srd-tooltip').hide();
+            });
+
+
+        });
+    
+        $(document).ready(function(){var o=$(".col-9").height()-$(".secondary-content").height();$(window).scroll(function(){var t=$(this).scrollTop();$(".secondary-content").height();t<=150?$(".secondary-content").css({position:"absolute",top:"0"}):t>=o?$(".secondary-content").css({position:"absolute",bottom:"0",top:"auto"}):$(".secondary-content").css({position:"fixed",top:"20px"})})});
+    </script>
+</head>
 
 <body>
 
-    <?php include('/home/site/wwwroot/partial/header.php'); ?>
+    <div data-include="header"></div>
 
     <div class="container">
         <div class="row">
@@ -1745,7 +1802,7 @@
                         <p><b>Aríete Portátil.</b> Você pode usar um aríete portátil para quebrar portas. Ao fazer isso, ganha um bônus de +4 no teste de Força. Outro personagem pode ajudar você a usar o aríete, dando-lhe vantagem neste teste.</p>
                         <p><b>Armadilha de Caça.</b> Ao usar sua ação para preparar uma armadilha, você forma um anel com dentes de aço que se fecham quando uma criatura pisa em uma placa de pressão no centro. A armadilha é presa por uma corrente pesada a um objeto imóvel, como uma árvore ou um piquete encravado no chão. A criatura que pisar na placa deve ser bem-sucedida em uma salvaguarda de Destreza com CD 13 ou sofrerá 1d4 pontos de dano perfurante e cessará seu movimento. Daí em diante, até que a criatura se liberte da armadilha, seu movimento ficará limitado pelo comprimento da corrente (normalmente 3 metros). Uma criatura pode usar uma ação em um teste de Força com CD 13 para se libertar ou para libertar outra criatura dentro do alcance, em caso de sucesso. Cada falha no teste causa 1 ponto de dano perfurante na criatura aprisionada.</p>
                         <p><b>Balança de Mercador.</b> Uma balança de mercador inclui uma pequena balança, pratos e um sortimento de pesos de até 1 quilo. Com ela, você pode medir o peso exato de pequenos objetos, como metais preciosos brutos ou bens de troca, de forma a ajudar a determinar seu valor.</p>
-                        <p><b>Bolsa para Componentes.</b> Trata-se de uma pequena bolsa de couro à prova d’água, atrelada ao cinto, que possui compartimentos para armazenar todos os componentes materiais e demais itens especiais que você precisa para conjurar magias, exceto os componentes que têm um custo específico (como indicado na descrição das magias).</p>
+                        <p><b>Bolsa para Componentes.</b> Trata-se de uma pequena bolsa de couro à prova d'água, atrelada ao cinto, que possui compartimentos para armazenar todos os componentes materiais e demais itens especiais que você precisa para conjurar magias, exceto os componentes que têm um custo específico (como indicado na descrição das magias).</p>
                         <p><b>Cadeado.</b> Uma chave é fornecida com a fechadura. Sem a chave, uma criatura proficiente com ferramentas de ladrão pode abrir a fechadura com um teste bem-sucedido de Destreza com CD 15. O DM pode decidir que fechaduras melhores (CD acima de 15) estão disponíveis por preços mais altos.</p>
                         <p><b>Caixa para Fogo.</b> Este pequeno recipiente contém sílica, pederneira e uma acendalha (geralmente um pano seco embebido em óleo) usados para atear fogo. Usar este item para acender uma tocha - ou qualquer coisa exposta com combustível abundante - requer uma ação. Acender outros tipos de fogo leva 1 minuto.</p>
                         <p><b>Corda.</b> Seja ela feita de cânhamo ou de seda, uma corda tem 2 pontos de vida e pode ser rompida com um teste de</p>
@@ -2868,7 +2925,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center align-middle" scope="row">48</td>
-                                            <td class="align-middle" scope="row">Um orbe de vidro repleto d’água, contendo um peixinho dourado mecânico</td>
+                                            <td class="align-middle" scope="row">Um orbe de vidro repleto d'água, contendo um peixinho dourado mecânico</td>
                                         </tr>
                                         <tr>
                                             <td class="text-center align-middle" scope="row">49</td>
@@ -3089,4 +3146,4 @@
         </div>
     </div>
 
-    <?php include('/home/site/wwwroot/partial/footer.php'); ?>
+    <div data-include="footer"></div>
