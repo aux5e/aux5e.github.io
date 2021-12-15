@@ -56,43 +56,43 @@
 </template>
 
 <script>
-        (function (window, document) {
-            var elemName = 'quickref-item';
-            var thatDoc = document;
-            var thisDoc = (thatDoc.currentScript || thatDoc._currentScript).ownerDocument;
+    (function (window, document) {
+        var elemName = 'quickref-item';
+        var thatDoc = document;
+        var thisDoc = (thatDoc.currentScript || thatDoc._currentScript).ownerDocument;
 
-            var proto = Object.create(HTMLElement.prototype, {
-                createdCallback: {
-                    value: function () {
-                        var template = thisDoc.getElementById(elemName);
-                        var clone = thatDoc.importNode(template.content, true);
-                        var root = this.createShadowRoot().appendChild(clone);
-                    }
-                },
-                attachedCallback: {
-                    value: function () {
-                        var root = this.shadowRoot;
-                        var icon = root.getElementById("icon");
-                        var title = root.getElementById("title");
-                        var text = root.getElementById("text");
+        var proto = Object.create(HTMLElement.prototype, {
+            createdCallback: {
+                value: function () {
+                    var template = thisDoc.getElementById(elemName);
+                    var clone = thatDoc.importNode(template.content, true);
+                    var root = this.createShadowRoot().appendChild(clone);
+                }
+            },
+            attachedCallback: {
+                value: function () {
+                    var root = this.shadowRoot;
+                    var icon = root.getElementById("icon");
+                    var title = root.getElementById("title");
+                    var text = root.getElementById("text");
 
-                        for (var i = 0; i < this.attributes.length; i++) {
-                            var attribute = this.attributes[i];
-                            var name = attribute.name;
-                            var value = attribute.value;
-                            switch (name) {
-                                case "data-icon":   icon.className += " icon-" + value; break;
-                                case "data-title":  title.innerHTML = value; break;
-                                case "data-text":   text.innerHTML = value.replace("|","<br />"); break;
-                            }
-
+                    for (var i = 0; i < this.attributes.length; i++) {
+                        var attribute = this.attributes[i];
+                        var name = attribute.name;
+                        var value = attribute.value;
+                        switch (name) {
+                            case "data-icon": icon.className += " icon-" + value; break;
+                            case "data-title": title.innerHTML = value; break;
+                            case "data-text": text.innerHTML = value.replace("|", "<br />"); break;
                         }
 
                     }
+
                 }
-            });
-            thatDoc.registerElement(elemName, { prototype: proto });
-        })(window, document);
+            }
+        });
+        thatDoc.registerElement(elemName, { prototype: proto });
+    })(window, document);
 </script>
 <!-- ------------------------------------------------------------------ -->
 <!--           end of template                                          -->

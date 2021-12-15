@@ -1,87 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
-	<link rel="icon" href="/imagens/favicon.png">
-	<script>
-		var pageName = 'magias';
-		var pageTitle = 'TBD';
-		//$pageTitle = ($magiasObj->$getObj->nome . ' - Magias');
-		var pageGroup = 'root';
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
+    <link rel="icon" href="/imagens/favicon.png">
+    <script>
+        var pageName = 'magias';
+        var pageTitle = 'TBD';
+        //$pageTitle = ($magiasObj->$getObj->nome . ' - Magias');
+        var pageGroup = 'root';
 
-		document.write("<title>" + pageTitle + "- Aux.5e</title>");
-	</script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/all.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script src="/js/misc.js" type="text/javascript"></script>
-	<script src="/js/jquery-ui.min.js" type="text/javascript"></script>
-	<script src="/js/active-menu-link.js" type="text/javascript"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
-	<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
-	<!-- <?php if ($pageGroup='classes' || 'racas' || 'detalhes') echo '<script src="/js/active-menu-link.js" type="text/javascript"></script>' ?> -->
-	<script type="text/javascript">
-		$(function () {
-			$('.magia-hover').tooltip({
-				track: true,
-				open: function (event, ui) {
-					var userid = this.id;
+        document.write("<title>" + pageTitle + "- Aux.5e</title>");
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="/js/misc.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
+    <!-- <?php if ($pageGroup='classes' || 'racas' || 'detalhes') echo '<script src="/js/active-menu-link.js" type="text/javascript"></script>' ?> -->
+    <script type="text/javascript">
+        $(function () {
+            $('.magia-hover').tooltip({
+                track: true,
+                open: function (event, ui) {
+                    var userid = this.id;
 
-					$.ajax({
-						url: '/data/magias-popover.php',
-						type: 'post',
-						data: {
-							userid: userid
-						},
-						success: function (response) {
+                    $.ajax({
+                        url: '/data/magias-popover.php',
+                        type: 'post',
+                        data: {
+                            userid: userid
+                        },
+                        success: function (response) {
 
-							// Setting content option
-							$("#" + userid).tooltip('option', 'content', response);
+                            // Setting content option
+                            $("#" + userid).tooltip('option', 'content', response);
 
-						}
-					});
-				}
-			});
+                        }
+                    });
+                }
+            });
 
-			$('.magia-hover').mouseout(function () {
-				// re-initializing tooltip
-				$(this).attr('title', 'Carregando...');
-				$(this).tooltip();
-				$('.ui-helper-hidden-accessible').hide();
-				//$('.srd-tooltip').hide();
-			});
+            $('.magia-hover').mouseout(function () {
+                // re-initializing tooltip
+                $(this).attr('title', 'Carregando...');
+                $(this).tooltip();
+                $('.ui-helper-hidden-accessible').hide();
+                //$('.srd-tooltip').hide();
+            });
 
 
-		});
+        });
 
-		if (pageGroup !== 'undefined' && pageGroup == 'detalhes') {
-			var detalhesScript = '$(document).ready(function(){var o=$(".col-9").height()-$(".secondary-content").height();$(window).scroll(function(){var t=$(this).scrollTop();$(".secondary-content").height();t<=150?$(".secondary-content").css({position:"absolute",top:"0"}):t>=o?$(".secondary-content").css({position:"absolute",bottom:"0",top:"auto"}):$(".secondary-content").css({position:"fixed",top:"20px"})})});';
+        if (pageGroup !== 'undefined' && pageGroup == 'detalhes') {
+            var detalhesScript = '$(document).ready(function(){var o=$(".col-9").height()-$(".secondary-content").height();$(window).scroll(function(){var t=$(this).scrollTop();$(".secondary-content").height();t<=150?$(".secondary-content").css({position:"absolute",top:"0"}):t>=o?$(".secondary-content").css({position:"absolute",bottom:"0",top:"auto"}):$(".secondary-content").css({position:"fixed",top:"20px"})})});';
 
-			document.write(detalhesScript);
-		}
+            document.write(detalhesScript);
+        }
 
-		if (pageGroup !== 'undefined' && pageGroup == 'listasMagias') {
-			var listaMagiasScript = '$(document).ready(function() {';
-			listaMagiasScript += '$(document).ready(function() {';
-			listaMagiasScript += '$(\'#table-lista-de-magias\').DataTable({';
-			listaMagiasScript += 'responsive: true,';
-			listaMagiasScript += 'language: {';
-			listaMagiasScript += 'url: "/data/dataTables.ptbr.json"';
-			listaMagiasScript += '}});';
-			listaMagiasScript += '});';
+        if (pageGroup !== 'undefined' && pageGroup == 'listasMagias') {
+            var listaMagiasScript = '$(document).ready(function() {';
+            listaMagiasScript += '$(document).ready(function() {';
+            listaMagiasScript += '$(\'#table-lista-de-magias\').DataTable({';
+            listaMagiasScript += 'responsive: true,';
+            listaMagiasScript += 'language: {';
+            listaMagiasScript += 'url: "/data/dataTables.ptbr.json"';
+            listaMagiasScript += '}});';
+            listaMagiasScript += '});';
 
-			document.write(listaMagiasScript);
-		}
-	</script>
+            document.write(listaMagiasScript);
+        }
+    </script>
 </head>
 <!-- $conjuracao = true;
 $popover = true;
@@ -96,72 +107,104 @@ if ($conjuracao == true) {
 
 <body>
 
-	<div data-include="header"></div>
+    <div data-include="header"></div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-xl">
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="https://aux5e.github.io/">Home</a></li>
-						<li class="breadcrumb-item" aria-current="page"><a href="javascript:history.back()">Magias</a></li>
-						<li class="breadcrumb-item active" aria-current="page"><?php echo $magiasObj->$getObj->nome; ?></li>
-					</ol>
-				</nav>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://aux5e.github.io/">Home</a></li>
+                        <li class="breadcrumb-item" aria-current="page"><a href="javascript:history.back()">Magias</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <?php echo $magiasObj->$getObj->nome; ?>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
 
-	<div id="informacoes" class="container">
-		<div class="col-xl">
-			<div class="row nome-magia-top">
-				<div>
-					<h2><?php echo $magiasObj->$getObj->nome; ?><?php if ($magiasObj->$getObj->concentracao == true) { echo ' <span class="concentSpan2"></span>';}?> <?php echo ' <span class="magiaInglesNome">('.$magiasJson->data->$getObj->nome_ingles.')</span>'; ?></h2>
-				</div>
-			</div>
-			<div class="row magia-details">
-				<div class="col-sm-8 magia-col-details">
-					<div class="magia-details-top">
-						<div class="row">
-							<div class="col-4">
-								<label><b>Círculo</b></label>
-								<p><?php if ($magiasObj->$getObj->circulo != 0) {echo $magiasObj->$getObj->circulo . 'º círculo';} else {echo 'Truque';} ?></p>
-							</div>
-							<div class="col-4">
-								<label><b>Escola</b></label>
-								<p><?php echo $magiasObj->$getObj->escola; ?><?php if ($magiasObj->$getObj->ritual == true) { echo ' (ritual)';}?></p>
-							</div>
-							<div class="col-4">
-								<label><b>Tempo de Conjuração</b></label>
-								<p><?php echo $magiasObj->$getObj->tempo_conjuracao; ?></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-4">
-								<label><b>Alcance</b></label>
-								<p><?php echo $magiasObj->$getObj->alcance; ?></p>
-							</div>
-							<div class="col-4">
-								<label><b>Duração</b></label>
-								<p><?php echo $magiasObj->$getObj->duracao; ?></p>
-							</div>
-							<div class="col-4">
-								<label><b>Componentes</b></label>
-								<p><?php echo $magiasObj->$getObj->componentes; ?><?php if (isset($magiasObj->$getObj->componentes_extra)) {echo ' *';}?></p>
-							</div>
-						</div>
-					</div>
-					<div class="divisor-magia"></div>
-					<div class="magia-details-content">
-						<label><b>Descrição</b></label> <?php echo $magiasObj->$getObj->descricao; ?>
-						<?php if(isset($magiasObj->$getObj->componentes_extra)) {echo '<small style="padding-top: 20px; font-style: italic;">* - ' . $magiasObj->$getObj->componentes_extra . '</small>';} ?>
-						<div style="padding-top: 40px;">
-							<p><span style="font-weight: 600;">Classes:</span><?php if($magiasObj->$getObj->bardo == true) {echo '<span class="badge class-badge badge-light">Bardo</span>';}?><?php if($magiasObj->$getObj->bruxo == true) {echo '<span class="badge class-badge badge-light">Bruxo</span>';}?><?php if($magiasObj->$getObj->clerigo == true) {echo '<span class="badge class-badge badge-light">Clérigo</span>';}?><?php if($magiasObj->$getObj->druida == true) {echo '<span class="badge class-badge badge-light">Druida</span>';}?><?php if($magiasObj->$getObj->feiticeiro == true) {echo '<span class="badge class-badge badge-light">Feiticeiro</span>';}?><?php if($magiasObj->$getObj->guardiao == true) {echo '<span class="badge class-badge badge-light">Guardião</span>';}?><?php if($magiasObj->$getObj->ladino == true) {echo '<span class="badge class-badge badge-light">Ladino</span>';}?><?php if($magiasObj->$getObj->mago == true) {echo '<span class="badge class-badge badge-light">Mago</span>';}?><?php if($magiasObj->$getObj->paladino == true) {echo '<span class="badge class-badge badge-light">Paladino</span>';}?></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4 magia-col-image">
-					<?php
+    <div id="informacoes" class="container">
+        <div class="col-xl">
+            <div class="row nome-magia-top">
+                <div>
+                    <h2>
+                        <?php echo $magiasObj->$getObj->nome; ?>
+                        <?php if ($magiasObj->$getObj->concentracao == true) { echo ' <span class="concentSpan2"></span>';}?>
+                        <?php echo ' <span class="magiaInglesNome">('.$magiasJson->data->$getObj->nome_ingles.')</span>'; ?>
+                    </h2>
+                </div>
+            </div>
+            <div class="row magia-details">
+                <div class="col-sm-8 magia-col-details">
+                    <div class="magia-details-top">
+                        <div class="row">
+                            <div class="col-4">
+                                <label><b>Círculo</b></label>
+                                <p>
+                                    <?php if ($magiasObj->$getObj->circulo != 0) {echo $magiasObj->$getObj->circulo . 'º círculo';} else {echo 'Truque';} ?>
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <label><b>Escola</b></label>
+                                <p>
+                                    <?php echo $magiasObj->$getObj->escola; ?>
+                                    <?php if ($magiasObj->$getObj->ritual == true) { echo ' (ritual)';}?>
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <label><b>Tempo de Conjuração</b></label>
+                                <p>
+                                    <?php echo $magiasObj->$getObj->tempo_conjuracao; ?>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <label><b>Alcance</b></label>
+                                <p>
+                                    <?php echo $magiasObj->$getObj->alcance; ?>
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <label><b>Duração</b></label>
+                                <p>
+                                    <?php echo $magiasObj->$getObj->duracao; ?>
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <label><b>Componentes</b></label>
+                                <p>
+                                    <?php echo $magiasObj->$getObj->componentes; ?>
+                                    <?php if (isset($magiasObj->$getObj->componentes_extra)) {echo ' *';}?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divisor-magia"></div>
+                    <div class="magia-details-content">
+                        <label><b>Descrição</b></label>
+                        <?php echo $magiasObj->$getObj->descricao; ?>
+                        <?php if(isset($magiasObj->$getObj->componentes_extra)) {echo '<small style="padding-top: 20px; font-style: italic;">* - ' . $magiasObj->$getObj->componentes_extra . '</small>';} ?>
+                        <div style="padding-top: 40px;">
+                            <p><span style="font-weight: 600;">Classes:</span>
+                                <?php if($magiasObj->$getObj->bardo == true) {echo '<span class="badge class-badge badge-light">Bardo</span>';}?>
+                                <?php if($magiasObj->$getObj->bruxo == true) {echo '<span class="badge class-badge badge-light">Bruxo</span>';}?>
+                                <?php if($magiasObj->$getObj->clerigo == true) {echo '<span class="badge class-badge badge-light">Clérigo</span>';}?>
+                                <?php if($magiasObj->$getObj->druida == true) {echo '<span class="badge class-badge badge-light">Druida</span>';}?>
+                                <?php if($magiasObj->$getObj->feiticeiro == true) {echo '<span class="badge class-badge badge-light">Feiticeiro</span>';}?>
+                                <?php if($magiasObj->$getObj->guardiao == true) {echo '<span class="badge class-badge badge-light">Guardião</span>';}?>
+                                <?php if($magiasObj->$getObj->ladino == true) {echo '<span class="badge class-badge badge-light">Ladino</span>';}?>
+                                <?php if($magiasObj->$getObj->mago == true) {echo '<span class="badge class-badge badge-light">Mago</span>';}?>
+                                <?php if($magiasObj->$getObj->paladino == true) {echo '<span class="badge class-badge badge-light">Paladino</span>';}?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 magia-col-image">
+                    <?php
 					if ($magiasObj->$getObj->escola == 'Encantamento') {
 					echo '<img src="/imagens/escola-encantamento.png" class="img-escola-magia img-fluid">';
 					} elseif ($magiasObj->$getObj->escola == 'Abjuração') {
@@ -182,10 +225,10 @@ if ($conjuracao == true) {
 					echo '<img src="/imagens/escola-null.png" class="img-escola-magia">';
 					}
 					?>
-				</div>
+                </div>
 
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 
-	<div data-include="footer"></div>
+    <div data-include="footer"></div>
