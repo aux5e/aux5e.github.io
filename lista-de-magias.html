@@ -138,7 +138,7 @@ function remove_accents($string) {
 		const section = document.querySelector('section');
 
         async function loadIntoTable(url, table) {
-            const tableBody = table.querySelectior("tbody");
+            const tableBody = table.querySelector("tbody");
             const response = await fetch(url);
             const magias = await response.json();
 
