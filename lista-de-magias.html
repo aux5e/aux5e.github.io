@@ -305,23 +305,24 @@ function remove_accents($string) {
             const response = await fetch(url);
             const magias = await response.json();
 
-            console.log(magias);
+            console.log(magias[data].length);
 
             // Clear the table
             // tableBody.innerHTML = "";
 
             // Popular o corpo da tabela
-            // var r = new Array(), j = -1;
-            // for (var row = 0, size = magiasArray[data].length; row < size; row++) {
-            //     r[++j] = '<tr><td>';
-            //     r[++j] = magiasArray[data][row]["nome"];
-            //     r[++j] = '</td><td class="whatever1">';
-            //     r[++j] = magiasArray[data][row]["circulo"];
-            //     r[++j] = '</td><td class="whatever2">';
-            //     r[++j] = magiasArray[data][row]["escola"];
-            //     r[++j] = '</td></tr>';
-            // }
-            // $("#" + table + " " + tableBody).html(r.join(''));
+            var r = new Array(), j = -1;
+            for (var row = 0, size = magiasArray[data].length; row < size; row++) {
+                r[++j] = '<tr><td>';
+                r[++j] = magiasArray[data][row]["nome"];
+                r[++j] = '</td><td class="whatever1">';
+                r[++j] = magiasArray[data][row]["circulo"];
+                r[++j] = '</td><td class="whatever2">';
+                r[++j] = magiasArray[data][row]["escola"];
+                r[++j] = '</td></tr>';
+            }
+            $("#" + table + " " + tableBody).html(r.join(''));
+
             // for (const magia of magias) {
             //     const rowElement = document.createElement("tr");
 
