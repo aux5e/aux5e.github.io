@@ -300,8 +300,17 @@ function remove_accents($string) {
     </div>
 
     <script>
-        var data = require('/data/magias.json');
-        console.log(data.collection.length);
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var magias = JSON.parse(this.responseText);
+                document.getElementById("data").innerHTML = data;
+            }
+        };
+        xmlhttp.open("GET", "/data/magias.json", true);
+        xmlhttp.send();
+
+        console.log(data.length);
 
         async function loadIntoTable(url, table) {
             const tableBody = table.querySelector("tbody");
