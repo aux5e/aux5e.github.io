@@ -134,7 +134,7 @@ function remove_accents($string) {
 		var popover = true;
 		var getObj; //htmlspecialchars($_GET["nome"]);
 
-		const magiasJson = JSON.parse('/data/magias.json');
+        const magiasJson = await(await fetch('/data/magias.json')).json();
 		console.log(magiasJson);
 	</script>
 
