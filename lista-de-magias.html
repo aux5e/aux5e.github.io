@@ -71,17 +71,9 @@
 					}
 				});
 			});
-		}
+		});
 	</script>
 </head>
-
-<script>
-	var popover = true;
-    var getObj; //htmlspecialchars($_GET["nome"]);
-
-	const magiasJson = JSON.parse('/data/magias.json');
-	console.log(magiasJson);
-</script>
 
 <!-- <?php
 $conjuracao = true;
@@ -138,6 +130,13 @@ function remove_accents($string) {
 ?> -->
 
 <body>
+	<script>
+		var popover = true;
+		var getObj; //htmlspecialchars($_GET["nome"]);
+
+		const magiasJson = JSON.parse('/data/magias.json');
+		console.log(magiasJson);
+	</script>
 
 	<div data-include="header"></div>
 
