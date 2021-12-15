@@ -1,674 +1,734 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php
-    $pageName = 'classesBruxo';
-    $pageTitle = 'Bruxo - Informações Relevantes';
-    $pageGroup = 'classes';
-?>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
+    <link rel="icon" href="/imagens/favicon.png">
+    <script>
+        var pageName = 'classesBruxo';
+        var pageTitle = 'Bruxo';
+        var pageGroup = 'classes';
 
-<?php include('/home/site/wwwroot/partial/head.php'); ?>
- 
+        document.write("<title>" + pageTitle + " - Classes - Aux.5e</title>");
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/misc.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.magia-hover').tooltip({
+                track: true,
+                open: function (event, ui) {
+                    var userid = this.id;
+
+                    $.ajax({
+                        url: '/data/magias-popover.html',
+                        type: 'post',
+                        data: {
+                            userid: userid
+                        },
+                        success: function (response) {
+
+                            // Setting content option
+                            $("#" + userid).tooltip('option', 'content', response);
+
+                        }
+                    });
+                }
+            });
+
+            $('.magia-hover').mouseout(function () {
+                // re-initializing tooltip
+                $(this).attr('title', 'Carregando...');
+                $(this).tooltip();
+                $('.ui-helper-hidden-accessible').hide();
+                //$('.srd-tooltip').hide();
+            });
+
+
+        });
+    </script>
+</head>
+
 <body>
 
-<?php include('/home/site/wwwroot/partial/header.php'); ?>
+    <div data-include="header"></div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xl">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="https://5esrd.azurewebsites.net/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/classes.php">Classes</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Bruxo</li>
-                </ol>
-            </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://aux5e.github.io/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/classes.html">Classes</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Bruxo</li>
+                    </ol>
+                </nav>
+            </div>
         </div>
     </div>
-</div>
- 
-<div id="classes-phb-container" class="container">
-    <div class="row">
-        <div class="col-12">
-            <img src="/imagens/bruxo.png" class="rounded float-right" alt="Bruxo">
-            <h1 class="titulo">Bruxo <span class="titulo-span">Detalhes da Classe</span></h1>
-            <div style="margin-top: 22px;">
-                <p>Com um pseudo-dragão enrolado no ombro, um jovem elfo trajando túnicas douradas sorri calorosamente, tecendo um encantamento mágico nas doces palavras que profere e dobrando a sentinela do palácio à sua vontade.</p>
-                <p>Enquanto as chamas brotam das suas mãos, uma humana encarquilhada sussurra o nome secreto do seu patrono demoníaco, infundindo seu feitiço com magia ínfera.</p>
-                <p>Mudando o olhar entre um tomo maltratado e o estranho alinhamento das estrelas acima, um tiferino de olhos selvagens entoa o ritual místico que abrirá um portal para um mundo distante.</p>
-                <p>Bruxos buscam o conhecimento que está escondido no tecido do multiverso. Através de pactos realizados com misteriosos seres detentores de poder sobrenatural, os bruxos acessam efeitos mágicos, tanto sutis quanto espetaculares. Apoiados no conhecimento ancestral de seres como nobres feéricos, demônios, diabos, megeras e entidades alienígenas do Reino Distante, os bruxos colecionam segredos arcanos para reforçar o próprio poder.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Jurados e em Dívida</h2>
-                <p>Um bruxo é definido por um pacto com um ser de outro mundo. Às vezes, a relação entre bruxo e patrono é como a de um clérigo e seu deus, embora os seres que servem como patronos para os bruxos não sejam exatamente deuses. Um bruxo pode liderar um culto dedicado a um príncipe demônio, um arquidiabo ou uma entidade totalmente alienígena - seres que não estão entre os mais comumente adorados pelos clérigos. É mais frequente, porém, que o arranjo seja semelhante ao que existe entre mestre e aprendiz. O bruxo aprende e torna-se mais poderoso à custa de serviços ocasionais realizados em nome do patrono.</p>
-                <p>A magia concedida a um bruxo varia de pequenas, porém duradouras alterações em seu ser (como a capacidade de ver no escuro ou de ler qualquer idioma) até o acesso a magias poderosas. Ao contrário dos magos eruditos, os bruxos complementam sua magia com alguma familiaridade com combate corpo a corpo. Eles se sentem confortáveis usando armadura leve e sabem como usar armas simples.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Exploradores de Segredos</h2>
-                <p>Bruxos são movidos por uma necessidade insaciável de conhecimento e poder, a qual os compele a realizar os pactos que moldam suas carreiras.</p>
-                <p>Histórias de bruxos conectando-se a ínferos são amplamente conhecidas. Porém, muitos bruxos servem patronos de outra natureza. Não raro, um viajante dos ermos chega a uma torre estranhamente bela, encontra o senhor ou senhora do local e se vê enredado em um pacto, sem estar plenamente ciente dele. Outras vezes, ao se debruçar sobre tomos recheados de conhecimento proibido, a mente de um estudante brilhante, porém insano, abre-se para uma realidade além do mundo material e para os seres alienígenas que habitam no vazio exterior.</p>
-                <p>Uma vez feito um pacto, a sede de conhecimento e poder de um bruxo não pode ser satisfeita com mero estudo e pesquisa. Ninguém assume tamanho compromisso com um patrono tão poderoso se não pretende usar o poder adquirido. De fato, a grande maioria dos bruxos passa seus dias na busca ativa dos seus objetivos, o que normalmente significa algum tipo de aventura. Além disso, as exigências dos patronos conduzem os bruxos na direção da aventura.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Criando um Bruxo</h2>
-                <p>Ao criar um personagem bruxo, dedique algum tempo a pensar no seu patrono e nas obrigações que o pacto lhe impõe. O que o levou a fazer o pacto e como você fez contato com seu patrono? Você foi seduzido a invocar um diabo, ou foi você que procurou o ritual que lhe permitiria contatar um antigo deus alienígena? Você procurou o seu patrono ou ele o encontrou e escolheu? Você se irrita com as obrigações do seu pacto ou serve docilmente, em antecipação às recompensas que lhe foram prometidas?</p>
-                <p>Trabalhe com seu DM para determinar o grande papel que o seu pacto desempenhará na carreira de aventuras do seu personagem. As exigências de seu patrono podem levá-lo a buscar aventuras ou se limitar a pequenos favores que podem ser cumpridos no intervalo entre elas.</p>
-                <p>Que tipo de relação você tem com o seu patrono? Ele é amigável, hostil, inquieto ou romântico? O quão importante você é para ele? Que papel você desempenha nos planos dele? Você conhece os outros servos dele?</p>
-                <p>Como o seu patrono se comunica com você? Se você possui um familiar, ocasionalmente, ele pode falar com a voz do seu patrono. Alguns bruxos descobrem mensagens dos seus patronos gravadas em árvores, misturadas entre as folhas do chá ou mesmo nas nuvens passageiras – mensagens que apenas o bruxo pode ver. Outros bruxos conversam com seus patronos por meio de sonhos ou visões, ou lidam apenas com intermediários.</p>
-            </div>
-            <div class="card relac-raca" style="margin-top: 22px;">
-                <div class="card-body">
-                    <h6 style="text-transform: uppercase;">Criação Rápida</h6>
-                    <p>Você pode criar um bruxo rapidamente seguindo essas sugestões. Primeiro, Carisma deve ser seu atributo de maior valor, seguido de Constituição. Em seguida, escolha o antecedente charlatão. Por fim, escolha os truques <a href="/magias.php?nome=raio-mistico" class="magia-hover magicas-tooltip" id="raio-mistico" title="Carregando...">raio místico</a> e <a href="/magias.php?nome=toque-necrotico" class="magia-hover magicas-tooltip" id="toque-necrotico" title="Carregando...">toque necrótico</a>, juntamente com as magias de 1º círculo <a href="/magias.php?nome=enfeiticar-pessoa" class="magia-hover magicas-tooltip" id="enfeiticar-pessoa" title="Carregando...">enfeitiçar pessoa</a> e <a href="/magias.php?nome=raio-de-bruxa" class="magia-hover magicas-tooltip" id="raio-de-bruxa" title="Carregando...">raio de bruxa</a>.</p>
+
+    <div id="classes-phb-container" class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="/imagens/bruxo.png" class="rounded float-right" alt="Bruxo">
+                <h1 class="titulo">Bruxo <span class="titulo-span">Detalhes da Classe</span></h1>
+                <div style="margin-top: 22px;">
+                    <p>Com um pseudo-dragão enrolado no ombro, um jovem elfo trajando túnicas douradas sorri calorosamente, tecendo um encantamento mágico nas doces palavras que profere e dobrando a sentinela do palácio à sua vontade.</p>
+                    <p>Enquanto as chamas brotam das suas mãos, uma humana encarquilhada sussurra o nome secreto do seu patrono demoníaco, infundindo seu feitiço com magia ínfera.</p>
+                    <p>Mudando o olhar entre um tomo maltratado e o estranho alinhamento das estrelas acima, um tiferino de olhos selvagens entoa o ritual místico que abrirá um portal para um mundo distante.</p>
+                    <p>Bruxos buscam o conhecimento que está escondido no tecido do multiverso. Através de pactos realizados com misteriosos seres detentores de poder sobrenatural, os bruxos acessam efeitos mágicos, tanto sutis quanto espetaculares. Apoiados no conhecimento ancestral de seres como nobres feéricos, demônios, diabos, megeras e entidades alienígenas do Reino Distante, os bruxos colecionam segredos arcanos para reforçar o próprio poder.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Jurados e em Dívida</h2>
+                    <p>Um bruxo é definido por um pacto com um ser de outro mundo. Às vezes, a relação entre bruxo e patrono é como a de um clérigo e seu deus, embora os seres que servem como patronos para os bruxos não sejam exatamente deuses. Um bruxo pode liderar um culto dedicado a um príncipe demônio, um arquidiabo ou uma entidade totalmente alienígena - seres que não estão entre os mais comumente adorados pelos clérigos. É mais frequente, porém, que o arranjo seja semelhante ao que existe entre mestre e aprendiz. O bruxo aprende e torna-se mais poderoso à custa de serviços ocasionais realizados em nome do patrono.</p>
+                    <p>A magia concedida a um bruxo varia de pequenas, porém duradouras alterações em seu ser (como a capacidade de ver no escuro ou de ler qualquer idioma) até o acesso a magias poderosas. Ao contrário dos magos eruditos, os bruxos complementam sua magia com alguma familiaridade com combate corpo a corpo. Eles se sentem confortáveis usando armadura leve e sabem como usar armas simples.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Exploradores de Segredos</h2>
+                    <p>Bruxos são movidos por uma necessidade insaciável de conhecimento e poder, a qual os compele a realizar os pactos que moldam suas carreiras.</p>
+                    <p>Histórias de bruxos conectando-se a ínferos são amplamente conhecidas. Porém, muitos bruxos servem patronos de outra natureza. Não raro, um viajante dos ermos chega a uma torre estranhamente bela, encontra o senhor ou senhora do local e se vê enredado em um pacto, sem estar plenamente ciente dele. Outras vezes, ao se debruçar sobre tomos recheados de conhecimento proibido, a mente de um estudante brilhante, porém insano, abre-se para uma realidade além do mundo material e para os seres alienígenas que habitam no vazio exterior.</p>
+                    <p>Uma vez feito um pacto, a sede de conhecimento e poder de um bruxo não pode ser satisfeita com mero estudo e pesquisa. Ninguém assume tamanho compromisso com um patrono tão poderoso se não pretende usar o poder adquirido. De fato, a grande maioria dos bruxos passa seus dias na busca ativa dos seus objetivos, o que normalmente significa algum tipo de aventura. Além disso, as exigências dos patronos conduzem os bruxos na direção da aventura.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Criando um Bruxo</h2>
+                    <p>Ao criar um personagem bruxo, dedique algum tempo a pensar no seu patrono e nas obrigações que o pacto lhe impõe. O que o levou a fazer o pacto e como você fez contato com seu patrono? Você foi seduzido a invocar um diabo, ou foi você que procurou o ritual que lhe permitiria contatar um antigo deus alienígena? Você procurou o seu patrono ou ele o encontrou e escolheu? Você se irrita com as obrigações do seu pacto ou serve docilmente, em antecipação às recompensas que lhe foram prometidas?</p>
+                    <p>Trabalhe com seu DM para determinar o grande papel que o seu pacto desempenhará na carreira de aventuras do seu personagem. As exigências de seu patrono podem levá-lo a buscar aventuras ou se limitar a pequenos favores que podem ser cumpridos no intervalo entre elas.</p>
+                    <p>Que tipo de relação você tem com o seu patrono? Ele é amigável, hostil, inquieto ou romântico? O quão importante você é para ele? Que papel você desempenha nos planos dele? Você conhece os outros servos dele?</p>
+                    <p>Como o seu patrono se comunica com você? Se você possui um familiar, ocasionalmente, ele pode falar com a voz do seu patrono. Alguns bruxos descobrem mensagens dos seus patronos gravadas em árvores, misturadas entre as folhas do chá ou mesmo nas nuvens passageiras – mensagens que apenas o bruxo pode ver. Outros bruxos conversam com seus patronos por meio de sonhos ou visões, ou lidam apenas com intermediários.</p>
+                </div>
+                <div class="card relac-raca" style="margin-top: 22px;">
+                    <div class="card-body">
+                        <h6 style="text-transform: uppercase;">Criação Rápida</h6>
+                        <p>Você pode criar um bruxo rapidamente seguindo essas sugestões. Primeiro, Carisma deve ser seu atributo de maior valor, seguido de Constituição. Em seguida, escolha o antecedente charlatão. Por fim, escolha os truques <a href="/magias.php?nome=raio-mistico" class="magia-hover magicas-tooltip" id="raio-mistico" title="Carregando...">raio místico</a> e <a href="/magias.php?nome=toque-necrotico" class="magia-hover magicas-tooltip" id="toque-necrotico" title="Carregando...">toque necrótico</a>, juntamente com as magias de 1º círculo <a href="/magias.php?nome=enfeiticar-pessoa" class="magia-hover magicas-tooltip" id="enfeiticar-pessoa" title="Carregando...">enfeitiçar pessoa</a> e <a href="/magias.php?nome=raio-de-bruxa" class="magia-hover magicas-tooltip" id="raio-de-bruxa" title="Carregando...">raio de bruxa</a>.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">O Bárbaro</h3>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" scope="col">Nível</th>
+                                    <th class="text-center" scope="col">Bônus de Proficiência</th>
+                                    <th scope="col">Características de Classe</th>
+                                    <th class="text-center" scope="col">Truques</th>
+                                    <th class="text-center" scope="col">Magias</th>
+                                    <th class="text-center" scope="col">Espaços de Magia</th>
+                                    <th class="text-center" scope="col">Círculo dos Espaços</th>
+                                    <th class="text-center" scope="col">Invocações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center" scope="row">1º</th>
+                                    <td class="text-center">+2</td>
+                                    <td>Patrono Sobrenatural, Magia de Pacto</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1º</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">2º</th>
+                                    <td class="text-center">+2</td>
+                                    <td>Invocações Místicas</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1º</td>
+                                    <td class="text-center">2</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">3º</th>
+                                    <td class="text-center">+2</td>
+                                    <td>Dádiva do Pacto</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">2º</td>
+                                    <td class="text-center">2</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">4º</th>
+                                    <td class="text-center">+2</td>
+                                    <td>Aumento no Valor de Atributo</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">2º</td>
+                                    <td class="text-center">2</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">5º</th>
+                                    <td class="text-center">+3</td>
+                                    <td>—</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">6</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">3º</td>
+                                    <td class="text-center">3</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">6º</th>
+                                    <td class="text-center">+3</td>
+                                    <td>Característica de Patrono Sobrenatural</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">7</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">3º</td>
+                                    <td class="text-center">3</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">7º</th>
+                                    <td class="text-center">+3</td>
+                                    <td>—</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">8</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">4º</td>
+                                    <td class="text-center">4</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">8º</th>
+                                    <td class="text-center">+3</td>
+                                    <td>Aumento no Valor de Atributo</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">9</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">4º</td>
+                                    <td class="text-center">4</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">9º</th>
+                                    <td class="text-center">+4</td>
+                                    <td>—</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">10</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">5</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">10º</th>
+                                    <td class="text-center">+4</td>
+                                    <td>Característica de Patrono Sobrenatural</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">10</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">5</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">11º</th>
+                                    <td class="text-center">+4</td>
+                                    <td>Arcana Mística (6º círculo)</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">11</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">5</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">12º</th>
+                                    <td class="text-center">+4</td>
+                                    <td>Aumento no Valor de Atributo</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">11</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">6</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">13º</th>
+                                    <td class="text-center">+5</td>
+                                    <td>Arcana Mística (7º círculo)</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">12</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">6</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">14º</th>
+                                    <td class="text-center">+5</td>
+                                    <td>Característica de Patrono Sobrenatural</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">12</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">6</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">15º</th>
+                                    <td class="text-center">+5</td>
+                                    <td>Arcana Mística (8º círculo)</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">13</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">7</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">16º</th>
+                                    <td class="text-center">+5</td>
+                                    <td>Aumento no Valor de Atributo</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">13</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">7</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">17º</th>
+                                    <td class="text-center">+6</td>
+                                    <td>Arcana Mística (9º círculo)</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">14</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">7</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">18º</th>
+                                    <td class="text-center">+6</td>
+                                    <td>—</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">14</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">8</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">19º</th>
+                                    <td class="text-center">+6</td>
+                                    <td>Aumento no Valor de Atributo</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">15</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">8</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">20º</th>
+                                    <td class="text-center">+6</td>
+                                    <td>Mestre Místico</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">15</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">5º</td>
+                                    <td class="text-center">8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Características de Classe</h2>
+                    <p>Ao criar um aventureiro bruxo, você recebe as seguintes características de classe.</p>
+
+                    <h4>Pontos de Vida</h4>
+                    <p>
+                        <strong>Dado de Vida:</strong> 1d8 por nível como bruxo<br>
+                        <strong>Pontos de Vida no 1º Nível:</strong> 8 + seu modificador de Constituição<br>
+                        <strong>Pontos de Vida a partir do 2º Nível:</strong> 1d8 (ou 5) + seu modificador de Constituição por nível como bruxo
+                    </p>
+
+                    <h4>Proficiências</h4>
+                    <p>
+                        <strong>Armadura:</strong> Armaduras leves<br>
+                        <strong>Armas:</strong> Armas simples<br>
+                        <strong>Ferramentas:</strong> Nenhuma<br>
+                        <strong>Salvaguardas:</strong> Sabedoria, Carisma<br>
+                        <strong>Perícias:</strong> Escolha duas perícias entre Arcanismo, Enganação, História, Intimidação, Investigação, Natureza e Religião
+                    </p>
+
+                    <h4>Equipamento</h4>
+                    <p>Você começa com o seguinte equipamento, além daquele que recebe do seu antecedente:</p>
+                    <ul>
+                        <li>(a) uma besta leve e 20 virotes ou (b) qualquer arma simples</li>
+                        <li>(a) uma bolsa de componentes ou (b) um foco arcano</li>
+                        <li>(a) kit de erudito ou (b) kit de explorador</li>
+                        <li>Armadura de couro, qualquer arma simples e duas adagas</li>
+                    </ul>
+
+                    <h4>Patrono Sobrenatural</h4>
+                    <p>No 1º nível, você fez uma barganha com uma entidade sobrenatural à sua escolha: a Arquifada, o Ínfero ou o Grande Antigo, cada qual detalhado ao final da descrição desta classe. Sua escolha lhe concede características no 1º nível e novamente no 6º, 10º e 14º níveis.</p>
+
+                    <h4>Magia de Pacto</h4>
+                    <p>Sua pesquisa arcana e o poder concedido a você por seu patrono lhe garantem a habilidade de conjuração. Vá ao capítulo 10 para consultar as regras gerais de conjuração e ao capitulo 11 para verificar a lista de magias de bruxo.</p>
+
+                    <h5><b>Truques</b></h5>
+                    <p>Você conhece dois truques da lista de magias do bruxo à sua escolha. Você aprende truques de bruxo adicionais em níveis mais altos, conforme mostrado na coluna Truques da tabela O Bruxo.</p>
+
+                    <h5><b>Espaços de Magia</b></h5>
+                    <p>A tabela O Bruxo mostra quantos espaços de magia você tem para conjurar suas magias de 1º círculo e superiores. A tabela também mostra qual o círculo desses espaços - todos os seus espaços de magia são do mesmo círculo. Para conjurar uma magia de bruxo de 1º círculo ou maior, você deve gastar um espaço de magia cujo círculo seja igual ou maior que o da magia, recuperando todos os espaços gastos após um período de descanso curto ou longo.</p>
+                    <p>Por exemplo, no 5º nível você tem dois espaços de magia de 3º círculo. Para conjurar a magia de 1º círculo raio de bruxa, você deve gastar um destes espaços e conjurá-la como uma magia de 3º círculo.</p>
+
+                    <h5><b>Magias Conhecidas de Acordo com o Nível</b></h5>
+                    <p>No 1º nível você conhece duas magias de 1º círculo que devem ser escolhidas da tabela de magias do bruxo.</p>
+                    <p>A coluna Magias da tabela O Bruxo mostra quando você aprende novas magias de bruxo, de 1º círculo e superiores, à sua escolha. Uma magia escolhida por você não pode ser de um círculo maior do que o mostrado na coluna Círculo dos Espaços na tabela para o seu nível. Ao alcançar o 6º nível, por exemplo, você aprende uma nova magia de bruxo de 1º, 2º ou 3º círculos.</p>
+                    <p>Além disso, ao ganhar níveis nesta classe, você pode trocar uma das magias de bruxo que conhece por outra magia da lista de magias do bruxo, a qual também deve pertencer a um círculo para o qual você tenha espaços de magia.</p>
+
+                    <h5><b>Atributo de Conjuração</b></h5>
+                    <p>Carisma é o atributo de conjuração para suas magias de bruxo, você deve usá-lo sempre que uma magia fizer referência ao seu atributo de conjuração. Além disso, você usa o seu modificador de Carisma para definir a CD de uma salvaguarda feita para evitar uma magia de bruxo conjurada por você e ao realizar uma jogada de ataque com uma magia de bruxo.</p>
+                    <p><b>CD para evitar suas magias</b> = 8 + seu bônus de proficiência + seu modificador de Carisma</p>
+                    <p><b>Modificador de ataque mágico</b> = seu bônus de proficiência + seu modificador de Carisma</p>
+
+                    <h5><b>Foco de Conjuração</b></h5>
+                    <p>Você pode usar um foco arcano (veja o capítulo 5, "Equipamento") como um foco de conjuração para suas magias de bruxo.</p>
+
+                    <h4>Invocações Místicas</h4>
+                    <p>No seu estudo do conhecimento oculto, você descobriu invocações místicas, fragmentos de conhecimento proibido que imbuem seu corpo com uma capacidade mágica permanente. Os pré-requisitos de nível indicados referem-se ao seu nível nesta classe.</p>
+                    <p>No 2º nível você ganha duas invocações místicas à sua escolha. As opções disponíveis estão detalhadas ao final da descrição desta classe. Ao alcançar determinados níveis de bruxo, você recebe invocações adicionais à sua escolha, conforme mostrado na coluna Invocações na tabela O Bruxo.</p>
+                    <p>Além disso, ao avançar um nível nesta classe, você pode trocar uma das invocações que conhece por outra invocação que possa aprender nesse nível.</p>
+                    <p>Se uma invocação mística possui pré-requisitos, você precisa cumpri-los antes de aprendê-la. Você pode aprender uma invocação mística ao mesmo tempo em que adquire os pré-requisitos necessários para tanto. Um pré-requisito de nível se refere ao seu nível nesta classe.</p>
+
+                    <h5><b>Armadura de Sombras</b></h5>
+                    <p>Você pode conjurar <a href="/magias.php?nome=armadura-arcana" class="magia-hover magicas-tooltip" id="armadura-arcana" title="Carregando...">armadura arcana</a> em si mesmo à vontade, sem gastar espaços de magia ou componentes materiais.</p>
+
+                    <h5><b>Correntes de Cárceri</b></h5>
+                    <p><b>Pré-requisito:</b> 15º nível, a característica Pacto da Corrente</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=imobilizar-monstro" class="magia-hover magicas-tooltip" id="imobilizar-monstro" title="Carregando...">imobilizar monstro</a> à vontade – mas apenas quando o alvo for um celestial, ínfero ou elemental - sem gastar um espaço de magia ou componentes materiais. Você precisa terminar um descanso longo antes de poder usar esta invocação na mesma criatura novamente.</p>
+
+                    <h5><b>Encharcar a Mente</b></h5>
+                    <p><b>Pré-requisito:</b> 5º nível</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=lentidao" class="magia-hover magicas-tooltip" id="lentidao" title="Carregando...">lentidão</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
+
+                    <h5><b>Escultor de Carne</b></h5>
+                    <p><b>Pré-requisito:</b> 7º nível</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=polimorfia" class="magia-hover magicas-tooltip" id="polimorfia" title="Carregando...">polimorfia</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
+
+                    <h5><b>Explosão Repulsiva</b></h5>
+                    <p><b>Pré-requisito:</b> o truque raio místico</p>
+                    <p>Ao atingir uma criatura com raio místico, você pode empurrá-la até 3 metros para longe em uma linha reta.</p>
+
+                    <h5><b>Explosão Agonizante</b></h5>
+                    <p><b>Pré-requisito:</b> o truque raio místico</p>
+                    <p>Ao conjurar <a href="/magias.php?nome=raio-mistico" class="magia-hover magicas-tooltip" id="raio-mistico" title="Carregando...">raio místico</a>, adicione o seu modificador de Carisma ao dano causado por ela.</p>
+
+                    <h5><b>Idioma Bestial</b></h5>
+                    <p>Você pode conjurar <a href="/magias.php?nome=falar-com-animais" class="magia-hover magicas-tooltip" id="falar-com-animais" title="Carregando...">falar com animais</a> à vontade, sem gastar um espaço de magia.</p>
+
+                    <h5><b>Influência Enganadora</b></h5>
+                    <p>Você ganha proficiência nas perícias Enganação e Persuasão.</p>
+
+                    <h5><b>Ladrão dos Cinco Destinos</b></h5>
+                    <p>Você pode conjurar <a href="/magias.php?nome=perdicao" class="magia-hover magicas-tooltip" id="perdicao" title="Carregando...">perdição</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
+
+                    <h5><b>Lamento das Sepulturas</b></h5>
+                    <p><b>Pré-requisito:</b> 9º nível</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=falar-com-mortos" class="magia-hover magicas-tooltip" id="falar-com-mortos" title="Carregando...">falar com mortos</a> à vontade, sem gastar um espaço de magia.</p>
+
+                    <h5><b>Lâmina Sedenta</b></h5>
+                    <p><b>Pré-requisito:</b> 5º nível, a característica Pacto da Lâmina</p>
+                    <p>Você pode atacar com sua arma de pacto duas vezes, ao invés de uma, sempre que executar a ação Atacar no seu turno.</p>
+
+                    <h5><b>Lança Mística</b></h5>
+                    <p><b>Pré-requisito:</b> o truque raio místico</p>
+                    <p>Ao conjurar <a href="/magias.php?nome=raio-mistico" class="magia-hover magicas-tooltip" id="raio-mistico" title="Carregando...">raio místico</a>, o alcance desta magia passa a ser de 90 metros.</p>
+
+                    <h5><b>Livro dos Segredos Antigos</b></h5>
+                    <p><b>Pré-requisito:</b> a característica Pacto do Tomo</p>
+                    <p>Você pode inscrever rituais mágicos no seu Livro das Sombras. Escolha duas magias de 1º círculo que possuam a tag ritual, da lista de magias de qualquer classe (as duas não precisam ser da mesma lista). As magias aparecem no livro e não contam para o número de magias que você conhece. Com o seu Livro de Sombras em mãos, você pode conjurar as magias escolhidas como rituais. Você não pode conjurá-las de outra forma, a não ser que as tenha aprendido por outros meios. Você também pode conjurar uma magia de bruxo que conheça como ritual se ela possuir a tag ritual.</p>
+                    <p>Em suas aventuras você pode adicionar outras magias rituais ao seu Livro das Sombras. Ao encontrar uma magia desse tipo, pode adicioná-la ao livro caso o círculo dela seja igual ou menor que o seu nível como bruxo (arredondado para cima) e tenha tempo para transcrevê-la. Graças às tintas raras necessárias para a inscrição, o processo leva 2 horas e custa 50 PO por círculo da magia.</p>
+
+                    <h5><b>Máscara das Muitas Faces</b></h5>
+                    <p>Você pode conjurar <a href="/magias.php?nome=disfarcar-se" class="magia-hover magicas-tooltip" id="disfarcar-se" title="Carregando...">disfarçar-se</a> à vontade, sem gastar um espaço de magia.</p>
+
+                    <h5><b>Mestre das Infindáveis Formas</b></h5>
+                    <p><b>Pré-requisito:</b> 15º nível</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=alterar-se" class="magia-hover magicas-tooltip" id="alterar-se" title="Carregando...">alterar-se</a> à vontade, sem gastar um espaço de magia.</p>
+
+                    <h5><b>Lacaios do Caos</b></h5>
+                    <p><b>Pré-requisito:</b> 9º nível</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=invocar-elemental" class="magia-hover magicas-tooltip" id="invocar-elemental" title="Carregando...">invocar elemental</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
+
+                    <h5><b>Olhar de Duas Mentes</b></h5>
+                    <p>Você pode usar sua ação para tocar um humanoide voluntário e perceber tudo através dos sentidos dele até o final de seu próximo turno. Enquanto você e a criatura estiverem no mesmo plano de existência, você pode usar suas ações dos próximos turnos para manter esta conexão, aumentando a duração para até o final do seu próximo turno. Enquanto estiver usando os sentidos do alvo, você se beneficia de qualquer sentido especial que ele possua, passando, contudo, a estar cego e surdo para o que está ao seu redor.</p>
+
+                    <h5><b>Olhos do Protetor das Runas</b></h5>
+                    <p>Você pode ler qualquer texto escrito.</p>
+
+                    <h5><b>Passo Ascendente</b></h5>
+                    <p><b>Pré-requisito:</b> 9º nível</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=levitacao" class="magia-hover magicas-tooltip" id="levitacao" title="Carregando...">levitação</a> em si mesmo à vontade, sem gastar um espaço de magia ou componentes materiais.</p>
+
+                    <h5><b>Salto Sobrenatural</b></h5>
+                    <p><b>Pré-requisito:</b> 9º nível</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=salto" class="magia-hover magicas-tooltip" id="salto" title="Carregando...">salto</a> em si mesmo à vontade, sem gastar um espaço de magia ou componentes materiais.</p>
+
+                    <h5><b>Sinal de Mau Agouro</b></h5>
+                    <p><b>Pré-requisito:</b> 5º nível</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=rogar-maldicao" class="magia-hover magicas-tooltip" id="rogar-maldicao" title="Carregando...">rogar maldição</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
+
+                    <h5><b>Sorvedouro de Vida</b></h5>
+                    <p><b>Pré-requisito:</b> 12º nível, a característica Pacto da Lâmina</p>
+                    <p>Ao atingir uma criatura com a sua arma de pacto, ela sofre dano necrótico igual ao seu modificador de Carisma (mínimo de 1).</p>
+
+                    <h5><b>Sussurros Sedutores</b></h5>
+                    <p><b>Pré-requisito:</b> 7º nível</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=compulsao" class="magia-hover magicas-tooltip" id="compulsao" title="Carregando...">compulsão</a> uma vez usando um espaço de magia de bruxo. Você não pode fazer isso novamente até terminar um descanso longo.</p>
+
+                    <h5><b>Uno com as Sombras</b></h5>
+                    <p><b>Pré-requisito:</b> 5º nível</p>
+                    <p>Quando estiver em uma área de meia-luz ou escuridão, você pode usar sua ação para se tornar invisível, até se mover ou realizar uma ação ou reação.</p>
+
+                    <h5><b>Vigor Ínfero</b></h5>
+                    <p>Você pode conjurar <a href="/magias.php?nome=vitalidade-vazia" class="magia-hover magicas-tooltip" id="vitalidade-vazia" title="Carregando...">vitalidade vazia</a> em si mesmo à vontade como uma magia de 1º círculo sem gastar um espaço de magia ou componentes materiais.</p>
+
+                    <h5><b>Visão da Bruxa</b></h5>
+                    <p><b>Pré-requisito:</b> 15º nível</p>
+                    <p>Você pode enxergar a verdadeira forma de qualquer metamorfo ou outra criatura oculta por magias de ilusão ou transmutação, contanto que ela esteja a até 9 metros de distância de você e dentro de sua linha de visão.</p>
+
+                    <h5><b>Visão Diabólica</b></h5>
+                    <p>Você pode ver normalmente na escuridão, tanto mágica quanto normal, a uma distância de até 36 metros.</p>
+
+                    <h5><b>Visão Mística</b></h5>
+                    <p>Você pode conjurar <a href="/magias.php?nome=detectar-magia" class="magia-hover magicas-tooltip" id="detectar-magia" title="Carregando...">detectar magia</a> à vontade, sem gastar um espaço de magia.</p>
+
+                    <h5><b>Visões Nebulosas</b></h5>
+                    <p>Você pode conjurar <a href="/magias.php?nome=imagem-silenciosa" class="magia-hover magicas-tooltip" id="imagem-silenciosa" title="Carregando...">imagem silenciosa</a> à vontade, sem gastar um espaço de magia ou componentes materiais.</p>
+
+                    <h5><b>Visões dos Reinos Distantes</b></h5>
+                    <p><b>Pré-requisito:</b> 15º nível</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=olho-arcano" class="magia-hover magicas-tooltip" id="olho-arcano" title="Carregando...">olho arcano</a> à vontade, sem gastar um espaço de magia.</p>
+
+                    <h5><b>Voz do Mestre das Correntes</b></h5>
+                    <p><b>Pré-requisito:</b> a característica Pacto da Corrente</p>
+                    <p>Você pode se comunicar telepaticamente com seu familiar e perceber através dos sentidos dele enquanto estiverem no mesmo plano de existência. Além disso, ao usar os sentidos de seu familiar, você pode falar através dele com a sua própria voz, mesmo que normalmente ele seja incapaz disso.</p>
+
+                    <h5><b>Vozes Perturbadoras</b></h5>
+                    <p><b>Pré-requisito:</b> 7º nível</p>
+                    <p>Você pode conjurar <a href="/magias.php?nome=confusao" class="magia-hover magicas-tooltip" id="confusao" title="Carregando...">confusão</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
+
+                    <h4>Dádiva do Pacto</h4>
+                    <p>No 3º nível seu patrono transcendental lhe concede uma dádiva pelos seus serviços leais. Você ganha uma das seguintes características, à sua escolha.</p>
+
+                    <h5><b>Pacto da Corrente</b></h5>
+                    <p>Você aprende a magia <a href="/magias.php?nome=convocar-familiar" class="magia-hover magicas-tooltip" id="convocar-familiar" title="Carregando...">convocar familiar</a> e pode conjurá-la como um ritual. A magia não conta para a sua lista de magias conhecidas.</p>
+                    <p>Ao realizar uma conjuração, você pode escolher uma das formas normais para o seu familiar ou uma das formas especiais a seguir: diabrete, pseudo-dragão, quasit ou sprite.</p>
+                    <p>Além disso, ao executar a ação Atacar, você pode renunciar a um de seus ataques para permitir que o seu familiar realize um ataque com a reação dele.</p>
+
+                    <h5><b>Pacto da Lâmina</b></h5>
+                    <p>Você pode usar sua ação para criar uma arma de pacto em sua mão vazia. Você escolhe a forma que a arma de combate corpo a corpo assume toda vez que a cria (consulte as opções de armas no capítulo 5). Você é proficiente com essa arma enquanto a empunhar. Ela conta como arma mágica para propósitos de vencer resistência e imunidade a ataques e dano não-mágico.</p>
+                    <p>Sua arma de pacto desaparece se permanecer a mais de 1,5 metro de distância de você por 1 minuto ou mais. Ela também desaparece se você usar esta característica novamente, se dispensá-la (nenhuma ação é necessária) ou se morrer.</p>
+                    <p>Você pode transformar uma arma mágica na sua arma de pacto ao executar um ritual especial enquanto segura a arma. Você executa o ritual ao longo de 1 hora, o que pode ser feito durante um descanso curto. Você pode, então, dispensar a arma enviando-a para um espaço extradimensional, e a partir de então ela aparece sempre que você criar sua arma de pacto. Você não pode afetar um artefato ou uma arma inteligente dessa maneira. A arma deixa de ser sua arma de pacto se você morrer, se fizer o ritual de 1 hora com uma arma diferente ou se usar um ritual de 1 hora para quebrar o seu vínculo com ela. A arma aparece aos seus pés se ela estiver no espaço extradimensional quando o laço for quebrado.</p>
+
+                    <h5><b>Pacto do Tomo</b></h5>
+                    <p>Seu patrono lhe presenteia com um grimório chamado Livro das Sombras. Ao receber esta característica, escolha três truques da lista de magias de qualquer classe (cada um pode ser escolhido de uma lista distinta). Enquanto tiver a posse do livro, você pode conjurar esses truques à vontade. Eles não contam para o número de truques que você conhece. Mesmo que eles não aparecem na lista de magias de bruxo, no que diz respeito a você, eles serão considerados magias de bruxo.</p>
+                    <p>Se perder o seu Livro das Sombras, você pode realizar uma cerimônia de 1 hora para receber de seu patrono um substituto. Essa cerimônia pode ser feita durante um período de descanso e destrói o livro anterior. Quando você morre, o livro se transforma em cinzas.</p>
+
+                    <div class="card relac-raca" style="margin-top: 22px;margin-bottom: 22px;">
+                        <div class="card-body" style="padding: 26px; padding-bottom: 12px;">
+                            <h6 style="text-transform: uppercase;">Sua Dádiva do Pacto</h6>
+                            <p>Cada opção de Dádiva do Pacto produz uma criatura ou objeto especial que reflete a natureza do seu patrono.</p>
+                            <p><b>Pacto da Corrente.</b> Seu familiar é mais inteligente que um familiar típico. Sua forma padrão pode ser um reflexo do seu patrono, como sprites e pseudo-dragões para a Arquifada ou diabretes e quasits para o Ínfero. Pelo fato de o Grande Antigo ser de natureza imperscrutável, qualquer familiar lhe é adequado.</p>
+                            <p><b>Pacto da Lâmina.</b> Se o seu patrono for a Arquifada, sua arma pode ser uma lâmina delgada envolta por vinhas frondosas. Se você serve o ínfero, sua arma pode ser um machado de metal negro adornado com chamas decorativas. Se o seu patrono for o Grande Antigo, sua arma pode ser uma lança de aparência antiga, com uma gema encravada na lâmina, esculpida para se parecer com um terrível olho que nunca pisca.</p>
+                            <p><b>Pacto do Tomo.</b> O seu Livro das Sombras pode ser um tomo elegante com bordas douradas repleto de magias de encantamento e ilusão, dado a você pela altiva Arquifada. Ele poderia ser um tomo pesado, costurado com couro de demônio e rebitado com ferro, guardando magias de conjuração e rico em histórias proibidas sobre as sinistras regiões do cosmo, se for um presente do ínfero. Ou poderia ser o diário esfarrapado de um lunático que enlouqueceu pelo contato com O Grande Antigo, contendo fragmentos de magias que apenas a sua própria insanidade crescente lhe permite entender e conjurar.</p>
+                        </div>
+                    </div>
+
+                    <h4>Aumento no Valor de Atributo</h4>
+                    <p>Ao alcançar o nível e novamente no 8º, 12º, 16º e 19º níveis, você pode aumentar em 2 o valor de um atributo à sua escolha, ou pode aumentar em 1 o valor de dois atributos. Como sempre, não é possível aumentar o valor de um atributo acima de 20 usando esta característica.</p>
+
+                    <h4>Arcana Mística</h4>
+                    <p>No 11º nível seu patrono lhe revela um segredo mágico chamado arcana: uma magia de 6º círculo da lista de magias do bruxo à sua escolha.</p>
+                    <p>Você pode conjurar sua magia arcana uma vez sem gastar um espaço de magia. Você deve terminar um descanso longo antes de poder fazer isso novamente.</p>
+                    <p>Em níveis mais altos, você ganha mais magias de bruxo que podem ser conjuradas dessa maneira: uma de 7º círculo, à sua escolha, no 13º nível; uma de 8º círculo no 15º nível e uma de 9º círculo no 17º nível. Você recupera todos os usos da sua Arcana Mística ao terminar um descanso longo.</p>
+
+                    <h4>Mestre Místico</h4>
+                    <p>No 20º nível você pode recarregar sua reserva de poder místico ao pedir ao seu patrono a recuperação dos espaços de magia gastos. Você deve gastar 1 minuto suplicando ao seu patrono por ajuda para recuperar todos os seus espaços de magia gastos da sua característica Magia de Pacto. Uma vez que tenha recuperado espaços de magia com esta característica, você precisa finalizar um descanso longo antes de poder usá-la novamente.</p>
+
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Patronos Sobrenaturais</h2>
+                    <p>Os seres que servem como patronos para bruxos são poderosos habitantes de outros planos de existência – não exatamente deuses, mas criaturas com poderes quase divinos. Diferentes patronos garantem aos bruxos o acesso a diferentes poderes e invocações, esperando favores significativos em troca.</p>
+                    <p>Alguns patronos colecionam bruxos, repartindo conhecimento místico praticamente de graça ou se gabando de suas habilidades para prender mortais à sua vontade. Outros concedem seus poderes apenas relutantemente, e podem fazer um pacto com um único bruxo. Bruxos que servem ao mesmo patrono podem ver uns aos outros como aliados, irmãos ou rivais.</p>
+                </div>
+
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">Arquifada</h3>
+                    <p>Seu patrono é um senhor ou senhora dos feéricos, uma criatura das lendas que guarda segredos esquecidos anteriores ao nascimento das raças mortais. As motivações desse ser são, muitas das vezes, inescrutáveis e, outras vezes, caprichosas, podendo envolver uma disputa por um poder mágico maior ou uma fixação em antigos rancores. Seres deste tipo incluem o Príncipe do Gelo; a Rainha do Ar e das Trevas, o governante da Corte Sombria; Titânia, da Corte de Verão; seu consorte, Oberon, o Senhor Verdejante; Hyrsam, o Príncipe dos Tolos; e as megeras ancestrais.</p>
+
+                    <h4>Lista Expandida de Magias</h4>
+                    <p>Quando você aprende uma magia de bruxo, a Arquifada permite a escolha a partir de uma lista expandida de magias. As magias a seguir são adicionadas à sua lista de magias de bruxo.</p>
+
+                    <h5><b>Lista Expandida de Magias da Arquifada</b></h5>
+                    <table class="table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
+                        <thead>
+                            <tr>
+                                <th class="text-center pequena-coluna" scope="col">Círculo da Magia</th>
+                                <th scope="col">Magias</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="text-center" scope="row">1º</th>
+                                <td><a href="/magias.php?nome=fogo-das-fadas" class="magia-hover magicas-tooltip" id="fogo-das-fadas" title="Carregando...">fogo das fadas</a>, <a href="/magias.php?nome=sono" class="magia-hover magicas-tooltip" id="sono" title="Carregando...">sono</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">2º</th>
+                                <td><a href="/magias.php?nome=acalmar-emocoes" class="magia-hover magicas-tooltip" id="acalmar-emocoes" title="Carregando...">acalmar emoções</a>, <a href="/magias.php?nome=forca-espectral" class="magia-hover magicas-tooltip" id="forca-espectral" title="Carregando...">força espectral</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">3º</th>
+                                <td><a href="/magias.php?nome=crescimento-de-plantas" class="magia-hover magicas-tooltip" id="crescimento-de-plantas" title="Carregando...">crescimento de plantas</a>, <a href="/magias.php?nome=piscar" class="magia-hover magicas-tooltip" id="piscar" title="Carregando...">piscar</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">4º</th>
+                                <td><a href="/magias.php?nome=dominar-fera" class="magia-hover magicas-tooltip" id="dominar-fera" title="Carregando...">dominar fera</a>, <a href="/magias.php?nome=invisibilidade-maior" class="magia-hover magicas-tooltip" id="invisibilidade-maior" title="Carregando...">invisibilidade maior</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">5º</th>
+                                <td><a href="/magias.php?nome=dominar-pessoa" class="magia-hover magicas-tooltip" id="dominar-pessoa" title="Carregando...">dominar pessoa</a>, <a href="/magias.php?nome=similaridade" class="magia-hover magicas-tooltip" id="similaridade" title="Carregando...">similaridade</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Presença Feérica</h4>
+                    <p>A partir do primeiro nível, o seu patrono lhe concede a capacidade de projetar a presença cativante e temível dos feéricos. Com uma ação, você pode fazer com que todas as criaturas dentro de um cubo de 3 metros de lado originado a partir de você realizem salvaguardas de Sabedoria contra a CD para evitar suas magias de bruxo. Aquelas que falharem estarão enfeitiçadas ou amedrontadas por você (à sua escolha) até o fim de seu próximo turno.</p>
+                    <p>Após usar esta característica, você não pode utilizá-la novamente até finalizar um período de descanso curto ou longo.</p>
+
+                    <h4>Fuga em Névoa</h4>
+                    <p>A partir do 6º nível, em resposta a perigo, você pode desaparecer em uma névoa. Ao sofrer dano, você pode usar sua reação para se tornar invisível e se teleportar para um espaço desocupado a até 18 metros de distância e que possa ser visto. Você permanece invisível até o início do seu próximo turno ou até realizar um ataque ou uma conjuração.</p>
+                    <p>Após usar esta característica, você não pode utilizá-la novamente até finalizar um período de descanso curto ou longo.</p>
+
+                    <h4>Defesas Sedutoras</h4>
+                    <p>A partir do 10º nível, seu patrono o ensina a devolver as magias de manipulação mental dos seus inimigos contra eles próprios. Você passa a ser imune a ser enfeitiçado e, quando outra criatura tentar fazê-lo, pode usar sua reação para voltar o encantamento contra ela. A criatura deve ser bem-sucedida em uma salvaguarda de Sabedoria contra a CD para evitar suas magias de bruxo ou ficará enfeitiçada por 1 minuto ou até sofrer dano.</p>
+
+                    <h4>Delírio Sombrio</h4>
+                    <p>A partir do 14º nível, você pode mergulhar uma criatura em um reino ilusório. Com uma ação, escolha uma criatura à sua vista e que esteja a até 18 metros de distância. Ela deve realizar uma salvaguarda de Sabedoria contra a CD para evitar suas magias de bruxo. Em caso de falha, ela fica enfeitiçada ou amedrontada por você (à sua escolha) durante 1 minuto ou até sua concentração ser quebrada (como se você estivesse se concentrando em uma magia). Este efeito acaba mais cedo se a criatura sofrer qualquer tipo de dano.</p>
+                    <p>Até que esta ilusão termine, a criatura pensa estar perdida em um reino nebuloso, cuja aparência você escolhe. Ela só pode ver e ouvir a si mesma, você e a ilusão.</p>
+                    <p>Você deve terminar um descanso longo antes de usar esta característica novamente.</p>
+                </div>
+
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">O Ínfero</h3>
+                    <p>Você fez um pacto com um habitante dos planos de existência inferiores, um ser cujos objetivos são maléficos, ainda que você lute contra eles. Tais seres desejam a corrupção ou a destruição de todas as coisas, até mesmo de você. Ínferos poderosos o suficiente para forjar pactos incluem lordes demoníacos como Demogorgon, Orcus, Fraz’Urb-luu e Bafomé; arquidiabos como Asmodeus, Dispater, Mefistófeles e Belial; demônios do fosso e balores especialmente poderosos ou ultroloths e outros senhores dos yugoloths.</p>
+
+                    <h4>Lista Expandida de Magias</h4>
+                    <p>O Ínfero permite que você escolha suas magias de bruxo a partir de uma lista expandida de magias. As magias a seguir são adicionadas à sua lista de magias de bruxo.</p>
+
+                    <h5><b>Lista Expandida de Magias do Ínfero</b></h5>
+                    <table class="table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
+                        <thead>
+                            <tr>
+                                <th class="text-center pequena-coluna" scope="col">Círculo da Magia</th>
+                                <th scope="col">Magias</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="text-center" scope="row">1º</th>
+                                <td><a href="/magias.php?nome=comando" class="magia-hover magicas-tooltip" id="comando" title="Carregando...">comando</a>, <a href="/magias.php?nome=maos-flamejantes" class="magia-hover magicas-tooltip" id="maos-flamejantes" title="Carregando...">mãos flamejantes</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">2º</th>
+                                <td><a href="/magias.php?nome=cegueira-surdez" class="magia-hover magicas-tooltip" id="cegueira-surdez" title="Carregando...">cegueira/surdez</a>, <a href="/magias.php?nome=raio-ardente" class="magia-hover magicas-tooltip" id="raio-ardente" title="Carregando...">raio ardente</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">3º</th>
+                                <td><a href="/magias.php?nome=bola-de-fogo" class="magia-hover magicas-tooltip" id="bola-de-fogo" title="Carregando...">bola de fogo</a>, <a href="/magias.php?nome=nuvem-fetida" class="magia-hover magicas-tooltip" id="nuvem-fetida" title="Carregando...">nuvem fétida</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">4º</th>
+                                <td><a href="/magias.php?nome=escudo-ardente" class="magia-hover magicas-tooltip" id="escudo-ardente" title="Carregando...">escudo ardente</a>, <a href="/magias.php?nome=muralha-de-fogo" class="magia-hover magicas-tooltip" id="muralha-de-fogo" title="Carregando...">muralha de fogo</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">5º</th>
+                                <td><a href="/magias.php?nome=coluna-de-chamas" class="magia-hover magicas-tooltip" id="coluna-de-chamas" title="Carregando...">coluna de chamas</a>, <a href="/magias.php?nome=consagrar" class="magia-hover magicas-tooltip" id="consagrar" title="Carregando...">consagrar</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Bênção do Tenebroso</h4>
+                    <p>A partir do 1º nível, ao reduzir os pontos de vida de uma criatura hostil para O, você ganha pontos de vida temporários iguais ao seu modificador de Carisma + seu nível de bruxo (mínimo de 1).</p>
+
+                    <h4>A Sorte do Próprio Tenebroso</h4>
+                    <p>A partir do 6º nível, você pode chamar seu patrono para que ele altere o destino a seu favor. Ao realizar um teste de atributo ou salvaguarda, você pode usar esta característica para adicionar 1d10 à sua jogada. Isso pode ser feito após a jogada inicial, porém antes de ela surtir efeito.</p>
+                    <p>Uma vez usada esta característica, ela não pode ser usada novamente até que você complete um período de descanso curto ou longo.</p>
+
+                    <h4>Resistência Ínfera</h4>
+                    <p>A partir do 10º nível, ao terminar um período de descanso curto ou longo, você pode escolher um tipo de dano, contra o qual ganha resistência até escolher outro tipo, usando novamente esta característica. Dano causado por armas mágicas ou de prata ignoram esta resistência.</p>
+
+                    <h4>Lançar no Inferno</h4>
+                    <p>A partir do 14º nível, ao atingir uma criatura com um ataque, você pode usar esta característica para transportá-la instantaneamente para os planos inferiores. A criatura desaparece e é lançada numa paisagem de pesadelos.</p>
+                    <p>No final do seu próximo turno, o alvo retorna para o espaço que ocupava anteriormente ou para o espaço desocupado mais próximo. Se não se tratava de um ínfero, o alvo sofre 10d10 pontos de dano psíquico, por conta da experiência aterrorizante.</p>
+                    <p>Uma vez usada esta característica, você só pode utilizá-la novamente após completar um descanso longo.</p>
+                </div>
+
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">O Grande Antigo</h3>
+                    <p>Seu patrono é uma entidade misteriosa, cuja natureza é totalmente estranha ao tecido da realidade. Ele pode vir do Reino Distante, do espaço além da realidade, ou pode ser um dos deuses mais antigos, conhecidos apenas nas lendas. Suas motivações são incompreensíveis para os mortais, e o seu conhecimento é tão imenso e antigo, que até as maiores bibliotecas empalidecem em comparação com os vastos segredos que ele guarda. O Grande Antigo pode não estar ciente da sua existência, ou ser completamente indiferente a você, mas os segredos que você aprendeu lhe permitem extrair sua magia dele.</p>
+                    <p>Entidades deste tipo incluem Ghaunadar, chamado de Aquele Que Espreita; Tharizdun, o Deus Acorrentado; Dendar, a Serpente Noturna; Zargon, o Retomador; o Grande Cthulhu; e outros seres insondáveis.</p>
+
+                    <h4>Lista Expandida de Magias</h4>
+                    <p>O Grande Antigo permite que você escolha suas magias de bruxo a partir de uma lista expandida de magias. As magias a seguir são adicionadas à sua lista de magias de bruxo.</p>
+
+                    <h5><b>Lista Expandida de Magias do Grande Ancião</b></h5>
+                    <table class="table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
+                        <thead>
+                            <tr>
+                                <th class="text-center pequena-coluna" scope="col">Círculo da Magia</th>
+                                <th scope="col">Magias</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="text-center" scope="row">1º</th>
+                                <td><a href="/magias.php?nome=gargalhada-nefasta-de-tasha" class="magia-hover magicas-tooltip" id="gargalhada-nefasta-de-tasha" title="Carregando...">gargalhada nefasta de Tasha</a>, <a href="/magias.php?nome=sussurros-dissonantes" class="magia-hover magicas-tooltip" id="sussurros-dissonantes" title="Carregando...">sussurros dissonantes</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">2º</th>
+                                <td><a href="/magias.php?nome=detectar-pensamentos" class="magia-hover magicas-tooltip" id="detectar-pensamentos" title="Carregando...">detectar pensamentos</a>, <a href="/magias.php?nome=forca-espectral" class="magia-hover magicas-tooltip" id="forca-espectral" title="Carregando...">força espectral</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">3º</th>
+                                <td><a href="/magias.php?nome=clarividencia" class="magia-hover magicas-tooltip" id="clarividencia" title="Carregando...">clarividência</a>, <a href="/magias.php?nome=remeter" class="magia-hover magicas-tooltip" id="remeter" title="Carregando...">remeter</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">4º</th>
+                                <td><a href="/magias.php?nome=dominar-fera" class="magia-hover magicas-tooltip" id="dominar-fera" title="Carregando...">dominar fera</a>, <a href="/magias.php?nome=tentaculos-negros-de-evard" class="magia-hover magicas-tooltip" id="tentaculos-negros-de-evard" title="Carregando...">tentáculos negros de Evard</a></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">5º</th>
+                                <td><a href="/magias.php?nome=dominar-pessoa" class="magia-hover magicas-tooltip" id="dominar-pessoa" title="Carregando...">dominar pessoa</a>, <a href="/magias.php?nome=telecinese" class="magia-hover magicas-tooltip" id="telecinese" title="Carregando...">telecinese</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Mente Desperta</h4>
+                    <p>A partir do 1º nível, o seu conhecimento alienígena lhe dá a capacidade de tocar as mentes de outras criaturas. Você pode se comunicar telepaticamente com qualquer criatura à sua vista e que esteja a até 9 metros de distância. Você não precisa compartilhar o idioma da criatura para que ela o compreenda, mas ela deve ser capaz de entender pelo menos um idioma qualquer.</p>
+
+                    <h4>Proteção Entrópica</h4>
+                    <p>No 6º nível você aprende a se proteger magicamente de ataques e a transformar um ataque malsucedido de um inimigo em boa sorte para si. Ao sofrer uma jogada de ataque, você pode usar sua reação para impor-lhe desvantagem. Se o ataque falhar, a sua próxima jogada de ataque feita contra a criatura tem vantagem até o final do seu turno.</p>
+                    <p>Uma vez usada esta característica, você só pode utilizá-la novamente após um período de descanso curto ou longo.</p>
+
+                    <h4>Escudo Mental</h4>
+                    <p>A partir do 10º nível, seus pensamentos não podem ser lidos por telepatia ou por outros meios, a não ser que você permita. Você também ganha resistência a dano psíquico, e sempre que uma criatura lhe causar dano psíquico, ela sofre a mesma quantidade de dano.</p>
+
+                    <h4>Criar Servo</h4>
+                    <p>No 14º nível você ganha a capacidade de infectar a mente de um humanoide com a magia alienígena do seu patrono. Você pode usar sua ação para tocar um humanoide incapacitado, que então estará enfeitiçado por você até que uma magia remover maldição seja conjurada sobre ele, até que a condição enfeitiçado seja removida ou até que você use esta característica novamente.</p>
+                    <p>Você pode se comunicar telepaticamente com a criatura enfeitiçada, desde que esteja no mesmo plano de existência que ela.</p>
                 </div>
             </div>
-            <div style="margin-top: 22px;">
-                <h3 class="subtitulo">O Bárbaro</h3>
-                <div class="table-responsive">
-                <table class="table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
-                    <thead>
-                      <tr>
-                        <th class="text-center" scope="col">Nível</th>
-                        <th class="text-center" scope="col">Bônus de Proficiência</th>
-                        <th scope="col">Características de Classe</th>
-                        <th class="text-center" scope="col">Truques</th>
-                        <th class="text-center" scope="col">Magias</th>
-                        <th class="text-center" scope="col">Espaços de Magia</th>
-                        <th class="text-center" scope="col">Círculo dos Espaços</th>
-                        <th class="text-center" scope="col">Invocações</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th class="text-center" scope="row">1º</th>
-                        <td class="text-center">+2</td>
-                        <td>Patrono Sobrenatural, Magia de Pacto</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1º</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">2º</th>
-                        <td class="text-center">+2</td>
-                        <td>Invocações Místicas</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1º</td>
-                        <td class="text-center">2</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">3º</th>
-                        <td class="text-center">+2</td>
-                        <td>Dádiva do Pacto</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">2º</td>
-                        <td class="text-center">2</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">4º</th>
-                        <td class="text-center">+2</td>
-                        <td>Aumento no Valor de Atributo</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">2º</td>
-                        <td class="text-center">2</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">5º</th>
-                        <td class="text-center">+3</td>
-                        <td>—</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">6</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">3º</td>
-                        <td class="text-center">3</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">6º</th>
-                        <td class="text-center">+3</td>
-                        <td>Característica de Patrono Sobrenatural</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">7</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">3º</td>
-                        <td class="text-center">3</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">7º</th>
-                        <td class="text-center">+3</td>
-                        <td>—</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">8</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">4º</td>
-                        <td class="text-center">4</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">8º</th>
-                        <td class="text-center">+3</td>
-                        <td>Aumento no Valor de Atributo</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">9</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">4º</td>
-                        <td class="text-center">4</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">9º</th>
-                        <td class="text-center">+4</td>
-                        <td>—</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">10</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">5</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">10º</th>
-                        <td class="text-center">+4</td>
-                        <td>Característica de Patrono Sobrenatural</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">10</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">5</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">11º</th>
-                        <td class="text-center">+4</td>
-                        <td>Arcana Mística (6º círculo)</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">11</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">5</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">12º</th>
-                        <td class="text-center">+4</td>
-                        <td>Aumento no Valor de Atributo</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">11</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">6</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">13º</th>
-                        <td class="text-center">+5</td>
-                        <td>Arcana Mística (7º círculo)</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">12</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">6</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">14º</th>
-                        <td class="text-center">+5</td>
-                        <td>Característica de Patrono Sobrenatural</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">12</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">6</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">15º</th>
-                        <td class="text-center">+5</td>
-                        <td>Arcana Mística (8º círculo)</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">13</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">7</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">16º</th>
-                        <td class="text-center">+5</td>
-                        <td>Aumento no Valor de Atributo</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">13</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">7</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">17º</th>
-                        <td class="text-center">+6</td>
-                        <td>Arcana Mística (9º círculo)</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">14</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">7</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">18º</th>
-                        <td class="text-center">+6</td>
-                        <td>—</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">14</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">8</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">19º</th>
-                        <td class="text-center">+6</td>
-                        <td>Aumento no Valor de Atributo</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">15</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">8</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">20º</th>
-                        <td class="text-center">+6</td>
-                        <td>Mestre Místico</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">15</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">5º</td>
-                        <td class="text-center">8</td>
-                      </tr>
-                    </tbody>
-                </table>
-                </div>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Características de Classe</h2>
-                <p>Ao criar um aventureiro bruxo, você recebe as seguintes características de classe.</p>
-                
-                <h4>Pontos de Vida</h4>
-                <p><strong>Dado de Vida:</strong> 1d8 por nível como bruxo<br>
-                <strong>Pontos de Vida no 1º Nível:</strong> 8 + seu modificador de Constituição<br>
-                <strong>Pontos de Vida a partir do 2º Nível:</strong> 1d8 (ou 5) + seu modificador de Constituição por nível como bruxo</p>
-                
-                <h4>Proficiências</h4>
-                <p><strong>Armadura:</strong> Armaduras leves<br>
-                <strong>Armas:</strong> Armas simples<br>
-                <strong>Ferramentas:</strong> Nenhuma<br>
-                <strong>Salvaguardas:</strong> Sabedoria, Carisma<br>
-                <strong>Perícias:</strong> Escolha duas perícias entre Arcanismo, Enganação, História, Intimidação, Investigação, Natureza e Religião</p>
-                
-                <h4>Equipamento</h4>
-                <p>Você começa com o seguinte equipamento, além daquele que recebe do seu antecedente:</p>
-                <ul>
-                    <li>(a) uma besta leve e 20 virotes ou (b) qualquer arma simples</li>
-                    <li>(a) uma bolsa de componentes ou (b) um foco arcano</li>
-                    <li>(a) kit de erudito ou (b) kit de explorador</li>
-                    <li>Armadura de couro, qualquer arma simples e duas adagas</li>
-                </ul>
-                
-                <h4>Patrono Sobrenatural</h4>
-                <p>No 1º nível, você fez uma barganha com uma entidade sobrenatural à sua escolha: a Arquifada, o Ínfero ou o Grande Antigo, cada qual detalhado ao final da descrição desta classe. Sua escolha lhe concede características no 1º nível e novamente no 6º, 10º e 14º níveis.</p>
-                
-                <h4>Magia de Pacto</h4>
-                <p>Sua pesquisa arcana e o poder concedido a você por seu patrono lhe garantem a habilidade de conjuração. Vá ao capítulo 10 para consultar as regras gerais de conjuração e ao capitulo 11 para verificar a lista de magias de bruxo.</p>
-                
-                <h5><b>Truques</b></h5>
-                <p>Você conhece dois truques da lista de magias do bruxo à sua escolha. Você aprende truques de bruxo adicionais em níveis mais altos, conforme mostrado na coluna Truques da tabela O Bruxo.</p>
-                
-                <h5><b>Espaços de Magia</b></h5>
-                <p>A tabela O Bruxo mostra quantos espaços de magia você tem para conjurar suas magias de 1º círculo e superiores. A tabela também mostra qual o círculo desses espaços - todos os seus espaços de magia são do mesmo círculo. Para conjurar uma magia de bruxo de 1º círculo ou maior, você deve gastar um espaço de magia cujo círculo seja igual ou maior que o da magia, recuperando todos os espaços gastos após um período de descanso curto ou longo.</p>
-                <p>Por exemplo, no 5º nível você tem dois espaços de magia de 3º círculo. Para conjurar a magia de 1º círculo raio de bruxa, você deve gastar um destes espaços e conjurá-la como uma magia de 3º círculo.</p>
-                
-                <h5><b>Magias Conhecidas de Acordo com o Nível</b></h5>
-                <p>No 1º nível você conhece duas magias de 1º círculo que devem ser escolhidas da tabela de magias do bruxo.</p>
-                <p>A coluna Magias da tabela O Bruxo mostra quando você aprende novas magias de bruxo, de 1º círculo e superiores, à sua escolha. Uma magia escolhida por você não pode ser de um círculo maior do que o mostrado na coluna Círculo dos Espaços na tabela para o seu nível. Ao alcançar o 6º nível, por exemplo, você aprende uma nova magia de bruxo de 1º, 2º ou 3º círculos.</p>
-                <p>Além disso, ao ganhar níveis nesta classe, você pode trocar uma das magias de bruxo que conhece por outra magia da lista de magias do bruxo, a qual também deve pertencer a um círculo para o qual você tenha espaços de magia.</p>
-                
-                <h5><b>Atributo de Conjuração</b></h5>
-                <p>Carisma é o atributo de conjuração para suas magias de bruxo, você deve usá-lo sempre que uma magia fizer referência ao seu atributo de conjuração. Além disso, você usa o seu modificador de Carisma para definir a CD de uma salvaguarda feita para evitar uma magia de bruxo conjurada por você e ao realizar uma jogada de ataque com uma magia de bruxo.</p>
-                <p><b>CD para evitar suas magias</b> = 8 + seu bônus de proficiência + seu modificador de Carisma</p>
-                <p><b>Modificador de ataque mágico</b> = seu bônus de proficiência + seu modificador de Carisma</p>
-                
-                <h5><b>Foco de Conjuração</b></h5>
-                <p>Você pode usar um foco arcano (veja o capítulo 5, "Equipamento") como um foco de conjuração para suas magias de bruxo.</p>
-                
-                <h4>Invocações Místicas</h4>
-                <p>No seu estudo do conhecimento oculto, você descobriu invocações místicas, fragmentos de conhecimento proibido que imbuem seu corpo com uma capacidade mágica permanente. Os pré-requisitos de nível indicados referem-se ao seu nível nesta classe.</p>
-                <p>No 2º nível você ganha duas invocações místicas à sua escolha. As opções disponíveis estão detalhadas ao final da descrição desta classe. Ao alcançar determinados níveis de bruxo, você recebe invocações adicionais à sua escolha, conforme mostrado na coluna Invocações na tabela O Bruxo.</p>
-                <p>Além disso, ao avançar um nível nesta classe, você pode trocar uma das invocações que conhece por outra invocação que possa aprender nesse nível.</p>
-                <p>Se uma invocação mística possui pré-requisitos, você precisa cumpri-los antes de aprendê-la. Você pode aprender uma invocação mística ao mesmo tempo em que adquire os pré-requisitos necessários para tanto. Um pré-requisito de nível se refere ao seu nível nesta classe.</p>
-                
-                <h5><b>Armadura de Sombras</b></h5>
-                <p>Você pode conjurar <a href="/magias.php?nome=armadura-arcana" class="magia-hover magicas-tooltip" id="armadura-arcana" title="Carregando...">armadura arcana</a> em si mesmo à vontade, sem gastar espaços de magia ou componentes materiais.</p>
-                
-                <h5><b>Correntes de Cárceri</b></h5>
-                <p><b>Pré-requisito:</b> 15º nível, a característica Pacto da Corrente</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=imobilizar-monstro" class="magia-hover magicas-tooltip" id="imobilizar-monstro" title="Carregando...">imobilizar monstro</a> à vontade – mas apenas quando o alvo for um celestial, ínfero ou elemental - sem gastar um espaço de magia ou componentes materiais. Você precisa terminar um descanso longo antes de poder usar esta invocação na mesma criatura novamente.</p>
-                
-                <h5><b>Encharcar a Mente</b></h5>
-                <p><b>Pré-requisito:</b> 5º nível</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=lentidao" class="magia-hover magicas-tooltip" id="lentidao" title="Carregando...">lentidão</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
-                
-                <h5><b>Escultor de Carne</b></h5>
-                <p><b>Pré-requisito:</b> 7º nível</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=polimorfia" class="magia-hover magicas-tooltip" id="polimorfia" title="Carregando...">polimorfia</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
-
-                <h5><b>Explosão Repulsiva</b></h5>
-                <p><b>Pré-requisito:</b> o truque raio místico</p>
-                <p>Ao atingir uma criatura com raio místico, você pode empurrá-la até 3 metros para longe em uma linha reta.</p>
-                
-                <h5><b>Explosão Agonizante</b></h5>
-                <p><b>Pré-requisito:</b> o truque raio místico</p>
-                <p>Ao conjurar <a href="/magias.php?nome=raio-mistico" class="magia-hover magicas-tooltip" id="raio-mistico" title="Carregando...">raio místico</a>, adicione o seu modificador de Carisma ao dano causado por ela.</p>
-                
-                <h5><b>Idioma Bestial</b></h5>
-                <p>Você pode conjurar <a href="/magias.php?nome=falar-com-animais" class="magia-hover magicas-tooltip" id="falar-com-animais" title="Carregando...">falar com animais</a> à vontade, sem gastar um espaço de magia.</p>
-                
-                <h5><b>Influência Enganadora</b></h5>
-                <p>Você ganha proficiência nas perícias Enganação e Persuasão.</p>
-                
-                <h5><b>Ladrão dos Cinco Destinos</b></h5>
-                <p>Você pode conjurar <a href="/magias.php?nome=perdicao" class="magia-hover magicas-tooltip" id="perdicao" title="Carregando...">perdição</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
-                
-                <h5><b>Lamento das Sepulturas</b></h5>
-                <p><b>Pré-requisito:</b> 9º nível</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=falar-com-mortos" class="magia-hover magicas-tooltip" id="falar-com-mortos" title="Carregando...">falar com mortos</a> à vontade, sem gastar um espaço de magia.</p>
-                
-                <h5><b>Lâmina Sedenta</b></h5>
-                <p><b>Pré-requisito:</b> 5º nível, a característica Pacto da Lâmina</p>
-                <p>Você pode atacar com sua arma de pacto duas vezes, ao invés de uma, sempre que executar a ação Atacar no seu turno.</p>
-                
-                <h5><b>Lança Mística</b></h5>
-                <p><b>Pré-requisito:</b> o truque raio místico</p>
-                <p>Ao conjurar <a href="/magias.php?nome=raio-mistico" class="magia-hover magicas-tooltip" id="raio-mistico" title="Carregando...">raio místico</a>, o alcance desta magia passa a ser de 90 metros.</p>
-                
-                <h5><b>Livro dos Segredos Antigos</b></h5>
-                <p><b>Pré-requisito:</b> a característica Pacto do Tomo</p>
-                <p>Você pode inscrever rituais mágicos no seu Livro das Sombras. Escolha duas magias de 1º círculo que possuam a tag ritual, da lista de magias de qualquer classe (as duas não precisam ser da mesma lista). As magias aparecem no livro e não contam para o número de magias que você conhece. Com o seu Livro de Sombras em mãos, você pode conjurar as magias escolhidas como rituais. Você não pode conjurá-las de outra forma, a não ser que as tenha aprendido por outros meios. Você também pode conjurar uma magia de bruxo que conheça como ritual se ela possuir a tag ritual.</p>
-                <p>Em suas aventuras você pode adicionar outras magias rituais ao seu Livro das Sombras. Ao encontrar uma magia desse tipo, pode adicioná-la ao livro caso o círculo dela seja igual ou menor que o seu nível como bruxo (arredondado para cima) e tenha tempo para transcrevê-la. Graças às tintas raras necessárias para a inscrição, o processo leva 2 horas e custa 50 PO por círculo da magia.</p>
-                
-                <h5><b>Máscara das Muitas Faces</b></h5>
-                <p>Você pode conjurar <a href="/magias.php?nome=disfarcar-se" class="magia-hover magicas-tooltip" id="disfarcar-se" title="Carregando...">disfarçar-se</a> à vontade, sem gastar um espaço de magia.</p>
-                
-                <h5><b>Mestre das Infindáveis Formas</b></h5>
-                <p><b>Pré-requisito:</b> 15º nível</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=alterar-se" class="magia-hover magicas-tooltip" id="alterar-se" title="Carregando...">alterar-se</a> à vontade, sem gastar um espaço de magia.</p>
-                
-                <h5><b>Lacaios do Caos</b></h5>
-                <p><b>Pré-requisito:</b> 9º nível</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=invocar-elemental" class="magia-hover magicas-tooltip" id="invocar-elemental" title="Carregando...">invocar elemental</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
-                
-                <h5><b>Olhar de Duas Mentes</b></h5>
-                <p>Você pode usar sua ação para tocar um humanoide voluntário e perceber tudo através dos sentidos dele até o final de seu próximo turno. Enquanto você e a criatura estiverem no mesmo plano de existência, você pode usar suas ações dos próximos turnos para manter esta conexão, aumentando a duração para até o final do seu próximo turno. Enquanto estiver usando os sentidos do alvo, você se beneficia de qualquer sentido especial que ele possua, passando, contudo, a estar cego e surdo para o que está ao seu redor.</p>
-                
-                <h5><b>Olhos do Protetor das Runas</b></h5>
-                <p>Você pode ler qualquer texto escrito.</p>
-                
-                <h5><b>Passo Ascendente</b></h5>
-                <p><b>Pré-requisito:</b> 9º nível</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=levitacao" class="magia-hover magicas-tooltip" id="levitacao" title="Carregando...">levitação</a> em si mesmo à vontade, sem gastar um espaço de magia ou componentes materiais.</p>
-                
-                <h5><b>Salto Sobrenatural</b></h5>
-                <p><b>Pré-requisito:</b> 9º nível</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=salto" class="magia-hover magicas-tooltip" id="salto" title="Carregando...">salto</a> em si mesmo à vontade, sem gastar um espaço de magia ou componentes materiais.</p>
-                
-                <h5><b>Sinal de Mau Agouro</b></h5>
-                <p><b>Pré-requisito:</b> 5º nível</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=rogar-maldicao" class="magia-hover magicas-tooltip" id="rogar-maldicao" title="Carregando...">rogar maldição</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
-                
-                <h5><b>Sorvedouro de Vida</b></h5>
-                <p><b>Pré-requisito:</b> 12º nível, a característica Pacto da Lâmina</p>
-                <p>Ao atingir uma criatura com a sua arma de pacto, ela sofre dano necrótico igual ao seu modificador de Carisma (mínimo de 1).</p>
-                
-                <h5><b>Sussurros Sedutores</b></h5>
-                <p><b>Pré-requisito:</b> 7º nível</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=compulsao" class="magia-hover magicas-tooltip" id="compulsao" title="Carregando...">compulsão</a> uma vez usando um espaço de magia de bruxo. Você não pode fazer isso novamente até terminar um descanso longo.</p>
-                
-                <h5><b>Uno com as Sombras</b></h5>
-                <p><b>Pré-requisito:</b> 5º nível</p>
-                <p>Quando estiver em uma área de meia-luz ou escuridão, você pode usar sua ação para se tornar invisível, até se mover ou realizar uma ação ou reação.</p>
-                
-                <h5><b>Vigor Ínfero</b></h5>
-                <p>Você pode conjurar <a href="/magias.php?nome=vitalidade-vazia" class="magia-hover magicas-tooltip" id="vitalidade-vazia" title="Carregando...">vitalidade vazia</a> em si mesmo à vontade como uma magia de 1º círculo sem gastar um espaço de magia ou componentes materiais.</p>
-                
-                <h5><b>Visão da Bruxa</b></h5>
-                <p><b>Pré-requisito:</b> 15º nível</p>
-                <p>Você pode enxergar a verdadeira forma de qualquer metamorfo ou outra criatura oculta por magias de ilusão ou transmutação, contanto que ela esteja a até 9 metros de distância de você e dentro de sua linha de visão.</p>
-                
-                <h5><b>Visão Diabólica</b></h5>
-                <p>Você pode ver normalmente na escuridão, tanto mágica quanto normal, a uma distância de até 36 metros.</p>
-                
-                <h5><b>Visão Mística</b></h5>
-                <p>Você pode conjurar <a href="/magias.php?nome=detectar-magia" class="magia-hover magicas-tooltip" id="detectar-magia" title="Carregando...">detectar magia</a> à vontade, sem gastar um espaço de magia.</p>
-                
-                <h5><b>Visões Nebulosas</b></h5>
-                <p>Você pode conjurar <a href="/magias.php?nome=imagem-silenciosa" class="magia-hover magicas-tooltip" id="imagem-silenciosa" title="Carregando...">imagem silenciosa</a> à vontade, sem gastar um espaço de magia ou componentes materiais.</p>
-                
-                <h5><b>Visões dos Reinos Distantes</b></h5>
-                <p><b>Pré-requisito:</b> 15º nível</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=olho-arcano" class="magia-hover magicas-tooltip" id="olho-arcano" title="Carregando...">olho arcano</a> à vontade, sem gastar um espaço de magia.</p>
-                
-                <h5><b>Voz do Mestre das Correntes</b></h5>
-                <p><b>Pré-requisito:</b> a característica Pacto da Corrente</p>
-                <p>Você pode se comunicar telepaticamente com seu familiar e perceber através dos sentidos dele enquanto estiverem no mesmo plano de existência. Além disso, ao usar os sentidos de seu familiar, você pode falar através dele com a sua própria voz, mesmo que normalmente ele seja incapaz disso.</p>
-                
-                <h5><b>Vozes Perturbadoras</b></h5>
-                <p><b>Pré-requisito:</b> 7º nível</p>
-                <p>Você pode conjurar <a href="/magias.php?nome=confusao" class="magia-hover magicas-tooltip" id="confusao" title="Carregando...">confusão</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
-
-                <h4>Dádiva do Pacto</h4>
-                <p>No 3º nível seu patrono transcendental lhe concede uma dádiva pelos seus serviços leais. Você ganha uma das seguintes características, à sua escolha.</p>
-                
-                <h5><b>Pacto da Corrente</b></h5>
-                <p>Você aprende a magia <a href="/magias.php?nome=convocar-familiar" class="magia-hover magicas-tooltip" id="convocar-familiar" title="Carregando...">convocar familiar</a> e pode conjurá-la como um ritual. A magia não conta para a sua lista de magias conhecidas.</p>
-                <p>Ao realizar uma conjuração, você pode escolher uma das formas normais para o seu familiar ou uma das formas especiais a seguir: diabrete, pseudo-dragão, quasit ou sprite.</p>
-                <p>Além disso, ao executar a ação Atacar, você pode renunciar a um de seus ataques para permitir que o seu familiar realize um ataque com a reação dele.</p>
-
-                <h5><b>Pacto da Lâmina</b></h5>
-                <p>Você pode usar sua ação para criar uma arma de pacto em sua mão vazia. Você escolhe a forma que a arma de combate corpo a corpo assume toda vez que a cria (consulte as opções de armas no capítulo 5). Você é proficiente com essa arma enquanto a empunhar. Ela conta como arma mágica para propósitos de vencer resistência e imunidade a ataques e dano não-mágico.</p>
-                <p>Sua arma de pacto desaparece se permanecer a mais de 1,5 metro de distância de você por 1 minuto ou mais. Ela também desaparece se você usar esta característica novamente, se dispensá-la (nenhuma ação é necessária) ou se morrer.</p>
-                <p>Você pode transformar uma arma mágica na sua arma de pacto ao executar um ritual especial enquanto segura a arma. Você executa o ritual ao longo de 1 hora, o que pode ser feito durante um descanso curto. Você pode, então, dispensar a arma enviando-a para um espaço extradimensional, e a partir de então ela aparece sempre que você criar sua arma de pacto. Você não pode afetar um artefato ou uma arma inteligente dessa maneira. A arma deixa de ser sua arma de pacto se você morrer, se fizer o ritual de 1 hora com uma arma diferente ou se usar um ritual de 1 hora para quebrar o seu vínculo com ela. A arma aparece aos seus pés se ela estiver no espaço extradimensional quando o laço for quebrado.</p>
-
-                <h5><b>Pacto do Tomo</b></h5>
-                <p>Seu patrono lhe presenteia com um grimório chamado Livro das Sombras. Ao receber esta característica, escolha três truques da lista de magias de qualquer classe (cada um pode ser escolhido de uma lista distinta). Enquanto tiver a posse do livro, você pode conjurar esses truques à vontade. Eles não contam para o número de truques que você conhece. Mesmo que eles não aparecem na lista de magias de bruxo, no que diz respeito a você, eles serão considerados magias de bruxo.</p>
-                <p>Se perder o seu Livro das Sombras, você pode realizar uma cerimônia de 1 hora para receber de seu patrono um substituto. Essa cerimônia pode ser feita durante um período de descanso e destrói o livro anterior. Quando você morre, o livro se transforma em cinzas.</p>
-
-                <div class="card relac-raca" style="margin-top: 22px;margin-bottom: 22px;">
-                  <div class="card-body" style="padding: 26px; padding-bottom: 12px;">
-                      <h6 style="text-transform: uppercase;">Sua Dádiva do Pacto</h6>
-                      <p>Cada opção de Dádiva do Pacto produz uma criatura ou objeto especial que reflete a natureza do seu patrono.</p>
-                      <p><b>Pacto da Corrente.</b> Seu familiar é mais inteligente que um familiar típico. Sua forma padrão pode ser um reflexo do seu patrono, como sprites e pseudo-dragões para a Arquifada ou diabretes e quasits para o Ínfero. Pelo fato de o Grande Antigo ser de natureza imperscrutável, qualquer familiar lhe é adequado.</p>
-                      <p><b>Pacto da Lâmina.</b> Se o seu patrono for a Arquifada, sua arma pode ser uma lâmina delgada envolta por vinhas frondosas. Se você serve o ínfero, sua arma pode ser um machado de metal negro adornado com chamas decorativas. Se o seu patrono for o Grande Antigo, sua arma pode ser uma lança de aparência antiga, com uma gema encravada na lâmina, esculpida para se parecer com um terrível olho que nunca pisca.</p>
-                      <p><b>Pacto do Tomo.</b> O seu Livro das Sombras pode ser um tomo elegante com bordas douradas repleto de magias de encantamento e ilusão, dado a você pela altiva Arquifada. Ele poderia ser um tomo pesado, costurado com couro de demônio e rebitado com ferro, guardando magias de conjuração e rico em histórias proibidas sobre as sinistras regiões do cosmo, se for um presente do ínfero. Ou poderia ser o diário esfarrapado de um lunático que enlouqueceu pelo contato com O Grande Antigo, contendo fragmentos de magias que apenas a sua própria insanidade crescente lhe permite entender e conjurar.</p>
-                  </div>
-                </div>
-
-                <h4>Aumento no Valor de Atributo</h4>
-                <p>Ao alcançar o nível e novamente no 8º, 12º, 16º e 19º níveis, você pode aumentar em 2 o valor de um atributo à sua escolha, ou pode aumentar em 1 o valor de dois atributos. Como sempre, não é possível aumentar o valor de um atributo acima de 20 usando esta característica.</p>
-
-                <h4>Arcana Mística</h4>
-                <p>No 11º nível seu patrono lhe revela um segredo mágico chamado arcana: uma magia de 6º círculo da lista de magias do bruxo à sua escolha.</p>
-                <p>Você pode conjurar sua magia arcana uma vez sem gastar um espaço de magia. Você deve terminar um descanso longo antes de poder fazer isso novamente.</p>
-                <p>Em níveis mais altos, você ganha mais magias de bruxo que podem ser conjuradas dessa maneira: uma de 7º círculo, à sua escolha, no 13º nível; uma de 8º círculo no 15º nível e uma de 9º círculo no 17º nível. Você recupera todos os usos da sua Arcana Mística ao terminar um descanso longo.</p>
-
-                <h4>Mestre Místico</h4>
-                <p>No 20º nível você pode recarregar sua reserva de poder místico ao pedir ao seu patrono a recuperação dos espaços de magia gastos. Você deve gastar 1 minuto suplicando ao seu patrono por ajuda para recuperar todos os seus espaços de magia gastos da sua característica Magia de Pacto. Uma vez que tenha recuperado espaços de magia com esta característica, você precisa finalizar um descanso longo antes de poder usá-la novamente.</p>
-
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Patronos Sobrenaturais</h2>
-                <p>Os seres que servem como patronos para bruxos são poderosos habitantes de outros planos de existência – não exatamente deuses, mas criaturas com poderes quase divinos. Diferentes patronos garantem aos bruxos o acesso a diferentes poderes e invocações, esperando favores significativos em troca.</p>
-                <p>Alguns patronos colecionam bruxos, repartindo conhecimento místico praticamente de graça ou se gabando de suas habilidades para prender mortais à sua vontade. Outros concedem seus poderes apenas relutantemente, e podem fazer um pacto com um único bruxo. Bruxos que servem ao mesmo patrono podem ver uns aos outros como aliados, irmãos ou rivais.</p>
-            </div>
-
-            <div style="margin-top: 22px;">
-                <h3 class="subtitulo">Arquifada</h3>
-                <p>Seu patrono é um senhor ou senhora dos feéricos, uma criatura das lendas que guarda segredos esquecidos anteriores ao nascimento das raças mortais. As motivações desse ser são, muitas das vezes, inescrutáveis e, outras vezes, caprichosas, podendo envolver uma disputa por um poder mágico maior ou uma fixação em antigos rancores. Seres deste tipo incluem o Príncipe do Gelo; a Rainha do Ar e das Trevas, o governante da Corte Sombria; Titânia, da Corte de Verão; seu consorte, Oberon, o Senhor Verdejante; Hyrsam, o Príncipe dos Tolos; e as megeras ancestrais.</p>
-                
-                <h4>Lista Expandida de Magias</h4>
-                <p>Quando você aprende uma magia de bruxo, a Arquifada permite a escolha a partir de uma lista expandida de magias. As magias a seguir são adicionadas à sua lista de magias de bruxo.</p>
-                
-                <h5><b>Lista Expandida de Magias da Arquifada</b></h5>
-                <table class="table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
-                  <thead>
-                    <tr>
-                      <th class="text-center pequena-coluna" scope="col">Círculo da Magia</th>
-                      <th scope="col">Magias</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th class="text-center" scope="row">1º</th>
-                      <td><a href="/magias.php?nome=fogo-das-fadas" class="magia-hover magicas-tooltip" id="fogo-das-fadas" title="Carregando...">fogo das fadas</a>, <a href="/magias.php?nome=sono" class="magia-hover magicas-tooltip" id="sono" title="Carregando...">sono</a></td>
-                    </tr>
-                    <tr>
-                      <th class="text-center" scope="row">2º</th>
-                      <td><a href="/magias.php?nome=acalmar-emocoes" class="magia-hover magicas-tooltip" id="acalmar-emocoes" title="Carregando...">acalmar emoções</a>, <a href="/magias.php?nome=forca-espectral" class="magia-hover magicas-tooltip" id="forca-espectral" title="Carregando...">força espectral</a></td>
-                    </tr>
-                    <tr>
-                      <th class="text-center" scope="row">3º</th>
-                      <td><a href="/magias.php?nome=crescimento-de-plantas" class="magia-hover magicas-tooltip" id="crescimento-de-plantas" title="Carregando...">crescimento de plantas</a>, <a href="/magias.php?nome=piscar" class="magia-hover magicas-tooltip" id="piscar" title="Carregando...">piscar</a></td>
-                    </tr>
-                    <tr>
-                      <th class="text-center" scope="row">4º</th>
-                      <td><a href="/magias.php?nome=dominar-fera" class="magia-hover magicas-tooltip" id="dominar-fera" title="Carregando...">dominar fera</a>, <a href="/magias.php?nome=invisibilidade-maior" class="magia-hover magicas-tooltip" id="invisibilidade-maior" title="Carregando...">invisibilidade maior</a></td>
-                    </tr>
-                    <tr>
-                      <th class="text-center" scope="row">5º</th>
-                      <td><a href="/magias.php?nome=dominar-pessoa" class="magia-hover magicas-tooltip" id="dominar-pessoa" title="Carregando...">dominar pessoa</a>, <a href="/magias.php?nome=similaridade" class="magia-hover magicas-tooltip" id="similaridade" title="Carregando...">similaridade</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-                
-                <h4>Presença Feérica</h4>
-                <p>A partir do primeiro nível, o seu patrono lhe concede a capacidade de projetar a presença cativante e temível dos feéricos. Com uma ação, você pode fazer com que todas as criaturas dentro de um cubo de 3 metros de lado originado a partir de você realizem salvaguardas de Sabedoria contra a CD para evitar suas magias de bruxo. Aquelas que falharem estarão enfeitiçadas ou amedrontadas por você (à sua escolha) até o fim de seu próximo turno.</p>
-                <p>Após usar esta característica, você não pode utilizá-la novamente até finalizar um período de descanso curto ou longo.</p>
-                
-                <h4>Fuga em Névoa</h4>
-                <p>A partir do 6º nível, em resposta a perigo, você pode desaparecer em uma névoa. Ao sofrer dano, você pode usar sua reação para se tornar invisível e se teleportar para um espaço desocupado a até 18 metros de distância e que possa ser visto. Você permanece invisível até o início do seu próximo turno ou até realizar um ataque ou uma conjuração.</p>
-                <p>Após usar esta característica, você não pode utilizá-la novamente até finalizar um período de descanso curto ou longo.</p>
-                
-                <h4>Defesas Sedutoras</h4>
-                <p>A partir do 10º nível, seu patrono o ensina a devolver as magias de manipulação mental dos seus inimigos contra eles próprios. Você passa a ser imune a ser enfeitiçado e, quando outra criatura tentar fazê-lo, pode usar sua reação para voltar o encantamento contra ela. A criatura deve ser bem-sucedida em uma salvaguarda de Sabedoria contra a CD para evitar suas magias de bruxo ou ficará enfeitiçada por 1 minuto ou até sofrer dano.</p>
-
-                <h4>Delírio Sombrio</h4>
-                <p>A partir do 14º nível, você pode mergulhar uma criatura em um reino ilusório. Com uma ação, escolha uma criatura à sua vista e que esteja a até 18 metros de distância. Ela deve realizar uma salvaguarda de Sabedoria contra a CD para evitar suas magias de bruxo. Em caso de falha, ela fica enfeitiçada ou amedrontada por você (à sua escolha) durante 1 minuto ou até sua concentração ser quebrada (como se você estivesse se concentrando em uma magia). Este efeito acaba mais cedo se a criatura sofrer qualquer tipo de dano.</p>
-                <p>Até que esta ilusão termine, a criatura pensa estar perdida em um reino nebuloso, cuja aparência você escolhe. Ela só pode ver e ouvir a si mesma, você e a ilusão.</p>
-                <p>Você deve terminar um descanso longo antes de usar esta característica novamente.</p>
-            </div>
-
-            <div style="margin-top: 22px;">
-                <h3 class="subtitulo">O Ínfero</h3>
-                <p>Você fez um pacto com um habitante dos planos de existência inferiores, um ser cujos objetivos são maléficos, ainda que você lute contra eles. Tais seres desejam a corrupção ou a destruição de todas as coisas, até mesmo de você. Ínferos poderosos o suficiente para forjar pactos incluem lordes demoníacos como Demogorgon, Orcus, Fraz’Urb-luu e Bafomé; arquidiabos como Asmodeus, Dispater, Mefistófeles e Belial; demônios do fosso e balores especialmente poderosos ou ultroloths e outros senhores dos yugoloths.</p>
-                
-                <h4>Lista Expandida de Magias</h4> 
-                <p>O Ínfero permite que você escolha suas magias de bruxo a partir de uma lista expandida de magias. As magias a seguir são adicionadas à sua lista de magias de bruxo.</p>
-
-                <h5><b>Lista Expandida de Magias do Ínfero</b></h5>
-                <table class="table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
-                  <thead>
-                    <tr>
-                      <th class="text-center pequena-coluna" scope="col">Círculo da Magia</th>
-                      <th scope="col">Magias</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th class="text-center" scope="row">1º</th>
-                      <td><a href="/magias.php?nome=comando" class="magia-hover magicas-tooltip" id="comando" title="Carregando...">comando</a>, <a href="/magias.php?nome=maos-flamejantes" class="magia-hover magicas-tooltip" id="maos-flamejantes" title="Carregando...">mãos flamejantes</a></td>
-                    </tr>
-                    <tr>
-                      <th class="text-center" scope="row">2º</th>
-                      <td><a href="/magias.php?nome=cegueira-surdez" class="magia-hover magicas-tooltip" id="cegueira-surdez" title="Carregando...">cegueira/surdez</a>, <a href="/magias.php?nome=raio-ardente" class="magia-hover magicas-tooltip" id="raio-ardente" title="Carregando...">raio ardente</a></td>
-                    </tr>
-                    <tr>
-                      <th class="text-center" scope="row">3º</th>
-                      <td><a href="/magias.php?nome=bola-de-fogo" class="magia-hover magicas-tooltip" id="bola-de-fogo" title="Carregando...">bola de fogo</a>, <a href="/magias.php?nome=nuvem-fetida" class="magia-hover magicas-tooltip" id="nuvem-fetida" title="Carregando...">nuvem fétida</a></td>
-                    </tr>
-                    <tr>
-                      <th class="text-center" scope="row">4º</th>
-                      <td><a href="/magias.php?nome=escudo-ardente" class="magia-hover magicas-tooltip" id="escudo-ardente" title="Carregando...">escudo ardente</a>, <a href="/magias.php?nome=muralha-de-fogo" class="magia-hover magicas-tooltip" id="muralha-de-fogo" title="Carregando...">muralha de fogo</a></td>
-                    </tr>
-                    <tr>
-                      <th class="text-center" scope="row">5º</th>
-                      <td><a href="/magias.php?nome=coluna-de-chamas" class="magia-hover magicas-tooltip" id="coluna-de-chamas" title="Carregando...">coluna de chamas</a>, <a href="/magias.php?nome=consagrar" class="magia-hover magicas-tooltip" id="consagrar" title="Carregando...">consagrar</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-                
-                <h4>Bênção do Tenebroso</h4>
-                <p>A partir do 1º nível, ao reduzir os pontos de vida de uma criatura hostil para O, você ganha pontos de vida temporários iguais ao seu modificador de Carisma + seu nível de bruxo (mínimo de 1).</p>
-                
-                <h4>A Sorte do Próprio Tenebroso</h4>
-                <p>A partir do 6º nível, você pode chamar seu patrono para que ele altere o destino a seu favor. Ao realizar um teste de atributo ou salvaguarda, você pode usar esta característica para adicionar 1d10 à sua jogada. Isso pode ser feito após a jogada inicial, porém antes de ela surtir efeito.</p>
-                <p>Uma vez usada esta característica, ela não pode ser usada novamente até que você complete um período de descanso curto ou longo.</p>
-
-                <h4>Resistência Ínfera</h4>
-                <p>A partir do 10º nível, ao terminar um período de descanso curto ou longo, você pode escolher um tipo de dano, contra o qual ganha resistência até escolher outro tipo, usando novamente esta característica. Dano causado por armas mágicas ou de prata ignoram esta resistência.</p>
-                
-                <h4>Lançar no Inferno</h4>
-                <p>A partir do 14º nível, ao atingir uma criatura com um ataque, você pode usar esta característica para transportá-la instantaneamente para os planos inferiores. A criatura desaparece e é lançada numa paisagem de pesadelos.</p>
-                <p>No final do seu próximo turno, o alvo retorna para o espaço que ocupava anteriormente ou para o espaço desocupado mais próximo. Se não se tratava de um ínfero, o alvo sofre 10d10 pontos de dano psíquico, por conta da experiência aterrorizante.</p>
-                <p>Uma vez usada esta característica, você só pode utilizá-la novamente após completar um descanso longo.</p>
-            </div>
-
-            <div style="margin-top: 22px;">
-              <h3 class="subtitulo">O Grande Antigo</h3>
-              <p>Seu patrono é uma entidade misteriosa, cuja natureza é totalmente estranha ao tecido da realidade. Ele pode vir do Reino Distante, do espaço além da realidade, ou pode ser um dos deuses mais antigos, conhecidos apenas nas lendas. Suas motivações são incompreensíveis para os mortais, e o seu conhecimento é tão imenso e antigo, que até as maiores bibliotecas empalidecem em comparação com os vastos segredos que ele guarda. O Grande Antigo pode não estar ciente da sua existência, ou ser completamente indiferente a você, mas os segredos que você aprendeu lhe permitem extrair sua magia dele.</p>
-              <p>Entidades deste tipo incluem Ghaunadar, chamado de Aquele Que Espreita; Tharizdun, o Deus Acorrentado; Dendar, a Serpente Noturna; Zargon, o Retomador; o Grande Cthulhu; e outros seres insondáveis.</p>
-              
-              <h4>Lista Expandida de Magias</h4> 
-              <p>O Grande Antigo permite que você escolha suas magias de bruxo a partir de uma lista expandida de magias. As magias a seguir são adicionadas à sua lista de magias de bruxo.</p>
-
-              <h5><b>Lista Expandida de Magias do Grande Ancião</b></h5>
-              <table class="table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
-                <thead>
-                  <tr>
-                    <th class="text-center pequena-coluna" scope="col">Círculo da Magia</th>
-                    <th scope="col">Magias</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th class="text-center" scope="row">1º</th>
-                    <td><a href="/magias.php?nome=gargalhada-nefasta-de-tasha" class="magia-hover magicas-tooltip" id="gargalhada-nefasta-de-tasha" title="Carregando...">gargalhada nefasta de Tasha</a>, <a href="/magias.php?nome=sussurros-dissonantes" class="magia-hover magicas-tooltip" id="sussurros-dissonantes" title="Carregando...">sussurros dissonantes</a></td>
-                  </tr>
-                  <tr>
-                    <th class="text-center" scope="row">2º</th>
-                    <td><a href="/magias.php?nome=detectar-pensamentos" class="magia-hover magicas-tooltip" id="detectar-pensamentos" title="Carregando...">detectar pensamentos</a>, <a href="/magias.php?nome=forca-espectral" class="magia-hover magicas-tooltip" id="forca-espectral" title="Carregando...">força espectral</a></td>
-                  </tr>
-                  <tr>
-                    <th class="text-center" scope="row">3º</th>
-                    <td><a href="/magias.php?nome=clarividencia" class="magia-hover magicas-tooltip" id="clarividencia" title="Carregando...">clarividência</a>, <a href="/magias.php?nome=remeter" class="magia-hover magicas-tooltip" id="remeter" title="Carregando...">remeter</a></td>
-                  </tr>
-                  <tr>
-                    <th class="text-center" scope="row">4º</th>
-                    <td><a href="/magias.php?nome=dominar-fera" class="magia-hover magicas-tooltip" id="dominar-fera" title="Carregando...">dominar fera</a>, <a href="/magias.php?nome=tentaculos-negros-de-evard" class="magia-hover magicas-tooltip" id="tentaculos-negros-de-evard" title="Carregando...">tentáculos negros de Evard</a></td>
-                  </tr>
-                  <tr>
-                    <th class="text-center" scope="row">5º</th>
-                    <td><a href="/magias.php?nome=dominar-pessoa" class="magia-hover magicas-tooltip" id="dominar-pessoa" title="Carregando...">dominar pessoa</a>, <a href="/magias.php?nome=telecinese" class="magia-hover magicas-tooltip" id="telecinese" title="Carregando...">telecinese</a></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              <h4>Mente Desperta</h4>
-              <p>A partir do 1º nível, o seu conhecimento alienígena lhe dá a capacidade de tocar as mentes de outras criaturas. Você pode se comunicar telepaticamente com qualquer criatura à sua vista e que esteja a até 9 metros de distância. Você não precisa compartilhar o idioma da criatura para que ela o compreenda, mas ela deve ser capaz de entender pelo menos um idioma qualquer.</p>
-              
-              <h4>Proteção Entrópica</h4>
-              <p>No 6º nível você aprende a se proteger magicamente de ataques e a transformar um ataque malsucedido de um inimigo em boa sorte para si. Ao sofrer uma jogada de ataque, você pode usar sua reação para impor-lhe desvantagem. Se o ataque falhar, a sua próxima jogada de ataque feita contra a criatura tem vantagem até o final do seu turno.</p>
-              <p>Uma vez usada esta característica, você só pode utilizá-la novamente após um período de descanso curto ou longo.</p>
-
-              <h4>Escudo Mental</h4>
-              <p>A partir do 10º nível, seus pensamentos não podem ser lidos por telepatia ou por outros meios, a não ser que você permita. Você também ganha resistência a dano psíquico, e sempre que uma criatura lhe causar dano psíquico, ela sofre a mesma quantidade de dano.</p>
-              
-              <h4>Criar Servo</h4>
-              <p>No 14º nível você ganha a capacidade de infectar a mente de um humanoide com a magia alienígena do seu patrono. Você pode usar sua ação para tocar um humanoide incapacitado, que então estará enfeitiçado por você até que uma magia remover maldição seja conjurada sobre ele, até que a condição enfeitiçado seja removida ou até que você use esta característica novamente.</p>
-              <p>Você pode se comunicar telepaticamente com a criatura enfeitiçada, desde que esteja no mesmo plano de existência que ela.</p>
-          </div>
         </div>
     </div>
-  </div>
 
-  <?php include('/home/site/wwwroot/partial/footer.php'); ?>
+    <div data-include="footer"></div>

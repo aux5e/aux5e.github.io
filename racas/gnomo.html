@@ -1,136 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php
-    $pageName = 'classesGnomo';
-    $pageTitle = 'Gnomo - Informações Relevantes';
-    $pageGroup = 'racas';
-?>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
+    <link rel="icon" href="/imagens/favicon.png">
+    <script>
+        var pageName = 'classesGnomo';
+        var pageTitle = 'Gnomo';
+        var pageGroup = 'racas';
 
-<?php include('/home/site/wwwroot/partial/head.php'); ?>
- 
+        document.write("<title>" + pageTitle + " - Raças - Aux.5e</title>");
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/misc.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.magia-hover').tooltip({
+                track: true,
+                open: function (event, ui) {
+                    var userid = this.id;
+
+                    $.ajax({
+                        url: '/data/magias-popover.html',
+                        type: 'post',
+                        data: {
+                            userid: userid
+                        },
+                        success: function (response) {
+
+                            // Setting content option
+                            $("#" + userid).tooltip('option', 'content', response);
+
+                        }
+                    });
+                }
+            });
+
+            $('.magia-hover').mouseout(function () {
+                // re-initializing tooltip
+                $(this).attr('title', 'Carregando...');
+                $(this).tooltip();
+                $('.ui-helper-hidden-accessible').hide();
+                //$('.srd-tooltip').hide();
+            });
+
+
+        });
+    </script>
+</head>
+
 <body>
 
-<?php include('/home/site/wwwroot/partial/header.php'); ?>
+    <div data-include="header"></div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xl">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="https://5esrd.azurewebsites.net/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/racas.php">Raças</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Gnomo</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-</div>
- 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <img src="/imagens/gnomo.png" class="rounded float-right" alt="Gnomo">
-            <h1 class="titulo">Gnomo <span class="titulo-span">Detalhes da Raça</span></h1>
-            <div class="card intro-raca">
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                      <p class="book-quote">Magricelo e de cabelos lisos, com a pele cor de noz e os olhos de um turquesa admirável, Burgell tem metade da altura de Aeron, e precisa subir num caixote para ver através do buraco-espia-visita na porta. Como a maioria das moradias em Oeble, aquela em particular havia sido construída para humanos, com os residentes mais baixos tendo de lidar com esse tipo de dificuldade da melhor maneira possível.</p>
-                      <p class="book-quote">Ao menos o relativo gigantismo da residência deu a Burgell espaço suficiente para guardar todas as suas bugigangas, tão pequenas quanto ele próprio. A sala principal era sua oficina, e continha uma variedade inimaginável de ferramentas: martelos, cinzéis, serras, fechaduras, lentes coloridas, lupas de joalheiro, vasos de pólvora e ingredientes para a conjuração de magias. Um gato cinza e gordo – o familiar do mago -permanecia deitado sobre um grimório. O animal abriu os olhos, deu uma desdenhosa olhada de soslaio para Aeron, e depois, aparentemente, voltou a dormir.</p>
-                      <div class="blockquote-footer">Richard Lee Byers, <cite title="Source Title">The Black Bouquet [O Buquê Negro]</cite></div>
-                    </blockquote>
-                </div>
-            </div>
-            <div style="margin-top: 22px;">
-                <p>Um zumbido de constante atividade permeia os arredores das comunidades fechadas dos gnomos. E sons ainda mais altos pontuam esse zumbido: um tilintar de engrenagens aqui, um pequeno estouro ali, um grito de surpresa ou triunfo e, principalmente, explosões de riso. Os gnomos aproveitam a vida, desfrutando de cada momento de invenção, exploração, investigação, criação e brincadeira.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Expressão Vibrante</h2>
-                <p>A energia e o entusiasmo de um gnomo pela vida reluzem em cada centímetro do seu corpo diminuto. Os membros desta raça medem pouco mais de 90 centímetros de altura e pesam entre 20 e 25 quilos. Seus rostos morenos ou bronzeados costumam ser adornados com grandes sorrisos (sob seus enormes narizes), e seus olhos brilham com entusiasmo. Os fios dos seus cabelos claros tendem a apontar em todas as direções, como se expressassem o interesse insaciável dos membros desta raça em tudo ao seu redor.</p>
-                <p>A personalidade de um gnomo fica evidente em sua aparência. No sexo masculino, a barba é mantida cuidadosamente aparada, possuindo voltas e pontas curiosas, em contraste com seus cabelos rebeldes. Do mesmo modo, as roupas de um gnomo, embora em discretos tons terrosos, são sempre elaboradas e decoradas com bordados, emblemas ou joias reluzentes.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Dedicação Encantadora</h2>
-                <p>No que diz respeito aos membros desta diminuta raça, estar vivo é uma coisa maravilhosa, e eles espremem cada grama de prazer de seus três a cinco séculos de vida. Os humanos devem se perguntar como deve ser entediante viver uma vida tão duradoura, e os elfos podem levar todo o tempo saboreando as belezas do mundo em seus longos anos, mas os gnomos parecem temer que mesmo todo esse tempo não seja suficiente para as coisas que desejam ver e fazer.</p>
-                <p>Esses pequenos seres falam como se não conseguissem expressar todos os pensamentos em suas mentes. Mesmo quando expressam ideias e opiniões sobre uma série de assuntos, ainda assim conseguem ouvir atentamente, fazendo exclamações de surpresa e apreciação adequadas durante uma conversa.</p>
-                <p>Apesar de adorarem piadas de qualquer tipo, particularmente trocadilhos e travessuras, são igualmente dedicados às tarefas sérias. Muitos são engenheiros, alquimistas, engenhoqueiros e inventores qualificados. E estão sempre dispostos a cometer erros e rir de si mesmos no processo de aperfeiçoar o que fazem, assumindo riscos ousados (às vezes imprudentes) e sonhando alto.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Tocas Brilhantes</h2>
-                <p>Os gnomos constroem suas casas em terras montanhosas e arborizadas. Embora vivam no subsolo, respiram mais ar fresco do que os anões, desfrutando da natureza viva na superfície sempre que podem. Suas casas ficam bem escondidas, tanto pela construção meticulosamente planejada quanto por simples ilusões. Os visitantes bem-vindos são rapidamente encaminhados para suas tocas quentes e bem iluminadas; os indesejados, por outro lado, nem sequer encontram as entradas.</p>
-                <p>Os gnomos que se estabelecem em terras humanas costumam ser lapidárias, engenheiros, sábios ou engenhoqueiros. Algumas famílias humanas mantêm tutores gnomos, garantindo assim que seus pupilos desfrutem de uma mistura de aprendizado sério e diversão encantadora. Um gnomo pode ensinar várias gerações de uma única família humana no decorrer de sua longa vida.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Vendo o Mundo</h2>
-                <p>Curiosos e impulsivos, os gnomos podem sair em busca de aventuras como uma forma de ver o mundo, ou por conta da paixão pela exploração. Como amantes de pedras preciosas e outros itens belos, os membros desta raça veem a aventura como um caminho rápido, mesmo que perigoso, para a riqueza. Independentemente do que os leve à aventura, ao adotarem esse modo de vida, desfrutam tanto dele quanto de qualquer outra atividade que empreendam, às vezes para o grande aborrecimento dos seus companheiros de aventuras.</p>
-            </div>
-            <div class="card relac-raca" style="margin-top: 22px;">
-                <div class="card-body">
-                    <h6>GNOMOS DAS PROFUNDEZAS</h6>
-                    <p>Uma terceira sub-raça de gnomos, os gnomos das profundezas (ou svirfneblin), vive em pequenas comunidades espalhadas pela Umbreterna. Diferentes dos duergar e dos drow, os svirfneblin são tão bondosos quanto seus primos da superfície. No entanto, seu humor e entusiasmo foi neutralizado pelo ambiente opressivo em que vivem. Por conta disso, sua perícia inventiva geralmente é direcionada ao trabalho com pedras.</p>
-                </div>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Nomes Gnômicos</h2>
-                <p>Os gnomos adoram nomes, por isso a maioria tem meia dúzia ou mais deles. O ancião do clã, a mãe, o pai, as tias e tios de um gnomo - todos lhe dão um nome. Além disso, os vários apelidos que recebem podem ou não ser mantidos. Os nomes gnômicos costumam ser variantes dos nomes de ancestrais ou parentes distantes, embora alguns sejam puramente inventados. Ao lidar com humanos e outras raças acostumadas a nomes curtos, os gnomos aprendem a usar não mais do que três nomes: um próprio, um de clã e um apelido, escolhendo em cada categoria o mais divertido.</p>
-                <p><strong>Nomes Masculinos:</strong> Alston, Alvyn, Boddynock, Brocc, Burgell, Dimble, Eldon, Erky, Fonkin, Frug, Gerbo, Gimble Glim, Jebeddo, Kellen, Namfoodle, Orryn, Roondar, Seebo Sindri, Warryn, Wrenn, Zook</p>
-                <p><strong>Nomes Femininos:</strong> Bimpnottin, Breena, Caramip, Carlin, Donella, Duvamil, Ella, Ellyjobell, Ellywick, Lilli, Loopmottin, Lorilla, Mardnab, Nissa, Nyx, Oda, Orla, Roywyn, Shamil, Tana, Waywocket, Zanna</p>
-                <p><strong>Nomes de Clãs:</strong> Beren, Daergel, Folkor, Garrick, Nackle, Murnig, Ningel, Raulnor, Scheppen, Timbers, Turen</p>
-                <p><strong>Apelidos:</strong> Cérebrasa, Calçunsó, Genialerta, Gema Faiscante Manto, Mente d'Ouro, Patinho Feio, Pó-de-Forno, Pústula, Sacodebreja, Texugo, Tranca-Fecho-Duplo, Trombadinha</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Traços Raciais dos Gnomos</h2>
-                <p>Seu personagem gnomo possui uma série de características em comum com os demais gnomos.</p>
-                <h4>Aumento no Valor de Atributo</h4>
-                <p>Seu valor de Inteligência aumenta em 2.</p>
-                <h4>Idade</h4>
-                <p>Um gnomo atinge a idade adulta no mesmo ritmo que os humanos, e espera-se que, em sua maioria, amadureçam por volta dos 40 anos. Eles podem viver de 350 a 500 anos.</p>
-                <h4>Alinhamento</h4>
-                <p>Gnomos costumam ser bons. Aqueles que tendem para a ordem são sábios, engenheiros, pesquisadores, eruditos, investigadores ou inventores. Aqueles que se inclinam para o caos são menestréis, trapaceiros, andarilhos ou joalheiros sofisticados. De um modo geral são bondosos, até mesmo os trapaceiros entre eles são mais brincalhões do que maliciosos.</p>
-                <h4>Tamanho</h4>
-                <p>Seu tamanho é Pequeno. Gnomos têm entre 0,9 e 1,2 metro de altura e pesam em torno de 18 quilos.</p>
-                <h4>Deslocamento</h4>
-                <p>Seu deslocamento básico é de 7,5 metros.</p>
-                <h4>Visão no Escuro</h4>
-                <p>Acostumado à vida subterrânea, você possui uma visão superior no escuro. Você consegue enxergar até 18 metros na meia-luz como se fosse dia e, na escuridão, como se fosse meia-luz. Na escuridão você só consegue discernir tons de cinza.</p>
-                <h4>Astúcia de Gnomo</h4>
-                <p>Você tem vantagem em todas as salvaguardas de Inteligência, Sabedoria e Carisma contra magia.</p>
-                <h4>Idiomas</h4>
-                <p>Você fala, lê e escreve o idioma Comum e Gnómico. Este último, que usa o alfabeto Anão, é renomado por seus tratados técnicos e por seus almanaques sobre o mundo natural.</p>
-                <h4>Sub-raças</h4>
-                <p>Duas sub-raças de gnomos são encontradas nos mundos de D&D: os gnomos dos bosques e os gnomos das rochas. Você deve escolher uma das duas.</p>
-            </div>
-            <div class="card relac-raca" style="margin-top: 22px;">
-                <div class="card-body">
-                    <h6>SEMPRE AMIGÁVEIS</h6>
-                    <p>É raro um gnomo ser hostil ou malicioso, a não ser que tenha sofrido uma ofensa grave. Eles sabem que a maioria das raças não compartilha do seu senso de humor, mas gostam da companhia de qualquer um.</p>
-                </div>
-            </div>
-            <div style="margin-top: 22px;">
-                <h3 class="subtitulo">Gnomo dos Bosques</h3>
-                <p>Na qualidade de gnomo dos bosques, você possui um talento natural para a ilusão e uma rapidez e furtividade inatas. Nos mundos de D&D, os gnomos dos bosques são incomuns e reservados. Eles se reúnem em comunidades escondidas nas áreas de mata virgem, lançando mão de ilusões e truques para se protegerem de ameaças ou para mascarar sua fuga, caso sejam detectados. Os membros desta sub-raça tendem a ser amigáveis com os bons povos da floresta, considerando os elfos e as fadas bondosas seus aliados mais importantes. Estes gnomos também fazem amizade com pequenos animais, e dependem deles para obter informações sobre ameaças que possam estar rondando suas terras.</p>
-                <h4>Aumento no Valor de Atributo</h4>
-                <p>Seu valor de Destreza aumenta em 1.</p>
-                <h4>Ilusionista Nato</h4>
-                <p>Você conhece o truque ilusão menor. A Inteligência é o atributo usado na conjuração.</p>
-                <h4>Falar com Animais Pequenos</h4>
-                <p>Através de sons e gestos, você pode comunicar ideias simples a animais de tamanho Pequeno ou menores. Gnomos da floresta adoram animais e muitas vezes mantêm esquilos, texugos, coelhos, toupeiras, pica-paus e outras criaturas como animais de estimação.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h3 class="subtitulo">Gnomo das Rochas</h3>
-                <p>Corno um gnomo das rochas, você possui uma inventividade inata e resistências maiores até mesmo que as de outros gnomos. Nos mundos de D&D, a maioria dos gnomos pertence a esta sub-raça, incluindo os gnomos engenhoqueiros do cenário de Dragonlance.</p>
-                <h4>Aumento no Valor de Atributo</h4> 
-                <p>Seu valor de Constituição aumenta em 1.</p>
-                <h4>Conhecimento de Artífice</h4>
-                <p>Sempre que realizar um teste de Inteligência (História) relacionado a itens mágicos, objetos alquímicos ou dispositivos tecnológicos, você pode adicionar duas vezes seu bônus de proficiência.</p>
-                <h4>Engenhoqueiro</h4>
-                <p>Você é proficiente com ferramentas de ofício (engenhoqueiro). Ao usar essas ferramentas, pode investir uma hora e 10 PO em materiais para a construção de uma engenhoca Pequena (CA 5, PV 1). Esse dispositivo para de funcionar após 24 horas (a menos que você gaste 1 hora para consertá-lo), ou quando você usa sua ação para desmantelá-lo: nesse momento é possível recuperar os materiais usados na criação dele. Você pode ter até três engenhocas ativas ao mesmo tempo.</p>
-                <p>Ao criar uma engenhoca, escolha uma das opções a seguir:</p>
-                <p><i>Brinquedo de Corda.</i> Este brinquedo pode ser um animal, monstro ou pessoa mecânica, como um sapo, pássaro, dragão ou soldado. Ao ser colocado no chão, ele se desloca por 1,5 metro a cada turno, em uma direção determinada ao acaso. Ele reproduz os sons naturais da criatura que representa.</p>
-                <p><i>Isqueiro Mecânico.</i> Este dispositivo produz uma chama diminuta, que pode ser usada para acender uma vela, tocha ou fogueira. Usá-lo requer uma ação.</p>
-                <p><i>Caixa de Música.</i> Quando aberta, esta caixa reproduz uma única canção em um volume moderado. A caixa para de tocar ao ser fechada ou ao término da canção.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://aux5e.github.io/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/racas.html">Raças</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Gnomo</li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </div>
-  </div>
 
-<?php include('/home/site/wwwroot/partial/footer.php'); ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="/imagens/gnomo.png" class="rounded float-right" alt="Gnomo">
+                <h1 class="titulo">Gnomo <span class="titulo-span">Detalhes da Raça</span></h1>
+                <div class="card intro-raca">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p class="book-quote">Magricelo e de cabelos lisos, com a pele cor de noz e os olhos de um turquesa admirável, Burgell tem metade da altura de Aeron, e precisa subir num caixote para ver através do buraco-espia-visita na porta. Como a maioria das moradias em Oeble, aquela em particular havia sido construída para humanos, com os residentes mais baixos tendo de lidar com esse tipo de dificuldade da melhor maneira possível.</p>
+                            <p class="book-quote">Ao menos o relativo gigantismo da residência deu a Burgell espaço suficiente para guardar todas as suas bugigangas, tão pequenas quanto ele próprio. A sala principal era sua oficina, e continha uma variedade inimaginável de ferramentas: martelos, cinzéis, serras, fechaduras, lentes coloridas, lupas de joalheiro, vasos de pólvora e ingredientes para a conjuração de magias. Um gato cinza e gordo – o familiar do mago -permanecia deitado sobre um grimório. O animal abriu os olhos, deu uma desdenhosa olhada de soslaio para Aeron, e depois, aparentemente, voltou a dormir.</p>
+                            <div class="blockquote-footer">Richard Lee Byers, <cite title="Source Title">The Black Bouquet [O Buquê Negro]</cite></div>
+                        </blockquote>
+                    </div>
+                </div>
+                <div style="margin-top: 22px;">
+                    <p>Um zumbido de constante atividade permeia os arredores das comunidades fechadas dos gnomos. E sons ainda mais altos pontuam esse zumbido: um tilintar de engrenagens aqui, um pequeno estouro ali, um grito de surpresa ou triunfo e, principalmente, explosões de riso. Os gnomos aproveitam a vida, desfrutando de cada momento de invenção, exploração, investigação, criação e brincadeira.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Expressão Vibrante</h2>
+                    <p>A energia e o entusiasmo de um gnomo pela vida reluzem em cada centímetro do seu corpo diminuto. Os membros desta raça medem pouco mais de 90 centímetros de altura e pesam entre 20 e 25 quilos. Seus rostos morenos ou bronzeados costumam ser adornados com grandes sorrisos (sob seus enormes narizes), e seus olhos brilham com entusiasmo. Os fios dos seus cabelos claros tendem a apontar em todas as direções, como se expressassem o interesse insaciável dos membros desta raça em tudo ao seu redor.</p>
+                    <p>A personalidade de um gnomo fica evidente em sua aparência. No sexo masculino, a barba é mantida cuidadosamente aparada, possuindo voltas e pontas curiosas, em contraste com seus cabelos rebeldes. Do mesmo modo, as roupas de um gnomo, embora em discretos tons terrosos, são sempre elaboradas e decoradas com bordados, emblemas ou joias reluzentes.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Dedicação Encantadora</h2>
+                    <p>No que diz respeito aos membros desta diminuta raça, estar vivo é uma coisa maravilhosa, e eles espremem cada grama de prazer de seus três a cinco séculos de vida. Os humanos devem se perguntar como deve ser entediante viver uma vida tão duradoura, e os elfos podem levar todo o tempo saboreando as belezas do mundo em seus longos anos, mas os gnomos parecem temer que mesmo todo esse tempo não seja suficiente para as coisas que desejam ver e fazer.</p>
+                    <p>Esses pequenos seres falam como se não conseguissem expressar todos os pensamentos em suas mentes. Mesmo quando expressam ideias e opiniões sobre uma série de assuntos, ainda assim conseguem ouvir atentamente, fazendo exclamações de surpresa e apreciação adequadas durante uma conversa.</p>
+                    <p>Apesar de adorarem piadas de qualquer tipo, particularmente trocadilhos e travessuras, são igualmente dedicados às tarefas sérias. Muitos são engenheiros, alquimistas, engenhoqueiros e inventores qualificados. E estão sempre dispostos a cometer erros e rir de si mesmos no processo de aperfeiçoar o que fazem, assumindo riscos ousados (às vezes imprudentes) e sonhando alto.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Tocas Brilhantes</h2>
+                    <p>Os gnomos constroem suas casas em terras montanhosas e arborizadas. Embora vivam no subsolo, respiram mais ar fresco do que os anões, desfrutando da natureza viva na superfície sempre que podem. Suas casas ficam bem escondidas, tanto pela construção meticulosamente planejada quanto por simples ilusões. Os visitantes bem-vindos são rapidamente encaminhados para suas tocas quentes e bem iluminadas; os indesejados, por outro lado, nem sequer encontram as entradas.</p>
+                    <p>Os gnomos que se estabelecem em terras humanas costumam ser lapidárias, engenheiros, sábios ou engenhoqueiros. Algumas famílias humanas mantêm tutores gnomos, garantindo assim que seus pupilos desfrutem de uma mistura de aprendizado sério e diversão encantadora. Um gnomo pode ensinar várias gerações de uma única família humana no decorrer de sua longa vida.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Vendo o Mundo</h2>
+                    <p>Curiosos e impulsivos, os gnomos podem sair em busca de aventuras como uma forma de ver o mundo, ou por conta da paixão pela exploração. Como amantes de pedras preciosas e outros itens belos, os membros desta raça veem a aventura como um caminho rápido, mesmo que perigoso, para a riqueza. Independentemente do que os leve à aventura, ao adotarem esse modo de vida, desfrutam tanto dele quanto de qualquer outra atividade que empreendam, às vezes para o grande aborrecimento dos seus companheiros de aventuras.</p>
+                </div>
+                <div class="card relac-raca" style="margin-top: 22px;">
+                    <div class="card-body">
+                        <h6>GNOMOS DAS PROFUNDEZAS</h6>
+                        <p>Uma terceira sub-raça de gnomos, os gnomos das profundezas (ou svirfneblin), vive em pequenas comunidades espalhadas pela Umbreterna. Diferentes dos duergar e dos drow, os svirfneblin são tão bondosos quanto seus primos da superfície. No entanto, seu humor e entusiasmo foi neutralizado pelo ambiente opressivo em que vivem. Por conta disso, sua perícia inventiva geralmente é direcionada ao trabalho com pedras.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Nomes Gnômicos</h2>
+                    <p>Os gnomos adoram nomes, por isso a maioria tem meia dúzia ou mais deles. O ancião do clã, a mãe, o pai, as tias e tios de um gnomo - todos lhe dão um nome. Além disso, os vários apelidos que recebem podem ou não ser mantidos. Os nomes gnômicos costumam ser variantes dos nomes de ancestrais ou parentes distantes, embora alguns sejam puramente inventados. Ao lidar com humanos e outras raças acostumadas a nomes curtos, os gnomos aprendem a usar não mais do que três nomes: um próprio, um de clã e um apelido, escolhendo em cada categoria o mais divertido.</p>
+                    <p><strong>Nomes Masculinos:</strong> Alston, Alvyn, Boddynock, Brocc, Burgell, Dimble, Eldon, Erky, Fonkin, Frug, Gerbo, Gimble Glim, Jebeddo, Kellen, Namfoodle, Orryn, Roondar, Seebo Sindri, Warryn, Wrenn, Zook</p>
+                    <p><strong>Nomes Femininos:</strong> Bimpnottin, Breena, Caramip, Carlin, Donella, Duvamil, Ella, Ellyjobell, Ellywick, Lilli, Loopmottin, Lorilla, Mardnab, Nissa, Nyx, Oda, Orla, Roywyn, Shamil, Tana, Waywocket, Zanna</p>
+                    <p><strong>Nomes de Clãs:</strong> Beren, Daergel, Folkor, Garrick, Nackle, Murnig, Ningel, Raulnor, Scheppen, Timbers, Turen</p>
+                    <p><strong>Apelidos:</strong> Cérebrasa, Calçunsó, Genialerta, Gema Faiscante Manto, Mente d'Ouro, Patinho Feio, Pó-de-Forno, Pústula, Sacodebreja, Texugo, Tranca-Fecho-Duplo, Trombadinha</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Traços Raciais dos Gnomos</h2>
+                    <p>Seu personagem gnomo possui uma série de características em comum com os demais gnomos.</p>
+                    <h4>Aumento no Valor de Atributo</h4>
+                    <p>Seu valor de Inteligência aumenta em 2.</p>
+                    <h4>Idade</h4>
+                    <p>Um gnomo atinge a idade adulta no mesmo ritmo que os humanos, e espera-se que, em sua maioria, amadureçam por volta dos 40 anos. Eles podem viver de 350 a 500 anos.</p>
+                    <h4>Alinhamento</h4>
+                    <p>Gnomos costumam ser bons. Aqueles que tendem para a ordem são sábios, engenheiros, pesquisadores, eruditos, investigadores ou inventores. Aqueles que se inclinam para o caos são menestréis, trapaceiros, andarilhos ou joalheiros sofisticados. De um modo geral são bondosos, até mesmo os trapaceiros entre eles são mais brincalhões do que maliciosos.</p>
+                    <h4>Tamanho</h4>
+                    <p>Seu tamanho é Pequeno. Gnomos têm entre 0,9 e 1,2 metro de altura e pesam em torno de 18 quilos.</p>
+                    <h4>Deslocamento</h4>
+                    <p>Seu deslocamento básico é de 7,5 metros.</p>
+                    <h4>Visão no Escuro</h4>
+                    <p>Acostumado à vida subterrânea, você possui uma visão superior no escuro. Você consegue enxergar até 18 metros na meia-luz como se fosse dia e, na escuridão, como se fosse meia-luz. Na escuridão você só consegue discernir tons de cinza.</p>
+                    <h4>Astúcia de Gnomo</h4>
+                    <p>Você tem vantagem em todas as salvaguardas de Inteligência, Sabedoria e Carisma contra magia.</p>
+                    <h4>Idiomas</h4>
+                    <p>Você fala, lê e escreve o idioma Comum e Gnómico. Este último, que usa o alfabeto Anão, é renomado por seus tratados técnicos e por seus almanaques sobre o mundo natural.</p>
+                    <h4>Sub-raças</h4>
+                    <p>Duas sub-raças de gnomos são encontradas nos mundos de D&D: os gnomos dos bosques e os gnomos das rochas. Você deve escolher uma das duas.</p>
+                </div>
+                <div class="card relac-raca" style="margin-top: 22px;">
+                    <div class="card-body">
+                        <h6>SEMPRE AMIGÁVEIS</h6>
+                        <p>É raro um gnomo ser hostil ou malicioso, a não ser que tenha sofrido uma ofensa grave. Eles sabem que a maioria das raças não compartilha do seu senso de humor, mas gostam da companhia de qualquer um.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">Gnomo dos Bosques</h3>
+                    <p>Na qualidade de gnomo dos bosques, você possui um talento natural para a ilusão e uma rapidez e furtividade inatas. Nos mundos de D&D, os gnomos dos bosques são incomuns e reservados. Eles se reúnem em comunidades escondidas nas áreas de mata virgem, lançando mão de ilusões e truques para se protegerem de ameaças ou para mascarar sua fuga, caso sejam detectados. Os membros desta sub-raça tendem a ser amigáveis com os bons povos da floresta, considerando os elfos e as fadas bondosas seus aliados mais importantes. Estes gnomos também fazem amizade com pequenos animais, e dependem deles para obter informações sobre ameaças que possam estar rondando suas terras.</p>
+                    <h4>Aumento no Valor de Atributo</h4>
+                    <p>Seu valor de Destreza aumenta em 1.</p>
+                    <h4>Ilusionista Nato</h4>
+                    <p>Você conhece o truque ilusão menor. A Inteligência é o atributo usado na conjuração.</p>
+                    <h4>Falar com Animais Pequenos</h4>
+                    <p>Através de sons e gestos, você pode comunicar ideias simples a animais de tamanho Pequeno ou menores. Gnomos da floresta adoram animais e muitas vezes mantêm esquilos, texugos, coelhos, toupeiras, pica-paus e outras criaturas como animais de estimação.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">Gnomo das Rochas</h3>
+                    <p>Corno um gnomo das rochas, você possui uma inventividade inata e resistências maiores até mesmo que as de outros gnomos. Nos mundos de D&D, a maioria dos gnomos pertence a esta sub-raça, incluindo os gnomos engenhoqueiros do cenário de Dragonlance.</p>
+                    <h4>Aumento no Valor de Atributo</h4>
+                    <p>Seu valor de Constituição aumenta em 1.</p>
+                    <h4>Conhecimento de Artífice</h4>
+                    <p>Sempre que realizar um teste de Inteligência (História) relacionado a itens mágicos, objetos alquímicos ou dispositivos tecnológicos, você pode adicionar duas vezes seu bônus de proficiência.</p>
+                    <h4>Engenhoqueiro</h4>
+                    <p>Você é proficiente com ferramentas de ofício (engenhoqueiro). Ao usar essas ferramentas, pode investir uma hora e 10 PO em materiais para a construção de uma engenhoca Pequena (CA 5, PV 1). Esse dispositivo para de funcionar após 24 horas (a menos que você gaste 1 hora para consertá-lo), ou quando você usa sua ação para desmantelá-lo: nesse momento é possível recuperar os materiais usados na criação dele. Você pode ter até três engenhocas ativas ao mesmo tempo.</p>
+                    <p>Ao criar uma engenhoca, escolha uma das opções a seguir:</p>
+                    <p><i>Brinquedo de Corda.</i> Este brinquedo pode ser um animal, monstro ou pessoa mecânica, como um sapo, pássaro, dragão ou soldado. Ao ser colocado no chão, ele se desloca por 1,5 metro a cada turno, em uma direção determinada ao acaso. Ele reproduz os sons naturais da criatura que representa.</p>
+                    <p><i>Isqueiro Mecânico.</i> Este dispositivo produz uma chama diminuta, que pode ser usada para acender uma vela, tocha ou fogueira. Usá-lo requer uma ação.</p>
+                    <p><i>Caixa de Música.</i> Quando aberta, esta caixa reproduz uma única canção em um volume moderado. A caixa para de tocar ao ser fechada ou ao término da canção.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-include="footer"></div>

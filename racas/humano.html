@@ -1,134 +1,190 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php
-    $pageName = 'classesHumano';
-    $pageTitle = 'Humano - Informações Relevantes';
-    $pageGroup = 'racas';
-?>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
+    <link rel="icon" href="/imagens/favicon.png">
+    <script>
+        var pageName = 'classesHumano';
+        var pageTitle = 'Humano';
+        var pageGroup = 'racas';
 
-<?php include('/home/site/wwwroot/partial/head.php'); ?>
- 
+        document.write("<title>" + pageTitle + " - Raças - Aux.5e</title>");
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/misc.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.magia-hover').tooltip({
+                track: true,
+                open: function (event, ui) {
+                    var userid = this.id;
+
+                    $.ajax({
+                        url: '/data/magias-popover.html',
+                        type: 'post',
+                        data: {
+                            userid: userid
+                        },
+                        success: function (response) {
+
+                            // Setting content option
+                            $("#" + userid).tooltip('option', 'content', response);
+
+                        }
+                    });
+                }
+            });
+
+            $('.magia-hover').mouseout(function () {
+                // re-initializing tooltip
+                $(this).attr('title', 'Carregando...');
+                $(this).tooltip();
+                $('.ui-helper-hidden-accessible').hide();
+                //$('.srd-tooltip').hide();
+            });
+
+
+        });
+    </script>
+</head>
+
 <body>
 
-<?php include('/home/site/wwwroot/partial/header.php'); ?>
+    <div data-include="header"></div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xl">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="https://5esrd.azurewebsites.net/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/racas.php">Raças</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Humano</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-</div>
- 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <img src="/imagens/humano.png" class="rounded float-right" alt="Humano">
-            <h1 class="titulo">Humano <span class="titulo-span">Detalhes da Raça</span></h1>
-            <div class="card intro-raca">
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                      <p class="book-quote">Aquelas eram as histórias de um povo inquieto, que Lua-Dourada disse baixinho. A marcha havia sido pesada, mas a recompensa ao fim do dia superou seus maiores sonhos. O grupo alcançara o alto de um penhasco, de onde se avistava a mítica cidade de Qualinost.</p>
-                      <p class="book-quote">Ela jamais havia dedicado seus pensamentos aos humanos, mas aquelas narrativas a fascinavam. As páginas amareladas contavam histórias de heróis ousados, bestas ferozes, poderosos deuses primitivos e uma magia que pertencia e dava forma àquela terra distante.</p>
-                      <div class="blockquote-footer">Elaine Cunningham, <cite title="Source Title">Daughter of the Drow [Filha dos Drow]</cite></div>
-                    </blockquote>
-                </div>
-            </div>
-            <div style="margin-top: 22px;">
-                <p>Na maior parte dos mundos, os humanos são a mais jovem das raças comuns, os últimos a chegarem à cena mundial e os portadores da menor expectativa de vida, se comparados aos anões, elfos e dragões. Talvez por isso lutem tanto para alcançar e realizar o máximo nos poucos anos que lhes são dados. Ou quem sabe sintam que têm algo a provar às raças mais antigas, sendo essa a razão por trás dos seus vastos impérios erguidos sobre comércio e conquistas. Seja qual for a sua motivação, os humanos são os inovadores, os empreendedores e os pioneiros do mundo.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Um Amplo Espectro</h2>
-                <p>Com sua tendência à migração e à conquista, os humanos são mais diversificados fisicamente do que outras raças comuns. Não há um humano típico. Um indivíduo pode ter de 1,5 a mais de 1,8 metro de altura, e pesar de 60 a 125 quilos. Os tons da pele humana variam de quase preto a muito pálido, e as cores dos cabelos, do preto ao loiro (encaracolados, crespos ou lisos); os homens podem ter pelos faciais grossos ou esparsos. Muitos membros desta raça carregam uma pitada de sangue não-humano, revelando indícios de elfos, ores ou outras raças. Humanos atingem a idade adulta ao fim da adolescência, e raramente chegam a viver um século completo.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Variedade em Tudo</h2>
-                <p>Os humanos são o povo mais adaptável e ambicioso entre as raças comuns. Eles têm gostos, códigos morais e costumes que variam tanto quanto as muitas terras que habitam. Quando se estabelecem num local, tendem a permanecer: constroem cidades e grandes reinos que podem durar séculos. Um indivíduo humano pode ter uma expectativa de vida relativamente curta, mas uma nação ou cultura humanas preservam tradições com origens muito além do alcance da memória individual. Os humanos vivem totalmente no presente — o que os torna bem adaptados a uma vida de aventuras —, mas também fazem planos, esforçando-se por deixar um legado duradouro. Individualmente e como grupo, são oportunistas adaptáveis e atentos às mudanças políticas e sociais.</p>
-            </div>
-            <div class="card relac-raca" style="margin-top: 22px;">
-                <div class="card-body">
-                    <h6>OS SEGUNDOS MELHORES AMIGOS DE TODOS</h6>
-                    <p>Os membros desta raça se misturam com os de outras raças tão prontamente quanto entre si, convivendo em relativa harmonia com quase todos os povos, embora possam não estar próximos de alguns. Geralmente servem como embaixadores, diplomatas, magistrados, mercadores e funcionários de todos os tipos.</p>
-                    <p><strong>Anões.</strong> "Trata-se de um povo forte, são amigos destemidos e fiéis à sua palavra. Mas sua ganância por ouro é a sua ruína."</p>
-                    <p><strong>Elfos.</strong> "É melhor não viajar pelas florestas dos elfos. Eles não gostam de intrusos, e você provavelmente será enfeitiçado ou crivado de flechas. Mesmo assim, quando um elfo consegue superar esse maldito orgulho racial, e passa a tratá-lo como um igual, você pode aprender muito com ele."</p>
-                    <p><strong>Pequeninos.</strong> "É difícil encontrar uma refeição melhor do que a servida na casa de um pequenino, desde que você não rache a cabeça no teto - estou falando de boa comida e de boas histórias contadas em frente a um fogo quente e agradável. Se os pequeninos tivessem um pingo de ambição, sem dúvida fariam grandes conquistas."</p>
-                </div>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Instituições Duradouras</h2>
-                <p>Enquanto um único elfo ou anão pode assumir a responsabilidade de guardar um local especial ou um segredo poderoso, os humanos fundam ordens e instituições sagradas para esse fim. Enquanto para os anões e pequeninos os clãs e os anciãos são os responsáveis por passar as tradições adiante, para os humanos esse papel é desempenhado pelas religiões, governos, bibliotecas e códigos de lei. Os membros desta raça sonham com a imortalidade, mas (exceto por aqueles poucos que buscam a não-vida ou a ascensão divina para escapar das garras da morte) só a alcançam garantindo que serão lembrados ao partirem.</p>
-                <p>Embora alguns humanos possam ser xenófobos, em geral suas sociedades são inclusivas. As terras dessa raça acolhem um grande número de não-humanos, se comparado à proporção de humanos que vivem em terras não-humanas.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Exemplares de Ambição</h2>
-                <p>Os humanos que procuram aventuras são os membros mais ousados e ambiciosos da sua raça, ela mesma ousada e ambiciosa. Esses aventureiros buscam a glória perante os olhos dos seus companheiros, acumulando poder, riqueza e fama. Mais do que outros povos, os humanos defendem causas e não territórios ou grupos.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Nomes e Etnias Humanas</h2>
-                <p>Tendo muito mais variedade do que as demais raças, os humanos não possuem nomes típicos. Alguns pais humanos dão a seus filhos nomes de outros idiomas, como Anão ou Élfico (pronunciados mais ou menos corretamente), porém, a maioria dos pais escolhe nomes ligados à cultura da sua região ou aos seus ancestrais.</p>
-                <p>A cultura e as características físicas dos humanos podem mudar muito de região para região. Em Forgotten Realms, por exemplo, o vestuário, a arquitetura, a culinária, a música e a literatura nas Fronteiras Prateadas são diferentes das encontradas na distante Turmish ou em lmpiltur, ao leste — e ainda mais na remota Kara-Tur. As características físicas desta raça variam segundo as antigas migrações dos primeiros humanos, de modo que os homens das Fronteiras Prateadas possuem todas as variações possíveis de coloração e traços raciais.</p>
-                <p>Em Forgotten Realms, nove grupos étnicos humanos são amplamente reconhecidos, embora mais de uma dúzia de outros seja encontrada em áreas específicas de Faerun. Esses grupos, e os nomes típicos de seus membros, podem ser usados como inspiração, independentemente do mundo em que seu personagem humano esteja.</p>
-                <h4>Calishitas</h4>
-                <p>Mais baixos e de constituição mais leve do que a maioria dos outros humanos, os calishitas têm pele, cabelos e olhos castanho escuros. Eles são encontrados principalmente no sudoeste de Faerun.</p>
-                <p><strong>Nomes Calishitas:</strong> (Masculinos) Aseir, Bardeid, Haseid, Khemed,Mehmen, Sudeiman, Zasheir; (femininos) Atala, Ceidil, Hama,Jasmal,Meilil, Seipora, Yasheira, Zasheida; (sobrenomes) Basha, Dumein,Jassan, Khalid, Mostana, Pashar, Rein</p>
-                <h4>Chondathanos</h4>
-                <p>Os chondathanos são um povo esguio, de pele morena e cabelos castanhos que variam de quase loiro a quase preto. A maioria dos indivíduos desta etnia é alta e tem olhos verdes ou castanhos. Humanos de descendência chondathana dominam as terras centrais de Faerún, em torno do Mar Interior.</p>
-                <p><strong>Nomes Chondathanos:</strong> (Masculinos) Darvin, Dom, Evendur, Gorstag, Grirn, Helrn, Malark, Morn, Randal, Stedd; (femininos) Arveene, Esvele,Jhessail, Kerri, Lureene, Miri, Rowan, Shandri, Tessele; (sobrenomes) Anda-Coroa, Cervol, Pardragão, Sempre-Bosque, Castelo-Cinzento, Cervo-Alto</p>
-                <h4>Damaranos</h4>
-                <p>Encontrados principalmente no noroeste de Faerûn, os damaranos possuem estatura e constituição medianas, com matizes de pele que variam do moreno ao claro. Seus cabelos são geralmente castanhos ou pretos, e a cor dos olhos varia muito, embora o castanho seja mais comum.</p>
-                <p><strong>Nomes Damaranos:</strong> (Masculinos) Bor, Fodel, Glar, Grigor, Igan, Ivor, Kosef, Mival, Orel, Pavel, Sergor; (femininos) Alethra, Kara, Katernin, Mara, Natali, Olrna, Tana, Zora; (sobrenomes) Bersk, Chernin, Dotsk, Kulenov, Marsk, Nernetsk, Shernov, Starag</p>
-                <h4>Llluskanos</h4>
-                <p>Os Illuskanos são um povo alto e de pele clara, com olhos azuis ou cinzentos. A maioria tem cabelos pretos lustrosos, mas aqueles que habitam o noroeste extremo têm cabelos loiros, ruivos ou castanho-claros.</p>
-                <p><strong>Nomes Llluskanos:</strong> (Masculinos) Ander, Blath, Bran, Frath, Geth, Lander, Luth, Malcer, Stor, Tarnan, Urth; (femininos) Arnafrey, Betha, Cefrey, Kethra, Mara, Olga, Silifrey, Westra; (sobrenomes) Brilha-Bosque, ChifreCorvo, Lacaio, Vento Bravo, Rio-Torto</p>
-                <h4>Mulanos</h4>
-                <p>Dominantes nas costas leste e sudeste do Mar Interior, os mulanos são altos, magros e de pele âmbar, com olhos castanhos ou amendoados. Seus cabelos variam do preto ao castanho-escuro, porém, nas terras onde este povo é mais proeminente, seus nobres e muitos outros raspam todo o cabelo.</p>
-                <p><strong>Nomes Mulanos:</strong> (Masculinos) Aoth, Bareris, Ehput-Ki, Kethoth, Murned, Ramas, So-Kehur, Thazar-De, Urhur; (femininos) Arizirna, Chathi, Nephis, Nulara, Murithi, Sefris, Thola, Urnara, Zolis; (sobrenomes) Ankhalab, Anskuld, Fezirn, Hahpet, Nathandern, Sepret, Uuthrakt</p>
-                <h4>Rashemitas</h4>
-                <p>Geralmente encontrados a leste do Mar Interior, e não raro misturados com os mulanos, os rashemitas tendem a ser baixos, robustos e musculosos. Sua pele, olhos e cabelos são escuros.</p>
-                <p><strong>Nomes Rashemitas:</strong> (Masculinos) Borivik, Faurgar, Jandar, Kanithar, Madislak, Ralrnevik, Shaurnar, Vladislak; (femininos) Fyevarra, Hulrnarra, Irnrnith, Irnzel, Navarra, Shevarra, Tarnrnith, Yuldra; (sobrenomes) Chergoba, Dyernina, Iltazyara, Murnyethara, Stayanoga, Ulrnokina</p>
-                <h4>Shou</h4>
-                <p>Os Shou são o maior e mais poderoso grupo étnico de Kara-Tur, no leste distante de Faerûn. O tom da sua pele é bronze amarelado, seus cabelos são negros e seus olhos escuros. Os sobrenomes Shou costumam vir antes do primeiro nome.</p>
-                <p><strong>Nomes Shou:</strong> (Masculinos) An, Chen, Chi, Fai,Jiang,Jun, Lian, Long, Meng, On, Shan, Shui, Wen; (femininos) Bai, Chao,Jia, Lei, Mei, Qiao, Shui, Tai; (sobrenomes) Chien, Huang, Kao, Kung, Lao, Ling, Mei, Pin, Shin, Surn, Tan, Wan</p>
-                <h4>Tethyrianos</h4>
-                <p>Espalhados ao longo de toda a Costa da Espada, no limite ocidental de Faerûn, os tethyrianos são de estatura e peso medianos, com pele escura, que tende a clarear quanto mais ao norte eles habitam. As cores dos seus cabelos e olhos variam muito, com cabelos castanhos e olhos azuis sendo os mais comuns. Os tethyrianos costumam usar os nomes chondathanos.</p>
-                <h4>Turami</h4>
-                <p>Nativos da costa sul do Mar Interior, o povo turami é alto e musculoso, com pele escura corno o mogno, cabelos pretos encaracolados e olhos escuros.</p>
-                <p><strong>Nomes Turami:</strong> (Masculinos) Anton, Diero, Marcon, Pieron, Rirnardo, Romero, Salazar, Urnbero; (femininos) Balarna, Dona, Faila,Jalana, Luisa, Marta, Quara, Selise, Vonda; (sobrenomes) Agosto, Astorio, Calabra, Domine, Falone, Marivaldi, Pisacar, Rarnondo</p>
-            </div>            
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Traços Raciais Humanos</h2>
-                <p>É difícil fazer generalizações sobre os humanos; mesmo assim, seu personagem humano possui as seguintes características.</p>
-                <h4>Aumento no Valor de Atributo</h4>
-                <p>Os valores de todos os atributos aumentam em 1.</p>
-                <h4>Idade</h4>
-                <p>Os Humanos atingem a idade adulta no fim da adolescência, e vivem menos de um século.</p>
-                <h4>Alinhamento</h4>
-                <p>Os Humanos não tendem a nenhum alinhamento em particular. O que há de melhor e de pior pode ser encontrado entre eles.</p>
-                <h4>Tamanho</h4>
-                <p>Independentemente da altura, em termos de regras, seu tamanho é Médio. Os Humanos variam amplamente em altura e peso, indo de 1,4 a mais de 1,8 metro.</p>
-                <h4>Deslocamento</h4>
-                <p>Seu deslocamento básico é de 9 metros.</p>
-                <h4>Idiomas</h4>
-                <p>Você pode falar, ler e escrever Comum e outro idioma à sua escolha. Humanos costumam aprender os idiomas dos povos com os quais convivem, incluindo dialetos obscuros. Eles gostam de enfeitar suas falas com palavras de outros idiomas: palavrões em Ore, expressões melodiosas em Élfico, frases militares em Anão, e assim por diante.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h3 class="subtitulo">Traços Raciais Alternativos (Humano Variante)</h3>
-                <p>Caso a sua campanha utilize as regras opcionais de talentos do Capítulo 6, seu DM pode permitir estes traços raciais alternativos, que substituem o traço humano Aumento no Valor de Atributo.</p>
-                <h4>Aumento no Valor de Atributo</h4>
-                <p>Aumente em 1 os valores de dois Atributos à sua escolha.</p>
-                <h4>Períciais</h4>
-                <p>Você ganha proficiência em uma perícia à sua escolha.</p>
-                <h4>Talento</h4>
-                <p>Você ganha um talento à sua escolha.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://aux5e.github.io/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/racas.html">Raças</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Humano</li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </div>
-  </div>
 
-<?php include('/home/site/wwwroot/partial/footer.php'); ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="/imagens/humano.png" class="rounded float-right" alt="Humano">
+                <h1 class="titulo">Humano <span class="titulo-span">Detalhes da Raça</span></h1>
+                <div class="card intro-raca">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p class="book-quote">Aquelas eram as histórias de um povo inquieto, que Lua-Dourada disse baixinho. A marcha havia sido pesada, mas a recompensa ao fim do dia superou seus maiores sonhos. O grupo alcançara o alto de um penhasco, de onde se avistava a mítica cidade de Qualinost.</p>
+                            <p class="book-quote">Ela jamais havia dedicado seus pensamentos aos humanos, mas aquelas narrativas a fascinavam. As páginas amareladas contavam histórias de heróis ousados, bestas ferozes, poderosos deuses primitivos e uma magia que pertencia e dava forma àquela terra distante.</p>
+                            <div class="blockquote-footer">Elaine Cunningham, <cite title="Source Title">Daughter of the Drow [Filha dos Drow]</cite></div>
+                        </blockquote>
+                    </div>
+                </div>
+                <div style="margin-top: 22px;">
+                    <p>Na maior parte dos mundos, os humanos são a mais jovem das raças comuns, os últimos a chegarem à cena mundial e os portadores da menor expectativa de vida, se comparados aos anões, elfos e dragões. Talvez por isso lutem tanto para alcançar e realizar o máximo nos poucos anos que lhes são dados. Ou quem sabe sintam que têm algo a provar às raças mais antigas, sendo essa a razão por trás dos seus vastos impérios erguidos sobre comércio e conquistas. Seja qual for a sua motivação, os humanos são os inovadores, os empreendedores e os pioneiros do mundo.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Um Amplo Espectro</h2>
+                    <p>Com sua tendência à migração e à conquista, os humanos são mais diversificados fisicamente do que outras raças comuns. Não há um humano típico. Um indivíduo pode ter de 1,5 a mais de 1,8 metro de altura, e pesar de 60 a 125 quilos. Os tons da pele humana variam de quase preto a muito pálido, e as cores dos cabelos, do preto ao loiro (encaracolados, crespos ou lisos); os homens podem ter pelos faciais grossos ou esparsos. Muitos membros desta raça carregam uma pitada de sangue não-humano, revelando indícios de elfos, ores ou outras raças. Humanos atingem a idade adulta ao fim da adolescência, e raramente chegam a viver um século completo.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Variedade em Tudo</h2>
+                    <p>Os humanos são o povo mais adaptável e ambicioso entre as raças comuns. Eles têm gostos, códigos morais e costumes que variam tanto quanto as muitas terras que habitam. Quando se estabelecem num local, tendem a permanecer: constroem cidades e grandes reinos que podem durar séculos. Um indivíduo humano pode ter uma expectativa de vida relativamente curta, mas uma nação ou cultura humanas preservam tradições com origens muito além do alcance da memória individual. Os humanos vivem totalmente no presente — o que os torna bem adaptados a uma vida de aventuras —, mas também fazem planos, esforçando-se por deixar um legado duradouro. Individualmente e como grupo, são oportunistas adaptáveis e atentos às mudanças políticas e sociais.</p>
+                </div>
+                <div class="card relac-raca" style="margin-top: 22px;">
+                    <div class="card-body">
+                        <h6>OS SEGUNDOS MELHORES AMIGOS DE TODOS</h6>
+                        <p>Os membros desta raça se misturam com os de outras raças tão prontamente quanto entre si, convivendo em relativa harmonia com quase todos os povos, embora possam não estar próximos de alguns. Geralmente servem como embaixadores, diplomatas, magistrados, mercadores e funcionários de todos os tipos.</p>
+                        <p><strong>Anões.</strong> "Trata-se de um povo forte, são amigos destemidos e fiéis à sua palavra. Mas sua ganância por ouro é a sua ruína."</p>
+                        <p><strong>Elfos.</strong> "É melhor não viajar pelas florestas dos elfos. Eles não gostam de intrusos, e você provavelmente será enfeitiçado ou crivado de flechas. Mesmo assim, quando um elfo consegue superar esse maldito orgulho racial, e passa a tratá-lo como um igual, você pode aprender muito com ele."</p>
+                        <p><strong>Pequeninos.</strong> "É difícil encontrar uma refeição melhor do que a servida na casa de um pequenino, desde que você não rache a cabeça no teto - estou falando de boa comida e de boas histórias contadas em frente a um fogo quente e agradável. Se os pequeninos tivessem um pingo de ambição, sem dúvida fariam grandes conquistas."</p>
+                    </div>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Instituições Duradouras</h2>
+                    <p>Enquanto um único elfo ou anão pode assumir a responsabilidade de guardar um local especial ou um segredo poderoso, os humanos fundam ordens e instituições sagradas para esse fim. Enquanto para os anões e pequeninos os clãs e os anciãos são os responsáveis por passar as tradições adiante, para os humanos esse papel é desempenhado pelas religiões, governos, bibliotecas e códigos de lei. Os membros desta raça sonham com a imortalidade, mas (exceto por aqueles poucos que buscam a não-vida ou a ascensão divina para escapar das garras da morte) só a alcançam garantindo que serão lembrados ao partirem.</p>
+                    <p>Embora alguns humanos possam ser xenófobos, em geral suas sociedades são inclusivas. As terras dessa raça acolhem um grande número de não-humanos, se comparado à proporção de humanos que vivem em terras não-humanas.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Exemplares de Ambição</h2>
+                    <p>Os humanos que procuram aventuras são os membros mais ousados e ambiciosos da sua raça, ela mesma ousada e ambiciosa. Esses aventureiros buscam a glória perante os olhos dos seus companheiros, acumulando poder, riqueza e fama. Mais do que outros povos, os humanos defendem causas e não territórios ou grupos.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Nomes e Etnias Humanas</h2>
+                    <p>Tendo muito mais variedade do que as demais raças, os humanos não possuem nomes típicos. Alguns pais humanos dão a seus filhos nomes de outros idiomas, como Anão ou Élfico (pronunciados mais ou menos corretamente), porém, a maioria dos pais escolhe nomes ligados à cultura da sua região ou aos seus ancestrais.</p>
+                    <p>A cultura e as características físicas dos humanos podem mudar muito de região para região. Em Forgotten Realms, por exemplo, o vestuário, a arquitetura, a culinária, a música e a literatura nas Fronteiras Prateadas são diferentes das encontradas na distante Turmish ou em lmpiltur, ao leste — e ainda mais na remota Kara-Tur. As características físicas desta raça variam segundo as antigas migrações dos primeiros humanos, de modo que os homens das Fronteiras Prateadas possuem todas as variações possíveis de coloração e traços raciais.</p>
+                    <p>Em Forgotten Realms, nove grupos étnicos humanos são amplamente reconhecidos, embora mais de uma dúzia de outros seja encontrada em áreas específicas de Faerun. Esses grupos, e os nomes típicos de seus membros, podem ser usados como inspiração, independentemente do mundo em que seu personagem humano esteja.</p>
+                    <h4>Calishitas</h4>
+                    <p>Mais baixos e de constituição mais leve do que a maioria dos outros humanos, os calishitas têm pele, cabelos e olhos castanho escuros. Eles são encontrados principalmente no sudoeste de Faerun.</p>
+                    <p><strong>Nomes Calishitas:</strong> (Masculinos) Aseir, Bardeid, Haseid, Khemed,Mehmen, Sudeiman, Zasheir; (femininos) Atala, Ceidil, Hama,Jasmal,Meilil, Seipora, Yasheira, Zasheida; (sobrenomes) Basha, Dumein,Jassan, Khalid, Mostana, Pashar, Rein</p>
+                    <h4>Chondathanos</h4>
+                    <p>Os chondathanos são um povo esguio, de pele morena e cabelos castanhos que variam de quase loiro a quase preto. A maioria dos indivíduos desta etnia é alta e tem olhos verdes ou castanhos. Humanos de descendência chondathana dominam as terras centrais de Faerún, em torno do Mar Interior.</p>
+                    <p><strong>Nomes Chondathanos:</strong> (Masculinos) Darvin, Dom, Evendur, Gorstag, Grirn, Helrn, Malark, Morn, Randal, Stedd; (femininos) Arveene, Esvele,Jhessail, Kerri, Lureene, Miri, Rowan, Shandri, Tessele; (sobrenomes) Anda-Coroa, Cervol, Pardragão, Sempre-Bosque, Castelo-Cinzento, Cervo-Alto</p>
+                    <h4>Damaranos</h4>
+                    <p>Encontrados principalmente no noroeste de Faerûn, os damaranos possuem estatura e constituição medianas, com matizes de pele que variam do moreno ao claro. Seus cabelos são geralmente castanhos ou pretos, e a cor dos olhos varia muito, embora o castanho seja mais comum.</p>
+                    <p><strong>Nomes Damaranos:</strong> (Masculinos) Bor, Fodel, Glar, Grigor, Igan, Ivor, Kosef, Mival, Orel, Pavel, Sergor; (femininos) Alethra, Kara, Katernin, Mara, Natali, Olrna, Tana, Zora; (sobrenomes) Bersk, Chernin, Dotsk, Kulenov, Marsk, Nernetsk, Shernov, Starag</p>
+                    <h4>Llluskanos</h4>
+                    <p>Os Illuskanos são um povo alto e de pele clara, com olhos azuis ou cinzentos. A maioria tem cabelos pretos lustrosos, mas aqueles que habitam o noroeste extremo têm cabelos loiros, ruivos ou castanho-claros.</p>
+                    <p><strong>Nomes Llluskanos:</strong> (Masculinos) Ander, Blath, Bran, Frath, Geth, Lander, Luth, Malcer, Stor, Tarnan, Urth; (femininos) Arnafrey, Betha, Cefrey, Kethra, Mara, Olga, Silifrey, Westra; (sobrenomes) Brilha-Bosque, ChifreCorvo, Lacaio, Vento Bravo, Rio-Torto</p>
+                    <h4>Mulanos</h4>
+                    <p>Dominantes nas costas leste e sudeste do Mar Interior, os mulanos são altos, magros e de pele âmbar, com olhos castanhos ou amendoados. Seus cabelos variam do preto ao castanho-escuro, porém, nas terras onde este povo é mais proeminente, seus nobres e muitos outros raspam todo o cabelo.</p>
+                    <p><strong>Nomes Mulanos:</strong> (Masculinos) Aoth, Bareris, Ehput-Ki, Kethoth, Murned, Ramas, So-Kehur, Thazar-De, Urhur; (femininos) Arizirna, Chathi, Nephis, Nulara, Murithi, Sefris, Thola, Urnara, Zolis; (sobrenomes) Ankhalab, Anskuld, Fezirn, Hahpet, Nathandern, Sepret, Uuthrakt</p>
+                    <h4>Rashemitas</h4>
+                    <p>Geralmente encontrados a leste do Mar Interior, e não raro misturados com os mulanos, os rashemitas tendem a ser baixos, robustos e musculosos. Sua pele, olhos e cabelos são escuros.</p>
+                    <p><strong>Nomes Rashemitas:</strong> (Masculinos) Borivik, Faurgar, Jandar, Kanithar, Madislak, Ralrnevik, Shaurnar, Vladislak; (femininos) Fyevarra, Hulrnarra, Irnrnith, Irnzel, Navarra, Shevarra, Tarnrnith, Yuldra; (sobrenomes) Chergoba, Dyernina, Iltazyara, Murnyethara, Stayanoga, Ulrnokina</p>
+                    <h4>Shou</h4>
+                    <p>Os Shou são o maior e mais poderoso grupo étnico de Kara-Tur, no leste distante de Faerûn. O tom da sua pele é bronze amarelado, seus cabelos são negros e seus olhos escuros. Os sobrenomes Shou costumam vir antes do primeiro nome.</p>
+                    <p><strong>Nomes Shou:</strong> (Masculinos) An, Chen, Chi, Fai,Jiang,Jun, Lian, Long, Meng, On, Shan, Shui, Wen; (femininos) Bai, Chao,Jia, Lei, Mei, Qiao, Shui, Tai; (sobrenomes) Chien, Huang, Kao, Kung, Lao, Ling, Mei, Pin, Shin, Surn, Tan, Wan</p>
+                    <h4>Tethyrianos</h4>
+                    <p>Espalhados ao longo de toda a Costa da Espada, no limite ocidental de Faerûn, os tethyrianos são de estatura e peso medianos, com pele escura, que tende a clarear quanto mais ao norte eles habitam. As cores dos seus cabelos e olhos variam muito, com cabelos castanhos e olhos azuis sendo os mais comuns. Os tethyrianos costumam usar os nomes chondathanos.</p>
+                    <h4>Turami</h4>
+                    <p>Nativos da costa sul do Mar Interior, o povo turami é alto e musculoso, com pele escura corno o mogno, cabelos pretos encaracolados e olhos escuros.</p>
+                    <p><strong>Nomes Turami:</strong> (Masculinos) Anton, Diero, Marcon, Pieron, Rirnardo, Romero, Salazar, Urnbero; (femininos) Balarna, Dona, Faila,Jalana, Luisa, Marta, Quara, Selise, Vonda; (sobrenomes) Agosto, Astorio, Calabra, Domine, Falone, Marivaldi, Pisacar, Rarnondo</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Traços Raciais Humanos</h2>
+                    <p>É difícil fazer generalizações sobre os humanos; mesmo assim, seu personagem humano possui as seguintes características.</p>
+                    <h4>Aumento no Valor de Atributo</h4>
+                    <p>Os valores de todos os atributos aumentam em 1.</p>
+                    <h4>Idade</h4>
+                    <p>Os Humanos atingem a idade adulta no fim da adolescência, e vivem menos de um século.</p>
+                    <h4>Alinhamento</h4>
+                    <p>Os Humanos não tendem a nenhum alinhamento em particular. O que há de melhor e de pior pode ser encontrado entre eles.</p>
+                    <h4>Tamanho</h4>
+                    <p>Independentemente da altura, em termos de regras, seu tamanho é Médio. Os Humanos variam amplamente em altura e peso, indo de 1,4 a mais de 1,8 metro.</p>
+                    <h4>Deslocamento</h4>
+                    <p>Seu deslocamento básico é de 9 metros.</p>
+                    <h4>Idiomas</h4>
+                    <p>Você pode falar, ler e escrever Comum e outro idioma à sua escolha. Humanos costumam aprender os idiomas dos povos com os quais convivem, incluindo dialetos obscuros. Eles gostam de enfeitar suas falas com palavras de outros idiomas: palavrões em Ore, expressões melodiosas em Élfico, frases militares em Anão, e assim por diante.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">Traços Raciais Alternativos (Humano Variante)</h3>
+                    <p>Caso a sua campanha utilize as regras opcionais de talentos do Capítulo 6, seu DM pode permitir estes traços raciais alternativos, que substituem o traço humano Aumento no Valor de Atributo.</p>
+                    <h4>Aumento no Valor de Atributo</h4>
+                    <p>Aumente em 1 os valores de dois Atributos à sua escolha.</p>
+                    <h4>Períciais</h4>
+                    <p>Você ganha proficiência em uma perícia à sua escolha.</p>
+                    <h4>Talento</h4>
+                    <p>Você ganha um talento à sua escolha.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-include="footer"></div>

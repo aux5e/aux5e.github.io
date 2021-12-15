@@ -1,97 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php
-    $pageName = 'classesTiferino';
-    $pageTitle = 'Tiferino - Informações Relevantes';
-    $pageGroup = 'racas';
-?>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
+    <link rel="icon" href="/imagens/favicon.png">
+    <script>
+        var pageName = 'classesTiferino';
+        var pageTitle = 'Tiferino';
+        var pageGroup = 'racas';
 
-<?php include('/home/site/wwwroot/partial/head.php'); ?>
- 
+        document.write("<title>" + pageTitle + " - Raças - Aux.5e</title>");
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/misc.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.magia-hover').tooltip({
+                track: true,
+                open: function (event, ui) {
+                    var userid = this.id;
+
+                    $.ajax({
+                        url: '/data/magias-popover.html',
+                        type: 'post',
+                        data: {
+                            userid: userid
+                        },
+                        success: function (response) {
+
+                            // Setting content option
+                            $("#" + userid).tooltip('option', 'content', response);
+
+                        }
+                    });
+                }
+            });
+
+            $('.magia-hover').mouseout(function () {
+                // re-initializing tooltip
+                $(this).attr('title', 'Carregando...');
+                $(this).tooltip();
+                $('.ui-helper-hidden-accessible').hide();
+                //$('.srd-tooltip').hide();
+            });
+
+
+        });
+    </script>
+</head>
+
 <body>
 
-<?php include('/home/site/wwwroot/partial/header.php'); ?>
+    <div data-include="header"></div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xl">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="https://5esrd.azurewebsites.net/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/racas.php">Raças</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Tiferinos</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-</div>
- 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <img src="/imagens/tiferino.png" class="rounded float-right" alt="Tiferino">
-            <h1 class="titulo">Tiferino <span class="titulo-span">Detalhes da Raça</span></h1>
-            <div class="card intro-raca">
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                      <p class="book-quote">"Mas estou certo de que nota o modo como as pessoas olham pra você, filha do diabo."</p>
-                      <p class="book-quote">Aqueles olhos negros, frios como uma tempestade de inverno, fitavam direto em seu coração, e a seriedade repentina na voz do outro a abalou.</p>
-                      <p class="book-quote">"Sobre o que estão falando?", ele perguntou. "Um, uma curiosidade; dois, uma conspiração..."</p>
-                      <p class="book-quote">"Três, uma maldição", ela concluiu. "Você acha que eu nunca ouvi essa bobagem antes?"</p>
-                      <p class="book-quote">"Estou certa de que ouviu". Ela o fitava enquanto ele concluía: "Não é como se eu estivesse penetrando nas profundezas da sua mente, querida menina. Esse é o fardo de todo tiferino. Alguns conseguem escapar dele, outros transformam-no na corda em volta dos seus pescoços; e outros apenas se deleitam." Ele inclinou a cabeça novamente, analisando-a, um brilho depravado em seus olhos. "Você resiste, não é mesmo? Como uma pequena gata selvagem, aposto. Cada alfinetada ou comentário apenas afia suas garras."</p>
-                      <div class="blockquote-footer">Erin M. Evans, <cite title="Source Title">Brimstone Angels [Anjos de Enxofre]</cite></div>
-                    </blockquote>
-                </div>
-            </div>
-            <div style="margin-top: 22px;">
-                <p>Ser recebido com olhares e sussurros, sofrer violência e insultos na rua, ver desconfiança e medo em todos os olhares: esse é o destino de todo tiferino. E, o que só faz piorar, todo tiferino sabe que isso se deve a um pacto, selado há gerações, que infundiu a essência de Asmodeus – Senhor dos Nove Infernos – no sangue da sua linhagem. Eles não têm culpa por sua aparência e natureza, frutos de um antigo pecado pelo qual eles, seus filhos e os filhos dos seus filhos terão que pagar para sempre.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Linhagem Infernal</h2>
-                <p>Os tiferinos descendem de linhagens humanas e, com as devidas ressalvas, ainda parecem humanos. No entanto, sua herança infernal deixou uma marca física evidente. Todo tiferino possui chifres grandes que podem assumir uma grande variedade de formas: uns são enrolados como os de um carneiro, outros são retos e altos como os das gazelas, e alguns são espiralados como os dos antílopes. Eles possuem caudas grossas, com 1,2 a 1,5 metro de comprimento, que se enroscam em torno das pernas quando eles ficam frustrados ou nervosos. Seus caninos são pontiagudos e seus olhos são de cores sólidas - preto, vermelho, branco, prata ou ouro –, sem esclera ou pupila. Seus tons de pele cobrem toda a gama da coloração humana, mas também incluem tons de vermelho. Seus cabelos, caindo por trás dos chifres, costumam ser escuros, variando entre preto, castanho, vermelho, azul ou roxo.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Independentes e Desconfiados</h2>
-                <p>Os tiferinos são quase sempre marginalizados nas cidades ou aldeias humanas, geralmente habitando os bairros mais perigosos, onde crescem até se tornarem trapaceiros, ladrões ou senhores do crime. Ocasionalmente, podem viver junto a outras populações minoritárias, em enclaves nos quais são tratados com mais respeito.</p>
-                <p>Sem pátria definida, sabem que é necessário trilhar seu próprio caminho num mundo em que precisam ser fortes para sobreviver. Eles demoram a confiar em qualquer um que afirme ser um amigo, mas quando recebem confiança, a reciprocidade é certa. Uma vez que um tiferino tenha dedicado sua lealdade a alguém, ele será um amigo ou aliado para toda a vida.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Nomes de Tiferinos</h2>
-                <p>Os nomes tiferinos dividem-se em três grandes categorias. Tiferinos nascidos em outras culturas costumam adotar nomes naturais dessas culturas. Alguns têm nomes derivados do idioma infernal, ecos da sua descendência diabólica passados através das gerações. Os mais jovens, esforçando-se por encontrar um lugar no mundo, adotam nomes que significam uma virtude ou um conceito que tentam seguir e encarnar. Para outros, o nome escolhido representa uma busca nobre ou um destino sombrio.</p>
-                <p><strong>Nomes Infernais Masculinos:</strong> Akmenos, Amnon, Barakas, Damakos, Ekemon, lados, Kairon, Leucis, Melech, Mordai, Morthos, Pelaios, Skamos, Therai</p>
-                <p><strong>Nomes Infernais Femininos:</strong> Akta, Anakis, Bryseis, Criella, Damaia, Ea, Kallista, Lerissa, Makaria, Nemeia, Orianna, Phelaia, Rieta</p>
-                <p><strong>Nomes "Conceituais ou de Virtudes":</strong> Acaso, Amplo, Arte, Canto, Credo, Carniça, Desespero, Esperança, Exaurido, Excelência, Glória, Ideal, Jornada, Lugar Nenhum, Medo, Música, Pesar, Poesia, Reverência, Temeridade, Tormento</p>
-            </div>
-            <div class="card relac-raca" style="margin-top: 22px;">
-                <div class="card-body">
-                    <h6>DESCONFIANÇA MÚTUA</h6>
-                    <p>As pessoas tendem a suspeitar dos tiferinos por assumirem que a herança infernal deles marcou não apenas sua aparência, mas também sua personalidade e moralidade. Comerciantes ficam de olho em seus bens quando tiferinos entram em suas lojas, a guarda da cidade os segue apenas "por precaução", e demagogos os culpam por acontecimentos estranhos. A realidade, porém, é que a linhagem de um tiferino não afeta sua personalidade de forma relevante. Por outro lado, anos e anos de desconfiança deixam sua marca, fato ao qual os tiferinos reagem de diferentes maneiras. Alguns escolhem viver de acordo com o estereótipo perverso, enquanto outros seguem pelo caminho oposto. A maioria, contudo, não consegue ignorar o modo como as pessoas reagem à sua presença. Depois de lidar com essa desconfiança por toda a juventude, um tiferino muitas vezes desenvolve a capacidade de vencer o preconceito por meio do charme ou da intimidação.</p>
-                </div>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Traços Raciais dos Tiferinos</h2>
-                <p>Tiferinos possuem algumas características raciais que são resultado da sua descendência infernal.</p>
-                <h4>Aumento no Valor de Atributo</h4>
-                <p>Seu valor de Inteligência aumenta em 1 e seu valor de Carisma em 2.</p>
-                <h4>Idade</h4>
-                <p>Tiferinos amadurecem no mesmo ritmo que os humanos, mas vivem alguns anos a mais.</p>
-                <h4>Alinhamento</h4>
-                <p>Tiferinos podem não ter uma tendência inata para o mal, mas muitos acabam seguindo esse caminho. Maus ou não, uma natureza independente os inclina na direção do alinhamento caótico.</p>
-                <h4>Tamanho</h4>
-                <p>Seu tamanho é Médio. Tiferinos têm aproximadamente o mesmo tamanho e porte físico dos humanos.</p>
-                <h4>Deslocamento</h4>
-                <p>Seu deslocamento básico é de 9 metros.</p>
-                <h4>Visão no Escuro</h4>
-                <p>Graças à sua herança infernal, você possui uma visão superior no escuro. Você consegue enxergar até 18 metros na meia-luz como se fosse dia e, na escuridão, como se fosse meia-luz. Na escuridão você só consegue discernir tons de cinza.</p>
-                <h4>Resistência Infernal</h4>
-                <p>Você tem resistência a dano por fogo.</p>
-                <h4>Legado Infernal</h4>
-                <p>Você conhece o truque taumaturgia. Ao alcançar o 3º nível, pode conjurar a magia repreensão infernal uma vez como se fosse uma magia de 2º círculo. Ao alcançar o 5º nível, pode conjurar escuridão. Você precisa terminar um descanso longo para conjurar as magias deste traço outra vez. Carisma é o atributo usado para a conjuração dessas magias.</p>
-                <h4>Idiomas</h4>
-                <p>Você fala, lê e escreve Comum e Infernal.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://aux5e.github.io/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/racas.html">Raças</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Tiferinos</li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </div>
-  </div>
 
-<?php include('/home/site/wwwroot/partial/footer.php'); ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="/imagens/tiferino.png" class="rounded float-right" alt="Tiferino">
+                <h1 class="titulo">Tiferino <span class="titulo-span">Detalhes da Raça</span></h1>
+                <div class="card intro-raca">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p class="book-quote">"Mas estou certo de que nota o modo como as pessoas olham pra você, filha do diabo."</p>
+                            <p class="book-quote">Aqueles olhos negros, frios como uma tempestade de inverno, fitavam direto em seu coração, e a seriedade repentina na voz do outro a abalou.</p>
+                            <p class="book-quote">"Sobre o que estão falando?", ele perguntou. "Um, uma curiosidade; dois, uma conspiração..."</p>
+                            <p class="book-quote">"Três, uma maldição", ela concluiu. "Você acha que eu nunca ouvi essa bobagem antes?"</p>
+                            <p class="book-quote">"Estou certa de que ouviu". Ela o fitava enquanto ele concluía: "Não é como se eu estivesse penetrando nas profundezas da sua mente, querida menina. Esse é o fardo de todo tiferino. Alguns conseguem escapar dele, outros transformam-no na corda em volta dos seus pescoços; e outros apenas se deleitam." Ele inclinou a cabeça novamente, analisando-a, um brilho depravado em seus olhos. "Você resiste, não é mesmo? Como uma pequena gata selvagem, aposto. Cada alfinetada ou comentário apenas afia suas garras."</p>
+                            <div class="blockquote-footer">Erin M. Evans, <cite title="Source Title">Brimstone Angels [Anjos de Enxofre]</cite></div>
+                        </blockquote>
+                    </div>
+                </div>
+                <div style="margin-top: 22px;">
+                    <p>Ser recebido com olhares e sussurros, sofrer violência e insultos na rua, ver desconfiança e medo em todos os olhares: esse é o destino de todo tiferino. E, o que só faz piorar, todo tiferino sabe que isso se deve a um pacto, selado há gerações, que infundiu a essência de Asmodeus – Senhor dos Nove Infernos – no sangue da sua linhagem. Eles não têm culpa por sua aparência e natureza, frutos de um antigo pecado pelo qual eles, seus filhos e os filhos dos seus filhos terão que pagar para sempre.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Linhagem Infernal</h2>
+                    <p>Os tiferinos descendem de linhagens humanas e, com as devidas ressalvas, ainda parecem humanos. No entanto, sua herança infernal deixou uma marca física evidente. Todo tiferino possui chifres grandes que podem assumir uma grande variedade de formas: uns são enrolados como os de um carneiro, outros são retos e altos como os das gazelas, e alguns são espiralados como os dos antílopes. Eles possuem caudas grossas, com 1,2 a 1,5 metro de comprimento, que se enroscam em torno das pernas quando eles ficam frustrados ou nervosos. Seus caninos são pontiagudos e seus olhos são de cores sólidas - preto, vermelho, branco, prata ou ouro –, sem esclera ou pupila. Seus tons de pele cobrem toda a gama da coloração humana, mas também incluem tons de vermelho. Seus cabelos, caindo por trás dos chifres, costumam ser escuros, variando entre preto, castanho, vermelho, azul ou roxo.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Independentes e Desconfiados</h2>
+                    <p>Os tiferinos são quase sempre marginalizados nas cidades ou aldeias humanas, geralmente habitando os bairros mais perigosos, onde crescem até se tornarem trapaceiros, ladrões ou senhores do crime. Ocasionalmente, podem viver junto a outras populações minoritárias, em enclaves nos quais são tratados com mais respeito.</p>
+                    <p>Sem pátria definida, sabem que é necessário trilhar seu próprio caminho num mundo em que precisam ser fortes para sobreviver. Eles demoram a confiar em qualquer um que afirme ser um amigo, mas quando recebem confiança, a reciprocidade é certa. Uma vez que um tiferino tenha dedicado sua lealdade a alguém, ele será um amigo ou aliado para toda a vida.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Nomes de Tiferinos</h2>
+                    <p>Os nomes tiferinos dividem-se em três grandes categorias. Tiferinos nascidos em outras culturas costumam adotar nomes naturais dessas culturas. Alguns têm nomes derivados do idioma infernal, ecos da sua descendência diabólica passados através das gerações. Os mais jovens, esforçando-se por encontrar um lugar no mundo, adotam nomes que significam uma virtude ou um conceito que tentam seguir e encarnar. Para outros, o nome escolhido representa uma busca nobre ou um destino sombrio.</p>
+                    <p><strong>Nomes Infernais Masculinos:</strong> Akmenos, Amnon, Barakas, Damakos, Ekemon, lados, Kairon, Leucis, Melech, Mordai, Morthos, Pelaios, Skamos, Therai</p>
+                    <p><strong>Nomes Infernais Femininos:</strong> Akta, Anakis, Bryseis, Criella, Damaia, Ea, Kallista, Lerissa, Makaria, Nemeia, Orianna, Phelaia, Rieta</p>
+                    <p><strong>Nomes "Conceituais ou de Virtudes":</strong> Acaso, Amplo, Arte, Canto, Credo, Carniça, Desespero, Esperança, Exaurido, Excelência, Glória, Ideal, Jornada, Lugar Nenhum, Medo, Música, Pesar, Poesia, Reverência, Temeridade, Tormento</p>
+                </div>
+                <div class="card relac-raca" style="margin-top: 22px;">
+                    <div class="card-body">
+                        <h6>DESCONFIANÇA MÚTUA</h6>
+                        <p>As pessoas tendem a suspeitar dos tiferinos por assumirem que a herança infernal deles marcou não apenas sua aparência, mas também sua personalidade e moralidade. Comerciantes ficam de olho em seus bens quando tiferinos entram em suas lojas, a guarda da cidade os segue apenas "por precaução", e demagogos os culpam por acontecimentos estranhos. A realidade, porém, é que a linhagem de um tiferino não afeta sua personalidade de forma relevante. Por outro lado, anos e anos de desconfiança deixam sua marca, fato ao qual os tiferinos reagem de diferentes maneiras. Alguns escolhem viver de acordo com o estereótipo perverso, enquanto outros seguem pelo caminho oposto. A maioria, contudo, não consegue ignorar o modo como as pessoas reagem à sua presença. Depois de lidar com essa desconfiança por toda a juventude, um tiferino muitas vezes desenvolve a capacidade de vencer o preconceito por meio do charme ou da intimidação.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Traços Raciais dos Tiferinos</h2>
+                    <p>Tiferinos possuem algumas características raciais que são resultado da sua descendência infernal.</p>
+                    <h4>Aumento no Valor de Atributo</h4>
+                    <p>Seu valor de Inteligência aumenta em 1 e seu valor de Carisma em 2.</p>
+                    <h4>Idade</h4>
+                    <p>Tiferinos amadurecem no mesmo ritmo que os humanos, mas vivem alguns anos a mais.</p>
+                    <h4>Alinhamento</h4>
+                    <p>Tiferinos podem não ter uma tendência inata para o mal, mas muitos acabam seguindo esse caminho. Maus ou não, uma natureza independente os inclina na direção do alinhamento caótico.</p>
+                    <h4>Tamanho</h4>
+                    <p>Seu tamanho é Médio. Tiferinos têm aproximadamente o mesmo tamanho e porte físico dos humanos.</p>
+                    <h4>Deslocamento</h4>
+                    <p>Seu deslocamento básico é de 9 metros.</p>
+                    <h4>Visão no Escuro</h4>
+                    <p>Graças à sua herança infernal, você possui uma visão superior no escuro. Você consegue enxergar até 18 metros na meia-luz como se fosse dia e, na escuridão, como se fosse meia-luz. Na escuridão você só consegue discernir tons de cinza.</p>
+                    <h4>Resistência Infernal</h4>
+                    <p>Você tem resistência a dano por fogo.</p>
+                    <h4>Legado Infernal</h4>
+                    <p>Você conhece o truque taumaturgia. Ao alcançar o 3º nível, pode conjurar a magia repreensão infernal uma vez como se fosse uma magia de 2º círculo. Ao alcançar o 5º nível, pode conjurar escuridão. Você precisa terminar um descanso longo para conjurar as magias deste traço outra vez. Carisma é o atributo usado para a conjuração dessas magias.</p>
+                    <h4>Idiomas</h4>
+                    <p>Você fala, lê e escreve Comum e Infernal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-include="footer"></div>

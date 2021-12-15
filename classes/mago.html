@@ -1,687 +1,747 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php
-    $pageName = 'classesMago';
-    $pageTitle = 'Mago - Informações Relevantes';
-    $pageGroup = 'classes';
-?>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
+    <link rel="icon" href="/imagens/favicon.png">
+    <script>
+        var pageName = 'classesMago';
+        var pageTitle = 'Mago';
+        var pageGroup = 'classes';
 
-<?php include('/home/site/wwwroot/partial/head.php'); ?>
- 
+        document.write("<title>" + pageTitle + " - Classes - Aux.5e</title>");
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/misc.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
+    <script src="/js/active-menu-link.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.magia-hover').tooltip({
+                track: true,
+                open: function (event, ui) {
+                    var userid = this.id;
+
+                    $.ajax({
+                        url: '/data/magias-popover.html',
+                        type: 'post',
+                        data: {
+                            userid: userid
+                        },
+                        success: function (response) {
+
+                            // Setting content option
+                            $("#" + userid).tooltip('option', 'content', response);
+
+                        }
+                    });
+                }
+            });
+
+            $('.magia-hover').mouseout(function () {
+                // re-initializing tooltip
+                $(this).attr('title', 'Carregando...');
+                $(this).tooltip();
+                $('.ui-helper-hidden-accessible').hide();
+                //$('.srd-tooltip').hide();
+            });
+
+
+        });
+    </script>
+</head>
+
 <body>
 
-<?php include('/home/site/wwwroot/partial/header.php'); ?>
+    <div data-include="header"></div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xl">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="https://5esrd.azurewebsites.net/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/classes.php">Classes</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Mago</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-</div>
- 
-<div id="classes-phb-container" class="container">
-    <div class="row">
-        <div class="col-12">
-            <img src="/imagens/mago.png" class="rounded float-right" alt="Mago">
-            <h1 class="titulo">Mago <span class="titulo-span">Detalhes da Classe</span></h1>
-            <div style="margin-top: 22px;">
-				<p>Vestida com um robe prata que denota sua posição, uma elfa fecha os olhos para afastar-se das distrações do campo de batalha e, iniciar seu cântico silencioso. Movendo os dedos à frente, ela completa a magia e lança uma minúscula pérola em brasa na direção das fileiras inimigas, onde o objeto irrompe em um inferno de chamas que engolfa os soldados.</p>
-				<p>Conferindo vez após vez seu trabalho, um humano inscreve um intrincado círculo mágico de giz na pedra nua do chão, polvilhando pó de ferro ao longo de cada linha e curva graciosa. Quando o círculo está completo, ele murmura um longo encantamento. Um buraco abre-se no espaço dentro do círculo, trazendo um cheiro de enxofre do distante pleno além.</p>
-				<p>Agachando-se no chão em uma encruzilhada da masmorra, um gnomo atira um punhado de pequenos ossos inscritos com símbolos místicos, murmurando palavras de poder sobre eles. Fechando seus olhos para ter mais clareza em suas visões, ele acena lentamente e volta a abri-los, apontando para a passagem à esquerda.</p>
-				<p>Magos são os supremos usuários dos poderes mágicos, definidos e unidos como uma classe pelas magias que conjuram. Extraindo energia da sutil teia mágica que permeia o cosmos, os magos conjuram magias de fogo explosivo, arcos elétricos, enganos sutis, controles mentais ou força bruta. As suas magias conjuram monstros de outros planos de existência, desvendam o futuro, ou transformam mortos em zumbis. Suas magias mais poderosas mudam uma substância em outra, convocam meteoros dos céus, ou abrem portais para outros mundos.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Estudiosos do Arcano</h2>
-                <p>Selvagens e enigmáticos, de variadas formas e funções, os poderes da magia atraem estudantes que procuram dominar seus mistérios. Alguns aspiram a se assemelharem aos deuses, moldando a própria realidade. Apesar da conjuração de uma simples magia exigir apenas a pronúncia de algumas palavras estranhas, gestos efêmeros e, por vezes, um punhado ou outro de materiais exóticos, esses componentes dão uma ideia apenas superficial da experiência adquirida após anos de aprendizado e incontáveis horas de estudo.</p>
-                <p>Magos vivem e morrem por suas magias. Todo o resto é secundário. Eles aprendem novas magias à medida que praticam e adquirem experiência. Eles também aprendem magias de outros magos, de antigos tomos ou inscrições, e de antigas criaturas (como os feéricos) impregnadas de magia.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">O Fascínio pelo Conhecimento</h2>
-                <p>A vida dos magos raramente é mundana. O mais próximo que um mago pode chegar de uma vida normal é trabalhar como acadêmico ou professor em alguma universidade ou biblioteca, ensinado os segredos do multiverso. Outros vendem seus serviços como adivinhos, servem nas forças militares ou levam vidas de crime ou dominação.</p>
-				<p>Mas a atração pelo conhecimento e poder conduz até o mais calmo dos magos da segurança das suas bibliotecas e laboratórios, para dentro de ruínas desmoronadas e cidades perdidas. Muitos magos acreditam que seus colegas em civilizações antigas conheciam segredos mágicos que foram perdidos no tempo, e que descobrir tais segredos poderia revelar o caminho para um poder maior do que qualquer magia disponível na era atual.</p>
-            </div>
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Criando um Mago</h2>
-                <p>Criar um personagem mago exige uma história com pelo menos um evento extraordinário. Como o seu personagem fez contato com a magia? Como descobriu sua aptidão mágica? Você tem um talento natural, ou simplesmente estudou muito e praticou incessantemente? Você encontrou uma criatura mágica ou um tomo antigo lhe ensinou os fundamentos da magia.</p>
-                <p>O que o tirou de uma vida de estudos? O seu primeiro contato com os conhecimentos arcanos o deixou sedento por mais? Você recebeu informação sobre uma fonte de conhecimentos secretos que ainda não foi descoberta por outros magos? Quem sabe talvez esteja simplesmente ansioso para testar seus novos poderes diante do perigo.</p>
-            </div>
-            <div class="card relac-raca" style="margin-top: 22px;">
-                <div class="card-body">
-                    <h6 style="text-transform: uppercase;">Criação Rápida</h6>
-                    <p>Você pode criar um mago rapidamente seguindo estas sugestões. Primeiro, Inteligência deve ser seu atributo de maior valor, seguido por Constituição ou Destreza. Se você planeja se juntar à Escola do Encantamento, faça com que Carisma seja seu próximo atributo de maior valor. Em seguida, escolha o antecedente sábio. Por fim, escolha os truques <a href="/magias.php?nome=maos-magicas" class="magia-hover magicas-tooltip" id="maos-magicas" title="Carregando...">mãos mágicas</a>, <a href="/magias.php?nome=luz" class="magia-hover magicas-tooltip" id="luz" title="Carregando...">luz</a> e <a href="/magias.php?nome=raio-de-gelo" class="magia-hover magicas-tooltip" id="raio-de-gelo" title="Carregando...">raio de gelo</a>, assim como as seguintes magias de primeiro círculo para o seu Livro de Magia: <a href="/magias.php?nome=maos-flamejantes" class="magia-hover magicas-tooltip" id="maos-flamejantes" title="Carregando...">mãos flamejantes</a>, <a href="/magias.php?nome=enfeiticar-pessoa" class="magia-hover magicas-tooltip" id="enfeiticar-pessoa" title="Carregando...">enfeitiçar pessoa</a>, <a href="/magias.php?nome=queda-suave" class="magia-hover magicas-tooltip" id="queda-suave" title="Carregando...">queda suave</a>, <a href="/magias.php?nome=armadura-arcana" class="magia-hover magicas-tooltip" id="armadura-arcana" title="Carregando...">armadura arcana</a>, <a href="/magias.php?nome=misseis-magicos" class="magia-hover magicas-tooltip" id="misseis-magicos" title="Carregando...">mísseis mágicos</a> e <a href="/magias.php?nome=sono" class="magia-hover magicas-tooltip" id="sono" title="Carregando...">sono</a>.</p>
-                </div>
-            </div>
-            <div style="margin-top: 22px;">
-                <h3 class="subtitulo">O Mago</h3>
-                <div class="table-responsive">
-                <table class="table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
-                    <thead>
-                      <tr>
-                        <th rowspan="2" class="text-center align-middle" scope="col">Nível</th>
-                        <th rowspan="2" class="text-center align-middle" scope="col">Bônus de Proficiência</th>
-                        <th rowspan="2" class="text-center align-middle" scope="col">Características de Classe</th>
-                        <th rowspan="2" class="text-center align-middle" scope="col">Truques</th>
-                        <th colspan="9" class="text-center">Espaços de Magia por Nível</th>
-                      </tr>
-                      <tr>
-                        <th rowspan="2" class="text-center" scope="col">1º</th>
-                        <th rowspan="2" class="text-center" scope="col">2º</th>
-                        <th rowspan="2" class="text-center" scope="col">3º</th>
-                        <th rowspan="2" class="text-center" scope="col">4º</th>
-                        <th rowspan="2" class="text-center" scope="col">5º</th>
-                        <th rowspan="2" class="text-center" scope="col">6º</th>
-                        <th rowspan="2" class="text-center" scope="col">7º</th>
-                        <th rowspan="2" class="text-center" scope="col">8º</th>
-                        <th rowspan="2" class="text-center" scope="col">9º</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th class="text-center" scope="row">1º</th>
-                        <td class="text-center">+2</td>
-                        <td>Conjuração, Recuperação Arcana</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-						<td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">2º</th>
-                        <td class="text-center">+2</td>
-                        <td>Tradição Arcana</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-						<td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">3º</th>
-                        <td class="text-center">+2</td>
-                        <td>—</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">2</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">4º</th>
-                        <td class="text-center">+2</td>
-                        <td>Aumento no Valor de Atributo</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">5º</th>
-                        <td class="text-center">+3</td>
-                        <td>—</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">6º</th>
-                        <td class="text-center">+3</td>
-                        <td>Característica de Tradição Arcana</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">7º</th>
-                        <td class="text-center">+3</td>
-                        <td>—</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">8º</th>
-                        <td class="text-center">+3</td>
-                        <td>Aumento no Valor de Atributo</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">9º</th>
-                        <td class="text-center">+4</td>
-                        <td>—</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">10º</th>
-                        <td class="text-center">+4</td>
-                        <td>Característica de Tradição Arcana</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">11º</th>
-                        <td class="text-center">+4</td>
-                        <td>—</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">12º</th>
-                        <td class="text-center">+4</td>
-                        <td>Aumento no Valor de Atributo</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">13º</th>
-                        <td class="text-center">+5</td>
-                        <td>—</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">14º</th>
-                        <td class="text-center">+5</td>
-                        <td>Característica de Tradição Arcana</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">15º</th>
-                        <td class="text-center">+5</td>
-                        <td>—</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">16º</th>
-                        <td class="text-center">+5</td>
-                        <td>Aumento no Valor de Atributo</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">—</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">17º</th>
-                        <td class="text-center">+6</td>
-                        <td>—</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">18º</th>
-                        <td class="text-center">+6</td>
-                        <td>Maestria de Magias</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">19º</th>
-                        <td class="text-center">+6</td>
-                        <td>Aumento no Valor de Atributo</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                      </tr>
-                      <tr>
-                        <th class="text-center" scope="row">20º</th>
-                        <td class="text-center">+6</td>
-                        <td>Assinatura Mágica</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">4</td>
-						<td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">3</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">1</td>
-                      </tr>
-                    </tbody>
-                </table>
-                </div>
-            </div>
-
-            <div style="margin-top: 22px;">
-                <h2 class="subtitulo">Características de Classe</h2>
-                <p>Ao criar um aventureiro mago, você recebe as seguintes características de classe.</p>
-                
-                <h4>Pontos de Vida</h4>
-                <p><strong>Dado de Vida:</strong> 1d6 por nível de mago<br>
-                <strong>Pontos de Vida no 1º Nível:</strong> 6 + seu modificador de Constituição<br>
-                <strong>Pontos de Vida a partir do 2º Nível:</strong> 1d6 (ou 4) + seu modificador de Constituição por nível de mago</p>
-                
-                <h4>Proficiências</h4>
-                <p><strong>Armadura:</strong> Nenhuma<br>
-                <strong>Armas:</strong> Adagas, dardos, fundas, bastões e bestas leves<br>
-                <strong>Ferramentas:</strong> Nenhuma<br>
-                <strong>Salvaguardas:</strong> Inteligência e Sabedoria<br>
-                <strong>Perícias:</strong> Escolha duas entre Arcanismo, História, Intuição, Investigação, Medicina e Religião</p>
-                
-                <h4>Equipamento</h4>
-                <p>Você começa com o seguinte equipamento, além daquele que recebe do seu antecedente:</p>
-                <ul>
-                    <li>(a) um cajado ou (b) uma adaga</li>
-                    <li>(a) uma bolsa de componentes ou (b) um foco arcano</li>
-                    <li>(a) kit de erudito ou (b) kit de explorador</li>
-					<li>Um Livro de Magias</li>
-                </ul>
-				
-                <h4>Conjuração</h4>
-                <p>Como um estudante de magia arcana, você possui um livro de magias contendo magias que mostram os primeiros vislumbres de seu poder verdadeiro. Veja o capítulo 10, "Conjuração", para consultar as regras gerais de conjuração, o e o capitulo 11, "Magias", para verificar a lista de magias de mago.</p>
-                
-                <h5><b>Truques</b></h5>
-                <p>No 1º nível, você conhece três truques da lista de magias de mago, à sua escolha. Você aprende truques de mago adicionais em níveis mais altos, conforme mostrado na coluna Truques, da tabela O Mago.</p>
-                
-				<h5><b>Livro de Magia</b></h5>
-				<p>No 1º nível, você possui um livro de magias contendo seis magias de mago de 1º círculo, à sua escolha. Seu livro de magias é o repositório das magias de mago que você conhece, exceto por seus truques, que estão gravados em sua mente.</p>
-				
-                <h5><b>Preparando e Conjurando Magias</b></h5>
-                <p>A tabela O Mago mostra quantos espaços de magia você possui para conjurar suas magias de 1º círculo e superiores. Para conjurar uma magia, você deve usar um espaço de magia cujo círculo seja igual ou superior ao círculo da magia. Você recupera todos os espaços de magia usados após um descanso longo.</p>
-				<p>É sua responsabilidade preparar a lista de magias de mago disponíveis para conjuração. Para tanto, escolha um número de magias de mago do seu livro de magias igual ao seu modificador de Inteligência + seu nível de mago (mínimo de uma magia). As magias devem pertencer a um círculo para o qual você tenha espaços de magia.</p>
-				<p>Por exemplo, se você é um mago de 3º nível, pode ter quatro espaços de magia de 1º círculo e dois de 2º círculo. Com uma Inteligência de 16, sua lista de feitiços preparados pode incluir seis magias de 1º ou 2º círculo, em qualquer combinação, escolhidas a partir de seu livro de magias. Caso prepare a magia de 1ª círculo <a href="/magias.php?nome=misseis-magicos" class="magia-hover magicas-tooltip" id="misseis-magicos" title="Carregando...">mísseis mágicos</a>, você pode conjurá-la usando um espaço de magia de 1º ou 2º círculo. Conjurar uma magia não a remove da sua lista de magias preparadas.</p>
-				<p>Você pode mudar sua lista de magias preparadas após um descanso longo. Preparar uma nova lista de magias de mago exige um gasto de tempo estudando seu livro de magias, memorizando os encantamentos e os gestos que precisam ser feitos a cada conjuração: pelo menos 1 minuto por círculo de cada magia em sua lista.</p>
-
-                <h5><b>Atributo de Conjuração</b></h5>
-                <p>Inteligência é seu atributo de conjuração para suas magias de mago, uma vez que você aprendeu suas magias por meio da dedicação aos estudos e da memorização. Você deve usar Inteligência sempre que uma magia fizer referência ao seu atributo de conjuração. Além disso, você usa o seu modificador de Inteligência tanto para definir a CD de uma salvaguarda feita para evitar uma magia de mago conjurada por você, quanto para realizar uma jogada de ataque com uma magia de mago.</p>
-                <p><b>CD para evitar suas magias</b> = 8 + seu bônus de proficiência+ seu modificador de Inteligência</p>
-                <p><b>Modificador de ataque mágico</b> = seu bônus de proficiência+ seu modificador de Inteligência</p>
-				
-				<h5><b>Conjuração Ritual</b></h5>
-				<p>Você pode conjurar uma magia de mago como um ritual se ela possuir a propriedade ritual e constar em seu livro de magias. Você não precisa ter a magia preparada.</p>
-                
-                <h5><b>Foco de Conjuração</b></h5>
-                <p>Você pode usar um foco arcano (veja o capítulo 5, "Equipamento") como um foco de conjuração para suas magias de mago.</p>
-				
-				<h5><b>Magias Conhecidas de Acordo com o Nível</h5></b>
-				<p>Toda vez que você sobe de nível de mago, pode adicionar duas magias de mago, à sua escolha, em seu livro de magia gratuitamente. Cada uma delas deve pertencer a um círculo para o qual você tenha espaços de magia, conforme mostrado na tabela O Mago. Em suas aventuras, você pode encontrar outras magias, que poderão ser adicionadas ao seu livro de magias (consulte a barra lateral "Seu Livro de Magias, O Grimório").</p>
-                
-				<div class="card relac-raca" style="margin-top: 22px;margin-bottom: 22px;">
-                  <div class="card-body" style="padding: 26px; padding-bottom: 12px;">
-                      <h6 style="text-transform: uppercase;">Seu Livro de Magias, O Grimório</h6>
-                      <p>As magias que você adiciona ao seu livro de magias, conforme ganha níveis, refletem as pesquisas arcanas que realizou, bem como os insights que obteve sobre a natureza do multiverso. Você pode encontrar novas magias durante suas aventuras. É possível descobrir uma magia gravada em um pergaminho, guardado dentro de um baú de um mago maligno, por exemplo, ou em um tomo empoeirado, na estante de uma antiga biblioteca.</p>
-                      <p><b>Copiando uma Magia para o Livro.</b> Ao encontrar uma magia de 1º círculo ou superior, é possível adicioná-la ao seu livro de magias, desde que você tenha tempo para decifrá-la e copiá-la, e ela pertença a um círculo que você possa conjurar.</p>
-					  <p>A cópia de uma magia envolve reproduzir sua forma básica, além de decifrar o sistema único de anotação usado pelo mago que a escreveu. Você deve praticá-la até compreender os sons ou gestos necessários, e apenas em seguida transcrevê-la para o seu grimório, usando suas próprias anotações.</p>
-					  <p>Para cada círculo da magia, o processo demora cerca de 2 horas e custa 50 PO. Esse custo representa os componentes materiais que você gasta ao fazer experimentos com a magia até dominá-la, bem como as tintas de qualidade, necessárias para gravá-la em seu livro de magias. Uma vez gasto esse tempo e dinheiro, você poderá preparar a magia, do mesmo modo como faz com suas demais magias.</p>
-                      <p><b>Substituindo o Livro.</b> Você pode copiar uma magia do seu próprio livro de magias para outro - por exemplo, se deseja fazer uma cópia de reserva de seu livro. Isso funciona como uma cópia de uma nova magia em seu livro de magias, porém mais rápida e fácil, desde que você compreenda as suas próprias anotações e já saiba como conjurá-la. Você precisa gastar apenas 1 hora e 10 PO para cada círculo da magia copiada.</p>
-					  <p>Caso venha a perder o seu grimório, poderá usar o mesmo procedimento para transcrever suas magias preparadas para um novo. Preencher o restante do seu livro de magias exigirá que você encontre novas magias, como de costume. Por essa razão, muitos magos mantêm cópias de segurança dos seus livros, que ficam bem escondidas em locais secretos.</p>
-                      <p><b>A Aparência do Livro.</b> Seu livro de magias é uma compilação exclusiva de magias, com seus próprios floreios decorativos e notas de rodapé. Ele pode ser um volume de couro simples e funcional recebido como um presente do seu mestre, um fino tomo com bordas douradas encontrado em uma antiga biblioteca, ou até mesmo uma coleção de notas afixadas e agrupadas que você juntou após perder o seu livro de magias anterior em um terrível acidente.</p>
-                  </div>
-                </div>
-				
-				<h4>Recuperação Arcana</h4>
-				<p>Você aprendeu a recuperar sua energia mágica ao estudar seu livro de magias. Uma vez por dia, ao fim de um descanso curto, você pode recuperar espaços de magia gastos. Esses espaços devem ter um círculo combinado que equivale a menos da metade do seu nível de mago (arredondado para cima) e nenhum deles pode ser de 6º círculo ou superior.</p>
-				<p>Por exemplo, caso você seja um mago de 4º nível, pode recuperar até dois espaços de magia. Você pode recuperar um espaço de magia de 2º círculo ou dois espaços de magia de 1º círculo.</p>
-				
-				<h4>Tradição Arcana</h4>
-				<p>Ao alcançar o 2º nível, você precisa escolher uma tradição arcana, moldando sua prática de magia por meio de uma das oito escolas: Abjuração, Adivinhação, Conjuração, Encantamento, Evocação, Ilusão, Necromancia ou Transmutação, todas detalhadas ao final da descrição desta classe.</p>
-				<p>Sua escolha lhe confere características no 2º, 6º, 10º e 14º níveis.</p>
-				
-				<h4>Aumento no Valor de Atributo</h4>
-				<p>Ao alcançar o 4º nível e novamente no 8º, 12º, 16º e 19º níveis, você pode aumentar em 2 o valor de um atributo, à sua escolha, ou pode aumentar em 1 o valor de dois atributos. Como sempre, não é possível aumentar o valor de um atributo acima de 20 usando esta característica.</p>
-				
-				<h4>Maestria de Magias</h4>
-				<p>No 18º nível, você alcança domínio suficiente sobre determinadas magias a ponto de poder conjurá-las à vontade. Escolha uma magia de 1º e uma de 2º círculo que estejam no seu grimório. Quando as tiver preparadas, poderá conjurá-las em seu círculo mais baixo sem gastar nenhum espaço de magia. Se quiser fazê-lo em círculos mais altos, precisa gastar um espaço de magia, como de costume.</p>
-				<p>Ao passar 8 horas estudando, você pode trocar uma ou ambas as magias que escolheu por magias diferentes do mesmo círculo.</p>
-				
-				<h4>Assinatura Mágica</h4>
-				<p>Ao alcançar o 20º nível, você ganha o domínio de mais duas magias poderosas, que podem ser conjuradas com pouco esforço. Escolha duas magias de mago de 3º círculo em seu grimório como suas assinaturas mágicas. Essas magias estão sempre preparadas, não contam para o seu número de magias preparadas e, no 3º nível, podem ser conjuradas uma vez cada, sem o gasto de um espaço de magia, tornando a ficar disponíveis após um descanso curto ou longo.</p>
-				<p>Caso queira conjurar essas magias em um círculo mais alto, precisará gastar um espaço de magia, como de costume.</p>
-                
-                <div style="margin-top: 22px;">
-                    <h2 class="subtitulo">Tradições Arcanas</h2>
-                    <p>O estudo da magia é antigo, remontando à época em que os primeiros mortais descobriram a energia mágica. Ela está firmemente estabelecida nos mundos de D&D, com várias tradições dedicadas ao seu complexo estudo.</p>
-					<p>As tradições arcanas mais comuns no multiverso giram em torno das escolas de magia. Através dos tempos, os magos têm catalogado milhares de magias, agrupando-as em oito categorias denominadas escolas, conforme descrito no capítulo 10. Em alguns lugares, essas tradições assumem a forma de escolas, no sentido literal da palavra - um mago pode estudar na Escola de Ilusão, enquanto outros estudam do outro lado da cidade na Escola de Encantamento. Em outras localidades, as escolas são mais como departamentos acadêmicos, como faculdades rivais competindo por alunos e financiamento. Até mesmo magos que treinam aprendizes na solidão de suas próprias torres usam a divisão das magias em escolas como um dispositivo de ensino, uma vez que as magias de cada escola exigirem o domínio de técnicas diferentes.</p>
-                </div>
-
-                <div style="margin-top: 22px;">
-                    <h3 class="subtitulo">Escola de Abjuração</h3>
-                    <p>A Escola de Abjuração enfatiza magias que bloqueiam, banem ou protegem. Os detratores desta escola acusam-na de se concentrar na contradição e negação, ao invés da afirmação. Mas você entende, porém, que neutralizar um efeito nocivo, proteger os fracos, e banir influências malignas é qualquer coisa exceto um vazio filosófico. É uma vocação que causa orgulho e merece ser respeitada.</p>
-					<p>Chamados de abjuradores, os membros desta escola são procurados quando espíritos malignos precisam ser exorcizados, locais importantes precisam ser guardados contra espionagem mágica, e portais para outros planos de existência precisam ser fechados.</p>
-                </div>
-
-                <h4>Versado em Abjuração</h4>
-                <p>Começando quando você escolhe esta escola no 2º nível, o ouro e o tempo necessários para copiar uma magia de abjura-ção em seu livro de magias são reduzidos pela metade.</p>
-
-                <h4>Proteção Arcana</h4>
-                <p>A partir do 2º nível, você pode tecer a magia ao seu redor como uma forma de proteção. Ao conjurar uma magia de abjuração de 1º círculo ou superior, ao mesmo tempo você pode usar um fio dessa magia para criar uma proteção, que dura até o final do seu próximo descanso longo. Essa proteção tem pontos de vida máximos iguais ao dobro do seu nível de mago + seu modificador de Inteligência. Todo dano sofrido por você passa a ser sofrido pela proteção. Quando os pontos de vida da proteção forem reduzidos a 0, você sofrerá qualquer dano excedente.</p>
-                <p>Enquanto a proteção estiver sem pontos de vida, ela não o protegerá, mas continuará ativa. Sempre que você conjura uma magia de abjuração de 1º círculo ou superior, a proteção recupera um número de pontos de vida igual ao dobro do círculo da magia.</p>
-				<p>Uma vez usada esta característica, você só pode voltar a usá-la após um descanso longo.</p>
-
-                <h4>Proteção Projetada</h4>
-                <p>A partir do 6º nível, quando uma criatura à sua vista e no máximo a 9 metros de distância sofrer dano, você pode usar a sua reação para fazer com que sua Proteção Arcana absorva esse dano. Se os pontos de vida da proteção forem reduzidos a 0, a criatura protegida sofrerá qualquer dano excedente.</p>
-
-                <h4>Abjuração Aprimorada</h4>
-                <p>A partir do 10º nível, você deve adicionar o seu bônus de proficiência ao conjurar uma magia de abjuração que necessite de um teste de atributo (como <a href="/magias.php?nome=contramagia" class="magia-hover magicas-tooltip" id="contramagia" title="Carregando...">contramagia</a> e <a href="/magias.php?nome=dissipar-magia" class="magia-hover magicas-tooltip" id="dissipar-magia" title="Carregando...">dissipar magia</a>).</p>
-				
-				<h4>Resistência à Magia</h4>
-                <p>A partir do 14º nível, você tem vantagem em salvaguardas contra magias.</p>
-				<p>Além disso, você tem resistência contra dano provocado por magias.</p>
-            </div>
-			
-            <div style="margin-top: 22px;">
-				<h3 class="subtitulo">Escola de Adivinhação</h3>
-				<p>O conselho de um adivinho é buscado tanto pela realeza quanto pelos plebeus, pois todos procuram uma compreensão mais clara do passado, do presente e do futuro. Como adivinho, você se esforça para separar os véus do espaço, do tempo e da consciência para poder enxergar mais claramente. Você trabalha para dominar magias de discernimento, visão remota, conhecimento sobrenatural e previsão.</p>
-              
-				<h4>Versado em Adivinhação</h4>
-				<p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você precisa gastar para copiar uma magia de adivinhação em seu livro de magias são reduzidos pela metade.</p>
-
-				<h4>Prodígio</h4>
-				<p>Ao escolher esta escola no 2º nível, vislumbres do futuro começam a pressionar sua consciência. Ao terminar um descanso longo, jogue 2d20 e anote os resultados. Você pode substituir qualquer jogada de ataque, teste de atributo ou salvaguarda feitos por você ou por uma criatura à sua vista por um desses números. Só é possível fazer isso antes da jogada. Apenas uma jogada pode ser substituída dessa maneira a cada turno.</p>
-				<p>Cada jogada presciente pode ser utilizada uma única vez. Após um descanso longo, perde-se qualquer jogada presciente não utilizada.</p>
-
-				<h4>Perito em Adivinhação</h4>
-				<p>A partir do 6º nível, conjurar magias de adivinhação torna-se tão fácil para você, que passa a lhe custar apenas uma fração dos seus esforços. Ao conjurar uma magia de adivinhação de 2º círculo ou superior usando um espaço de magia, você recupera um espaço de magia gasto. O espaço que você recupera deve ser de um círculo inferior ao da magia conjurada e abaixo do 5º círculo.</p>
-
-				<h4>O Terceiro Olho</h4>
-				<p>A partir do 10º nível, você pode usar sua ação para aumentar seus poderes de percepção. Ao fazê-lo, escolha um dos seguintes benefícios, o qual durará até você ficar incapacitado ou completar um descanso curto ou longo. Só é possível usar esta característica novamente após um descanso longo.</p>
-				<p><b>Visão no Escuro.</b> Você ganha visão no escuro a uma distância de até 18 metros, conforme descrito no capítulo 8, "Aventurando-se".</p>
-				<p><b>Visão Etérea.</b> Você pode enxergar no Plano Etéreo a até 18 metros de distância.</p>
-				<p><b>Compreensão Superior.</b> Você pode ler qualquer idioma.</p>
-				<p><b>Ver o Invisível.</b> Você pode ver criaturas e objetos <a href="/condicoes.php?nome=invisivel" class="condicao-hover condicoes-tooltip">invisíveis</a> a até 3 metros de distância, que estejam dentro da sua linha de visão.</p>
-
-				<h4>Prodígio Maior</h4>
-				<p>A partir do 14º nível, as visões em seus sonhos se intensificam, pintando em sua mente uma imagem mais precisa do que está por vir. Passe a jogar 3d20 prescientes para sua característica Prodígio, ao invés de dois.</p>
-            </div>
-			
-			<div style="margin-top: 22px;">
-				<h3 class="subtitulo">Escola de Encantamento</h3>
-				<p>Como membro da Escola de Encantamento, você aperfeiçoou a sua capacidade de fascinar e enganar magicamente. Alguns encantadores são pacificadores que enfeitiçam os mais violentos para que baixem as armas, e encantam os cruéis para que demonstrem misericórdia. Outros são tiranos que acorrentam magicamente os relutantes aos seus pés. A maioria dos encantadores fica em algum lugar entre os dois.</p>
-				
-				<h4>Versado em Encantamento</h4>
-				<p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você precisa gastar para copiar uma magia de encantamento em seu livro de magias são reduzidos pela metade.</p>
-
-				<h4>Olhar Hipnótico</h4>
-				<p>Ao escolher esta escola no 2º nível, as suas palavras suaves e o seu olhar encantador podem cativar magicamente outra criatura. Ao fazê-lo, escolha uma criatura à sua vista e que esteja a no máximo 9 metros de você. Se ela puder vê-lo ou ouvi-lo, ela precisa ser bem-sucedida em uma salvaguarda de Sabedoria contra a CD para evitar suas magias de mago, ou ficará enfeitiçada por você até o final do seu próximo turno. O deslocamento da criatura enfeitiçada cai para 0, ela fica incapacitada e visivelmente aturdida.</p>
-				<p>Você pode usar suas ações dos turnos subsequentes para manter este efeito, estendendo a duração dele até o fim do seu próximo turno. No entanto, o efeito se encerra caso a criatura não possa ouvi-lo, sofra dano ou se distancie mais de 1,5 metro de você.</p>
-				<p>Quando o efeito termina, ou caso a criatura seja bem-sucedida na salvaguarda inicial contra este efeito, você só pode voltar a usá-lo nesse alvo após um descanso longo.</p>
-
-				<h4>Encantamento Instintivo</h4>
-				<p>A partir do 6º nível, quando uma criatura, à sua vista e no máximo a 9 metros de distância, o ataca, você pode usar a sua reação para desviar o ataque para outra criatura, contanto que esta esteja ao alcance do ataque. O atacante deve fazer uma salvaguarda de Sabedoria contra a CD para evitar sua magia de mago. No caso de falha, ele deve atacar a criatura mais próxima, excluindo você e ele próprio. Caso haja várias criaturas mais próximas, ele deve escolher uma como alvo. Em caso de sucesso, você só pode voltar a usar esta característica no atacante após um descanso longo.</p>
-				<p>Você deve usar esta característica antes de saber se o ataque foi ou não bem-sucedido. Criaturas que não possam ser enfeitiçadas são imunes a este efeito.</p>
-
-				<h4>Duplicar Encantamento</h4>
-				<p>A partir do 10º nível, ao conjurar uma magia de encantamento de 1º círculo ou superior, cujo alvo seja uma única criatura, você pode escolher uma segunda criatura alvo.</p>
-
-				<h4>Alterar Memórias</h4>
-				<p>No 14º nível você ganha a habilidade de fazer com que uma criatura não perceba sua influência mágica sobre ela. Ao conjurar uma magia de encantamento para enfeitiçar uma ou mais criaturas, você pode alterar a percepção delas, de modo que não notem o feitiço.</p>
-				<p>Adicionalmente, logo antes de a magia expirar, você pode usar sua ação para tentar fazer com que a criatura esqueça parte do tempo em que esteve enfeitiçada. Ela deve ser bem-sucedida em uma salvaguarda de Inteligência contra o CD para evitar magias de mago, ou perderá a memória relativa a um período equivalente a 1 + seu modificador de Carisma (mínimo de 1). Você pode fazer uma criatura esquecer um período menor, que, no entanto, não pode exceder a duração da magia conjurada.</p>
-            </div>
-			
-			<div style="margin-top: 22px;">
-				<h3 class="subtitulo">Escola de Evocação</h3>
-				<p>Evocadores concentram seu estudo mágico na criação de efeitos elementais poderosos, como frio mordaz, chamas cauterizantes, trovões estrondosos, relâmpagos crepitantes e ácido ardente. Alguns encontram emprego em forças militares, servindo como artilharia para explodir exércitos inimigos de longe. Há os que empregam seus poderes espetaculares na proteção dos mais fracos, enquanto outros buscam cada vez mais poder como bandidos, aventureiros ou aspirantes a ditadores.</p>
-				
-				<h4>Versado em Evocação</h4>
-				<p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você deve gasta para copiar uma magia de evocação em seu livro de magias passam a serem reduzidos pela metade.</p>
-
-				<h4>Esculpir Magias</h4>
-				<p>Começando no 2º nível, você pode criar bolsões de relativa segurança dentro dos efeitos de suas magias de evocação. Ao conjurar uma magia de evocação que afete outras criaturas em seu raio de visão, você pode escolher um número de criaturas igual a 1 + o círculo da magia para serem automaticamente bem-sucedidas nas suas salvaguardas contra a magia e, caso normalmente recebessem metade do dano se bem-sucedidas, não receberem nenhum dano.</p>
-
-				<h4>Truque Potente</h4>
-				<p>A partir do 6º nível, o dano dos seus truques afeta criaturas mesmo que elas possam evitá-lo. Quando uma criatura é bem-sucedida em uma salvaguarda contra um truque seu, ela sofre metade do dano (se houver), mas não sofre nenhum dos efeitos adicionais.</p>
-
-				<h4>Evocação Potencializada</h4>
-				<p>Começando no 10º nível, você pode adicionar seu modificador de Inteligência a uma jogada de dano de qualquer magia de evocação que conjurar.</p>
-
-				<h4>Sobrecarga</h4>
-				<p>A partir do 14º nível, você pode aumentar o poder de suas magias mais simples. Ao conjurar uma magia de mago de 1º ao 5º círculo que cause dano, você pode causar dano máximo.</p>
-				<p>Ao fazê-lo pela primeira vez, você não sofre nenhum efeito adverso. Se usar esta característica novamente antes de um descanso longo, sofrerá 2d12 pontos de dano necrótico para cada círculo da magia, imediatamente após conjurá-la. Cada vez que você voltar a usar esta característica antes de um descanso longo, o dano necrótico por círculo da magia aumenta em 1d12. Esse dano ignora resistência e imunidade.</p>
-            </div>
-			
-			<div style="margin-top: 22px;">
-				<h3 class="subtitulo">Escola de Ilusão</h3>
-				<p>Você concentra seus estudos na magia que deslumbra os sentidos, confunde a mente e engana até as pessoas mais sábias. Sua magia é sutil, mas as ilusões elaboradas por sua mente aguçada fazem o irreal parecer verdade. Alguns ilusionistas - incluindo muitos magos gnomos - são brincalhões bem-intencionados que usam seus poderes para entreter. Outros são mestres da mentira mais sinistros, usando suas ilusões para assustar e enganar, em busca de ganhos pessoais.</p>
-				
-				<h4>Versado em Ilusão</h4>
-				<p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você deve gastar para copiar uma magia de evocação em seu livro de magias passam a ser reduzidos pela metade.</p>
-
-				<h4>Ilusão Menor Aprimorada</h4>
-				<p>Ao escolher esta escola no 2º nível, você aprende o truque ilusão menor. Se você já o conhece, aprende em seu lugar um truque de mago diferente, à sua escolha. Este truque não conta para a sua lista de truques conhecidos.</p>
-				<p>Ao conjurar ilusão menor, você pode criar ambos, um som e uma imagem, com uma única conjuração.</p>
-
-				<h4>Ilusões Maleáveis</h4>
-				<p>A partir do 6º nível, ao conjurar uma magia de ilusão que tenha duração de 1 minuto ou mais, você pode usar sua ação para mudar a natureza dessa ilusão (porém respeitando os parâmetros que a magia estabelece para ela), contanto que possa vê-la.</p>
-
-				<h4>Autoimagem Ilusória</h4>
-				<p>A partir do 10º nível, você pode criar uma duplicata ilusória de si mesmo como uma reação instantânea, quase instintiva ao perigo. Ao ser o alvo de uma jogada de ataque, você pode usar sua reação para colocar a duplicata ilusória entre você e o ataque, que atinge automaticamente a ilusão, dissipando-a, sem causar dano a você.</p>
-				<p>Uma vez usada esta característica, você só pode utilizá-la novamente após completar um descanso curto ou longo.</p>
-
-				<h4>Realidade Ilusória</h4>
-				<p>No 14º nível, você aprende o segredo de tecer a magia das sombras em suas ilusões, e dar a elas um tom de quase realidade. Ao conjurar uma magia de ilusão de 1º círculo ou superior, você pode tornar real um objeto inanimado e não-mágico que seja parte da ilusão. Você pode fazê-lo em seu turno utilizando como uma ação bônus, enquanto a magia estiver em curso. O objeto permanece real por 1 minuto. Por exemplo, você pode criar uma ilusão de uma ponte sobre um abismo e, em seguida, torná-la real tempo suficiente para que seus aliados a atravessem.</p>
-				<p>O objeto não pode causar dano ou ferir diretamente.</p>
-            </div>
-			
-			<div style="margin-top: 22px;">
-				<h3 class="subtitulo">Escola de Invocação</h3>
-				<p>Membros da escola de invocação favorecem magias que produzem objetos e criaturas a partir do nada. Você pode invocar as ondulantes nuvens de um nevoeiro mortal, ou convocar criaturas de outro lugar para combater em seu nome. À medida que seu domínio cresce, você aprende magias de teleporte, que lhe permitem se deslocar instantaneamente através de enormes distâncias - até mesmo para outros planos de existência.</p>
-				
-				<h4>Versado em Invocação</h4>
-				<p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você precisa gastar para copiar uma magia de invocação em seu livro de magias são reduzidos pela metade.</p>
-
-				<h4>Invocação Menor</h4>
-				<p>Ao escolher esta escola no 2º nível, você pode usar sua ação para invocar um objeto inanimado na sua mão ou no chão, em um espaço desocupado à sua vista e que esteja a até 3 metros de distância. Esse objeto não pode ocupar uma área maior do que 1 metro ou pesar mais do que 5 quilos, e sua forma deve ser a de qualquer objeto não-mágico que você já tenha visto. O objeto é visivelmente mágico, irradiando luz tênue a uma distância de até 1,5 metro.</p>
-				<p>Ele desaparece caso você use esta característica novamente, sofra ou cause dano, ou após o transcorrer de uma hora.</p>
-
-				<h4>Transposição Benigna</h4>
-				<p>A partir do 6º nível, você pode usar sua ação para se teleportar para um espaço desocupado, à sua vista, que esteja a uma distância de até 9 metros. Esse espaço também pode estar ocupado por uma criatura Pequena ou Média. Se a criatura aceitar, vocês dois trocam de lugar via teleporte.</p>
-				<p>Uma vez usada esta característica, ela só pode ser reutilizada após você completar um descanso longo, ou conjurar uma magia de 1º círculo ou maior pertencente à escola de invocação.</p>
-
-				<h4>Invocação Focada</h4>
-				<p>A partir do 10º nível, enquanto você se concentra em uma magia de invocação, sua concentração não pode ser quebrada como resultado de um dano sofrido.</p>
-
-				<h4>Convocação Duradoura</h4>
-				<p>A partir do 14º nível, qualquer criatura que você convoque ou crie com uma magia de invocação possui 30 pontos de vida temporários.</p>
-            </div>
-			
-			<div style="margin-top: 22px;">
-				<h3 class="subtitulo">Escola de Necromancia</h3>
-				<p>A Escola de Necromancia explora as forças cósmicas da vida, da morte e da não-vida. Conforme concentra seus estudos nesta tradição, você aprende a manipular a energia que anima todos os seres vivos. À medida que progride, aprende a retirar a força vital de uma criatura enquanto a sua magia destrói o corpo dela, transformando essa energia vital em poder mágico que você pode manipular.</p>
-				<p>A maioria das pessoas vê os necromantes como ameaçadores, ou até mesmo como vilões, devido a essa estreita associação com a morte. Mas nem todos os necromantes são maus, embora as forças que manipulem sejam consideradas tabu por muitas sociedades.</p>
-
-			<h4>Versado em Necromancia</h4>
-			<p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você precisa gastar para copiar uma magia de necromancia em seu livro de magias são reduzidos pela metade.</p>
-
-			<h4>Colheita Maldita</h4>
-			<p>No 2º nível, você ganha a capacidade de colher a energia vital de criaturas mortas por suas magias. Uma vez por turno, ao matar uma ou mais criaturas com uma magia de 1º círculo ou superior, você recupera uma quantidade de pontos de vida igual ao dobro do círculo da magia, ou três vezes o círculo, caso a magia pertença à escola de necromancia. Você não ganha esse benefício por matar constructos ou mortos-vivos.</p>
-
-			<h4>Servos Mortos-Vivos</h4>
-			<p>No 6º nível, você adiciona a magia animar mortos ao seu livro de magias, caso não a possua. Ao conjurar animar mortos, você pode selecionar como alvo um corpo ou pilha de ossos adicional, desse modo criando, respectivamente, outro zumbi ou esqueleto.</p>
-			<p>Sempre que criar um morto-vivo usando uma magia necromântica, você ganha benefícios adicionais:</p>
-			<ul>
-				<li>Seu nível de mago é adicionado aos pontos de vida máximos da criatura.</li>
-				<li>Seu bônus de proficiência é somado às jogadas de dano das armas da criatura.</li>
-			</ul>
-
-			<h4>Acostumado à Não-Vida</h4>
-			<p>A partir do 10º nível, você tem resistência a dano necrótico e seus pontos de vida máximos não podem ser reduzidos. Você passou tanto tempo lidando com mortos-vivos e com as forças que os animam, que ficou acostumado a alguns dos piores efeitos da necromancia.</p>
-
-			<h4>Comandar Mortos-Vivos</h4>
-			<p>Começando no 14º nível, você pode usar magia para manter mortos-vivos sob seu controle, até mesmo aqueles criados por outros magos. Com uma ação, você pode escolher um morto-vivo à sua vista, e que esteja a até 18 metros de distância. Ele pode fazer uma salvaguarda de Carisma contra o CD para evitar suas magias. Caso ele seja bem-sucedido, fica imune a esta característica. Caso falhe, torna-se amigável a você e passa a obedecer aos seus comandos até o próximo uso desta característica.</p>
-			<p>Mortos-vivos inteligentes são mais difíceis de controlar dessa forma. Se o alvo possui uma Inteligência igual a 8 ou maior, terá vantagem no teste de salvaguarda. Caso falhe e tenha uma inteligência igual a 12 ou maior, pode repetir o teste ao final de cada hora, até ser bem-sucedido e se libertar.</p>
-            </div>
-			
-			<div style="margin-top: 22px;">
-				<h3 class="subtitulo">Escola de Transmutação</h3>
-				<p>Você é um estudante de magias que modificam a energia e a matéria. Para você, o mundo não é fixo, mas altamente mutável, e você se alegra em ser um agente de tal mudança. Você manipula a matéria-prima da criação, e aprende a alterar as formas físicas e as qualidades mentais. Sua magia lhe dá as ferramentas para se tornar um ferreiro da forja da realidade.</p>
-				<p>Alguns transmutadores são reparadores e pregadores de peças, transformando pessoas em sapos e cobre em prata para a diversão e algum lucro. Outros seguem os estudos mágicos com seriedade mortal, buscando o poder dos deuses para criar e destruir mundos.</p>
-				
-				<h4>Versado em Transmutação</h4>
-				<p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você precisa gastar para copiar uma magia de transmutação em seu livro de magias são reduzidos pela metade.</p>
-				
-				<h4>Alquimia Menor</h4>
-				<p>Ao escolher esta escola no 2º nível, você pode alterar temporariamente as propriedades físicas de um objeto não-mágico, alterando-o de uma substância para outra. Você realiza um procedimento alquímico especial em um objeto composto inteiramente de madeira, pedra (mas não pedras preciosas), ferro, cobre ou prata, transformando-o em outro material, dos citados. Para cada 10 minutos gastos nesse procedimento, você pode transformar até 0,03 metro cúbico (ou 28 litros) de material. Após 1 hora, ou ao perder sua concentração (como se estivesse se concentrando em uma magia), o material reverte para a substância original.</p>
-				
-				<h4>Pedra do Transmutador</h4>
-				<p>A partir do 6º nível, você pode passar 8 horas criando uma pedra que armazena magia de transmutação, chamada pedra do transmutador. Você pode usá-la ou dá-la a outra criatura. O portador da pedra ganha um dos seguintes benefícios, escolhido por você ao criá-la:</p>
-				<ul>
-					<li>Visão no escuro até uma distância de 18 metros, como descrito no capítulo 8, "Aventurando-se".</li>
-					<li>Um aumento de 3 metros no deslocamento enquanto a criatura estiver sem sobrecarga.</li>
-					<li>Proficiência nas salvaguardas de Constituição.</li>
-					<li>Resistência a dano ácido, elétrico, ígneo, gélido ou trovejante (a escolha é sua, sempre que optar por este benefício).</li>
-				</ul>
-				<p>Cada vez que conjurar uma magia de transmutação de 1º círculo ou superior, você pode mudar o efeito de sua pedra, caso ela esteja em sua posse.</p>
-				<p>Caso crie uma nova pedra do transmutador, a anterior para de funcionar.</p>
-				
-				<h4>Metamorfo</h4>
-				<p>No 10º nível, você adiciona a magia polimorfia ao seu livro de magias, se ainda não a possuir. Você se torna capaz de conjurar polimorfia sem gastar um espaço de magia. Nesse caso, a magia deve ser conjurada sobre você mesmo, e a nova forma deve ser de um animal de nível de desafio igual a 1 ou menor.</p>
-				<p>Uma vez que, conjurada polimorfia dessa forma, você só poderá voltar a fazê-lo após completar um descanso curto ou longo, embora ainda seja possível conjurá-la normalmente usando um espaço de magia.</p>
-				
-				<h4>Mestre da Transmutação</h4>
-				<p>A partir do 14º nível, você pode usar sua ação para consumir, em uma única descarga, toda a reserva de magia de transmutação armazenada na pedra do transmutador. Ao fazê-lo, escolha um dos efeitos descritos a seguir. Ao final, sua pedra do transmutador será destruída, e só poderá ser refeita após completar um descanso longo.</p>
-				<p><b>Transformação Maior.</b> Você pode transmutar um objeto não-mágico - com volume de até 1,5 metro cúbico- em outro objeto não-mágico de tamanho e massa semelhantes, porém de valor igual ou menor. Você deve passar 10 minutos manuseando o objeto para transformá-lo.</p>
-				<p><b>Panaceia.</b> Você remove qualquer maldição, doença ou veneno que esteja agindo sobre uma criatura tocada pela pedra do transmutador. A criatura também recupera todos os pontos de vida perdidos.</p>
-				<p><b>Restaurar Vida.</b> Você conjura a magia reviver os mortos sobre uma criatura, ao tocá-la com a pedra do transmutador. Não é preciso gastar nenhum espaço de magia, tampouco é preciso que você essa magia conste em seu grimório.</p>
-				<p><b>Restaurar Juventude.</b> Quando uma criatura aceita ser tocada pela pedra do transmutador, sua idade aparente é reduzida em 3d10 anos, até a idade mínima de 13 anos. Este efeito não aumenta a expectativa de vida da criatura.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://aux5e.github.io/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/classes.html">Classes</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Mago</li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </div>
-  </div>
 
-<?php include('/home/site/wwwroot/partial/footer.php'); ?>
+    <div id="classes-phb-container" class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="/imagens/mago.png" class="rounded float-right" alt="Mago">
+                <h1 class="titulo">Mago <span class="titulo-span">Detalhes da Classe</span></h1>
+                <div style="margin-top: 22px;">
+                    <p>Vestida com um robe prata que denota sua posição, uma elfa fecha os olhos para afastar-se das distrações do campo de batalha e, iniciar seu cântico silencioso. Movendo os dedos à frente, ela completa a magia e lança uma minúscula pérola em brasa na direção das fileiras inimigas, onde o objeto irrompe em um inferno de chamas que engolfa os soldados.</p>
+                    <p>Conferindo vez após vez seu trabalho, um humano inscreve um intrincado círculo mágico de giz na pedra nua do chão, polvilhando pó de ferro ao longo de cada linha e curva graciosa. Quando o círculo está completo, ele murmura um longo encantamento. Um buraco abre-se no espaço dentro do círculo, trazendo um cheiro de enxofre do distante pleno além.</p>
+                    <p>Agachando-se no chão em uma encruzilhada da masmorra, um gnomo atira um punhado de pequenos ossos inscritos com símbolos místicos, murmurando palavras de poder sobre eles. Fechando seus olhos para ter mais clareza em suas visões, ele acena lentamente e volta a abri-los, apontando para a passagem à esquerda.</p>
+                    <p>Magos são os supremos usuários dos poderes mágicos, definidos e unidos como uma classe pelas magias que conjuram. Extraindo energia da sutil teia mágica que permeia o cosmos, os magos conjuram magias de fogo explosivo, arcos elétricos, enganos sutis, controles mentais ou força bruta. As suas magias conjuram monstros de outros planos de existência, desvendam o futuro, ou transformam mortos em zumbis. Suas magias mais poderosas mudam uma substância em outra, convocam meteoros dos céus, ou abrem portais para outros mundos.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Estudiosos do Arcano</h2>
+                    <p>Selvagens e enigmáticos, de variadas formas e funções, os poderes da magia atraem estudantes que procuram dominar seus mistérios. Alguns aspiram a se assemelharem aos deuses, moldando a própria realidade. Apesar da conjuração de uma simples magia exigir apenas a pronúncia de algumas palavras estranhas, gestos efêmeros e, por vezes, um punhado ou outro de materiais exóticos, esses componentes dão uma ideia apenas superficial da experiência adquirida após anos de aprendizado e incontáveis horas de estudo.</p>
+                    <p>Magos vivem e morrem por suas magias. Todo o resto é secundário. Eles aprendem novas magias à medida que praticam e adquirem experiência. Eles também aprendem magias de outros magos, de antigos tomos ou inscrições, e de antigas criaturas (como os feéricos) impregnadas de magia.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">O Fascínio pelo Conhecimento</h2>
+                    <p>A vida dos magos raramente é mundana. O mais próximo que um mago pode chegar de uma vida normal é trabalhar como acadêmico ou professor em alguma universidade ou biblioteca, ensinado os segredos do multiverso. Outros vendem seus serviços como adivinhos, servem nas forças militares ou levam vidas de crime ou dominação.</p>
+                    <p>Mas a atração pelo conhecimento e poder conduz até o mais calmo dos magos da segurança das suas bibliotecas e laboratórios, para dentro de ruínas desmoronadas e cidades perdidas. Muitos magos acreditam que seus colegas em civilizações antigas conheciam segredos mágicos que foram perdidos no tempo, e que descobrir tais segredos poderia revelar o caminho para um poder maior do que qualquer magia disponível na era atual.</p>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Criando um Mago</h2>
+                    <p>Criar um personagem mago exige uma história com pelo menos um evento extraordinário. Como o seu personagem fez contato com a magia? Como descobriu sua aptidão mágica? Você tem um talento natural, ou simplesmente estudou muito e praticou incessantemente? Você encontrou uma criatura mágica ou um tomo antigo lhe ensinou os fundamentos da magia.</p>
+                    <p>O que o tirou de uma vida de estudos? O seu primeiro contato com os conhecimentos arcanos o deixou sedento por mais? Você recebeu informação sobre uma fonte de conhecimentos secretos que ainda não foi descoberta por outros magos? Quem sabe talvez esteja simplesmente ansioso para testar seus novos poderes diante do perigo.</p>
+                </div>
+                <div class="card relac-raca" style="margin-top: 22px;">
+                    <div class="card-body">
+                        <h6 style="text-transform: uppercase;">Criação Rápida</h6>
+                        <p>Você pode criar um mago rapidamente seguindo estas sugestões. Primeiro, Inteligência deve ser seu atributo de maior valor, seguido por Constituição ou Destreza. Se você planeja se juntar à Escola do Encantamento, faça com que Carisma seja seu próximo atributo de maior valor. Em seguida, escolha o antecedente sábio. Por fim, escolha os truques <a href="/magias.php?nome=maos-magicas" class="magia-hover magicas-tooltip" id="maos-magicas" title="Carregando...">mãos mágicas</a>, <a href="/magias.php?nome=luz" class="magia-hover magicas-tooltip" id="luz" title="Carregando...">luz</a> e <a href="/magias.php?nome=raio-de-gelo" class="magia-hover magicas-tooltip" id="raio-de-gelo" title="Carregando...">raio de gelo</a>, assim como as seguintes magias de primeiro círculo para o seu Livro de Magia: <a href="/magias.php?nome=maos-flamejantes" class="magia-hover magicas-tooltip" id="maos-flamejantes" title="Carregando...">mãos flamejantes</a>, <a href="/magias.php?nome=enfeiticar-pessoa" class="magia-hover magicas-tooltip" id="enfeiticar-pessoa" title="Carregando...">enfeitiçar pessoa</a>, <a href="/magias.php?nome=queda-suave" class="magia-hover magicas-tooltip" id="queda-suave" title="Carregando...">queda suave</a>, <a href="/magias.php?nome=armadura-arcana" class="magia-hover magicas-tooltip" id="armadura-arcana" title="Carregando...">armadura arcana</a>, <a href="/magias.php?nome=misseis-magicos" class="magia-hover magicas-tooltip" id="misseis-magicos" title="Carregando...">mísseis mágicos</a> e <a href="/magias.php?nome=sono" class="magia-hover magicas-tooltip" id="sono" title="Carregando...">sono</a>.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">O Mago</h3>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" class="text-center align-middle" scope="col">Nível</th>
+                                    <th rowspan="2" class="text-center align-middle" scope="col">Bônus de Proficiência</th>
+                                    <th rowspan="2" class="text-center align-middle" scope="col">Características de Classe</th>
+                                    <th rowspan="2" class="text-center align-middle" scope="col">Truques</th>
+                                    <th colspan="9" class="text-center">Espaços de Magia por Nível</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2" class="text-center" scope="col">1º</th>
+                                    <th rowspan="2" class="text-center" scope="col">2º</th>
+                                    <th rowspan="2" class="text-center" scope="col">3º</th>
+                                    <th rowspan="2" class="text-center" scope="col">4º</th>
+                                    <th rowspan="2" class="text-center" scope="col">5º</th>
+                                    <th rowspan="2" class="text-center" scope="col">6º</th>
+                                    <th rowspan="2" class="text-center" scope="col">7º</th>
+                                    <th rowspan="2" class="text-center" scope="col">8º</th>
+                                    <th rowspan="2" class="text-center" scope="col">9º</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center" scope="row">1º</th>
+                                    <td class="text-center">+2</td>
+                                    <td>Conjuração, Recuperação Arcana</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">2º</th>
+                                    <td class="text-center">+2</td>
+                                    <td>Tradição Arcana</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">3º</th>
+                                    <td class="text-center">+2</td>
+                                    <td>—</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">4º</th>
+                                    <td class="text-center">+2</td>
+                                    <td>Aumento no Valor de Atributo</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">5º</th>
+                                    <td class="text-center">+3</td>
+                                    <td>—</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">6º</th>
+                                    <td class="text-center">+3</td>
+                                    <td>Característica de Tradição Arcana</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">7º</th>
+                                    <td class="text-center">+3</td>
+                                    <td>—</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">8º</th>
+                                    <td class="text-center">+3</td>
+                                    <td>Aumento no Valor de Atributo</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">9º</th>
+                                    <td class="text-center">+4</td>
+                                    <td>—</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">10º</th>
+                                    <td class="text-center">+4</td>
+                                    <td>Característica de Tradição Arcana</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">11º</th>
+                                    <td class="text-center">+4</td>
+                                    <td>—</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">12º</th>
+                                    <td class="text-center">+4</td>
+                                    <td>Aumento no Valor de Atributo</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">13º</th>
+                                    <td class="text-center">+5</td>
+                                    <td>—</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">14º</th>
+                                    <td class="text-center">+5</td>
+                                    <td>Característica de Tradição Arcana</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">15º</th>
+                                    <td class="text-center">+5</td>
+                                    <td>—</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">16º</th>
+                                    <td class="text-center">+5</td>
+                                    <td>Aumento no Valor de Atributo</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">—</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">17º</th>
+                                    <td class="text-center">+6</td>
+                                    <td>—</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">18º</th>
+                                    <td class="text-center">+6</td>
+                                    <td>Maestria de Magias</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">19º</th>
+                                    <td class="text-center">+6</td>
+                                    <td>Aumento no Valor de Atributo</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">20º</th>
+                                    <td class="text-center">+6</td>
+                                    <td>Assinatura Mágica</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div style="margin-top: 22px;">
+                    <h2 class="subtitulo">Características de Classe</h2>
+                    <p>Ao criar um aventureiro mago, você recebe as seguintes características de classe.</p>
+
+                    <h4>Pontos de Vida</h4>
+                    <p>
+                        <strong>Dado de Vida:</strong> 1d6 por nível de mago<br>
+                        <strong>Pontos de Vida no 1º Nível:</strong> 6 + seu modificador de Constituição<br>
+                        <strong>Pontos de Vida a partir do 2º Nível:</strong> 1d6 (ou 4) + seu modificador de Constituição por nível de mago
+                    </p>
+
+                    <h4>Proficiências</h4>
+                    <p>
+                        <strong>Armadura:</strong> Nenhuma<br>
+                        <strong>Armas:</strong> Adagas, dardos, fundas, bastões e bestas leves<br>
+                        <strong>Ferramentas:</strong> Nenhuma<br>
+                        <strong>Salvaguardas:</strong> Inteligência e Sabedoria<br>
+                        <strong>Perícias:</strong> Escolha duas entre Arcanismo, História, Intuição, Investigação, Medicina e Religião
+                    </p>
+
+                    <h4>Equipamento</h4>
+                    <p>Você começa com o seguinte equipamento, além daquele que recebe do seu antecedente:</p>
+                    <ul>
+                        <li>(a) um cajado ou (b) uma adaga</li>
+                        <li>(a) uma bolsa de componentes ou (b) um foco arcano</li>
+                        <li>(a) kit de erudito ou (b) kit de explorador</li>
+                        <li>Um Livro de Magias</li>
+                    </ul>
+
+                    <h4>Conjuração</h4>
+                    <p>Como um estudante de magia arcana, você possui um livro de magias contendo magias que mostram os primeiros vislumbres de seu poder verdadeiro. Veja o capítulo 10, "Conjuração", para consultar as regras gerais de conjuração, o e o capitulo 11, "Magias", para verificar a lista de magias de mago.</p>
+
+                    <h5><b>Truques</b></h5>
+                    <p>No 1º nível, você conhece três truques da lista de magias de mago, à sua escolha. Você aprende truques de mago adicionais em níveis mais altos, conforme mostrado na coluna Truques, da tabela O Mago.</p>
+
+                    <h5><b>Livro de Magia</b></h5>
+                    <p>No 1º nível, você possui um livro de magias contendo seis magias de mago de 1º círculo, à sua escolha. Seu livro de magias é o repositório das magias de mago que você conhece, exceto por seus truques, que estão gravados em sua mente.</p>
+
+                    <h5><b>Preparando e Conjurando Magias</b></h5>
+                    <p>A tabela O Mago mostra quantos espaços de magia você possui para conjurar suas magias de 1º círculo e superiores. Para conjurar uma magia, você deve usar um espaço de magia cujo círculo seja igual ou superior ao círculo da magia. Você recupera todos os espaços de magia usados após um descanso longo.</p>
+                    <p>É sua responsabilidade preparar a lista de magias de mago disponíveis para conjuração. Para tanto, escolha um número de magias de mago do seu livro de magias igual ao seu modificador de Inteligência + seu nível de mago (mínimo de uma magia). As magias devem pertencer a um círculo para o qual você tenha espaços de magia.</p>
+                    <p>Por exemplo, se você é um mago de 3º nível, pode ter quatro espaços de magia de 1º círculo e dois de 2º círculo. Com uma Inteligência de 16, sua lista de feitiços preparados pode incluir seis magias de 1º ou 2º círculo, em qualquer combinação, escolhidas a partir de seu livro de magias. Caso prepare a magia de 1ª círculo <a href="/magias.php?nome=misseis-magicos" class="magia-hover magicas-tooltip" id="misseis-magicos" title="Carregando...">mísseis mágicos</a>, você pode conjurá-la usando um espaço de magia de 1º ou 2º círculo. Conjurar uma magia não a remove da sua lista de magias preparadas.</p>
+                    <p>Você pode mudar sua lista de magias preparadas após um descanso longo. Preparar uma nova lista de magias de mago exige um gasto de tempo estudando seu livro de magias, memorizando os encantamentos e os gestos que precisam ser feitos a cada conjuração: pelo menos 1 minuto por círculo de cada magia em sua lista.</p>
+
+                    <h5><b>Atributo de Conjuração</b></h5>
+                    <p>Inteligência é seu atributo de conjuração para suas magias de mago, uma vez que você aprendeu suas magias por meio da dedicação aos estudos e da memorização. Você deve usar Inteligência sempre que uma magia fizer referência ao seu atributo de conjuração. Além disso, você usa o seu modificador de Inteligência tanto para definir a CD de uma salvaguarda feita para evitar uma magia de mago conjurada por você, quanto para realizar uma jogada de ataque com uma magia de mago.</p>
+                    <p><b>CD para evitar suas magias</b> = 8 + seu bônus de proficiência+ seu modificador de Inteligência</p>
+                    <p><b>Modificador de ataque mágico</b> = seu bônus de proficiência+ seu modificador de Inteligência</p>
+
+                    <h5><b>Conjuração Ritual</b></h5>
+                    <p>Você pode conjurar uma magia de mago como um ritual se ela possuir a propriedade ritual e constar em seu livro de magias. Você não precisa ter a magia preparada.</p>
+
+                    <h5><b>Foco de Conjuração</b></h5>
+                    <p>Você pode usar um foco arcano (veja o capítulo 5, "Equipamento") como um foco de conjuração para suas magias de mago.</p>
+
+                    <h5><b>Magias Conhecidas de Acordo com o Nível</h5></b>
+                    <p>Toda vez que você sobe de nível de mago, pode adicionar duas magias de mago, à sua escolha, em seu livro de magia gratuitamente. Cada uma delas deve pertencer a um círculo para o qual você tenha espaços de magia, conforme mostrado na tabela O Mago. Em suas aventuras, você pode encontrar outras magias, que poderão ser adicionadas ao seu livro de magias (consulte a barra lateral "Seu Livro de Magias, O Grimório").</p>
+
+                    <div class="card relac-raca" style="margin-top: 22px;margin-bottom: 22px;">
+                        <div class="card-body" style="padding: 26px; padding-bottom: 12px;">
+                            <h6 style="text-transform: uppercase;">Seu Livro de Magias, O Grimório</h6>
+                            <p>As magias que você adiciona ao seu livro de magias, conforme ganha níveis, refletem as pesquisas arcanas que realizou, bem como os insights que obteve sobre a natureza do multiverso. Você pode encontrar novas magias durante suas aventuras. É possível descobrir uma magia gravada em um pergaminho, guardado dentro de um baú de um mago maligno, por exemplo, ou em um tomo empoeirado, na estante de uma antiga biblioteca.</p>
+                            <p><b>Copiando uma Magia para o Livro.</b> Ao encontrar uma magia de 1º círculo ou superior, é possível adicioná-la ao seu livro de magias, desde que você tenha tempo para decifrá-la e copiá-la, e ela pertença a um círculo que você possa conjurar.</p>
+                            <p>A cópia de uma magia envolve reproduzir sua forma básica, além de decifrar o sistema único de anotação usado pelo mago que a escreveu. Você deve praticá-la até compreender os sons ou gestos necessários, e apenas em seguida transcrevê-la para o seu grimório, usando suas próprias anotações.</p>
+                            <p>Para cada círculo da magia, o processo demora cerca de 2 horas e custa 50 PO. Esse custo representa os componentes materiais que você gasta ao fazer experimentos com a magia até dominá-la, bem como as tintas de qualidade, necessárias para gravá-la em seu livro de magias. Uma vez gasto esse tempo e dinheiro, você poderá preparar a magia, do mesmo modo como faz com suas demais magias.</p>
+                            <p><b>Substituindo o Livro.</b> Você pode copiar uma magia do seu próprio livro de magias para outro - por exemplo, se deseja fazer uma cópia de reserva de seu livro. Isso funciona como uma cópia de uma nova magia em seu livro de magias, porém mais rápida e fácil, desde que você compreenda as suas próprias anotações e já saiba como conjurá-la. Você precisa gastar apenas 1 hora e 10 PO para cada círculo da magia copiada.</p>
+                            <p>Caso venha a perder o seu grimório, poderá usar o mesmo procedimento para transcrever suas magias preparadas para um novo. Preencher o restante do seu livro de magias exigirá que você encontre novas magias, como de costume. Por essa razão, muitos magos mantêm cópias de segurança dos seus livros, que ficam bem escondidas em locais secretos.</p>
+                            <p><b>A Aparência do Livro.</b> Seu livro de magias é uma compilação exclusiva de magias, com seus próprios floreios decorativos e notas de rodapé. Ele pode ser um volume de couro simples e funcional recebido como um presente do seu mestre, um fino tomo com bordas douradas encontrado em uma antiga biblioteca, ou até mesmo uma coleção de notas afixadas e agrupadas que você juntou após perder o seu livro de magias anterior em um terrível acidente.</p>
+                        </div>
+                    </div>
+
+                    <h4>Recuperação Arcana</h4>
+                    <p>Você aprendeu a recuperar sua energia mágica ao estudar seu livro de magias. Uma vez por dia, ao fim de um descanso curto, você pode recuperar espaços de magia gastos. Esses espaços devem ter um círculo combinado que equivale a menos da metade do seu nível de mago (arredondado para cima) e nenhum deles pode ser de 6º círculo ou superior.</p>
+                    <p>Por exemplo, caso você seja um mago de 4º nível, pode recuperar até dois espaços de magia. Você pode recuperar um espaço de magia de 2º círculo ou dois espaços de magia de 1º círculo.</p>
+
+                    <h4>Tradição Arcana</h4>
+                    <p>Ao alcançar o 2º nível, você precisa escolher uma tradição arcana, moldando sua prática de magia por meio de uma das oito escolas: Abjuração, Adivinhação, Conjuração, Encantamento, Evocação, Ilusão, Necromancia ou Transmutação, todas detalhadas ao final da descrição desta classe.</p>
+                    <p>Sua escolha lhe confere características no 2º, 6º, 10º e 14º níveis.</p>
+
+                    <h4>Aumento no Valor de Atributo</h4>
+                    <p>Ao alcançar o 4º nível e novamente no 8º, 12º, 16º e 19º níveis, você pode aumentar em 2 o valor de um atributo, à sua escolha, ou pode aumentar em 1 o valor de dois atributos. Como sempre, não é possível aumentar o valor de um atributo acima de 20 usando esta característica.</p>
+
+                    <h4>Maestria de Magias</h4>
+                    <p>No 18º nível, você alcança domínio suficiente sobre determinadas magias a ponto de poder conjurá-las à vontade. Escolha uma magia de 1º e uma de 2º círculo que estejam no seu grimório. Quando as tiver preparadas, poderá conjurá-las em seu círculo mais baixo sem gastar nenhum espaço de magia. Se quiser fazê-lo em círculos mais altos, precisa gastar um espaço de magia, como de costume.</p>
+                    <p>Ao passar 8 horas estudando, você pode trocar uma ou ambas as magias que escolheu por magias diferentes do mesmo círculo.</p>
+
+                    <h4>Assinatura Mágica</h4>
+                    <p>Ao alcançar o 20º nível, você ganha o domínio de mais duas magias poderosas, que podem ser conjuradas com pouco esforço. Escolha duas magias de mago de 3º círculo em seu grimório como suas assinaturas mágicas. Essas magias estão sempre preparadas, não contam para o seu número de magias preparadas e, no 3º nível, podem ser conjuradas uma vez cada, sem o gasto de um espaço de magia, tornando a ficar disponíveis após um descanso curto ou longo.</p>
+                    <p>Caso queira conjurar essas magias em um círculo mais alto, precisará gastar um espaço de magia, como de costume.</p>
+
+                    <div style="margin-top: 22px;">
+                        <h2 class="subtitulo">Tradições Arcanas</h2>
+                        <p>O estudo da magia é antigo, remontando à época em que os primeiros mortais descobriram a energia mágica. Ela está firmemente estabelecida nos mundos de D&D, com várias tradições dedicadas ao seu complexo estudo.</p>
+                        <p>As tradições arcanas mais comuns no multiverso giram em torno das escolas de magia. Através dos tempos, os magos têm catalogado milhares de magias, agrupando-as em oito categorias denominadas escolas, conforme descrito no capítulo 10. Em alguns lugares, essas tradições assumem a forma de escolas, no sentido literal da palavra - um mago pode estudar na Escola de Ilusão, enquanto outros estudam do outro lado da cidade na Escola de Encantamento. Em outras localidades, as escolas são mais como departamentos acadêmicos, como faculdades rivais competindo por alunos e financiamento. Até mesmo magos que treinam aprendizes na solidão de suas próprias torres usam a divisão das magias em escolas como um dispositivo de ensino, uma vez que as magias de cada escola exigirem o domínio de técnicas diferentes.</p>
+                    </div>
+
+                    <div style="margin-top: 22px;">
+                        <h3 class="subtitulo">Escola de Abjuração</h3>
+                        <p>A Escola de Abjuração enfatiza magias que bloqueiam, banem ou protegem. Os detratores desta escola acusam-na de se concentrar na contradição e negação, ao invés da afirmação. Mas você entende, porém, que neutralizar um efeito nocivo, proteger os fracos, e banir influências malignas é qualquer coisa exceto um vazio filosófico. É uma vocação que causa orgulho e merece ser respeitada.</p>
+                        <p>Chamados de abjuradores, os membros desta escola são procurados quando espíritos malignos precisam ser exorcizados, locais importantes precisam ser guardados contra espionagem mágica, e portais para outros planos de existência precisam ser fechados.</p>
+                    </div>
+
+                    <h4>Versado em Abjuração</h4>
+                    <p>Começando quando você escolhe esta escola no 2º nível, o ouro e o tempo necessários para copiar uma magia de abjura-ção em seu livro de magias são reduzidos pela metade.</p>
+
+                    <h4>Proteção Arcana</h4>
+                    <p>A partir do 2º nível, você pode tecer a magia ao seu redor como uma forma de proteção. Ao conjurar uma magia de abjuração de 1º círculo ou superior, ao mesmo tempo você pode usar um fio dessa magia para criar uma proteção, que dura até o final do seu próximo descanso longo. Essa proteção tem pontos de vida máximos iguais ao dobro do seu nível de mago + seu modificador de Inteligência. Todo dano sofrido por você passa a ser sofrido pela proteção. Quando os pontos de vida da proteção forem reduzidos a 0, você sofrerá qualquer dano excedente.</p>
+                    <p>Enquanto a proteção estiver sem pontos de vida, ela não o protegerá, mas continuará ativa. Sempre que você conjura uma magia de abjuração de 1º círculo ou superior, a proteção recupera um número de pontos de vida igual ao dobro do círculo da magia.</p>
+                    <p>Uma vez usada esta característica, você só pode voltar a usá-la após um descanso longo.</p>
+
+                    <h4>Proteção Projetada</h4>
+                    <p>A partir do 6º nível, quando uma criatura à sua vista e no máximo a 9 metros de distância sofrer dano, você pode usar a sua reação para fazer com que sua Proteção Arcana absorva esse dano. Se os pontos de vida da proteção forem reduzidos a 0, a criatura protegida sofrerá qualquer dano excedente.</p>
+
+                    <h4>Abjuração Aprimorada</h4>
+                    <p>A partir do 10º nível, você deve adicionar o seu bônus de proficiência ao conjurar uma magia de abjuração que necessite de um teste de atributo (como <a href="/magias.php?nome=contramagia" class="magia-hover magicas-tooltip" id="contramagia" title="Carregando...">contramagia</a> e <a href="/magias.php?nome=dissipar-magia" class="magia-hover magicas-tooltip" id="dissipar-magia" title="Carregando...">dissipar magia</a>).</p>
+
+                    <h4>Resistência à Magia</h4>
+                    <p>A partir do 14º nível, você tem vantagem em salvaguardas contra magias.</p>
+                    <p>Além disso, você tem resistência contra dano provocado por magias.</p>
+                </div>
+
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">Escola de Adivinhação</h3>
+                    <p>O conselho de um adivinho é buscado tanto pela realeza quanto pelos plebeus, pois todos procuram uma compreensão mais clara do passado, do presente e do futuro. Como adivinho, você se esforça para separar os véus do espaço, do tempo e da consciência para poder enxergar mais claramente. Você trabalha para dominar magias de discernimento, visão remota, conhecimento sobrenatural e previsão.</p>
+
+                    <h4>Versado em Adivinhação</h4>
+                    <p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você precisa gastar para copiar uma magia de adivinhação em seu livro de magias são reduzidos pela metade.</p>
+
+                    <h4>Prodígio</h4>
+                    <p>Ao escolher esta escola no 2º nível, vislumbres do futuro começam a pressionar sua consciência. Ao terminar um descanso longo, jogue 2d20 e anote os resultados. Você pode substituir qualquer jogada de ataque, teste de atributo ou salvaguarda feitos por você ou por uma criatura à sua vista por um desses números. Só é possível fazer isso antes da jogada. Apenas uma jogada pode ser substituída dessa maneira a cada turno.</p>
+                    <p>Cada jogada presciente pode ser utilizada uma única vez. Após um descanso longo, perde-se qualquer jogada presciente não utilizada.</p>
+
+                    <h4>Perito em Adivinhação</h4>
+                    <p>A partir do 6º nível, conjurar magias de adivinhação torna-se tão fácil para você, que passa a lhe custar apenas uma fração dos seus esforços. Ao conjurar uma magia de adivinhação de 2º círculo ou superior usando um espaço de magia, você recupera um espaço de magia gasto. O espaço que você recupera deve ser de um círculo inferior ao da magia conjurada e abaixo do 5º círculo.</p>
+
+                    <h4>O Terceiro Olho</h4>
+                    <p>A partir do 10º nível, você pode usar sua ação para aumentar seus poderes de percepção. Ao fazê-lo, escolha um dos seguintes benefícios, o qual durará até você ficar incapacitado ou completar um descanso curto ou longo. Só é possível usar esta característica novamente após um descanso longo.</p>
+                    <p><b>Visão no Escuro.</b> Você ganha visão no escuro a uma distância de até 18 metros, conforme descrito no capítulo 8, "Aventurando-se".</p>
+                    <p><b>Visão Etérea.</b> Você pode enxergar no Plano Etéreo a até 18 metros de distância.</p>
+                    <p><b>Compreensão Superior.</b> Você pode ler qualquer idioma.</p>
+                    <p><b>Ver o Invisível.</b> Você pode ver criaturas e objetos <a href="/condicoes.php?nome=invisivel" class="condicao-hover condicoes-tooltip">invisíveis</a> a até 3 metros de distância, que estejam dentro da sua linha de visão.</p>
+
+                    <h4>Prodígio Maior</h4>
+                    <p>A partir do 14º nível, as visões em seus sonhos se intensificam, pintando em sua mente uma imagem mais precisa do que está por vir. Passe a jogar 3d20 prescientes para sua característica Prodígio, ao invés de dois.</p>
+                </div>
+
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">Escola de Encantamento</h3>
+                    <p>Como membro da Escola de Encantamento, você aperfeiçoou a sua capacidade de fascinar e enganar magicamente. Alguns encantadores são pacificadores que enfeitiçam os mais violentos para que baixem as armas, e encantam os cruéis para que demonstrem misericórdia. Outros são tiranos que acorrentam magicamente os relutantes aos seus pés. A maioria dos encantadores fica em algum lugar entre os dois.</p>
+
+                    <h4>Versado em Encantamento</h4>
+                    <p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você precisa gastar para copiar uma magia de encantamento em seu livro de magias são reduzidos pela metade.</p>
+
+                    <h4>Olhar Hipnótico</h4>
+                    <p>Ao escolher esta escola no 2º nível, as suas palavras suaves e o seu olhar encantador podem cativar magicamente outra criatura. Ao fazê-lo, escolha uma criatura à sua vista e que esteja a no máximo 9 metros de você. Se ela puder vê-lo ou ouvi-lo, ela precisa ser bem-sucedida em uma salvaguarda de Sabedoria contra a CD para evitar suas magias de mago, ou ficará enfeitiçada por você até o final do seu próximo turno. O deslocamento da criatura enfeitiçada cai para 0, ela fica incapacitada e visivelmente aturdida.</p>
+                    <p>Você pode usar suas ações dos turnos subsequentes para manter este efeito, estendendo a duração dele até o fim do seu próximo turno. No entanto, o efeito se encerra caso a criatura não possa ouvi-lo, sofra dano ou se distancie mais de 1,5 metro de você.</p>
+                    <p>Quando o efeito termina, ou caso a criatura seja bem-sucedida na salvaguarda inicial contra este efeito, você só pode voltar a usá-lo nesse alvo após um descanso longo.</p>
+
+                    <h4>Encantamento Instintivo</h4>
+                    <p>A partir do 6º nível, quando uma criatura, à sua vista e no máximo a 9 metros de distância, o ataca, você pode usar a sua reação para desviar o ataque para outra criatura, contanto que esta esteja ao alcance do ataque. O atacante deve fazer uma salvaguarda de Sabedoria contra a CD para evitar sua magia de mago. No caso de falha, ele deve atacar a criatura mais próxima, excluindo você e ele próprio. Caso haja várias criaturas mais próximas, ele deve escolher uma como alvo. Em caso de sucesso, você só pode voltar a usar esta característica no atacante após um descanso longo.</p>
+                    <p>Você deve usar esta característica antes de saber se o ataque foi ou não bem-sucedido. Criaturas que não possam ser enfeitiçadas são imunes a este efeito.</p>
+
+                    <h4>Duplicar Encantamento</h4>
+                    <p>A partir do 10º nível, ao conjurar uma magia de encantamento de 1º círculo ou superior, cujo alvo seja uma única criatura, você pode escolher uma segunda criatura alvo.</p>
+
+                    <h4>Alterar Memórias</h4>
+                    <p>No 14º nível você ganha a habilidade de fazer com que uma criatura não perceba sua influência mágica sobre ela. Ao conjurar uma magia de encantamento para enfeitiçar uma ou mais criaturas, você pode alterar a percepção delas, de modo que não notem o feitiço.</p>
+                    <p>Adicionalmente, logo antes de a magia expirar, você pode usar sua ação para tentar fazer com que a criatura esqueça parte do tempo em que esteve enfeitiçada. Ela deve ser bem-sucedida em uma salvaguarda de Inteligência contra o CD para evitar magias de mago, ou perderá a memória relativa a um período equivalente a 1 + seu modificador de Carisma (mínimo de 1). Você pode fazer uma criatura esquecer um período menor, que, no entanto, não pode exceder a duração da magia conjurada.</p>
+                </div>
+
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">Escola de Evocação</h3>
+                    <p>Evocadores concentram seu estudo mágico na criação de efeitos elementais poderosos, como frio mordaz, chamas cauterizantes, trovões estrondosos, relâmpagos crepitantes e ácido ardente. Alguns encontram emprego em forças militares, servindo como artilharia para explodir exércitos inimigos de longe. Há os que empregam seus poderes espetaculares na proteção dos mais fracos, enquanto outros buscam cada vez mais poder como bandidos, aventureiros ou aspirantes a ditadores.</p>
+
+                    <h4>Versado em Evocação</h4>
+                    <p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você deve gasta para copiar uma magia de evocação em seu livro de magias passam a serem reduzidos pela metade.</p>
+
+                    <h4>Esculpir Magias</h4>
+                    <p>Começando no 2º nível, você pode criar bolsões de relativa segurança dentro dos efeitos de suas magias de evocação. Ao conjurar uma magia de evocação que afete outras criaturas em seu raio de visão, você pode escolher um número de criaturas igual a 1 + o círculo da magia para serem automaticamente bem-sucedidas nas suas salvaguardas contra a magia e, caso normalmente recebessem metade do dano se bem-sucedidas, não receberem nenhum dano.</p>
+
+                    <h4>Truque Potente</h4>
+                    <p>A partir do 6º nível, o dano dos seus truques afeta criaturas mesmo que elas possam evitá-lo. Quando uma criatura é bem-sucedida em uma salvaguarda contra um truque seu, ela sofre metade do dano (se houver), mas não sofre nenhum dos efeitos adicionais.</p>
+
+                    <h4>Evocação Potencializada</h4>
+                    <p>Começando no 10º nível, você pode adicionar seu modificador de Inteligência a uma jogada de dano de qualquer magia de evocação que conjurar.</p>
+
+                    <h4>Sobrecarga</h4>
+                    <p>A partir do 14º nível, você pode aumentar o poder de suas magias mais simples. Ao conjurar uma magia de mago de 1º ao 5º círculo que cause dano, você pode causar dano máximo.</p>
+                    <p>Ao fazê-lo pela primeira vez, você não sofre nenhum efeito adverso. Se usar esta característica novamente antes de um descanso longo, sofrerá 2d12 pontos de dano necrótico para cada círculo da magia, imediatamente após conjurá-la. Cada vez que você voltar a usar esta característica antes de um descanso longo, o dano necrótico por círculo da magia aumenta em 1d12. Esse dano ignora resistência e imunidade.</p>
+                </div>
+
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">Escola de Ilusão</h3>
+                    <p>Você concentra seus estudos na magia que deslumbra os sentidos, confunde a mente e engana até as pessoas mais sábias. Sua magia é sutil, mas as ilusões elaboradas por sua mente aguçada fazem o irreal parecer verdade. Alguns ilusionistas - incluindo muitos magos gnomos - são brincalhões bem-intencionados que usam seus poderes para entreter. Outros são mestres da mentira mais sinistros, usando suas ilusões para assustar e enganar, em busca de ganhos pessoais.</p>
+
+                    <h4>Versado em Ilusão</h4>
+                    <p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você deve gastar para copiar uma magia de evocação em seu livro de magias passam a ser reduzidos pela metade.</p>
+
+                    <h4>Ilusão Menor Aprimorada</h4>
+                    <p>Ao escolher esta escola no 2º nível, você aprende o truque ilusão menor. Se você já o conhece, aprende em seu lugar um truque de mago diferente, à sua escolha. Este truque não conta para a sua lista de truques conhecidos.</p>
+                    <p>Ao conjurar ilusão menor, você pode criar ambos, um som e uma imagem, com uma única conjuração.</p>
+
+                    <h4>Ilusões Maleáveis</h4>
+                    <p>A partir do 6º nível, ao conjurar uma magia de ilusão que tenha duração de 1 minuto ou mais, você pode usar sua ação para mudar a natureza dessa ilusão (porém respeitando os parâmetros que a magia estabelece para ela), contanto que possa vê-la.</p>
+
+                    <h4>Autoimagem Ilusória</h4>
+                    <p>A partir do 10º nível, você pode criar uma duplicata ilusória de si mesmo como uma reação instantânea, quase instintiva ao perigo. Ao ser o alvo de uma jogada de ataque, você pode usar sua reação para colocar a duplicata ilusória entre você e o ataque, que atinge automaticamente a ilusão, dissipando-a, sem causar dano a você.</p>
+                    <p>Uma vez usada esta característica, você só pode utilizá-la novamente após completar um descanso curto ou longo.</p>
+
+                    <h4>Realidade Ilusória</h4>
+                    <p>No 14º nível, você aprende o segredo de tecer a magia das sombras em suas ilusões, e dar a elas um tom de quase realidade. Ao conjurar uma magia de ilusão de 1º círculo ou superior, você pode tornar real um objeto inanimado e não-mágico que seja parte da ilusão. Você pode fazê-lo em seu turno utilizando como uma ação bônus, enquanto a magia estiver em curso. O objeto permanece real por 1 minuto. Por exemplo, você pode criar uma ilusão de uma ponte sobre um abismo e, em seguida, torná-la real tempo suficiente para que seus aliados a atravessem.</p>
+                    <p>O objeto não pode causar dano ou ferir diretamente.</p>
+                </div>
+
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">Escola de Invocação</h3>
+                    <p>Membros da escola de invocação favorecem magias que produzem objetos e criaturas a partir do nada. Você pode invocar as ondulantes nuvens de um nevoeiro mortal, ou convocar criaturas de outro lugar para combater em seu nome. À medida que seu domínio cresce, você aprende magias de teleporte, que lhe permitem se deslocar instantaneamente através de enormes distâncias - até mesmo para outros planos de existência.</p>
+
+                    <h4>Versado em Invocação</h4>
+                    <p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você precisa gastar para copiar uma magia de invocação em seu livro de magias são reduzidos pela metade.</p>
+
+                    <h4>Invocação Menor</h4>
+                    <p>Ao escolher esta escola no 2º nível, você pode usar sua ação para invocar um objeto inanimado na sua mão ou no chão, em um espaço desocupado à sua vista e que esteja a até 3 metros de distância. Esse objeto não pode ocupar uma área maior do que 1 metro ou pesar mais do que 5 quilos, e sua forma deve ser a de qualquer objeto não-mágico que você já tenha visto. O objeto é visivelmente mágico, irradiando luz tênue a uma distância de até 1,5 metro.</p>
+                    <p>Ele desaparece caso você use esta característica novamente, sofra ou cause dano, ou após o transcorrer de uma hora.</p>
+
+                    <h4>Transposição Benigna</h4>
+                    <p>A partir do 6º nível, você pode usar sua ação para se teleportar para um espaço desocupado, à sua vista, que esteja a uma distância de até 9 metros. Esse espaço também pode estar ocupado por uma criatura Pequena ou Média. Se a criatura aceitar, vocês dois trocam de lugar via teleporte.</p>
+                    <p>Uma vez usada esta característica, ela só pode ser reutilizada após você completar um descanso longo, ou conjurar uma magia de 1º círculo ou maior pertencente à escola de invocação.</p>
+
+                    <h4>Invocação Focada</h4>
+                    <p>A partir do 10º nível, enquanto você se concentra em uma magia de invocação, sua concentração não pode ser quebrada como resultado de um dano sofrido.</p>
+
+                    <h4>Convocação Duradoura</h4>
+                    <p>A partir do 14º nível, qualquer criatura que você convoque ou crie com uma magia de invocação possui 30 pontos de vida temporários.</p>
+                </div>
+
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">Escola de Necromancia</h3>
+                    <p>A Escola de Necromancia explora as forças cósmicas da vida, da morte e da não-vida. Conforme concentra seus estudos nesta tradição, você aprende a manipular a energia que anima todos os seres vivos. À medida que progride, aprende a retirar a força vital de uma criatura enquanto a sua magia destrói o corpo dela, transformando essa energia vital em poder mágico que você pode manipular.</p>
+                    <p>A maioria das pessoas vê os necromantes como ameaçadores, ou até mesmo como vilões, devido a essa estreita associação com a morte. Mas nem todos os necromantes são maus, embora as forças que manipulem sejam consideradas tabu por muitas sociedades.</p>
+
+                    <h4>Versado em Necromancia</h4>
+                    <p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você precisa gastar para copiar uma magia de necromancia em seu livro de magias são reduzidos pela metade.</p>
+
+                    <h4>Colheita Maldita</h4>
+                    <p>No 2º nível, você ganha a capacidade de colher a energia vital de criaturas mortas por suas magias. Uma vez por turno, ao matar uma ou mais criaturas com uma magia de 1º círculo ou superior, você recupera uma quantidade de pontos de vida igual ao dobro do círculo da magia, ou três vezes o círculo, caso a magia pertença à escola de necromancia. Você não ganha esse benefício por matar constructos ou mortos-vivos.</p>
+
+                    <h4>Servos Mortos-Vivos</h4>
+                    <p>No 6º nível, você adiciona a magia animar mortos ao seu livro de magias, caso não a possua. Ao conjurar animar mortos, você pode selecionar como alvo um corpo ou pilha de ossos adicional, desse modo criando, respectivamente, outro zumbi ou esqueleto.</p>
+                    <p>Sempre que criar um morto-vivo usando uma magia necromântica, você ganha benefícios adicionais:</p>
+                    <ul>
+                        <li>Seu nível de mago é adicionado aos pontos de vida máximos da criatura.</li>
+                        <li>Seu bônus de proficiência é somado às jogadas de dano das armas da criatura.</li>
+                    </ul>
+
+                    <h4>Acostumado à Não-Vida</h4>
+                    <p>A partir do 10º nível, você tem resistência a dano necrótico e seus pontos de vida máximos não podem ser reduzidos. Você passou tanto tempo lidando com mortos-vivos e com as forças que os animam, que ficou acostumado a alguns dos piores efeitos da necromancia.</p>
+
+                    <h4>Comandar Mortos-Vivos</h4>
+                    <p>Começando no 14º nível, você pode usar magia para manter mortos-vivos sob seu controle, até mesmo aqueles criados por outros magos. Com uma ação, você pode escolher um morto-vivo à sua vista, e que esteja a até 18 metros de distância. Ele pode fazer uma salvaguarda de Carisma contra o CD para evitar suas magias. Caso ele seja bem-sucedido, fica imune a esta característica. Caso falhe, torna-se amigável a você e passa a obedecer aos seus comandos até o próximo uso desta característica.</p>
+                    <p>Mortos-vivos inteligentes são mais difíceis de controlar dessa forma. Se o alvo possui uma Inteligência igual a 8 ou maior, terá vantagem no teste de salvaguarda. Caso falhe e tenha uma inteligência igual a 12 ou maior, pode repetir o teste ao final de cada hora, até ser bem-sucedido e se libertar.</p>
+                </div>
+
+                <div style="margin-top: 22px;">
+                    <h3 class="subtitulo">Escola de Transmutação</h3>
+                    <p>Você é um estudante de magias que modificam a energia e a matéria. Para você, o mundo não é fixo, mas altamente mutável, e você se alegra em ser um agente de tal mudança. Você manipula a matéria-prima da criação, e aprende a alterar as formas físicas e as qualidades mentais. Sua magia lhe dá as ferramentas para se tornar um ferreiro da forja da realidade.</p>
+                    <p>Alguns transmutadores são reparadores e pregadores de peças, transformando pessoas em sapos e cobre em prata para a diversão e algum lucro. Outros seguem os estudos mágicos com seriedade mortal, buscando o poder dos deuses para criar e destruir mundos.</p>
+
+                    <h4>Versado em Transmutação</h4>
+                    <p>Ao escolher esta escola no 2º nível, o ouro e o tempo que você precisa gastar para copiar uma magia de transmutação em seu livro de magias são reduzidos pela metade.</p>
+
+                    <h4>Alquimia Menor</h4>
+                    <p>Ao escolher esta escola no 2º nível, você pode alterar temporariamente as propriedades físicas de um objeto não-mágico, alterando-o de uma substância para outra. Você realiza um procedimento alquímico especial em um objeto composto inteiramente de madeira, pedra (mas não pedras preciosas), ferro, cobre ou prata, transformando-o em outro material, dos citados. Para cada 10 minutos gastos nesse procedimento, você pode transformar até 0,03 metro cúbico (ou 28 litros) de material. Após 1 hora, ou ao perder sua concentração (como se estivesse se concentrando em uma magia), o material reverte para a substância original.</p>
+
+                    <h4>Pedra do Transmutador</h4>
+                    <p>A partir do 6º nível, você pode passar 8 horas criando uma pedra que armazena magia de transmutação, chamada pedra do transmutador. Você pode usá-la ou dá-la a outra criatura. O portador da pedra ganha um dos seguintes benefícios, escolhido por você ao criá-la:</p>
+                    <ul>
+                        <li>Visão no escuro até uma distância de 18 metros, como descrito no capítulo 8, "Aventurando-se".</li>
+                        <li>Um aumento de 3 metros no deslocamento enquanto a criatura estiver sem sobrecarga.</li>
+                        <li>Proficiência nas salvaguardas de Constituição.</li>
+                        <li>Resistência a dano ácido, elétrico, ígneo, gélido ou trovejante (a escolha é sua, sempre que optar por este benefício).</li>
+                    </ul>
+                    <p>Cada vez que conjurar uma magia de transmutação de 1º círculo ou superior, você pode mudar o efeito de sua pedra, caso ela esteja em sua posse.</p>
+                    <p>Caso crie uma nova pedra do transmutador, a anterior para de funcionar.</p>
+
+                    <h4>Metamorfo</h4>
+                    <p>No 10º nível, você adiciona a magia polimorfia ao seu livro de magias, se ainda não a possuir. Você se torna capaz de conjurar polimorfia sem gastar um espaço de magia. Nesse caso, a magia deve ser conjurada sobre você mesmo, e a nova forma deve ser de um animal de nível de desafio igual a 1 ou menor.</p>
+                    <p>Uma vez que, conjurada polimorfia dessa forma, você só poderá voltar a fazê-lo após completar um descanso curto ou longo, embora ainda seja possível conjurá-la normalmente usando um espaço de magia.</p>
+
+                    <h4>Mestre da Transmutação</h4>
+                    <p>A partir do 14º nível, você pode usar sua ação para consumir, em uma única descarga, toda a reserva de magia de transmutação armazenada na pedra do transmutador. Ao fazê-lo, escolha um dos efeitos descritos a seguir. Ao final, sua pedra do transmutador será destruída, e só poderá ser refeita após completar um descanso longo.</p>
+                    <p><b>Transformação Maior.</b> Você pode transmutar um objeto não-mágico - com volume de até 1,5 metro cúbico- em outro objeto não-mágico de tamanho e massa semelhantes, porém de valor igual ou menor. Você deve passar 10 minutos manuseando o objeto para transformá-lo.</p>
+                    <p><b>Panaceia.</b> Você remove qualquer maldição, doença ou veneno que esteja agindo sobre uma criatura tocada pela pedra do transmutador. A criatura também recupera todos os pontos de vida perdidos.</p>
+                    <p><b>Restaurar Vida.</b> Você conjura a magia reviver os mortos sobre uma criatura, ao tocá-la com a pedra do transmutador. Não é preciso gastar nenhum espaço de magia, tampouco é preciso que você essa magia conste em seu grimório.</p>
+                    <p><b>Restaurar Juventude.</b> Quando uma criatura aceita ser tocada pela pedra do transmutador, sua idade aparente é reduzida em 3d10 anos, até a idade mínima de 13 anos. Este efeito não aumenta a expectativa de vida da criatura.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-include="footer"></div>
