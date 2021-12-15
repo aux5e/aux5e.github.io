@@ -10,9 +10,7 @@ $(function () {
 /** ADD CLASS "active" ON MENU LINK */
 $(document).ready(function () {
     $(function () {
-        var current = "/";
-        current += pageName;
-        curent += ".html";
+        var current = location.pathname;
         $('#nav-menu .nav-item a').each(function () {
             var $this = $(this);
             // if the current path is like this link, make it active
