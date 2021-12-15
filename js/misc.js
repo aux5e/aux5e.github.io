@@ -8,16 +8,12 @@ $(function () {
 });
 
 /** ADD CLASS "active" ON MENU LINK */
-$(document).ready(function () {
-    $(function () {
-        var current = location.pathname;
-        $('#nav-menu .nav-item a').each(function () {
-            var $this = $(this);
-            // if the current path is like this link, make it active
-            if ($this.attr('href').indexOf(current) !== -1) {
-                $this.addClass('active');
-            }
-        })
+$(function ($) {
+    var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+    $('#nav-menu .nav-item a').each(function () {
+        if (this.href === path) {
+            $(this).addClass('active');
+        }
     });
 });
 
