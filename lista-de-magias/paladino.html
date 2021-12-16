@@ -1,213 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php
 
-$conjuracao = true;
-$popover = true;
-$getObj = htmlspecialchars($_GET["nome"]);
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="maximum-scale=1.0, initial-scale=1.0, width=device-width" name="viewport" />
+    <link rel="icon" href="/imagens/favicon.png" />
+    <script>
+        var pageName = "lista-de-magias-bardo";
+        var pageTitle = "Paladino - Lista de Magias";
+        var pageGroup = "listasMagias";
 
-if ($conjuracao == true) {
-	$jsonUrl = file_get_contents('https://5esrd.azurewebsites.net/data/magias-noescape.json');
-	$magiasJson = json_decode($jsonUrl,true);
-}
-
-$pageName = 'lista-de-magias-paladino';
-$pageTitle = 'Paladino - Lista de Magias';
-$pageGroup = 'listasMagias';
-
-/** Função para retirar os acentos e letras maisculas dos nomes das magias */
-
-function remove_accents($string) {
-    if ( !preg_match('/[:\x80-\xff]/', $string) )
-        return $string;
-
-    $chars = array(
-    // Decompositions for Latin-1 Supplement
-    chr(195).chr(128) => 'a', chr(195).chr(129) => 'a',
-    chr(195).chr(130) => 'a', chr(195).chr(131) => 'a',
-    chr(195).chr(132) => 'a', chr(195).chr(133) => 'a',
-    chr(195).chr(135) => 'c', chr(195).chr(136) => 'e',
-    chr(195).chr(137) => 'e', chr(195).chr(138) => 'e',
-    chr(195).chr(139) => 'e', chr(195).chr(140) => 'i',
-    chr(195).chr(141) => 'i', chr(195).chr(142) => 'i',
-    chr(195).chr(143) => 'i', chr(195).chr(145) => 'n',
-    chr(195).chr(146) => 'o', chr(195).chr(147) => 'o',
-    chr(195).chr(148) => 'o', chr(195).chr(149) => 'o',
-    chr(195).chr(150) => 'o', chr(195).chr(153) => 'u',
-    chr(195).chr(154) => 'u', chr(195).chr(155) => 'u',
-    chr(195).chr(156) => 'u', chr(195).chr(157) => 'y',
-    chr(195).chr(159) => 's', chr(195).chr(160) => 'a',
-    chr(195).chr(161) => 'a', chr(195).chr(162) => 'a',
-    chr(195).chr(163) => 'a', chr(195).chr(164) => 'a',
-    chr(195).chr(165) => 'a', chr(195).chr(167) => 'c',
-    chr(195).chr(168) => 'e', chr(195).chr(169) => 'e',
-    chr(195).chr(170) => 'e', chr(195).chr(171) => 'e',
-    chr(195).chr(172) => 'i', chr(195).chr(173) => 'i',
-    chr(195).chr(174) => 'i', chr(195).chr(175) => 'i',
-    chr(195).chr(177) => 'n', chr(195).chr(178) => 'o',
-    chr(195).chr(179) => 'o', chr(195).chr(180) => 'o',
-    chr(195).chr(181) => 'o', chr(195).chr(182) => 'o',
-    chr(195).chr(182) => 'o', chr(195).chr(185) => 'u',
-    chr(195).chr(186) => 'u', chr(195).chr(187) => 'u',
-    chr(195).chr(188) => 'u', chr(195).chr(189) => 'y',
-    chr(195).chr(191) => 'y', chr(58) => ''
-    );
-
-    $string = strtr($string, $chars);
-
-    return $string;
-}
-
-?>
-
-<?php include('/home/site/wwwroot/partial/head.php'); ?>
+        document.write("<title>" + pageTitle + " - Aux.5e</title>");
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.3/sc-2.0.5/datatables.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/misc.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.11.3/sc-2.0.5/datatables.min.js"></script>
+</head>
 
 <body>
+    <div data-include="header"></div>
 
-<?php include('/home/site/wwwroot/partial/header.php'); ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://aux5e.github.io/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/lista-de-magias.html">Lista de Magias</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Paladino</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
 
-<div class="container">
-	<div class="row">
-		<div class="col-xl">
-			<nav aria-label="breadcrumb">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="https://5esrd.azurewebsites.net/">Home</a></li>
-					<li class="breadcrumb-item"><a href="javascript:history.back()">Lista de Magias</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Paladino</li>
-				</ol>
-			</nav>
-		</div>
-	</div>
-</div>
+    <div class="container" style="padding-bottom: 40px">
+        <div class="main-filter-container">
+            <div class="main-filter">
+                <ul class="main-list">
+                    <li class="item all-items class all-classes">
+                        <div onclick="window.location='/lista-de-magias.html'">
+                            <img src="/imagens/icon-magias-todos.png" class="img-fluid" />
+                            <span>Todas</span>
+                        </div>
+                    </li>
+                    <li class="item all-items class all-classes">
+                        <div onclick="window.location='/lista-de-magias/bardo.html'">
+                            <img src="/imagens/icon-magias-bardo2.png" class="img-fluid" />
+                            <span>Bardo</span>
+                        </div>
+                    </li>
+                    <li class="item all-items class all-classe">
+                        <div onclick="window.location='/lista-de-magias/bruxo.html'">
+                            <img src="/imagens/icon-magias-bruxo.png" class="img-fluid" />
+                            <span>Bruxo</span>
+                        </div>
+                    </li>
+                    <li class="item all-items class all-classes">
+                        <div onclick="window.location='/lista-de-magias/clerigo.html'">
+                            <img src="/imagens/icon-magias-clerigo.png" class="img-fluid" />
+                            <span>Clérigo</span>
+                        </div>
+                    </li>
+                    <li class="item all-items class all-classes">
+                        <div onclick="window.location='/lista-de-magias/druida.html'">
+                            <img src="/imagens/icon-magias-druida2.png" class="img-fluid" />
+                            <span>Druida</span>
+                        </div>
+                    </li>
+                    <li class="item all-items class all-classes">
+                        <div onclick="window.location='/lista-de-magias/feiticeiro.html'">
+                            <img src="/imagens/icon-magias-feiticeiro.png" class="img-fluid" />
+                            <span>Feiticeiro</span>
+                        </div>
+                    </li>
+                    <li class="item all-items class all-classes">
+                        <div onclick="window.location='/lista-de-magias/guardiao.html'">
+                            <img src="/imagens/icon-magias-guardiao.png" class="img-fluid" />
+                            <span>Guardião</span>
+                        </div>
+                    </li>
+                    <li class="item all-items class all-classes">
+                        <div onclick="window.location='/lista-de-magias/ladino.html'">
+                            <img src="/imagens/icon-magias-ladino.png" class="img-fluid" />
+                            <span>Ladino</span>
+                        </div>
+                    </li>
+                    <li class="item all-items class all-classes">
+                        <div onclick="window.location='/lista-de-magias/mago.html'">
+                            <img src="/imagens/icon-magias-mago.png" class="img-fluid" />
+                            <span>Mago</span>
+                        </div>
+                    </li>
+                    <li class="item all-items class all-classes spellListActive">
+                        <div onclick="window.location='/lista-de-magias/paladino.html'">
+                            <img src="/imagens/icon-magias-paladino.png" class="img-fluid" />
+                            <span>Paladino</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<div class="container" style="padding-bottom: 40px;">
-	<div class="main-filter-container">
-		<div class="main-filter">
-			<ul class="main-list">
-				<li class="item all-items class all-classes">
-					<div onclick="window.location='/lista-de-magias.php'">
-						<img src="https://5esrd.azurewebsites.net/imagens/icon-magias-todos.png" class="img-fluid">
-						<span>Todas</span>
-					</div>
-				</li>
-				<li class="item all-items class all-classes">
-					<div onclick="window.location='/lista-de-magias/bardo.php'">
-					<img src="https://5esrd.azurewebsites.net/imagens/icon-magias-bardo2.png" class="img-fluid">
-					<span>Bardo</span>
-					</div>
-				</li>
-				<li class="item all-items class all-classes">
-					<div onclick="window.location='/lista-de-magias/bruxo.php'">
-					<img src="https://5esrd.azurewebsites.net/imagens/icon-magias-bruxo.png" class="img-fluid">
-					<span>Bruxo</span>
-					</div>
-				</li>
-				<li class="item all-items class all-classes">
-					<div onclick="window.location='/lista-de-magias/clerigo.php'">
-					<img src="https://5esrd.azurewebsites.net/imagens/icon-magias-clerigo.png" class="img-fluid">
-					<span>Clérigo</span>
-					</div>
-				</li>
-				<li class="item all-items class all-classes">
-					<div onclick="window.location='/lista-de-magias/druida.php'">
-					<img src="https://5esrd.azurewebsites.net/imagens/icon-magias-druida2.png" class="img-fluid">
-					<span>Druida</span>
-					</div>
-				</li>
-				<li class="item all-items class all-classes">
-					<div onclick="window.location='/lista-de-magias/feiticeiro.php'">
-					<img src="https://5esrd.azurewebsites.net/imagens/icon-magias-feiticeiro.png" class="img-fluid">
-					<span>Feiticeiro</span>
-					</div>
-				</li>
-				<li class="item all-items class all-classes">
-					<div onclick="window.location='/lista-de-magias/guardiao.php'">
-					<img src="https://5esrd.azurewebsites.net/imagens/icon-magias-guardiao.png" class="img-fluid">
-					<span>Guardião</span>
-					</div>
-				</li>
-				<li class="item all-items class all-classes">
-					<div onclick="window.location='/lista-de-magias/ladino.php'">
-					<img src="https://5esrd.azurewebsites.net/imagens/icon-magias-ladino.png" class="img-fluid">
-					<span>Ladino</span>
-					</div>
-				</li>
-				<li class="item all-items class all-classes">
-					<div onclick="window.location='/lista-de-magias/mago.php'">
-					<img src="https://5esrd.azurewebsites.net/imagens/icon-magias-mago.png" class="img-fluid">
-					<span>Mago</span>
-					</div>
-				</li>
-				<li class="item all-items class all-classes spellListActive">
-					<div onclick="window.location='/lista-de-magias/paladino.php'">
-					<img src="https://5esrd.azurewebsites.net/imagens/icon-magias-paladino.png" class="img-fluid">
-					<span>Paladino</span>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
+    <div id="lista-de-magias" class="container">
+        <h1 class="titulo-detalhes" style="margin-bottom: 22px;">Lista de Magias</h1>
 
-<div id="lista-de-magias" class="container">
-	<h1 class="titulo-detalhes" style="margin-bottom: 22px;">Lista de Magias</h1>
+        <table id="table-lista-de-magias" class="display table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center align-middle" style="max-width: 60px;">Círculo</th>
+                    <th scope="col" class="align-middle" style="min-width: 160px;">Nome</th>
+                    <th scope="col" class="align-middle">Em Inglês</th>
+                    <th scope="col" class="align-middle">Duração</th>
+                    <th scope="col" class="align-middle">Alcance</th>
+                    <th scope="col" class="text-center align-middle" style="max-width: 60px;">Fonte</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-lista-de-magias">
+            </tbody>
+        </table>
 
-	<?php
-
-		$filterMagia = array_filter($magiasJson["data"], function($e) {
-			return $e['paladino'] == true;
-		});
-		if (count($filterMagia)) {
-			echo '<table id="table-lista-de-magias" class="display table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">';
-			echo '<thead>';
-			echo '<tr>';
-			echo '<th scope="col" class="align-middle">Círculo</th>';
-			echo '<th scope="col" class="align-middle">Nome</th>';
-			echo '<th scope="col" class="align-middle" style="display:none;">Em Inglês</th>';
-			echo '<th scope="col" class="align-middle">Duração</th>';
-			echo '<th scope="col" class="align-middle">Alcance</th>';
-			echo '<th scope="col" class="align-middle">Tempo de Conjuração</th>';
-			echo '</tr>';
-			echo '</thead>';
-			echo '<tbody>';
-
-			foreach ($filterMagia as $entry) {
-				echo '<tr ';
-				echo 'onclick="window.location=\'';
-				$stepOne = $entry["nome"];
-				$stepTwo = preg_replace('#[ /]+#', "-", $stepOne);
-				$stepThree = remove_accents($stepTwo);
-				echo 'https://5esrd.azurewebsites.net/magias.php?nome='.strtolower($stepThree);
-				echo '\';">';
-				echo '<th scope="row" class="text-center align-middle magiaCirculoCol">';
-				if ($entry["circulo"] == 0) {echo 'Truque';} else echo $entry["circulo"].'º';
-				echo '</th>';
-
-				echo '<td>';
-				echo '<div class="magiaNomeRow1">'.$entry["nome"];
-				if ($entry["concentracao"] == true) {echo ' <span class="concentSpan"></span></div>';}
-				echo '<div class="magiaNomeRow2">';
-				echo $entry["escola"].' • '.$entry["componentes"];
-				echo '</div>';
-				echo '</td>';
-
-				echo '<td class="align-middle magiaInglesCol" style="display:none;">'.$entry["nome_ingles"].'</td>';
-
-				echo '<td class="align-middle magiaOutrasCol">'.$entry["duracao"].'</td>';
-
-				echo '<td class="align-middle magiaOutrasCol">'.$entry["alcance"].'</td>';
-
-				echo '<td class="align-middle magiaOutrasCol">'.mb_strimwidth($entry["tempo_conjuracao"], 0, 14, " (...)").'</td>';
-				
-				echo '</tr>';
-			}
-
-			echo '</tbody>';
-			echo '</table>';
-		}
-	?>
-
-</div>
+    </div>
 
 
-<?php include('/home/site/wwwroot/partial/footer.php'); ?>
+    <script type="text/javascript" src="/js/lista-de-magias-classes.js"></script>
+    <div data-include="footer"></div>
