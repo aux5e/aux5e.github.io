@@ -302,26 +302,36 @@ function remove_accents($string) {
     <script>
         async function loadIntoTable(url, table) {
             const tableBody = table.querySelector("tbody");
-            const response = await fetch(url);
-            const magias = await response.json();
+            // const response = await fetch(url);
+            // const magias = await response.json();
+            // const magiasArray = Object.keys(magias.data);
 
-            console.log(magias[data].length);
+            // console.log(magias);
+            // console.log(magiasArray);
+
+            $.getJSON(url, function(magias) {
+                console.log(magias);
+                const magiasArray = Object.values(magias.data);
+                const magiasLenght = Object.keys(magias.data);
+                console.log(magiasArray[0].nome);
+                console.log(magiasLenghtlenght);
+            });
 
             // Clear the table
             // tableBody.innerHTML = "";
 
             // Popular o corpo da tabela
-            var r = new Array(), j = -1;
-            for (var row = 0, size = magiasArray[data].length; row < size; row++) {
-                r[++j] = '<tr><td>';
-                r[++j] = magiasArray[data][row]["nome"];
-                r[++j] = '</td><td class="whatever1">';
-                r[++j] = magiasArray[data][row]["circulo"];
-                r[++j] = '</td><td class="whatever2">';
-                r[++j] = magiasArray[data][row]["escola"];
-                r[++j] = '</td></tr>';
-            }
-            $("#" + table + " " + tableBody).html(r.join(''));
+            // var r = new Array(), j = -1;
+            // for (var row = 0, size = magiasData.length; row < size; row++) {
+            //     r[++j] = '<tr><td>';
+            //     r[++j] = magiasArray[data][row]["nome"];
+            //     r[++j] = '</td><td class="whatever1">';
+            //     r[++j] = magiasArray[data][row]["circulo"];
+            //     r[++j] = '</td><td class="whatever2">';
+            //     r[++j] = magiasArray[data][row]["escola"];
+            //     r[++j] = '</td></tr>';
+            // }
+            // $("#" + table + " " + tableBody).html(r.join(''));
 
             // for (const magia of magias) {
             //     const rowElement = document.createElement("tr");
