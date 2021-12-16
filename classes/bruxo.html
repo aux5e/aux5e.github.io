@@ -14,65 +14,21 @@
 
         document.write("<title>" + pageTitle + " - Classes - Aux.5e</title>");
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/all.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-        integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ=="
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/misc.js" type="text/javascript"></script>
     <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
     <script src="/js/active-menu-link.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
     <script src="/js/active-menu-link.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('.magia-hover').tooltip({
-                track: true,
-                open: function (event, ui) {
-                    var userid = this.id;
-
-                    $.ajax({
-                        url: '/data/magias-popover.html',
-                        type: 'post',
-                        data: {
-                            userid: userid
-                        },
-                        success: function (response) {
-
-                            // Setting content option
-                            $("#" + userid).tooltip('option', 'content', response);
-
-                        }
-                    });
-                }
-            });
-
-            $('.magia-hover').mouseout(function () {
-                // re-initializing tooltip
-                $(this).attr('title', 'Carregando...');
-                $(this).tooltip();
-                $('.ui-helper-hidden-accessible').hide();
-                //$('.srd-tooltip').hide();
-            });
-
-
-        });
-    </script>
 </head>
 
 <body>
@@ -168,15 +124,9 @@
                         <h6 style="text-transform: uppercase;">Criação Rápida</h6>
                         <p>Você pode criar um bruxo rapidamente seguindo essas sugestões. Primeiro, Carisma deve ser seu
                             atributo de maior valor, seguido de Constituição. Em seguida, escolha o antecedente
-                            charlatão. Por fim, escolha os truques <a href="/magias.php?nome=raio-mistico"
-                                class="magia-hover magicas-tooltip" id="raio-mistico" title="Carregando...">raio
-                                místico</a> e <a href="/magias.php?nome=toque-necrotico"
-                                class="magia-hover magicas-tooltip" id="toque-necrotico" title="Carregando...">toque
-                                necrótico</a>, juntamente com as magias de 1º círculo <a
-                                href="/magias.php?nome=enfeiticar-pessoa" class="magia-hover magicas-tooltip"
-                                id="enfeiticar-pessoa" title="Carregando...">enfeitiçar pessoa</a> e <a
-                                href="/magias.php?nome=raio-de-bruxa" class="magia-hover magicas-tooltip"
-                                id="raio-de-bruxa" title="Carregando...">raio de bruxa</a>.</p>
+                            charlatão. Por fim, escolha os truques <a href="/magias.html?nome=raio-mistico" class="magia-hover magicas-tooltip" id="raio-mistico" title="Carregando...">raio
+                                místico</a> e <a href="/magias.html?nome=toque-necrotico" class="magia-hover magicas-tooltip" id="toque-necrotico" title="Carregando...">toque
+                                necrótico</a>, juntamente com as magias de 1º círculo <a href="/magias.html?nome=enfeiticar-pessoa" class="magia-hover magicas-tooltip" id="enfeiticar-pessoa" title="Carregando...">enfeitiçar pessoa</a> e <a href="/magias.html?nome=raio-de-bruxa" class="magia-hover magicas-tooltip" id="raio-de-bruxa" title="Carregando...">raio de bruxa</a>.</p>
                     </div>
                 </div>
                 <div style="margin-top: 22px;">
@@ -495,28 +445,24 @@
                         para tanto. Um pré-requisito de nível se refere ao seu nível nesta classe.</p>
 
                     <h5><b>Armadura de Sombras</b></h5>
-                    <p>Você pode conjurar <a href="/magias.php?nome=armadura-arcana" class="magia-hover magicas-tooltip"
-                            id="armadura-arcana" title="Carregando...">armadura arcana</a> em si mesmo à vontade, sem
+                    <p>Você pode conjurar <a href="/magias.html?nome=armadura-arcana" class="magia-hover magicas-tooltip" id="armadura-arcana" title="Carregando...">armadura arcana</a> em si mesmo à vontade, sem
                         gastar espaços de magia ou componentes materiais.</p>
 
                     <h5><b>Correntes de Cárceri</b></h5>
                     <p><b>Pré-requisito:</b> 15º nível, a característica Pacto da Corrente</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=imobilizar-monstro"
-                            class="magia-hover magicas-tooltip" id="imobilizar-monstro" title="Carregando...">imobilizar
+                    <p>Você pode conjurar <a href="/magias.html?nome=imobilizar-monstro" class="magia-hover magicas-tooltip" id="imobilizar-monstro" title="Carregando...">imobilizar
                             monstro</a> à vontade – mas apenas quando o alvo for um celestial, ínfero ou elemental - sem
                         gastar um espaço de magia ou componentes materiais. Você precisa terminar um descanso longo
                         antes de poder usar esta invocação na mesma criatura novamente.</p>
 
                     <h5><b>Encharcar a Mente</b></h5>
                     <p><b>Pré-requisito:</b> 5º nível</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=lentidao" class="magia-hover magicas-tooltip"
-                            id="lentidao" title="Carregando...">lentidão</a> uma vez usando um espaço de magia de bruxo.
+                    <p>Você pode conjurar <a href="/magias.html?nome=lentidao" class="magia-hover magicas-tooltip" id="lentidao" title="Carregando...">lentidão</a> uma vez usando um espaço de magia de bruxo.
                         Você só pode tornar a fazê-lo após um descanso longo.</p>
 
                     <h5><b>Escultor de Carne</b></h5>
                     <p><b>Pré-requisito:</b> 7º nível</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=polimorfia" class="magia-hover magicas-tooltip"
-                            id="polimorfia" title="Carregando...">polimorfia</a> uma vez usando um espaço de magia de
+                    <p>Você pode conjurar <a href="/magias.html?nome=polimorfia" class="magia-hover magicas-tooltip" id="polimorfia" title="Carregando...">polimorfia</a> uma vez usando um espaço de magia de
                         bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
 
                     <h5><b>Explosão Repulsiva</b></h5>
@@ -526,27 +472,23 @@
 
                     <h5><b>Explosão Agonizante</b></h5>
                     <p><b>Pré-requisito:</b> o truque raio místico</p>
-                    <p>Ao conjurar <a href="/magias.php?nome=raio-mistico" class="magia-hover magicas-tooltip"
-                            id="raio-mistico" title="Carregando...">raio místico</a>, adicione o seu modificador de
+                    <p>Ao conjurar <a href="/magias.html?nome=raio-mistico" class="magia-hover magicas-tooltip" id="raio-mistico" title="Carregando...">raio místico</a>, adicione o seu modificador de
                         Carisma ao dano causado por ela.</p>
 
                     <h5><b>Idioma Bestial</b></h5>
-                    <p>Você pode conjurar <a href="/magias.php?nome=falar-com-animais"
-                            class="magia-hover magicas-tooltip" id="falar-com-animais" title="Carregando...">falar com
+                    <p>Você pode conjurar <a href="/magias.html?nome=falar-com-animais" class="magia-hover magicas-tooltip" id="falar-com-animais" title="Carregando...">falar com
                             animais</a> à vontade, sem gastar um espaço de magia.</p>
 
                     <h5><b>Influência Enganadora</b></h5>
                     <p>Você ganha proficiência nas perícias Enganação e Persuasão.</p>
 
                     <h5><b>Ladrão dos Cinco Destinos</b></h5>
-                    <p>Você pode conjurar <a href="/magias.php?nome=perdicao" class="magia-hover magicas-tooltip"
-                            id="perdicao" title="Carregando...">perdição</a> uma vez usando um espaço de magia de bruxo.
+                    <p>Você pode conjurar <a href="/magias.html?nome=perdicao" class="magia-hover magicas-tooltip" id="perdicao" title="Carregando...">perdição</a> uma vez usando um espaço de magia de bruxo.
                         Você só pode tornar a fazê-lo após um descanso longo.</p>
 
                     <h5><b>Lamento das Sepulturas</b></h5>
                     <p><b>Pré-requisito:</b> 9º nível</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=falar-com-mortos"
-                            class="magia-hover magicas-tooltip" id="falar-com-mortos" title="Carregando...">falar com
+                    <p>Você pode conjurar <a href="/magias.html?nome=falar-com-mortos" class="magia-hover magicas-tooltip" id="falar-com-mortos" title="Carregando...">falar com
                             mortos</a> à vontade, sem gastar um espaço de magia.</p>
 
                     <h5><b>Lâmina Sedenta</b></h5>
@@ -556,8 +498,7 @@
 
                     <h5><b>Lança Mística</b></h5>
                     <p><b>Pré-requisito:</b> o truque raio místico</p>
-                    <p>Ao conjurar <a href="/magias.php?nome=raio-mistico" class="magia-hover magicas-tooltip"
-                            id="raio-mistico" title="Carregando...">raio místico</a>, o alcance desta magia passa a ser
+                    <p>Ao conjurar <a href="/magias.html?nome=raio-mistico" class="magia-hover magicas-tooltip" id="raio-mistico" title="Carregando...">raio místico</a>, o alcance desta magia passa a ser
                         de 90 metros.</p>
 
                     <h5><b>Livro dos Segredos Antigos</b></h5>
@@ -575,20 +516,17 @@
                         círculo da magia.</p>
 
                     <h5><b>Máscara das Muitas Faces</b></h5>
-                    <p>Você pode conjurar <a href="/magias.php?nome=disfarcar-se" class="magia-hover magicas-tooltip"
-                            id="disfarcar-se" title="Carregando...">disfarçar-se</a> à vontade, sem gastar um espaço de
+                    <p>Você pode conjurar <a href="/magias.html?nome=disfarcar-se" class="magia-hover magicas-tooltip" id="disfarcar-se" title="Carregando...">disfarçar-se</a> à vontade, sem gastar um espaço de
                         magia.</p>
 
                     <h5><b>Mestre das Infindáveis Formas</b></h5>
                     <p><b>Pré-requisito:</b> 15º nível</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=alterar-se" class="magia-hover magicas-tooltip"
-                            id="alterar-se" title="Carregando...">alterar-se</a> à vontade, sem gastar um espaço de
+                    <p>Você pode conjurar <a href="/magias.html?nome=alterar-se" class="magia-hover magicas-tooltip" id="alterar-se" title="Carregando...">alterar-se</a> à vontade, sem gastar um espaço de
                         magia.</p>
 
                     <h5><b>Lacaios do Caos</b></h5>
                     <p><b>Pré-requisito:</b> 9º nível</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=invocar-elemental"
-                            class="magia-hover magicas-tooltip" id="invocar-elemental" title="Carregando...">invocar
+                    <p>Você pode conjurar <a href="/magias.html?nome=invocar-elemental" class="magia-hover magicas-tooltip" id="invocar-elemental" title="Carregando...">invocar
                             elemental</a> uma vez usando um espaço de magia de bruxo. Você só pode tornar a fazê-lo após
                         um descanso longo.</p>
 
@@ -605,20 +543,17 @@
 
                     <h5><b>Passo Ascendente</b></h5>
                     <p><b>Pré-requisito:</b> 9º nível</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=levitacao" class="magia-hover magicas-tooltip"
-                            id="levitacao" title="Carregando...">levitação</a> em si mesmo à vontade, sem gastar um
+                    <p>Você pode conjurar <a href="/magias.html?nome=levitacao" class="magia-hover magicas-tooltip" id="levitacao" title="Carregando...">levitação</a> em si mesmo à vontade, sem gastar um
                         espaço de magia ou componentes materiais.</p>
 
                     <h5><b>Salto Sobrenatural</b></h5>
                     <p><b>Pré-requisito:</b> 9º nível</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=salto" class="magia-hover magicas-tooltip"
-                            id="salto" title="Carregando...">salto</a> em si mesmo à vontade, sem gastar um espaço de
+                    <p>Você pode conjurar <a href="/magias.html?nome=salto" class="magia-hover magicas-tooltip" id="salto" title="Carregando...">salto</a> em si mesmo à vontade, sem gastar um espaço de
                         magia ou componentes materiais.</p>
 
                     <h5><b>Sinal de Mau Agouro</b></h5>
                     <p><b>Pré-requisito:</b> 5º nível</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=rogar-maldicao" class="magia-hover magicas-tooltip"
-                            id="rogar-maldicao" title="Carregando...">rogar maldição</a> uma vez usando um espaço de
+                    <p>Você pode conjurar <a href="/magias.html?nome=rogar-maldicao" class="magia-hover magicas-tooltip" id="rogar-maldicao" title="Carregando...">rogar maldição</a> uma vez usando um espaço de
                         magia de bruxo. Você só pode tornar a fazê-lo após um descanso longo.</p>
 
                     <h5><b>Sorvedouro de Vida</b></h5>
@@ -628,8 +563,7 @@
 
                     <h5><b>Sussurros Sedutores</b></h5>
                     <p><b>Pré-requisito:</b> 7º nível</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=compulsao" class="magia-hover magicas-tooltip"
-                            id="compulsao" title="Carregando...">compulsão</a> uma vez usando um espaço de magia de
+                    <p>Você pode conjurar <a href="/magias.html?nome=compulsao" class="magia-hover magicas-tooltip" id="compulsao" title="Carregando...">compulsão</a> uma vez usando um espaço de magia de
                         bruxo. Você não pode fazer isso novamente até terminar um descanso longo.</p>
 
                     <h5><b>Uno com as Sombras</b></h5>
@@ -638,8 +572,7 @@
                         invisível, até se mover ou realizar uma ação ou reação.</p>
 
                     <h5><b>Vigor Ínfero</b></h5>
-                    <p>Você pode conjurar <a href="/magias.php?nome=vitalidade-vazia"
-                            class="magia-hover magicas-tooltip" id="vitalidade-vazia" title="Carregando...">vitalidade
+                    <p>Você pode conjurar <a href="/magias.html?nome=vitalidade-vazia" class="magia-hover magicas-tooltip" id="vitalidade-vazia" title="Carregando...">vitalidade
                             vazia</a> em si mesmo à vontade como uma magia de 1º círculo sem gastar um espaço de magia
                         ou componentes materiais.</p>
 
@@ -654,19 +587,16 @@
                         metros.</p>
 
                     <h5><b>Visão Mística</b></h5>
-                    <p>Você pode conjurar <a href="/magias.php?nome=detectar-magia" class="magia-hover magicas-tooltip"
-                            id="detectar-magia" title="Carregando...">detectar magia</a> à vontade, sem gastar um espaço
+                    <p>Você pode conjurar <a href="/magias.html?nome=detectar-magia" class="magia-hover magicas-tooltip" id="detectar-magia" title="Carregando...">detectar magia</a> à vontade, sem gastar um espaço
                         de magia.</p>
 
                     <h5><b>Visões Nebulosas</b></h5>
-                    <p>Você pode conjurar <a href="/magias.php?nome=imagem-silenciosa"
-                            class="magia-hover magicas-tooltip" id="imagem-silenciosa" title="Carregando...">imagem
+                    <p>Você pode conjurar <a href="/magias.html?nome=imagem-silenciosa" class="magia-hover magicas-tooltip" id="imagem-silenciosa" title="Carregando...">imagem
                             silenciosa</a> à vontade, sem gastar um espaço de magia ou componentes materiais.</p>
 
                     <h5><b>Visões dos Reinos Distantes</b></h5>
                     <p><b>Pré-requisito:</b> 15º nível</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=olho-arcano" class="magia-hover magicas-tooltip"
-                            id="olho-arcano" title="Carregando...">olho arcano</a> à vontade, sem gastar um espaço de
+                    <p>Você pode conjurar <a href="/magias.html?nome=olho-arcano" class="magia-hover magicas-tooltip" id="olho-arcano" title="Carregando...">olho arcano</a> à vontade, sem gastar um espaço de
                         magia.</p>
 
                     <h5><b>Voz do Mestre das Correntes</b></h5>
@@ -678,8 +608,7 @@
 
                     <h5><b>Vozes Perturbadoras</b></h5>
                     <p><b>Pré-requisito:</b> 7º nível</p>
-                    <p>Você pode conjurar <a href="/magias.php?nome=confusao" class="magia-hover magicas-tooltip"
-                            id="confusao" title="Carregando...">confusão</a> uma vez usando um espaço de magia de bruxo.
+                    <p>Você pode conjurar <a href="/magias.html?nome=confusao" class="magia-hover magicas-tooltip" id="confusao" title="Carregando...">confusão</a> uma vez usando um espaço de magia de bruxo.
                         Você só pode tornar a fazê-lo após um descanso longo.</p>
 
                     <h4>Dádiva do Pacto</h4>
@@ -687,8 +616,7 @@
                         ganha uma das seguintes características, à sua escolha.</p>
 
                     <h5><b>Pacto da Corrente</b></h5>
-                    <p>Você aprende a magia <a href="/magias.php?nome=convocar-familiar"
-                            class="magia-hover magicas-tooltip" id="convocar-familiar" title="Carregando...">convocar
+                    <p>Você aprende a magia <a href="/magias.html?nome=convocar-familiar" class="magia-hover magicas-tooltip" id="convocar-familiar" title="Carregando...">convocar
                             familiar</a> e pode conjurá-la como um ritual. A magia não conta para a sua lista de magias
                         conhecidas.</p>
                     <p>Ao realizar uma conjuração, você pode escolher uma das formas normais para o seu familiar ou uma
@@ -808,39 +736,23 @@
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row">1º</th>
-                                <td><a href="/magias.php?nome=fogo-das-fadas" class="magia-hover magicas-tooltip"
-                                        id="fogo-das-fadas" title="Carregando...">fogo das fadas</a>, <a
-                                        href="/magias.php?nome=sono" class="magia-hover magicas-tooltip" id="sono"
-                                        title="Carregando...">sono</a></td>
+                                <td><a href="/magias.html?nome=fogo-das-fadas" class="magia-hover magicas-tooltip" id="fogo-das-fadas" title="Carregando...">fogo das fadas</a>, <a href="/magias.html?nome=sono" class="magia-hover magicas-tooltip" id="sono" title="Carregando...">sono</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">2º</th>
-                                <td><a href="/magias.php?nome=acalmar-emocoes" class="magia-hover magicas-tooltip"
-                                        id="acalmar-emocoes" title="Carregando...">acalmar emoções</a>, <a
-                                        href="/magias.php?nome=forca-espectral" class="magia-hover magicas-tooltip"
-                                        id="forca-espectral" title="Carregando...">força espectral</a></td>
+                                <td><a href="/magias.html?nome=acalmar-emocoes" class="magia-hover magicas-tooltip" id="acalmar-emocoes" title="Carregando...">acalmar emoções</a>, <a href="/magias.html?nome=forca-espectral" class="magia-hover magicas-tooltip" id="forca-espectral" title="Carregando...">força espectral</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">3º</th>
-                                <td><a href="/magias.php?nome=crescimento-de-plantas"
-                                        class="magia-hover magicas-tooltip" id="crescimento-de-plantas"
-                                        title="Carregando...">crescimento de plantas</a>, <a
-                                        href="/magias.php?nome=piscar" class="magia-hover magicas-tooltip" id="piscar"
-                                        title="Carregando...">piscar</a></td>
+                                <td><a href="/magias.html?nome=crescimento-de-plantas" class="magia-hover magicas-tooltip" id="crescimento-de-plantas" title="Carregando...">crescimento de plantas</a>, <a href="/magias.html?nome=piscar" class="magia-hover magicas-tooltip" id="piscar" title="Carregando...">piscar</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">4º</th>
-                                <td><a href="/magias.php?nome=dominar-fera" class="magia-hover magicas-tooltip"
-                                        id="dominar-fera" title="Carregando...">dominar fera</a>, <a
-                                        href="/magias.php?nome=invisibilidade-maior" class="magia-hover magicas-tooltip"
-                                        id="invisibilidade-maior" title="Carregando...">invisibilidade maior</a></td>
+                                <td><a href="/magias.html?nome=dominar-fera" class="magia-hover magicas-tooltip" id="dominar-fera" title="Carregando...">dominar fera</a>, <a href="/magias.html?nome=invisibilidade-maior" class="magia-hover magicas-tooltip" id="invisibilidade-maior" title="Carregando...">invisibilidade maior</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">5º</th>
-                                <td><a href="/magias.php?nome=dominar-pessoa" class="magia-hover magicas-tooltip"
-                                        id="dominar-pessoa" title="Carregando...">dominar pessoa</a>, <a
-                                        href="/magias.php?nome=similaridade" class="magia-hover magicas-tooltip"
-                                        id="similaridade" title="Carregando...">similaridade</a></td>
+                                <td><a href="/magias.html?nome=dominar-pessoa" class="magia-hover magicas-tooltip" id="dominar-pessoa" title="Carregando...">dominar pessoa</a>, <a href="/magias.html?nome=similaridade" class="magia-hover magicas-tooltip" id="similaridade" title="Carregando...">similaridade</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -905,38 +817,23 @@
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row">1º</th>
-                                <td><a href="/magias.php?nome=comando" class="magia-hover magicas-tooltip" id="comando"
-                                        title="Carregando...">comando</a>, <a href="/magias.php?nome=maos-flamejantes"
-                                        class="magia-hover magicas-tooltip" id="maos-flamejantes"
-                                        title="Carregando...">mãos flamejantes</a></td>
+                                <td><a href="/magias.html?nome=comando" class="magia-hover magicas-tooltip" id="comando" title="Carregando...">comando</a>, <a href="/magias.html?nome=maos-flamejantes" class="magia-hover magicas-tooltip" id="maos-flamejantes" title="Carregando...">mãos flamejantes</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">2º</th>
-                                <td><a href="/magias.php?nome=cegueira-surdez" class="magia-hover magicas-tooltip"
-                                        id="cegueira-surdez" title="Carregando...">cegueira/surdez</a>, <a
-                                        href="/magias.php?nome=raio-ardente" class="magia-hover magicas-tooltip"
-                                        id="raio-ardente" title="Carregando...">raio ardente</a></td>
+                                <td><a href="/magias.html?nome=cegueira-surdez" class="magia-hover magicas-tooltip" id="cegueira-surdez" title="Carregando...">cegueira/surdez</a>, <a href="/magias.html?nome=raio-ardente" class="magia-hover magicas-tooltip" id="raio-ardente" title="Carregando...">raio ardente</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">3º</th>
-                                <td><a href="/magias.php?nome=bola-de-fogo" class="magia-hover magicas-tooltip"
-                                        id="bola-de-fogo" title="Carregando...">bola de fogo</a>, <a
-                                        href="/magias.php?nome=nuvem-fetida" class="magia-hover magicas-tooltip"
-                                        id="nuvem-fetida" title="Carregando...">nuvem fétida</a></td>
+                                <td><a href="/magias.html?nome=bola-de-fogo" class="magia-hover magicas-tooltip" id="bola-de-fogo" title="Carregando...">bola de fogo</a>, <a href="/magias.html?nome=nuvem-fetida" class="magia-hover magicas-tooltip" id="nuvem-fetida" title="Carregando...">nuvem fétida</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">4º</th>
-                                <td><a href="/magias.php?nome=escudo-ardente" class="magia-hover magicas-tooltip"
-                                        id="escudo-ardente" title="Carregando...">escudo ardente</a>, <a
-                                        href="/magias.php?nome=muralha-de-fogo" class="magia-hover magicas-tooltip"
-                                        id="muralha-de-fogo" title="Carregando...">muralha de fogo</a></td>
+                                <td><a href="/magias.html?nome=escudo-ardente" class="magia-hover magicas-tooltip" id="escudo-ardente" title="Carregando...">escudo ardente</a>, <a href="/magias.html?nome=muralha-de-fogo" class="magia-hover magicas-tooltip" id="muralha-de-fogo" title="Carregando...">muralha de fogo</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">5º</th>
-                                <td><a href="/magias.php?nome=coluna-de-chamas" class="magia-hover magicas-tooltip"
-                                        id="coluna-de-chamas" title="Carregando...">coluna de chamas</a>, <a
-                                        href="/magias.php?nome=consagrar" class="magia-hover magicas-tooltip"
-                                        id="consagrar" title="Carregando...">consagrar</a></td>
+                                <td><a href="/magias.html?nome=coluna-de-chamas" class="magia-hover magicas-tooltip" id="coluna-de-chamas" title="Carregando...">coluna de chamas</a>, <a href="/magias.html?nome=consagrar" class="magia-hover magicas-tooltip" id="consagrar" title="Carregando...">consagrar</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -998,41 +895,23 @@
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row">1º</th>
-                                <td><a href="/magias.php?nome=gargalhada-nefasta-de-tasha"
-                                        class="magia-hover magicas-tooltip" id="gargalhada-nefasta-de-tasha"
-                                        title="Carregando...">gargalhada nefasta de Tasha</a>, <a
-                                        href="/magias.php?nome=sussurros-dissonantes"
-                                        class="magia-hover magicas-tooltip" id="sussurros-dissonantes"
-                                        title="Carregando...">sussurros dissonantes</a></td>
+                                <td><a href="/magias.html?nome=gargalhada-nefasta-de-tasha" class="magia-hover magicas-tooltip" id="gargalhada-nefasta-de-tasha" title="Carregando...">gargalhada nefasta de Tasha</a>, <a href="/magias.html?nome=sussurros-dissonantes" class="magia-hover magicas-tooltip" id="sussurros-dissonantes" title="Carregando...">sussurros dissonantes</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">2º</th>
-                                <td><a href="/magias.php?nome=detectar-pensamentos" class="magia-hover magicas-tooltip"
-                                        id="detectar-pensamentos" title="Carregando...">detectar pensamentos</a>, <a
-                                        href="/magias.php?nome=forca-espectral" class="magia-hover magicas-tooltip"
-                                        id="forca-espectral" title="Carregando...">força espectral</a></td>
+                                <td><a href="/magias.html?nome=detectar-pensamentos" class="magia-hover magicas-tooltip" id="detectar-pensamentos" title="Carregando...">detectar pensamentos</a>, <a href="/magias.html?nome=forca-espectral" class="magia-hover magicas-tooltip" id="forca-espectral" title="Carregando...">força espectral</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">3º</th>
-                                <td><a href="/magias.php?nome=clarividencia" class="magia-hover magicas-tooltip"
-                                        id="clarividencia" title="Carregando...">clarividência</a>, <a
-                                        href="/magias.php?nome=remeter" class="magia-hover magicas-tooltip" id="remeter"
-                                        title="Carregando...">remeter</a></td>
+                                <td><a href="/magias.html?nome=clarividencia" class="magia-hover magicas-tooltip" id="clarividencia" title="Carregando...">clarividência</a>, <a href="/magias.html?nome=remeter" class="magia-hover magicas-tooltip" id="remeter" title="Carregando...">remeter</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">4º</th>
-                                <td><a href="/magias.php?nome=dominar-fera" class="magia-hover magicas-tooltip"
-                                        id="dominar-fera" title="Carregando...">dominar fera</a>, <a
-                                        href="/magias.php?nome=tentaculos-negros-de-evard"
-                                        class="magia-hover magicas-tooltip" id="tentaculos-negros-de-evard"
-                                        title="Carregando...">tentáculos negros de Evard</a></td>
+                                <td><a href="/magias.html?nome=dominar-fera" class="magia-hover magicas-tooltip" id="dominar-fera" title="Carregando...">dominar fera</a>, <a href="/magias.html?nome=tentaculos-negros-de-evard" class="magia-hover magicas-tooltip" id="tentaculos-negros-de-evard" title="Carregando...">tentáculos negros de Evard</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">5º</th>
-                                <td><a href="/magias.php?nome=dominar-pessoa" class="magia-hover magicas-tooltip"
-                                        id="dominar-pessoa" title="Carregando...">dominar pessoa</a>, <a
-                                        href="/magias.php?nome=telecinese" class="magia-hover magicas-tooltip"
-                                        id="telecinese" title="Carregando...">telecinese</a></td>
+                                <td><a href="/magias.html?nome=dominar-pessoa" class="magia-hover magicas-tooltip" id="dominar-pessoa" title="Carregando...">dominar pessoa</a>, <a href="/magias.html?nome=telecinese" class="magia-hover magicas-tooltip" id="telecinese" title="Carregando...">telecinese</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1068,4 +947,5 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="/js/magia-popover.js"></script>
     <div data-include="footer"></div>

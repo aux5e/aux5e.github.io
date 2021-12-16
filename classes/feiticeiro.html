@@ -14,65 +14,21 @@
 
         document.write("<title>" + pageTitle + " - Classes - Aux.5e</title>");
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/all.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-        integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ=="
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/misc.js" type="text/javascript"></script>
     <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
     <script src="/js/active-menu-link.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
     <script src="/js/active-menu-link.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('.magia-hover').tooltip({
-                track: true,
-                open: function (event, ui) {
-                    var userid = this.id;
-
-                    $.ajax({
-                        url: '/data/magias-popover.html',
-                        type: 'post',
-                        data: {
-                            userid: userid
-                        },
-                        success: function (response) {
-
-                            // Setting content option
-                            $("#" + userid).tooltip('option', 'content', response);
-
-                        }
-                    });
-                }
-            });
-
-            $('.magia-hover').mouseout(function () {
-                // re-initializing tooltip
-                $(this).attr('title', 'Carregando...');
-                $(this).tooltip();
-                $('.ui-helper-hidden-accessible').hide();
-                //$('.srd-tooltip').hide();
-            });
-
-
-        });
-    </script>
 </head>
 
 <body>
@@ -170,16 +126,16 @@
                         <h6 style="text-transform: uppercase;">Criação Rápida</h6>
                         <p>Você pode criar rapidamente um feiticeiro seguindo estas sugestões. Primeiro, Carisma deve
                             ser seu atributo de maior valor, seguido por Constituição. Em seguida, escolha o antecedente
-                            eremita. Depois, escolha os truques <a href="/magias.php?nome=luz"
+                            eremita. Depois, escolha os truques <a href="/magias.html?nome=luz"
                                 class="magia-hover magicas-tooltip" id="luz" title="Carregando...">luz</a>, <a
-                                href="/magias.php?nome=prestidigitacao" class="magia-hover magicas-tooltip"
+                                href="/magias.html?nome=prestidigitacao" class="magia-hover magicas-tooltip"
                                 id="prestidigitacao" title="Carregando...">prestidigitação</a>, <a
-                                href="/magias.php?nome=raio-de-gelo" class="magia-hover magicas-tooltip"
+                                href="/magias.html?nome=raio-de-gelo" class="magia-hover magicas-tooltip"
                                 id="raio-de-gelo" title="Carregando...">raio de gelo</a> e <a
-                                href="/magias.php?nome=toque-chocante" class="magia-hover magicas-tooltip"
+                                href="/magias.html?nome=toque-chocante" class="magia-hover magicas-tooltip"
                                 id="toque-chocante" title="Carregando...">toque chocante</a>, assim como as magias de 1º
-                            círculo <a href="/magias.php?nome=escudo" class="magia-hover magicas-tooltip" id="escudo"
-                                title="Carregando...">escudo</a> e <a href="/magias.php?nome=misseis-magicos"
+                            círculo <a href="/magias.html?nome=escudo" class="magia-hover magicas-tooltip" id="escudo"
+                                title="Carregando...">escudo</a> e <a href="/magias.html?nome=misseis-magicos"
                                 class="magia-hover magicas-tooltip" id="misseis-magicos" title="Carregando...">mísseis
                                 mágicos</a>.</p>
                     </div>
@@ -606,10 +562,10 @@
                         feiticeiro, de acordo com o seu nível. Para conjurar uma magia, você deve usar um espaço de
                         magia igual ou superior ao círculo da magia, recuperando todos os espaços de magia usados ao
                         final de um descanso longo.</p>
-                    <p>Por exemplo, se você conhece a magia de 1º círculo <a href="/magias.php?nome=maos-flamejantes"
+                    <p>Por exemplo, se você conhece a magia de 1º círculo <a href="/magias.html?nome=maos-flamejantes"
                             class="magia-hover magicas-tooltip" id="maos-flamejantes" title="Carregando...">mãos
                             flamejantes</a>, e possui um espaço de magia de 1º e outro de 2º círculo, você pode conjurar
-                        <a href="/magias.php?nome=maos-flamejantes" class="magia-hover magicas-tooltip"
+                        <a href="/magias.html?nome=maos-flamejantes" class="magia-hover magicas-tooltip"
                             id="maos-flamejantes" title="Carregando...">mãos flamejantes</a> usando qualquer um desse
                         espaços.</p>
 
@@ -733,12 +689,12 @@
                         pode gastar um número de pontos de feitiçaria igual ao círculo da magia para atingir um segundo
                         alvo ao alcance da magia (1 ponto de feitiçaria se a magia for um truque).</p>
                     <p>Para tanto, no seu círculo atual, a magia não pode ser capaz de ter mais que um alvo. Por
-                        exemplo, <a href="/magias.php?nome=misseis-magicos" class="magia-hover magicas-tooltip"
+                        exemplo, <a href="/magias.html?nome=misseis-magicos" class="magia-hover magicas-tooltip"
                             id="misseis-magicos" title="Carregando...">mísseis mágicos</a> e <a
-                            href="/magias.php?nome=raio-ardente" class="magia-hover magicas-tooltip" id="raio-ardente"
+                            href="/magias.html?nome=raio-ardente" class="magia-hover magicas-tooltip" id="raio-ardente"
                             title="Carregando...">raio ardente</a> não se encaixam, mas <a
-                            href="/magias.php?nome=raio-de-frio" class="magia-hover magicas-tooltip" id="raio-de-frio"
-                            title="Carregando...">raio de frio</a> e <a href="/magias.php?nome=orbe-cromatica"
+                            href="/magias.html?nome=raio-de-frio" class="magia-hover magicas-tooltip" id="raio-de-frio"
+                            title="Carregando...">raio de frio</a> e <a href="/magias.html?nome=orbe-cromatica"
                             class="magia-hover magicas-tooltip" id="orbe-cromatica" title="Carregando...">orbe
                             cromática</a>, sim.</p>
 
@@ -917,13 +873,13 @@
                             </tr>
                             <tr>
                                 <td class="text-center" scope="row">07–08</td>
-                                <td>Você conjura <a href="/magias.php?nome=bola-de-fogo"
+                                <td>Você conjura <a href="/magias.html?nome=bola-de-fogo"
                                         class="magia-hover magicas-tooltip" id="bola-de-fogo" title="Carregando...">bola
                                         de fogo</a> como uma magia de 3º círculo centrada em você.</td>
                             </tr>
                             <tr>
                                 <td class="text-center" scope="row">09–10</td>
-                                <td>Você conjura <a href="/magias.php?nome=misseis-magicos"
+                                <td>Você conjura <a href="/magias.html?nome=misseis-magicos"
                                         class="magia-hover magicas-tooltip" id="misseis-magicos"
                                         title="Carregando...">mísseis mágicos</a> como uma magia de 5º círculo.</td>
                             </tr>
@@ -934,7 +890,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center" scope="row">13–14</td>
-                                <td>Você conjura a magia <a href="/magias.php?nome=confusao"
+                                <td>Você conjura a magia <a href="/magias.html?nome=confusao"
                                         class="magia-hover magicas-tooltip" id="confusao"
                                         title="Carregando...">confusão</a> centrada em você.</td>
                             </tr>
@@ -950,7 +906,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center" scope="row">19–20</td>
-                                <td>Você conjura <a href="/magias.php?nome=graxa" class="magia-hover magicas-tooltip"
+                                <td>Você conjura <a href="/magias.html?nome=graxa" class="magia-hover magicas-tooltip"
                                         id="graxa" title="Carregando...">graxa</a> centrada em você.</td>
                             </tr>
                             <tr>
@@ -961,7 +917,7 @@
                             <tr>
                                 <td class="text-center" scope="row">23–24</td>
                                 <td>Sua pele adquire um tom vibrante de azul. A magia <a
-                                        href="/magias.php?nome=remover-maldicao" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=remover-maldicao" class="magia-hover magicas-tooltip"
                                         id="remover-maldicao" title="Carregando...">remover maldição</a> pode encerrar
                                     esse efeito.</td>
                             </tr>
@@ -1020,7 +976,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center" scope="row">45–46</td>
-                                <td>Você conjura <a href="/magias.php?nome=levitacao"
+                                <td>Você conjura <a href="/magias.html?nome=levitacao"
                                         class="magia-hover magicas-tooltip" id="levitacao"
                                         title="Carregando...">levitação</a> em si mesmo.</td>
                             </tr>
@@ -1037,7 +993,7 @@
                             <tr>
                                 <td class="text-center" scope="row">51–52</td>
                                 <td>Um escudo espectral flutua perto de você por um minuto, concedendo um bônus de +2
-                                    para a sua CA e imunidade a <a href="/magias.php?nome=misseis-magicos"
+                                    para a sua CA e imunidade a <a href="/magias.html?nome=misseis-magicos"
                                         class="magia-hover magicas-tooltip" id="misseis-magicos"
                                         title="Carregando...">mísseis mágicos</a>.</td>
                             </tr>
@@ -1064,7 +1020,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center" scope="row">63–64</td>
-                                <td>Você conjura <a href="/magias.php?nome=nevoa-obscurecente"
+                                <td>Você conjura <a href="/magias.html?nome=nevoa-obscurecente"
                                         class="magia-hover magicas-tooltip" id="nevoa-obscurecente"
                                         title="Carregando...">névoa obscurecente</a> centrada em você.</td>
                             </tr>
@@ -1081,7 +1037,7 @@
                             <tr>
                                 <td class="text-center" scope="row">69–70</td>
                                 <td>Cada criatura a até 9 metros de distância fica <a
-                                        href="/condicoes.php?nome=invisivel"
+                                        href="/condicoes.html?nome=invisivel"
                                         class="condicao-hover condicoes-tooltip">invisível</a> por um minuto. A
                                     invisibilidade se encerra para uma criatura quando ela ataca ou conjura uma magia.
                                 </td>
@@ -1093,20 +1049,20 @@
                             <tr>
                                 <td class="text-center" scope="row">73–74</td>
                                 <td>Uma criatura a até 18 metros distante de você, e escolhida ao acaso, fica <a
-                                        href="/condicoes.php?nome=envenenado"
+                                        href="/condicoes.html?nome=envenenado"
                                         class="condicao-hover condicoes-tooltip">envenenada</a> por 1d4 horas.</td>
                             </tr>
                             <tr>
                                 <td class="text-center" scope="row">75–76</td>
                                 <td>Você brilha com luz plena num raio de 18 metros por um minuto. Qualquer criatura que
                                     encerre o turno dela a até 1,5 metros de distância de você ficará <a
-                                        href="/condicoes.php?nome=cego"
+                                        href="/condicoes.html?nome=cego"
                                         class="condicao-hover condicoes-tooltip">cega</a> até o final do próximo turno
                                     dela.</td>
                             </tr>
                             <tr>
                                 <td class="text-center" scope="row">77–78</td>
-                                <td>Você conjura <a href="/magias.php?nome=polimorfia"
+                                <td>Você conjura <a href="/magias.html?nome=polimorfia"
                                         class="magia-hover magicas-tooltip" id="polimorfia"
                                         title="Carregando...">polimorfia</a> em si mesmo. Se falhar na salvaguarda,
                                     transforma-se numa ovelha pela duração da magia.</td>
@@ -1128,7 +1084,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center" scope="row">85–86</td>
-                                <td>Você conjura <a href="/magias.php?nome=reflexos" class="magia-hover magicas-tooltip"
+                                <td>Você conjura <a href="/magias.html?nome=reflexos" class="magia-hover magicas-tooltip"
                                         id="reflexos" title="Carregando...">reflexos</a>.</td>
                             </tr>
                             <tr>
@@ -1138,7 +1094,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center" scope="row">89–90</td>
-                                <td>Você <a href="/condicoes.php?nome=invisivel"
+                                <td>Você <a href="/condicoes.html?nome=invisivel"
                                         class="condicao-hover condicoes-tooltip">invisível</a> por um minuto. Durante
                                     esse tempo, outras criaturas não podem ouvi-lo. O efeito termina se você atacar ou
                                     conjurar uma magia.</td>
@@ -1198,4 +1154,5 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="/js/magia-popover.js"></script>
     <div data-include="footer"></div>
