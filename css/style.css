@@ -1879,13 +1879,15 @@ a.ui-button:active,
 }
 
 /* Card header home */
-.card-2, .card-header, .card-alt {
-    border-radius: 0rem!important;
+.card-2,
+.card-header,
+.card-alt {
+  border-radius: 0rem !important;
 }
 
 .breadcrumb {
-    background-color: #f7f7f7;
-    border-radius: 0rem;
+  background-color: #f7f7f7;
+  border-radius: 0rem;
 }
 
 #informacoes {
@@ -1953,4 +1955,40 @@ a.ui-button:active,
 
 .card-home-btn .btn-dark:hover {
   background-color: rgba(220, 53, 69, 0.8);
+}
+
+/* Testing */
+.tooltip-inner {
+    max-width: 100%!important;
+    padding: 0rem;
+    border-radius:0;
+    margin-top: 50px;
+}
+
+.magia-hover-popup .tooltiptext {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 99;
+}
+
+.magicas-tooltip:hover {
+    color: #472f91;
+}
+
+.tooltip-inner {
+    color: transparent;
+    background-color: transparent;
+}
+
+.tooltip .arrow {
+    display:none!important;
+}
+
+.popover {
+    top: 55px;
+    left: -240px;
 }

@@ -32,65 +32,64 @@ function loadIntoPage(data, id) {
         magiaComponentesExtra = " " + magiasNomes[0][id].componentes_extra;
         }
 
+        // Array para criação do tooltip com as infos do json
         var r = new Array();
-        r[0] = '<div id="popover_html" class="popover">';
-        r[1] = '<div class="popover-header">';
-        r[2] = '<h4>' + magiaName + '</span></h4>';
-        r[3] = ' <h6 class="popover-subtitle">' + magiaCirculo + ', ' + magiaEscola + '</h6>';
-        r[4] = '</div><div class="popover-body">';
-        r[5] = '<div class="popover-infos popover-magias">';
-        r[6] = '<b>Tempo de Conjuração:</b> ' + magiaConjuracao + '<br>';
-        r[7] = '<b>Alcance:</b> ' + magiaAlcance + '<br>';
-        r[8] = '<b>Componentes:</b> ' + magiaComponentes + magiaComponentesExtra + '<br>';
-        r[9] = '<b>Duração:</b> ' + magiaDuracao + '</div>';
-        r[10] = magiaDescricao + '<br>';
-        r[11] = '<p><span class="badge badge-spells" style="padding:8px;font-size:14px;">ACESSE A PÁGINA PARA VER MAIS</span></p>';
-        r[12] = '</div></div></div>';
-        $("#pop").html(r.join(''));
-    
-        // Renderizar dado na página
-        // document.getElementById("magiaNome").innerHTML = magiaName;
-        // document.getElementById("magiaCirculo").innerHTML = magiaCirculo;
-        // document.getElementById("magiaEscola").innerHTML = magiaEscola;
-        // document.getElementById("magiaConjuracao").innerHTML = magiaConjuracao;
-        // document.getElementById("magiaAlcance").innerHTML = magiaAlcance;
-        // document.getElementById("magiaDuracao").innerHTML = magiaDuracao;
-        // document.getElementById("magiaComponentes").innerHTML = magiaComponentes;
-        // document.getElementById("magiaDescricao").innerHTML = magiaDescricao;
-        // document.getElementById("magiaComponentesExtra").innerHTML = magiaComponentesExtra;
+        r[0] = '<div class="magia-hover-popup">'
+        r[1] = '<div class="tooltiptext">'
+        r[2] = '<div id="popover_html" class="popover">';
+        r[3] = '<div class="popover-header">';
+        r[4] = '<h4>' + magiaName + '</span></h4>';
+        r[5] = ' <h6 class="popover-subtitle">' + magiaCirculo + ', ' + magiaEscola + '</h6>';
+        r[6] = '</div><div class="popover-body">';
+        r[7] = '<div class="popover-infos popover-magias">';
+        r[8] = '<b>Tempo de Conjuração:</b> ' + magiaConjuracao + '<br>';
+        r[9] = '<b>Alcance:</b> ' + magiaAlcance + '<br>';
+        r[10] = '<b>Componentes:</b> ' + magiaComponentes + magiaComponentesExtra + '<br>';
+        r[11] = '<b>Duração:</b> ' + magiaDuracao + '</div>';
+        r[12] = magiaDescricao + '<br>';
+        r[13] = '<p><span class="badge badge-spells" style="padding:8px;font-size:14px;">ACESSE A PÁGINA PARA VER MAIS</span></p>';
+        r[14] = '</div></div></div></div></div>';
+        $(".tooltip-inner").html(r.join(''));
     });
 };
 
-$('document').ready(function(){
-    $(function () {
-        $(".magia-hover").tooltip({
-            show: {
-            delay: 300,
-            effect: "fade",
-            duration: 100,
-            },
-            open: function (event, ui) {
-            var userid = this.id;
+// Solução para Tooltips Magia usando Bootstrap
+$('.magia-hover').tooltip({
+    template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
+    position: "bottom"
+})
 
-            $.ajax({
-                url: "/data/magias-popover.html",
-                type: "get",
-                success: function (response) {
-                // Setting content option
-                $("#" + userid).tooltip("option", "content", response);
-                },
-            });
-            },
-        });
+// Solução para Tooltips Magia usando jQuery UI + ajax (não funciona super bem no GitHub Pages)
+// $('document').ready(function(){
+//     $(function () {
+//         $(".magia-hover").tooltip({
+//             show: {
+//             delay: 300,
+//             effect: "fade",
+//             duration: 100,
+//             },
+//             open: function (event, ui) {
+//             var userid = this.id;
 
-        $(".magia-hover").mouseout(function () {
-            // re-initializing tooltip
-            $(this).tooltip("close");
-            $(this).tooltip("disable");
-            $(this).attr("title", "Carregando...");
-            $(this).tooltip();
-            $(this).tooltip("enable");
-            $(".ui-helper-hidden-accessible").hide();
-        });
-    });
-});
+//             // $.ajax({
+//             //     url: "/data/magias-popover.html",
+//             //     type: "get",
+//             //     success: function (response) {
+//             //     // Setting content option
+//             //     $("#" + userid).tooltip("option", "content", response);
+//             //     },
+//             // });
+//             },
+//         });
+
+//         $(".magia-hover").mouseout(function () {
+//             // re-initializing tooltip
+//             $(this).tooltip("close");
+//             $(this).tooltip("disable");
+//             $(this).attr("title", "Carregando...");
+//             $(this).tooltip();
+//             $(this).tooltip("enable");
+//             $(".ui-helper-hidden-accessible").hide();
+//         });
+//     });
+// });
