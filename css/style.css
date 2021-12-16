@@ -1879,6 +1879,15 @@ a.ui-button:active,
 }
 
 /* Card header home */
+.card-2, .card-header, .card-alt {
+    border-radius: 0rem!important;
+}
+
+.breadcrumb {
+    background-color: #f7f7f7;
+    border-radius: 0rem;
+}
+
 #informacoes {
   margin-top: 4rem;
 }
