@@ -21,27 +21,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/all.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.3/sc-2.0.5/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.3/sc-2.0.5/datatables.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/misc.js" type="text/javascript"></script>
     <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.11.3/sc-2.0.5/datatables.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(document).ready(function () {
-                $("#table-lista-de-magias").DataTable({
-                    responsive: true,
-                    language: {
-                        url: "/data/dataTables.ptbr.json",
-                    },
-                    pageLength: 25,
-                    paging: true,
-                    scroller: true
-                });
-            });
-        });
-    </script>
 </head>
 
 <!-- <?php
@@ -148,8 +133,7 @@ if ($conjuracao == true) {
             Lista de Magias
         </h1>
 
-        <table id="table-lista-de-magias" class="display table table-bordered table-striped"
-            style="font-size: 0.9em; margin-bottom: 35px">
+        <table id="table-lista-de-magias" class="display table table-bordered table-striped" style="font-size: 0.9em; margin-bottom: 35px">
             <thead>
                 <tr>
                     <th scope="col" class="text-center align-middle" style="max-width: 60px;">Círculo</th>
@@ -168,7 +152,7 @@ if ($conjuracao == true) {
     <script>
         function loadIntoTable(url, table) {
             const tableBody = table.querySelector("tbody");
-            
+
             $.getJSON(url, function (magias) {
                 const magiasValues = Object.keys(magias.data);
                 const siteUrl = 'https://aux5e.github.io';
@@ -218,6 +202,20 @@ if ($conjuracao == true) {
         }
 
         loadIntoTable("/data/magias.json", document.getElementById("table-lista-de-magias"));
+
+        $(document).ready(function () {
+            $(document).ready(function () {
+                $("#table-lista-de-magias").DataTable({
+                    responsive: true,
+                    language: {
+                        url: "/data/dataTables.ptbr.json",
+                    },
+                    pageLength: 25,
+                    paging: true,
+                    scroller: true
+                });
+            });
+        });
     </script>
 
     <div data-include="footer"></div>
