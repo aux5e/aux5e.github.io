@@ -35,44 +35,10 @@
     <script src="/js/misc.js" type="text/javascript"></script>
     <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
     <script src="/js/active-menu-link.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.css" />
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/r-2.2.7/datatables.min.js"></script>
     <script src="/js/active-menu-link.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('.magia-hover').tooltip({
-                track: true,
-                open: function (event, ui) {
-                    var userid = this.id;
-
-                    $.ajax({
-                        url: '/data/magias-popover.html',
-                        type: 'post',
-                        data: {
-                            userid: userid
-                        },
-                        success: function (response) {
-
-                            // Setting content option
-                            $("#" + userid).tooltip('option', 'content', response);
-
-                        }
-                    });
-                }
-            });
-
-            $('.magia-hover').mouseout(function () {
-                // re-initializing tooltip
-                $(this).attr('title', 'Carregando...');
-                $(this).tooltip();
-                $('.ui-helper-hidden-accessible').hide();
-                //$('.srd-tooltip').hide();
-            });
-
-
-        });
-    </script>
+    
 </head>
 
 <body>
@@ -545,7 +511,7 @@
                     <p>Por exemplo, caso seu clérigo esteja no 3º nível, você tem quatro espaços de magia de 1º círculo
                         e dois de 2º círculo. Com Sabedoria 16, sua lista de magias preparadas pode incluir seis magias
                         de 1º ou 2º círculo, em qualquer combinação. Se você preparar a magia de 1º círculo <a
-                            href="/magias.php?nome=curar-ferimentos" class="magia-hover magicas-tooltip"
+                            href="/magias.html?nome=curar-ferimentos" class="magia-hover magicas-tooltip"
                             id="curar-ferimentos" title="Carregando...">curar ferimentos</a>, poderá conjurá-la usando
                         um espaço de 1º ou 2º círculo. Conjurar uma magia não a remove da sua lista de magias
                         preparadas.</p>
@@ -704,42 +670,42 @@
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row">1º</th>
-                                <td class="text-center"><a href="/magias.php?nome=comando"
+                                <td class="text-center"><a href="/magias.html?nome=comando"
                                         class="magia-hover magicas-tooltip" id="comando"
-                                        title="Carregando...">comando</a>, <a href="/magias.php?nome=identificar"
+                                        title="Carregando...">comando</a>, <a href="/magias.html?nome=identificar"
                                         class="magia-hover magicas-tooltip" id="identificar"
                                         title="Carregando...">identificar</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">3º</th>
-                                <td class="text-center"><a href="/magias.php?nome=augurio"
+                                <td class="text-center"><a href="/magias.html?nome=augurio"
                                         class="magia-hover magicas-tooltip" id="augurio"
-                                        title="Carregando...">augúrio</a>, <a href="/magias.php?nome=sugestao"
+                                        title="Carregando...">augúrio</a>, <a href="/magias.html?nome=sugestao"
                                         class="magia-hover magicas-tooltip" id="sugestao"
                                         title="Carregando...">sugestão</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">5º</th>
-                                <td class="text-center"><a href="/magias.php?nome=falar-com-mortos"
+                                <td class="text-center"><a href="/magias.html?nome=falar-com-mortos"
                                         class="magia-hover magicas-tooltip" id="falar-com-mortos"
                                         title="Carregando...">falar com mortos</a>, <a
-                                        href="/magias.php?nome=indetectavel" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=indetectavel" class="magia-hover magicas-tooltip"
                                         id="indetectavel" title="Carregando...">indetectável</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">7º</th>
-                                <td class="text-center"><a href="/magias.php?nome=confusao"
+                                <td class="text-center"><a href="/magias.html?nome=confusao"
                                         class="magia-hover magicas-tooltip" id="confusao"
-                                        title="Carregando...">confusão</a>, <a href="/magias.php?nome=olho-arcano"
+                                        title="Carregando...">confusão</a>, <a href="/magias.html?nome=olho-arcano"
                                         class="magia-hover magicas-tooltip" id="olho-arcano" title="Carregando...">olho
                                         arcano</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">9º</th>
-                                <td class="text-center"><a href="/magias.php?nome=lendas-e-historias"
+                                <td class="text-center"><a href="/magias.html?nome=lendas-e-historias"
                                         class="magia-hover magicas-tooltip" id="lendas-e-historias"
                                         title="Carregando...">lendas e histórias</a>, <a
-                                        href="/magias.php?nome=videncia" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=videncia" class="magia-hover magicas-tooltip"
                                         id="videncia" title="Carregando...">vidência</a></td>
                             </tr>
                         </tbody>
@@ -815,42 +781,42 @@
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row">1º</th>
-                                <td class="text-center"><a href="/magias.php?nome=escudo-da-fe"
+                                <td class="text-center"><a href="/magias.html?nome=escudo-da-fe"
                                         class="magia-hover magicas-tooltip" id="escudo-da-fe"
-                                        title="Carregando...">escudo da fé</a>, <a href="/magias.php?nome=favor-divino"
+                                        title="Carregando...">escudo da fé</a>, <a href="/magias.html?nome=favor-divino"
                                         class="magia-hover magicas-tooltip" id="favor-divino"
                                         title="Carregando...">favor divino</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">3º</th>
-                                <td class="text-center"><a href="/magias.php?nome=arma-espiritual"
+                                <td class="text-center"><a href="/magias.html?nome=arma-espiritual"
                                         class="magia-hover magicas-tooltip" id="arma-espiritual"
                                         title="Carregando...">arma espiritual</a>, <a
-                                        href="/magias.php?nome=arma-magica" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=arma-magica" class="magia-hover magicas-tooltip"
                                         id="arma-magica" title="Carregando...">arma mágica</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">5º</th>
-                                <td class="text-center"><a href="/magias.php?nome=guardioes-espirituais"
+                                <td class="text-center"><a href="/magias.html?nome=guardioes-espirituais"
                                         class="magia-hover magicas-tooltip" id="guardioes-espirituais"
                                         title="Carregando...">guardiões espirituais</a>, <a
-                                        href="/magias.php?nome=manto-do-cruzado" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=manto-do-cruzado" class="magia-hover magicas-tooltip"
                                         id="manto-do-cruzado" title="Carregando...">manto do cruzado</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">7º</th>
-                                <td class="text-center"><a href="/magias.php?nome=movimentacao-livre"
+                                <td class="text-center"><a href="/magias.html?nome=movimentacao-livre"
                                         class="magia-hover magicas-tooltip" id="movimentacao-livre"
                                         title="Carregando...">movimentação livre</a>, <a
-                                        href="/magias.php?nome=pele-rocha" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=pele-rocha" class="magia-hover magicas-tooltip"
                                         id="pele-rocha" title="Carregando...">pele-rocha</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">9º</th>
-                                <td class="text-center"><a href="/magias.php?nome=coluna-de-chamas"
+                                <td class="text-center"><a href="/magias.html?nome=coluna-de-chamas"
                                         class="magia-hover magicas-tooltip" id="coluna-de-chamas"
                                         title="Carregando...">coluna de chamas</a>, <a
-                                        href="/magias.php?nome=imobilizar-monstro" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=imobilizar-monstro" class="magia-hover magicas-tooltip"
                                         id="imobilizar-monstro" title="Carregando...">imobilizar monstro</a></td>
                             </tr>
                         </tbody>
@@ -904,41 +870,41 @@
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row">1º</th>
-                                <td class="text-center"><a href="/magias.php?nome=fogo-das-fadas"
+                                <td class="text-center"><a href="/magias.html?nome=fogo-das-fadas"
                                         class="magia-hover magicas-tooltip" id="fogo-das-fadas"
                                         title="Carregando...">fogo das fadas</a>, <a
-                                        href="/magias.php?nome=maos-flamejantes" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=maos-flamejantes" class="magia-hover magicas-tooltip"
                                         id="maos-flamejantes" title="Carregando...">mãos flamejantes</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">3º</th>
-                                <td class="text-center"><a href="/magias.php?nome=esfera-flamejante"
+                                <td class="text-center"><a href="/magias.html?nome=esfera-flamejante"
                                         class="magia-hover magicas-tooltip" id="esfera-flamejante"
                                         title="Carregando...">esfera flamejante</a>, <a
-                                        href="/magias.php?nome=raio-ardente" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=raio-ardente" class="magia-hover magicas-tooltip"
                                         id="raio-ardente" title="Carregando...">raio ardente</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">5º</th>
-                                <td class="text-center"><a href="/magias.php?nome=bola-de-fogo"
+                                <td class="text-center"><a href="/magias.html?nome=bola-de-fogo"
                                         class="magia-hover magicas-tooltip" id="bola-de-fogo" title="Carregando...">bola
-                                        de fogo</a>, <a href="/magias.php?nome=luz-do-dia"
+                                        de fogo</a>, <a href="/magias.html?nome=luz-do-dia"
                                         class="magia-hover magicas-tooltip" id="luz-do-dia" title="Carregando...">luz do
                                         dia</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">7º</th>
-                                <td class="text-center"><a href="/magias.php?nome=defensor-da-fe"
+                                <td class="text-center"><a href="/magias.html?nome=defensor-da-fe"
                                         class="magia-hover magicas-tooltip" id="defensor-da-fe"
                                         title="Carregando...">defensor da fé</a>, <a
-                                        href="/magias.php?nome=muralha-de-fogo" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=muralha-de-fogo" class="magia-hover magicas-tooltip"
                                         id="muralha-de-fogo" title="Carregando...">muralha de fogo</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">9º</th>
-                                <td class="text-center"><a href="/magias.php?nome=coluna-de-chamas"
+                                <td class="text-center"><a href="/magias.html?nome=coluna-de-chamas"
                                         class="magia-hover magicas-tooltip" id="coluna-de-chamas"
-                                        title="Carregando...">coluna de chamas</a>, <a href="/magias.php?nome=videncia"
+                                        title="Carregando...">coluna de chamas</a>, <a href="/magias.html?nome=videncia"
                                         class="magia-hover magicas-tooltip" id="videncia"
                                         title="Carregando...">vidência</a></td>
                             </tr>
@@ -999,42 +965,42 @@
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row">1º</th>
-                                <td class="text-center"><a href="/magias.php?nome=amizade-animal"
+                                <td class="text-center"><a href="/magias.html?nome=amizade-animal"
                                         class="magia-hover magicas-tooltip" id="amizade-animal"
                                         title="Carregando...">amizade animal</a>, <a
-                                        href="/magias.php?nome=falar-com-animais" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=falar-com-animais" class="magia-hover magicas-tooltip"
                                         id="falar-com-animais" title="Carregando...">falar com animais</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">3º</th>
-                                <td class="text-center"><a href="/magias.php?nome=pele-casca"
+                                <td class="text-center"><a href="/magias.html?nome=pele-casca"
                                         class="magia-hover magicas-tooltip" id="pele-casca"
                                         title="Carregando...">pele-casca</a>, <a
-                                        href="/magias.php?nome=crescer-espinhos" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=crescer-espinhos" class="magia-hover magicas-tooltip"
                                         id="crescer-espinhos" title="Carregando...">crescer espinhos</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">5º</th>
-                                <td class="text-center"><a href="/magias.php?nome=crescimento-de-plantas"
+                                <td class="text-center"><a href="/magias.html?nome=crescimento-de-plantas"
                                         class="magia-hover magicas-tooltip" id="crescimento-de-plantas"
                                         title="Carregando...">crescimento de plantas</a>, <a
-                                        href="/magias.php?nome=muralha-de-vento" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=muralha-de-vento" class="magia-hover magicas-tooltip"
                                         id="muralha-de-vento" title="Carregando...">muralha de vento</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">7º</th>
-                                <td class="text-center"><a href="/magias.php?nome=dominar-fera"
+                                <td class="text-center"><a href="/magias.html?nome=dominar-fera"
                                         class="magia-hover magicas-tooltip" id="dominar-fera"
                                         title="Carregando...">dominar fera</a>, <a
-                                        href="/magias.php?nome=vinha-esmagadora" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=vinha-esmagadora" class="magia-hover magicas-tooltip"
                                         id="vinha-esmagadora" title="Carregando...">vinha esmagadora</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">9º</th>
-                                <td class="text-center"><a href="/magias.php?nome=praga-de-insetos"
+                                <td class="text-center"><a href="/magias.html?nome=praga-de-insetos"
                                         class="magia-hover magicas-tooltip" id="praga-de-insetos"
                                         title="Carregando...">praga de insetos</a>, <a
-                                        href="/magias.php?nome=passo-arboreo" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=passo-arboreo" class="magia-hover magicas-tooltip"
                                         id="passo-arboreo" title="Carregando...">passo arbóreo</a></td>
                             </tr>
                         </tbody>
@@ -1092,42 +1058,42 @@
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row">1º</th>
-                                <td class="text-center"><a href="/magias.php?nome=nevoa-obscurecente"
+                                <td class="text-center"><a href="/magias.html?nome=nevoa-obscurecente"
                                         class="magia-hover magicas-tooltip" id="nevoa-obscurecente"
                                         title="Carregando...">névoa obscurecente</a>, <a
-                                        href="/magias.php?nome=onda-trovejante" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=onda-trovejante" class="magia-hover magicas-tooltip"
                                         id="onda-trovejante" title="Carregando...">onda trovejante</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">3º</th>
-                                <td class="text-center"><a href="/magias.php?nome=despedacar"
+                                <td class="text-center"><a href="/magias.html?nome=despedacar"
                                         class="magia-hover magicas-tooltip" id="despedacar"
-                                        title="Carregando...">despedaçar</a>, <a href="/magias.php?nome=lufada-de-vento"
-                                        class="magia-hover magicas-tooltip" id="lufada-de-vento"
-                                        title="Carregando...">lufada de vento</a></td>
+                                        title="Carregando...">despedaçar</a>, <a
+                                        href="/magias.html?nome=lufada-de-vento" class="magia-hover magicas-tooltip"
+                                        id="lufada-de-vento" title="Carregando...">lufada de vento</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">5º</th>
-                                <td class="text-center"><a href="/magias.php?nome=convocar-relampagos"
+                                <td class="text-center"><a href="/magias.html?nome=convocar-relampagos"
                                         class="magia-hover magicas-tooltip" id="convocar-relampagos"
                                         title="Carregando...">convocar relâmpagos</a>, <a
-                                        href="/magias.php?nome=nevasca" class="magia-hover magicas-tooltip" id="nevasca"
-                                        title="Carregando...">nevasca</a></td>
+                                        href="/magias.html?nome=nevasca" class="magia-hover magicas-tooltip"
+                                        id="nevasca" title="Carregando...">nevasca</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">7º</th>
-                                <td class="text-center"><a href="/magias.php?nome=controlar-agua"
+                                <td class="text-center"><a href="/magias.html?nome=controlar-agua"
                                         class="magia-hover magicas-tooltip" id="controlar-agua"
                                         title="Carregando...">controlar água</a>, <a
-                                        href="/magias.php?nome=tempestade-de-gelo" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=tempestade-de-gelo" class="magia-hover magicas-tooltip"
                                         id="tempestade-de-gelo" title="Carregando...">tempestade de gelo</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">9º</th>
-                                <td class="text-center"><a href="/magias.php?nome=onda-destrutiva"
+                                <td class="text-center"><a href="/magias.html?nome=onda-destrutiva"
                                         class="magia-hover magicas-tooltip" id="onda-destrutiva"
                                         title="Carregando...">onda destrutiva</a>, <a
-                                        href="/magias.php?nome=praga-de-insetos" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=praga-de-insetos" class="magia-hover magicas-tooltip"
                                         id="praga-de-insetos" title="Carregando...">praga de insetos</a></td>
                             </tr>
                         </tbody>
@@ -1181,42 +1147,42 @@
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row">1º</th>
-                                <td class="text-center"><a href="/magias.php?nome=disfarcar-se"
+                                <td class="text-center"><a href="/magias.html?nome=disfarcar-se"
                                         class="magia-hover magicas-tooltip" id="disfarcar-se"
                                         title="Carregando...">disfarçar-se</a>, <a
-                                        href="/magias.php?nome=enfeiticar-pessoa" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=enfeiticar-pessoa" class="magia-hover magicas-tooltip"
                                         id="enfeiticar-pessoa" title="Carregando...">enfeitiçar pessoa</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">3º</th>
-                                <td class="text-center"><a href="/magias.php?nome=passo-sem-rastro"
+                                <td class="text-center"><a href="/magias.html?nome=passo-sem-rastro"
                                         class="magia-hover magicas-tooltip" id="passo-sem-rastro"
-                                        title="Carregando...">passo sem rastro</a>, <a href="/magias.php?nome=reflexo"
+                                        title="Carregando...">passo sem rastro</a>, <a href="/magias.html?nome=reflexo"
                                         class="magia-hover magicas-tooltip" id="reflexo"
                                         title="Carregando...">reflexo</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">5º</th>
-                                <td class="text-center"><a href="/magias.php?nome=dissipar-magia"
+                                <td class="text-center"><a href="/magias.html?nome=dissipar-magia"
                                         class="magia-hover magicas-tooltip" id="dissipar-magia"
-                                        title="Carregando...">dissipar magia</a>, <a href="/magias.php?nome=piscar"
+                                        title="Carregando...">dissipar magia</a>, <a href="/magias.html?nome=piscar"
                                         class="magia-hover magicas-tooltip" id="piscar" title="Carregando...">piscar</a>
                                 </td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">7º</th>
-                                <td class="text-center"><a href="/magias.php?nome=polimorfia"
+                                <td class="text-center"><a href="/magias.html?nome=polimorfia"
                                         class="magia-hover magicas-tooltip" id="polimorfia"
                                         title="Carregando...">polimorfia</a>, <a
-                                        href="/magias.php?nome=porta-dimensional" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=porta-dimensional" class="magia-hover magicas-tooltip"
                                         id="porta-dimensional" title="Carregando...">porta dimensional</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">9º</th>
-                                <td class="text-center"><a href="/magias.php?nome=dominar-pessoa"
+                                <td class="text-center"><a href="/magias.html?nome=dominar-pessoa"
                                         class="magia-hover magicas-tooltip" id="dominar-pessoa"
                                         title="Carregando...">dominar pessoa</a>, <a
-                                        href="/magias.php?nome=modificar-memoria" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=modificar-memoria" class="magia-hover magicas-tooltip"
                                         id="modificar-memoria" title="Carregando...">modificar memória</a></td>
                             </tr>
                         </tbody>
@@ -1275,43 +1241,43 @@
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row">1º</th>
-                                <td class="text-center"><a href="/magias.php?nome=bencao"
+                                <td class="text-center"><a href="/magias.html?nome=bencao"
                                         class="magia-hover magicas-tooltip" id="bencao"
-                                        title="Carregando...">bênção</a>, <a href="/magias.php?nome=curar-ferimentos"
+                                        title="Carregando...">bênção</a>, <a href="/magias.html?nome=curar-ferimentos"
                                         class="magia-hover magicas-tooltip" id="curar-ferimentos"
                                         title="Carregando...">curar ferimentos</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">3º</th>
-                                <td class="text-center"><a href="/magias.php?nome=arma-espiritual"
+                                <td class="text-center"><a href="/magias.html?nome=arma-espiritual"
                                         class="magia-hover magicas-tooltip" id="arma-espiritual"
                                         title="Carregando...">arma espiritual</a>, <a
-                                        href="/magias.php?nome=restauracao-menor" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=restauracao-menor" class="magia-hover magicas-tooltip"
                                         id="restauracao-menor" title="Carregando...">restauração menor</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">5º</th>
-                                <td class="text-center"><a href="/magias.php?nome=revivificar"
+                                <td class="text-center"><a href="/magias.html?nome=revivificar"
                                         class="magia-hover magicas-tooltip" id="revivificar"
                                         title="Carregando...">revivificar</a>, <a
-                                        href="/magias.php?nome=sinal-de-esperanca" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=sinal-de-esperanca" class="magia-hover magicas-tooltip"
                                         id="sinal-de-esperanca" title="Carregando...">sinal de esperança</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">7º</th>
-                                <td class="text-center"><a href="/magias.php?nome=defensor-da-fe"
+                                <td class="text-center"><a href="/magias.html?nome=defensor-da-fe"
                                         class="magia-hover magicas-tooltip" id="defensor-da-fe"
                                         title="Carregando...">defensor da fé</a>, <a
-                                        href="/magias.php?nome=protecao-contra-morte"
+                                        href="/magias.html?nome=protecao-contra-morte"
                                         class="magia-hover magicas-tooltip" id="protecao-contra-morte"
                                         title="Carregando...">proteção contra morte</a></td>
                             </tr>
                             <tr>
                                 <th class="text-center" scope="row">9º</th>
-                                <td class="text-center"><a href="/magias.php?nome=curar-ferimentos-em-massa"
+                                <td class="text-center"><a href="/magias.html?nome=curar-ferimentos-em-massa"
                                         class="magia-hover magicas-tooltip" id="curar-ferimentos-em-massa"
                                         title="Carregando...">curar ferimentos em massa</a>, <a
-                                        href="/magias.php?nome=reviver-os-mortos" class="magia-hover magicas-tooltip"
+                                        href="/magias.html?nome=reviver-os-mortos" class="magia-hover magicas-tooltip"
                                         id="reviver-os-mortos" title="Carregando...">reviver os mortos</a></td>
                             </tr>
                         </tbody>
@@ -1349,4 +1315,5 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="/js/magia-popover.js"></script>
     <div data-include="footer"></div>
