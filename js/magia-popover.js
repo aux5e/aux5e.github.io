@@ -36,7 +36,7 @@ function loadIntoPage(data, id) {
         r[0] = '<div id="popover_html" class="popover">';
         r[1] = '<div class="popover-header">';
         r[2] = '<h4>' + magiaName + '</span></h4>';
-        r[3] = ' <h6 class="popover-subtitle">' + magiaCirculo + magiaEscola + '</h6>';
+        r[3] = ' <h6 class="popover-subtitle">' + magiaCirculo + ', ' + magiaEscola + '</h6>';
         r[4] = '</div><div class="popover-body">';
         r[5] = '<div class="popover-infos popover-magias">';
         r[6] = '<b>Tempo de Conjuração:</b> ' + magiaConjuracao + '<br>';
@@ -74,7 +74,7 @@ $('document').ready(function(){
 
             $.ajax({
                 url: "/data/magias-popover.html",
-                type: "post",
+                type: "get",
                 success: function (response) {
                 // Setting content option
                 $("#" + userid).tooltip("option", "content", response);
