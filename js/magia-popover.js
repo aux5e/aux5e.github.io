@@ -29,7 +29,7 @@ function loadIntoPage(data, id) {
         magiasNomes[0][id].descricao.substring(0, 1000) + "[...]";
         var magiaComponentesExtra = "";
         if (typeof magiasNomes[0][id].componentes_extra !== "undefined") {
-        magiaComponentesExtra = " (" + magiasNomes[0][id].componentes_extra + ")";
+        magiaComponentesExtra = " " + magiasNomes[0][id].componentes_extra;
         }
 
         var r = new Array();
