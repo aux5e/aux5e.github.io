@@ -22,12 +22,13 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 211"
+      "fonte": "PHB",
+      "pagina": "211"
     },
     "acudir-os-moribundos": {
       "id": 2,
       "nome": "Acudir os Moribundos",
-      "nome_ingles": "",
+      "nome_ingles": "Spare the Dying",
       "circulo": 0,
       "escola": "Necromancia",
       "ritual": false,
@@ -46,7 +47,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 211"
+      "fonte": "PHB",
+      "pagina": "211"
     },
     "alarme": {
       "id": 3,
@@ -71,7 +73,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 211"
+      "fonte": "PHB",
+      "pagina": "211"
     },
     "aliado-extraplanar": {
       "id": 4,
@@ -95,7 +98,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 212"
+      "fonte": "PHB",
+      "pagina": "212"
     },
     "aljava-veloz": {
       "id": 5,
@@ -120,7 +124,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 212"
+      "fonte": "PHB",
+      "pagina": "212"
     },
     "alterar-se": {
       "id": 6,
@@ -144,7 +149,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 212"
+      "fonte": "PHB",
+      "pagina": "212"
     },
     "amigos": {
       "id": 7,
@@ -169,7 +175,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 212"
+      "fonte": "PHB",
+      "pagina": "212"
     },
     "amizade-animal": {
       "id": 8,
@@ -194,7 +201,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 213"
+      "fonte": "PHB",
+      "pagina": "213"
     },
     "ancora-planar": {
       "id": 9,
@@ -219,7 +227,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 213"
+      "fonte": "PHB",
+      "pagina": "213"
     },
     "animar-mortos": {
       "id": 10,
@@ -244,7 +253,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 213"
+      "fonte": "PHB",
+      "pagina": "213"
     },
     "animar-objetos": {
       "id": 11,
@@ -268,7 +278,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 213"
+      "fonte": "PHB",
+      "pagina": "213"
     },
     "antipatia-simpatia": {
       "id": 12,
@@ -293,7 +304,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 214"
+      "fonte": "PHB",
+      "pagina": "214"
     },
     "aprimorar-atributo": {
       "id": 13,
@@ -318,7 +330,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 214"
+      "fonte": "PHB",
+      "pagina": "214"
     },
     "aprisionamento": {
       "id": 14,
@@ -343,7 +356,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 215"
+      "fonte": "PHB",
+      "pagina": "215"
     },
     "arca-secreta-de-leomund": {
       "id": 15,
@@ -368,7 +382,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 215"
+      "fonte": "PHB",
+      "pagina": "215"
     },
     "arma-elemental": {
       "id": 16,
@@ -392,7 +407,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 215"
+      "fonte": "PHB",
+      "pagina": "215"
     },
     "arma-espiritual": {
       "id": 17,
@@ -416,7 +432,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 216"
+      "fonte": "PHB",
+      "pagina": "216"
     },
     "arma-magica": {
       "id": 18,
@@ -440,7 +457,8 @@
       "ladino": true,
       "mago": true,
       "paladino": true,
-      "fonte": "PHB, pg 216"
+      "fonte": "PHB",
+      "pagina": "216"
     },
     "armadura-arcana": {
       "id": 19,
@@ -465,7 +483,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 216"
+      "fonte": "PHB",
+      "pagina": "216"
     },
     "armadura-de-agathys": {
       "id": 20,
@@ -490,7 +509,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 216"
+      "fonte": "PHB",
+      "pagina": "216"
     },
     "arrombar": {
       "id": 21,
@@ -514,7 +534,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 216"
+      "fonte": "PHB",
+      "pagina": "216"
     },
     "arte-druidica": {
       "id": 22,
@@ -538,7 +559,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 216"
+      "fonte": "PHB",
+      "pagina": "216"
     },
     "assassino-fantasmagorico": {
       "id": 23,
@@ -562,7 +584,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 216"
+      "fonte": "PHB",
+      "pagina": "216"
     },
     "augurio": {
       "id": 24,
@@ -587,7 +610,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 217"
+      "fonte": "PHB",
+      "pagina": "217"
     },
     "aumentar-reduzir": {
       "id": 25,
@@ -612,7 +636,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 217"
+      "fonte": "PHB",
+      "pagina": "217"
     },
     "aura-de-devocao": {
       "id": 26,
@@ -636,7 +661,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 218"
+      "fonte": "PHB",
+      "pagina": "218"
     },
     "aura-de-pureza": {
       "id": 27,
@@ -660,7 +686,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 218"
+      "fonte": "PHB",
+      "pagina": "218"
     },
     "aura-de-vitalidade": {
       "id": 28,
@@ -684,7 +711,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 218"
+      "fonte": "PHB",
+      "pagina": "218"
     },
     "aura-magica-de-nystul": {
       "id": 29,
@@ -709,7 +737,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 218"
+      "fonte": "PHB",
+      "pagina": "218"
     },
     "aura-sagrada": {
       "id": 30,
@@ -734,7 +763,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 218"
+      "fonte": "PHB",
+      "pagina": "218"
     },
     "auxilio": {
       "id": 31,
@@ -759,7 +789,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 218"
+      "fonte": "PHB",
+      "pagina": "218"
     },
     "banimento": {
       "id": 32,
@@ -784,7 +815,8 @@
       "ladino": true,
       "mago": true,
       "paladino": true,
-      "fonte": "PHB, pg 219"
+      "fonte": "PHB",
+      "pagina": "219"
     },
     "banquete-de-herois": {
       "id": 33,
@@ -809,7 +841,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 219"
+      "fonte": "PHB",
+      "pagina": "219"
     },
     "barreira de-laminas": {
       "id": 34,
@@ -833,7 +866,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 219"
+      "fonte": "PHB",
+      "pagina": "219"
     },
     "bencao": {
       "id": 35,
@@ -858,7 +892,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 219"
+      "fonte": "PHB",
+      "pagina": "219"
     },
     "boca-encantada": {
       "id": 36,
@@ -883,7 +918,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 219"
+      "fonte": "PHB",
+      "pagina": "219"
     },
     "bola-de-fogo": {
       "id": 37,
@@ -908,7 +944,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 220"
+      "fonte": "PHB",
+      "pagina": "220"
     },
     "bola-de-fogo-adiavel": {
       "id": 38,
@@ -933,7 +970,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 220"
+      "fonte": "PHB",
+      "pagina": "220"
     },
     "bolha-acida": {
       "id": 39,
@@ -957,7 +995,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 220"
+      "fonte": "PHB",
+      "pagina": "220"
     },
     "bom-fruto": {
       "id": 40,
@@ -982,7 +1021,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 221"
+      "fonte": "PHB",
+      "pagina": "221"
     },
     "bordao-mistico": {
       "id": 41,
@@ -1007,7 +1047,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 221"
+      "fonte": "PHB",
+      "pagina": "221"
     },
     "bracos-de-hadar": {
       "id": 42,
@@ -1031,7 +1072,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 221"
+      "fonte": "PHB",
+      "pagina": "221"
     },
     "caminhar-no-vento": {
       "id": 43,
@@ -1056,7 +1098,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 221"
+      "fonte": "PHB",
+      "pagina": "221"
     },
     "caminhar-sobre-as-aguas": {
       "id": 44,
@@ -1081,7 +1124,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 221"
+      "fonte": "PHB",
+      "pagina": "221"
     },
     "campo-antimagia": {
       "id": 45,
@@ -1106,7 +1150,8 @@
       "ladino": true,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 221"
+      "fonte": "PHB",
+      "pagina": "221"
     },
     "cao-fiel-de-mordenkainen": {
       "id": 46,
@@ -1131,7 +1176,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 222"
+      "fonte": "PHB",
+      "pagina": "222"
     },
     "carcere-de-energia": {
       "id": 47,
@@ -1156,7 +1202,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 222"
+      "fonte": "PHB",
+      "pagina": "222"
     },
     "cativar": {
       "id": 48,
@@ -1180,7 +1227,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 222"
+      "fonte": "PHB",
+      "pagina": "222"
     },
     "cegueira-surdez": {
       "id": 49,
@@ -1204,7 +1252,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 222"
+      "fonte": "PHB",
+      "pagina": "222"
     },
     "celeridade": {
       "id": 50,
@@ -1229,7 +1278,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 223"
+      "fonte": "PHB",
+      "pagina": "223"
     },
     "chama-continua": {
       "id": 51,
@@ -1254,7 +1304,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 223"
+      "fonte": "PHB",
+      "pagina": "223"
     },
     "chama-sagrada": {
       "id": 52,
@@ -1278,7 +1329,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 223"
+      "fonte": "PHB",
+      "pagina": "223"
     },
     "chicote-de-espinhos": {
       "id": 53,
@@ -1303,7 +1355,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 223"
+      "fonte": "PHB",
+      "pagina": "223"
     },
     "chuva-de-meteoros": {
       "id": 54,
@@ -1327,7 +1380,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 223"
+      "fonte": "PHB",
+      "pagina": "223"
     },
     "circulo-da-morte": {
       "id": 55,
@@ -1352,7 +1406,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 223"
+      "fonte": "PHB",
+      "pagina": "223"
     },
     "circulo-de-poder": {
       "id": 56,
@@ -1376,7 +1431,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 223"
+      "fonte": "PHB",
+      "pagina": "223"
     },
     "circulo-de-teleporte": {
       "id": 57,
@@ -1401,7 +1457,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 223"
+      "fonte": "PHB",
+      "pagina": "223"
     },
     "circulo-magico": {
       "id": 58,
@@ -1426,7 +1483,8 @@
       "ladino": true,
       "mago": true,
       "paladino": true,
-      "fonte": "PHB, pg 224"
+      "fonte": "PHB",
+      "pagina": "224"
     },
     "clarividencia": {
       "id": 59,
@@ -1451,7 +1509,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 224"
+      "fonte": "PHB",
+      "pagina": "224"
     },
     "clone": {
       "id": 60,
@@ -1476,7 +1535,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 224"
+      "fonte": "PHB",
+      "pagina": "224"
     },
     "coluna-de-chamas": {
       "id": 61,
@@ -1501,7 +1561,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 224"
+      "fonte": "PHB",
+      "pagina": "224"
     },
     "comando": {
       "id": 62,
@@ -1525,7 +1586,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 225"
+      "fonte": "PHB",
+      "pagina": "225"
     },
     "compreender-idiomas": {
       "id": 63,
@@ -1550,7 +1612,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 225"
+      "fonte": "PHB",
+      "pagina": "225"
     },
     "compulsao": {
       "id": 64,
@@ -1574,7 +1637,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 225"
+      "fonte": "PHB",
+      "pagina": "225"
     },
     "comunhao": {
       "id": 65,
@@ -1599,7 +1663,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 225"
+      "fonte": "PHB",
+      "pagina": "225"
     },
     "comunhao-com-a-natureza": {
       "id": 66,
@@ -1623,7 +1688,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 225"
+      "fonte": "PHB",
+      "pagina": "225"
     },
     "cone-de-frio": {
       "id": 67,
@@ -1648,7 +1714,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 226"
+      "fonte": "PHB",
+      "pagina": "226"
     },
     "confusao": {
       "id": 68,
@@ -1673,7 +1740,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 226"
+      "fonte": "PHB",
+      "pagina": "226"
     },
     "consagrar": {
       "id": 69,
@@ -1698,7 +1766,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 226"
+      "fonte": "PHB",
+      "pagina": "226"
     },
     "contagio": {
       "id": 70,
@@ -1722,7 +1791,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 227"
+      "fonte": "PHB",
+      "pagina": "227"
     },
     "contato-extraplanar": {
       "id": 71,
@@ -1746,7 +1816,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 227"
+      "fonte": "PHB",
+      "pagina": "227"
     },
     "contingencia": {
       "id": 72,
@@ -1771,7 +1842,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 227"
+      "fonte": "PHB",
+      "pagina": "227"
     },
     "contramagia": {
       "id": 73,
@@ -1795,7 +1867,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 227"
+      "fonte": "PHB",
+      "pagina": "227"
     },
     "controlar-agua": {
       "id": 74,
@@ -1820,7 +1893,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 228"
+      "fonte": "PHB",
+      "pagina": "228"
     },
     "controlar-o-clima": {
       "id": 75,
@@ -1845,7 +1919,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 228"
+      "fonte": "PHB",
+      "pagina": "228"
     },
     "convocacao-instantanea-de-drawmij": {
       "id": 76,
@@ -1870,7 +1945,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 228"
+      "fonte": "PHB",
+      "pagina": "228"
     },
     "convocar-familiar": {
       "id": 77,
@@ -1895,7 +1971,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 229"
+      "fonte": "PHB",
+      "pagina": "229"
     },
     "convocar-montaria": {
       "id": 78,
@@ -1919,7 +1996,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 229"
+      "fonte": "PHB",
+      "pagina": "229"
     },
     "convocar-relampagos": {
       "id": 79,
@@ -1943,7 +2021,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 229"
+      "fonte": "PHB",
+      "pagina": "229"
     },
     "corda-extradimensional": {
       "id": 80,
@@ -1968,7 +2047,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 229"
+      "fonte": "PHB",
+      "pagina": "229"
     },
     "cordao-de-flechas": {
       "id": 81,
@@ -1993,7 +2073,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 230"
+      "fonte": "PHB",
+      "pagina": "230"
     },
     "coroa-da-loucura": {
       "id": 82,
@@ -2017,7 +2098,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 230"
+      "fonte": "PHB",
+      "pagina": "230"
     },
     "corrente-de-relampagos": {
       "id": 83,
@@ -2042,7 +2124,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 230"
+      "fonte": "PHB",
+      "pagina": "230"
     },
     "crescer-espinhos": {
       "id": 84,
@@ -2067,7 +2150,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 230"
+      "fonte": "PHB",
+      "pagina": "230"
     },
     "crescimento-de-plantas": {
       "id": 85,
@@ -2091,7 +2175,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 230"
+      "fonte": "PHB",
+      "pagina": "230"
     },
     "criacao": {
       "id": 86,
@@ -2116,7 +2201,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 231"
+      "fonte": "PHB",
+      "pagina": "231"
     },
     "criar-chamas": {
       "id": 87,
@@ -2140,7 +2226,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 231"
+      "fonte": "PHB",
+      "pagina": "231"
     },
     "criar-comida-e-agua": {
       "id": 88,
@@ -2164,7 +2251,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 231"
+      "fonte": "PHB",
+      "pagina": "231"
     },
     "criar-mortos-vivos": {
       "id": 89,
@@ -2189,7 +2277,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 231"
+      "fonte": "PHB",
+      "pagina": "231"
     },
     "criar-ou-destruir-agua": {
       "id": 90,
@@ -2214,7 +2303,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 231"
+      "fonte": "PHB",
+      "pagina": "231"
     },
     "criar-passagem": {
       "id": 91,
@@ -2239,7 +2329,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 233"
+      "fonte": "PHB",
+      "pagina": "233"
     },
     "cupula-antivida": {
       "id": 92,
@@ -2263,7 +2354,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 233"
+      "fonte": "PHB",
+      "pagina": "233"
     },
     "cura-completa": {
       "id": 93,
@@ -2287,7 +2379,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 233"
+      "fonte": "PHB",
+      "pagina": "233"
     },
     "cura-completa-em-massa": {
       "id": 94,
@@ -2311,7 +2404,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 233"
+      "fonte": "PHB",
+      "pagina": "233"
     },
     "curar-ferimentos": {
       "id": 95,
@@ -2335,7 +2429,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 233"
+      "fonte": "PHB",
+      "pagina": "233"
     },
     "curar-ferimentos-em-massa": {
       "id": 96,
@@ -2359,7 +2454,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 233"
+      "fonte": "PHB",
+      "pagina": "233"
     },
     "danacao": {
       "id": 97,
@@ -2384,7 +2480,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 233"
+      "fonte": "PHB",
+      "pagina": "233"
     },
     "danca-irresistivel-de-otto": {
       "id": 98,
@@ -2408,7 +2505,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 234"
+      "fonte": "PHB",
+      "pagina": "234"
     },
     "de-carne-para-pedra": {
       "id": 99,
@@ -2433,7 +2531,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 234"
+      "fonte": "PHB",
+      "pagina": "234"
     },
     "dedo-da-morte": {
       "id": 100,
@@ -2457,7 +2556,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 234"
+      "fonte": "PHB",
+      "pagina": "234"
     },
     "defensor-da-fe": {
       "id": 101,
@@ -2481,7 +2581,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 234"
+      "fonte": "PHB",
+      "pagina": "234"
     },
     "desejo": {
       "id": 102,
@@ -2505,7 +2606,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 234"
+      "fonte": "PHB",
+      "pagina": "234"
     },
     "desintegrar": {
       "id": 103,
@@ -2530,7 +2632,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 235"
+      "fonte": "PHB",
+      "pagina": "235"
     },
     "despedacar": {
       "id": 104,
@@ -2555,7 +2658,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 235"
+      "fonte": "PHB",
+      "pagina": "235"
     },
     "despertar": {
       "id": 105,
@@ -2580,7 +2684,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 235"
+      "fonte": "PHB",
+      "pagina": "235"
     },
     "despistar": {
       "id": 106,
@@ -2604,7 +2709,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 235"
+      "fonte": "PHB",
+      "pagina": "235"
     },
     "destruicao-atordoante": {
       "id": 107,
@@ -2628,7 +2734,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 235"
+      "fonte": "PHB",
+      "pagina": "235"
     },
     "destruicao-banidora": {
       "id": 108,
@@ -2652,7 +2759,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 236"
+      "fonte": "PHB",
+      "pagina": "236"
     },
     "destruicao-cauterizante": {
       "id": 109,
@@ -2676,7 +2784,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 236"
+      "fonte": "PHB",
+      "pagina": "236"
     },
     "destruicao-cegante": {
       "id": 110,
@@ -2700,7 +2809,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 236"
+      "fonte": "PHB",
+      "pagina": "236"
     },
     "destruicao-colerica": {
       "id": 111,
@@ -2724,7 +2834,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 236"
+      "fonte": "PHB",
+      "pagina": "236"
     },
     "destruicao-estrondosa": {
       "id": 112,
@@ -2748,7 +2859,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 236"
+      "fonte": "PHB",
+      "pagina": "236"
     },
     "detectar-magia": {
       "id": 113,
@@ -2772,7 +2884,8 @@
       "ladino": true,
       "mago": true,
       "paladino": true,
-      "fonte": "PHB, pg 236"
+      "fonte": "PHB",
+      "pagina": "236"
     },
     "detectar-o-bem-e-o-mal": {
       "id": 114,
@@ -2796,7 +2909,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 236"
+      "fonte": "PHB",
+      "pagina": "236"
     },
     "detectar-pensamentos": {
       "id": 115,
@@ -2821,7 +2935,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 237"
+      "fonte": "PHB",
+      "pagina": "237"
     },
     "detectar-veneno-e-doenca": {
       "id": 116,
@@ -2846,7 +2961,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 237"
+      "fonte": "PHB",
+      "pagina": "237"
     },
     "disco-flutuante-de-tenser": {
       "id": 117,
@@ -2871,7 +2987,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 237"
+      "fonte": "PHB",
+      "pagina": "237"
     },
     "disfarcar-se": {
       "id": 118,
@@ -2895,7 +3012,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 237"
+      "fonte": "PHB",
+      "pagina": "237"
     },
     "dissipar-magia": {
       "id": 119,
@@ -2919,7 +3037,8 @@
       "ladino": true,
       "mago": true,
       "paladino": true,
-      "fonte": "PHB, pg 238"
+      "fonte": "PHB",
+      "pagina": "238"
     },
     "dissipar-o-bem-e-o-mal": {
       "id": 120,
@@ -2944,7 +3063,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 238"
+      "fonte": "PHB",
+      "pagina": "238"
     },
     "dominar-fera": {
       "id": 121,
@@ -2968,7 +3088,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 238"
+      "fonte": "PHB",
+      "pagina": "238"
     },
     "dominar-monstro": {
       "id": 122,
@@ -2992,7 +3113,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 238"
+      "fonte": "PHB",
+      "pagina": "238"
     },
     "dominar-pessoa": {
       "id": 123,
@@ -3016,7 +3138,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 238"
+      "fonte": "PHB",
+      "pagina": "238"
     },
     "duelo-compelido": {
       "id": 124,
@@ -3040,7 +3163,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 239"
+      "fonte": "PHB",
+      "pagina": "239"
     },
     "emaranhar": {
       "id": 125,
@@ -3064,7 +3188,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 239"
+      "fonte": "PHB",
+      "pagina": "239"
     },
     "encarnacao-fantasmagorica": {
       "id": 126,
@@ -3088,7 +3213,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 239"
+      "fonte": "PHB",
+      "pagina": "239"
     },
     "encontrar-armadilhas": {
       "id": 127,
@@ -3112,7 +3238,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 239"
+      "fonte": "PHB",
+      "pagina": "239"
     },
     "encontrar-o-caminho": {
       "id": 128,
@@ -3137,7 +3264,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 239"
+      "fonte": "PHB",
+      "pagina": "239"
     },
     "enfeiticar-pessoa": {
       "id": 129,
@@ -3161,7 +3289,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 240"
+      "fonte": "PHB",
+      "pagina": "240"
     },
     "enfraquecer-intelecto": {
       "id": 130,
@@ -3186,7 +3315,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 240"
+      "fonte": "PHB",
+      "pagina": "240"
     },
     "escalada-de-aranha": {
       "id": 131,
@@ -3211,7 +3341,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 240"
+      "fonte": "PHB",
+      "pagina": "240"
     },
     "escrita-ilusoria": {
       "id": 132,
@@ -3236,7 +3367,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 240"
+      "fonte": "PHB",
+      "pagina": "240"
     },
     "egide": {
       "id": 133,
@@ -3260,7 +3392,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 240"
+      "fonte": "PHB",
+      "pagina": "240"
     },
     "escudo-ardente": {
       "id": 134,
@@ -3285,7 +3418,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 240"
+      "fonte": "PHB",
+      "pagina": "240"
     },
     "escudo-da-fe": {
       "id": 135,
@@ -3310,7 +3444,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 241"
+      "fonte": "PHB",
+      "pagina": "241"
     },
     "escuridao": {
       "id": 136,
@@ -3335,7 +3470,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 241"
+      "fonte": "PHB",
+      "pagina": "241"
     },
     "esfera-congelante-de-otiluke": {
       "id": 137,
@@ -3360,7 +3496,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 241"
+      "fonte": "PHB",
+      "pagina": "241"
     },
     "esfera-flamejante": {
       "id": 138,
@@ -3385,7 +3522,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 241"
+      "fonte": "PHB",
+      "pagina": "241"
     },
     "esfera-resiliente-de-otiluke": {
       "id": 139,
@@ -3410,7 +3548,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 241"
+      "fonte": "PHB",
+      "pagina": "241"
     },
     "espada-de-mordenkainen": {
       "id": 140,
@@ -3435,7 +3574,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 242"
+      "fonte": "PHB",
+      "pagina": "242"
     },
     "esquentar-metal": {
       "id": 141,
@@ -3460,7 +3600,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 242"
+      "fonte": "PHB",
+      "pagina": "242"
     },
     "explosao-solar": {
       "id": 142,
@@ -3485,7 +3626,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 242"
+      "fonte": "PHB",
+      "pagina": "242"
     },
     "fabricar": {
       "id": 143,
@@ -3509,7 +3651,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 243"
+      "fonte": "PHB",
+      "pagina": "243"
     },
     "falar-com-animais": {
       "id": 144,
@@ -3533,7 +3676,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 243"
+      "fonte": "PHB",
+      "pagina": "243"
     },
     "falar-com-mortos": {
       "id": 145,
@@ -3558,7 +3702,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 243"
+      "fonte": "PHB",
+      "pagina": "243"
     },
     "falar-com-plantas": {
       "id": 146,
@@ -3582,7 +3727,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 243"
+      "fonte": "PHB",
+      "pagina": "243"
     },
     "favor-divino": {
       "id": 147,
@@ -3606,7 +3752,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 243"
+      "fonte": "PHB",
+      "pagina": "243"
     },
     "flecha-acida-de-melf": {
       "id": 148,
@@ -3631,7 +3778,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 243"
+      "fonte": "PHB",
+      "pagina": "243"
     },
     "flecha-relampago": {
       "id": 149,
@@ -3655,7 +3803,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 244"
+      "fonte": "PHB",
+      "pagina": "244"
     },
     "fogo-das-fadas": {
       "id": 150,
@@ -3679,7 +3828,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 244"
+      "fonte": "PHB",
+      "pagina": "244"
     },
     "fome-de-hadar": {
       "id": 151,
@@ -3704,7 +3854,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 244"
+      "fonte": "PHB",
+      "pagina": "244"
     },
     "forca-espectral": {
       "id": 152,
@@ -3729,7 +3880,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 244"
+      "fonte": "PHB",
+      "pagina": "244"
     },
     "forma-eterea": {
       "id": 153,
@@ -3753,7 +3905,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 244"
+      "fonte": "PHB",
+      "pagina": "244"
     },
     "forma-gasosa": {
       "id": 154,
@@ -3778,7 +3931,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 245"
+      "fonte": "PHB",
+      "pagina": "245"
     },
     "formas-animais": {
       "id": 155,
@@ -3802,7 +3956,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 245"
+      "fonte": "PHB",
+      "pagina": "245"
     },
     "gargalhada-nefasta-de-tasha": {
       "id": 156,
@@ -3827,7 +3982,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 245"
+      "fonte": "PHB",
+      "pagina": "245"
     },
     "glifo-de-protecao": {
       "id": 157,
@@ -3852,7 +4008,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 245"
+      "fonte": "PHB",
+      "pagina": "245"
     },
     "globo-de-invulnerabilidade": {
       "id": 158,
@@ -3877,7 +4034,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 246"
+      "fonte": "PHB",
+      "pagina": "246"
     },
     "golpe-certeiro": {
       "id": 159,
@@ -3901,7 +4059,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 246"
+      "fonte": "PHB",
+      "pagina": "246"
     },
     "golpe-constritor": {
       "id": 160,
@@ -3925,7 +4084,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 246"
+      "fonte": "PHB",
+      "pagina": "246"
     },
     "graxa": {
       "id": 161,
@@ -3950,7 +4110,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 246"
+      "fonte": "PHB",
+      "pagina": "246"
     },
     "guardioes-espirituais": {
       "id": 162,
@@ -3975,7 +4136,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 246"
+      "fonte": "PHB",
+      "pagina": "246"
     },
     "heroismo": {
       "id": 163,
@@ -3999,7 +4161,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 248"
+      "fonte": "PHB",
+      "pagina": "248"
     },
     "identificar": {
       "id": 164,
@@ -4024,7 +4187,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 248"
+      "fonte": "PHB",
+      "pagina": "248"
     },
     "ilusao-menor": {
       "id": 165,
@@ -4049,7 +4213,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 248"
+      "fonte": "PHB",
+      "pagina": "248"
     },
     "ilusao-programada": {
       "id": 166,
@@ -4074,7 +4239,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 248"
+      "fonte": "PHB",
+      "pagina": "248"
     },
     "imagem-maior": {
       "id": 167,
@@ -4099,7 +4265,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 248"
+      "fonte": "PHB",
+      "pagina": "248"
     },
     "imagem-silenciosa": {
       "id": 168,
@@ -4124,7 +4291,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 249"
+      "fonte": "PHB",
+      "pagina": "249"
     },
     "imobilizar-monstro": {
       "id": 169,
@@ -4149,7 +4317,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 249"
+      "fonte": "PHB",
+      "pagina": "249"
     },
     "imobilizar-pessoa": {
       "id": 170,
@@ -4174,7 +4343,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 249"
+      "fonte": "PHB",
+      "pagina": "249"
     },
     "indetectavel": {
       "id": 171,
@@ -4199,7 +4369,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 249"
+      "fonte": "PHB",
+      "pagina": "249"
     },
     "infligir-ferimentos": {
       "id": 172,
@@ -4223,7 +4394,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 249"
+      "fonte": "PHB",
+      "pagina": "249"
     },
     "inseto-gigante": {
       "id": 173,
@@ -4247,7 +4419,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 249"
+      "fonte": "PHB",
+      "pagina": "249"
     },
     "inverter-a-gravidade": {
       "id": 174,
@@ -4272,7 +4445,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 250"
+      "fonte": "PHB",
+      "pagina": "250"
     },
     "invisibilidade": {
       "id": 175,
@@ -4297,7 +4471,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 250"
+      "fonte": "PHB",
+      "pagina": "250"
     },
     "invisibilidade-maior": {
       "id": 176,
@@ -4321,7 +4496,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 250"
+      "fonte": "PHB",
+      "pagina": "250"
     },
     "invocar-animais": {
       "id": 177,
@@ -4345,7 +4521,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 250"
+      "fonte": "PHB",
+      "pagina": "250"
     },
     "invocar-barragem": {
       "id": 178,
@@ -4370,7 +4547,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 250"
+      "fonte": "PHB",
+      "pagina": "250"
     },
     "invocar-celestial": {
       "id": 179,
@@ -4394,7 +4572,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 250"
+      "fonte": "PHB",
+      "pagina": "250"
     },
     "invocar-elementais-menores": {
       "id": 180,
@@ -4418,7 +4597,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 251"
+      "fonte": "PHB",
+      "pagina": "251"
     },
     "invocar-elemental": {
       "id": 181,
@@ -4443,7 +4623,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 251"
+      "fonte": "PHB",
+      "pagina": "251"
     },
     "invocar-feerico": {
       "id": 182,
@@ -4467,7 +4648,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 251"
+      "fonte": "PHB",
+      "pagina": "251"
     },
     "invocar-saraivada": {
       "id": 183,
@@ -4492,7 +4674,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 251"
+      "fonte": "PHB",
+      "pagina": "251"
     },
     "invocar-seres-da-floresta": {
       "id": 184,
@@ -4517,7 +4700,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 251"
+      "fonte": "PHB",
+      "pagina": "251"
     },
     "labirinto": {
       "id": 185,
@@ -4541,7 +4725,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 252"
+      "fonte": "PHB",
+      "pagina": "252"
     },
     "lamina-flamejante": {
       "id": 186,
@@ -4566,7 +4751,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 252"
+      "fonte": "PHB",
+      "pagina": "252"
     },
     "lendas-e-historias": {
       "id": 187,
@@ -4591,7 +4777,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 252"
+      "fonte": "PHB",
+      "pagina": "252"
     },
     "lentidao": {
       "id": 188,
@@ -4616,7 +4803,8 @@
       "ladino": true,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 252"
+      "fonte": "PHB",
+      "pagina": "252"
     },
     "leque-cromatico": {
       "id": 189,
@@ -4641,7 +4829,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 252"
+      "fonte": "PHB",
+      "pagina": "252"
     },
     "levitacao": {
       "id": 190,
@@ -4666,7 +4855,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 253"
+      "fonte": "PHB",
+      "pagina": "253"
     },
     "ligacao-telepatica-de-rary": {
       "id": 191,
@@ -4691,7 +4881,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 253"
+      "fonte": "PHB",
+      "pagina": "253"
     },
     "limpar-a-mente": {
       "id": 192,
@@ -4715,7 +4906,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 253"
+      "fonte": "PHB",
+      "pagina": "253"
     },
     "linguas": {
       "id": 193,
@@ -4740,7 +4932,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 253"
+      "fonte": "PHB",
+      "pagina": "253"
     },
     "localizar-animais-ou-plantas": {
       "id": 194,
@@ -4765,7 +4958,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 253"
+      "fonte": "PHB",
+      "pagina": "253"
     },
     "localizar-criatura": {
       "id": 195,
@@ -4790,7 +4984,8 @@
       "ladino": true,
       "mago": true,
       "paladino": true,
-      "fonte": "PHB, pg 253"
+      "fonte": "PHB",
+      "pagina": "253"
     },
     "localizar-objeto": {
       "id": 196,
@@ -4815,7 +5010,8 @@
       "ladino": true,
       "mago": true,
       "paladino": true,
-      "fonte": "PHB, pg 254"
+      "fonte": "PHB",
+      "pagina": "254"
     },
     "loquacidade": {
       "id": 197,
@@ -4839,7 +5035,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 254"
+      "fonte": "PHB",
+      "pagina": "254"
     },
     "lufada-de-vento": {
       "id": 198,
@@ -4864,7 +5061,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 254"
+      "fonte": "PHB",
+      "pagina": "254"
     },
     "luz": {
       "id": 199,
@@ -4889,7 +5087,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 254"
+      "fonte": "PHB",
+      "pagina": "254"
     },
     "luz-do-dia": {
       "id": 200,
@@ -4913,7 +5112,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 254"
+      "fonte": "PHB",
+      "pagina": "254"
     },
     "luzes-dancantes": {
       "id": 201,
@@ -4938,7 +5138,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 254"
+      "fonte": "PHB",
+      "pagina": "254"
     },
     "malogro": {
       "id": 202,
@@ -4962,7 +5163,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 254"
+      "fonte": "PHB",
+      "pagina": "254"
     },
     "mansao-magnifica-de-mordenkainen": {
       "id": 203,
@@ -4987,7 +5189,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 255"
+      "fonte": "PHB",
+      "pagina": "255"
     },
     "manto-do-cruzado": {
       "id": 204,
@@ -5011,7 +5214,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 255"
+      "fonte": "PHB",
+      "pagina": "255"
     },
     "mao-de-bigby": {
       "id": 205,
@@ -5036,7 +5240,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 255"
+      "fonte": "PHB",
+      "pagina": "255"
     },
     "maos-flamejantes": {
       "id": 206,
@@ -5060,7 +5265,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 256"
+      "fonte": "PHB",
+      "pagina": "256"
     },
     "maos-magicas": {
       "id": 207,
@@ -5084,7 +5290,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 256"
+      "fonte": "PHB",
+      "pagina": "256"
     },
     "marca-da-punicao": {
       "id": 208,
@@ -5108,7 +5315,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 256"
+      "fonte": "PHB",
+      "pagina": "256"
     },
     "salto": {
       "id": 209,
@@ -5133,7 +5341,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 278"
+      "fonte": "PHB",
+      "pagina": "278"
     },
     "marca-do-predador": {
       "id": 210,
@@ -5157,7 +5366,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 256"
+      "fonte": "PHB",
+      "pagina": "256"
     },
     "mau-olhado": {
       "id": 211,
@@ -5181,7 +5391,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 257"
+      "fonte": "PHB",
+      "pagina": "257"
     },
     "medo": {
       "id": 212,
@@ -5206,7 +5417,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 257"
+      "fonte": "PHB",
+      "pagina": "257"
     },
     "mensageiro-animal": {
       "id": 213,
@@ -5231,7 +5443,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 257"
+      "fonte": "PHB",
+      "pagina": "257"
     },
     "mensagem": {
       "id": 214,
@@ -5256,7 +5469,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 257"
+      "fonte": "PHB",
+      "pagina": "257"
     },
     "mesclar-se-as-rochas": {
       "id": 215,
@@ -5280,7 +5494,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 257"
+      "fonte": "PHB",
+      "pagina": "257"
     },
     "metamorfose": {
       "id": 216,
@@ -5305,7 +5520,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 258"
+      "fonte": "PHB",
+      "pagina": "258"
     },
     "miragem-arcana": {
       "id": 217,
@@ -5329,7 +5545,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 258"
+      "fonte": "PHB",
+      "pagina": "258"
     },
     "missao": {
       "id": 218,
@@ -5353,7 +5570,8 @@
       "ladino": true,
       "mago": true,
       "paladino": true,
-      "fonte": "PHB, pg 258"
+      "fonte": "PHB",
+      "pagina": "258"
     },
     "misseis-magicos": {
       "id": 219,
@@ -5377,7 +5595,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 259"
+      "fonte": "PHB",
+      "pagina": "259"
     },
     "modificar-memoria": {
       "id": 220,
@@ -5401,7 +5620,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 259"
+      "fonte": "PHB",
+      "pagina": "259"
     },
     "moldar-rochas": {
       "id": 221,
@@ -5426,7 +5646,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 259"
+      "fonte": "PHB",
+      "pagina": "259"
     },
     "molestia": {
       "id": 222,
@@ -5450,7 +5671,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 259"
+      "fonte": "PHB",
+      "pagina": "259"
     },
     "montaria-fantasmagorica": {
       "id": 223,
@@ -5474,7 +5696,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 259"
+      "fonte": "PHB",
+      "pagina": "259"
     },
     "mover-terra": {
       "id": 224,
@@ -5499,7 +5722,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 260"
+      "fonte": "PHB",
+      "pagina": "260"
     },
     "movimentacao-livre": {
       "id": 225,
@@ -5524,7 +5748,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 260"
+      "fonte": "PHB",
+      "pagina": "260"
     },
     "muralha-de-energia": {
       "id": 226,
@@ -5549,7 +5774,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 260"
+      "fonte": "PHB",
+      "pagina": "260"
     },
     "muralha-de-espinhos": {
       "id": 227,
@@ -5574,7 +5800,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 260"
+      "fonte": "PHB",
+      "pagina": "260"
     },
     "muralha-de-fogo": {
       "id": 228,
@@ -5599,7 +5826,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 260"
+      "fonte": "PHB",
+      "pagina": "260"
     },
     "muralha-de-gelo": {
       "id": 229,
@@ -5624,7 +5852,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 261"
+      "fonte": "PHB",
+      "pagina": "261"
     },
     "muralha-de-pedra": {
       "id": 230,
@@ -5649,7 +5878,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 261"
+      "fonte": "PHB",
+      "pagina": "261"
     },
     "muralha-de-vento": {
       "id": 231,
@@ -5674,7 +5904,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 261"
+      "fonte": "PHB",
+      "pagina": "261"
     },
     "muralha-prismatica": {
       "id": 232,
@@ -5698,7 +5929,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 261"
+      "fonte": "PHB",
+      "pagina": "261"
     },
     "nevasca": {
       "id": 233,
@@ -5723,7 +5955,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 262"
+      "fonte": "PHB",
+      "pagina": "262"
     },
     "nevoa-mortal": {
       "id": 234,
@@ -5747,7 +5980,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 262"
+      "fonte": "PHB",
+      "pagina": "262"
     },
     "nevoa-obscurecente": {
       "id": 235,
@@ -5771,7 +6005,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 262"
+      "fonte": "PHB",
+      "pagina": "262"
     },
     "nuvem-de-adagas": {
       "id": 236,
@@ -5796,7 +6031,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 263"
+      "fonte": "PHB",
+      "pagina": "263"
     },
     "nuvem-fetida": {
       "id": 237,
@@ -5821,7 +6057,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 263"
+      "fonte": "PHB",
+      "pagina": "263"
     },
     "nuvem-incendiaria": {
       "id": 238,
@@ -5845,7 +6082,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 263"
+      "fonte": "PHB",
+      "pagina": "263"
     },
     "olho-arcano": {
       "id": 239,
@@ -5870,7 +6108,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 264"
+      "fonte": "PHB",
+      "pagina": "264"
     },
     "onda-destrutiva": {
       "id": 240,
@@ -5894,7 +6133,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 264"
+      "fonte": "PHB",
+      "pagina": "264"
     },
     "onda-trovejante": {
       "id": 241,
@@ -5918,7 +6158,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 264"
+      "fonte": "PHB",
+      "pagina": "264"
     },
     "oracao-de-cura": {
       "id": 242,
@@ -5942,7 +6183,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 264"
+      "fonte": "PHB",
+      "pagina": "264"
     },
     "orbe-cromatico": {
       "id": 243,
@@ -5967,7 +6209,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 264"
+      "fonte": "PHB",
+      "pagina": "264"
     },
     "orientacao": {
       "id": 244,
@@ -5991,7 +6234,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 264"
+      "fonte": "PHB",
+      "pagina": "264"
     },
     "padrao-hipnotico": {
       "id": 245,
@@ -6016,7 +6260,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 264"
+      "fonte": "PHB",
+      "pagina": "264"
     },
     "palavra-curativa": {
       "id": 246,
@@ -6040,7 +6285,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 264"
+      "fonte": "PHB",
+      "pagina": "264"
     },
     "palavra-curativa-em-massa": {
       "id": 247,
@@ -6064,7 +6310,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 265"
+      "fonte": "PHB",
+      "pagina": "265"
     },
     "palavra-de-poder-atordoar": {
       "id": 248,
@@ -6088,7 +6335,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 265"
+      "fonte": "PHB",
+      "pagina": "265"
     },
     "palavra-de-poder-salvar": {
       "id": 249,
@@ -6112,7 +6360,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 265"
+      "fonte": "PHB",
+      "pagina": "265"
     },
     "palavra-de-poder-matar": {
       "id": 250,
@@ -6136,7 +6385,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 265"
+      "fonte": "PHB",
+      "pagina": "265"
     },
     "palavra-de-regresso": {
       "id": 251,
@@ -6160,7 +6410,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 265"
+      "fonte": "PHB",
+      "pagina": "265"
     },
     "palavra-sagrada": {
       "id": 252,
@@ -6184,7 +6435,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 265"
+      "fonte": "PHB",
+      "pagina": "265"
     },
     "parar-o-tempo": {
       "id": 253,
@@ -6208,7 +6460,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 265"
+      "fonte": "PHB",
+      "pagina": "265"
     },
     "passo-arboreo": {
       "id": 254,
@@ -6232,7 +6485,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 266"
+      "fonte": "PHB",
+      "pagina": "266"
     },
     "passo-nebuloso": {
       "id": 255,
@@ -6256,7 +6510,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 266"
+      "fonte": "PHB",
+      "pagina": "266"
     },
     "passo-sem-rastro": {
       "id": 256,
@@ -6281,7 +6536,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 266"
+      "fonte": "PHB",
+      "pagina": "266"
     },
     "passos-largos": {
       "id": 257,
@@ -6306,7 +6562,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 266"
+      "fonte": "PHB",
+      "pagina": "266"
     },
     "pele-casca": {
       "id": 258,
@@ -6331,7 +6588,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 267"
+      "fonte": "PHB",
+      "pagina": "267"
     },
     "pele-rocha": {
       "id": 259,
@@ -6356,7 +6614,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 267"
+      "fonte": "PHB",
+      "pagina": "267"
     },
     "pequeno-refugio-de-leomund": {
       "id": 260,
@@ -6381,7 +6640,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 267"
+      "fonte": "PHB",
+      "pagina": "267"
     },
     "perdicao": {
       "id": 261,
@@ -6406,7 +6666,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 267"
+      "fonte": "PHB",
+      "pagina": "267"
     },
     "piscar": {
       "id": 262,
@@ -6430,7 +6691,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 267"
+      "fonte": "PHB",
+      "pagina": "267"
     },
     "polimorfia": {
       "id": 263,
@@ -6455,7 +6717,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 267"
+      "fonte": "PHB",
+      "pagina": "267"
     },
     "polimorfia-total": {
       "id": 264,
@@ -6480,7 +6743,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 268"
+      "fonte": "PHB",
+      "pagina": "268"
     },
     "porta-dimensional": {
       "id": 265,
@@ -6504,7 +6768,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 268"
+      "fonte": "PHB",
+      "pagina": "268"
     },
     "portais-arcanos": {
       "id": 266,
@@ -6528,7 +6793,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 268"
+      "fonte": "PHB",
+      "pagina": "268"
     },
     "portal": {
       "id": 267,
@@ -6553,7 +6819,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 268"
+      "fonte": "PHB",
+      "pagina": "268"
     },
     "praga-de-insetos": {
       "id": 268,
@@ -6578,7 +6845,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 269"
+      "fonte": "PHB",
+      "pagina": "269"
     },
     "pressagio": {
       "id": 269,
@@ -6603,7 +6871,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 269"
+      "fonte": "PHB",
+      "pagina": "269"
     },
     "prestidigitacao-arcana": {
       "id": 270,
@@ -6627,7 +6896,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 270"
+      "fonte": "PHB",
+      "pagina": "270"
     },
     "proibicao": {
       "id": 271,
@@ -6652,7 +6922,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 270"
+      "fonte": "PHB",
+      "pagina": "270"
     },
     "projecao-astral": {
       "id": 272,
@@ -6677,7 +6948,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 270"
+      "fonte": "PHB",
+      "pagina": "270"
     },
     "projetar-imagem": {
       "id": 273,
@@ -6702,7 +6974,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 270"
+      "fonte": "PHB",
+      "pagina": "270"
     },
     "protecao-contra-energia": {
       "id": 274,
@@ -6726,7 +6999,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 271"
+      "fonte": "PHB",
+      "pagina": "271"
     },
     "protecao-contra-laminas": {
       "id": 275,
@@ -6750,7 +7024,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 271"
+      "fonte": "PHB",
+      "pagina": "271"
     },
     "protecao-contra-morte": {
       "id": 276,
@@ -6774,7 +7049,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 271"
+      "fonte": "PHB",
+      "pagina": "271"
     },
     "protecao-contra-o-bem-e-o-mal": {
       "id": 277,
@@ -6799,7 +7075,8 @@
       "ladino": true,
       "mago": true,
       "paladino": true,
-      "fonte": "PHB, pg 271"
+      "fonte": "PHB",
+      "pagina": "271"
     },
     "protecao-contra-veneno": {
       "id": 278,
@@ -6823,7 +7100,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 271"
+      "fonte": "PHB",
+      "pagina": "271"
     },
     "proteger-fortaleza": {
       "id": 279,
@@ -6848,7 +7126,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 271"
+      "fonte": "PHB",
+      "pagina": "271"
     },
     "purificar-alimentos-e-bebidas": {
       "id": 280,
@@ -6872,7 +7151,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 272"
+      "fonte": "PHB",
+      "pagina": "272"
     },
     "queda-suave": {
       "id": 281,
@@ -6897,7 +7177,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 272"
+      "fonte": "PHB",
+      "pagina": "272"
     },
     "raio-ardente": {
       "id": 282,
@@ -6921,7 +7202,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 272"
+      "fonte": "PHB",
+      "pagina": "272"
     },
     "raio-de-bruxa": {
       "id": 283,
@@ -6946,7 +7228,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 272"
+      "fonte": "PHB",
+      "pagina": "272"
     },
     "raio-de-fogo": {
       "id": 284,
@@ -6970,7 +7253,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 272"
+      "fonte": "PHB",
+      "pagina": "272"
     },
     "raio-de-gelo": {
       "id": 285,
@@ -6994,7 +7278,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 272"
+      "fonte": "PHB",
+      "pagina": "272"
     },
     "raio-guia": {
       "id": 286,
@@ -7018,7 +7303,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 272"
+      "fonte": "PHB",
+      "pagina": "272"
     },
     "raio-do-enfraquecimento": {
       "id": 287,
@@ -7042,7 +7328,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 273"
+      "fonte": "PHB",
+      "pagina": "273"
     },
     "raio-lunar": {
       "id": 288,
@@ -7067,7 +7354,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 273"
+      "fonte": "PHB",
+      "pagina": "273"
     },
     "raio-mistico": {
       "id": 289,
@@ -7091,7 +7379,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 273"
+      "fonte": "PHB",
+      "pagina": "273"
     },
     "raio-nauseante": {
       "id": 290,
@@ -7115,7 +7404,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 273"
+      "fonte": "PHB",
+      "pagina": "273"
     },
     "raio-solar": {
       "id": 291,
@@ -7140,7 +7430,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 273"
+      "fonte": "PHB",
+      "pagina": "273"
     },
     "rajada-de-veneno": {
       "id": 292,
@@ -7164,7 +7455,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 273"
+      "fonte": "PHB",
+      "pagina": "273"
     },
     "rajada-prismatica": {
       "id": 293,
@@ -7188,7 +7480,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 273"
+      "fonte": "PHB",
+      "pagina": "273"
     },
     "receptaculo-arcano": {
       "id": 294,
@@ -7213,7 +7506,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 275"
+      "fonte": "PHB",
+      "pagina": "275"
     },
     "reencarnar": {
       "id": 295,
@@ -7238,7 +7532,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 275"
+      "fonte": "PHB",
+      "pagina": "275"
     },
     "reflexos": {
       "id": 296,
@@ -7262,7 +7557,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 276"
+      "fonte": "PHB",
+      "pagina": "276"
     },
     "refugiar": {
       "id": 297,
@@ -7287,7 +7583,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 276"
+      "fonte": "PHB",
+      "pagina": "276"
     },
     "regeneracao": {
       "id": 298,
@@ -7312,7 +7609,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 276"
+      "fonte": "PHB",
+      "pagina": "276"
     },
     "relampago": {
       "id": 299,
@@ -7337,7 +7635,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 276"
+      "fonte": "PHB",
+      "pagina": "276"
     },
     "remeter": {
       "id": 300,
@@ -7362,7 +7661,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 276"
+      "fonte": "PHB",
+      "pagina": "276"
     },
     "remover-maldicao": {
       "id": 301,
@@ -7386,7 +7686,8 @@
       "ladino": true,
       "mago": true,
       "paladino": true,
-      "fonte": "PHB, pg 276"
+      "fonte": "PHB",
+      "pagina": "276"
     },
     "reparar": {
       "id": 302,
@@ -7411,7 +7712,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 276"
+      "fonte": "PHB",
+      "pagina": "276"
     },
     "repouso-tranquilo": {
       "id": 303,
@@ -7436,7 +7738,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 277"
+      "fonte": "PHB",
+      "pagina": "277"
     },
     "repreensao-diabolica": {
       "id": 304,
@@ -7460,7 +7763,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 277"
+      "fonte": "PHB",
+      "pagina": "277"
     },
     "resistencia": {
       "id": 305,
@@ -7485,7 +7789,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 277"
+      "fonte": "PHB",
+      "pagina": "277"
     },
     "respirar-na-agua": {
       "id": 306,
@@ -7510,7 +7815,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 277"
+      "fonte": "PHB",
+      "pagina": "277"
     },
     "ressurreicao": {
       "id": 307,
@@ -7535,7 +7841,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 277"
+      "fonte": "PHB",
+      "pagina": "277"
     },
     "ressurreicao-verdadeira": {
       "id": 308,
@@ -7560,7 +7867,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 277"
+      "fonte": "PHB",
+      "pagina": "277"
     },
     "restauracao-maior": {
       "id": 309,
@@ -7585,7 +7893,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 278"
+      "fonte": "PHB",
+      "pagina": "278"
     },
     "restauracao-menor": {
       "id": 310,
@@ -7609,7 +7918,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 278"
+      "fonte": "PHB",
+      "pagina": "278"
     },
     "retirada-acelerada": {
       "id": 311,
@@ -7633,7 +7943,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 278"
+      "fonte": "PHB",
+      "pagina": "278"
     },
     "reviver-os-mortos": {
       "id": 312,
@@ -7658,7 +7969,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 278"
+      "fonte": "PHB",
+      "pagina": "278"
     },
     "revivificar": {
       "id": 313,
@@ -7683,7 +7995,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 278"
+      "fonte": "PHB",
+      "pagina": "278"
     },
     "rogar-maldicao": {
       "id": 314,
@@ -7707,7 +8020,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 278"
+      "fonte": "PHB",
+      "pagina": "278"
     },
     "santuario": {
       "id": 315,
@@ -7732,7 +8046,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 279"
+      "fonte": "PHB",
+      "pagina": "279"
     },
     "santuario-particular-de-mordenkainen": {
       "id": 316,
@@ -7757,7 +8072,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 279"
+      "fonte": "PHB",
+      "pagina": "279"
     },
     "saraivada-de-espinhos": {
       "id": 317,
@@ -7781,7 +8097,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 279"
+      "fonte": "PHB",
+      "pagina": "279"
     },
     "semiplano": {
       "id": 318,
@@ -7805,7 +8122,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 279"
+      "fonte": "PHB",
+      "pagina": "279"
     },
     "sentido-feral": {
       "id": 319,
@@ -7829,7 +8147,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 279"
+      "fonte": "PHB",
+      "pagina": "279"
     },
     "servo-invisivel": {
       "id": 320,
@@ -7854,7 +8173,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 279"
+      "fonte": "PHB",
+      "pagina": "279"
     },
     "sexto-sentido": {
       "id": 321,
@@ -7879,7 +8199,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 280"
+      "fonte": "PHB",
+      "pagina": "280"
     },
     "silencio": {
       "id": 322,
@@ -7903,7 +8224,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 280"
+      "fonte": "PHB",
+      "pagina": "280"
     },
     "simbolo": {
       "id": 323,
@@ -7928,7 +8250,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 280"
+      "fonte": "PHB",
+      "pagina": "280"
     },
     "similaridade": {
       "id": 324,
@@ -7952,7 +8275,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 280"
+      "fonte": "PHB",
+      "pagina": "280"
     },
     "simulacro": {
       "id": 325,
@@ -7977,7 +8301,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 281"
+      "fonte": "PHB",
+      "pagina": "281"
     },
     "simular-morte": {
       "id": 326,
@@ -8002,7 +8327,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 281"
+      "fonte": "PHB",
+      "pagina": "281"
     },
     "sinal-de-esperanca": {
       "id": 327,
@@ -8026,7 +8352,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 281"
+      "fonte": "PHB",
+      "pagina": "281"
     },
     "sonho": {
       "id": 328,
@@ -8051,7 +8378,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 281"
+      "fonte": "PHB",
+      "pagina": "281"
     },
     "sono": {
       "id": 329,
@@ -8076,7 +8404,8 @@
       "ladino": true,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 282"
+      "fonte": "PHB",
+      "pagina": "282"
     },
     "sugestao": {
       "id": 330,
@@ -8101,7 +8430,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 282"
+      "fonte": "PHB",
+      "pagina": "282"
     },
     "sugestao-em-massa": {
       "id": 331,
@@ -8126,7 +8456,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 282"
+      "fonte": "PHB",
+      "pagina": "282"
     },
     "sussurros-dissonantes": {
       "id": 332,
@@ -8150,7 +8481,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 282"
+      "fonte": "PHB",
+      "pagina": "282"
     },
     "taumaturgia": {
       "id": 333,
@@ -8174,7 +8506,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 282"
+      "fonte": "PHB",
+      "pagina": "282"
     },
     "teia": {
       "id": 334,
@@ -8199,7 +8532,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 283"
+      "fonte": "PHB",
+      "pagina": "283"
     },
     "telecinese": {
       "id": 335,
@@ -8223,7 +8557,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 283"
+      "fonte": "PHB",
+      "pagina": "283"
     },
     "telepatia": {
       "id": 336,
@@ -8248,7 +8583,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 283"
+      "fonte": "PHB",
+      "pagina": "283"
     },
     "teleporte": {
       "id": 337,
@@ -8272,7 +8608,8 @@
       "ladino": true,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 283"
+      "fonte": "PHB",
+      "pagina": "283"
     },
     "teleporte-via-plantas": {
       "id": 338,
@@ -8296,7 +8633,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 285"
+      "fonte": "PHB",
+      "pagina": "285"
     },
     "tempestade-da-vinganca": {
       "id": 339,
@@ -8320,7 +8658,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 285"
+      "fonte": "PHB",
+      "pagina": "285"
     },
     "tempestade-de-fogo": {
       "id": 340,
@@ -8344,7 +8683,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 285"
+      "fonte": "PHB",
+      "pagina": "285"
     },
     "tempestade-glacial": {
       "id": 341,
@@ -8369,7 +8709,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 286"
+      "fonte": "PHB",
+      "pagina": "286"
     },
     "tentaculos-negros-de-evard": {
       "id": 342,
@@ -8394,7 +8735,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 286"
+      "fonte": "PHB",
+      "pagina": "286"
     },
     "terremoto": {
       "id": 343,
@@ -8419,7 +8761,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 286"
+      "fonte": "PHB",
+      "pagina": "286"
     },
     "terreno-alucinatorio": {
       "id": 344,
@@ -8444,7 +8787,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 286"
+      "fonte": "PHB",
+      "pagina": "286"
     },
     "toque-chocante": {
       "id": 345,
@@ -8468,7 +8812,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 287"
+      "fonte": "PHB",
+      "pagina": "287"
     },
     "toque-necrotico": {
       "id": 346,
@@ -8492,7 +8837,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 287"
+      "fonte": "PHB",
+      "pagina": "287"
     },
     "toque-vampirico": {
       "id": 347,
@@ -8516,7 +8862,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 287"
+      "fonte": "PHB",
+      "pagina": "287"
     },
     "tranca-arcana": {
       "id": 348,
@@ -8541,7 +8888,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 287"
+      "fonte": "PHB",
+      "pagina": "287"
     },
     "transicao-planar": {
       "id": 349,
@@ -8566,7 +8914,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 287"
+      "fonte": "PHB",
+      "pagina": "287"
     },
     "tsunami": {
       "id": 350,
@@ -8590,7 +8939,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 287"
+      "fonte": "PHB",
+      "pagina": "287"
     },
     "turvar": {
       "id": 351,
@@ -8614,7 +8964,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 288"
+      "fonte": "PHB",
+      "pagina": "288"
     },
     "ver-o-invisivel": {
       "id": 352,
@@ -8639,7 +8990,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 288"
+      "fonte": "PHB",
+      "pagina": "288"
     },
     "videncia": {
       "id": 353,
@@ -8664,7 +9016,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 288"
+      "fonte": "PHB",
+      "pagina": "288"
     },
     "vinculo-de-protecao": {
       "id": 354,
@@ -8689,7 +9042,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 288"
+      "fonte": "PHB",
+      "pagina": "288"
     },
     "vinha-agarradora": {
       "id": 355,
@@ -8713,7 +9067,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 289"
+      "fonte": "PHB",
+      "pagina": "289"
     },
     "visao-da-verdade": {
       "id": 356,
@@ -8738,7 +9093,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 289"
+      "fonte": "PHB",
+      "pagina": "289"
     },
     "visao-no-escuro": {
       "id": 357,
@@ -8763,7 +9119,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 289"
+      "fonte": "PHB",
+      "pagina": "289"
     },
     "vitalidade-vazia": {
       "id": 358,
@@ -8788,7 +9145,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 289"
+      "fonte": "PHB",
+      "pagina": "289"
     },
     "voo": {
       "id": 359,
@@ -8813,7 +9171,8 @@
       "ladino": true,
       "mago": true,
       "paladino": false,
-      "fonte": "PHB, pg 289"
+      "fonte": "PHB",
+      "pagina": "289"
     },
     "zombaria-perversa": {
       "id": 360,
@@ -8837,7 +9196,8 @@
       "ladino": false,
       "mago": false,
       "paladino": false,
-      "fonte": "PHB, pg 289"
+      "fonte": "PHB",
+      "pagina": "289"
     },
     "zona-da-verdade": {
       "id": 361,
@@ -8861,7 +9221,8 @@
       "ladino": false,
       "mago": false,
       "paladino": true,
-      "fonte": "PHB, pg 289"
+      "fonte": "PHB",
+      "pagina": "289"
     }
   }
 }
