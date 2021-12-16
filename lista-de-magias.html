@@ -201,9 +201,9 @@ if ($conjuracao == true) {
             });
         }
 
-        loadIntoTable("/data/magias.json", document.getElementById("table-lista-de-magias"));
-
         $(document).ready(function () {
+            loadIntoTable("/data/magias.json", document.getElementById("table-lista-de-magias"));
+            
             $(document).ready(function () {
                 $("#table-lista-de-magias").DataTable({
                     responsive: true,
