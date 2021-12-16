@@ -75,9 +75,6 @@ $('document').ready(function(){
             $.ajax({
                 url: "/data/magias-popover.html",
                 type: "post",
-                data: {
-                userid: userid,
-                },
                 success: function (response) {
                 // Setting content option
                 $("#" + userid).tooltip("option", "content", response);
