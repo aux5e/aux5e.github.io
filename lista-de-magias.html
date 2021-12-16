@@ -144,16 +144,21 @@ if ($conjuracao == true) {
                     <th scope="col" class="text-center align-middle" style="max-width: 60px;">Fonte</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tbody-lista-de-magias">
             </tbody>
         </table>
     </div>
 
     <script>
-        function loadIntoTable(url, table) {
-            const tableBody = table.querySelector("tbody");
+        async function loadIntoTable(url, table) {
+            const tableBody = document.getElementById("tbody-lista-de-magias");
+            console.log('loadIntoPage');
 
-            $.getJSON(url, function (magias) {
+            // $.ajaxSetup({
+            //     async: false
+            // });
+
+            await $.getJSON(url, function (magias) {
                 const magiasValues = Object.keys(magias.data);
                 const siteUrl = 'https://aux5e.github.io';
                 const magiasArray = Object.values(magias.data);
@@ -163,7 +168,8 @@ if ($conjuracao == true) {
                 // tableBody.innerHTML = "";
 
                 // Popular o corpo da tabela
-                var r = new Array(), j = -1;
+                var r = [];
+                var j = -1;
                 for (var row = 0; row < magiasLenght; row++) {
                     r[++j] = '<tr onclick=';
                     r[++j] = 'window.location="';
@@ -174,7 +180,7 @@ if ($conjuracao == true) {
                     if (magiasArray[row].circulo == 0) {
                         r[++j] = '<span style="visibility:hidden;">0</span>Truque<span style="visibility:hidden;">0</span>';
                     }
-                    else if (magiasArray[row].circulo > 0) {
+                    else {
                         r[++j] = magiasArray[row].circulo;
                         r[++j] = 'º';
                     }
@@ -191,19 +197,21 @@ if ($conjuracao == true) {
                     r[++j] = magiasArray[row].nome_ingles;
                     r[++j] = '</td><td class="align-middle magiaOutrasCol">';
                     r[++j] = magiasArray[row].duracao;
-                    r[++j] = '</td><td class="align-middle magiaOutrasCol">'
+                    r[++j] = '</td><td class="align-middle magiaOutrasCol">';
                     r[++j] = magiasArray[row].alcance;
-                    r[++j] = '</td><td class="text-center align-middle magiaOutrasCol">'
+                    r[++j] = '</td><td class="text-center align-middle magiaOutrasCol">';
                     r[++j] = magiasArray[row].fonte;
                     r[++j] = '</td></tr>';
                 }
+
                 $(tableBody).html(r.join(''));
+                console.log(r.join(''));
             });
         }
 
-        $(document).ready(function () {
-            loadIntoTable("/data/magias.json", document.getElementById("table-lista-de-magias"));
-            
+        $(document).ready(async function () {
+            await loadIntoTable("/data/magias.json", document.getElementById("table-lista-de-magias"));
+
             $(document).ready(function () {
                 $("#table-lista-de-magias").DataTable({
                     responsive: true,
@@ -211,8 +219,7 @@ if ($conjuracao == true) {
                         url: "/data/dataTables.ptbr.json",
                     },
                     pageLength: 25,
-                    paging: true,
-                    scroller: true
+                    paging: true
                 });
             });
         });
