@@ -114,6 +114,9 @@
                             <p><span style="font-weight: 600;">Classes:</span>
                                 <span id="magiaClasses"></span>
                             </p>
+                            <p>
+                                <span style="font-size: 0.7em; font-style: italic; text-align: right;"><span id="magiaSources"></span></span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -188,6 +191,7 @@
                 if (magiasNomes[0][id].paladino == true) {
                     magiaClasses += '<span class="badge class-badge badge-light">Paladino</span>';
                 }
+                const magiaSource = magiasNomes[0][id].fonte + ', pg. ' + magiasNomes[0][id].pagina;
                 const magiaImagem = '<img src="/imagens/escola-' + magiasNomes[0][id].escola.toLowerCase().replace(/\s/g, '').replace(/[àáâãäå]/g, "a").replace(/ç/g,"c").replace(/[èéêë]/g,"e").replace(/[ìíîï]/g,"i").replace(/[òóôõö]/g,"o").replace(/[ùúûü]/g,"u").replace("'", '').replace(/ /g, '') + '.png" class="img-escola-magia img-fluid">';
                 
                 // Renderizar dado na página
@@ -208,6 +212,7 @@
                 document.getElementById("magiaDescricao").innerHTML = magiaDescricao;
                 document.getElementById("magiaComponentesExtra").innerHTML = magiaComponentesExtra;
                 document.getElementById("magiaClasses").innerHTML = magiaClasses;
+                document.getElementById("magiaSources").innerHTML = magiaSource;
                 document.getElementById("magiaImagem").innerHTML = magiaImagem;
             });
         };
