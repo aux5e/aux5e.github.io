@@ -1992,3 +1992,52 @@ a.ui-button:active,
     top: 55px;
     left: -240px;
 }
+
+/* MONSTER BLOCK */
+.mb__gradient {
+    background: linear-gradient(10deg, #A73335, white);
+    height:5px;
+    margin:7px 0px;
+}
+.mb__name {
+    font-size:225%;
+    font-family:Georgia, serif;
+    font-variant:small-caps;
+    font-weight:bold;
+    color:#A73335;
+}
+.mb__description {
+    font-style:italic;    
+}
+.mb__bold {
+    font-weight:bold;
+}
+.mb__red {
+    color:#A73335;
+}
+table.mb__stats {
+    width:100%;
+    border:0px;
+    border-collapse:collapse;
+    color:#A73335;
+}
+.mb__stats th, .mb__stats td {
+    width:50px;
+    text-align:center;
+}
+.mb__actions {
+    font-size:175%;
+    font-variant:small-caps;
+    margin:17px 0px 0px 0px;
+}
+.mb__hr {
+    background: #A73335;
+    height:2px;
+}
+.mb__attack {
+    margin:5px 0px;
+}
+.mb__attackname {
+    font-weight:bold;
+    font-style:italic;
+}
