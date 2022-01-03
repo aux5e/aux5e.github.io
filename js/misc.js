@@ -9,7 +9,7 @@ $(function () {
 
 /** ADD CLASS "active" ON MENU LINK */
 jQuery(function ($) {
-  var pgurl = window.location.href.substr(
+  var pgurl = window.location.href.substring(
     window.location.href.lastIndexOf("/") + 1
   );
   $("#nav-menu .nav-item a").each(function () {
