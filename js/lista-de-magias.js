@@ -20,7 +20,7 @@ async function loadIntoTable(url, table) {
       r[++j] = "/magias.html?nome=";
       r[++j] = magiasValues[row];
       r[++j] =
-        '"><th scope="row" class="text-center align-middle magiaCirculoCol">';
+        '; event.stopPropagation();"><th scope="row" class="text-center align-middle magiaCirculoCol">';
       if (magiasArray[row].circulo == 0) {
         r[++j] =
           '<span style="visibility:hidden;">0</span>Truque<span style="visibility:hidden;">0</span>';
