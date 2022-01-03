@@ -91,6 +91,10 @@ select {
   color: #111 !important;
 }
 
+.right-menu {
+    
+}
+
 .table-bordered thead th {
   border-bottom-width: 3px;
 }
