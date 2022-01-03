@@ -134,6 +134,10 @@ select {
   list-style: none;
 }
 
+.breadcrumb a {
+    text-decoration: none;
+}
+
 .navbar {
   padding: 0.5rem 0rem;
 }
