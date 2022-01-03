@@ -13,12 +13,10 @@ async function loadIntoTable(url, table) {
     // Popular o corpo da tabela
     var r = [];
     var j = -1;
+    var MagiaLink = 'window.location="' + siteUrl + '/magias.html?nome=' + magiasValues[row];
     for (var row = 0; row < magiasLenght; row++) {
-      r[++j] = "<tr onclick=";
-      r[++j] = 'window.location="';
-      r[++j] = siteUrl;
-      r[++j] = "/magias.html?nome=";
-      r[++j] = magiasValues[row];
+      r[++j] = '<tr onclick=';
+      r[++j] = MagiaLink;
       r[++j] =
         '"><th scope="row" class="text-center align-middle magiaCirculoCol">';
       if (magiasArray[row].circulo == 0) {
