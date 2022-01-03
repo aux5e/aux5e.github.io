@@ -2120,6 +2120,10 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataT
     background-color: #704cd9 !important;
 }
 
+/* table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control {
+    padding-left: 12px !important;
+} */
+
 @media only screen and (max-width: 767px) {
     .magiaNomeRow1 {
         font-size: 13px;
