@@ -2118,14 +2118,18 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataT
 
 @media only screen and (max-width: 767px) {
     .dataTables_length {
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .dataTables_filter {
+        padding-bottom: 0.25rem;
     }
 
     div.dataTables_wrapper div.dataTables_length,
     div.dataTables_wrapper div.dataTables_filter,
     div.dataTables_wrapper div.dataTables_info,
     div.dataTables_wrapper div.dataTables_paginate {
-        text-align: left;
+        text-align: left!important;
     }
 
     .table__nome_th {
