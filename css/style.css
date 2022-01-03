@@ -92,7 +92,17 @@ select {
 }
 
 .right-menu {
-    
+    display: flex;
+    margin-top: 8px;
+    margin-left: auto;
+}
+
+.right-menu .btn-qref{
+    margin-right: 0.4rem;
+}
+
+.right-menu .btn-qref::last-child{
+    margin-right: auto;
 }
 
 .table-bordered thead th {
