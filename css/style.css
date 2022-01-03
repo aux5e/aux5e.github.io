@@ -2083,3 +2083,18 @@ table.mb__stats {
   font-weight: bold;
   font-style: italic;
 }
+
+/* FORMS */
+.form-control-sm {
+    border-radius: 0rem;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+}
