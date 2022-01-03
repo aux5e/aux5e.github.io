@@ -78,6 +78,16 @@ $(document).ready(async function () {
       language: {
         url: "/data/dataTables.ptbr.json",
       },
+      columnDefs: [
+        {
+          targets: [0],
+          orderData: [0, 1],
+        },
+        {
+          targets: [1],
+          orderData: [1, 0],
+        }
+      ],
       pageLength: 25,
       paging: true,
     });
