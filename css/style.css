@@ -2160,4 +2160,8 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataT
     .table__nome_th {
         min-width: auto;
     }
+
+    .dataTables_paginate .pagination {
+        font-size: 12px;
+    }
 }
