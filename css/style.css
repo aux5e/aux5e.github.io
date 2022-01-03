@@ -2084,7 +2084,7 @@ table.mb__stats {
   font-style: italic;
 }
 
-/* FORMS */
+/* FORMS AND DATATABLE */
 .form-control-sm {
     border-radius: 0rem;
 }
@@ -2097,4 +2097,10 @@ table.mb__stats {
 .page-item:last-child .page-link {
     border-top-right-radius: 0rem;
     border-bottom-right-radius: 0rem;
+}
+
+@media only screen and (max-width:600px) {
+    .dataTables_length {
+        padding-bottom: 1rem;
+    }
 }
