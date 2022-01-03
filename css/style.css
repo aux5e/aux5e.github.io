@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 html {
   background-color: #111;
@@ -109,6 +109,15 @@ select {
   line-height: 14px;
   font-weight: 700;
   text-transform: uppercase;
+  background-color: #f7f7f7;
+  border-radius: 0rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
 }
 
 .navbar {
@@ -1890,11 +1899,6 @@ a.ui-button:active,
   border-radius: 0rem !important;
 }
 
-.breadcrumb {
-  background-color: #f7f7f7;
-  border-radius: 0rem;
-}
-
 #informacoes {
   margin-top: 4rem;
 }
@@ -1964,10 +1968,10 @@ a.ui-button:active,
 
 /* Testing */
 .tooltip-inner {
-    max-width: 100%!important;
-    padding: 0rem;
-    border-radius:0;
-    margin-top: 50px;
+  max-width: 100% !important;
+  padding: 0rem;
+  border-radius: 0;
+  margin-top: 50px;
 }
 
 .magia-hover-popup .tooltiptext {
@@ -1981,81 +1985,82 @@ a.ui-button:active,
 }
 
 .magicas-tooltip:hover {
-    color: #472f91;
+  color: #472f91;
 }
 
 .tooltip-inner {
-    color: transparent;
-    background-color: transparent;
+  color: transparent;
+  background-color: transparent;
 }
 
 .tooltip .arrow {
-    display:none!important;
+  display: none !important;
 }
 
 .popover {
-    top: 55px;
-    left: -240px;
+  top: 55px;
+  left: -240px;
 }
 
 /* MONSTER BLOCK */
 .mb__section {
-    width: 310px;
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 11px;
-    /* border-top: solid 4px #a58548; */
-    /* border-bottom: solid 4px #a58548; */
-    /* background-color: #f8f3d5; */
-    border: solid 1px #eeeeee;
-    padding: 0.5rem 1rem;
-    /* box-shadow: 0px 0px 4px #9f9f9f; */
-    border-radius: 0rem;
-    margin: 1.5rem 0;
+  width: 310px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  /* border-top: solid 4px #a58548; */
+  /* border-bottom: solid 4px #a58548; */
+  /* background-color: #f8f3d5; */
+  border: solid 1px #eeeeee;
+  padding: 0.5rem 1rem;
+  /* box-shadow: 0px 0px 4px #9f9f9f; */
+  border-radius: 0rem;
+  margin: 1.5rem 0;
 }
 .mb__gradient {
-    background: linear-gradient(10deg, #A73335, white);
-    height:5px;
-    margin:7px 0px;
+  background: linear-gradient(10deg, #a73335, white);
+  height: 5px;
+  margin: 7px 0px;
 }
 .mb__name {
-    font-size:225%;
-    font-family:Georgia, serif;
-    font-variant:small-caps;
-    font-weight:bold;
-    color:#A73335;
+  font-size: 225%;
+  font-family: Georgia, serif;
+  font-variant: small-caps;
+  font-weight: bold;
+  color: #a73335;
 }
 .mb__description {
-    font-style:italic;    
+  font-style: italic;
 }
 .mb__bold {
-    font-weight:bold;
+  font-weight: bold;
 }
 .mb__red {
-    color:#A73335;
+  color: #a73335;
 }
 table.mb__stats {
-    width:100%;
-    border:0px;
-    border-collapse:collapse;
-    color:#A73335;
+  width: 100%;
+  border: 0px;
+  border-collapse: collapse;
+  color: #a73335;
 }
-.mb__stats th, .mb__stats td {
-    width:50px;
-    text-align:center;
+.mb__stats th,
+.mb__stats td {
+  width: 50px;
+  text-align: center;
 }
 .mb__actions {
-    font-size:175%;
-    font-variant:small-caps;
-    margin:17px 0px 0px 0px;
+  font-size: 175%;
+  font-variant: small-caps;
+  margin: 17px 0px 0px 0px;
 }
 .mb__hr {
-    background: #A73335;
-    height:2px;
+  background: #a73335;
+  height: 2px;
 }
 .mb__attack {
-    margin:5px 0px;
+  margin: 5px 0px;
 }
 .mb__attackname {
-    font-weight:bold;
-    font-style:italic;
+  font-weight: bold;
+  font-style: italic;
 }
