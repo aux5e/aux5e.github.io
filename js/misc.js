@@ -19,6 +19,16 @@ jQuery(function ($) {
   });
 });
 
+/** SECONDARY CONTENT POSITION (sticky menu) */
+$(document).ready(function () {
+    var o = $(".col-9").height() - $(".secondary-content").height();
+    $(window).scroll(function () {
+        var t = $(this).scrollTop();
+        $(".secondary-content").height();
+        t <= 150 ? $(".secondary-content").css({ position: "unset", top: "auto" }) : t >= o ? $(".secondary-content").css({ position: "absolute", bottom: "0", top: "auto" }) : $(".secondary-content").css({ position: "fixed", top: "20px" });
+    });
+});
+
 //// Get the container element
 //var btnContainer = document.getElementById("nav-menu");
 
