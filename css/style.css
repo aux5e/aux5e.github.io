@@ -893,6 +893,7 @@ ul.main-list {
 
 .quick-menu-item-link {
   border-left: 3px solid #fff;
+  text-decoration: none;
 }
 
 .quick-menu-active {
