@@ -54,7 +54,7 @@ function loadIntoPage(data, id) {
 };
 
 // Solução para Tooltips Magia usando Bootstrap
-$('.magia-hover').tooltip({
+tooltip.show({
     template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
     position: "bottom"
 })
