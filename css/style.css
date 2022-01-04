@@ -349,6 +349,7 @@ footer {
   position: relative;
   padding: 5px 0px;
   margin-left: 4px;
+  margin-right: 12px;
 }
 
 .concentSpan:before {
@@ -848,7 +849,6 @@ ul.main-list {
   font-size: 15px;
   font-style: italic;
   font-weight: 300;
-  margin-left: 12px;
 }
 
 @media only screen and (max-width: 500px) {
