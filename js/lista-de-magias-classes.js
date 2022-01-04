@@ -87,6 +87,7 @@ $(document).ready(async function () {
       ],
       pageLength: 25,
       paging: true,
+      autoWidth: true,
     });
   });
 });
