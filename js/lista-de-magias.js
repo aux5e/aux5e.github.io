@@ -26,7 +26,7 @@ async function loadIntoTable(url, table) {
         r[++j] = "º";
       }
       r[++j] = "</th>";
-      r[++j] = '<td class="all"><div class="magiaNomeRow1">';
+      r[++j] = '<td><div class="magiaNomeRow1">';
       r[++j] = magiasArray[row].nome;
       if (magiasArray[row].concentracao == true) {
         r[++j] = '<span class="concentSpan"></span>';
