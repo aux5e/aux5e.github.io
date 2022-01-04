@@ -15,12 +15,9 @@ async function loadIntoTable(url, table) {
     var j = -1;
     for (var row = 0; row < magiasLenght; row++) {
       r[++j] = '<tr onclick=';
-      r[++j] = "window.location='";
-      r[++j] = siteUrl;
-      r[++j] = "/magias.html?nome=";
-      r[++j] = magiasValues[row];
+      r[++j] = 'window.location="' + siteUrl + "/magias.html?nome=" + magiasValues[row];
       r[++j] =
-        '\'; event.stopPropagation();"><th scope="row" class="text-center align-middle magiaCirculoCol">';
+        '"><th scope="row" class="text-center align-middle magiaCirculoCol">';
       if (magiasArray[row].circulo == 0) {
         r[++j] =
           '<span style="visibility:hidden;">0</span>Truque<span style="visibility:hidden;">0</span>';
