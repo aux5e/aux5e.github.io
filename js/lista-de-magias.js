@@ -17,7 +17,7 @@ async function loadIntoTable(url, table) {
       r[++j] = '<tr onclick=';
       r[++j] = 'window.location="' + siteUrl + "/magias.html?nome=" + magiasValues[row];
       r[++j] =
-        '"><th scope="row" class="text-center align-middle magiaCirculoCol">';
+        '"><th scope="row" class="text-center align-middle magiaCirculoCol all">';
       if (magiasArray[row].circulo == 0) {
         r[++j] =
           '<span style="visibility:hidden;">0</span>Truque<span style="visibility:hidden;">0</span>';
@@ -26,7 +26,7 @@ async function loadIntoTable(url, table) {
         r[++j] = "º";
       }
       r[++j] = "</th>";
-      r[++j] = '<td><div class="magiaNomeRow1">';
+      r[++j] = '<td class="all"><div class="magiaNomeRow1">';
       r[++j] = magiasArray[row].nome;
       if (magiasArray[row].concentracao == true) {
         r[++j] = '<span class="concentSpan"></span>';
@@ -34,13 +34,13 @@ async function loadIntoTable(url, table) {
       r[++j] = '</div><div class="magiaNomeRow2">';
       r[++j] = magiasArray[row].escola + " • " + magiasArray[row].componentes;
       r[++j] = "</div></td>";
-      r[++j] = '<td class="align-middle magiaInglesCol">';
+      r[++j] = '<td class="align-middle magiaInglesCol desktop">';
       r[++j] = magiasArray[row].nome_ingles;
-      r[++j] = '</td><td class="align-middle magiaOutrasCol">';
+      r[++j] = '</td><td class="align-middle magiaOutrasCol desktop">';
       r[++j] = magiasArray[row].duracao;
-      r[++j] = '</td><td class="align-middle magiaOutrasCol">';
+      r[++j] = '</td><td class="align-middle magiaOutrasCol desktop">';
       r[++j] = magiasArray[row].alcance;
-      r[++j] = '</td><td class="text-center align-middle magiaOutrasCol">';
+      r[++j] = '</td><td class="text-center align-middle magiaOutrasCol tablet-l">';
       r[++j] = magiasArray[row].fonte;
       r[++j] = "</td></tr>";
     }
