@@ -28,38 +28,35 @@ async function loadIntoTable(url, table) {
     var r = [];
     var j = -1;
     for (var row = 0; row < magiasArrayLenght; row++) {
-      r[++j] = "<tr onclick=";
-      r[++j] = 'window.location="';
-      r[++j] = siteUrl;
-      r[++j] = "/magias.html?nome=";
-      r[++j] = magiasArray1[row];
-      r[++j] =
-        '"><th scope="row" class="text-center align-middle magiaCirculoCol">';
-      if (magiasArray[row]["circulo"] == 0) {
+        r[++j] = '<tr onclick=';
+        r[++j] = 'window.location="' + siteUrl + "/magias.html?nome=" + magiasValues[row];
         r[++j] =
-          '<span style="visibility:hidden;">0</span>Truque<span style="visibility:hidden;">0</span>';
-      } else {
-        r[++j] = magiasArray[row]["circulo"];
-        r[++j] = "º";
-      }
-      r[++j] = "</th>";
-      r[++j] = '<td><div class="magiaNomeRow1">';
-      r[++j] = magiasArray[row]["nome"];
-      if (magiasArray[row]["concentracao"] == true) {
-        r[++j] = '<span class="concentSpan"></span>';
-      }
-      r[++j] = '</div><div class="magiaNomeRow2">';
-      r[++j] = magiasArray[row]["escola"] + " • " + magiasArray[row]["componentes"];
-      r[++j] = "</div></td>";
-      r[++j] = '<td class="align-middle magiaInglesCol">';
-      r[++j] = magiasArray[row]["nome_ingles"];
-      r[++j] = '</td><td class="align-middle magiaOutrasCol">';
-      r[++j] = magiasArray[row]["duracao"];
-      r[++j] = '</td><td class="align-middle magiaOutrasCol">';
-      r[++j] = magiasArray[row]["alcance"];
-      r[++j] = '</td><td class="text-center align-middle magiaOutrasCol">';
-      r[++j] = magiasArray[row]["fonte"];
-      r[++j] = "</td></tr>";
+          '"><th scope="row" class="text-center align-middle magiaCirculoCol">';
+        if (magiasArray[row].circulo == 0) {
+          r[++j] =
+            '<span style="visibility:hidden;">0</span>Truque<span style="visibility:hidden;">0</span>';
+        } else {
+          r[++j] = magiasArray[row].circulo;
+          r[++j] = "º";
+        }
+        r[++j] = "</th>";
+        r[++j] = '<td><div class="magiaNomeRow1">';
+        r[++j] = magiasArray[row].nome;
+        if (magiasArray[row].concentracao == true) {
+          r[++j] = '<span class="concentSpan"></span>';
+        }
+        r[++j] = '</div><div class="magiaNomeRow2">';
+        r[++j] = magiasArray[row].escola + " • " + magiasArray[row].componentes;
+        r[++j] = "</div></td>";
+        r[++j] = '<td class="align-middle magiaInglesCol">';
+        r[++j] = magiasArray[row].nome_ingles;
+        r[++j] = '</td><td class="align-middle magiaOutrasCol">';
+        r[++j] = magiasArray[row].duracao;
+        r[++j] = '</td><td class="align-middle magiaOutrasCol">';
+        r[++j] = magiasArray[row].alcance;
+        r[++j] = '</td><td class="text-center align-middle magiaOutrasCol">';
+        r[++j] = magiasArray[row].fonte;
+        r[++j] = "</td></tr>";
     }
 
     $(tableBody).html(r.join(""));
