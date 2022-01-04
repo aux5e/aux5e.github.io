@@ -8,6 +8,9 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+}
 p {
   font-family: "Roboto", sans-serif;
   font-size: 0.9em;
