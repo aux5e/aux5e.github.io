@@ -7,52 +7,6 @@ window.onload = function load () {
 	DataUtil.loadJSON(JSON_URL, onJsonLoad);
 };
 
-const sourceFilter = getSourceFilter();
-let filterBox;
-function onJsonLoad (data) {
-	list = ListUtil.search({
-		valueNames: ['name', 'source', 'ability', 'prerequisite'],
-		listClass: "feats"
-	});
-
-	const asiFilter = getAsiFilter();
-	const prereqFilter = new Filter({
-		header: "Prerequisite",
-		items: ["Ability", "Race", "Proficiency", "Spellcasting"]
-	});
-	filterBox = initFilterBox(
-		sourceFilter,
-		asiFilter,
-		prereqFilter
-	);
-
-	list.on("updated", () => {
-		filterBox.setCount(list.visibleItems.length, list.items.length);
-	});
-
-	// filtering function
-	$(filterBox).on(
-		FilterBox.EVNT_VALCHANGE,
-		handleFilterChange
-	);
-
-	const subList = ListUtil.initSublist({
-		valueNames: ["name", "ability", "prerequisite", "id"],
-		listClass: "subfeats",
-		getSublistRow: getSublistItem
-	});
-	ListUtil.initGenericPinnable();
-
-	addFeats(data);
-	BrewUtil.addBrewData(addFeats);
-	BrewUtil.makeBrewButton("manage-brew");
-	BrewUtil.bind({list, filterBox, sourceFilter});
-
-	History.init();
-	handleFilterChange();
-	RollerUtil.addListRollButton();
-}
-
 let featList = [];
 let ftI = 0;
 function addFeats (data) {
@@ -60,7 +14,7 @@ function addFeats (data) {
 
 	featList = featList.concat(data.feat);
 
-	const featTable = $("ul.feats");
+	const featTable = $("section.talentos");
 	let tempString = "";
 	for (; ftI < featList.length; ftI++) {
 		const curfeat = featList[ftI];
@@ -84,14 +38,14 @@ function addFeats (data) {
 		curfeat._slPrereq = prereqText;
 
 		tempString += `
-			<li class="row" ${FLTR_ID}="${ftI}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
+			<div class="row" ${FLTR_ID}="${ftI}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
 				<a id='${ftI}' href='#${UrlUtil.autoEncodeHash(curfeat)}' title='${name}'>
 					<span class='${CLS_COL_1}'>${name}</span>
 					<span class='${CLS_COL_2}' title='${Parser.sourceJsonToFull(curfeat.source)}'>${Parser.sourceJsonToAbv(curfeat.source)}</span>
 					<span class='${CLS_COL_3}'>${ability.asText}</span>
 					<span class='${CLS_COL_4}'>${prereqText}</span>
 				</a>
-			</li>`;
+			</div>`;
 
 		// populate filters
 		sourceFilter.addIfAbsent(curfeat.source);
