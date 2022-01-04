@@ -2113,16 +2113,17 @@ table.mb__stats {
 }
 
 table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
-    z-index: 999 !important;
+    display: none!important;
+    /* z-index: 999 !important;
     font-family: "Roboto Condensed", "Roboto", sans-serif !important;
     left: 10px !important;
     border: 0.13rem solid white !important;
-    background-color: #704cd9 !important;
+    background-color: #704cd9 !important; */
 }
 
-/* table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control {
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control {
     padding-left: 12px !important;
-} */
+}
 
 @media only screen and (max-width: 767px) {
     .magiaNomeRow1 {
