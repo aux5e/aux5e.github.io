@@ -2162,6 +2162,10 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dt
         min-width: auto;
     }
 
+    .dataTables_paginate {
+        padding-top: 0.5rem;
+    }
+
     .dataTables_paginate .pagination {
         font-size: 12px;
     }
