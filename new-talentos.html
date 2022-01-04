@@ -41,7 +41,30 @@
     <div id="classes-phb-container" class="container">
         <div class="row">
             <div class="col-lg-3">
-                <section class="secondary-content">
+                <div class="view-col" id="listcontainer">
+                    <div class="input-group" id="filter-search-input-group">
+                        <input type="search" id="search" class="search form-control" placeholder="Find feat...">
+                        <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" id="reset">Reset</button>
+                            </span>
+                    </div>
+                    <div id="filtertools" class="sortlabel btn-group">
+                        <button class="col-xs-3 col-xs-3-8 sort btn btn-default btn-xs" type="button" data-sort="name">Name
+                        </button>
+                        <button class="col-xs-1 col-xs-1-7 sort btn btn-default btn-xs" type="button" data-sort="source">
+                            Source
+                        </button>
+                        <button class="col-xs-3 col-xs-3-5 sort btn btn-default btn-xs" type="button" data-sort="ability">
+                            Ability
+                        </button>
+                        <button class="col-xs-3 sort btn btn-default btn-xs" type="button" data-sort="prerequisite">
+                            Prerequisite
+                        </button>
+                    </div>
+        
+                    <ul class="list feats"></ul>
+                </div>
+                <!-- <section class="secondary-content">
                     <nav class="sidebar-menu" style="top: auto; position: unset;">
                         <ul id="quick-menu" class="quick-menu-tier-1">
                             <li class="quick-menu-item">
@@ -289,30 +312,54 @@
                             </ul>
                         </ul>
                     </nav>
-                </section>
+                </section> -->
                 <section class="secondary-content-mobile">
-                    <div class="view-col" id="listcontainer">
-                        <div class="input-group" id="filter-search-input-group">
-                            <input type="search" id="search" class="search form-control" placeholder="Find feat...">
-                            <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button" id="reset">Reset</button>
-                                </span>
-                        </div>
-                        <div id="filtertools" class="sortlabel btn-group">
-                            <button class="col-xs-3 col-xs-3-8 sort btn btn-default btn-xs" type="button" data-sort="name">Name
-                            </button>
-                            <button class="col-xs-1 col-xs-1-7 sort btn btn-default btn-xs" type="button" data-sort="source">
-                                Source
-                            </button>
-                            <button class="col-xs-3 col-xs-3-5 sort btn btn-default btn-xs" type="button" data-sort="ability">
-                                Ability
-                            </button>
-                            <button class="col-xs-3 sort btn btn-default btn-xs" type="button" data-sort="prerequisite">
-                                Prerequisite
-                            </button>
-                        </div>
-            
-                        <ul class="list feats"></ul>
+                    <div class="select-menu-jump">
+                        <select class="select-nav" name="forma" onchange="location = this.value;">
+                            <option value selected>Selecione um Talento...</option>
+                            <option value="#TalentosAdeptoElemental">Adepto Elemental</a>
+                            <option value="#TalentosAdeptoMarcial">Adepto Marcial</a>
+                            <option value="#TalentosAgressor">Agressor</a>
+                            <option value="#TalentosAlerta">Alerta</a>
+                            <option value="#TalentosAnalitico">Analítico</a>
+                            <option value="#TalentosAtacanteSelvagem">Atacante Selvagem</a>
+                            <option value="#TalentosAtiradorArcano">Atirador Arcano</a>
+                            <option value="#TalentosAtleta">Atleta</a>
+                            <option value="#TalentosAtor">Ator</a>
+                            <option value="#TalentosCombatenteMontado">Combatente Montado</a>
+                            <option value="#TalentosConjuradorBelico">Conjurador Bélico</a>
+                            <option value="#TalentosConjuradorRitualista">Conjurador Ritualista</a>
+                            <option value="#TalentosCurandeiro">Curandeiro</a>
+                            <option value="#TalentosDuelistaDefensivo">Duelista Defensivo</a>
+                            <option value="#TalentosEspecialistaAmbidestro">Especialista Ambidestro</a>
+                            <option value="#TalentosEspecialistaArmadurasLeves">Especialista em Armaduras Leves</a>
+                            <option value="#TalentosEspecialistaArmadurasMedias">Especialista em Armaduras Médias</a>
+                            <option value="#TalentosEspecialistaArmadurasPesadas">Especialista em Armaduras Pesadas</a>
+                            <option value="#TalentosEspecialistaBesta">Especialista em Besta</a>
+                            <option value="#TalentosExploradorMasmorras">Explorador de Masmorras</a>
+                            <option value="#TalentosExterminadorConjuradores">Exterminador de Conjuradores</a>
+                            <option value="#TalentosHabilidoso">Habilidoso</a>
+                            <option value="#TalentosImobilizador">Imobilizador</a>
+                            <option value="#TalentosIniciadoMagia">Iniciado em Magia</a>
+                            <option value="#TalentosLiderInspirador">Líder Inspirador</a>
+                            <option value="#TalentosLigeiro">Ligeiro</a>
+                            <option value="#TalentosLinguista">Linguista</a>
+                            <option value="#TalentosMenteAgucada">Mente Aguçada</a>
+                            <option value="#TalentosMestreAtirador">Mestre-Atirador</a>
+                            <option value="#TalentosMestreArmas">Mestre das Armas</a>
+                            <option value="#TalentosMestreArmadurasMedias">Mestre em Armaduras Médias</a>
+                            <option value="#TalentosMestreArmadurasPesadas">Mestre em Armaduras Pesadas</a>
+                            <option value="#TalentosMestreArmasHaste">Mestre em Armas de Haste</a>
+                            <option value="#TalentosMestreArmasGrandes">Mestre em Armas Grandes</a>
+                            <option value="#TalentosMestreEscudos">Mestre em Escudos</a>
+                            <option value="#TalentosResiliente">Resiliente</a>
+                            <option value="#TalentosResistente">Resistente</a>
+                            <option value="#TalentosSentinela">Sentinela</a>
+                            <option value="#TalentosSorrateiro">Sorrateiro</a>
+                            <option value="#TalentosSortudo">Sortudo</a>
+                            <option value="#TalentosValentaoTaverna">Valentão de Taverna</a>
+                            <option value="#TalentosVigoroso">Vigoroso</a>
+                        </select>
                     </div>
                 </section>
             </div>
