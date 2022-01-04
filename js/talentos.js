@@ -2,7 +2,7 @@
 const JSON_URL = "/data/talentos.json";
 
 async function loadIntoTable(url, table) {
-  const sectionBody = document.getElementByClass("talentos");
+  const sectionBody = document.getElementsByClassName("talentos");
 
   await $.getJSON(url, function (talentos) {
     const talentosValues = Object.keys(talentos.data);
