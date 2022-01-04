@@ -160,6 +160,9 @@
                     magiaComponentesExtra = '<small style="padding-top: 20px; font-style: italic;">* - ' + magiasNomes[0][id].componentes_extra + '</small>';
                 }
                 var magiaClasses = '';
+                // if (magiasNomes[0][id].artificer == true) {
+                //     magiaClasses += '<span class="badge class-badge badge-light">Artificer</span>';
+                // }
                 if (magiasNomes[0][id].bardo == true) {
                     magiaClasses += '<span class="badge class-badge badge-light">Bardo</span>';
                 }
@@ -177,9 +180,6 @@
                 }
                 if (magiasNomes[0][id].guardiao == true) {
                     magiaClasses += '<span class="badge class-badge badge-light">Guardião</span>';
-                }
-                if (magiasNomes[0][id].ladino == true) {
-                    magiaClasses += '<span class="badge class-badge badge-light">Ladino</span>';
                 }
                 if (magiasNomes[0][id].mago == true) {
                     magiaClasses += '<span class="badge class-badge badge-light">Mago</span>';
