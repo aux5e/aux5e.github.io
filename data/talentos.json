@@ -1065,6 +1065,41 @@
 			}
 		},
 		{
+			"name": "Segunda Chance",
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "halfling"
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 75,
+			"entries": [
+				"A sorte o favorece quando alguém tenta atacá-lo. Você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Quando uma criatura que você possa ver o atinge com uma jogada de ataque, você pode usar sua reação para força-la a jogar novamente. Após usar esta habilidade, você não pode usá-la novamente até jogar iniciativa no início de um combate ou terminar um descanso curto ou longo."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"dex",
+							"con",
+							"cha"
+						],
+						"amount": 1
+					}
+				]
+			}
+		},
+		{
 			"name": "Sentinela",
 			"source": "PHB",
 			"page": 170,
@@ -1206,41 +1241,6 @@
 			"entries": [
 				"Quando você adquire este talento, seu valor máximo de pontos de vida aumenta em uma quantidade igual a duas vezes o seu nível. Após isso, sempre que você ganhar um nível, seu valor máximo de pontos de vida aumenta em 2."
 			]
-		},
-		{
-			"name": "Segunda Chance",
-			"prerequisite": [
-				{
-					"race": [
-						{
-							"name": "halfling"
-						}
-					]
-				}
-			],
-			"source": "XGE",
-			"page": 75,
-			"entries": [
-				"A sorte o favorece quando alguém tenta atacá-lo. Você ganha os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Quando uma criatura que você possa ver o atinge com uma jogada de ataque, você pode usar sua reação para força-la a jogar novamente. Após usar esta habilidade, você não pode usá-la novamente até jogar iniciativa no início de um combate ou terminar um descanso curto ou longo."
-					]
-				}
-			],
-			"ability": {
-				"choose": [
-					{
-						"from": [
-							"dex",
-							"con",
-							"cha"
-						],
-						"amount": 1
-					}
-				]
-			}
 		}
 	]
 }
