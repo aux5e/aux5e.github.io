@@ -277,6 +277,11 @@ footer {
   padding: 14px 20px;
 }
 
+#filter-source {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
 /** ================ FIM BUTÕES ================ **/
 
 /** ================ TITULOS, SUBTITULOS E FONTS ================ **/
@@ -361,8 +366,8 @@ footer {
 
 .detalhes__talentos {
     margin-bottom: 2rem;
-    padding: 1rem;
-    border: 1px solid #eee;
+    padding: 2rem 1rem 1rem;
+    border: 1px solid #ee8600;
 }
 
 @media only screen and (max-width: 600px) {
@@ -621,6 +626,16 @@ ul.main-list {
   color: #ee8601;
   background-color: #f7d9b2;
   border-color: #f7d9b2;
+}
+
+#classes-phb-container .btn-primary {
+    background-color: #ee8600;
+    border-color: #ee8600;
+}
+
+#classes-phb-container .btn-outline-primary {
+    color: #ee8600;
+    border-color: #ee8600;
 }
 
 /** ================ FIM FILTRO DE MAGIAS ================ **/

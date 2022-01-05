@@ -15,7 +15,9 @@ async function loadIntoPage(url) {
     var rTalentoContent = [];
     var cTalentoContent = -1;
     for (var row = 0; row < talentosLenght; row++) {
-      rTalentoContent[++cTalentoContent] = '<div id="Talentos' + talento[row].name.replace(/\s+/g, "") + '" class="detalhes__talentos">';
+        var talentoNameId = talento[row].name.replace(/\s/g, '').replace(/[àáâãäå]/g, "a").replace(/ç/g,"c").replace(/[èéêë]/g,"e").replace(/[ìíîï]/g,"i").replace(/[òóôõö]/g,"o").replace(/[ùúûü]/g,"u").replace("-", '').replace(/ /g, '');
+
+      rTalentoContent[++cTalentoContent] = '<div id="Talentos' + talentoNameId + '" class="detalhes__talentos">';
 
       rTalentoContent[++cTalentoContent] = '<h4 class="subtitulo">';
       
@@ -220,6 +222,40 @@ async function loadIntoSideMenu(url) {
   });
 }
 
+async function loadIntoMobileMenu(url) {
+    const mobileMenu = document.getElementsByClassName("secondary-content-mobile");
+  
+    await $.getJSON(url, function (talentos) {
+      const talento = Object.values(talentos.feat);
+      const talentosLenght = Object.keys(talentos.feat).length;
+  
+      // Limpa o corpo do menu
+      mobileMenu.innerHTML = "";
+  
+      // Popular o corpo do menu
+      var rMM = [];
+      var c = -1;
+      rMM[++c] = '<div class="select-menu-jump">';
+      rMM[++c] = '<select class="select-nav" name="forma" onchange="location = this.value;">';
+      rMM[++c] = '<option value selected>Selecione um Talento...</option>';
+        
+      for (var row = 0; row < talentosLenght; row++) {
+        var talentoNameLink = talento[row].name.replace(/\s/g, '').replace(/[àáâãäå]/g, "a").replace(/ç/g,"c").replace(/[èéêë]/g,"e").replace(/[ìíîï]/g,"i").replace(/[òóôõö]/g,"o").replace(/[ùúûü]/g,"u").replace("-", '').replace(/ /g, '');
+  
+        rMM[++c] = '<option ';
+        rMM[++c] = 'value="#Talentos' + talentoNameLink + '">';
+        rMM[++c] = talento[row].name;
+        rMM[++c] = '</option>';
+      }
+      
+      rMM[++c] = '</select>';
+      rMM[++c] = '</div>';
+      
+      $(mobileMenu).html(rMM.join(""));    
+  
+    });
+  }
+
 $(document).ready(async function () {
   await loadIntoPage(JSON_URL);
 });
@@ -227,3 +263,7 @@ $(document).ready(async function () {
 $(document).ready(async function () {
   await loadIntoSideMenu(JSON_URL);
 });
+
+$(document).ready(async function () {
+    await loadIntoMobileMenu(JSON_URL);
+  });
