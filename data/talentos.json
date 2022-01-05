@@ -1,22 +1,43 @@
 {
 	"feat": [
+        {
+            "name": "Adepto Elemental",
+            "source": "PHB",
+            "page": 165,
+            "prerequisite": [
+                {
+                    "spellcasting": true
+                }
+            ],
+            "entries": [
+                "Ao adquirir este talento, escolha um dos seguintes tipos de dano: ácido, elétrico, fogo, frio ou trovejante.",
+                "As magias que você conjura ignoram qualquer resistência ao tipo de dano escolhido. Além disso, ao determinar o dano para uma magia conjurada por você, e que cause esse tipo de dano, trate todo resultado 1, como 2.",
+                "Você pode escolher este talento múltiplas vezes, mas deve escolher um tipo de dano diferente a cada vez."
+        ]
+        },
 		{
-			"name": "Ator",
+			"name": "Adepto Marcial",
 			"source": "PHB",
-			"page": 166,
+			"page": 165,
 			"entries": [
-				"Habilidoso em imitação e dramaturgia, você ganha os seguintes benefícios:",
+				"Você recebeu treinamento marcial que lhe permite realizar manobras especiais de combate. Você ganha os benefícios a seguir:",
 				{
 					"type": "list",
 					"items": [
-						"Você tem vantagem nos testes de Carisma (Enganação) e Carisma (Atuação) ao tentar se passar por outra pessoa.",
-						"Você pode imitar a voz de outra pessoa ou os sons feitos por outras criaturas. Você precisa ter ouvido a voz ou som por pelo menos 1 minuto. Um ouvinte pode determinar que o efeito é falso ao ser bem-sucedido num teste de Sabedoria (Intuição), resistido pelo seu Carisma (Enganação)."
+						"Escolha duas manobras dentre as disponíveis para o arquétipo Mestre da Batalha, da classe guerreiro. Se determinada manobra necessitar que o seu alvo faça uma salvaguarda para resistir aos efeitos dela, a CD desse teste será igual a 8 + seu bônus de proficiência + seu modificador de Força ou Destreza (à sua escolha).",
+						"Você ganha 1d6 de superioridade (que é adicionado a qualquer dado de superioridade originário de outra fonte). Esse dado é usado para realizar as suas manobras, sendo gasto quando você o usa. Você o recupera após completar um descanso curto ou longo."
 					]
 				}
-			],
-			"ability": {
-				"cha": 1
-			}
+			]
+		},
+		{
+			"name": "Agressor",
+			"source": "PHB",
+			"page": 165,
+			"entries": [
+				"Ao realizar a ação Correr, você pode usar sua ação bônus para realizar um ataque com uma arma de combate corpo a corpo, ou para empurrar uma criatura.",
+				"Se você se deslocar por no mínimo 3 metros em linha reta imediatamente antes de executar essa ação bônus, ganha +5 na jogada de dano do ataque (caso tenha sido bem-sucedido no ataque com a arma de combate corpo a corpo) ou empurra o alvo a até 3 metros de distância (caso tenha sido bem-sucedido na ação de empurrar)."
+			]
 		},
 		{
 			"name": "Alerta",
@@ -30,6 +51,79 @@
 						"+5 na iniciativa;",
 						"Você não pode ser surpreendido enquanto estiver consciente.",
 						"Outras criaturas não ganham vantagem em jogadas de ataque feitas contra você quando não puderem ser vistas."
+					]
+				}
+			]
+		},
+		{
+			"name": "Alta Magia Drow",
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "elf",
+							"subrace": "drow"
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 74,
+			"entries": [
+				"Você aprende mais da magia típica dos elfos obscuros. Você aprende a magia  detectar magia e pode conjura-la à vontade, sem gastar um espaço de magia. Você também aprende levitação e dissipar magia, cada uma das quais você pode conjurar uma vez sem gastar um espaço de magia. Você recupera a habilidade de conjurar essas duas magias desse modo ao terminar um descanso longo. Carisma é seu atributo de conjuração para todas as três magias."
+			]
+		},
+		{
+			"name": "Analítico",
+			"source": "PHB",
+			"page": 165,
+			"entries": [
+				"Rápido para notar os detalhes do ambiente ao seu redor, você ganha os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Você é capaz de ler os lábios de uma criatura, contanto que possa vê-los e conheça o idioma falado.",
+						"Você tem um bônus de +5 em seus valores de Sabedoria passiva (Percepção) e Inteligência passiva (Investigação)."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"int",
+							"wis"
+						],
+						"amount": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "Atacante Selvagem",
+			"source": "PHB",
+			"page": 165,
+			"entries": [
+				"Uma vez por turno, você pode jogar duas vezes o dano de um ataque feito com uma arma de combate corpo a corpo e usar o resultado que preferir."
+			]
+		},
+		{
+			"name": "Atirador Arcano",
+			"source": "PHB",
+			"page": 165,
+			"prerequisite": [
+				{
+					"spellcasting": true
+				}
+			],
+			"entries": [
+				"Você aprendeu técnicas que melhoram seus ataques com certos tipos de magias. Eis os benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Ao conjurar uma magia que exija uma jogada de ataque, o alcance é dobrado.",
+						"Seus ataques mágicos à distância ignoram meia cobertura e três-quartos de cobertura.",
+						"Você aprende um truque que exige uma jogada de ataque. Escolha o truque da lista de magias do bardo, bruxo, clérigo, druida, feiticeiro ou mago. O seu atributo de conjuração para esse truque depende da lista de magias da qual você escolheu: Carisma para bardo, bruxo ou feiticeiro; Sabedoria para clérigo ou druida; Inteligência para mago."
 					]
 				}
 			]
@@ -62,905 +156,33 @@
 			}
 		},
 		{
-			"name": "Agressor",
-			"source": "PHB",
-			"page": 165,
-			"entries": [
-				"Ao realizar a ação Correr, você pode usar sua ação bônus para realizar um ataque com uma arma de combate corpo a corpo, ou para empurrar uma criatura.",
-				"Se você se deslocar por no mínimo 3 metros em linha reta imediatamente antes de executar essa ação bônus, ganha +5 na jogada de dano do ataque (caso tenha sido bem-sucedido no ataque com a arma de combate corpo a corpo) ou empurra o alvo a até 3 metros de distância (caso tenha sido bem-sucedido na ação de empurrar)."
-			]
-		},
-		{
-			"name": "Especialista em Besta",
-			"source": "PHB",
-			"page": 167,
-			"entries": [
-				"Graças a uma extensa prática com bestas, você ganha os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Ignore a propriedade Recarga de bestas com as quais você é proficiente.",
-						"Estar a até 1,5 metro de uma criatura hostil não impõe desvantagem nas suas jogadas de ataques à distância.",
-						"Ao usar a ação Atacar para golpear com uma arma de uma mão, você pode usar sua ação bônus para atacar com uma besta de mão que esteja empunhando."
-					]
-				}
-			]
-		},
-		{
-			"name": "Duelista Defensivo",
-			"source": "PHB",
-			"page": 167,
-			"prerequisite": [
-				{
-					"ability": [
-						{
-							"dex": 13
-						}
-					]
-				}
-			],
-			"entries": [
-				"Quando você está empunhando uma arma com a qual é proficiente, e que possua a propriedade acuidade, e outra criatura o atinge com um ataque corpo a corpo, você pode usar sua reação para adicionar seu bônus de proficiência à sua CA contra esse ataque, potencialmente fazendo com que ele não o atinja."
-			]
-		},
-		{
-			"name": "Especialista Ambidestro",
-			"source": "PHB",
-			"page": 167,
-			"entries": [
-				"Você domina o combate com duas armas, ganhando os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Você ganha +1 na CA enquanto estiver empunhando uma arma de combate corpo a corpo em cada mão.",
-						"Você pode usar combate com duas armas, mesmo com armas de uma mão que não sejam leves.",
-						"Você pode sacar ou guardar duas armas de uma mão quando normalmente seria capaz de sacar ou guardar apenas uma."
-					]
-				}
-			]
-		},
-		{
-			"name": "Explorador de Masmorras",
-			"source": "PHB",
-			"page": 168,
-			"entries": [
-				"Atento às armadilhas ocultas é portas secretas encontradas em muitas masmorras, você ganha os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Você tem vantagem em testes de Sabedoria (Percepção) e Inteligência (Investigação) realizados para detectar a presença de portas secretas.",
-						"Você tem vantagem em salvaguardas feitas para evitar ou resistir a armadilhas.",
-                        "Você tem resistência a dano causado por armadilhas.",
-						"Viajar em um ritmo rápido não aplica a penalidade de -5, normalmente imposta ao seu valor de Sabedoria passiva (Percepção)."
-					]
-				}
-			]
-		},
-		{
-			"name": "Resistente",
-			"source": "PHB",
-			"page": 170,
-			"entries": [
-				"Intrépido e resistente, você ganha os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Ao jogar um Dado de Vida para recuperar pontos de vida, o número mínimo de pontos que você recupera é igual ao dobro do seu modificador de Constituição (mínimo de 2)."
-					]
-				}
-			],
-			"ability": {
-				"con": 1
-			}
-		},
-		{
-			"name": "Adepto Elemental",
-			"source": "PHB",
-			"page": 165,
-			"prerequisite": [
-				{
-					"spellcasting": true
-				}
-			],
-			"entries": [
-				"Ao adquirir este talento, escolha um dos seguintes tipos de dano: ácido, elétrico, fogo, frio ou trovejante.",
-				"As magias que você conjura ignoram qualquer resistência ao tipo de dano escolhido. Além disso, ao determinar o dano para uma magia conjurada por você, e que cause esse tipo de dano, trate todo resultado 1, como 2.",
-				"Você pode escolher este talento múltiplas vezes, mas deve escolher um tipo de dano diferente a cada vez."
-			]
-		},
-		{
-			"name": "Imobilizador",
-			"source": "PHB",
-			"page": 168,
-			"prerequisite": [
-				{
-					"ability": [
-						{
-							"str": 13
-						}
-					]
-				}
-			],
-			"entries": [
-				"Você desenvolveu as habilidades necessárias para manter sua posição durante um agarramento em combate corpo a corpo. Eis os benefícios ganhos:",
-				{
-					"type": "list",
-					"items": [
-						"Você tem vantagem nas jogadas de ataque feitas contra uma criatura que você esteja agarrando.",
-						"Você pode usar sua ação para tentar imobilizar uma criatura que já tenha agarrado. Para tanto, faça outro teste de agarrar. Se for bem-sucedido, você e a criatura ficam imobilizados até o agarramento terminar."
-					]
-				}
-			]
-		},
-		{
-			"name": "Mestre em Armas Grandes",
-			"source": "PHB",
-			"page": 170,
-			"entries": [
-				"Você aprendeu a tirar vantagem do peso de uma arma, deixando que o movimento dela fortaleça seus ataques. Você ganha os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"No seu turno, ao obter um acerto crítico com uma arma de combate corpo a corpo, ou usá-la para reduzir os pontos de vida de uma criatura a 0, você pode usar sua ação bônus para realizar um segundo ataque com uma arma de combate corpo a corpo.",
-						"Antes de realizar um ataque corpo a corpo com uma arma pesada com a qual seja proficiente, você pode trocar uma penalidade de -5 na jogada de ataque por um bônus de +10 na jogada de dano, caso o ataque seja bem-sucedido."
-					]
-				}
-			]
-		},
-		{
-			"name": "Curandeiro",
-			"source": "PHB",
-			"page": 167,
-			"entries": [
-				"Você é um médico habilidoso, o que lhe permite curar feridas rapidamente e trazer seus aliados de volta à batalha. Você ganha os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Quando você usa um kit de curandeiro para estabilizar uma criatura moribunda, ela também recupera 1 ponto de vida.",
-						"Com uma ação, você pode gastar um uso do kit de curandeiro para cuidar de uma criatura e restaurar-lhe 1d6 + 4 pontos de vida, além de uma quantidade adicional de pontos de vida igual ao número máximo de Dados de Vida dela. A criatura não pode recuperar pontos de vida por meio deste talento novamente até completar um descanso curto ou longo."
-					]
-				}
-			]
-		},
-		{
-			"name": "Especialista em Armaduras Pesadas",
-			"source": "PHB",
-			"page": 167,
-			"prerequisite": [
-				{
-					"proficiency": [
-						{
-							"armor": "medium"
-						}
-					]
-				}
-			],
-			"entries": [
-				"Você treinou para dominar o uso de armaduras pesadas, ganhando os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Você ganha proficiência com armaduras pesadas."
-					]
-				}
-			],
-			"ability": {
-				"str": 1
-			}
-		},
-		{
-			"name": "Mestre em Armaduras Pesadas",
-			"source": "PHB",
-			"page": 169,
-			"prerequisite": [
-				{
-					"proficiency": [
-						{
-							"armor": "heavy"
-						}
-					]
-				}
-			],
-			"entries": [
-				"Você pode usar sua armadura para neutralizar ataques que, de outro modo, seriam mortais. Você ganha os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Enquanto estiver usando uma armadura pesada, reduza em 3 qualquer dano contundente, cortante ou perfurante oriundo de armas não-mágicas que você venha a sofrer."
-					]
-				}
-			],
-			"ability": {
-				"str": 1
-			}
-		},
-		{
-			"name": "Líder Inspirador",
-			"source": "PHB",
-			"page": 168,
-			"prerequisite": [
-				{
-					"ability": [
-						{
-							"cha": 13
-						}
-					]
-				}
-			],
-			"entries": [
-				"Você pode dedicar 10 minutos a inspirar seus companheiros, reforçando-lhes a determinação para a luta. Ao fazê-lo, escolha até seis criaturas amigáveis (grupo no qual você pode estar incluso) que se encontrem a menos de 9 metros de você e que possam vê-lo ou ouvi-lo, e que possam entendê-lo. Cada criatura ganha uma quantidade de pontos de vida temporários igual ao seu nível + seu modificador de Carisma. Uma criatura não pode voltar a ganhar pontos de vida por meio deste talento até que complete um descanso curto ou longo."
-			]
-		},
-		{
-			"name": "Mente Aguçada",
-			"source": "PHB",
-			"page": 168,
-			"entries": [
-				"Você possui uma mente capaz de vasculhar o tempo, o espaço e memória com extraordinária precisão. Você ganha os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Você sempre sabe para que lado fica o norte.",
-						"Você sempre sabe o número de horas que faltam para o nascer ou pôr do sol.",
-						"Você pode lembrar com precisão qualquer coisa que tenha visto ou ouvido no último mês."
-					]
-				}
-			],
-			"ability": {
-				"int": 1
-			}
-		},
-		{
-			"name": "Especialista em Armaduras Leves",
-			"source": "PHB",
-			"page": 167,
-			"entries": [
-				"Você treinou para dominar o uso de armaduras leves, ganhando os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Você ganha proficiência com armaduras leves."
-					]
-				}
-			],
-			"ability": {
-				"choose": [
-					{
-						"from": [
-							"str",
-							"dex"
-						],
-						"amount": 1
-					}
-				]
-			}
-		},
-		{
-			"name": "Linguista",
-			"source": "PHB",
-			"page": 168,
-			"entries": [
-				"Você estudou diversos idiomas e códigos, ganhando os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Você aprende três idiomas à sua escolha.",
-						"Você pode criar habilidosas cifras escritas. Outros não podem decifrá-las a menos que você os ensine, que sejam bem-sucedidos em um teste de Inteligência (CD igual ao seu valor de Inteligência + seu bônus de proficiência), ou usem magia."
-					]
-				}
-			],
-			"ability": {
-				"int": 1
-			}
-		},
-		{
-			"name": "Sortudo",
-			"source": "PHB",
-			"page": 170,
-			"entries": [
-				"Sua sorte é inexplicável, parecendo surgir no momento certo.",
-				"Você possui 3 pontos de sorte. Sempre que fizer uma jogada de ataque, um teste de atributo ou de salvaguarda, pode gastar um ponto de sorte para jogar 1d20 adicional. Você pode escolher gastar um dos seus pontos de sorte após jogar o dado, mas antes que o resultado seja determinado. Você escolhe qual dos dados usará.",
-				"Você também pode gastar um ponto de sorte quando uma jogada de ataque for feita contra você. Jogue 1d20 e escolha se o ataque usará sua jogada ou a do atacante.",
-				"Se mais de uma criatura gastar um ponto de sorte para influenciar o resultado da mesma jogada, os pontos se cancelam; nenhum dado adicional é jogado.",
-                "Você recupera todos os pontos de sorte gastos após um descanso longo."
-			]
-		},
-		{
-			"name": "Exterminador de Conjuradores",
-			"source": "PHB",
-			"page": 168,
-			"entries": [
-				"Você praticou técnicas eficazes no combate corpo a corpo contra conjuradores, ganhando os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Quando uma criatura a até 1,5 metro de você conjurar uma magia, você pode usar sua reação para atacá-la com uma arma de combate corpo a corpo.",
-						"Quando você causa dano em uma criatura que está se concentrando em uma magia, ela passa a ter desvantagem na salvaguarda feita para manter a concentração.",
-						"Você tem vantagem em salvaguardas contra magias conjuradas por criaturas que se encontrem a até 1,5 metro de você."
-					]
-				}
-			]
-		},
-		{
-			"name": "Iniciado em Magia",
-			"source": "PHB",
-			"page": 168,
-			"entries": [
-				"Você aprende dois truques da lista de magias de uma das seguintes classes, à sua escolha: bardo, bruxo, clérigo, druida, feiticeiro ou mago.",
-				"Além disso, também aprende uma magia de 1º círculo da mesma lista. Usando este talento, você pode conjurar essa magia uma vez no círculo mais baixo dela, não podendo conjurá-la dessa forma novamente antes de completar um descanso longo.",
-				"Seu atributo de conjuração para essas magias depende da classe que você escolheu: Carisma para bardo, bruxo ou feiticeiro; Sabedoria para clérigo ou druida; Inteligência para mago."
-			]
-		},
-		{
-			"name": "Adepto Marcial",
-			"source": "PHB",
-			"page": 165,
-			"entries": [
-				"Você recebeu treinamento marcial que lhe permite realizar manobras especiais de combate. Você ganha os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Escolha duas manobras dentre as disponíveis para o arquétipo Mestre da Batalha, da classe guerreiro. Se determinada manobra necessitar que o seu alvo faça uma salvaguarda para resistir aos efeitos dela, a CD desse teste será igual a 8 + seu bônus de proficiência + seu modificador de Força ou Destreza (à sua escolha).",
-						"Você ganha 1d6 de superioridade (que é adicionado a qualquer dado de superioridade originário de outra fonte). Esse dado é usado para realizar as suas manobras, sendo gasto quando você o usa. Você o recupera após completar um descanso curto ou longo."
-					]
-				}
-			]
-		},
-		{
-			"name": "Mestre em Armaduras Médias",
-			"source": "PHB",
-			"page": 169,
-			"prerequisite": [
-				{
-					"proficiency": [
-						{
-							"armor": "medium"
-						}
-					]
-				}
-			],
-			"entries": [
-				"Você praticou movimentos usando armaduras médias até ganhar os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Usar este tipo de armadura não impõe desvantagem em seus testes de Destreza (Furtividade).",
-						"Caso você tenha Destreza igual ou maior que 16, ao usar uma armadura média, pode adicionar 3, em vez de 2, à sua CA."
-					]
-				}
-			]
-		},
-		{
-			"name": "Ligeiro",
-			"source": "PHB",
-			"page": 168,
-			"entries": [
-				"Você é excepcionalmente rápido e ágil, ganhando os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Seu deslocamento aumenta em 3 metros;",
-						"Ao usar a ação Correr em terreno difícil, você não paga custo em movimento adicional nesse turno.",
-						"Ao realizar um ataque corpo a corpo, bem ou malsucedido, contra uma criatura, você não provoca ataques de oportunidade dela pelo restante do turno."
-					]
-				}
-			]
-		},
-		{
-			"name": "Especialista em Armaduras Médias",
-			"source": "PHB",
-			"page": 167,
-			"prerequisite": [
-				{
-					"proficiency": [
-						{
-							"armor": "light"
-						}
-					]
-				}
-			],
-			"entries": [
-				"Você dominou o uso de armaduras médias e escudos, ganhando os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Você ganha proficiência com armaduras médias e escudos."
-					]
-				}
-			],
-			"ability": {
-				"choose": [
-					{
-						"from": [
-							"str",
-							"dex"
-						],
-						"amount": 1
-					}
-				]
-			}
-		},
-		{
-			"name": "Combatente Montado",
+			"name": "Ator",
 			"source": "PHB",
 			"page": 166,
 			"entries": [
-				"Você é um oponente perigoso quando está montado. Ao lutar sobre uma montaria sem estar incapacitado, você ganha os seguintes benefícios:",
+				"Habilidoso em imitação e dramaturgia, você ganha os seguintes benefícios:",
 				{
 					"type": "list",
 					"items": [
-						"Você tem vantagem em jogadas de ataque contra qualquer criatura desmontada que seja menor que a sua montaria.",
-						"Você pode fazer com que um ataque cujo alvo fosse a sua montaria seja desferido contra você.",
-						"Se a sua montaria for alvo de um efeito que permite a ela realizar uma salvaguarda de Destreza para reduzir qualquer dano sofrido pela metade, em vez disso, no caso de sucesso, ela não sofre nenhum dano e, no caso de falha, sofre apenas metade."
-					]
-				}
-			]
-		},
-		{
-			"name": "Analítico",
-			"source": "PHB",
-			"page": 165,
-			"entries": [
-				"Rápido para notar os detalhes do ambiente ao seu redor, você ganha os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Você é capaz de ler os lábios de uma criatura, contanto que possa vê-los e conheça o idioma falado.",
-						"Você tem um bônus de +5 em seus valores de Sabedoria passiva (Percepção) e Inteligência passiva (Investigação)."
+						"Você tem vantagem nos testes de Carisma (Enganação) e Carisma (Atuação) ao tentar se passar por outra pessoa.",
+						"Você pode imitar a voz de outra pessoa ou os sons feitos por outras criaturas. Você precisa ter ouvido a voz ou som por pelo menos 1 minuto. Um ouvinte pode determinar que o efeito é falso ao ser bem-sucedido num teste de Sabedoria (Intuição), resistido pelo seu Carisma (Enganação)."
 					]
 				}
 			],
 			"ability": {
-				"choose": [
-					{
-						"from": [
-							"int",
-							"wis"
-						],
-						"amount": 1
-					}
-				]
+				"cha": 1
 			}
 		},
 		{
-			"name": "Mestre em Armas de Haste",
-			"source": "PHB",
-			"page": 170,
-			"entries": [
-				"Você ganha os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Ao realizar a ação Atacar com uma alabarda, bastão, glaive ou lança, você pode usar sua ação bônus para realizar um ataque corpo a corpo com a extremidade oposta da arma; Esse ataque usa o mesmo modificador de atributo que o ataque primário. O dado de dano da arma para esse ataque é 1d4, e o tipo de dano é contundente.",
-						"Enquanto você estiver portando uma alabarda, bastão, glaive, lança ou lança longa, você pode realizar um ataque de oportunidade contra qualquer criatura que fique ao alcance da arma."
-					]
-				}
-			]
-		},
-		{
-			"name": "Resiliente",
-			"source": "PHB",
-			"page": 170,
-			"entries": [
-				"Escolha um atributo. Você ganha os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Você ganha proficiência em salvaguardas usando esse atributo."
-					]
-				}
-			],
-			"ability": {
-				"choose": [
-					{
-						"from": [
-							"str",
-							"dex",
-							"con",
-							"int",
-							"wis",
-							"cha"
-						],
-						"amount": 1,
-						"textreference": true
-					}
-				]
-			}
-		},
-		{
-			"name": "Conjurador Ritualista",
-			"source": "PHB",
-			"page": 167,
-			"prerequisite": [
-				{
-					"ability": [
-						{
-							"int": 13
-						},
-						{
-							"wis": 13
-						}
-					]
-				}
-			],
-			"entries": [
-				"Você aprendeu uma quantidade de magias que pode conjurar como rituais. Elas estão escritas em um livro de rituais, que você deve ter em mãos ao conjurá-las.",
-				"Ao adquirir este talento, você ganha um livro de rituais contendo duas magias de 1º círculo, que precisam ter a propriedade ritual e devem ser escolhidas da lista de magias de uma das seguintes classes, à sua escolha: bardo, bruxo, clérigo, druida, feiticeiro ou mago. A classe que você escolheu também determina seu atributo de conjuração para essas magias: Carisma para bardo, bruxo ou feiticeiro; Sabedoria para clérigo ou druida; Inteligência para mago.",
-				"Ao encontrar uma magia em forma escrita, como um pergaminho de magias ou o livro de magias de um mago, você pode adicioná-las ao seu livro de rituais. A magia deve pertencer à lista de magias que você escolheu, não podendo ser de um círculo maior que metade do seu nível como personagem (arredondado para cima) e precisa ter a propriedade ritual. O processo de cópia leva 2 horas por círculo, e o custo é de 50 PO por círculo da magia. Esse custo representa os componentes materiais que você usa ao realizar experimentos com a magia para dominá-la, assim como as tintas de qualidade necessárias para gravá-la em seu livro de magias."
-			]
-		},
-		{
-			"name": "Atacante Selvagem",
-			"source": "PHB",
-			"page": 165,
-			"entries": [
-				"Uma vez por turno, você pode jogar duas vezes o dano de um ataque feito com uma arma de combate corpo a corpo e usar o resultado que preferir."
-			]
-		},
-		{
-			"name": "Sentinela",
-			"source": "PHB",
-			"page": 170,
-			"entries": [
-				"Você dominou técnicas que lhe permitem tirar proveito de cada falha na defesa de um inimigo, ganhando os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Ao obter sucesso ao atingir uma criatura com um ataque de oportunidade, o deslocamento dela se torna 0 pelo restante do turno.",
-						"Criaturas a até 1,5 metro de você provocam seus ataques de oportunidade mesmo quando usam a ação Desengajar antes de saírem do seu alcance.",
-						"Quando uma criatura a até 1, 5 metro de você atacar um alvo que não seja você (e ele não tenha este talento), ela permite que você use sua reação para atacá-la com uma arma de combate corpo a corpo."
-					]
-				}
-			]
-		},
-		{
-			"name": "Mestre-Atirador",
-			"source": "PHB",
-			"page": 170,
-			"entries": [
-				"Você dominou o uso das armas de combate à distância, podendo realizar ataques impossíveis para outros. Você ganha os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Ataques realizados à distância máxima não impõe desvantagem à sua jogada de ataque.",
-						"Seus ataques com armas de combate à distância ignoram meia cobertura e três-quartos de cobertura.",
-						"Antes de realizar uma jogada de ataque com uma arma de combate à distância com a qual seja proficiente, você pode escolher sofrer uma penalidade de -5 na sua jogada de ataque em troca de um bônus de +10 na sua jogada de dano, caso seja bem-sucedido."
-					]
-				}
-			]
-		},
-		{
-			"name": "Mestre em Escudos",
-			"source": "PHB",
-			"page": 170,
-			"entries": [
-				"Você emprega escudos não apenas para proteção, mas também para ataque. Ao fazê-lo, ganha os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Ao executar a ação Atacar no seu turno, você pode usar sua ação bônus para empurrar com o escudo uma criatura a até 1,5 metro de distância.",
-						"Caso não esteja incapacitado, você pode adicionar o bônus da CA do seu escudo em qualquer salvaguarda de Destreza feita contra magias ou efeitos ofensivos que afetem apenas você.",
-						"Se for submetido a um efeito que lhe permita realizar uma salvaguarda de Destreza para reduzir o dano sofrido pela metade, você pode usar sua reação para, no caso de sucesso na salvaguarda, não sofrer nenhum dano, interpondo o seu escudo entre você e a fonte do efeito."
-					]
-				}
-			]
-		},
-		{
-			"name": "Habilidoso",
-			"source": "PHB",
-			"page": 168,
-			"entries": [
-				"Você ganha proficiência em qualquer combinação de três perícias ou ferramentas à sua escolha."
-			]
-		},
-		{
-			"name": "Sorrateiro",
-			"source": "PHB",
-			"page": 170,
-			"prerequisite": [
-				{
-					"ability": [
-						{
-							"dex": 13
-						}
-					]
-				}
-			],
-			"entries": [
-				"Você é especialista em se esgueirar nas sombras, ganhando os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Você pode tentar se esconder de uma criatura para a qual já esteja levemente obscurecido.",
-						"Quando você está escondido e erra um ataque à distância, sua posição não é revelada.",
-						"Penumbra não impõe desvantagem aos seus testes de Sabedoria (Percepção) baseados em visão."
-					]
-				}
-			]
-		},
-		{
-			"name": "Atirador Arcano",
-			"source": "PHB",
-			"page": 165,
-			"prerequisite": [
-				{
-					"spellcasting": true
-				}
-			],
-			"entries": [
-				"Você aprendeu técnicas que melhoram seus ataques com certos tipos de magias. Eis os benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Ao conjurar uma magia que exija uma jogada de ataque, o alcance é dobrado.",
-						"Seus ataques mágicos à distância ignoram meia cobertura e três-quartos de cobertura.",
-						"Você aprende um truque que exige uma jogada de ataque. Escolha o truque da lista de magias do bardo, bruxo, clérigo, druida, feiticeiro ou mago. O seu atributo de conjuração para esse truque depende da lista de magias da qual você escolheu: Carisma para bardo, bruxo ou feiticeiro; Sabedoria para clérigo ou druida; Inteligência para mago."
-					]
-				}
-			]
-		},
-		{
-			"name": "Valentão de Taverna",
-			"source": "PHB",
-			"page": 170,
-			"entries": [
-				"Acostumado a brigas de bar nas quais usa como arma o que estiver ao alcance, você ganha os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Você é proficiente com armas improvisadas.",
-						"Seus ataques desarmados usam 1d4 para o dano.",
-						"Ao atingir uma criatura com um ataque desarmado ou com uma arma improvisada, você pode usar sua ação bônus para tentar agarrá-la."
-					]
-				}
-			],
-			"ability": {
-				"choose": [
-					{
-						"from": [
-							"str",
-							"con"
-						],
-						"amount": 1
-					}
-				]
-			}
-		},
-		{
-			"name": "Vigoroso",
-			"source": "PHB",
-			"page": 170,
-			"entries": [
-				"Quando você adquire este talento, seu valor máximo de pontos de vida aumenta em uma quantidade igual a duas vezes o seu nível. Após isso, sempre que você ganhar um nível, seu valor máximo de pontos de vida aumenta em 2."
-			]
-		},
-		{
-			"name": "Conjurador Bélico",
-			"source": "PHB",
-			"page": 167,
-			"prerequisite": [
-				{
-					"spellcasting": true
-				}
-			],
-			"entries": [
-				"Você praticou a conjuração de magias em meio ao combate, aprendendo técnicas que lhe garantem os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Você tem vantagem em salvaguardas de Constituição para manter a concentração em uma magia ao sofrer dano.",
-						"Você pode executar os componentes somáticos de magias mesmo portando armas ou escudo em uma ou ambas as mãos.",
-						"Quando o movimento de uma criatura hostil permite que você realize um ataque de oportunidade, você pode usar sua reação para trocar esse ataque pela conjuração de uma magia contra a criatura. A magia deve ter tempo de conjuração de 1 ação e deve afetar somente a criatura."
-					]
-				}
-			]
-		},
-		{
-			"name": "Mestre das Armas",
-			"source": "PHB",
-			"page": 169,
-			"entries": [
-				"Você treinou longamente com uma variedade de armas, ganhando os benefícios a seguir:",
-				{
-					"type": "list",
-					"items": [
-						"Você ganha proficiência com quatro armas simples ou marciais à sua escolha."
-					]
-				}
-			],
-			"ability": {
-				"choose": [
-					{
-						"from": [
-							"str",
-							"dex"
-						],
-						"amount": 1
-					}
-				]
-			}
-		},
-				{
-			"name": "Sorte Grande",
-			"prerequisite": [
-				{
-					"race": [
-						{
-							"name": "halfling"
-						}
-					]
-				}
-			],
-			"source": "XGE",
-			"page": 75,
-			"entries": [
-				"Seu povo possui uma sorte extraordinária, que você aprendeu a compartilhar misticamente com seus companheiros quando eles mais precisam. Você não sabe como faz isso; você simplesmente deseja, e acontece. Com certeza um sinal de que a sorte está do seu lado!",
-				"Quando um aliado seu, à sua vista e a até 9 metros de você, tem 1 em seu resultado de uma jogada de ataque, teste de atributo ou salvaguarda, você pode usar sua reação para permitir que ele jogue o dado novamente. Seu aliado deve usar o novo resultado.",
-				"Ao usar esta habilidade, você não pode usar o traço racial Sortudo antes do final do seu próximo turno."
-
-			]
-		},
-		{
-			"name": "Medo do Dragão",
-			"prerequisite": [
-				{
-					"race": [
-						{
-							"name": "dragonborn"
-						}
-					]
-				}
-			],
-			"source": "XGE",
-			"page": 75,
-			"entries": [
-				"Quando furioso, você pode irradiar ameaça, ganhando os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Em vez de exalar energia destrutiva, você pode gastar um uso de seu traço Ataque de Sopro para rugir, forçando cada criatura à sua escolha e a até 9 metros de você a realizar uma salvaguarda de Sabedoria (CD 8 + seu bônus de proficiência + seu modificador de Carisma). Qualquer um dos alvos tem sucesso automático na salvaguarda se não puder ouvi-lo ou vê-lo. Qualquer alvo que falhe fica amedrontado por você por 1 minuto. Se o alvo amedrontado sofrer qualquer dano, ele pode repetir a salvaguarda, encerrando o efeito em si em caso de sucesso."
-					]
-				}
-			],
-			"ability": {
-				"choose": [
-					{
-						"from": [
-							"str",
-							"con",
-							"cha"
-						],
-						"amount": 1
-					}
-				]
-			}
-		},
-		{
-			"name": "Escamas de Dragão",
-			"prerequisite": [
-				{
-					"race": [
-						{
-							"name": "dragonborn"
-						}
-					]
-				}
-			],
-			"source": "XGE",
-			"page": 74,
-			"entries": [
-				"Você manifesta escamas e garras remanescentes de seus ancestrais dracônicos. Você ganha os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Suas escamas endurecem. Enquanto você não estiver vestindo armadura, sua CA é igual a 13 + seu modificador de Destreza. Você pode usar um escudo e ganhar o respectivo benefício normalmente.",
-						"Garras retráteis crescem das pontas dos seus dedos. Soltar ou retrair as garras não requer uma ação. As garras são armas naturais, que você pode usar para fazer ataques desarmados. Ao ser bem-sucedido em um desses ataques, você causa uma quantidade de dano cortante igual a 1d4 + seu modificador de Força, em vez do dano contundente normalmente causado por um ataque desarmado."
-					]
-				}
-			],
-			"ability": {
-				"choose": [
-					{
-						"from": [
-							"str",
-							"con",
-							"cha"
-						],
-						"amount": 1
-					}
-				]
-			}
-		},
-		{
-			"name": "Alta Magia Drow",
-			"prerequisite": [
-				{
-					"race": [
-						{
-							"name": "elf",
-							"subrace": "drow"
-						}
-					]
-				}
-			],
-			"source": "XGE",
-			"page": 74,
-			"entries": [
-				"Você aprende mais da magia típica dos elfos obscuros. Você aprende a magia  detectar magia e pode conjura-la à vontade, sem gastar um espaço de magia. Você também aprende levitação e dissipar magia, cada uma das quais você pode conjurar uma vez sem gastar um espaço de magia. Você recupera a habilidade de conjurar essas duas magias desse modo ao terminar um descanso longo. Carisma é seu atributo de conjuração para todas as três magias."
-			]
-		},
-		{
-			"name": "Fortitude Anã",
+			"name": "Baixo e Ágil",
 			"prerequisite": [
 				{
 					"race": [
 						{
 							"name": "dwarf"
-						}
-					]
-				}
-			],
-			"source": "XGE",
-			"page": 74,
-			"entries": [
-				"Você possui o sangue de heróis anões correndo em suas veias. Você ganha os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Sempre que usar a ação Esquivar em combate, você pode gastar um Dado de Vida para curar a si mesmo. Jogue o dado, adicione seu modificador de Constituição ao resultado e recupere uma quantidade de pontos de vida igual ao total (no mínimo 1)."
-					]
-				}
-			],
-			"ability": {
-				"con": 1
-			}
-		},
-		{
-			"name": "Precisão Élfica",
-			"prerequisite": [
-				{
-					"race": [
-						{
-							"name": "elf"
 						},
 						{
-							"name": "half-elf"
-						}
-					]
-				}
-			],
-			"source": "XGE",
-			"page": 75,
-			"entries": [
-				"A precisão dos elfos é lendária, especialmente a dos seus arqueiros e conjuradores. Você possui uma mira espantosa em ataques que dependem mais da precisão do que da força bruta. Você ganha os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Sempre que você tiver vantagem em uma jogada de ataque que use Destreza, Inteligência, Sabedoria ou Carisma, você pode jogar o dado mais uma vez."
-					]
-				}
-			],
-			"ability": {
-				"choose": [
-					{
-						"from": [
-							"dex",
-							"int",
-							"wis",
-							"cha"
-						],
-						"amount": 1
-					}
-				]
-			}
-		},
-		{
-			"name": "Desaparecer",
-			"prerequisite": [
-				{
-					"race": [
-						{
-							"name": "gnome"
+							"name": "small race"
 						}
 					]
 				}
@@ -968,11 +190,13 @@
 			"source": "XGE",
 			"page": 74,
 			"entries": [
-				"Seu povo é astuto, possuindo talento para magia de ilusão. Você aprendeu um artifício mágico para desaparecer quando sofrer dano. Você ganha os seguintes benefícios:",
+				"Você é singularmente ágil para a sua raça. Isso lhe concede os seguintes benefícios:",
 				{
 					"type": "list",
 					"items": [
-						"Imediatamente após sofrer dano, você pode usar uma reação para ficar magicamente invisível até o final do seu próximo turno ou até que você ataque, cause dano ou force alguém a realizar uma salvaguarda. Após usar esta habilidade, você não pode usá-la outra vez até terminar um descanso curto ou longo."
+						"Aumente seu deslocamento de caminhada em 1,5 metro.",
+						"Você ganha proficiência em Acrobacia ou Atletismo (à sua escolha).",
+						"Você tem vantagem em qualquer teste de Força (Atletismo) ou Destreza (Acrobacia) feito para evitar ser agarrado."
 					]
 				}
 			],
@@ -980,44 +204,8 @@
 				"choose": [
 					{
 						"from": [
-							"dex",
-							"int"
-						],
-						"amount": 1
-					}
-				]
-			}
-		},
-		{
-			"name": "Teleporte Feérico",
-			"prerequisite": [
-				{
-					"race": [
-						{
-							"name": "elf",
-							"subrace": "high"
-						}
-					]
-				}
-			],
-			"source": "XGE",
-			"page": 75,
-			"entries": [
-				"Seu estudo das tradições alto élficas revelou poder feérico que poucos elfos possuem, a não ser seus primos eladrin. Acessando sua ancestralidade feérica, você pode cortar caminho por Faéria, diminuindo momentaneamente, com isso, a distância que precisa percorrer de um lugar a outro. Você ganha os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Você aprendeu a falar, ler e escrever Silvestre.",
-						"Você aprende a magia passo nebuloso e pode conjura-la uma vez sem gastar um espaço de magia. Você recupera a habilidade de conjura-la desse modo ao terminar um descanso curto ou longo. Inteligência é seu atributo de conjuração para essa magia."
-					]
-				}
-			],
-			"ability": {
-				"choose": [
-					{
-						"from": [
-							"int",
-							"cha"
+							"str",
+							"dex"
 						],
 						"amount": 1
 					}
@@ -1060,6 +248,65 @@
 			}
 		},
 		{
+			"name": "Combatente Montado",
+			"source": "PHB",
+			"page": 166,
+			"entries": [
+				"Você é um oponente perigoso quando está montado. Ao lutar sobre uma montaria sem estar incapacitado, você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você tem vantagem em jogadas de ataque contra qualquer criatura desmontada que seja menor que a sua montaria.",
+						"Você pode fazer com que um ataque cujo alvo fosse a sua montaria seja desferido contra você.",
+						"Se a sua montaria for alvo de um efeito que permite a ela realizar uma salvaguarda de Destreza para reduzir qualquer dano sofrido pela metade, em vez disso, no caso de sucesso, ela não sofre nenhum dano e, no caso de falha, sofre apenas metade."
+					]
+				}
+			]
+		},
+		{
+			"name": "Conjurador Bélico",
+			"source": "PHB",
+			"page": 167,
+			"prerequisite": [
+				{
+					"spellcasting": true
+				}
+			],
+			"entries": [
+				"Você praticou a conjuração de magias em meio ao combate, aprendendo técnicas que lhe garantem os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Você tem vantagem em salvaguardas de Constituição para manter a concentração em uma magia ao sofrer dano.",
+						"Você pode executar os componentes somáticos de magias mesmo portando armas ou escudo em uma ou ambas as mãos.",
+						"Quando o movimento de uma criatura hostil permite que você realize um ataque de oportunidade, você pode usar sua reação para trocar esse ataque pela conjuração de uma magia contra a criatura. A magia deve ter tempo de conjuração de 1 ação e deve afetar somente a criatura."
+					]
+				}
+			]
+		},
+		{
+			"name": "Conjurador Ritualista",
+			"source": "PHB",
+			"page": 167,
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"int": 13
+						},
+						{
+							"wis": 13
+						}
+					]
+				}
+			],
+			"entries": [
+				"Você aprendeu uma quantidade de magias que pode conjurar como rituais. Elas estão escritas em um livro de rituais, que você deve ter em mãos ao conjurá-las.",
+				"Ao adquirir este talento, você ganha um livro de rituais contendo duas magias de 1º círculo, que precisam ter a propriedade ritual e devem ser escolhidas da lista de magias de uma das seguintes classes, à sua escolha: bardo, bruxo, clérigo, druida, feiticeiro ou mago. A classe que você escolheu também determina seu atributo de conjuração para essas magias: Carisma para bardo, bruxo ou feiticeiro; Sabedoria para clérigo ou druida; Inteligência para mago.",
+				"Ao encontrar uma magia em forma escrita, como um pergaminho de magias ou o livro de magias de um mago, você pode adicioná-las ao seu livro de rituais. A magia deve pertencer à lista de magias que você escolheu, não podendo ser de um círculo maior que metade do seu nível como personagem (arredondado para cima) e precisa ter a propriedade ritual. O processo de cópia leva 2 horas por círculo, e o custo é de 50 PO por círculo da magia. Esse custo representa os componentes materiais que você usa ao realizar experimentos com a magia para dominá-la, assim como as tintas de qualidade necessárias para gravá-la em seu livro de magias."
+			]
+		},
+		{
 			"name": "Constituição Infernal",
 			"prerequisite": [
 				{
@@ -1079,6 +326,284 @@
 					"items": [
 						"Você tem resistência a dano gélido e venenoso.",
 						"Você tem vantagem em salvaguardas contra ser envenenado."
+					]
+				}
+			],
+			"ability": {
+				"con": 1
+			}
+		},
+		{
+			"name": "Curandeiro",
+			"source": "PHB",
+			"page": 167,
+			"entries": [
+				"Você é um médico habilidoso, o que lhe permite curar feridas rapidamente e trazer seus aliados de volta à batalha. Você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Quando você usa um kit de curandeiro para estabilizar uma criatura moribunda, ela também recupera 1 ponto de vida.",
+						"Com uma ação, você pode gastar um uso do kit de curandeiro para cuidar de uma criatura e restaurar-lhe 1d6 + 4 pontos de vida, além de uma quantidade adicional de pontos de vida igual ao número máximo de Dados de Vida dela. A criatura não pode recuperar pontos de vida por meio deste talento novamente até completar um descanso curto ou longo."
+					]
+				}
+			]
+		},
+		{
+			"name": "Desaparecer",
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "gnome"
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 74,
+			"entries": [
+				"Seu povo é astuto, possuindo talento para magia de ilusão. Você aprendeu um artifício mágico para desaparecer quando sofrer dano. Você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Imediatamente após sofrer dano, você pode usar uma reação para ficar magicamente invisível até o final do seu próximo turno ou até que você ataque, cause dano ou force alguém a realizar uma salvaguarda. Após usar esta habilidade, você não pode usá-la outra vez até terminar um descanso curto ou longo."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"dex",
+							"int"
+						],
+						"amount": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "Duelista Defensivo",
+			"source": "PHB",
+			"page": 167,
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"entries": [
+				"Quando você está empunhando uma arma com a qual é proficiente, e que possua a propriedade acuidade, e outra criatura o atinge com um ataque corpo a corpo, você pode usar sua reação para adicionar seu bônus de proficiência à sua CA contra esse ataque, potencialmente fazendo com que ele não o atinja."
+			]
+		},
+		{
+			"name": "Escamas de Dragão",
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "dragonborn"
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 74,
+			"entries": [
+				"Você manifesta escamas e garras remanescentes de seus ancestrais dracônicos. Você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Suas escamas endurecem. Enquanto você não estiver vestindo armadura, sua CA é igual a 13 + seu modificador de Destreza. Você pode usar um escudo e ganhar o respectivo benefício normalmente.",
+						"Garras retráteis crescem das pontas dos seus dedos. Soltar ou retrair as garras não requer uma ação. As garras são armas naturais, que você pode usar para fazer ataques desarmados. Ao ser bem-sucedido em um desses ataques, você causa uma quantidade de dano cortante igual a 1d4 + seu modificador de Força, em vez do dano contundente normalmente causado por um ataque desarmado."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"str",
+							"con",
+							"cha"
+						],
+						"amount": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "Especialista Ambidestro",
+			"source": "PHB",
+			"page": 167,
+			"entries": [
+				"Você domina o combate com duas armas, ganhando os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você ganha +1 na CA enquanto estiver empunhando uma arma de combate corpo a corpo em cada mão.",
+						"Você pode usar combate com duas armas, mesmo com armas de uma mão que não sejam leves.",
+						"Você pode sacar ou guardar duas armas de uma mão quando normalmente seria capaz de sacar ou guardar apenas uma."
+					]
+				}
+			]
+		},
+		{
+			"name": "Especialista em Armaduras Leves",
+			"source": "PHB",
+			"page": 167,
+			"entries": [
+				"Você treinou para dominar o uso de armaduras leves, ganhando os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você ganha proficiência com armaduras leves."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"str",
+							"dex"
+						],
+						"amount": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "Especialista em Armaduras Médias",
+			"source": "PHB",
+			"page": 167,
+			"prerequisite": [
+				{
+					"proficiency": [
+						{
+							"armor": "light"
+						}
+					]
+				}
+			],
+			"entries": [
+				"Você dominou o uso de armaduras médias e escudos, ganhando os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Você ganha proficiência com armaduras médias e escudos."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"str",
+							"dex"
+						],
+						"amount": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "Especialista em Armaduras Pesadas",
+			"source": "PHB",
+			"page": 167,
+			"prerequisite": [
+				{
+					"proficiency": [
+						{
+							"armor": "medium"
+						}
+					]
+				}
+			],
+			"entries": [
+				"Você treinou para dominar o uso de armaduras pesadas, ganhando os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você ganha proficiência com armaduras pesadas."
+					]
+				}
+			],
+			"ability": {
+				"str": 1
+			}
+		},
+		{
+			"name": "Especialista em Besta",
+			"source": "PHB",
+			"page": 167,
+			"entries": [
+				"Graças a uma extensa prática com bestas, você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Ignore a propriedade Recarga de bestas com as quais você é proficiente.",
+						"Estar a até 1,5 metro de uma criatura hostil não impõe desvantagem nas suas jogadas de ataques à distância.",
+						"Ao usar a ação Atacar para golpear com uma arma de uma mão, você pode usar sua ação bônus para atacar com uma besta de mão que esteja empunhando."
+					]
+				}
+			]
+		},
+		{
+			"name": "Explorador de Masmorras",
+			"source": "PHB",
+			"page": 168,
+			"entries": [
+				"Atento às armadilhas ocultas é portas secretas encontradas em muitas masmorras, você ganha os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Você tem vantagem em testes de Sabedoria (Percepção) e Inteligência (Investigação) realizados para detectar a presença de portas secretas.",
+						"Você tem vantagem em salvaguardas feitas para evitar ou resistir a armadilhas.",
+                        "Você tem resistência a dano causado por armadilhas.",
+						"Viajar em um ritmo rápido não aplica a penalidade de -5, normalmente imposta ao seu valor de Sabedoria passiva (Percepção)."
+					]
+				}
+			]
+		},
+		{
+			"name": "Exterminador de Conjuradores",
+			"source": "PHB",
+			"page": 168,
+			"entries": [
+				"Você praticou técnicas eficazes no combate corpo a corpo contra conjuradores, ganhando os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Quando uma criatura a até 1,5 metro de você conjurar uma magia, você pode usar sua reação para atacá-la com uma arma de combate corpo a corpo.",
+						"Quando você causa dano em uma criatura que está se concentrando em uma magia, ela passa a ter desvantagem na salvaguarda feita para manter a concentração.",
+						"Você tem vantagem em salvaguardas contra magias conjuradas por criaturas que se encontrem a até 1,5 metro de você."
+					]
+				}
+			]
+		},
+		{
+			"name": "Fortitude Anã",
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "dwarf"
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 74,
+			"entries": [
+				"Você possui o sangue de heróis anões correndo em suas veias. Você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Sempre que usar a ação Esquivar em combate, você pode gastar um Dado de Vida para curar a si mesmo. Jogue o dado, adicione seu modificador de Constituição ao resultado e recupere uma quantidade de pontos de vida igual ao total (no mínimo 1)."
 					]
 				}
 			],
@@ -1122,6 +647,347 @@
 			}
 		},
 		{
+			"name": "Habilidoso",
+			"source": "PHB",
+			"page": 168,
+			"entries": [
+				"Você ganha proficiência em qualquer combinação de três perícias ou ferramentas à sua escolha."
+			]
+		},
+		{
+			"name": "Imobilizador",
+			"source": "PHB",
+			"page": 168,
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"str": 13
+						}
+					]
+				}
+			],
+			"entries": [
+				"Você desenvolveu as habilidades necessárias para manter sua posição durante um agarramento em combate corpo a corpo. Eis os benefícios ganhos:",
+				{
+					"type": "list",
+					"items": [
+						"Você tem vantagem nas jogadas de ataque feitas contra uma criatura que você esteja agarrando.",
+						"Você pode usar sua ação para tentar imobilizar uma criatura que já tenha agarrado. Para tanto, faça outro teste de agarrar. Se for bem-sucedido, você e a criatura ficam imobilizados até o agarramento terminar."
+					]
+				}
+			]
+		},
+		{
+			"name": "Iniciado em Magia",
+			"source": "PHB",
+			"page": 168,
+			"entries": [
+				"Você aprende dois truques da lista de magias de uma das seguintes classes, à sua escolha: bardo, bruxo, clérigo, druida, feiticeiro ou mago.",
+				"Além disso, também aprende uma magia de 1º círculo da mesma lista. Usando este talento, você pode conjurar essa magia uma vez no círculo mais baixo dela, não podendo conjurá-la dessa forma novamente antes de completar um descanso longo.",
+				"Seu atributo de conjuração para essas magias depende da classe que você escolheu: Carisma para bardo, bruxo ou feiticeiro; Sabedoria para clérigo ou druida; Inteligência para mago."
+			]
+		},
+		{
+			"name": "Líder Inspirador",
+			"source": "PHB",
+			"page": 168,
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"cha": 13
+						}
+					]
+				}
+			],
+			"entries": [
+				"Você pode dedicar 10 minutos a inspirar seus companheiros, reforçando-lhes a determinação para a luta. Ao fazê-lo, escolha até seis criaturas amigáveis (grupo no qual você pode estar incluso) que se encontrem a menos de 9 metros de você e que possam vê-lo ou ouvi-lo, e que possam entendê-lo. Cada criatura ganha uma quantidade de pontos de vida temporários igual ao seu nível + seu modificador de Carisma. Uma criatura não pode voltar a ganhar pontos de vida por meio deste talento até que complete um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Ligeiro",
+			"source": "PHB",
+			"page": 168,
+			"entries": [
+				"Você é excepcionalmente rápido e ágil, ganhando os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Seu deslocamento aumenta em 3 metros;",
+						"Ao usar a ação Correr em terreno difícil, você não paga custo em movimento adicional nesse turno.",
+						"Ao realizar um ataque corpo a corpo, bem ou malsucedido, contra uma criatura, você não provoca ataques de oportunidade dela pelo restante do turno."
+					]
+				}
+			]
+		},
+		{
+			"name": "Linguista",
+			"source": "PHB",
+			"page": 168,
+			"entries": [
+				"Você estudou diversos idiomas e códigos, ganhando os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você aprende três idiomas à sua escolha.",
+						"Você pode criar habilidosas cifras escritas. Outros não podem decifrá-las a menos que você os ensine, que sejam bem-sucedidos em um teste de Inteligência (CD igual ao seu valor de Inteligência + seu bônus de proficiência), ou usem magia."
+					]
+				}
+			],
+			"ability": {
+				"int": 1
+			}
+		},
+		{
+			"name": "Magia Élfica Silvestre",
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "elf",
+							"subrace": "wood"
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 74,
+			"entries": [
+				"Você aprende a magia das florestas primitivas, que são reverenciadas e protegidas por seu povo. Você aprende um truque de druida à sua escolha. Você também aprende as magias passos largos e passo seu rastro, as quais você pode conjurar uma vez cada sem gastar um espaço de magia. Você recupera a habilidade de conjurar essas duas magias desse modo ao terminar um descanso curto ou longo. Sabedoria é seu atributo de conjuração para essas todas as três magias."
+			]
+		},
+		{
+			"name": "Medo do Dragão",
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "dragonborn"
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 75,
+			"entries": [
+				"Quando furioso, você pode irradiar ameaça, ganhando os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Em vez de exalar energia destrutiva, você pode gastar um uso de seu traço Ataque de Sopro para rugir, forçando cada criatura à sua escolha e a até 9 metros de você a realizar uma salvaguarda de Sabedoria (CD 8 + seu bônus de proficiência + seu modificador de Carisma). Qualquer um dos alvos tem sucesso automático na salvaguarda se não puder ouvi-lo ou vê-lo. Qualquer alvo que falhe fica amedrontado por você por 1 minuto. Se o alvo amedrontado sofrer qualquer dano, ele pode repetir a salvaguarda, encerrando o efeito em si em caso de sucesso."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"str",
+							"con",
+							"cha"
+						],
+						"amount": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "Mente Aguçada",
+			"source": "PHB",
+			"page": 168,
+			"entries": [
+				"Você possui uma mente capaz de vasculhar o tempo, o espaço e memória com extraordinária precisão. Você ganha os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Você sempre sabe para que lado fica o norte.",
+						"Você sempre sabe o número de horas que faltam para o nascer ou pôr do sol.",
+						"Você pode lembrar com precisão qualquer coisa que tenha visto ou ouvido no último mês."
+					]
+				}
+			],
+			"ability": {
+				"int": 1
+			}
+		},
+		{
+			"name": "Mestre das Armas",
+			"source": "PHB",
+			"page": 169,
+			"entries": [
+				"Você treinou longamente com uma variedade de armas, ganhando os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Você ganha proficiência com quatro armas simples ou marciais à sua escolha."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"str",
+							"dex"
+						],
+						"amount": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "Mestre em Armaduras Médias",
+			"source": "PHB",
+			"page": 169,
+			"prerequisite": [
+				{
+					"proficiency": [
+						{
+							"armor": "medium"
+						}
+					]
+				}
+			],
+			"entries": [
+				"Você praticou movimentos usando armaduras médias até ganhar os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Usar este tipo de armadura não impõe desvantagem em seus testes de Destreza (Furtividade).",
+						"Caso você tenha Destreza igual ou maior que 16, ao usar uma armadura média, pode adicionar 3, em vez de 2, à sua CA."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mestre em Armaduras Pesadas",
+			"source": "PHB",
+			"page": 169,
+			"prerequisite": [
+				{
+					"proficiency": [
+						{
+							"armor": "heavy"
+						}
+					]
+				}
+			],
+			"entries": [
+				"Você pode usar sua armadura para neutralizar ataques que, de outro modo, seriam mortais. Você ganha os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Enquanto estiver usando uma armadura pesada, reduza em 3 qualquer dano contundente, cortante ou perfurante oriundo de armas não-mágicas que você venha a sofrer."
+					]
+				}
+			],
+			"ability": {
+				"str": 1
+			}
+		},
+		{
+			"name": "Mestre em Armas de Haste",
+			"source": "PHB",
+			"page": 170,
+			"entries": [
+				"Você ganha os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Ao realizar a ação Atacar com uma alabarda, bastão, glaive ou lança, você pode usar sua ação bônus para realizar um ataque corpo a corpo com a extremidade oposta da arma; Esse ataque usa o mesmo modificador de atributo que o ataque primário. O dado de dano da arma para esse ataque é 1d4, e o tipo de dano é contundente.",
+						"Enquanto você estiver portando uma alabarda, bastão, glaive, lança ou lança longa, você pode realizar um ataque de oportunidade contra qualquer criatura que fique ao alcance da arma."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mestre em Armas Grandes",
+			"source": "PHB",
+			"page": 170,
+			"entries": [
+				"Você aprendeu a tirar vantagem do peso de uma arma, deixando que o movimento dela fortaleça seus ataques. Você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"No seu turno, ao obter um acerto crítico com uma arma de combate corpo a corpo, ou usá-la para reduzir os pontos de vida de uma criatura a 0, você pode usar sua ação bônus para realizar um segundo ataque com uma arma de combate corpo a corpo.",
+						"Antes de realizar um ataque corpo a corpo com uma arma pesada com a qual seja proficiente, você pode trocar uma penalidade de -5 na jogada de ataque por um bônus de +10 na jogada de dano, caso o ataque seja bem-sucedido."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mestre em Escudos",
+			"source": "PHB",
+			"page": 170,
+			"entries": [
+				"Você emprega escudos não apenas para proteção, mas também para ataque. Ao fazê-lo, ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Ao executar a ação Atacar no seu turno, você pode usar sua ação bônus para empurrar com o escudo uma criatura a até 1,5 metro de distância.",
+						"Caso não esteja incapacitado, você pode adicionar o bônus da CA do seu escudo em qualquer salvaguarda de Destreza feita contra magias ou efeitos ofensivos que afetem apenas você.",
+						"Se for submetido a um efeito que lhe permita realizar uma salvaguarda de Destreza para reduzir o dano sofrido pela metade, você pode usar sua reação para, no caso de sucesso na salvaguarda, não sofrer nenhum dano, interpondo o seu escudo entre você e a fonte do efeito."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mestre-Atirador",
+			"source": "PHB",
+			"page": 170,
+			"entries": [
+				"Você dominou o uso das armas de combate à distância, podendo realizar ataques impossíveis para outros. Você ganha os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Ataques realizados à distância máxima não impõe desvantagem à sua jogada de ataque.",
+						"Seus ataques com armas de combate à distância ignoram meia cobertura e três-quartos de cobertura.",
+						"Antes de realizar uma jogada de ataque com uma arma de combate à distância com a qual seja proficiente, você pode escolher sofrer uma penalidade de -5 na sua jogada de ataque em troca de um bônus de +10 na sua jogada de dano, caso seja bem-sucedido."
+					]
+				}
+			]
+		},
+		{
+			"name": "Precisão Élfica",
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "elf"
+						},
+						{
+							"name": "half-elf"
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 75,
+			"entries": [
+				"A precisão dos elfos é lendária, especialmente a dos seus arqueiros e conjuradores. Você possui uma mira espantosa em ataques que dependem mais da precisão do que da força bruta. Você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Sempre que você tiver vantagem em uma jogada de ataque que use Destreza, Inteligência, Sabedoria ou Carisma, você pode jogar o dado mais uma vez."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"dex",
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				]
+			}
+		},
+		{
 			"name": "Prodígio",
 			"prerequisite": [
 				{
@@ -1149,6 +1015,196 @@
 						"Escolha uma perícia na qual você seja proficiente. Você se torna especialista nela, o que significa que seu bônus de proficiência é duplicado em qualquer teste de atributo que você faça com a perícia. Você precisa escolher uma perícia que ainda não se beneficie de uma característica, tal como Especialista, que dobra seu bônus de proficiência."
 					]
 				}
+			]
+		},
+		{
+			"name": "Resiliente",
+			"source": "PHB",
+			"page": 170,
+			"entries": [
+				"Escolha um atributo. Você ganha os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Você ganha proficiência em salvaguardas usando esse atributo."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1,
+						"textreference": true
+					}
+				]
+			}
+		},
+		{
+			"name": "Resistente",
+			"source": "PHB",
+			"page": 170,
+			"entries": [
+				"Intrépido e resistente, você ganha os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Ao jogar um Dado de Vida para recuperar pontos de vida, o número mínimo de pontos que você recupera é igual ao dobro do seu modificador de Constituição (mínimo de 2)."
+					]
+				}
+			],
+			"ability": {
+				"con": 1
+			}
+		},
+		{
+			"name": "Sentinela",
+			"source": "PHB",
+			"page": 170,
+			"entries": [
+				"Você dominou técnicas que lhe permitem tirar proveito de cada falha na defesa de um inimigo, ganhando os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Ao obter sucesso ao atingir uma criatura com um ataque de oportunidade, o deslocamento dela se torna 0 pelo restante do turno.",
+						"Criaturas a até 1,5 metro de você provocam seus ataques de oportunidade mesmo quando usam a ação Desengajar antes de saírem do seu alcance.",
+						"Quando uma criatura a até 1, 5 metro de você atacar um alvo que não seja você (e ele não tenha este talento), ela permite que você use sua reação para atacá-la com uma arma de combate corpo a corpo."
+					]
+				}
+			]
+		},
+		{
+			"name": "Sorrateiro",
+			"source": "PHB",
+			"page": 170,
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"entries": [
+				"Você é especialista em se esgueirar nas sombras, ganhando os benefícios a seguir:",
+				{
+					"type": "list",
+					"items": [
+						"Você pode tentar se esconder de uma criatura para a qual já esteja levemente obscurecido.",
+						"Quando você está escondido e erra um ataque à distância, sua posição não é revelada.",
+						"Penumbra não impõe desvantagem aos seus testes de Sabedoria (Percepção) baseados em visão."
+					]
+				}
+			]
+		},
+        {
+          "name": "Sorte Grande",
+          "prerequisite": [
+            {
+              "race": [
+                {
+                  "name": "halfling"
+                }
+              ]
+            }
+          ],
+          "source": "XGE",
+          "page": 75,
+          "entries": [
+            "Seu povo possui uma sorte extraordinária, que você aprendeu a compartilhar misticamente com seus companheiros quando eles mais precisam. Você não sabe como faz isso; você simplesmente deseja, e acontece. Com certeza um sinal de que a sorte está do seu lado!",
+            "Quando um aliado seu, à sua vista e a até 9 metros de você, tem 1 em seu resultado de uma jogada de ataque, teste de atributo ou salvaguarda, você pode usar sua reação para permitir que ele jogue o dado novamente. Seu aliado deve usar o novo resultado.",
+            "Ao usar esta habilidade, você não pode usar o traço racial Sortudo antes do final do seu próximo turno."
+          ]
+        },
+		{
+			"name": "Sortudo",
+			"source": "PHB",
+			"page": 170,
+			"entries": [
+				"Sua sorte é inexplicável, parecendo surgir no momento certo.",
+				"Você possui 3 pontos de sorte. Sempre que fizer uma jogada de ataque, um teste de atributo ou de salvaguarda, pode gastar um ponto de sorte para jogar 1d20 adicional. Você pode escolher gastar um dos seus pontos de sorte após jogar o dado, mas antes que o resultado seja determinado. Você escolhe qual dos dados usará.",
+				"Você também pode gastar um ponto de sorte quando uma jogada de ataque for feita contra você. Jogue 1d20 e escolha se o ataque usará sua jogada ou a do atacante.",
+				"Se mais de uma criatura gastar um ponto de sorte para influenciar o resultado da mesma jogada, os pontos se cancelam; nenhum dado adicional é jogado.",
+                "Você recupera todos os pontos de sorte gastos após um descanso longo."
+			]
+		},
+		{
+			"name": "Teleporte Feérico",
+			"prerequisite": [
+				{
+					"race": [
+						{
+							"name": "elf",
+							"subrace": "high"
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 75,
+			"entries": [
+				"Seu estudo das tradições alto élficas revelou poder feérico que poucos elfos possuem, a não ser seus primos eladrin. Acessando sua ancestralidade feérica, você pode cortar caminho por Faéria, diminuindo momentaneamente, com isso, a distância que precisa percorrer de um lugar a outro. Você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você aprendeu a falar, ler e escrever Silvestre.",
+						"Você aprende a magia passo nebuloso e pode conjura-la uma vez sem gastar um espaço de magia. Você recupera a habilidade de conjura-la desse modo ao terminar um descanso curto ou longo. Inteligência é seu atributo de conjuração para essa magia."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"int",
+							"cha"
+						],
+						"amount": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "Valentão de Taverna",
+			"source": "PHB",
+			"page": 170,
+			"entries": [
+				"Acostumado a brigas de bar nas quais usa como arma o que estiver ao alcance, você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você é proficiente com armas improvisadas.",
+						"Seus ataques desarmados usam 1d4 para o dano.",
+						"Ao atingir uma criatura com um ataque desarmado ou com uma arma improvisada, você pode usar sua ação bônus para tentar agarrá-la."
+					]
+				}
+			],
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"str",
+							"con"
+						],
+						"amount": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "Vigoroso",
+			"source": "PHB",
+			"page": 170,
+			"entries": [
+				"Quando você adquire este talento, seu valor máximo de pontos de vida aumenta em uma quantidade igual a duas vezes o seu nível. Após isso, sempre que você ganhar um nível, seu valor máximo de pontos de vida aumenta em 2."
 			]
 		},
 		{
@@ -1185,63 +1241,6 @@
 					}
 				]
 			}
-		},
-		{
-			"name": "Baixo e Ágil",
-			"prerequisite": [
-				{
-					"race": [
-						{
-							"name": "dwarf"
-						},
-						{
-							"name": "small race"
-						}
-					]
-				}
-			],
-			"source": "XGE",
-			"page": 74,
-			"entries": [
-				"Você é singularmente ágil para a sua raça. Isso lhe concede os seguintes benefícios:",
-				{
-					"type": "list",
-					"items": [
-						"Aumente seu deslocamento de caminhada em 1,5 metro.",
-						"Você ganha proficiência em Acrobacia ou Atletismo (à sua escolha).",
-						"Você tem vantagem em qualquer teste de Força (Atletismo) ou Destreza (Acrobacia) feito para evitar ser agarrado."
-					]
-				}
-			],
-			"ability": {
-				"choose": [
-					{
-						"from": [
-							"str",
-							"dex"
-						],
-						"amount": 1
-					}
-				]
-			}
-		},
-		{
-			"name": "Magia Élfica Silvestre",
-			"prerequisite": [
-				{
-					"race": [
-						{
-							"name": "elf",
-							"subrace": "wood"
-						}
-					]
-				}
-			],
-			"source": "XGE",
-			"page": 74,
-			"entries": [
-				"Você aprende a magia das florestas primitivas, que são reverenciadas e protegidas por seu povo. Você aprende um truque de druida à sua escolha. Você também aprende as magias passos largos e passo seu rastro, as quais você pode conjurar uma vez cada sem gastar um espaço de magia. Você recupera a habilidade de conjurar essas duas magias desse modo ao terminar um descanso curto ou longo. Sabedoria é seu atributo de conjuração para essas todas as três magias."
-			]
 		}
 	]
 }
