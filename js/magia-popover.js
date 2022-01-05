@@ -53,46 +53,10 @@ function loadIntoPage(data, id) {
     });
 };
 
-// Solução para Tooltips Magia usando Bootstrap
-
+// Solução para Tooltips de Magia usando o Bootstrap 5
 $(function () {
     $('.magia-hover').tooltip({
         template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
         position: "bottom"
     });
 });
-
-// Solução para Tooltips Magia usando jQuery UI + ajax (não funciona super bem no GitHub Pages)
-// $('document').ready(function(){
-//     $(function () {
-//         $(".magia-hover").tooltip({
-//             show: {
-//             delay: 300,
-//             effect: "fade",
-//             duration: 100,
-//             },
-//             open: function (event, ui) {
-//             var userid = this.id;
-
-//             // $.ajax({
-//             //     url: "/data/magias-popover.html",
-//             //     type: "get",
-//             //     success: function (response) {
-//             //     // Setting content option
-//             //     $("#" + userid).tooltip("option", "content", response);
-//             //     },
-//             // });
-//             },
-//         });
-
-//         $(".magia-hover").mouseout(function () {
-//             // re-initializing tooltip
-//             $(this).tooltip("close");
-//             $(this).tooltip("disable");
-//             $(this).attr("title", "Carregando...");
-//             $(this).tooltip();
-//             $(this).tooltip("enable");
-//             $(".ui-helper-hidden-accessible").hide();
-//         });
-//     });
-// });
