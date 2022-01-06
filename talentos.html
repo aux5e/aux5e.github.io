@@ -71,13 +71,13 @@
 
                 <section id="filter-source">
                     <div class="btn-group" role="group" aria-label="Seleção de fonte dos Talentos">
-                        <input type="checkbox" class="btn-check" id="btntodos" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="btntodos" autocomplete="off" onclick="filtrarTalentos('Todos');">
                         <label class="btn btn-primary" for="btntodos">Todos</label>
                     
-                        <input type="checkbox" class="btn-check" id="btnphb" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="btnphb" autocomplete="off" onclick="filtrarTalentos('PHB');">
                         <label class="btn btn-outline-primary" for="btnphb">PHB</label>
                     
-                        <input type="checkbox" class="btn-check" id="btnxge" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="btnxge" autocomplete="off" onclick="filtrarTalentos('XGE');">
                         <label class="btn btn-outline-primary" for="btnxge">XGE</label>
                     </div>
                 </section>
