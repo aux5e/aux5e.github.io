@@ -257,13 +257,13 @@ async function loadIntoMobileMenu(url) {
   }
 
 $(document).ready(async function () {
-  await loadIntoPage(JSON_URL);
+    await loadIntoPage(JSON_URL);
 });
 
 $(document).ready(async function () {
-  await loadIntoSideMenu(JSON_URL);
+    await loadIntoSideMenu(JSON_URL);
 });
 
 $(document).ready(async function () {
     await loadIntoMobileMenu(JSON_URL);
-  });
+});
