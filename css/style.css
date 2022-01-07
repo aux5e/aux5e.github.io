@@ -1180,6 +1180,11 @@ ul.main-list {
 /** ================ FIM BUTÃO TO TOP ================ **/
 
 /** ================ CARD HEADER PAGINA INICIAL ================ **/
+
+.card {
+    border-radius: 0rem;
+}
+
 .card-2,
 .card-header,
 .card-alt {
