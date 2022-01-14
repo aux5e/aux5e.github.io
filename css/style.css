@@ -200,6 +200,14 @@ footer {
   width: 60%;
 }
 
+.card-bd-alt .small {
+    margin-bottom: 0.4rem;
+}
+
+.card-bd-alt p:last-of-type {
+    margin-top: 1rem;
+}
+
 .row-w-cards {
   padding-bottom: 40px;
 }
