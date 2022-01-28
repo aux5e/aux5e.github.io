@@ -42,7 +42,12 @@ async function loadSubClassIntoPage(url) {
             r[++j] = '<div class="subClass__Title"><h3>' + subclasse[row].name + '<span class="badge">' + subclasse[row].source + ' pg. ' + subclasse[row].page + '</h3>' + '</span>' + '</div>';
             r[++j] = '<div class="subClass__Desc">';
 
-            // SUBCLASSE ENTRIES
+            r[++j] = '</div></button></h2>';
+
+            r[++j] = '<div id="collapse_' + subclasse[row].id + '" class="accordion-collapse collapse" aria-labelledby="heading_' + subclasse[row].id + '" data-bs-parent="#accordionSubClasse">';
+            r[++j] = '<div class="accordion-body">';
+
+            // SUBCLASSE DETAILS ENTRIES
             if (subclasse[row].entries) {
                 var classeentriesLenght = subclasse[row].entries.length;
 
@@ -53,14 +58,10 @@ async function loadSubClassIntoPage(url) {
                 }
             }
 
+            // IF RESTRIÇÃO
             if (subclasse[row].restriction) {
                 r[++j] = '<p><strong>Restrição:</strong> ' + subclasse[row].restriction + '</p>';
             }
-
-            r[++j] = '</div></button></h2>';
-
-            r[++j] = '<div id="collapse_' + subclasse[row].id + '" class="accordion-collapse collapse" aria-labelledby="heading_' + subclasse[row].id + '" data-bs-parent="#accordionSubClasse">';
-            r[++j] = '<div class="accordion-body">';
 
             // SUBCLASSE CONTENT
 
@@ -136,7 +137,7 @@ async function loadSubClassIntoPage(url) {
                         // Entries com cards
                         if (typeof scentries[scfentriesRow] === 'object' && scentries[scfentriesRow].type === "card") {
                             r[++j] = '<div class="card relac-raca" style="margin-top: 22px;margin-bottom: 22px;">';
-                            r[++j] = '<div class="card-body" style="padding: 26px; padding-bottom: 12px;">';
+                            r[++j] = '<div class="card-body"">';
                             r[++j] = '<h6 style="text-transform: uppercase;">' + scentries[scfentriesRow].name + '</h6>';
                             
                             var pLenght = scentries[scfentriesRow].entries.length;
