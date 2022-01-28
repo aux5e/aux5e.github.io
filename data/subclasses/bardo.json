@@ -1,8 +1,8 @@
 {
 	"class": [
 		{
-			"name": "bardo",
-            "subclassTitle": "Bard College",
+			"name": "Bardo",
+            "subclassTitle": "Colégios de Bardo",
 			"multiclassing": {
 				"requirements": {
 					"cha": 13
@@ -42,575 +42,493 @@
 						"one {@item musical instrument|PHB} of your choice"
 					]
 				}
-			}
+			},
+            "entries": [
+                "O caminho de um bardo nunca é solitário. Os membros desta classe sempre procuram uns aos outros para trocar canções e histórias, gabar-se de suas realizações, ou simplesmente compartilhar seu conhecimento. Eles formam associações livres, chamadas de colégios, para facilitar suas reuniões e preservar suas tradições."
+            ]
         }
 	],
-	"subclass": [
+	"subclasses": [
 		{
-			"name": "College of Lore",
-			"shortName": "Lore",
+			"name": "Colégio do Conhecimento",
+			"shortName": "Conhecimento",
+            "id": "conhecimento",
 			"source": "PHB",
-			"className": "Bard",
+			"className": "Bardo",
 			"classSource": "PHB",
 			"page": 54,
 			"srd": true,
+            "level": 3,
+                    "entries": [
+                        "Bardos deste colégio sabem um pouco de tudo, recolhendo fragmentos de conhecimento das fontes mais diversas, desde os tomos eruditos às histórias dos camponeses. Seja cantando baladas populares em tavernas ou composições elaboradas nas cortes reais, estes bardos usam seus dons para manter o público encantado. Quando os aplausos terminam, o público pode parecer atônito, questionando aquilo em que até então acreditou, desde sua fé no clero local até sua fidelidade ao rei.",
+                        "A lealdade desses bardos se dirige à busca pela beleza e a verdade, e não à obediência a um monarca ou a princípios religiosos. Um nobre que empregue um bardo, seja como arauto, seja como conselheiro, sabe que este sempre preferirá a sinceridade à polidez.",
+                        "Os membros deste colégio se reúnem em bibliotecas e, às vezes, em academias repletas de salas de estudo e alojamentos, onde compartilham entre si os seus conhecimentos. Eles também se juntam em festivais ou assembleias de estado, onde podem expor a corrupção, desvendar as mentiras e zombar das figuras de autoridade."
+                    ],
 			"subclassFeatures": [
-				{
-                    "name": "College of Lore",
-                    "source": "PHB",
-                    "page": 54,
-                    "srd": true,
-                    "className": "Bard",
-                    "classSource": "PHB",
-                    "subclassShortName": "Lore",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "entries": [
-                        "Bards of the College of Lore know something about most things, collecting bits of knowledge from sources as diverse as scholarly tomes and peasant tales. Whether singing folk ballads in taverns or elaborate compositions in royal courts, these bards use their gifts to hold audiences spellbound. When the applause dies down, the audience members might find themselves questioning everything they held to be true, from their faith in the priesthood of the local temple to their loyalty to the king.",
-                        "The loyalty of these bards lies in the pursuit of beauty and truth, not in fealty to a monarch or following the tenets of a deity. A noble who keeps such a bard as a herald or advisor knows that the bard would rather be honest than politic.",
-                        "The college's members gather in libraries and sometimes in actual colleges, complete with classrooms and dormitories, to share their lore with one another. They also meet at festivals or affairs of state, where they can expose corruption, unravel lies, and poke fun at self-important figures of authority.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiencies|Bard||Lore||3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Cutting Words|Bard||Lore||3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Bonus Proficiencies",
+                    "name": "Proficiência Bônus",
                     "source": "PHB",
                     "page": 54,
                     "srd": true,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Lore",
+                    "subclassShortName": "Conhecimento",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice."
+                        "Ao entrar para o Colégio do Conhecimento no 3º nível, você ganha proficiência em três perícias, à sua escolha."
                     ]
                 },
                 {
-                    "name": "Cutting Words",
+                    "name": "Palavras de Interrupção",
                     "source": "PHB",
-                    "page": 54,
+                    "page": 55,
                     "srd": true,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Lore",
+                    "subclassShortName": "Conhecimento",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll. You can choose to use this feature after the creature makes its roll, but before the DM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can't hear you or if it's immune to being {@condition charmed}."
+                        "Também no 3º nível, você aprende a usar o seu talento para distrair, confundir e enfraquecer a confiança e a eficiência do seu alvo. Quando uma criatura que seja visível e esteja a até 18 metros de distância realizar um teste de atributo, uma jogada de ataque ou de dano, você pode usar sua reação como um uso de Inspiração de Bardo, jogando um dado dessa característica e subtraindo o resultado da jogada da criatura. Você pode escolher usar essa característica depois que a criatura fez a jogada dela, mas antes de o DM determinar se a jogada de ataque ou teste de atributo foi ou não bem-sucedido, ou antes de a criatura causar seu dano. Esta última não é afetada se não puder escutá-lo ou se for imune a enfeitiçamento."
                     ]
                 },
                 {
-                    "name": "Additional Magical Secrets",
+                    "name": "Segredos Mágicos Adicionais",
                     "source": "PHB",
-                    "page": 54,
+                    "page": 55,
                     "srd": true,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Lore",
+                    "subclassShortName": "Conhecimento",
                     "subclassSource": "PHB",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "At 6th level, you learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you but don't count against the number of bard spells you know."
+                        "No 6º nível, você aprende duas magias de qualquer classe à sua escolha. Essas magias devem ser truques ou pertencer a um círculo que você possa conjurar, conforme mostrado na tabela O Bardo. As magias escolhidas contam como magias de bardo, mas não contam para o número de magias de bardo que você conhece."
                     ]
                 },
                 {
-                    "name": "Peerless Skill",
+                    "name": "Perícia Inigualável",
                     "source": "PHB",
-                    "page": 54,
+                    "page": 55,
                     "srd": true,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Lore",
+                    "subclassShortName": "Conhecimento",
                     "subclassSource": "PHB",
                     "level": 14,
                     "header": 2,
                     "entries": [
-                        "Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the DM tells you whether you succeed or fail."
+                        "A partir do 14º nível, ao fazer um teste de atributo, você pode gastar um uso de Inspiração de Bardo. Jogue um dado de Inspiração de Bardo e adicione o número obtido ao resultado do seu teste de atributo. Você pode gastar o dado de Inspiração de Bardo depois de jogar o d20 para o teste de atributo, mas antes que o DM diga se foi bem-sucedido ou não."
                     ]
                 }
 			]
 		},
 		{
-			"name": "College of Valor",
-			"shortName": "Valor",
+			"name": "Colégio da Bravura",
+			"shortName": "Bravura",
+            "id": "bravura",
 			"source": "PHB",
-			"className": "Bard",
+			"className": "Bardo",
 			"classSource": "PHB",
 			"page": 55,
+            "level": 3,
+                    "entries": [
+                        "Os bardos do Colégio da Bravura são menestréis destemidos cujas canções mantém viva a memória dos grandes heróis do passado, inspirando uma nova geração de heróis. Esses bardos se reúnem em salões regados a hidromel, ou ao redor de grandes fogueiras para cantar os feitos dos mais bravos, seja do passado ou do presente. Eles viajam pela terra para testemunhar grandes eventos em primeira mão, garantindo que a memória de tais proezas jamais se perca. Com suas canções, inspiram os outros a alcançarem o mesmo patamar de realizações dos heróis de outrora."
+                    ],
 			"subclassFeatures": [
-				{
-                    "name": "College of Valor",
-                    "source": "PHB",
-                    "page": 55,
-                    "className": "Bard",
-                    "classSource": "PHB",
-                    "subclassShortName": "Valor",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "entries": [
-                        "Bards of the College of Valor are daring skalds whose tales keep alive the memory of the great heroes of the past, and thereby inspire a new generation of heroes. These bards gather in mead halls or around great bonfires to sing the deeds of the mighty, both past and present. They travel the land to witness great events firsthand and to ensure that the memory of those events doesn't pass from the world. With their songs, they inspire others to reach the same heights of accomplishment as the heroes of old.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiencies|Bard||Valor||3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Combat Inspiration|Bard||Valor||3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Bonus Proficiencies",
+                    "name": "Proficiência Bônus",
                     "source": "PHB",
                     "page": 55,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Valor",
+                    "subclassShortName": "Bravura",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you join the College of Valor at 3rd level, you gain proficiency with medium armor, shields, and martial weapons."
+                        "Ao se juntar ao Colégio da Bravura no 3º nível, você adquire proficiência com armaduras médias, escudos e armas marciais."
                     ]
                 },
                 {
-                    "name": "Combat Inspiration",
+                    "name": "Inspiração em Combate",
                     "source": "PHB",
                     "page": 55,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Valor",
+                    "subclassShortName": "Bravura",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Also at 3rd level, you learn to inspire others in battle. A creature that has a Bardic Inspiration die from you can roll that die and add the number rolled to a weapon damage roll it just made. Alternatively, when an attack roll is made against the creature, it can use its reaction to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, after seeing the roll but before knowing whether it hits or misses."
+                        "Ainda no 3º nível, você aprende a inspirar terceiros durante uma batalha. Uma criatura que possua um dado concedido por sua Inspiração de Bardo pode jogá-lo e adicionar o resultado a uma jogada de dano que tenha acabado de realizar. Ou, se preferir, ao sofrer um ataque, a criatura poderá usar uma reação para jogar o dado de Inspiração de Bardo e adicionar o resultado à sua CA contra esse ataque - isso depois da jogada ser feita, mas antes de saber se foi um acerto ou não."
                     ]
                 },
                 {
-                    "name": "Extra Attack",
+                    "name": "Ataque Extra",
                     "source": "PHB",
                     "page": 55,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Valor",
+                    "subclassShortName": "Bravura",
                     "subclassSource": "PHB",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "Starting at 6th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                        "A partir do 5º nível, durante o seu turno, sempre que executar a ação Atacar, você pode realizar dois ataques ao invés de um."
                     ]
                 },
                 {
-                    "name": "Battle Magic",
+                    "name": "Magia de Batalha",
                     "source": "PHB",
                     "page": 55,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Valor",
+                    "subclassShortName": "Bravura",
                     "subclassSource": "PHB",
                     "level": 14,
                     "header": 2,
                     "entries": [
-                        "At 14th level, you have mastered the art of weaving spellcasting and weapon use into a single harmonious act. When you use your action to cast a bard spell, you can make one weapon attack as a bonus action."
+                        "No 14º nível, você já dominou a arte da conjuração e do uso de armas em um ato único e harmonioso. Ao usar sua ação para conjurar uma magia de bardo, você pode realizar um ataque armado como sua ação bônus."
                     ]
                 }
 			]
 		},
 		{
-			"name": "College of Glamour",
+			"name": "Colégio do Glamour",
 			"shortName": "Glamour",
+            "id": "glamour",
 			"source": "XGE",
-			"className": "Bard",
+			"className": "Bardo",
 			"classSource": "PHB",
 			"page": 14,
-			"additionalSpells": [
-				{
-					"innate": {
-						"6": [
-							"command"
-						]
-					}
-				}
-			],
+            "level": 3,
+                    "entries": [
+                        "Este colégio é o lar de bardos que estudaram seu ofício no vibrante reino de Faéria, ou sob a tutela de alguém que tenha morado lá. Orientados por sátiros, eladrin e outros feéricos, esses bardos aprendem a usar a magia para deleitar e cativar outras criaturas.",
+                        "Os bardos deste colégio são vistos com uma mistura de reverência e medo. Suas apresentações são lendárias. Eles são tão eloquentes que seus discursos ou canções podem fazer com que seus sequestradores os libertem ilesos e dragões em fúria sejam aplacados. A mesma magia que lhes permite dominar feras também lhes permite dominar mentes. Bardos malignos deste colégio podem tirar proveito de uma comunidade por semana a fio, abusando de sua magia para transformar seus anfitriões em servos. Bardos heróicos deste colégio, por outro lado, usam seus poderes para encorajar os oprimidos e enfraquecer os opressores."
+                    ],
 			"subclassFeatures": [
-				{
-                    "name": "College of Glamour",
-                    "source": "XGE",
-                    "page": 14,
-                    "className": "Bard",
-                    "classSource": "PHB",
-                    "subclassShortName": "Glamour",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "The College of Glamour is the home of bards who mastered their craft in the vibrant realm of the Feywild or under the tutelage of someone who dwelled there. Tutored by satyrs, eladrin, and other fey, these bards learn to use their magic to delight and captivate others.",
-                        "The bards of this college are regarded with a mixture of awe and fear. Their performances are the stuff of legend. These bards are so eloquent that a speech or song that one of them performs can cause captors to release the bard unharmed and can lull a furious dragon into complacency. The same magic that allows them to quell beasts can also bend minds. Villainous bards of this college can leech off a community for weeks, misusing their magic to turn their hosts into thralls. Heroic bards of this college instead use this power to gladden the downtrodden and undermine oppressors.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Mantle of Inspiration|Bard||Glamour|XGE|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Enthralling Performance|Bard||Glamour|XGE|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Enthralling Performance",
+                    "name": "Manto da Inspiração",
                     "source": "XGE",
                     "page": 14,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
                     "subclassShortName": "Glamour",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Starting at 3rd level, you can charge your performance with seductive, fey magic.",
-                        "If you perform for at least 1 minute, you can attempt to inspire wonder in your audience by singing, reciting a poem, or dancing. At the end of the performance, choose a number of humanoids within 60 feet of you who watched and listened to all of it, up to a number equal to your Charisma modifier (minimum of one). Each target must succeed on a Wisdom saving throw against your spell save DC or be {@condition charmed} by you. While {@condition charmed} in this way, the target idolizes you, it speaks glowingly of you to anyone who talks to it, and it hinders anyone who opposes you, although it avoids violence unless it was already inclined to fight on your behalf. This effect ends on a target after 1 hour, if it takes any damage, if you attack it, or if it witnesses you attacking or damaging any of its allies.",
-                        "If a target succeeds on its saving throw, the target has no hint that you tried to charm it.",
-                        "Once you use this feature, you can't use it again until you finish a short or long rest."
+                        "Ao se juntar ao Colégio do Glamour no 3º nível, você ganha a habilidade de tecer uma canção de magia feérica que imbuí seus aliados com velocidade e vigor.",
+                        "Como uma ação bônus, você pode gastar um uso de sua Inspiração de Bardo para conceder a si mesmo uma aparência assombrosa. Ao fazê-lo, escolha um número de criaturas à sua vista, que possam vê-lo e que estejam a até 18 metros de você, igual ou menor a seu modificador de Carisma (no mínimo uma). Cada criatura ganha 5 pontos de vida temporários. Nesse momento, cada criatura pode imediatamente usar sua reação para se mover até o máximo do deslocamento dela sem provocar ataques de oportunidade.",
+                        "A quantidade de pontos de vida temporários aumenta quando você alcança certos níveis nesta classe, passando para 8 no 5º nível, 11 no 10º e 14 no 15º nível."
                     ]
                 },
                 {
-                    "name": "Mantle of Inspiration",
+                    "name": "Performance Sublime",
                     "source": "XGE",
                     "page": 14,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
                     "subclassShortName": "Glamour",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you join the College of Glamour at 3rd level, you gain the ability to weave a song of fey magic that imbues your allies with vigor and speed.",
-                        "As a bonus action, you can expend one use of your Bardic Inspiration to grant yourself a wondrous appearance. When you do so, choose a number of creatures you can see and that can see you within 60 feet of you, up to a number equal to your Charisma modifier (minimum of one). Each of them gains 5 temporary hit points. When a creature gains these temporary hit points, it can immediately use its reaction to move up to its speed, without provoking opportunity attacks.",
-                        "The number of temporary hit points increases when you reach certain levels in this class, increasing to 8 at 5th level, 11 at 10th level, and 14 at 15th level."
+                        "A partir do 3º nível, você pode energizar suas apresentações com a sedutora magia feérica.",
+                        "Se você se apresentar por pelo menos 1 minuto, pode tentar inspirar admiração na sua audiência cantando, declamando um poema ou dançando. Ao final da performance, escolha um número de humanóides a até 18 metros de você que tenha assistido e escutado a tudo, até um máximo igual a seu modificador de Carisma (no mínimo um). Cada alvo deve ser bem-sucedido numa salvaguarda de Sabedoria contra a CD para evitar suas magias, ou ser enfeitiçado por você. Enquanto enfeitiçado desse modo, o alvo o idolatra, fala bem de você a qualquer um que converse com ele e impede qualquer um que se oponha a você, embora ele evite violência a não ser que já estivesse inclinado a lutar por você. Este efeito se encerra sobre o alvo após 1 hora, caso ele sofra qualquer tipo ou quantidade de dano, caso você o ataque, ou se ele vê-lo atacando ou ferindo qualquer um dos aliados dele.",
+                        "Se um alvo for bem-sucedido na salvaguarda, ele não terá a menor ideia de que você tentou enfeitiça-lo.",
+                        "Após usar esta característica, você não pode usá-la novamente até terminar um descanso curto ou longo."
                     ]
                 },
                 {
-                    "name": "Mantle of Majesty",
+                    "name": "Manto da Majestade",
                     "source": "XGE",
                     "page": 14,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
                     "subclassShortName": "Glamour",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "At 6th level, you gain the ability to cloak yourself in a fey magic that makes others want to serve you. As a bonus action, you cast {@spell command}, without expending a spell slot, and you take on an appearance of unearthly beauty for 1 minute or until your concentration ends (as if you were concentrating on a spell). During this time, you can cast {@spell command} as a bonus action on each of your turns, without expending a spell slot.",
-                        "Any creature {@condition charmed} by you automatically fails its saving throw against the {@spell command} you cast with this feature.",
-                        "Once you use this feature, you can't use it again until you finish a long rest."
+                        "No 6º nível, você ganha a habilidade de cobrir a si mesmo com uma magia feérica que faz com que outras criaturas queiram servi-lo. Como uma ação bônus, você conjura {@spell comando} sem gastar um espaço de magia, e assume uma aparência de beleza sobrenatural por 1 minuto, ou até que perca sua concentração (como se você estivesse se concentrando numa magia). Durante esse tempo, você pode conjurar {@spell comando} como uma ação bônus em cada um dos seus turnos sem gastar um espaço de magia.",
+                        "Qualquer criatura enfeitiçada por você falha automaticamente em uma salvaguarda contra o {@spell comando} que você conjurou com esta característica.",
+                        "Uma vez que tenha usado esta característica, você não pode usá-la novamente até terminar um descanso longo."
                     ]
                 },
                 {
-                    "name": "Unbreakable Majesty",
+                    "name": "Majestade Inquebrantável",
                     "source": "XGE",
                     "page": 14,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
                     "subclassShortName": "Glamour",
                     "subclassSource": "XGE",
                     "level": 14,
                     "header": 2,
                     "entries": [
-                        "At 14th level, your appearance permanently gains an otherworldly aspect that makes you look more lovely and fierce.",
-                        "In addition, as a bonus action, you can assume a magically majestic presence for 1 minute or until you are {@condition incapacitated}. For the duration, whenever any creature tries to attack you for the first time on a turn, the attacker must make a Charisma saving throw against your spell save DC. On a failed save, it can't attack you on this turn, and it must choose a new target for its attack or the attack is wasted. On a successful save, it can attack you on this turn, but it has disadvantage on any saving throw it makes against your spells on your next turn.",
-                        "Once you assume this majestic presence, you can't do so again until you finish a short or long rest."
+                        "No 14º nível, sua aparência ganha permanentemente um aspecto de outro mundo, que o torna mais amável e feroz.",
+                        "Além disso, como uma ação bônus, você pode assumir uma presença mágica majestosa por 1 minuto, ou até ser {@condition incapacitado}. Pela duração deste efeito, sempre que qualquer criatura tentar atacá-lo pela primeira vez em um turno, ela deve realizar uma salvaguarda de Carisma contra a CD para evitar suas magias. Em caso de falha, ela não pode atacá-lo neste turno, e deve escolher um novo alvo para o ataque ou o desperdiçará. Em caso de sucesso, ela pode atacá-lo neste turno, mas com desvantagem em qualquer salvaguarda que realizar contra suas magias no seu próximo turno.",
+                        "Uma vez que tenha assumido esta presença majestosa, você não pode fazê-lo novamente até terminar um descanso curto ou longo."
                     ]
                 }
 			]
 		},
 		{
-			"name": "College of Swords",
-			"shortName": "Swords",
+			"name": "Colégio das Espadas",
+			"shortName": "Espadas",
+            "id": "espadas",
 			"source": "XGE",
-			"className": "Bard",
+			"className": "Bardo",
 			"classSource": "PHB",
 			"page": 15,
+            "level": 3,
+                    "entries": [
+                        "Bardos do Colégio das Espadas são chamados de lâminas, entretendo os outros por meio de ousados feitos de habilidade marcial. Os lâminas realizam movimentos tais como engolimento de espadas, arremesso e malabarismo com facas e combates coreografados. Embora usem suas armas para entreter, eles também são combatentes altamente habilidosos e treinados à sua própria maneira.",
+                        "Seu talento com armas inspira muitos deles a levar vidas duplas. Um lâmina pode usar uma trupe circense como fachada para ações nefandas, como assassinato, assalto e chantagem. Outros lâminas atacam os perversos, trazendo justiça aos cruéis e poderosos. Muitas trupes ficam felizes em aceitar os talentos de um lâmina devido à emoção que isso acrescenta a uma apresentação, mas poucos artistas circenses confiam plenamente num lâmina entre suas fileiras.",
+                        "Lâminas que abandonam suas vidas como artistas de entretenimento geralmente fazem-no por terem se metido em encrencas que tornam impossível manter suas atividades em segredo. Um lâmina pego roubando ou se envolvendo em atividades de justiceiro é uma responsabilidade muito grande para a maioria das trupes. Com suas habilidade com armas e magia, esses lâminas costumam trabalhar como executores para guildas de ladrões ou agir por conta própria como aventureiros."
+                    ],
 			"subclassFeatures": [
-				{
-                    "name": "College of Swords",
-                    "source": "XGE",
-                    "page": 15,
-                    "className": "Bard",
-                    "classSource": "PHB",
-                    "subclassShortName": "Swords",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "Bards of the College of Swords are called blades, and they entertain through daring feats of weapon prowess. Blades perform stunts such as sword swallowing, knife throwing and juggling, and mock combats. Though they use their weapons to entertain, they are also highly trained and skilled warriors in their own right.",
-                        "Their talent with weapons inspires many blades to lead double lives. One blade might use a circus troupe as cover for nefarious deeds such as assassination, robbery, and blackmail. Other blades strike at the wicked, bringing justice to bear against the cruel and powerful. Most troupes are happy to accept a blade's talent for the excitement it adds to a performance, but few entertainers fully trust a blade in their ranks.",
-                        "Blades who abandon their lives as entertainers have often run into trouble that makes maintaining their secret activities impossible. A blade caught stealing or engaging in vigilante justice is too great a liability for most troupes. With their weapon skills and magic, these blades either take up work as enforcers for thieves' guilds or strike out on their own as adventurers.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiencies|Bard||Swords|XGE|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Fighting Style|Bard||Swords|XGE|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Blade Flourish|Bard||Swords|XGE|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Blade Flourish",
+                    "name": "Proficiências Bônus",
                     "source": "XGE",
                     "page": 15,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Swords",
+                    "subclassShortName": "Espadas",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "At 3rd level, you learn to perform impressive displays of martial prowess and speed.",
-                        "Whenever you take the {@action Attack} action on your turn, your walking speed increases by 10 feet until the end of the turn, and if a weapon attack that you make as part of this action hits a creature, you can use one of the following Blade Flourish options of your choice. You can use only one Blade Flourish option per turn.",
-                        {
-                            "type": "options",
-                            "entries": [
-                                {
-                                    "type": "refSubclassFeature",
-                                    "subclassFeature": "Defensive Flourish|Bard|XGE|Swords|XGE|3"
-                                },
-                                {
-                                    "type": "refSubclassFeature",
-                                    "subclassFeature": "Slashing Flourish|Bard|XGE|Swords|XGE|3"
-                                },
-                                {
-                                    "type": "refSubclassFeature",
-                                    "subclassFeature": "Mobile Flourish|Bard|XGE|Swords|XGE|3"
-                                }
-                            ]
-                        }
+                        "Ao entrar no Colégio das Espadas no 3º nível, você ganha proficiência com armaduras médias e cimitarras.",
+                        "Se for proficiente com uma arma de combate corpo a corpo simples ou marcial, você pode usá-la como um foco de conjuração para suas magias de bardo."
                     ]
                 },
                 {
-                    "name": "Bonus Proficiencies",
+                    "name": "Estilo de Luta",
                     "source": "XGE",
                     "page": 15,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Swords",
+                    "subclassShortName": "Espadas",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you join the College of Swords at 3rd level, you gain proficiency with medium armor and the {@item scimitar|phb}.",
-                        "If you're proficient with a simple or martial melee weapon, you can use it as a spellcasting focus for your bard spells."
-                    ]
-                },
-                {
-                    "name": "Fighting Style",
-                    "source": "XGE",
-                    "page": 15,
-                    "className": "Bard",
-                    "classSource": "PHB",
-                    "subclassShortName": "Swords",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "At 3rd level, you adopt a style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if something in the game lets you choose again.",
+                        "No 3º nível, você se especializa em um Estilo de Luta. Escolha uma das opções abaixo. Você não pode adotar um mesmo estilo de luta mais de uma vez, mesmo que algo no jogo permita que você escolha novamente.",
                         {
                             "type": "options",
                             "count": 1,
                             "entries": [
                                 {
-                                    "type": "refOptionalfeature",
-                                    "optionalfeature": "Dueling"
+                                    "name": "Duelismo",
+                                    "source": "XGE",
+                                    "page": 15,
+                                    "className": "bardo",
+                                    "classSource": "PHB",
+                                    "subclassShortName": "Espadas",
+                                    "subclassSource": "XGE",
+                                    "level": 3,
+                                    "entries": [
+                                        "Enquanto estiver empunhando uma única arma de combate corpo a corpo e com apenas uma das mãos, você ganha um bônus de +2 nas jogadas de dano feitas com essa arma."
+                                    ]
                                 },
                                 {
-                                    "type": "refOptionalfeature",
-                                    "optionalfeature": "Two-Weapon Fighting"
+                                    "name": "Combate com Duas Armas",
+                                    "source": "XGE",
+                                    "page": 15,
+                                    "className": "bardo",
+                                    "classSource": "PHB",
+                                    "subclassShortName": "Espadas",
+                                    "subclassSource": "XGE",
+                                    "level": 3,
+                                    "entries": [
+                                        "Ao engajar-se em combate portando duas armas, você pode adicionar o seu modificador de atributo ao dano do segundo ataque."
+                                    ]
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Extra Attack",
+                    "name": "Floreio com Lâminas",
                     "source": "XGE",
                     "page": 15,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Swords",
+                    "subclassShortName": "Espadas",
+                    "subclassSource": "XGE",
+                    "level": 3,
+                    "header": 1,
+                    "entries": [
+                        "No 3º nível, você aprende a realizar impressionantes demonstrações de velocidade e habilidade marcial.",
+                        "Sempre que você realizar uma ação Atacar no seu turno, seu deslocamento de caminhada aumenta em 3 metros até o final do turno, e se um ataque armado que você fizer como parte dessa ação atingir uma criatura, você pode usar uma das seguintes opções de Floreio com Lâminas à sua escolha. Você pode usar uma única opção por turno.",
+                        {
+                            "type": "options",
+                            "count": 1,
+                            "entries": [
+                                {
+                                    "name": "Floreio Defensivo",
+                                    "source": "XGE",
+                                    "page": 15,
+                                    "className": "Bardo",
+                                    "classSource": "XGE",
+                                    "subclassShortName": "Espadas",
+                                    "subclassSource": "XGE",
+                                    "level": 3,
+                                    "entries": [
+                                        "Você pode gastar um uso de sua Inspiração de Bardo para fazer com que sua arma cause dano adicional a um alvo que você atingir. O dano é igual ao resultado do dado de Inspiração de Bardo. Você também pode somar o resultado no dado à sua CA até o início do seu próximo turno."
+                                    ]
+                                },
+                                {
+                                    "name": "Floreio Arrasador",
+                                    "source": "XGE",
+                                    "page": 15,
+                                    "className": "Bardo",
+                                    "classSource": "XGE",
+                                    "subclassShortName": "Espadas",
+                                    "subclassSource": "XGE",
+                                    "level": 3,
+                                    "entries": [
+                                        "Você pode gastar um uso de sua Inspiração de Bardo para fazer com que sua arma cause dano adicional a um alvo que você atinja e a uma outra criatura qualquer à sua escolha, que você possa ver e que esteja a até 1,5 metro de você. O dano é igual ao resultado no seu dado de Inspiração de Bardo."
+                                    ]
+                                },
+                                {
+                                    "name": "Floreio Móvel",
+                                    "source": "XGE",
+                                    "page": 15,
+                                    "className": "Bardo",
+                                    "classSource": "XGE",
+                                    "subclassShortName": "Espadas",
+                                    "subclassSource": "XGE",
+                                    "level": 3,
+                                    "entries": [
+                                        "Você pode gastar um uso de sua Inspiração de Bardo para fazer com que sua arma cause dano adicional a um alvo que você atingir. O dano é igual ao resultado no dado de Inspiração de Bardo. Você também pode empurrar o alvo até 1,5 metro para longe de você, mais uma quantidade de centímetros igual ao resultado do dano multiplicado por 30. Imediatamente em seguida, você pode usar sua reação para mover-se até o máximo do seu deslocamento até um espaço desocupado a 1,5 metro do alvo."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                
+                
+                {
+                    "name": "Ataque Extra",
+                    "source": "XGE",
+                    "page": 15,
+                    "className": "Bardo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Espadas",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "Starting at 6th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                        "A partir do 6º nível, você pode atacar duas vezes, ao invés de uma, sempre que usar a ação Atacar no seu turno."
                     ]
                 },
                 {
-                    "name": "Master's Flourish",
+                    "name": "Floreio de Mestre",
                     "source": "XGE",
                     "page": 15,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Swords",
+                    "subclassShortName": "Espadas",
                     "subclassSource": "XGE",
                     "level": 14,
                     "header": 2,
                     "entries": [
-                        "Starting at 14th level, whenever you use a Blade Flourish option, you can roll a {@dice d6} and use it instead of expending a Bardic Inspiration die."
-                    ]
-                },
-                {
-                    "name": "Defensive Flourish",
-                    "source": "XGE",
-                    "page": 15,
-                    "className": "Bard",
-                    "classSource": "XGE",
-                    "subclassShortName": "Swords",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "You can expend one use of your Bardic Inspiration to cause the weapon to deal extra damage to the target you hit. The damage equals the number you roll on the Bardic Inspiration die. You also add the number rolled to your AC until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Mobile Flourish",
-                    "source": "XGE",
-                    "page": 15,
-                    "className": "Bard",
-                    "classSource": "XGE",
-                    "subclassShortName": "Swords",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "You can expend one use of your Bardic Inspiration to cause the weapon to deal extra damage to the target you hit. The damage equals the number you roll on the Bardic Inspiration die. You can also push the target up to 5 feet away from you, plus a number of feet equal to the number you roll on that die. You can then immediately use your reaction to move up to your walking speed to an unoccupied space within 5 feet of the target."
-                    ]
-                },
-                {
-                    "name": "Slashing Flourish",
-                    "source": "XGE",
-                    "page": 15,
-                    "className": "Bard",
-                    "classSource": "XGE",
-                    "subclassShortName": "Swords",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "You can expend one use of your Bardic Inspiration to cause the weapon to deal extra damage to the target you hit and to any other creature of your choice that you can see within 5 feet of you. The damage equals the number you roll on the Bardic Inspiration die."
+                        "A partir do 14º nível, sempre que você usar uma das opção de Floreio com Lâminas, você pode jogar 1d6 no lugar de gastar um dado de Inspiração de Bardo."
                     ]
                 }
 			]
 		},
 		{
-			"name": "College of Whispers",
-			"shortName": "Whispers",
+			"name": "Colégio dos Sussurros",
+			"shortName": "Sussurros",
+            "id": "sussurros",
 			"source": "XGE",
-			"className": "Bard",
+			"className": "Bardo",
 			"classSource": "PHB",
 			"page": 16,
+            "level": 3,
+                    "entries": [
+                        "A maioria das pessoas fica feliz em acolher um bardo em seu meio. Bardos do Colégio dos Sussurros usam isso em vantagem própria. Eles parecem ser iguais aos outros bardos, compartilhando novidades, cantando e contando histórias para seu público. Na verdade, o Colégio dos Sussurros ensina seus estudantes que eles são lobos na pele de cordeiros. Esse bardos usam seus conhecimentos e magia para descobrir segredos e usá-los para extorquir e ameaçar.",
+                        "É comum que outros bardos odeiem este Colégio, vendo-o como um parasita que usa a reputação da classe para adquirir riqueza e poder. Por isso, membros deste colégio raramente revelam sua verdadeira natureza. Eles costumam dizer que seguem outro colégio, ou manter sua verdadeira afiliação em segredo de modo a se infiltrar e explorarem as cortes da realiza e outros locais de poder."
+                    ],
 			"subclassFeatures": [
-				{
-                    "name": "College of Whispers",
-                    "source": "XGE",
-                    "page": 16,
-                    "className": "Bard",
-                    "classSource": "PHB",
-                    "subclassShortName": "Whispers",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "Most folk are happy to welcome a bard into their midst. Bards of the College of Whispers use this to their advantage. They appear to be like other bards, sharing news, singing songs, and telling tales to the audiences they gather. In truth, the College of Whispers teaches its students that they are wolves among sheep. These bards use their knowledge and magic to uncover secrets and turn them against others through extortion and threats.",
-                        "Many other bards hate the College of Whispers, viewing it as a parasite that uses a bard's reputation to acquire wealth and power. For this reason, members of this college rarely reveal their true nature. They typically claim to follow some other college, or they keep their actual calling secret in order to infiltrate and exploit royal courts and other settings of power.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Psychic Blades|Bard||Whispers|XGE|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Words of Terror|Bard||Whispers|XGE|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Psychic Blades",
+                    "name": "Lâminas Psíquicas",
                     "source": "XGE",
                     "page": 16,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Whispers",
+                    "subclassShortName": "Sussurros",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you join the College of Whispers at 3rd level, you gain the ability to make your weapon attacks magically toxic to a creature's mind.",
-                        "When you hit a creature with a weapon attack, you can expend one use of your Bardic Inspiration to deal an extra {@damage 2d6} psychic damage to that target. You can do so only once per round on your turn.",
-                        "The psychic damage increases when you reach certain levels in this class, increasing to {@dice 3d6} at 5th level, {@dice 5d6} at 10th level, and {@dice 8d6} at 15th level."
+                        "Ao se juntar ao Colégio dos Sussurros no 3º nível, você ganha a habilidade de tornar os seus ataques armados magicamente tóxicos para a mente de uma criatura.",
+                        "Ao atingir uma criatura com um ataque armado, você pode gastar um uso de sua Inspiração de Bardo para causar 2d6 pontos de dano psíquico adicional nesse alvo. Você só pode fazer isso uma única vez por rodada, no seu turno.",
+                        "O dano psíquico aumenta quando você alcança certos níveis nesta classe, passando a ser 3d6 no 5º nível, 5d6 no 10º e 8d6 no 15º nível."
                     ]
                 },
                 {
-                    "name": "Words of Terror",
+                    "name": "Palavras de Terror",
                     "source": "XGE",
                     "page": 16,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Whispers",
+                    "subclassShortName": "Sussurros",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "At 3rd level, you learn to infuse innocent-seeming words with an insidious magic that can inspire terror.",
-                        "If you speak to a humanoid alone for at least 1 minute, you can attempt to seed paranoia in its mind. At the end of the conversation, the target must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of you or another creature of your choice. The target is {@condition frightened} in this way for 1 hour, until it is attacked or damaged, or until it witnesses its allies being attacked or damaged.",
-                        "If the target succeeds on its saving throw, the target has no hint that you tried to frighten it.",
-                        "Once you use this feature, you can't use it again until you finish a short or long rest."
+                        "No 3º nível, você aprende a infundir palavras aparentemente inocentes com uma magia insidiosa capaz de inspirar terror.",
+                        "Se falar com um humanoide sozinho por pelo menos 1 minuto, você pode tentar implantar paranoia na mente dele. Ao final da conversa, o alvo deve obter sucesso numa salvaguarda de Sabedoria contra a CD para evitar suas magias, ou ficar amedrontado por você durante 1 hora, até ser atacado ou sofrer dano, ou até presenciar os aliados dele sendo atacados ou sofrendo dano.",
+                        "Se o alvo for bem-sucedido na salvaguarda, ele não fará ideia de que você tentou amedrontá-lo.",
+                        "Após usar esta característica, você não pode usá-la novamente até terminar um descanso curto ou longo."
                     ]
                 },
                 {
-                    "name": "Mantle of Whispers",
+                    "name": "Manto de Sussurros",
                     "source": "XGE",
                     "page": 16,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Whispers",
+                    "subclassShortName": "Sussurros",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "At 6th level, you gain the ability to adopt a humanoid's persona. When a humanoid dies within 30 feet of you, you can magically capture its shadow using your reaction. You retain this shadow until you use it or you finish a long rest.",
-                        "You can use the shadow as an action. When you do so, it vanishes, magically transforming into a disguise that appears on you. You now look like the dead person, but healthy and alive. This disguise lasts for 1 hour or until you end it as a bonus action.",
-                        "While you're in the disguise, you gain access to all information that the humanoid would freely share with a casual acquaintance. Such information includes general details on its background and personal life, but doesn't include secrets. The information is enough that you can pass yourself off as the person by drawing on its memories.",
-                        "Another creature can see through this disguise by succeeding on a Wisdom ({@skill Insight}) check contested by your Charisma ({@skill Deception}) check. You gain a +5 bonus to your check.",
-                        "Once you capture a shadow with this feature, you can't capture another one with it until you finish a short or long rest."
+                        "No 6º nível, você ganha a habilidade de adotar a personalidade de um humanoide. Quando um humanoide morre a até 9 metros de você, você pode capturar magicamente a sombra dele usando sua reação. Você retém essa sombra até usá-la ou terminar um descanso longo.",
+                        "Você pode usar a sombra com uma ação. Ao fazê-lo, ela desaparece, transformando-se magicamente num disfarce que aparece sobre você. Então você passa a ter a aparência do humanoide morto quando ele estava vivo e saudável. Esse disfarce dura 1 hora ou até que você o encerre com uma ação bônus.",
+                        "Enquanto estiver disfarçado, você ganha acesso a toda a informação que o humanoide teria compartilhado livremente com um conhecido. Tal informação inclui detalhes gerais sobre a história e vida pessoal dele, mas não inclui segredos. A informação é suficiente para que você se passe pelo humanóide usando para isso as memórias dele.",
+                        "Outra criatura pode ver através desse disfarce sendo bem-sucedida em um teste de Sabedoria (Intuição) resistido por seu Carisma (Enganação). Você ganha um bônus de +5 no seu teste.",
+                        "Após capturar uma sombra usando esta característica, você não pode fazê-lo novamente até terminar um descanso curto ou longo."
                     ]
                 },
                 {
-                    "name": "Shadow Lore",
+                    "name": "Segredo Tenebroso",
                     "source": "XGE",
                     "page": 16,
-                    "className": "Bard",
+                    "className": "Bardo",
                     "classSource": "PHB",
-                    "subclassShortName": "Whispers",
+                    "subclassShortName": "Sussurros",
                     "subclassSource": "XGE",
                     "level": 14,
                     "header": 2,
                     "entries": [
-                        "At 14th level, you gain the ability to weave dark magic into your words and tap into a creature's deepest fears.",
-                        "As an action, you magically whisper a phrase that only one creature of your choice within 30 feet of you can hear. The target must make a Wisdom saving throw against your spell save DC. It automatically succeeds if it doesn't share a language with you or if it can't hear you. On a successful saving throw, your whisper sounds like unintelligible mumbling and has no effect.",
-                        "On a failed saving throw, the target is {@condition charmed} by you for the next 8 hours or until you or your allies attack it, damage it, or force it to make a saving throw. It interprets the whispers as a description of its most mortifying secret. You gain no knowledge of this secret, but the target is convinced you know it.",
-                        "The {@condition charmed} creature obeys your commands for fear that you will reveal its secret. It won't risk its life for you or fight for you, unless it was already inclined to do so. It grants you favors and gifts it would offer to a close friend.",
-                        "When the effect ends, the creature has no understanding of why it held you in such fear.",
-                        "Once you use this feature, you can't use it again until you finish a long rest."
+                        "No 14º nível você ganha a habilidade de entrelaçar magia soturna em suas palavras de modo a acessar os medos mais profundos de uma criatura.",
+                        "Como uma ação, você sussurra magicamente uma frase que apenas a criatura que você escolheu, estando a até 9 metros de você, pode ouvir. O alvo deve realizar uma salvaguarda de Sabedoria contra a CD para evitar as suas magias. Ele obtém sucesso automático caso não fale o mesmo idioma que você ou se não puder ouvi-lo. Em caso de sucesso, seus sussurros soam como um balbucio ininteligível e não surtem efeito.",
+                        "Em caso de falha, o alvo é enfeitiçado por você pelas próximas 8 horas ou até que você ou seus aliados o ataquem, causem dano a ele ou o forcem a realizar uma salvaguarda. Ele interpreta os sussurros como uma descrição de seu segredo mais humilhante. Você não fica conhecendo o segredo de fato, mas o alvo acredita nisso.",
+                        "A criatura {@condition enfeitiçada} obedece às suas ordens por modo de que você revele o segredo dela. Ela não arriscará a própria vida por você, a menos que já estivesse inclinada a fazê-lo. Ela lhe dará favores e dará presentes como se você fosse um amigo próximo.",
+                        "Quando o efeito termina, a criatura não entende porque teve tanto medo de você.",
+                        "Após usar esta característica, você não pode usá-la novamente até terminar um descanso longo."
                     ]
                 }
 			]

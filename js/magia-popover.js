@@ -1,9 +1,20 @@
-$(".magia-hover").mouseover(function () {
+// $(".magias-hover").mouseover(function () {
+//     console.log("passou aqui");
+//     var magiaNomeUrl = $(this).attr("id");
+//     loadMPopIntoPage("/data/magias.json", magiaNomeUrl);
+// });
+$(document).on("mouseover", ".magias-hover", function (){
+    console.log("passou aqui");
     var magiaNomeUrl = $(this).attr("id");
-    loadIntoPage("/data/magias.json", magiaNomeUrl);
-});
+    
+    loadMPopIntoPage("/data/magias.json", magiaNomeUrl);
+    
+})
 
-function loadIntoPage(data, id) {
+function loadMPopIntoPage(data, id) {
+    
+    
+    
     $.getJSON(data, function (magias) {
         // Achar os dados dentro do json e definir uma variavel para cada informação relevante
         const magiasNomes = Object.values(magias);
@@ -34,7 +45,7 @@ function loadIntoPage(data, id) {
 
         // Array para criação do tooltip com as infos do json
         var r = new Array();
-        r[0] = '<div class="magia-hover-popup">'
+        r[0] = '<div class="magias-hover-popup">'
         r[1] = '<div class="tooltiptext">'
         r[2] = '<div id="popover_html" class="popover">';
         r[3] = '<div class="popover-header">';
@@ -50,13 +61,14 @@ function loadIntoPage(data, id) {
         r[13] = '<p><span class="badge badge-spells" style="padding:8px;font-size:14px;">ACESSE A PÁGINA PARA VER MAIS</span></p>';
         r[14] = '</div></div></div></div></div>';
         $(".tooltip-inner").html(r.join(''));
+        console.log(r);
     });
 };
 
 // Solução para Tooltips de Magia usando o Bootstrap 5
-$(function () {
-    $('.magia-hover').tooltip({
-        template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
-        position: "bottom"
-    });
-});
+// $(function () {
+//     $('.magias-hover').tooltip({
+//         template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
+//         position: "bottom"
+//     });
+// });

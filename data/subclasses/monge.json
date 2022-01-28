@@ -1,8 +1,8 @@
 {
 	"class": [
 		{
-			"name": "monge",
-            "subclassTitle": "Monastic Tradition",
+			"name": "Monge",
+            "subclassTitle": "Tradições Monásticas",
 			"multiclassing": {
 				"requirements": {
 					"dex": 13,
@@ -14,613 +14,586 @@
 						"{@item shortsword|phb|shortswords}"
 					]
 				}
-			}
+			},
+            "entries": [
+                "Três tradições são comuns nos monastérios espalhados por todo o multiverso. A maior parte desses locais pratica uma única tradição, mas alguns monastérios honram todas as três, e instruem cada monge de acordo com a sua aptidão e interesse dele. As três tradições contam com as mesmas técnicas básicas, divergindo conforme o estudante se torna mais apto. Assim sendo, ao alcançar o 3º nível, o monge precisa escolher uma dessas tradições."
+            ]
 		}
 	],
-	"subclass": [
-		{
-			"name": "Way of Shadow",
-			"shortName": "Shadow",
+	"subclasses": [
+        {
+			"name": "Caminho da Mão Espalmada",
+			"shortName": "Mão Espalmada",
+            "id": "maoespalmada",
 			"source": "PHB",
-			"className": "Monk",
+			"className": "Monge",
 			"classSource": "PHB",
-			"page": 80,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"minor illusion#c"
-						]
-					}
-				}
-			],
+			"page": 110,
+			"srd": true,
+            "level": 3,
+            "entries": [
+                "Os monges do Caminho da Mão Espalmada são os mestres absolutos do combate com artes marciais, quer se utilizem de armas ou não. Eles aprendem técnicas para empurrar e derrubar seus oponentes, manipular o ki para curar o dano causado em seus próprios corpos, e praticam a meditação avançada, capaz de protegê-los do perigo."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Way of Shadow",
-                    "source": "PHB",
-                    "page": 80,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Shadow",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "entries": [
-                        "Monks of the Way of Shadow follow a tradition that values stealth and subterfuge. These monks might be called ninjas or shadowdancers, and they serve as spies and assassins. Sometimes the members of a ninja monastery are family members, forming a clan sworn to secrecy about their arts and missions. Other monasteries are more like thieves' guilds, hiring out their services to nobles, rich merchants, or anyone else who can pay their fees. Regardless of their methods, the heads of these monasteries expect the unquestioning obedience of their students.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Shadow Arts|Monk||Shadow||3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Shadow Arts",
+                    "name": "Técnica da Mão Espalmada",
                     "source": "PHB",
-                    "page": 80,
-                    "className": "Monk",
+                    "page": 110,
+                    "srd": true,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Shadow",
+                    "subclassShortName": "Mão Espalmada",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "You can use your ki to duplicate the effects of certain spells. As an action, you can spend 2 ki points to cast {@spell darkness}, {@spell darkvision}, {@spell pass without trace}, or {@spell silence}, without providing material components. Additionally, you gain the {@spell minor illusion} cantrip if you don't already know it."
-                    ]
-                },
-                {
-                    "name": "Shadow Step",
-                    "source": "PHB",
-                    "page": 80,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Shadow",
-                    "subclassSource": "PHB",
-                    "level": 6,
-                    "header": 2,
-                    "entries": [
-                        "You gain the ability to step from one shadow into another. When you are in dim light or darkness, as a bonus action you can teleport up to 60 feet to an unoccupied space you can see that is also in dim light or darkness. You then have advantage on the first melee attack you make before the end of the turn."
-                    ]
-                },
-                {
-                    "name": "Cloak of Shadows",
-                    "source": "PHB",
-                    "page": 80,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Shadow",
-                    "subclassSource": "PHB",
-                    "level": 11,
-                    "header": 2,
-                    "entries": [
-                        "By 11th level, you have learned to become one with the shadows. When you are in an area of dim light or darkness, you can use your action to become {@condition invisible}. You remain {@condition invisible} until you make an attack, cast a spell, or are in an area of bright light."
-                    ]
-                },
-                {
-                    "name": "Opportunist",
-                    "source": "PHB",
-                    "page": 80,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Shadow",
-                    "subclassSource": "PHB",
-                    "level": 17,
-                    "header": 2,
-                    "entries": [
-                        "At 17th level, you can exploit a creature's momentary distraction when it is hit by an attack. Whenever a creature within 5 feet of you is hit by an attack made by a creature other than you, you can use your reaction to make a melee attack against that creature."
-                    ]
-                }
-			]
-		},
-		{
-			"name": "Way of the Four Elements",
-			"shortName": "Four Elements",
-			"source": "PHB",
-			"className": "Monk",
-			"classSource": "PHB",
-			"page": 80,
-			"spellcastingAbility": "wis",
-			"subclassFeatures": [
-				{
-                    "name": "Way of the Four Elements",
-                    "source": "PHB",
-                    "page": 80,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Four Elements",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "entries": [
-                        "You follow a monastic tradition that teaches you to harness the elements. When you focus your ki, you can align yourself with the forces of creation and bend the four elements to your will, using them as an extension of your body. Some members of this tradition dedicate themselves to a single element, but others weave the elements together.",
-                        "Many monks of this tradition tattoo their bodies with representations of their ki powers, commonly imagined as coiling dragons, but also as phoenixes, fish, plants, mountains, and cresting waves.",
+                        "A partir do momento em que você escolhe esta tradição, no 3º nível, passa a ser capaz de manipular o ki do seu inimigo, ao controlar o seu próprio. Sempre que acertar uma criatura com um dos seus ataques de Torrente de Golpes, pode impor a ela um dos efeitos a seguir:",
                         {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Disciple of the Elements|Monk||Four Elements||3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Elemental Disciplines|Monk||Four Elements||3"
-                        }
-                    ]
-                },
-                {
-                    "name": "Disciple of the Elements",
-                    "source": "PHB",
-                    "page": 80,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Four Elements",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "You learn magical disciplines that harness the power of the four elements. A discipline requires you to spend ki points each time you use it.",
-                        "You know the Elemental Attunement discipline and one other elemental discipline of your choice. You learn one additional elemental discipline of your choice at 6th, 11th, and 17th level.",
-                        "Whenever you learn a new elemental discipline, you can also replace one elemental discipline that you already know with a different discipline.",
-                        {
-                            "type": "entries",
-                            "name": "Casting Elemental Spells",
-                            "entries": [
-                                "Some elemental disciplines allow you to cast spells. See {@book chapter 10|PHB|10} of the Player's Handbook for the general rules of spellcasting. To cast one of these spells, you use its casting time and other rules, but you don't need to provide material components for it.",
-                                "Once you reach 5th level in this class, you can spend additional ki points to increase the level of an elemental discipline spell that you cast, provided that the spell has an enhanced effect at a higher level, as {@spell burning hands} does. The spell's level increases by 1 for each additional ki point you spend. For example, if you are a 5th-level monk and use Sweeping Cinder Strike to cast {@spell burning hands}, you can spend 3 ki points to cast it as a 2nd-level spell (the discipline's base cost of 2 ki points plus 1).",
-                                "The maximum number of ki points you can spend to cast a spell in this way (including its base ki point cost and any additional ki points you spend to increase its level) is determined by your monk level, as shown in the Spells and Ki Points table. At 5th level, you may spend up to 3 ki points; this increases to 4 ki points at 9th level, 5 at 13th level, and 6 at 17th level.",
-                                {
-                                    "type": "table",
-                                    "caption": "Spells and Ki Points",
-                                    "colLabels": [
-                                        "Monk Levels",
-                                        "Maximum Ki Points for a Spell"
-                                    ],
-                                    "colStyles": [
-                                        "col-5 text-center",
-                                        "col-7 text-center"
-                                    ],
-                                    "rows": [
-                                        [
-                                            "5th-8th",
-                                            3
-                                        ],
-                                        [
-                                            "9th-12th",
-                                            4
-                                        ],
-                                        [
-                                            "13th-16th",
-                                            5
-                                        ],
-                                        [
-                                            "17th-20th",
-                                            6
-                                        ]
-                                    ]
-                                }
+                            "type": "list",
+                            "items": [
+                                "Ela precisa ser bem-sucedida em uma salvaguarda de Destreza ou {@condition cairá}.",
+                                "Ela deve realizar uma salvaguarda de Força. Em caso de falha, você pode empurrá-la a até 4,5 metros de distância.",
+                                "Ela não pode executar reações até o final do seu próximo turno."
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Elemental Disciplines",
+                    "name": "Integridade Corporal",
                     "source": "PHB",
-                    "page": 80,
-                    "className": "Monk",
+                    "page": 110,
+                    "srd": true,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Four Elements",
+                    "subclassShortName": "Mão Espalmada",
+                    "subclassSource": "PHB",
+                    "level": 6,
+                    "header": 2,
+                    "entries": [
+                        "No 6º nível, você adquire a habilidade de curar a si mesmo. Como sua ação no turno, você pode recuperar uma quantidade de pontos de vida igual a três vezes seu nível de monge. É preciso completar um descanso longo antes de utilizar esta característica novamente."
+                    ]
+                },
+                {
+                    "name": "Tranquilidade",
+                    "source": "PHB",
+                    "page": 111,
+                    "srd": true,
+                    "className": "Monge",
+                    "classSource": "PHB",
+                    "subclassShortName": "Mão Espalmada",
+                    "subclassSource": "PHB",
+                    "level": 11,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 11º nível, você pode entrar num estado especial de meditação que lhe confere uma aura de paz. Ao final de um descanso longo, você ganha o efeito da magia {@spell santuário}, o qual dura até o começo do seu próximo descanso longo (a magia pode terminar de forma prematura, conforme as regras normais). A CD da salvaguarda contra a magia é igual a 8 + o seu modificador de Sabedoria + o seu bônus de proficiência."
+                    ]
+                },
+                {
+                    "name": "Palma Vibrante",
+                    "source": "PHB",
+                    "page": 111,
+                    "srd": true,
+                    "className": "Monge",
+                    "classSource": "PHB",
+                    "subclassShortName": "Mão Espalmada",
+                    "subclassSource": "PHB",
+                    "level": 17,
+                    "header": 2,
+                    "entries": [
+                        "No 17º nível, você ganha a habilidade de criar vibrações letais no corpo de outra pessoa. Ao atingir uma criatura com um golpe desarmado, você pode usar 3 pontos de ki para iniciar vibrações imperceptíveis, que duram por um número de dias igual ao seu nível de monge. Essas vibrações são inofensivas, a não ser que você use uma ação para encerrá-las. Para fazê-lo, tanto você quanto o alvo devem estar no mesmo plano de existência. Quando você usa essa ação, a criatura precisa realizar uma salvaguarda de Constituição. Se falhar, tem seus pontos de vida reduzidos a 0. Se obtiver sucesso, recebe 10d10 pontos de dano necrótico.",
+                        "Apenas uma criatura pode ser mantida sob o efeito desta característica. Você pode escolher encerrar as vibrações de maneira inofensiva sem usar uma ação."
+                    ]
+                }
+			]
+		},
+		{
+			"name": "Caminho das Sombras",
+			"shortName": "Sombras",
+            "id": "sombras",
+			"source": "PHB",
+			"className": "Monge",
+			"classSource": "PHB",
+			"page": 111,
+            "level": 3,
+            "entries": [
+                "Os monges do Caminho das Sombras seguem uma tradição que valoriza a furtividade e o subterfúgio. Esses monges podem ser chamados de ninjas ou dançarinos das sombras, servindo como espiões e assassinos. Às vezes, os membros de um monastério ninja pertencem à mesma família, formando um clã que jurou segredo sobre suas artes e missões. Outros monastérios se assemelham a guildas de ladrões, alugando seus serviços para nobres, mercadores ricos ou qualquer um que possa pagar seu preço. Independentemente dos seus métodos, os chefes desses monastérios exigem dos seus discípulos obediência inquestionável."
+            ],
+			"subclassFeatures": [
+                {
+                    "name": "Arte da Sombra",
+                    "source": "PHB",
+                    "page": 111,
+                    "className": "Monge",
+                    "classSource": "PHB",
+                    "subclassShortName": "Sombras",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "The elemental disciplines are presented in alphabetical order. If a discipline requires a level, you must be the level in this class to learn the discipline.",
+                        "A partir do momento em que você escolhe esta tradição, no 3º nível, passa a poder usar o seu ki para duplicar os efeitos de certas magias. Com uma ação, você pode gastar 2 pontos de ki para conjurar {@spell escuridão}, {@spell visão no escuro}, {@spell passo sem rastro}, ou {@spell silêncio}, sem precisar de componentes materiais. Além disso, ganha o truque {@spell ilusão menor}, caso já não o conheça."
+                    ]
+                },
+                {
+                    "name": "Passo da Sombra",
+                    "source": "PHB",
+                    "page": 111,
+                    "className": "Monge",
+                    "classSource": "PHB",
+                    "subclassShortName": "Sombras",
+                    "subclassSource": "PHB",
+                    "level": 6,
+                    "header": 2,
+                    "entries": [
+                        "No 6º nível, você ganha a habilidade de se mover de uma sombra para outra. Quando estiver na meia-luz ou escuridão, você pode usar uma ação bônus para se teleportar a até 18 metros de distância, escolhendo um espaço desocupado de meia-luz ou escuridão, à sua vista. Você ainda tem vantagem no primeiro ataque corpo a corpo que executar antes do final do turno."
+                    ]
+                },
+                {
+                    "name": "Manto da Sombra",
+                    "source": "PHB",
+                    "page": 111,
+                    "className": "Monge",
+                    "classSource": "PHB",
+                    "subclassShortName": "Sombras",
+                    "subclassSource": "PHB",
+                    "level": 11,
+                    "header": 2,
+                    "entries": [
+                        "No 11º nível, você aprendeu a se tornar um com as sombras. Quando estiver em uma área de meia-luz ou escuridão, pode usar sua ação para se tornar {@condition invisível}. Você permanece {@condition invisível} até realizar um ataque, conjurar uma magia ou adentrar uma área de luz plena."
+                    ]
+                },
+                {
+                    "name": "Oportunista",
+                    "source": "PHB",
+                    "page": 111,
+                    "className": "Monge",
+                    "classSource": "PHB",
+                    "subclassShortName": "Sombras",
+                    "subclassSource": "PHB",
+                    "level": 17,
+                    "header": 2,
+                    "entries": [
+                        "No 17º nível, você consegue explorar a distração momentânea de uma criatura atingida por um golpe. Sempre que uma criatura que esteja a até 1,5 metro de você é atingida por um ataque desferido por uma terceira criatura, você pode usar sua reação para executar um ataque corpo a corpo contra ela."
+                    ]
+                }
+			]
+		},
+		{
+			"name": "Caminho dos Quatro Elementos",
+			"shortName": "Quatro Elementos",
+            "id": "quatroelementos",
+			"source": "PHB",
+			"className": "Monge",
+			"classSource": "PHB",
+			"page": 111,
+			"spellcastingAbility": "wis",
+            "level": 3,
+            "entries": [
+                "Você segue uma tradição monástica que ensina como manipular os elementos. Ao concentrar o seu ki, você é capaz de se alinhar às forças da criação, dobrando os quatro elementos à sua vontade para usá-los como se fossem extensões de seu corpo. Alguns membros desta tradição se dedicam a um único elemento, enquanto outros conjugam todos os quatro.",
+                "Muitos monges desta tradição tatuam seus corpos com representações de seus poderes de ki, geralmente sob a forma de dragões, mas também nas de fênix, peixes, plantas, montanhas e ondas do mar."
+            ],
+			"subclassFeatures": [
+                {
+                    "name": "Discípulo dos Elementos",
+                    "source": "PHB",
+                    "page": 111,
+                    "className": "Monge",
+                    "classSource": "PHB",
+                    "subclassShortName": "Quatro Elementos",
+                    "subclassSource": "PHB",
+                    "level": 3,
+                    "header": 1,
+                    "entries": [
+                        "Ao escolher esta tradição no 3º nível, você aprende disciplinas mágicas que utilizam o poder dos quatro elementos. Essas disciplinas exigem o gasto de pontos de ki para serem utilizadas.",
+                        "Você conhece a disciplina Sintonia Elemental e outra disciplina elemental à sua escolha, dentre as detalhadas na seção \"Disciplinas Elementais\", logo a seguir. Você aprende outras disciplinas elementais à sua escolha no 6º, 11º e 17º níveis.",
+                        "Ao aprender uma nova disciplina elemental, pode trocar uma disciplina já aprendida por uma disciplina diferente.",
+                        {
+                            "type": "entries",
+                            "name": "Conjurando Magias Elementais",
+                            "entries": [
+                                "Algumas disciplinas elementais permitem que você conjure magias. Veja o capítulo 10 para consultar as regras sobre conjuração. Para conjurar uma dessas magias, você deve seguir o tempo de conjuração e demais regras da magia, mas não precisa gastar componentes materiais.",
+                                "Ao chegar no 5º nível desta classe, você pode gastar pontos de ki adicionais para aumentar o círculo de uma magia de disciplina elemental que tenha conjurado, desde que esta possua um efeito que possa ser melhorado em um nível superior - por exemplo, como {@spell mãos flamejantes}. O círculo da magia aumenta em 1 para cada ponto de ki adicional gasto. Por exemplo, se um monge de 5º nível usar um Golpe de Dispersão Cauterizante para conjurar {@spell mãos flamejantes}, você pode gastar 3 pontos de ki para conjurá-la como uma magia de 2º círculo (o custo base da disciplina, igual a 2 pontos de ki, mais 1 para aumentar o círculo da magia).",
+                                "O número máximo de pontos de ki que podem ser gastos para conjurar uma magia desse modo (incluindo o custo base em pontos de ki e quaisquer pontos adicionais que você gaste para aumentar o círculo da magia) é determinado pelo seu nível de monge, conforme mostrado na tabela de Magias e Pontos de ki."
+                            ]
+                        },
+                        {
+                            "type": "table",
+                            "caption": "Magias e Pontos de Ki",
+                            "colLabels": [
+                                "Níveis de Monge",
+                                "Pontos de Ki Máximos para uma Magia"
+                            ],
+                            "colStyles": [
+                                "col-5 text-center",
+                                "col-7 text-center"
+                            ],
+                            "rows": [
+                                [
+                                    "5º–8º",
+                                    3
+                                ],
+                                [
+                                    "9º–12º",
+                                    4
+                                ],
+                                [
+                                    "13º–16º",
+                                    5
+                                ],
+                                [
+                                    "17º–20º",
+                                    6
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Disciplinas Elementais",
+                    "source": "PHB",
+                    "page": 112,
+                    "className": "Monge",
+                    "classSource": "PHB",
+                    "subclassShortName": "Quatro Elementos",
+                    "subclassSource": "PHB",
+                    "level": 3,
+                    "header": 1,
+                    "entries": [
+                        "As disciplinas elementais são apresentadas em ordem alfabética. Se uma disciplina indica um nível, para aprendê-la você precisa estar nesse nível de monge.",
                         {
                             "type": "options",
                             "count": 2,
                             "entries": [
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Breath of Winter",
-                                    "name": "Breath of Winter (17th Level Required)"
+                                    "name": "Aperto do Vento Norte (6º Nível)",
+                                    "entries": [
+                                        "Você pode gastar 3 pontos de ki para conjurar imobilizar pessoa."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Clench of the North Wind",
-                                    "name": "Clench of the North Wind (6th Level Required)"
+                                    "name": "Avanço dos Espíritos dos Ventos",
+                                    "entries": [
+                                        "Você pode gastar 2 pontos de ki para conjurar lufada de vento."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Elemental Attunement",
-                                    "data": {
-                                        "isRequiredOption": true
-                                    }
+                                    "name": "Cavalgar o Vento (11º Nível)",
+                                    "entries": [
+                                        "Você pode gastar 4 pontos de ki para conjurar voo em si mesmo."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Eternal Mountain Defense",
-                                    "name": "Eternal Mountain Defense (17th Level Required)"
+                                    "name": "Chamas da Fênix (11º Nível)",
+                                    "entries": [
+                                        "Você pode gastar 4 pontos de ki para conjurar bola de fogo."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Fangs of the Fire Snake"
+                                    "name": "Chicote d'Água",
+                                    "entries": [
+                                        "Como sua ação bônus, você pode gastar 2 pontos de ki para criar um chicote de água que atinge e empurra uma criatura de modo a desequilibrá-la. Uma criatura que você possa ver e que esteja a até 9 metros de distância deve realizar uma salvaguarda de Destreza. Se falhar, sofrerá 3d10 pontos de dano contundente, mais 1d10 pontos de dano do mesmo tipo para cada ponto de ki adicional gasto, e você poderá tanto deixá-la caída quanto puxá-la até 7,5 metros na sua direção. Caso obtenha sucesso, a criatura sofre metade do dano, e você não consegue movê-la ou derrubá-la."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Fist of Four Thunders"
+                                    "name": "Defesa da Montanha Eterna (11º Nível)",
+                                    "entries": [
+                                        "Você pode gastar 5 pontos de ki para conjurar pele-rocha em si mesmo."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Unbroken Air"
+                                    "name": "Golpe de Dispersão Cauterizante",
+                                    "entries": [
+                                        "Você pode gastar 3 pontos de ki para conjurar mãos flamejantes."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Flames of the Phoenix",
-                                    "name": "Flames of the Phoenix (11th Level Required)"
+                                    "name": "Gongo do Topo (6º Nível)",
+                                    "entries": [
+                                        "Você pode gastar 3 pontos de ki para conjurar despedaçar."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Gong of the Summit",
-                                    "name": "Gong of the Summit (6th Level Required)"
+                                    "name": "Moldar o Rio Corrente",
+                                    "entries": [
+                                        "Com uma ação, você pode gastar 1 ponto de ki e escolher uma área de gelo ou água, de até 9 metros quadrados, e que esteja no máximo a 36 metros de você. Dentro dessa área, a água pode ser transformada em gelo e vice-versa, além de o gelo poder ser remodelado conforme o seu desejo. Você pode erguer ou diminuir a elevação do gelo, criar ou encher um fosso, erguer ou achatar uma muralha, ou formar um pilar. A extensão dessas alterações não pode exceder metade da dimensão da área. Por exemplo, ao afetar uma área com 9 metros quadrados, você pode criar um pilar de até 4,5 metros de altura, erguer ou abaixar elevações em até 4,5 metros, cavar um fosso de até 4,5 metros, e assim por diante. Você não pode moldar o gelo de modo a prender ou causar dano a uma criatura na área."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Mist Stance",
-                                    "name": "Mist Stance (11th Level Required)"
+                                    "name": "Postura da Neblina (11º Nível)",
+                                    "entries": [
+                                        "Você pode gastar 4 pontos de ki para conjurar forma gasosa em si mesmo."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Ride the Wind",
-                                    "name": "Ride the Wind (11th Level Required)"
+                                    "name": "Presas da Serpente de Fogo",
+                                    "entries": [
+                                        "Ao usar a ação Atacar em seu turno, você pode gastar 1 ponto de ki para fazer com que tentáculos de chama se estendam a partir dos seus punhos e pés. Seu alcance com ataques desarmados aumenta em 3 metros para esta ação e pelo o restante do turno. Um acerto com este ataque causa dano ígneo em vez de dano contundente, e, se você gastar 1 ponto de ki, também causa 1d10 pontos de dano ígneo adicionais."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "River of Hungry Flame",
-                                    "name": "River of Hungry Flame (17th Level Required)"
+                                    "name": "Punho do Ar Maciço",
+                                    "entries": [
+                                        "Você pode criar uma explosão de ar comprimido que golpeia como um punho poderoso. Com uma ação, você pode gastar 2 pontos de ki e escolher uma criatura que esteja a até 9 metros de distância. A criatura deve testar uma salvaguarda de Força. Em caso de falha, sofre 3d10 pontos de dano contundente, mais 1d10 pontos de dano do mesmo tipo para cada ponto de ki adicional gasto. Além disso, você pode empurrar a criatura a até 6 metros de distância, deixando-a caída. Caso tenha obtido sucesso na salvaguarda, a criatura sofre apenas metade do dano, e você não consegue empurrá-la ou derrubá-la."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Rush of the Gale Spirits"
+                                    "name": "Punho dos Quatro Trovões",
+                                    "entries": [
+                                        "Você pode gastar 2 pontos de ki para conjurar onda trovejante."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Shape the Flowing River"
+                                    "name": "Rio da Chama Voraz (17º Nível)",
+                                    "entries": [
+                                        "Você pode gastar 5 pontos de ki para conjurar muralha de fogo."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Sweeping Cinder Strike"
+                                    "name": "Sintonia Elemental",
+                                    "entries": [
+                                        "Você pode usar sua ação para controlar momentaneamente as forças elementais ao seu redor, causando um dos efeitos a seguir, à sua escolha:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "Criar um efeito sensorial inofensivo e instantâneo relacionado à água, ar, fogo ou terra, tais como uma chuva de faíscas, um sopro de vento, um leve borrifo de neblina ou um suave ressoar de pedras se deslocando.",
+                                                "Fazer com que uma vela, tocha ou fogueira pequena seja acesa ou apagada imediatamente.",
+                                                "Esfriar ou aquecer até meio quilo de material inanimado por até 1 hora.",
+                                                "Moldar uma quantidade de terra, fogo, água ou névoa, equivalente a um cubo de 30 centímetros de lado, em uma forma bruta à sua escolha durante 1 minuto."
+                                            ]
+                                        }
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Water Whip"
+                                    "name": "Sopro do Inverno (17º Nível)",
+                                    "entries": [
+                                        "Você pode gastar 6 pontos de ki para conjurar cone de frio."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Wave of Rolling Earth",
-                                    "name": "Wave of Rolling Earth (17th Level Required)"
+                                    "name": "Onda de Terra Rolante (17º Nível)",
+                                    "entries": [
+                                        "Você pode gastar 6 pontos de ki para conjurar muralha de pedra."
+                                    ]
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Extra Elemental Discipline",
+                    "name": "Disciplina Elemental Adicional",
                     "source": "PHB",
-                    "page": 80,
-                    "className": "Monk",
+                    "page": 111,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Four Elements",
+                    "subclassShortName": "Quatro Elementos",
                     "subclassSource": "PHB",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "You learn one additional elemental discipline of your choice. You should know 2 elemental disciplines, as well as Elemental Attunement.",
-                        "Whenever you learn a new elemental discipline, you can also replace one elemental discipline that you already know with a different discipline."
+                        "Você aprende uma disciplina elemental à sua escolha. No 6º nível, você deve conhecer 2 disciplinas elementais e Sintonia Elemental.",
+                        "Ao aprender uma nova disciplina elemental, pode trocar uma disciplina já aprendida por uma disciplina diferente."
                     ]
                 },
                 {
-                    "name": "Extra Elemental Discipline",
+                    "name": "Disciplina Elemental Adicional",
                     "source": "PHB",
-                    "page": 80,
-                    "className": "Monk",
+                    "page": 111,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Four Elements",
+                    "subclassShortName": "Quatro Elementos",
                     "subclassSource": "PHB",
                     "level": 11,
                     "header": 2,
                     "entries": [
-                        "You learn one additional elemental discipline of your choice. You should know 3 elemental disciplines, as well as Elemental Attunement.",
-                        "Whenever you learn a new elemental discipline, you can also replace one elemental discipline that you already know with a different discipline."
+                        "Você aprende uma disciplina elemental à sua escolha. No 11º nível, você deve conhecer 3 disciplinas elementais e Sintonia Elemental.",
+                        "Ao aprender uma nova disciplina elemental, pode trocar uma disciplina já aprendida por uma disciplina diferente."
                     ]
                 },
                 {
-                    "name": "Extra Elemental Discipline",
+                    "name": "Disciplina Elemental Adicional",
                     "source": "PHB",
-                    "page": 80,
-                    "className": "Monk",
+                    "page": 111,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Four Elements",
+                    "subclassShortName": "Quatro Elementos",
                     "subclassSource": "PHB",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "You learn one additional elemental discipline of your choice. You should know 4 elemental disciplines, as well as Elemental Attunement.",
-                        "Whenever you learn a new elemental discipline, you can also replace one elemental discipline that you already know with a different discipline."
+                        "Você aprende uma disciplina elemental à sua escolha. No 17º nível, você deve conhecer 4 disciplinas elementais e Sintonia Elemental.",
+                        "Ao aprender uma nova disciplina elemental, pode trocar uma disciplina já aprendida por uma disciplina diferente."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Way of the Open Hand",
-			"shortName": "Open Hand",
-			"source": "PHB",
-			"className": "Monk",
-			"classSource": "PHB",
-			"page": 79,
-			"srd": true,
-			"subclassFeatures": [
-				{
-                    "name": "Way of the Open Hand",
-                    "source": "PHB",
-                    "page": 79,
-                    "srd": true,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Open Hand",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "entries": [
-                        "Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate ki to heal damage to their bodies, and practice advanced meditation that can protect them from harm.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Open Hand Technique|Monk||Open Hand||3"
-                        }
-                    ]
-                },
-                {
-                    "name": "Open Hand Technique",
-                    "source": "PHB",
-                    "page": 79,
-                    "srd": true,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Open Hand",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "You can manipulate your enemy's ki when you harness your own. Whenever you hit a creature with one of the attacks granted by your Flurry of Blows, you can impose one of the following effects on that target.",
-                        {
-                            "type": "list",
-                            "items": [
-                                "It must succeed on a Dexterity saving throw or be knocked {@condition prone}.",
-                                "It must make a Strength saving throw. If it fails, you can push it up to 15 feet away from you.",
-                                "It can't take reactions until the end of your next turn."
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Wholeness of Body",
-                    "source": "PHB",
-                    "page": 79,
-                    "srd": true,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Open Hand",
-                    "subclassSource": "PHB",
-                    "level": 6,
-                    "header": 2,
-                    "entries": [
-                        "You gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a long rest before you can use this feature again."
-                    ]
-                },
-                {
-                    "name": "Tranquility",
-                    "source": "PHB",
-                    "page": 79,
-                    "srd": true,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Open Hand",
-                    "subclassSource": "PHB",
-                    "level": 11,
-                    "header": 2,
-                    "entries": [
-                        "Beginning at 11th level, you can enter a special meditation that surrounds you with an aura of peace. At the end of a long rest, you gain the effect of a {@spell sanctuary} spell that lasts until the start of your next long rest (the spell can end early as normal). The saving throw DC for the spell equals 8 + your Wisdom modifier + your proficiency bonus."
-                    ]
-                },
-                {
-                    "name": "Quivering Palm",
-                    "source": "PHB",
-                    "page": 79,
-                    "srd": true,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Open Hand",
-                    "subclassSource": "PHB",
-                    "level": 17,
-                    "header": 2,
-                    "entries": [
-                        "You gain the ability to set up lethal vibrations in someone's body. When you hit a creature with an unarmed strike, you can spend 3 ki points to start these imperceptible vibrations, which last for a number of days equal to your monk level. The vibrations are harmless unless you use your action to end them. To do so, you and the target must be on the same plane of existence. When you use this action, the creature must make a Constitution saving throw. If it fails, it is reduced to 0 hit points. If it succeeds, it takes {@damage 10d10} necrotic damage.",
-                        "You can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action."
-                    ]
-                }
-			]
-		},
-		{
-			"name": "Way of the Long Death",
-			"shortName": "Long Death",
+			"name": "Caminho da Morte Ampla",
+			"shortName": "Morte Ampla",
+            "id": "morteampla",
 			"source": "SCAG",
-			"className": "Monk",
+			"className": "Monge",
 			"classSource": "PHB",
-			"page": 130,
+			"page": 139,
+            "level": 3,
+            "entries": [
+                "Os monges do Caminho da Morte Ampla são obcecados com os significados e o funcionamento da morte. Eles capturam criaturas e preparam experimentos elaborados para observar, registrar e entender os momentos do seu falecimento. Então, eles usam tal conhecimento para orientar seu entendimento das artes marciais, empregando o uso de um estilo de luta fatal."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Way of the Long Death",
-                    "source": "SCAG",
-                    "page": 130,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Long Death",
-                    "subclassSource": "SCAG",
-                    "level": 3,
-                    "entries": [
-                        "Monks of the Way of the Long Death are obsessed with the meaning and mechanics of dying. They capture creatures and prepare elaborate experiments to capture, record, and understand the moments of their demise. They use this knowledge to guide their understanding of martial arts, yielding a deadly fighting style.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Touch of Death|Monk||Long Death|SCAG|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Touch of Death",
+                    "name": "Toque da Morte",
                     "source": "SCAG",
-                    "page": 130,
-                    "className": "Monk",
+                    "page": 139,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Long Death",
+                    "subclassShortName": "Morte Ampla",
                     "subclassSource": "SCAG",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Starting when you choose this tradition at 3rd level, your study of death allows you to extract vitality from another creature as it nears its demise. When you reduce a creature within 5 feet of you to 0 hit points, you gain temporary hit points equal to your Wisdom modifier + your monk level (minimum of 1 temporary hit point)."
+                        "Quando escolhe esta tradição no 3º nível, seu estudo da morte permite que você extraia a vitalidade de outra criatura que está perto de morrer. Quando reduz uma criatura que está a até 1,5 metro de você a 0 pontos de vida, você ganha pontos de vida temporários equivalentes ao seu modificador de Sabedoria + seu nível de monge (mínimo de 1 ponto de vida temporário)."
                     ]
                 },
                 {
-                    "name": "Hour of Reaping",
+                    "name": "Hora da Ceifa",
                     "source": "SCAG",
-                    "page": 130,
-                    "className": "Monk",
+                    "page": 139,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Long Death",
+                    "subclassShortName": "Morte Ampla",
                     "subclassSource": "SCAG",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "At 6th level, you gain the ability to unsettle or terrify those around you as an action, for your soul has been touched by the shadow of death. When you take this action, each creature within 30 feet of you that can see you must succeed on a Wisdom saving throw or be {@condition frightened} of you until the end of your next turn."
+                        "No 6º nível, você ganha a habilidade de abalar ou aterrorizar aqueles ao seu redor com uma ação, pois sua alma foi tocada pela sombra da morte. Quando realiza esta ação, cada criatura a até 9 metros de você e que possa vê-lo deve ser bem-sucedida em uma salvaguarda de Sabedoria ou será {@condition amedrontada} por você até o fim do seu próximo turno."
                     ]
                 },
                 {
-                    "name": "Mastery of Death",
+                    "name": "Maestria da Morte",
                     "source": "SCAG",
-                    "page": 130,
-                    "className": "Monk",
+                    "page": 139,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Long Death",
+                    "subclassShortName": "Morte Ampla",
                     "subclassSource": "SCAG",
                     "level": 11,
                     "header": 2,
                     "entries": [
-                        "Beginning at 11th level, you use your familiarity with death to escape its grasp. When you are reduced to 0 hit points, you can expend 1 ki point (no action required) to have 1 hit point instead."
+                        "A partir do 11º nível, você usa sua familiaridade com a morte para escapar de suas garras. Quando é reduzido a 0 pontos de vida, você pode gastar 1 ponto de ki (nenhuma ação é necessária) para ficar com 1 ponto de vida."
                     ]
                 },
                 {
-                    "name": "Touch of the Long Death",
+                    "name": "Toque da Morte Ampla",
                     "source": "SCAG",
-                    "page": 130,
-                    "className": "Monk",
+                    "page": 139,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Long Death",
+                    "subclassShortName": "Morte Ampla",
                     "subclassSource": "SCAG",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "Starting at 17th level, your touch can channel the energy of death into a creature. As an action, you touch one creature within 5 feet of you, and you expend 1 to 10 ki points. The target must make a Constitution saving throw, and it takes {@damage 2d10} necrotic damage per ki point spent on a failed save, or half as much damage on a successful one."
+                        "A partir do 17º nível, seu toque pode canalizar a energia da morte para uma criatura. Com uma ação, você toca uma criatura a até 1,5 metro de você, e você gasta de 1 a 10 pontos de ki. O alvo deve fazer uma salvaguarda de Constituição e sofre 2d10 pontos de dano necrótico por ponto de ki gasto se falhar, ou metade do dano em caso de sucesso."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Way of the Drunken Master",
-			"shortName": "Drunken Master",
+			"name": "Caminho do Mestre Ébrio",
+			"shortName": "Mestre Ébrio",
+            "id": "mestreebrio",
 			"source": "XGE",
-			"className": "Monk",
+			"className": "Monge",
 			"classSource": "PHB",
-			"page": 33,
+			"page": 54,
+            "level": 3,
+            "entries": [
+                "O Caminho do Mestre Ébrio ensina seus estudantes a moverem-se com os modos irregulares e imprevisíveis de um bêbado. Um mestre ébrio ginga, cambaleando sobre pés instáveis, de modo a mostrar-se o que parece ser um combatente inábil, contra quem é frustrante lutar. Os tropeços erráticos do mestre ébrio escondem uma cuidadosamente executada dança de bloqueios, desvios, avanços, ataques e recuos.",
+                "Um mestre ébrio costuma gostar de se fazer de bobo para fazer alegria aos desanimados ou demonstrar humildade aos arrogantes, mas assim que uma luta se inicia, o mestre ébrio pode ser um oponente habilidoso e exasperante."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Way of the Drunken Master",
-                    "source": "XGE",
-                    "page": 33,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Drunken Master",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "The Way of the Drunken Master teaches its students to move with the jerky, unpredictable movements of a drunkard. A drunken master sways, tottering on unsteady feet, to present what seems like an incompetent combatant who proves frustrating to engage. The drunken master's erratic stumbles conceal a carefully executed dance of blocks, parries, advances, attacks, and retreats.",
-                        "A drunken master often enjoys playing the fool to bring gladness to the despondent or to demonstrate humility to the arrogant, but when battle is joined, the drunken master can be a maddening, masterful foe.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiencies|Monk||Drunken Master|XGE|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Drunken Technique|Monk||Drunken Master|XGE|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Bonus Proficiencies",
+                    "name": "Proficiências Bônus",
                     "source": "XGE",
-                    "page": 33,
-                    "className": "Monk",
+                    "page": 54,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Drunken Master",
+                    "subclassShortName": "Mestre Ébrio",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you choose this tradition at 3rd level, you gain proficiency in the {@skill Performance} skill if you don't already have it. Your martial arts technique mixes combat training with the precision of a dancer and the antics of a jester. You also gain proficiency with {@item brewer's supplies|phb} if you don't already have it."
+                        "Ao escolher esta tradição no 3º nível, você ganha proficiência na perícia Atuação, caso já não a tenha. Sua técnica em artes marciais mistura treinamento em combate com a precisão de um dançarino e os modos de um bufão. Você também ganha proficiência com ferramentas/suprimentos de cervejeiro, caso ainda não a possua."
                     ]
                 },
                 {
-                    "name": "Drunken Technique",
+                    "name": "Técnica Ébria",
                     "source": "XGE",
-                    "page": 33,
-                    "className": "Monk",
+                    "page": 54,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Drunken Master",
+                    "subclassShortName": "Mestre Ébrio",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "At 3rd level, you learn how to twist and turn quickly as part of your Flurry of Blows. Whenever you use Flurry of Blows, you gain the benefit of the {@action Disengage} action, and your walking speed increases by 10 feet until the end of the current turn."
+                        "No 3º nível, você aprende como se virar e se contorcer rapidamente como parte de sua Torrente de Golpes. Sempre que usar Torrente de Golpes, você ganha o benefício da ação Desengajar, e seu deslocamento de caminhada aumenta em 3 metros até o final do turno atual."
                     ]
                 },
                 {
-                    "name": "Tipsy Sway",
+                    "name": "Ginga Embriagada",
                     "source": "XGE",
-                    "page": 33,
-                    "className": "Monk",
+                    "page": 54,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Drunken Master",
+                    "subclassShortName": "Mestre Ébrio",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "Starting at 6th level, you can move in sudden, swaying ways. You gain the following benefits.",
+                        "A partir do 6º nível, você pode mover-se de modo súbito e oscilante, ganhando os seguintes benefícios.",
                         {
                             "type": "options",
                             "entries": [
                                 {
-                                    "name": "Leap to Your Feet",
+                                    "name": "Em Pé Instantaneamente",
                                     "source": "XGE",
-                                    "page": 34,
-                                    "className": "Monk",
+                                    "page": 54,
+                                    "className": "Monge",
                                     "classSource": "XGE",
-                                    "subclassShortName": "Drunken Master",
+                                    "subclassShortName": "Mestre Ébrio",
                                     "subclassSource": "XGE",
                                     "level": 6,
                                     "entries": [
-                                        "When you're {@condition prone}, you can stand up by spending 5 feet of movement, rather than half your speed."
+                                        "Quando estiver {@condition caído}, você pode ficar de pé gastando apenas 1,5 metro, em vez de metade do seu deslocamento."
                                     ]
                                 },
                                 {
-                                    "name": "Redirect Attack",
+                                    "name": "Redirecionamento de Ataque",
                                     "source": "XGE",
-                                    "page": 34,
-                                    "className": "Monk",
+                                    "page": 54,
+                                    "className": "Monge",
                                     "classSource": "XGE",
-                                    "subclassShortName": "Drunken Master",
+                                    "subclassShortName": "Mestre Ébrio",
                                     "subclassSource": "XGE",
                                     "level": 6,
                                     "entries": [
-                                        "When a creature misses you with a melee attack roll, you can spend 1 ki point as a reaction to cause that attack to hit one creature of your choice, other than the attacker, that you can see within 5 feet of you."
+                                        "Um ataque corpo a corpo malsucedido contra você permite que você gaste 1 ponto de ki como uma reação para fazer com que o ataque acerte uma criatura à sua escolha, à sua vista e a até 1,5 metro de você, exceto o próprio atacante."
                                     ]
                                 }
                             ]
@@ -628,185 +601,178 @@
                     ]
                 },
                 {
-                    "name": "Drunkard's Luck",
+                    "name": "Sorte de Beberrão",
                     "source": "XGE",
-                    "page": 33,
-                    "className": "Monk",
+                    "page": 54,
+                    "className": "Monge",
                     "classSource": "PHB",
                     "subclassShortName": "Drunken Master",
                     "subclassSource": "XGE",
                     "level": 11,
                     "header": 2,
                     "entries": [
-                        "Starting at 11th level, you always seem to get a lucky bounce at the right moment. When you make an ability check, an attack roll, or a saving throw and have disadvantage on the roll, you can spend 2 ki points to cancel the disadvantage for that roll."
+                        "A partir do 11º nível, você parece sempre fazer o movimento certo na hora certa. Você pode gastar 2 pontos de ki para cancelar uma desvantagem em um teste de atributo, jogada de ataque ou salvaguarda."
                     ]
                 },
                 {
-                    "name": "Intoxicated Frenzy",
+                    "name": "Frenesi Intoxicado",
                     "source": "XGE",
-                    "page": 33,
-                    "className": "Monk",
+                    "page": 54,
+                    "className": "Monge",
                     "classSource": "PHB",
                     "subclassShortName": "Drunken Master",
                     "subclassSource": "XGE",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "At 17th level, you gain the ability to make an overwhelming number of attacks against a group of enemies. When you use your Flurry of Blows, you can make up to three additional attacks with it (up to a total of five Flurry of Blows attacks), provided that each Flurry of Blows attack targets a different creature this turn."
+                        "No 17º nível, você ganha a habilidade de realizar uma quantidade avassaladora de ataques contra um grupo de inimigos. Ao usar sua Torrente de Golpes, você pode fazer até três ataques adicionais com ela (até um total de cinco ataques Torrente de Golpes), contando que cada ataque Torrente de Golpes tenha como alvo uma criatura diferente neste turno."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Way of the Kensei",
+			"name": "Caminho do Kensei",
 			"shortName": "Kensei",
+            "id": "kensei",
 			"source": "XGE",
-			"className": "Monk",
+			"className": "Monge",
 			"classSource": "PHB",
-			"page": 34,
+			"page": 55,
+            "level": 3,
+            "entries": [
+                "Monges do Caminho do Kensei treinam incansavelmente com suas armas, até o ponto onde as armas tornam-se uma extensão dos seus corpos. Tendo como fundação o domínio da luta com espadas, a tradição se ampliou de modo a incluir muitos outros tipos de armas.",
+                "Um kensei enxerga uma arma de modo semelhante ao modo como um calígrafo ou pintor enxerga uma pena ou pincel. Que uma tal maestria torne o kensei um guerreiro inigualável é apenas consequência de devoção, prática e estudo intensos."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Way of the Kensei",
-                    "source": "XGE",
-                    "page": 34,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Kensei",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "Monks of the Way of the Kensei train relentlessly with their weapons, to the point where the weapon becomes an extension of the body. Founded on a mastery of sword fighting, the tradition has expanded to include many different weapons.",
-                        "A kensei sees a weapon in much the same way a calligrapher or painter regards a pen or brush. Whatever the weapon, the kensei views it as a tool used to express the beauty and precision of the martial arts. That such mastery makes a kensei a peerless warrior is but a side effect of intense devotion, practice, and study.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Path of the Kensei|Monk||Kensei|XGE|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Path of the Kensei",
+                    "name": "Caminho do Kensei",
                     "source": "XGE",
-                    "page": 34,
-                    "className": "Monk",
+                    "page": 55,
+                    "className": "Monge",
                     "classSource": "PHB",
                     "subclassShortName": "Kensei",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you choose this tradition at 3rd level, your special martial arts training leads you to master the use of certain weapons. This path also includes instruction in the deft strokes of calligraphy or painting. You gain the following benefits.",
+                        "Ao escolher esta tradição no 3º nível, seu treino especial em artes marciais leva-o a dominar o uso de determinadas armas. Este caminho também inclui instrução em ágeis movimentos de caligrafia e pintura. Você ganha os seguintes benefícios.",
                         {
                             "type": "entries",
-                            "name": "Kensei Weapons",
+                            "name": "Armas Kensei",
                             "entries": [
-                                "Choose two types of weapons to be your kensei weapons: one melee weapon and one ranged weapon. Each of these weapons can be any simple or martial weapon that lacks the heavy and special properties. The longbow is also a valid choice. You gain proficiency with these weapons if you don't already have it. Weapons of the chosen types are monk weapons for you. Many of this tradition's features work only with your kensei weapons. When you reach 6th, 11th, and 17th level in this class, you can choose another type of weapon\u2014either melee or ranged\u2014to be a kensei weapon for you, following the criteria above."
+                                "Escolha dois tipos de armas para serem suas armas kensei: uma arma de combate corpo a corpo e uma de combate à distância. Cada uma dessas armas pode ser uma arma simples ou marcial que não possua as propriedades especiais e pesadas. O arco longo também é uma escolha válida. Você ganha proficiência com essas armas, caso já não a possua. Armas dos tipos escolhidos são armas de monge para você. Muitas das características desta tradição só funcionam com suas armas kensei. Ao alcançar os 6º, 11º e 17º níveis nesta classe, você pode escolher outro tipo de arma — tanto de combate corpo a corpo quanto à distância — para ser uma arma kensei para você, seguindo os critérios anteriores."
                             ]
                         },
                         {
                             "type": "options",
                             "entries": [
                                 {
-                                    "name": "Agile Parry",
+                                    "name": "Aparar Ágil",
                                     "source": "XGE",
-                                    "page": 34,
-                                    "className": "Monk",
+                                    "page": 55,
+                                    "className": "Monge",
                                     "classSource": "XGE",
                                     "subclassShortName": "Kensei",
                                     "subclassSource": "XGE",
                                     "level": 3,
                                     "entries": [
-                                        "If you make an unarmed strike as part of the {@action Attack} action on your turn and are holding a kensei weapon, you can use it to defend yourself if it is a melee weapon. You gain a +2 bonus to AC until the start of your next turn, while the weapon is in your hand and you aren't {@condition incapacitated}."
+                                        "Caso você realize um ataque desarmado como parte da ação Ataque em seu turno, e esteja empunhando uma arma kensei, você pode usá-la para se defender, caso se trate de uma arma de combate corpo a corpo. Você ganha um bônus de +2 para sua CA até o começo do seu próximo turno, enquanto a arma estiver em sua mão e você não estiver {@condition incapacitado}."
                                     ]
                                 },
                                 {
-                                    "name": "Kensei's Shot",
+                                    "name": "Disparo Kensei",
                                     "source": "XGE",
-                                    "page": 34,
-                                    "className": "Monk",
+                                    "page": 55,
+                                    "className": "Monge",
                                     "classSource": "XGE",
                                     "subclassShortName": "Kensei",
                                     "subclassSource": "XGE",
                                     "level": 3,
                                     "entries": [
-                                        "You can use a bonus action on your turn to make your ranged attacks with a kensei weapon more deadly. When you do so, any target you hit with a ranged attack using a kensei weapon takes an extra {@damage 1d4} damage of the weapon's type. You retain this benefit until the end of the current turn."
+                                        "Você pode usar uma ação bônus no seu turno para tornar seus ataques à distância com uma arma kensei mais fatais. Ao fazê-lo, qualquer alvo que você atinja com um ataque à distância usando uma arma kensei sofre 1d4 pontos de dano adicional do tipo da arma. Você mantém este benefício até o final do turno atual."
                                     ]
                                 }
                             ]
                         },
                         {
                             "type": "entries",
-                            "name": "Way of the Brush",
+                            "name": "Caminho do Pincel",
                             "entries": [
-                                "You gain proficiency with your choice of {@item calligrapher's supplies|phb} or {@item painter's supplies|phb}."
+                                "Você ganha proficiência com suprimentos de calígrafo ou com ferramentas/suprimentos de pintor."
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "One with the Blade",
+                    "name": "Um com a Lâmina",
                     "source": "XGE",
-                    "page": 34,
-                    "className": "Monk",
+                    "page": 55,
+                    "className": "Monge",
                     "classSource": "PHB",
                     "subclassShortName": "Kensei",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "At 6th level, you extend your ki into your kensei weapons, granting you the following benefits.",
+                        "No 6º nível, você estende seu ki até suas armas kensei, concedendo a si mesmo os benefícios a seguir.",
                         {
                             "type": "entries",
-                            "name": "Magic Kensei Weapons",
+                            "name": "Armas Kensei Mágicas",
                             "entries": [
-                                "Your attacks with your kensei weapons count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+                                "Seus ataques com armas kensei contam como mágicos para o propósito de superar resistência e imunidade a ataques e dano não mágicos."
                             ]
                         },
                         {
                             "type": "entries",
-                            "name": "Deft Strike",
+                            "name": "Ataque Ágil",
                             "entries": [
-                                "When you hit a target with a kensei weapon, you can spend 1 ki point to cause the weapon to deal extra damage to the target equal to your Martial Arts die. You can use this feature only once on each of your turns."
+                                "Ao atingir um alvo com uma arma kensei, você pode gastar 1 ponto de ki para fazer com que a arma cause uma quantidade de dano adicional ao alvo igual ao seu dado de Artes Marciais. Você pode usar esta característica apenas uma vez em cada um dos seus turnos."
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Sharpen the Blade",
+                    "name": "Aguçar a Lâmina",
                     "source": "XGE",
-                    "page": 34,
-                    "className": "Monk",
+                    "page": 55,
+                    "className": "Monge",
                     "classSource": "PHB",
                     "subclassShortName": "Kensei",
                     "subclassSource": "XGE",
                     "level": 11,
                     "header": 2,
                     "entries": [
-                        "At 11th level, you gain the ability to augment your weapons further with your ki. As a bonus action, you can expend up to 3 ki points to grant one kensei weapon you touch a bonus to attack and damage rolls when you attack with it. The bonus equals the number of ki points you spent. This bonus lasts for 1 minute or until you use this feature again. This feature has no effect on a magic weapon that already has a bonus to attack and damage rolls."
+                        "No 11º nível, você pode melhorar ainda mais suas armas com seu ki. Como uma ação bônus, você pode gastar até 3 pontos de ki para conceder um bônus às suas jogadas de ataque e dano com uma arma kensei em que você toque. O bônus é igual ao número de pontos de ki que você gastou. Ele dura 1 minuto ou até que você use esta característica novamente. Esta característica não tem efeito em armas mágicas que já concedam bônus a jogadas de ataque e dano."
                     ]
                 },
                 {
-                    "name": "Unerring Accuracy",
+                    "name": "Precisão Infalível",
                     "source": "XGE",
-                    "page": 34,
-                    "className": "Monk",
+                    "page": 55,
+                    "className": "Monge",
                     "classSource": "PHB",
                     "subclassShortName": "Kensei",
                     "subclassSource": "XGE",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "At 17th level, your mastery of weapons grants you extraordinary accuracy. If you miss with an attack roll using a monk weapon on your turn, you can reroll it. You can use this feature only once on each of your turns."
+                        "No 17º nível, sua maestria com armas lhe concede precisão extraordinária. Ao falhar numa jogada de ataque com uma arma de monge no seu turno, você pode refazer a jogada. Esta característica só pode ser usada uma vez em cada um dos seus turnos."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Way of the Sun Soul",
-			"shortName": "Sun Soul",
+			"name": "Caminho da Alma Solar",
+			"shortName": "Alma Solar",
+            "id": "almasolar",
 			"source": "XGE",
-			"className": "Monk",
+			"className": "Monge",
 			"classSource": "PHB",
-			"page": 35,
+			"page": 56,
+            "level": 3,
+            "entries": [
+                "Monges do Caminho da Alma Solar aprendem a canalizar sua energia vital em abrasadores raios de luz. Eles ensinam que a meditação pode desbloquear a habilidade de canalizar a luz vertida pela alma de cada criatura viva."
+            ],
 			"otherSources": [
 				{
 					"source": "SCAG",
@@ -814,83 +780,67 @@
 				}
 			],
 			"subclassFeatures": [
-				{
-                    "name": "Way of the Sun Soul",
-                    "source": "XGE",
-                    "page": 35,
-                    "className": "Monk",
-                    "classSource": "PHB",
-                    "subclassShortName": "Sun Soul",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "Monks of the Way of the Sun Soul learn to channel their life energy into searing bolts of light. They teach that meditation can unlock the ability to unleash the indomitable light shed by the soul of every living creature.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Radiant Sun Bolt|Monk||Sun Soul|XGE|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Radiant Sun Bolt",
+                    "name": "Rajada Solar Radiante",
                     "source": "XGE",
-                    "page": 35,
-                    "className": "Monk",
+                    "page": 56,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Sun Soul",
+                    "subclassShortName": "Alma Solar",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Starting when you choose this tradition at 3rd level, you can hurl searing bolts of magical radiance.",
-                        "You gain a new attack option that you can use with the {@action Attack} action. The special attack is a ranged spell attack with a range of 30 feet. You are proficient with it, and you add your Dexterity modifier to its attack and damage rolls. Its damage is radiant, and its damage die is a {@dice d4}. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.",
-                        "When you take the {@action Attack} action on your turn and use this special attack as part of it, you can spend 1 ki point to make the special attack twice as a bonus action. When you gain the Extra {@action Attack} feature, this special attack can be used for any of the attacks you make as part of the {@action Attack} action."
+                        "Ao escolher esta tradição no 3º nível, você pode lançar ardentes rajadas de radiação mágica.",
+                        "Você ganha uma nova opção de ataque para usar com a ação Atacar. Esse ataque especial é um ataque mágico à distância com alcance de 9 metros. Você é proficiente com ele, adicionando seu modificador de Destreza às jogadas de ataque e dano dele. O tipo de dano é radiante, e o dado de dano é 1d4. Esse dado muda à medida que você ganha níveis como monge, conforme mostrado na coluna Artes Marciais da tabela O Monge.",
+                        "Quando você executa a ação Atacar no seu turno e usa este ataque especial como parte dela, você pode gastar 1 ponto de ki para realizar o ataque especial duas vezes como uma ação bônus.",
+                        "Ao ganhar a característica Ataque Extra, este ataque especial pode ser usado para qualquer um dos ataques que você faz como parte da ação Atacar."
                     ]
                 },
                 {
-                    "name": "Searing Arc Strike",
+                    "name": "Golpe do Arco Ardente",
                     "source": "XGE",
-                    "page": 35,
-                    "className": "Monk",
+                    "page": 56,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Sun Soul",
+                    "subclassShortName": "Alma Solar",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "At 6th level, you gain the ability to channel your ki into searing waves of energy. Immediately after you take the {@action Attack} action on your turn, you can spend 2 ki points to cast the {@spell burning hands} spell as a bonus action.",
-                        "You can spend additional ki points to cast {@spell burning hands} as a higher-level spell. Each additional ki point you spend increases the spell's level by 1. The maximum number of ki points (2 plus any additional points) that you can spend on the spell equals half your monk level."
+                        "No 6º nível, você ganha a habilidade de canalizar seu ki em abrasadoras ondas de energia. Imediatamente após executar a ação Atacar em seu turno, você pode gastar 2 pontos de ki para conjurar a magia {@spell mãos flamejantes} como uma ação bônus.",
+                        "Você pode gastar pontos de ki adicionais para conjurar {@spell mãos flamejantes} como uma magia de círculo superior. Cada ponto de ki adicional gasto aumenta o círculo da magia em 1. A quantidade máxima de pontos de ki (2 mais quaisquer pontos adicionais) que você pode gastar na magia é igual a metade do seu nível como monge."
                     ]
                 },
                 {
-                    "name": "Searing Sunburst",
+                    "name": "Explosão Solar Cauterizante",
                     "source": "XGE",
-                    "page": 35,
-                    "className": "Monk",
+                    "page": 56,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Sun Soul",
+                    "subclassShortName": "Alma Solar",
                     "subclassSource": "XGE",
                     "level": 11,
                     "header": 2,
                     "entries": [
-                        "At 11th level, you gain the ability to create an orb of light that erupts into a devastating explosion. As an action, you magically create an orb and hurl it at a point you choose within 150 feet, where it erupts into a sphere of radiant light for a brief but deadly instant.",
-                        "Each creature in that 20-foot-radius sphere must succeed on a Constitution saving throw or take {@damage 2d6} radiant damage. A creature doesn't need to make the save if the creature is behind total cover that is opaque.",
-                        "You can increase the sphere's damage by spending ki points. Each point you spend, to a maximum of 3, increases the damage by {@dice 2d6}."
+                        "No 11º nível, você ganha a habilidade de criar um orbe de luz que irrompe numa explosão devastadora. Como uma ação, você cria magicamente um orbe e lança-o na direção de um ponto à sua escolha e a até 45 metros de você, onde ele irrompe numa esfera de luz radiante por um breve, porém mortal, instante.",
+                        "Cada criatura dentro dessa esfera com raio de 6 metros deve ser bem-sucedida em uma salvaguarda de Constituição ou receber 2d6 pontos de dano radiante. As criaturas não precisam realizar a salvaguarda se estiverem por trás de cobertura total opaca.",
+                        "Você pode aumentar o dano da esfera gastando pontos de ki. Cada ponto gasto, até um máximo de 3, aumenta o dano em 2d6."
                     ]
                 },
                 {
-                    "name": "Sun Shield",
+                    "name": "Escudo Solar",
                     "source": "XGE",
-                    "page": 35,
-                    "className": "Monk",
+                    "page": 56,
+                    "className": "Monge",
                     "classSource": "PHB",
-                    "subclassShortName": "Sun Soul",
+                    "subclassShortName": "Alma Solar",
                     "subclassSource": "XGE",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "At 17th level, you become wreathed in a luminous, magical aura. You shed bright light in a 30-foot radius and dim light for an additional 30 feet. You can extinguish or restore the light as a bonus action.",
-                        "If a creature hits you with a melee attack while this light shines, you can use your reaction to deal radiant damage to the creature. The radiant damage equals 5 + your Wisdom modifier."
+                        "No 17º nível, você se cobre com uma aura mágica luminosa. Você irradia luz plena num raio de 9 metros, e meia-luz por mais 9 metros. Você pode extinguir ou restaurar essa luz como uma ação bônus.",
+                        "Se uma criatura atingi-lo com um ataque corpo a corpo enquanto a luz brilha, você pode usar sua reação para causar dano radiante na criatura. Esse dano radiante é igual a 5 + seu modificador de Sabedoria."
                     ]
                 }
 			]

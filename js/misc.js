@@ -29,6 +29,57 @@ $(document).ready(function () {
     });
 });
 
+function slugify(value) {
+    return value.replace(/[àáâãäå]/g, "a").replace(/ç/g,"c").replace(/[èéêë]/g,"e").replace(/[ìíîï]/g,"i").replace(/[òóôõö]/g,"o").replace(/[ùúûü]/g,"u").replace(/ /g, "-");
+}
+
+const linkTypes = {
+    "spell": "magias",
+    "condition": "condicoes",
+    "creature": "criaturas"
+}
+
+/** Replace @ spell */
+window.spellToLink = function spellToLink(datas) {
+    return datas.map(data => {
+        data.subclassFeatures = data.subclassFeatures.map(features => {
+            features.entries = features.entries.map(entry => {
+                if (typeof entry === 'string') {
+                    //console.log(entry);
+                    const regex = new RegExp("{@(?<type>\\w+)\\s+(?<name>.+?)}", 'gi');
+                    const regexMatch = entry.match(regex);
+                    if (regexMatch) {
+                        let type, name = null;
+                        regexMatch.forEach(value => {
+                            const group = value.match(/{@(?<type>\w+)\s+(?<name>.+?)}/i).groups;
+                            name = group.name;
+                            type = group.type;
+                            slugId = slugify(group.name);
+
+                            if (type === 'spell') {
+                                var link = `<a href="/${linkTypes[type]}.html?nome=${slugId}" class="${linkTypes[type]}-hover ${linkTypes[type]}-tooltip" id="${slugId}" title="Carregando...">${name}</a>`;
+                                entry = entry.replace(value, link);
+                            } else if (type === 'condition') {
+                                var link = `<a href="javascript:void(0)" class="${linkTypes[type]}-hover ${linkTypes[type]}-tooltip" id="${slugId}" title="Carregando...">${name}</a>`;
+                                entry = entry.replace(value, link);
+                            } else if (type === 'creature') {
+                                var link = `<span class="${linkTypes[type]}-hover ${linkTypes[type]}-tooltip" id="${slugId}">${name}</span>`;
+                                entry = entry.replace(value, link);
+                            }
+                        })                        
+                    }
+                }
+
+                return entry;
+            })
+
+            return features;
+        })
+
+        return data;
+    })
+}
+
 //// Get the container element
 //var btnContainer = document.getElementById("nav-menu");
 

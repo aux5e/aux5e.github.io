@@ -1,8 +1,8 @@
 {
 	"class": [
 		{
-			"name": "ladino",
-            "subclassTitle": "Roguish Archetype",
+			"name": "Ladino",
+            "subclassTitle": "Arquétipos de Ladino",
 			"multiclassing": {
 				"requirements": {
 					"dex": 13
@@ -35,1046 +35,444 @@
 						"{@item thieves' tools|PHB}"
 					]
 				}
-			}
+			},
+            "entries": [
+                "Ladinos possuem muitos traços em comum, incluindo a ênfase no aperfeiçoamento das suas habilidades, uma abordagem precisa e mortal durante o combate, e reflexos cada vez mais rápidos. Por outro lado, diferentes ladinos orientam esses talentos em direções distintas, variedade essa incorporada pelos arquétipos de ladino. Sua escolha de arquétipo é um reflexo do seu foco - não necessariamente uma indicação da sua profissão, e sim uma descrição das suas técnicas preferidas."
+            ]
 		}
 	],
-	"subclass": [
-		{
-			"name": "Arcane Trickster",
-			"shortName": "Arcane Trickster",
+	"subclasses": [
+        {
+			"name": "Ladrão",
+			"shortName": "Ladrão",
+            "id": "ladrao",
 			"source": "PHB",
-			"className": "Rogue",
+			"className": "Ladino",
 			"classSource": "PHB",
 			"page": 97,
-			"spellcastingAbility": "int",
-			"casterProgression": "1/3",
-			"cantripProgression": [
-				0,
-				0,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4
-			],
-			"spellsKnownProgression": [
-				0,
-				0,
-				3,
-				4,
-				4,
-				4,
-				5,
-				6,
-				6,
-				7,
-				8,
-				8,
-				9,
-				10,
-				10,
-				11,
-				11,
-				11,
-				12,
-				13
-			],
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"mage hand#c"
-						]
-					}
-				}
-			],
-			"subclassTableGroups": [
-				{
-					"subclasses": [
-						{
-							"name": "Arcane Trickster",
-							"source": "PHB"
-						}
-					],
-					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|subclass=Rogue: Arcane Trickster}",
-						"{@filter Spells Known|spells|subclass=Rogue: Arcane Trickster}"
-					],
-					"rows": [
-						[
-							0,
-							0
-						],
-						[
-							0,
-							0
-						],
-						[
-							3,
-							3
-						],
-						[
-							3,
-							4
-						],
-						[
-							3,
-							4
-						],
-						[
-							3,
-							4
-						],
-						[
-							3,
-							5
-						],
-						[
-							3,
-							6
-						],
-						[
-							3,
-							6
-						],
-						[
-							4,
-							7
-						],
-						[
-							4,
-							8
-						],
-						[
-							4,
-							8
-						],
-						[
-							4,
-							9
-						],
-						[
-							4,
-							10
-						],
-						[
-							4,
-							10
-						],
-						[
-							4,
-							11
-						],
-						[
-							4,
-							11
-						],
-						[
-							4,
-							11
-						],
-						[
-							4,
-							12
-						],
-						[
-							4,
-							13
-						]
-					]
-				},
-				{
-					"title": "Spell Slots per Spell Level",
-					"subclasses": [
-						{
-							"name": "Arcane Trickster",
-							"source": "PHB"
-						}
-					],
-					"colLabels": [
-						"{@filter 1st|spells|level=1|subclass=Rogue: Arcane Trickster}",
-						"{@filter 2nd|spells|level=2|subclass=Rogue: Arcane Trickster}",
-						"{@filter 3rd|spells|level=3|subclass=Rogue: Arcane Trickster}",
-						"{@filter 4th|spells|level=4|subclass=Rogue: Arcane Trickster}"
-					],
-					"rowsSpellProgression": [
-						[
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							1
-						]
-					]
-				}
-			],
+			"srd": true,
+			"basicRules": true,
+            "level": 3,
+            "entries": [
+                "Você apura suas perícias nas artes da ladroagem. Assaltantes, bandidos, punguistas, trombadinhas e outros criminosos costumam seguir este arquétipo, assim como ladinos que preferem ver a si mesmos como caçadores de tesouro, exploradores, pesquisadores e investigadores profissionais. Além de melhorar suas perícias e furtividade, você desenvolve habilidades úteis para explorar ruínas antigas, ler idiomas desconhecidos e usar itens mágicos que, de outro modo, não conseguiria usar."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Arcane Trickster",
-                    "source": "PHB",
-                    "page": 97,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Arcane Trickster",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "entries": [
-                        "Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Spellcasting|Rogue||Arcane Trickster||3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Mage Hand Legerdemain|Rogue||Arcane Trickster||3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Mage Hand Legerdemain",
+                    "name": "Mão Leve",
                     "source": "PHB",
                     "page": 97,
-                    "className": "Rogue",
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Trickster",
+                    "subclassShortName": "Ladrão",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Starting at 3rd level, when you cast {@spell mage hand}, you can make the spectral hand {@condition invisible}, and you can perform the following additional tasks with it:",
-                        {
-                            "type": "list",
-                            "items": [
-                                "You can stow one object the hand is holding in a container worn or carried by another creature.",
-                                "You can retrieve an object in a container worn or carried by another creature.",
-                                "You can use {@item thieves' tools|phb} to pick locks and disarm traps at range."
-                            ]
-                        },
-                        "You can perform one of these tasks without being noticed by a creature if you succeed on a Dexterity ({@skill Sleight of Hand}) check contested by the creature's Wisdom ({@skill Perception}) check.",
-                        "In addition, you can use the bonus action granted by your Cunning Action to control the hand."
+                        "A partir do 3º nível, você pode usar a ação bônus, dada pela sua Ação Ardilosa, para testar Destreza (Prestidigitação) no uso das suas ferramentas de ladrão para desarmar armadilhas, abrir fechaduras, ou ainda executar a ação Usar Objeto."
                     ]
                 },
                 {
-                    "name": "Spellcasting",
+                    "name": "Andarilho de Telhados",
                     "source": "PHB",
                     "page": 97,
-                    "className": "Rogue",
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Trickster",
+                    "subclassShortName": "Ladrão",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you reach 3rd level, you gain the ability to cast spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter wizard spell list|spells|class=wizard}.",
-                        {
-                            "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Cantrips",
-                                    "entries": [
-                                        "You learn three cantrips: {@spell mage hand} and two other cantrips of your choice from the wizard spell list. You learn another wizard cantrip of your choice at 10th level."
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Spell Slots",
-                                    "entries": [
-                                        "The Arcane Trickster Spellcasting table shows how many spell slots you have to cast your {@filter wizard spells|spells|class=wizard} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-                                        "For example, if you know the 1st-level spell {@spell charm person} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell charm person} using either slot."
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Spells Known of 1st-Level and Higher",
-                                    "entries": [
-                                        "You know three 1st-level wizard spells of your choice, two of which you must choose from the enchantment and illusion spells on the wizard spell list.",
-                                        "The Spells Known column of the Arcane Trickster Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be an enchantment or illusion spell of your choice, and must be of a level for which you have spell slots. For instance, when you reach 7th level in this class, you can learn one new spell of 1st or 2nd level.",
-                                        "The spells you learn at 8th, 14th, and 20th level can come from any school of magic.",
-                                        "Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be an enchantment or illusion spell, unless you're replacing the spell you gained at 3rd, 8th, 14th, or 20th level from any school of magic."
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Spellcasting Ability",
-                                    "entries": [
-                                        "Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
-                                        {
-                                            "type": "abilityDc",
-                                            "name": "Spell",
-                                            "attributes": [
-                                                "int"
-                                            ]
-                                        },
-                                        {
-                                            "type": "abilityAttackMod",
-                                            "name": "Spell",
-                                            "attributes": [
-                                                "int"
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
+                        "Ao escolher este arquétipo no 3º nível, você ganha a habilidade de escalar mais rapidamente que o normal, de modo que essa ação passa a não lhe custar mais movimento adicional.",
+                        "Além disso, ao saltar em distância, seu alcance aumenta em 30 centímetros para cada ponto do seu modificador de Destreza."
                     ]
                 },
                 {
-                    "name": "Magical Ambush",
+                    "name": "Furtividade Suprema",
                     "source": "PHB",
                     "page": 97,
-                    "className": "Rogue",
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Trickster",
+                    "subclassShortName": "Ladrão",
                     "subclassSource": "PHB",
                     "level": 9,
                     "header": 2,
                     "entries": [
-                        "Starting at 9th level, if you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn."
+                        "A partir do 9º nível, você tem vantagem em seus testes de Destreza (Furtividade) quando estiver se movendo, durante o mesmo turno, a no máximo a metade do seu deslocamento."
                     ]
                 },
                 {
-                    "name": "Versatile Trickster",
+                    "name": "Usar Dispositivo Mágico",
                     "source": "PHB",
                     "page": 97,
-                    "className": "Rogue",
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Trickster",
+                    "subclassShortName": "Ladrão",
                     "subclassSource": "PHB",
                     "level": 13,
                     "header": 2,
                     "entries": [
-                        "At 13th level, you gain the ability to distract targets with your {@spell mage hand}. As a bonus action on your turn, you can designate a creature within 5 feet of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of the turn."
+                        "No 13º nível, você aprendeu o suficiente sobre o funcionamento dos itens mágicos para, mesmo quando não foram feitos para você, ignorar todos os requerimentos de classe, raça e nível na sua utilização."
                     ]
                 },
                 {
-                    "name": "Spell Thief",
+                    "name": "Reflexos de Ladrão",
                     "source": "PHB",
                     "page": 97,
-                    "className": "Rogue",
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Trickster",
+                    "subclassShortName": "Ladrão",
                     "subclassSource": "PHB",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "At 17th level, you gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster.",
-                        "Immediately after a creature casts a spell that targets you or includes you in its area of effect, you can use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failed save, you negate the spell's effect against you, and you steal the knowledge of the spell if it is at least 1st level and of a level you can cast (it doesn't need to be a wizard spell). For the next 8 hours, you know the spell and can cast it using your spell slots. The creature can't cast that spell until the 8 hours have passed.",
-                        "Once you use this feature, you can't use it again until you finish a long rest."
+                        "Ao chegar no 17º nível, você se tornou perito em fazer emboscadas e escapar rapidamente do perigo. Você passa a ter dois turnos durante a primeira rodada de qualquer combate: o primeiro, realizado na sua iniciativa normal, e o segundo, na sua iniciativa menos 10. Você não pode usar esta característica ao ser surpreendido."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Assassin",
-			"shortName": "Assassin",
+			"name": "Assassino",
+			"shortName": "Assassino",
+            "id": "assassino",
 			"source": "PHB",
-			"className": "Rogue",
+			"className": "Ladino",
 			"classSource": "PHB",
 			"page": 97,
+            "level": 3,
+            "entries": [
+                "Você concentra seu treinamento na arte sutil do assassinato. Aqueles que aderem a este arquétipo são bem diferentes entre si: assassinos de aluguel, espiões, caçadores de recompensas, e até sacerdotes treinados para exterminar os inimigos de seu deus. Furtividade, veneno e disfarces ajudam-no a eliminar seus inimigos com eficiência mortal."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Assassin",
-                    "source": "PHB",
-                    "page": 97,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Assassin",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "entries": [
-                        "You focus your training on the grim art of death. Those who adhere to this archetype are diverse\u2014hired killers, spies, bounty hunters, and even specially anointed priests trained to exterminate the enemies of their deity. Stealth, poison, and disguise help you eliminate your foes with deadly efficiency.",
-                        "Your archetype grants you features at 3rd level and then again at 9th, 13th, and 17th level.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Assassinate|Rogue||Assassin||3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiencies|Rogue||Assassin||3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Assassinate",
+                    "name": "Proficiência Bônus",
                     "source": "PHB",
                     "page": 97,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Assassin",
+                    "subclassShortName": "Assassino",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Starting at 3rd level, you are at your deadliest when you get the drop on your enemies. You have advantage on attack rolls against any creature that hasn't taken a turn in the combat yet. In addition, any hit you score against a creature that is surprised is a critical hit."
+                        "Ao escolher este arquétipo no 3º nível, você adquire proficiência com o kit de disfarces e o kit de venenos."
                     ]
                 },
                 {
-                    "name": "Bonus Proficiencies",
+                    "name": "Assassinar",
                     "source": "PHB",
                     "page": 97,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Assassin",
+                    "subclassShortName": "Assassino",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you choose this archetype at 3rd level, you gain proficiency with the {@item disguise kit|phb} and the {@item poisoner's kit|phb}."
+                        "A partir do 3º nível, você é mais mortífero quando possui alguma superioridade sobre seus inimigos. Você tem vantagem em jogadas de ataque contra qualquer criatura cujo turno ainda não tenha chegado. Além disso, qualquer acerto contra uma criatura surpreendida é um acerto crítico."
                     ]
                 },
                 {
-                    "name": "Infiltration Expertise",
+                    "name": "Especialista em Infiltração",
                     "source": "PHB",
                     "page": 97,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Assassin",
+                    "subclassShortName": "Assassino",
                     "subclassSource": "PHB",
                     "level": 9,
                     "header": 2,
                     "entries": [
-                        "Starting at 9th level, you can unfailingly create false identities for yourself. You must spend seven days and 25 gp to establish the history, profession, and affiliations for an identity. You can't establish an identity that belongs to someone else. For example, you might acquire appropriate clothing, letters of introduction, and official-looking certification to establish yourself as a member of a trading house from a remote city so you can insinuate yourself into the company of other wealthy merchants.",
-                        "Thereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to."
+                        "A partir do 9º nível, você pode criar identidades falsas infalíveis para si. É preciso gastar sete dias e 25 PO para estabelecer a história, profissão e afiliações da identidade falsa. Você não pode estabelecer uma identidade que pertença a outra pessoa. Por exemplo, você pode adquirir vestimentas adequadas, cartas de apresentação e certificados que aparentem ser oficiais, e que o estabeleçam como um membro de uma casa mercante de uma cidade remota, para que seja possível se infiltrar em outras companhias mercantes mais ricas.",
+                        "Daí em diante, outras criaturas acreditarão que você é aquela pessoa, até que seja dada uma razão óbvia para que deixem de fazê-lo."
                     ]
                 },
                 {
                     "name": "Impostor",
                     "source": "PHB",
                     "page": 97,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Assassin",
+                    "subclassShortName": "Assassino",
                     "subclassSource": "PHB",
                     "level": 13,
                     "header": 2,
                     "entries": [
-                        "At 13th level, you gain the ability to unerringly mimic another person's speech, writing, and behavior. You must spend at least three hours studying these three components of the person's behavior, listening to speech, examining handwriting, and observing mannerism.",
-                        "Your ruse is indiscernible to the casual observer. If a wary creature suspects something is amiss, you have advantage on any Charisma ({@skill Deception}) check you make to avoid detection."
+                        "No 13º nível, você ganha a habilidade de imitar perfeitamente a fala, a escrita e o comportamento de outra pessoa. É preciso gastar pelo menos três horas estudando esses três componentes comportamentais da pessoa, examinando sua escrita, sua fala, e observando seus maneirismos.",
+                        "Um observador casual não pode discernir sua atuação do comportamento original. Se uma criatura desconfiada suspeitar que algo está errado, você tem vantagem em todos os testes de Carisma (Enganação) para evitar ser descoberto."
                     ]
                 },
                 {
-                    "name": "Death Strike",
+                    "name": "Golpe Mortal",
                     "source": "PHB",
                     "page": 97,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Assassin",
+                    "subclassShortName": "Assassino",
                     "subclassSource": "PHB",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "Starting at 17th level, you become a master of instant death. When you attack and hit a creature that is surprised, it must make a Constitution saving throw (DC 8 + your Dexterity modifier + your proficiency bonus). On a failed save, double the damage of your attack against the creature."
+                        "A partir do 17º nível, você se torna o mestre da morte instantânea. Quando você atinge uma criatura surpreendida, é preciso que ela tenha sucesso em uma salvaguarda de Constituição (CD 8 + seu modificador de Destreza + seu bônus de proficiência) para não sofre dano dobrado do seu ataque."
                     ]
                 }
 			]
 		},
-		{
-			"name": "Thief",
-			"shortName": "Thief",
+        {
+			"name": "Trapaceiro Arcano",
+			"shortName": "Trapaceiro Arcano",
+            "id": "trapaceiroarcano",
 			"source": "PHB",
-			"className": "Rogue",
+			"className": "Ladino",
 			"classSource": "PHB",
 			"page": 97,
-			"srd": true,
-			"basicRules": true,
+            "level": 3,
+            "entries": [
+                "Alguns ladinos aperfeiçoam suas já aprimoradas habilidades de furtividade e agilidade por meio da magia, aprendendo artimanhas de encantamento e ilusão. Esses ladinos incluem punguistas e larápios, mas também pregadores de peças, delinquentes e um número significativo de aventureiros."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Thief",
+                {
+                    "name": "Conjuração",
                     "source": "PHB",
-                    "page": 97,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Rogue",
+                    "page": 98,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Thief",
+                    "subclassShortName": "Trapaceiro Arcano",
                     "subclassSource": "PHB",
                     "level": 3,
+                    "header": 1,
                     "entries": [
-                        "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ.",
+                        "Ao alcançar o 3º nível, você recebe a habilidade de conjurar magias. Veja o capítulo 10, \"Conjuração\", para consultar as regras gerais de conjuração, e o capitulo 11, \"Magias\", para verificar a lista de magias de mago.",
                         {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Fast Hands|Rogue||Thief||3"
+                            "type": "entries",
+                            "name": "Truques",
+                            "entries": [
+                                "Você aprende três truques da lista de magias de mago: {@spell mãos mágicas} e dois outros à sua escolha. Também aprende outro truque de mago, à sua escolha, no 10º nível."
+                            ]
                         },
                         {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Second-Story Work|Rogue||Thief||3"
-                        }
-                    ]
-                },
-                {
-                    "name": "Fast Hands",
-                    "source": "PHB",
-                    "page": 97,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Thief",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "Starting at 3rd level, you can use the bonus action granted by your Cunning Action to make a Dexterity ({@skill Sleight of Hand}) check, use your {@item thieves' tools|phb} to disarm a trap or open a lock, or take the {@action Use an Object} action."
-                    ]
-                },
-                {
-                    "name": "Second-Story Work",
-                    "source": "PHB",
-                    "page": 97,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Thief",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "When you choose this archetype at 3rd level, you gain the ability to climb faster than normal; climbing no longer costs you extra movement.",
-                        "In addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier."
-                    ]
-                },
-                {
-                    "name": "Supreme Sneak",
-                    "source": "PHB",
-                    "page": 97,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Thief",
-                    "subclassSource": "PHB",
-                    "level": 9,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 9th level, you have advantage on a Dexterity ({@skill Stealth}) check if you move no more than half your speed on the same turn."
-                    ]
-                },
-                {
-                    "name": "Use Magic Device",
-                    "source": "PHB",
-                    "page": 97,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Thief",
-                    "subclassSource": "PHB",
-                    "level": 13,
-                    "header": 2,
-                    "entries": [
-                        "By 13th level, you have learned enough about the workings of magic that you can improvise the use of items even when they are not intended for you. You ignore all class, race, and level requirements on the use of magic items."
-                    ]
-                },
-                {
-                    "name": "Thief's Reflexes",
-                    "source": "PHB",
-                    "page": 97,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Thief",
-                    "subclassSource": "PHB",
-                    "level": 17,
-                    "header": 2,
-                    "entries": [
-                        "When you reach 17th level, you have become adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal initiative and your second turn at your initiative minus 10. You can't use this feature when you are surprised."
-                    ]
-                }
-			]
-		},
-		{
-			"name": "Inquisitive",
-			"shortName": "Inquisitive",
-			"source": "XGE",
-			"className": "Rogue",
-			"classSource": "PHB",
-			"page": 45,
-			"subclassFeatures": [
-				{
-                    "name": "Inquisitive",
-                    "source": "XGE",
-                    "page": 45,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Inquisitive",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "As an archetypal Inquisitive, you excel at rooting out secrets and unraveling mysteries. You rely on your sharp eye for detail, but also on your finely honed ability to read the words and deeds of other creatures to determine their true intent. You excel at defeating creatures that hide among and prey upon ordinary folk, and your mastery of lore and your keen deductions make you well equipped to expose and end hidden evils.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Ear for Deceit|Rogue||Inquisitive|XGE|3"
+                            "type": "entries",
+                            "name": "Espaços de Magia",
+                            "entries": [
+                                "A tabela Conjuração: Trapaceiro Arcano, mostra quantos espaços de magia você tem para conjurar suas magias de mago, do 1º círculo em diante. Para conjurar uma magia, você deve usar um espaço de magia igual ou superior ao círculo da magia. Todos os espaços de magia usados são recuperados ao final de um descanso longo.",
+                                "Por exemplo, se você conhece a magia de 1º círculo {@spell enfeitiçar pessoa}, e possui um espaço de magia de 1º círculo e um de 2º círculo disponíveis, pode conjurar {@spell enfeitiçar pessoa} usando qualquer um desses espaços."
+                            ]
                         },
                         {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Eye for Detail|Rogue||Inquisitive|XGE|3"
+                            "type": "entries",
+                            "name": "Magias Conhecidas de Acordo com o Nível",
+                            "entries": [
+                                "Você conhece três magias de 1º círculo de mago, à sua escolha, duas das quais devem ser encantamentos e ilusões.",
+                                "A coluna Magias da tabela Conjuração: Trapaceiro Arcano, mostra quando você aprende mais magias de mago. Todas as magias precisam ser encantamentos ou ilusões, e pertencer a um círculo para o qual você tenha espaços de magia. Por exemplo, ao alcançar o 7º nível nesta classe, você pode aprender uma nova magia de 1º ou 2º círculo.",
+                                "As magias que você aprende no 8º, 14º e 20º níveis podem pertencer a qualquer escola de magia.",
+                                "Sempre que você ganhar um nível nesta classe, poderá substituir uma das magias de mago que já conheça por outra magia de mago à sua escolha. A nova magia deve pertencer a um círculo para o qual você tenha espaços de magia, e, a não ser que você esteja trocando a magia que ganhou no 8º, 14º e 20º níveis, precisa ser um encantamento ou ilusão."
+                            ]
                         },
                         {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Insightful Fighting|Rogue||Inquisitive|XGE|3"
-                        }
-                    ]
-                },
-                {
-                    "name": "Ear for Deceit",
-                    "source": "XGE",
-                    "page": 45,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Inquisitive",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "When you choose this archetype at 3rd level, you develop a talent for picking out lies. Whenever you make a Wisdom ({@skill Insight}) check to determine whether a creature is lying, treat a roll of 7 or lower on the {@dice d20} as an 8."
-                    ]
-                },
-                {
-                    "name": "Eye for Detail",
-                    "source": "XGE",
-                    "page": 45,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Inquisitive",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "Starting at 3rd level, you can use a bonus action to make a Wisdom ({@skill Perception}) check to spot a hidden creature or object or to make an Intelligence ({@skill Investigation}) check to uncover or decipher clues."
-                    ]
-                },
-                {
-                    "name": "Insightful Fighting",
-                    "source": "XGE",
-                    "page": 45,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Inquisitive",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "At 3rd level, you gain the ability to decipher an opponent's tactics and develop a counter to them. As a bonus action, you can make a Wisdom ({@skill Insight}) check against a creature you can see that isn't {@condition incapacitated}, contested by the target's Charisma ({@skill Deception}) check. If you succeed, you can use your Sneak Attack against that target even if you don't have advantage on the attack roll, but not if you have disadvantage on it.",
-                        "This benefit lasts for 1 minute or until you successfully use this feature against a different target."
-                    ]
-                },
-                {
-                    "name": "Steady Eye",
-                    "source": "XGE",
-                    "page": 45,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Inquisitive",
-                    "subclassSource": "XGE",
-                    "level": 9,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 9th level, you have advantage on any Wisdom ({@skill Perception}) or Intelligence ({@skill Investigation}) check if you move no more than half your speed on the same turn."
-                    ]
-                },
-                {
-                    "name": "Unerring Eye",
-                    "source": "XGE",
-                    "page": 45,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Inquisitive",
-                    "subclassSource": "XGE",
-                    "level": 13,
-                    "header": 2,
-                    "entries": [
-                        "Beginning at 13th level, your senses are almost impossible to foil. As an action, you sense the presence of illusions, shapechangers not in their original form, and other magic designed to deceive the senses within 30 feet of you, provided you aren't {@condition blinded} or {@condition deafened}. You sense that an effect is attempting to trick you, but you gain no insight into what is hidden or into its true nature.",
-                        "You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
-                    ]
-                },
-                {
-                    "name": "Eye for Weakness",
-                    "source": "XGE",
-                    "page": 45,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Inquisitive",
-                    "subclassSource": "XGE",
-                    "level": 17,
-                    "header": 2,
-                    "entries": [
-                        "At 17th level, you learn to exploit a creature's weaknesses by carefully studying its tactics and movement. While your Insightful Fighting feature applies to a creature, your Sneak Attack damage against that creature increases by {@dice 3d6}."
-                    ]
-                }
-			]
-		},
-		{
-			"name": "Mastermind",
-			"shortName": "Mastermind",
-			"source": "XGE",
-			"className": "Rogue",
-			"classSource": "PHB",
-			"page": 46,
-			"otherSources": [
-				{
-					"source": "SCAG",
-					"page": 135
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "Mastermind",
-                    "source": "XGE",
-                    "page": 46,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Mastermind",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "Your focus is on people and on the influence and secrets they have. Many spies, courtiers, and schemers follow this archetype, leading lives of intrigue. Words are your weapons as often as knives or poison, and secrets and favors are some of your favorite treasures.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Master of Intrigue|Rogue||Mastermind|XGE|3"
+                            "type": "entries",
+                            "name": "Atributo de Conjuração",
+                            "entries": [
+                                "Inteligência é seu atributo de conjuração, uma vez que você aprendeu suas magias através da dedicação aos estudos e à memorização. Você deve usar Inteligência sempre que uma magia fizer referência ao seu atributo de conjuração. Além disso, você usa o seu modificador de Inteligência tanto para definir a CD de uma salvaguarda feita para evitar uma magia conjurada por você, quanto para realizar uma jogada de ataque com uma magia.",
+                                "<b>CD para evitar suas magias =</b> 8 + seu bônus de proficiência+ seu modificador de Inteligência",
+                                "<b>Modificador de ataque mágico =</b> seu bônus de proficiência+ seu modificador de Inteligência"
+                            ]
                         },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Master of Tactics|Rogue||Mastermind|XGE|3"
-                        }
+                        "<h5><b>Conjuração: Trapaceiro Arcano</b></h5>",
+                        "<div class=\"table-responsive\"><table class=\"table table-bordered table-striped compact-table\" style=\"font-size: 0.9em; margin-bottom: 35px\"><thead><tr><th rowspan=\"2\" class=\"text-center align-middle\" scope=\"col\">Nível de Ladino</th><th rowspan=\"2\" class=\"text-center align-middle\" scope=\"col\">Truques</th><th rowspan=\"2\" class=\"text-center align-middle\" scope=\"col\">Magias</th><th colspan=\"4\" class=\"text-center\">Espaços de Magia por Nível</th></tr><tr><th rowspan=\"2\" class=\"text-center\" scope=\"col\">1º</th><th rowspan=\"2\" class=\"text-center\" scope=\"col\">2º</th><th rowspan=\"2\" class=\"text-center\" scope=\"col\">3º</th><th rowspan=\"2\" class=\"text-center\" scope=\"col\">4º</th></tr></thead><tbody><tr><th class=\"text-center\" scope=\"row\">3º</th><td class=\"text-center\">3</td><td class=\"text-center\">3</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">4º</th><td class=\"text-center\">3</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">5º</th><td class=\"text-center\">3</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">6º</th><td class=\"text-center\">3</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">7º</th><td class=\"text-center\">3</td><td class=\"text-center\">5</td><td class=\"text-center\">4</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">8º</th><td class=\"text-center\">3</td><td class=\"text-center\">6</td><td class=\"text-center\">4</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">9º</th><td class=\"text-center\">3</td><td class=\"text-center\">6</td><td class=\"text-center\">4</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">10º</th><td class=\"text-center\">4</td><td class=\"text-center\">7</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">11º</th><td class=\"text-center\">4</td><td class=\"text-center\">8</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">12º</th><td class=\"text-center\">4</td><td class=\"text-center\">8</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">13º</th><td class=\"text-center\">4</td><td class=\"text-center\">9</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">14º</th><td class=\"text-center\">4</td><td class=\"text-center\">10</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">15º</th><td class=\"text-center\">4</td><td class=\"text-center\">10</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">16º</th><td class=\"text-center\">4</td><td class=\"text-center\">11</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">17º</th><td class=\"text-center\">4</td><td class=\"text-center\">11</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">18º</th><td class=\"text-center\">4</td><td class=\"text-center\">11</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">19º</th><td class=\"text-center\">4</td><td class=\"text-center\">12</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">3</td><td class=\"text-center\">1</td></tr><tr><th class=\"text-center\" scope=\"row\">20º</th><td class=\"text-center\">4</td><td class=\"text-center\">13</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">3</td><td class=\"text-center\">1</td></tr></tbody></table></div>"
                     ]
                 },
                 {
-                    "name": "Master of Intrigue",
-                    "source": "XGE",
-                    "page": 46,
-                    "className": "Rogue",
+                    "name": "Mãos Mágicas Ligeiras",
+                    "source": "PHB",
+                    "page": 98,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Mastermind",
-                    "subclassSource": "XGE",
+                    "subclassShortName": "Trapaceiro Arcano",
+                    "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you choose this archetype at 3rd level, you gain proficiency with the {@item disguise Kit|phb}, the {@item forgery kit|phb}, and one {@item gaming set|PHB} of your choice. You also learn two languages of your choice.",
-                        "Additionally, you can unerringly mimic the speech patterns and accent of a creature that you hear speak for at least 1 minute, enabling you to pass yourself off as a native speaker of a particular land, provided that you know the language."
-                    ]
-                },
-                {
-                    "name": "Master of Tactics",
-                    "source": "XGE",
-                    "page": 46,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Mastermind",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "Starting at 3rd level, you can use the {@action Help} action as a bonus action. Additionally, when you use the {@action Help} action to aid an ally in attacking a creature, the target of that attack can be within 30 feet of you, rather than within 5 feet of you, if the target can see or hear you."
-                    ]
-                },
-                {
-                    "name": "Insightful Manipulator",
-                    "source": "XGE",
-                    "page": 46,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Mastermind",
-                    "subclassSource": "XGE",
-                    "level": 9,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 9th level, if you spend at least 1 minute observing or interacting with another creature outside combat, you can learn certain information about its capabilities compared to your own. The DM tells you if the creature is your equal, superior, or inferior in regard to two of the following characteristics of your choice:",
+                        "A partir do 3º nível, ao conjurar {@spell mãos mágicas}, você pode fazer com que a mão espectral fique {@condition invisível}, além de poder executar as seguintes manobras adicionais com ela:",
                         {
                             "type": "list",
                             "items": [
-                                "Intelligence score",
-                                "Wisdom score",
-                                "Charisma score",
-                                "Class levels (if any)"
+                                "Guardar um objeto que a mão esteja segurando em um recipiente pertencente a você ou a outra criatura.",
+                                "Retirar um objeto de um recipiente usado ou carregado por outra criatura.",
+                                "Usar ferramentas de ladrão para abrir fechaduras e desarmar armadilhas à distância."
                             ]
                         },
-                        "At the DM's option, you might also realize you know a piece of the creature's history or one of its personality traits, if it has any."
+                        "Você pode fazer uma destas atividades sem ser notado por uma criatura, sendo bem-sucedido em um teste de Destreza (Prestidigitação), resistido por um teste de Sabedoria (Percepção).",
+                        "Além disso, você pode usar a ação bônus concedida por sua Ação Ardilosa para controlar a mão."
                     ]
                 },
                 {
-                    "name": "Misdirection",
-                    "source": "XGE",
-                    "page": 46,
-                    "className": "Rogue",
+                    "name": "Emboscada Mágica",
+                    "source": "PHB",
+                    "page": 98,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Mastermind",
-                    "subclassSource": "XGE",
+                    "subclassShortName": "Trapaceiro Arcano",
+                    "subclassSource": "PHB",
+                    "level": 9,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 9º nível, se você estiver escondido de uma criatura ao conjurar uma magia sobre ela, ela terá desvantagem em qualquer salvaguarda que fizer contra a magia nesse turno."
+                    ]
+                },
+                {
+                    "name": "Trapaceiro Versátil",
+                    "source": "PHB",
+                    "page": 98,
+                    "className": "Ladino",
+                    "classSource": "PHB",
+                    "subclassShortName": "Trapaceiro Arcano",
+                    "subclassSource": "PHB",
                     "level": 13,
                     "header": 2,
                     "entries": [
-                        "Beginning at 13th level, you can sometimes cause another creature to suffer an attack meant for you. When you are targeted by an attack while a creature within 5 feet of you is granting you cover against that attack, you can use your reaction to have the attack target that creature instead of you."
+                        "No 13º nível, você ganha a habilidade de distrair alvos com suas {@spell mãos mágicas}. Usando uma ação bônus, você pode designar uma criatura a 1,5 metro de distância da mão espectral. Fazer isto lhe dá vantagem em jogadas de ataque contra a criatura até o final do turno."
                     ]
                 },
                 {
-                    "name": "Soul of Deceit",
-                    "source": "XGE",
-                    "page": 46,
-                    "className": "Rogue",
+                    "name": "Ladrão de Magias",
+                    "source": "PHB",
+                    "page": 98,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Mastermind",
-                    "subclassSource": "XGE",
+                    "subclassShortName": "Trapaceiro Arcano",
+                    "subclassSource": "PHB",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "Starting at 17th level, your thoughts can't be read by telepathy or other means, unless you allow it. You can present false thoughts by succeeding on a Charisma ({@skill Deception}) check contested by the mind reader's Wisdom ({@skill Insight}) check.",
-                        "Additionally, no matter what you say, magic that would determine if you are telling the truth indicates you are being truthful if you so choose, and you can't be compelled to tell the truth by magic."
+                        "No 17º nível, você ganha a habilidade de roubar magicamente de um outro conjurador o conhecimento de conjuração de determinada magia.",
+                        "Imediatamente após uma criatura conjurar uma magia que o alvejou ou o incluiu em sua área de efeito, você pode usar sua reação para forçar a criatura a realizar uma salvaguarda com o modificador de conjuração dela. A CD é igual à CD para evitar suas magias. Se ela falhar, você neutraliza o efeito da magia e ainda rouba o conhecimento de como conjurá-la, caso ela seja pelo menos de 1º círculo ou de um círculo que você possa conjurar (não precisa ser uma magia de mago). Pelas próximas 8 horas, você conhecerá essa magia e poderá conjurá-la usando seus espaços de magia. A criatura não poderá conjurá-la até que as 8 horas tenham transcorrido.",
+                        "Uma vez usada esta característica, ela não poderá ser usada outra vez até que você complete um descanso longo."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Scout",
-			"shortName": "Scout",
+			"name": "Inquiridor",
+			"shortName": "Inquiridor",
+            "id": "inquiridor",
 			"source": "XGE",
-			"className": "Rogue",
+			"className": "Ladino",
 			"classSource": "PHB",
 			"page": 47,
+            "level": 3,
+            "entries": [
+                "Como um inquiridor arquetípico, você se destaca em revelar segredos e resolver mistérios. Você usa sua visão aguçada para detectar detalhes, assim como sua sutil habilidade de ler as palavras e ações de outras criaturas para determinar suas verdadeiras intenções. Você se distingue ainda em derrotar criaturas que se ocultam entre o povo para fazer-lhe mal, e seu domínio das tradições ladinas ao lado de suas deduções afiadas tornam-no bem equipado para expor e eliminar maus ocultos."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Scout",
-                    "source": "XGE",
-                    "page": 47,
-                    "className": "Rogue",
-                    "classSource": "PHB",
-                    "subclassShortName": "Scout",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "You are skilled in stealth and surviving far from the streets of a city, allowing you to scout ahead of your companions during expeditions. Rogues who embrace this archetype are at home in the wilderness and among barbarians and rangers, and many Scouts serve as the eyes and ears of war bands. Ambusher, spy, bounty hunter\u2014these are just a few of the roles that Scouts assume as they range the world.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Skirmisher|Rogue||Scout|XGE|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Survivalist|Rogue||Scout|XGE|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Skirmisher",
+                    "name": "Ouvido para Trapaça",
                     "source": "XGE",
                     "page": 47,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Scout",
+                    "subclassShortName": "Inquisitive",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Starting at 3rd level, you are difficult to pin down during a fight. You can move up to half your speed as a reaction when an enemy ends its turn within 5 feet of you. This movement doesn't provoke opportunity attacks."
+                        "Ao escolher este arquétipo no 3º nível, você desenvolve um talento para revelar mentiras. Sempre que realizar um teste de Sabedoria (Intuição) para determinar se uma criatura está mentindo, trate qualquer resultado igual a 7 ou inferior no d20 como um 8."
                     ]
                 },
                 {
-                    "name": "Survivalist",
+                    "name": "Olho para Detalhes",
                     "source": "XGE",
                     "page": 47,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Scout",
+                    "subclassShortName": "Inquisitive",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you choose this archetype at 3rd level, you gain proficiency in the {@skill Nature} and {@skill Survival} skills if you don't already have it. Your proficiency bonus is doubled for any ability check you make that uses either of those proficiencies."
+                        "A partir do 3º nível, você pode usar uma ação bônus para realizar um teste de Sabedoria (Intuição) com o intuito de detectar uma criatura ou objeto oculto, ou um teste de Inteligência (Investigação) para descobrir e decifrar pistas."
                     ]
                 },
                 {
-                    "name": "Superior Mobility",
+                    "name": "Luta Intuitiva",
                     "source": "XGE",
                     "page": 47,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Scout",
+                    "subclassShortName": "Inquisitive",
+                    "subclassSource": "XGE",
+                    "level": 3,
+                    "header": 1,
+                    "entries": [
+                        "No 3º nível, você ganha a habilidade de decifrar as táticas de um oponente e desenvolver contratáticas. Como uma ação bônus, você pode realizar um teste de Sabedoria (Intuição) contra uma criatura à sua vista e que não esteja {@condition incapacitada}, resistido pelo teste de Carisma (Enganação) do alvo. Em caso de sucesso, é possível usar seu  Ataque Furtivo contra o alvo mesmo que você não tenha vantagem na jogada de ataque, mas não se possuir desvantagem nela.",
+                        "Esse benefício dura 1 minuto ou até que você tenha sucesso no uso desta característica contra outro alvo."
+                    ]
+                },
+                {
+                    "name": "Olho Firme",
+                    "source": "XGE",
+                    "page": 47,
+                    "className": "Ladino",
+                    "classSource": "PHB",
+                    "subclassShortName": "Inquisitive",
                     "subclassSource": "XGE",
                     "level": 9,
                     "header": 2,
                     "entries": [
-                        "At 9th level, your walking speed increases by 10 feet. If you have a climbing or swimming speed, this increase applies to that speed as well."
+                        "A partir do 9º nível, você tem vantagem em qualquer teste de Sabedoria (Percepção) ou Inteligência (Investigação) caso não se movimente mais do que metade do seu deslocamento no mesmo turno."
                     ]
                 },
                 {
-                    "name": "Ambush Master",
+                    "name": "Olho Infalível",
                     "source": "XGE",
                     "page": 47,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Scout",
+                    "subclassShortName": "Inquisitive",
                     "subclassSource": "XGE",
                     "level": 13,
                     "header": 2,
                     "entries": [
-                        "Starting at 13th level, you excel at leading ambushes and acting first in a fight.",
-                        "You have advantage on initiative rolls. In addition, the first creature you hit during the first round of a combat becomes easier for you and others to strike; attack rolls against that target have advantage until the start of your next turn."
+                        "A partir do 13º nível, é quase impossível enganar seus sentidos. Como uma ação, você sente a presença de ilusões, metamorfos que não estejam em suas formas originais e qualquer magia criada para enganar os sentidos a uma distância de até 9 metros de você, contanto que você não esteja nem {@condition surdo}, nem {@condition cego}. É possível sentir que determinado efeito está tentando enganá-lo, mas não é obtida nenhuma informação sobre o que está escondido ou a natureza dessa criatura ou objeto.",
+                        "Você pode usar esta característica um número de vezes igual ao seu modificador de Sabedoria (no mínimo uma vez), e recupera todos os usos gastos dela ao terminar um descanso longo."
                     ]
                 },
                 {
-                    "name": "Sudden Strike",
+                    "name": "Olho para Fraquezas",
                     "source": "XGE",
                     "page": 47,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Scout",
+                    "subclassShortName": "Inquisitive",
                     "subclassSource": "XGE",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "Starting at 17th level, you can strike with deadly speed. If you take the {@action Attack} action on your turn, you can make one additional attack as a bonus action. This attack can benefit from your Sneak Attack even if you have already used it this turn, but you can't use your Sneak Attack against the same target more than once in a turn."
+                        "No 17º nível, você aprende a explorar as fraquezas de uma criatura estudando cuidadosamente as táticas e movimentação dela. Enquanto sua característica  Luta Intuitiva se aplica a uma criatura, o dano do seu  Ataque Furtivo contra essa criatura aumenta em 3d6."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Swashbuckler",
-			"shortName": "Swashbuckler",
+			"name": "Mestre dos Segredos",
+			"shortName": "Mestre dos Segredos",
+            "id": "mestredossegredos",
 			"source": "XGE",
-			"className": "Rogue",
+			"className": "Ladino",
 			"classSource": "PHB",
 			"page": 48,
+            "level": 3,
+            "entries": [
+                "Seu foco está nas pessoas; mais especificamente, na influência e segredos delas. Muitos espiões, cortesãos e conspiradores seguem este arquétipo, levando vidas de intriga. Você emprega tanto palavras quanto venenos e punhais como armas, segredos e favores estando entre seus tesouros favoritos. Em certos círculos são conhecidos como Mandachuvas, Manipuladores ou Mestres da Astúcia."
+            ],
 			"otherSources": [
 				{
 					"source": "SCAG",
@@ -1082,99 +480,267 @@
 				}
 			],
 			"subclassFeatures": [
-				{
-                    "name": "Swashbuckler",
+                {
+                    "name": "Mestre do Ardil",
                     "source": "XGE",
                     "page": 48,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Swashbuckler",
+                    "subclassShortName": "Mestre dos Segredos",
                     "subclassSource": "XGE",
                     "level": 3,
+                    "header": 1,
                     "entries": [
-                        "You focus your training on the art of the blade, relying on speed, elegance, and charm in equal parts. While some warriors are brutes clad in heavy armor, your method of fighting looks almost like a performance. Duelists and pirates typically belong to this archetype.",
-                        "A Swashbuckler excels in single combat, and can fight with two weapons while safely darting away from an opponent.",
+                        "Ao escolher este arquétipo no 3º nível, você ganha proficiência com o kit de disfarce, kit de falsificação e um conjunto de jogos (do kit de jogos) à sua escolha. Você também aprende dois idiomas à sua escolha.",
+                        "Além disso, você pode imitar perfeitamente os padrões de fala e sotaque de uma criatura que você ouça por pelo menos 1 minuto, o que lhe permite passar-se por falante nativo de uma terra em particular, contanto que você conheça o idioma."
+                    ]
+                },
+                {
+                    "name": "Mestre das Táticas",
+                    "source": "XGE",
+                    "page": 48,
+                    "className": "Ladino",
+                    "classSource": "PHB",
+                    "subclassShortName": "Mestre dos Segredos",
+                    "subclassSource": "XGE",
+                    "level": 3,
+                    "header": 1,
+                    "entries": [
+                        "A partir do 3º nível, você pode usar a ação Ajudar como uma ação bônus. Adicionalmente, quando usar a ação Ajudar para auxiliar um aliado a atacar uma criatura, o alvo desse ataque pode estar a até 9 metros de você, em vez de a até 1,5 metro, caso ele possa vê-lo ou ouvi-lo."
+                    ]
+                },
+                {
+                    "name": "Dissimulação Perspicaz",
+                    "source": "XGE",
+                    "page": 48,
+                    "className": "Ladino",
+                    "classSource": "PHB",
+                    "subclassShortName": "Mestre dos Segredos",
+                    "subclassSource": "XGE",
+                    "level": 9,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 9º nível, se você puder gastar até 1 minuto observando ou interagindo com outra criatura fora de combate, você poderá aprender algo sobre as capacidades dela, comparadas com as suas. O DM lhe dirá se a criatura é equivalente, superior ou inferior a você no que diz respeito às seguintes características, à sua escolha:",
                         {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Fancy Footwork|Rogue||Swashbuckler|XGE|3"
+                            "type": "list",
+                            "items": [
+                                "Valor de Inteligência",
+                                "Valor de Sabedoria",
+                                "Valor de Carisma",
+                                "Níveis (de quaisquer classes)"
+                            ]
                         },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Rakish Audacity|Rogue||Swashbuckler|XGE|3"
-                        }
+                        "A critério do DM, você também pode vir a perceber que sabe parte da história da criatura, ou um dos traços de personalidade dela, caso ela possua algum."
                     ]
                 },
                 {
-                    "name": "Fancy Footwork",
+                    "name": "Redirecionamento",
                     "source": "XGE",
                     "page": 48,
-                    "className": "Rogue",
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Swashbuckler",
+                    "subclassShortName": "Mestre dos Segredos",
+                    "subclassSource": "XGE",
+                    "level": 13,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 13º nível, às vezes você pode fazer com que outra criatura sofra um ataque direcionado a você. Ao ser alvo de um ataque enquanto uma criatura a até 1,5 metro de você lhe provém cobertura contra esse ataque, você pode usar sua reação para fazer com que o ataque seja feito contra a criatura, e não contra você."
+                    ]
+                },
+                {
+                    "name": "Alma Enganosa",
+                    "source": "XGE",
+                    "page": 48,
+                    "className": "Ladino",
+                    "classSource": "PHB",
+                    "subclassShortName": "Mestre dos Segredos",
+                    "subclassSource": "XGE",
+                    "level": 17,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 17º nível, seus pensamentos não podem ser lidos por telepatia ou qualquer outro meio, a menos que você permita. Você pode fingir falsos pensamentos a uma tentativa de leitura obtendo sucesso em um teste de Carisma (Enganação), resistido por um teste de Sabedoria (Intuição) do leitor de pensamentos.",
+                        "Além disso, independentemente do que você diga, magia capaz de determinar se você está dizendo a verdade indica que você está, caso assim você deseje, e você não pode ser forçado a dizer a verdade por meio de magia."
+                    ]
+                }
+			]
+		},
+		{
+			"name": "Batedor",
+			"shortName": "Batedor",
+            "id": "batedor",
+			"source": "XGE",
+			"className": "Ladino",
+			"classSource": "PHB",
+			"page": 49,
+            "level": 3,
+            "entries": [
+                "Você é perito em agir furtivamente e sobreviver além das ruas de uma cidade, o que permite que você patrulhe à frente de seus companheiros em expedições. Ladinos que abraçam este arquétipo estão em casa nos ermos e entre bárbaros e guardiões, e muitos Batedores servem como olhos e ouvidos de bandos de guerra. Emboscador, espião, caçador de recompensas — esses são só alguns dos papéis que Batedores assumem em suas andanças pelo mundo."
+            ],
+			"subclassFeatures": [
+                {
+                    "name": "Escaramuça",
+                    "source": "XGE",
+                    "page": 49,
+                    "className": "Ladino",
+                    "classSource": "PHB",
+                    "subclassShortName": "Batedor",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you choose this archetype at 3rd level, you learn how to land a strike and then slip away without reprisal. During your turn, if you make a melee attack against a creature, that creature can't make opportunity attacks against you for the rest of your turn."
+                        "A partir do 3º nível, torna-se difícil localizá-lo durante uma luta. Você pode mover-se até metade do seu deslocamento como uma reação, quando um inimigo termina o turno dele a até 1,5 metro de você. Esse movimento não provoca ataques de oportunidade."
                     ]
                 },
                 {
-                    "name": "Rakish Audacity",
+                    "name": "Sobrevivente",
                     "source": "XGE",
-                    "page": 48,
-                    "className": "Rogue",
+                    "page": 49,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Swashbuckler",
+                    "subclassShortName": "Batedor",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Starting at 3rd level, your confidence propels you into battle. You can give yourself a bonus to your initiative rolls equal to your Charisma modifier.",
-                        "You also gain an additional way to use your Sneak {@action Attack}; you don't need advantage on your attack roll to use Sneak {@action Attack} against a creature if you are within 5 feet of it, no other creatures are within 5 feet of you, and you don't have disadvantage on the attack roll. All the other rules for Sneak {@action Attack} still apply to you."
+                        "Ao escolher este arquétipo no 3º nível, você ganha proficiência nas perícias Natureza e Sobrevivência, caso já não a possua. Seu bônus de proficiência é dobrado em qualquer teste de atributo que use qualquer uma dessas proficiências."
+                    ]
+                },
+                {
+                    "name": "Mobilidade Superior",
+                    "source": "XGE",
+                    "page": 49,
+                    "className": "Ladino",
+                    "classSource": "PHB",
+                    "subclassShortName": "Batedor",
+                    "subclassSource": "XGE",
+                    "level": 9,
+                    "header": 2,
+                    "entries": [
+                        "No 9º nível, seu deslocamento de caminhada aumenta em 3 metros. Caso você possua deslocamento de escada ou nado, o aumento também se aplica a esses deslocamentos."
+                    ]
+                },
+                {
+                    "name": "Mestre da Emboscada",
+                    "source": "XGE",
+                    "page": 49,
+                    "className": "Ladino",
+                    "classSource": "PHB",
+                    "subclassShortName": "Batedor",
+                    "subclassSource": "XGE",
+                    "level": 13,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 13º nível, você se distingue em liderar emboscadas e ser o primeiro a agir nessas situações.",
+                        "Você tem vantagem em jogadas de iniciativa. Além disso, a primeira criatura que você acertar durante a primeira rodada de combate torna-se mais fácil de ser atingida por você ou por terceiros; jogadas de ataque contra ela têm vantagem até o início do seu próximo turno."
+                    ]
+                },
+                {
+                    "name": "Golpe Repentino",
+                    "source": "XGE",
+                    "page": 49,
+                    "className": "Ladino",
+                    "classSource": "PHB",
+                    "subclassShortName": "Batedor",
+                    "subclassSource": "XGE",
+                    "level": 17,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 17º nível, você pode golpear com velocidade mortal. Caso use a ação Atacar no seu turno, você pode realizar um ataque adicional como uma ação bônus. Esse ataque pode se beneficiar do seu Ataque Furtivo mesmo que você já tenha usado esta característica neste turno, mas não pode usá-la contra o mesmo alvo mais do que uma vez no mesmo turno."
+                    ]
+                }
+			]
+		},
+		{
+			"name": "Espadachim",
+			"shortName": "Espadachim",
+            "id": "espadachim",
+			"source": "XGE",
+			"className": "Ladino",
+			"classSource": "PHB",
+			"page": 49,
+            "level": 3,
+            "entries": [
+                "Você concentra seu treinamento na arte das lâminas, baseando-se em velocidade, elegância e charme em partes iguais. Enquanto alguns guerreiros são brutos vestidos em armaduras, seu método de luta se parece mais com uma apresentação dramática. Duelistas e piratas costumam pertencer a este arquétipo.",
+                "Um espadachim destaca-se em combate singular, podendo lutar com duas armas enquanto se afasta de um oponente."
+            ],
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 135
+				}
+			],
+			"subclassFeatures": [
+                {
+                    "name": "Pés Ágeis",
+                    "source": "XGE",
+                    "page": 49,
+                    "className": "Ladino",
+                    "classSource": "PHB",
+                    "subclassShortName": "Espadachim",
+                    "subclassSource": "XGE",
+                    "level": 3,
+                    "header": 1,
+                    "entries": [
+                        "Ao escolher este arquétipo no 3º nível, você aprende como atacar e depois fugir sem sofrer retaliação. Em seu turno, se você realizar um ataque armado contra uma criatura, essa criatura não pode fazer ataques de oportunidade contra você pelo restante do turno."
+                    ]
+                },
+                {
+                    "name": "Audácia Dinâmica",
+                    "source": "XGE",
+                    "page": 49,
+                    "className": "Ladino",
+                    "classSource": "PHB",
+                    "subclassShortName": "Espadachim",
+                    "subclassSource": "XGE",
+                    "level": 3,
+                    "header": 1,
+                    "entries": [
+                        "A partir do 3º nível, sua autoconfiança o impulsiona para a batalha. Suas jogadas de iniciativa ganham um bônus igual ao seu modificador de Carisma.",
+                        "Você também ganha um modo adicional de usar seu Ataque Furtivo; você não precisa ter vantagem numa jogada de ataque para usar seu Ataque Furtivo contra uma criatura, caso esteja a até 1,5 metro dela, nenhuma outra criatura esteja a até 1,5 metro de você, e você não tenha desvantagem na jogada de ataque. As demais regras de Ataque Furtivo ainda se aplicam a você."
                     ]
                 },
                 {
                     "name": "Panache",
                     "source": "XGE",
-                    "page": 48,
-                    "className": "Rogue",
+                    "page": 49,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Swashbuckler",
+                    "subclassShortName": "Espadachim",
                     "subclassSource": "XGE",
                     "level": 9,
                     "header": 2,
                     "entries": [
-                        "At 9th level, your charm becomes extraordinarily beguiling. As an action, you can make a Charisma ({@skill Persuasion}) check contested by a creature's Wisdom ({@skill Insight}) check. The creature must be able to hear you, and the two of you must share a language.",
-                        "If you succeed on the check and the creature is hostile to you, it has disadvantage on attack rolls against targets other than you and can't make opportunity attacks against targets other than you. This effect lasts for 1 minute, until one of your companions attacks the target or affects it with a spell, or until you and the target are more than 60 feet apart.",
-                        "If you succeed on the check and the creature isn't hostile to you, it is {@condition charmed} by you for 1 minute. While {@condition charmed}, it regards you as a friendly acquaintance. This effect ends immediately if you or your companions do anything harmful to it."
+                        "No 9º nível, seu charme torna-se extraordinariamente sedutor. Como uma ação, você pode realizar um teste de Carisma (Persuasão), resistido por um teste de Sabedoria (Intuição) da criatura. Esta deve ser capaz de ouvi-lo, e vocês devem compartilhar um idioma.",
+                        "Caso você seja bem-sucedido e a criatura seja hostil a você, ela tem desvantagem em jogadas de ataque contra qualquer alvo que não seja você, e não pode realizar ataques de oportunidade contra qualquer alvo que não seja você. Esse efeito dura por 1 minuto, até que um dos seus companheiros ataque o alvo ou o afete com uma magia, ou até que você e o alvo se distanciem um do outro por mais do que 18 metros.",
+                        "Se você for bem-sucedido no teste e a criatura não for hostil a você, ela fica {@condition enfeitiçada} por você durante 1 minuto. Enquanto enfeitiçada, ela o considerará um conhecido amigável. Esse efeito se encerra imediatamente se você ou seus companheiros fizeram qualquer tipo de mal à criatura."
                     ]
                 },
                 {
-                    "name": "Elegant Maneuver",
+                    "name": "Movimentos Elegantes",
                     "source": "XGE",
-                    "page": 48,
-                    "className": "Rogue",
+                    "page": 49,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Swashbuckler",
+                    "subclassShortName": "Espadachim",
                     "subclassSource": "XGE",
                     "level": 13,
                     "header": 2,
                     "entries": [
-                        "Starting at 13th level, you can use a bonus action on your turn to gain advantage on the next Dexterity ({@skill Acrobatics}) or Strength ({@skill Athletics}) check you make during the same turn."
+                        "A partir do 13º nível, você pode usar uma ação bônus no seu turno para obter vantagem no próximo teste de Destreza (Acrobacia) ou Força (Atletismo) realizado por você no mesmo turno."
                     ]
                 },
                 {
-                    "name": "Master Duelist",
+                    "name": "Mestre Duelista",
                     "source": "XGE",
-                    "page": 48,
-                    "className": "Rogue",
+                    "page": 49,
+                    "className": "Ladino",
                     "classSource": "PHB",
-                    "subclassShortName": "Swashbuckler",
+                    "subclassShortName": "Espadachim",
                     "subclassSource": "XGE",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "Beginning at 17th level, your mastery of the blade lets you turn failure into success in combat. If you miss with an attack roll, you can roll it again with advantage. Once you do so, you can't use this feature again until you finish a short or long rest."
+                        "A partir do 17º nível, seu domínio da lâmina permite que você transforme falha em sucesso durante um combate. Caso você falhe numa jogada de ataque, você pode refazer a jogada com vantagem. Assim que o fizer, você não poderá usar esta característica novamente até terminar um descanso curto ou longo."
                     ]
                 }
 			]

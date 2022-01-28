@@ -1,8 +1,8 @@
 {
 	"class": [
 		{
-			"name": "Fighter",
-            "subclassTitle": "Martial Archetype",
+			"name": "Guerreiro",
+            "subclassTitle": "Arquétipos Marciais",
 			"multiclassing": {
 				"requirements": {
 					"or": [
@@ -23,72 +23,144 @@
 						"martial"
 					]
 				}
-			}
+			},
+            "entries": [
+                "Diferentes guerreiros escolhem diferentes abordagens para aperfeiçoar suas habilidades de combate. O arquétipo marcial que você escolhe reflete a sua abordagem."
+            ]
 		}
 	],
-	"subclass": [
+	"subclasses": [
 		{
-			"name": "Battle Master",
-			"shortName": "Battle Master",
+			"name": "Campeão",
+			"shortName": "Campeão",
+            "id": "campeao",
 			"source": "PHB",
-			"className": "Fighter",
+			"className": "Guerreiro",
 			"classSource": "PHB",
-			"page": 73,
+			"page": 90,
+			"srd": true,
+			"basicRules": true,
+            "level": 3,
+            "entries": [
+                "O arquétipo Campeão se concentra no desenvolvimento da força física, cultivando uma perfeição mortífera. Aqueles que se inspiram neste arquétipo combinam o treinamento rigoroso com a excelência física, desferindo golpes devastadores."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Battle Master",
-                    "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "entries": [
-                        "Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, combat is an academic field, sometimes including subjects beyond battle such as weaponsmithing and calligraphy. Not every fighter absorbs the lessons of history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters of great skill and knowledge.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Student of War|Fighter||Battle Master||3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Combat Superiority|Fighter||Battle Master||3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Maneuvers|Fighter||Battle Master||3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Maneuver Options|Fighter||Battle Master||3|UAClassFeatureVariants"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Maneuver Options|Fighter||Battle Master||3|TCE"
-                        }
-                    ]
-                },
                 {
-                    "name": "Combat Superiority",
+                    "name": "Crítico Aprimorado",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 90,
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Campeão",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you choose this archetype at 3rd level, you learn maneuvers that are fueled by special dice called superiority dice.",
+                        "A partir do momento que você escolhe este arquétipo, no 3º nível, seus ataques armados passam a causar um acerto crítico nas jogadas com resultados 19 ou 20."
+                    ]
+                },
+                {
+                    "name": "Atleta Extraordinário",
+                    "source": "PHB",
+                    "page": 90,
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Guerreiro",
+                    "classSource": "PHB",
+                    "subclassShortName": "Campeão",
+                    "subclassSource": "PHB",
+                    "level": 7,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 7º nível, você pode adicionar metade do seu bônus de proficiência (arredondado para cima) em qualquer teste de Força, Destreza ou Constituição que já não faça uso desse bônus.",
+                        "Além disso, ao correr e saltar, a distância coberta pelo seu salto aumenta em 30 centímetros para cada ponto do seu modificador de Força."
+                    ]
+                },
+                {
+                    "name": "Estilo de Luta Adicional",
+                    "source": "PHB",
+                    "page": 90,
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Guerreiro",
+                    "classSource": "PHB",
+                    "subclassShortName": "Campeão",
+                    "subclassSource": "PHB",
+                    "level": 10,
+                    "header": 2,
+                    "entries": [
+                        "No 10º nível, você pode escolher uma segunda opção da característica de classe Estilo de Luta."
+                    ]
+                },
+                {
+                    "name": "Crítico Superior",
+                    "source": "PHB",
+                    "page": 91,
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Guerreiro",
+                    "classSource": "PHB",
+                    "subclassShortName": "Campeão",
+                    "subclassSource": "PHB",
+                    "level": 15,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 15º nível, seus ataques armados causam acerto crítico em uma jogada com resultados 18, 19 ou 20."
+                    ]
+                },
+                {
+                    "name": "Sobrevivente",
+                    "source": "PHB",
+                    "page": 91,
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Guerreiro",
+                    "classSource": "PHB",
+                    "subclassShortName": "Campeão",
+                    "subclassSource": "PHB",
+                    "level": 18,
+                    "header": 2,
+                    "entries": [
+                        "No 18º nível, você alcança o ápice da resistência em combate. No começo de cada um dos seus turnos, caso tenha menos do que metade dos seus pontos de vida sobrando, você recupera uma quantidade de pontos de vida igual a 5 + seu modificador de Constituição. Você não ganha esse benefício caso esteja com 0 pontos de vida."
+                    ]
+                }
+			]
+		},
+        {
+			"name": "Mestre da Batalha",
+			"shortName": "Mestre da Batalha",
+            "id": "mestredabatalha",
+			"source": "PHB",
+			"className": "Guerreiro",
+			"classSource": "PHB",
+			"page": 91,
+            "level": 3,
+            "entries": [
+                "Aqueles que incorporam o arquétipo Mestre da Batalha empregam técnicas marciais transmitidas através das gerações. Para um Mestre da Batalha, o combate é um campo de estudos, às vezes incluindo temas que vão além da batalha, como armamentos e caligrafia. Nem todos os lutadores absorvem as lições de história, teoria e arte que são refletidas no arquétipo Mestre da Batalha, mas aqueles que o fazem são guerreiros completos, reunindo grande habilidade e conhecimento."
+            ],
+			"subclassFeatures": [
+                {
+                    "name": "Superioridade em Combate",
+                    "source": "PHB",
+                    "page": 91,
+                    "className": "Guerreiro",
+                    "classSource": "PHB",
+                    "subclassShortName": "Mestre da Batalha",
+                    "subclassSource": "PHB",
+                    "level": 3,
+                    "header": 1,
+                    "entries": [
+                        "Ao escolher este arquétipo no 3º nível, você aprende manobras que são alimentadas por dados especiais, chamados dados de superioridade.",
                         {
                             "type": "entries",
                             "entries": [
                                 {
                                     "type": "entries",
-                                    "name": "Maneuvers",
+                                    "name": "Manobras",
                                     "entries": [
-                                        "You learn three maneuvers of your choice, which are listed under \"Maneuvers\" below. Many maneuvers enhance an attack in some way. You can use only one maneuver per attack.",
-                                        "You learn two additional maneuvers of your choice at 7th, 10th, and 15th level. Each time you learn new maneuvers, you can also replace one maneuver you know with a different one."
+                                        "Você aprende três manobras à sua escolha, detalhadas abaixo. Muitas manobras melhoram um ataque de alguma forma. Só se pode usar uma manobra por ataque. Você pode escolher duas manobras extras no 7º, 10º e 15º níveis. Toda vez que aprender novas manobras, também poderá substituir uma manobra antiga por uma diferente."
                                     ]
                                 }
                             ]
@@ -98,10 +170,9 @@
                             "entries": [
                                 {
                                     "type": "entries",
-                                    "name": "Superiority Dice",
+                                    "name": "Dados de Superioridade",
                                     "entries": [
-                                        "You have four superiority dice, which are {@dice d8}s. A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest.",
-                                        "You gain another superiority die at 7th level and one more at 15th level."
+                                        "Você possui 4d8 de superioridade. Um dado de superioridade é gasto ao ser utilizado. Você recupera todos os dados gastos após completar um descanso curto ou longo. Você ganha mais um dado de superioridade no 7º nível e outro no 15º nível."
                                     ]
                                 }
                             ]
@@ -111,17 +182,10 @@
                             "entries": [
                                 {
                                     "type": "entries",
-                                    "name": "Saving Throws",
+                                    "name": "Salvaguardas",
                                     "entries": [
-                                        "Some of your maneuvers require your target to make a saving throw to resist the maneuver's effects. The saving throw DC is calculated as follows:",
-                                        {
-                                            "type": "abilityDc",
-                                            "name": "Maneuver",
-                                            "attributes": [
-                                                "str",
-                                                "dex"
-                                            ]
-                                        }
+                                        "Algumas das suas manobras exigem que seus alvos realizem testes de salvaguarda para resistirem aos seus efeitos. A CD dos testes de salvaguarda é calculada da seguinte forma:",
+                                        "<b>CD contra suas manobras =</b> 8 + seu bônus de proficiência+ seu modificador de Força ou Destreza (à sua escolha)"
                                     ]
                                 }
                             ]
@@ -129,1361 +193,879 @@
                     ]
                 },
                 {
-                    "name": "Maneuver Options",
-                    "source": "TCE",
-                    "page": 41,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "isClassFeatureVariant": true,
-                    "header": 1,
-                    "entries": [
-                        "{@i 3rd-level fighter {@variantrule optional class features|tce|optional feature}}",
-                        "If you have access to maneuvers, the following maneuvers are added to the list of options available to you. Maneuvers are available to Battle Masters but also to characters who have a special feature like the {@optfeature Superior Technique|TCE} fighting style or the {@feat Martial Adept} feat.",
-                        {
-                            "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "options",
-                                    "entries": [
-                                        {
-                                            "type": "refOptionalfeature",
-                                            "optionalfeature": "Ambush|TCE"
-                                        },
-                                        {
-                                            "type": "refOptionalfeature",
-                                            "optionalfeature": "Bait and Switch|TCE"
-                                        },
-                                        {
-                                            "type": "refOptionalfeature",
-                                            "optionalfeature": "Brace|TCE"
-                                        },
-                                        {
-                                            "type": "refOptionalfeature",
-                                            "optionalfeature": "Commanding Presence|TCE"
-                                        },
-                                        {
-                                            "type": "refOptionalfeature",
-                                            "optionalfeature": "Grappling Strike|TCE"
-                                        },
-                                        {
-                                            "type": "refOptionalfeature",
-                                            "optionalfeature": "Quick Toss|TCE"
-                                        },
-                                        {
-                                            "type": "refOptionalfeature",
-                                            "optionalfeature": "Tactical Assessment|TCE"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Maneuvers",
+                    "name": "Manobras",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 92,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Mestre da Batalha",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "The maneuvers are presented in alphabetical order.",
+                        "As manobras serão apresentadas em ordem alfabética.",
                         {
                             "type": "options",
                             "count": 3,
                             "entries": [
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Commander's Strike"
+                                    "name": "Aparar",
+                                    "entries": [
+                                        "Ao sofrer dano em um combate corpo a corpo, você pode usar sua reação e jogar um dado de superioridade, descontando do dano o número obtido no dado + seu modificador de Destreza."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Disarming Attack"
+                                    "name": "Ataque Ameaçador",
+                                    "entries": [
+                                        "Ao atingir uma criatura com um ataque armado, você pode usar um dado de superioridade para tentar amedrontá-la. Você deve somar o dado de superioridade à jogada de dano. O alvo, por sua vez, deve realizar um teste de salvaguarda usando Sabedoria. Em caso de sucesso, ele fica amedrontado por você até o final do seu próximo turno."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Distracting Strike"
+                                    "name": "Ataque de Varredura",
+                                    "entries": [
+                                        "Ao atingir uma criatura com uma arma de combate corpo a corpo, você pode usar um dado de superioridade para tentar causar dano a outra criatura com o mesmo ataque. Escolha outra criatura que esteja a até 1,5 metro de distância do alvo original e dentro do seu alcance. Se o resultado da jogada de ataque original for suficiente para atingir a segunda criatura, esta sofre uma quantidade de dano igual ao número jogado no seu dado de superioridade. Esse dano pertence ao mesmo tipo causado pelo ataque original."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Evasive Footwork"
+                                    "name": "Ataque Estendido",
+                                    "entries": [
+                                        "Você pode usar um dado de superioridade para aumentar em 1,5 metro o alcance de um ataque realizado com uma arma de combate corpo a corpo. Se o ataque for bem-sucedido, você deve somar o dado de superioridade à jogada de dano."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Feinting Attack"
+                                    "name": "Ataque para Distrair",
+                                    "entries": [
+                                        "Ao atingir uma criatura com um ataque armado, você pode usar um dado de superioridade para distraí-la, oferecendo aos seus aliados uma abertura nas defesas dela. Você deve adicionar o dado de superioridade à jogada de dano. A próxima jogada de ataque realizada por um aliado seu antes do início do próximo turno terá vantagem."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Goading Attack"
+                                    "name": "Ataque Preciso",
+                                    "entries": [
+                                        "Você pode somar um dado de superioridade a uma jogada de ataque feita contra uma criatura. Você pode usar esta característica antes ou depois da jogada, mas deve fazê-lo antes que qualquer efeito seja aplicado."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Lunging Attack"
+                                    "name": "Ataque Provocante",
+                                    "entries": [
+                                        "Ao atingir uma criatura com um ataque armado, você pode usar um dado de superioridade para tentar incitá-la a atacá-lo. Você deve somar o dado de superioridade à jogada de dano. O alvo, por sua vez, deve realizar um teste de salvaguarda usando Sabedoria. Em caso de falha, até o final do próximo turno, ele passa à ter desvantagem em todas as jogadas de ataque realizadas contra qualquer alvo, exceto você."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Maneuvering Attack"
+                                    "name": "Contra-ataque",
+                                    "entries": [
+                                        "Quando uma criatura em combate corpo a corpo erra um ataque desferido contra você, ela lhe dá a oportunidade de usar uma reação e um dado de superioridade para atacá-la com uma arma de combate corpo a corpo. Se o ataque for bem-sucedido, você deve somar o dado de superioridade à sua jogada de dano."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Menacing Attack"
+                                    "name": "Derrubar",
+                                    "entries": [
+                                        "Ao atingir uma criatura com um ataque armado, você pode usar um dado de superioridade para tentar derrubá-la. Adicione· o dado de superioridade à jogada de dano. Se o alvo for Grande ou menor, por sua vez, deve realizar uma salvaguarda de Força. Em caso de falha, ele ficará caído."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Parry"
+                                    "name": "Desarme",
+                                    "entries": [
+                                        "Ao atingir uma criatura com um ataque armado, você pode usar um dado de superioridade para tentar desarmá-la, forçando-a a largar um item que esteja segurando. Você deve adicionar o dado de superioridade à jogada de dano. O alvo, por sua vez, deve realizar uma salvaguarda de Força. Em caso de falha, ele derruba o objeto que você escolheu. O objeto cai aos pés dele."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Precision Attack"
+                                    "name": "Encontrão",
+                                    "entries": [
+                                        "Ao atingir uma criatura com um ataque armado, você pode usar um dado de superioridade para tentar projetá-la para trás. Você deve adicionar o dado de superioridade à jogada de dano. Se o alvo for Grande ou menor, por sua vez, deve realizar uma salvaguarda de Força. Em caso de falha, você o projeta até 4,5 metros para trás."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Pushing Attack"
+                                    "name": "Finta",
+                                    "entries": [
+                                        "Você pode gastar um dado de superioridade para usar sua ação bônus no seu turno e realizar uma finta, escolhendo como alvo uma criatura que esteja a até 1,5 metro de distância. Você passa a ter vantagem no seu próximo ataque contra a criatura neste turno. Se o ataque for bem-sucedido, some o dado de superioridade à sua jogada de dano."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Rally"
+                                    "name": "Golpe do Comandante",
+                                    "entries": [
+                                        "Ao realizar a ação Atacar em seu turno, você pode renunciar a um dos seus ataques, e utilizar sua ação bônus para direcionar o ataque de um dos seus companheiros. Para fazê-lo, escolha uma criatura amigável que possa vê-lo ou ouvi-lo, e gaste um dado de superioridade. A criatura alvo pode usar imediatamente uma reação para realizar um ataque armado, adicionando o seu dado de superioridade à jogada de dano realizada por ela."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Riposte"
+                                    "name": "Movimentação Evasiva",
+                                    "entries": [
+                                        "Ao mover-se, você pode jogar um dado de superioridade e somar o resultado à sua CA até parar o movimento."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Sweeping Attack"
+                                    "name": "Manobrar",
+                                    "entries": [
+                                        "Ao atingir uma criatura com um ataque armado, você pode usar um dado de superioridade para reposicionar um dos seus companheiros em um local mais vantajoso. Você soma o dado de superioridade à jogada de dano e, em seguida, deve escolher uma criatura amigável que possa vê-lo ou ouvi-lo. Essa criatura poderá usar a própria reação para se deslocar à metade do deslocamento dela sem provocar ataques de oportunidade do alvo do seu ataque."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Trip Attack"
+                                    "name": "Recuperar Energia",
+                                    "entries": [
+                                        "No seu turno, você pode usar uma ação bônus e gastar um dado de superioridade para reforçar a determinação de um dos seus companheiros. Para tanto, escolha uma criatura amigável que possa vê-lo ou ouvi-lo. Ela ganhará uma quantidade de pontos de vida temporários igual ao resultado da jogada do dado de superioridade + seu modificador de Carisma."
+                                    ]
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Student of War",
+                    "name": "Estudioso da Guerra",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 91,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Mestre da Batalha",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "At 3rd level, you gain proficiency with one type of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan's tools} of your choice."
+                        "No 3º nível, você ganha proficiência com um tipo de ferramenta de artesão à sua escolha."
                     ]
                 },
                 {
-                    "name": "Additional Maneuvers",
+                    "name": "Manobras Adicionais",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 91,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Mestre da Batalha",
                     "subclassSource": "PHB",
                     "level": 7,
                     "header": 2,
                     "entries": [
-                        "At 7th level, you learn two additional maneuvers of your choice."
+                        "No 7º nível, você aprende duas manobras adicionais."
                     ]
                 },
                 {
-                    "name": "Additional Superiority Die",
+                    "name": "Dado de Superioridade Adicional",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 91,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Mestre da Batalha",
                     "subclassSource": "PHB",
                     "level": 7,
                     "header": 2,
                     "entries": [
-                        "You gain another superiority die at 7th level."
+                        "Você ganha mais um dado de superioridade no 7º nível."
                     ]
                 },
                 {
-                    "name": "Know Your Enemy",
+                    "name": "Conheça seu Inimigo",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 91,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Mestre da Batalha",
                     "subclassSource": "PHB",
                     "level": 7,
                     "header": 2,
                     "entries": [
-                        "If you spend at least 1 minute observing or interacting with another creature outside combat, you can learn certain information about its capabilities compared to your own. The DM tells you if the creature is your equal, superior, or inferior in regard to two of the following characteristics of your choice:",
+                        "A partir do 7º nível, se você passar ao menos 1 minuto observando ou interagindo com uma criatura em qualquer situação que não envolva combate, torna-se capaz de comparar as capacidades dela com as suas. O DM dirá se a criatura é igual, superior ou inferior a você em duas das seguintes características, à sua escolha:",
                         {
                             "type": "list",
                             "items": [
-                                "Strength score",
-                                "Dexterity score",
-                                "Constitution score",
-                                "Armor Class",
-                                "Current hit points",
-                                "Total class levels (if any)",
-                                "Fighter class levels (if any)"
+                                "Valor de Força",
+                                "Valor de Destreza",
+                                "Valor de Constituição",
+                                "Classe de Armadura",
+                                "Pontos de Vida atuais",
+                                "Total de níveis em todas as classes (se for multiclasse)",
+                                "Nível de guerreiro (se possuir)"
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Additional Maneuvers",
+                    "name": "Manobras Adicionais",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 91,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Mestre da Batalha",
                     "subclassSource": "PHB",
                     "level": 10,
                     "header": 2,
                     "entries": [
-                        "At 10th level, you learn two additional maneuvers of your choice."
+                        "No 10º nível, você aprende duas manobras adicionais."
                     ]
                 },
                 {
-                    "name": "Improved Combat Superiority (d10)",
+                    "name": "Superioridade em Combate Aprimorada (d10)",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 92,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Mestre da Batalha",
                     "subclassSource": "PHB",
                     "level": 10,
                     "header": 2,
                     "entries": [
-                        "At 10th level, your superiority dice turn into {@dice d10}s."
+                        "No 10º nível, seus dados de superioridade transformam-se em d10."
                     ]
                 },
                 {
-                    "name": "Additional Maneuvers",
+                    "name": "Manobras Adicionais",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 91,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Mestre da Batalha",
                     "subclassSource": "PHB",
                     "level": 15,
                     "header": 2,
                     "entries": [
-                        "At 15th level, you learn two additional maneuvers of your choice."
+                        "No 15º nível, você aprende duas manobras adicionais."
                     ]
                 },
                 {
-                    "name": "Additional Superiority Die",
+                    "name": "Dado de Superioridade Adicional",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 91,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Mestre da Batalha",
                     "subclassSource": "PHB",
                     "level": 15,
                     "header": 2,
                     "entries": [
-                        "You gain another superiority die at 15th level."
+                        "Você ganha mais um dado de superioridade no 15º nível."
                     ]
                 },
                 {
-                    "name": "Relentless",
+                    "name": "Implacável",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 92,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Mestre da Batalha",
                     "subclassSource": "PHB",
                     "level": 15,
                     "header": 2,
                     "entries": [
-                        "Starting at 15th level, when you roll initiative and have no superiority dice remaining, you regain 1 superiority die."
+                        "A partir do 15º nível, se você não tiver dados de superioridade disponíveis, ao jogar a iniciativa, recupera um dado de superioridade."
                     ]
                 },
                 {
-                    "name": "Improved Combat Superiority (d12)",
+                    "name": "Superioridade em Combate Aprimorada (d12)",
                     "source": "PHB",
-                    "page": 73,
-                    "className": "Fighter",
+                    "page": 92,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Battle Master",
+                    "subclassShortName": "Mestre da Batalha",
                     "subclassSource": "PHB",
                     "level": 18,
                     "header": 2,
                     "entries": [
-                        "At 18th level, your superiority dice turn into {@dice d12}s."
+                        "No 18º nível, seus dados de superioridade transformam-se em d12."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Champion",
-			"shortName": "Champion",
+			"name": "Cavaleiro Místico",
+			"shortName": "Cavaleiro Místico",
+            "id": "cavaleiromistico",
 			"source": "PHB",
-			"className": "Fighter",
+			"className": "Guerreiro",
 			"classSource": "PHB",
-			"page": 72,
-			"srd": true,
-			"basicRules": true,
+			"page": 92,
+            "level": 3,
+            "entries": [
+                "O arquetípico Cavaleiro Místico combina o domínio marcial, comum a todos os guerreiros, com um minucioso estudo de magia. Os membros deste arquétipo usam técnicas similares àquelas praticadas pelos magos. Eles concentram seus estudos em duas das oito escolas de magia: abjuração e evocação. As magias de abjuração lhes conferem proteção extra em batalha, enquanto as de evocação causam dano diretamente a seus inimigos, aumentando o alcance do cavaleiro em combate. Os cavaleiros místicos aprendem uma quantidade de magias relativamente pequena, guardando-as na memória."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Champion",
-                    "source": "PHB",
-                    "page": 72,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Champion",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "entries": [
-                        "The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Improved Critical|Fighter||Champion||3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Improved Critical",
+                    "name": "Conjuração",
                     "source": "PHB",
-                    "page": 72,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Fighter",
+                    "page": 93,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Champion",
+                    "subclassShortName": "Cavaleiro Místico",
                     "subclassSource": "PHB",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20."
+                        "Ao alcançar o 3º nível, você amplia o seu poder marcial com a habilidade de conjurar magias. Veja o capítulo 10, \"Conjuração\", para consultar as regras gerais de conjuração, e o capítulo 11, \"Magias\", para verificar a lista de magias de mago.",
+                        {
+                            "type": "entries",
+                            "name": "Truques",
+                            "entries": [
+                                "Você pode escolher dois truques da lista de magias de mago. Você aprende truques adicionais no 10º nível."
+                            ]
+                        },
+                        {
+                            "type": "entries",
+                            "name": "Espaços de Magia",
+                            "entries": [
+                                "A tabela de Conjuração: Cavaleiro Místico mostra quantos espaços de magia você possui para conjurar suas magias de mago do 1º círculo em diante. Para conjurar uma magia, você deve usar um espaço de magia igual ou superior ao círculo da magia. Você recupera todos os espaços de magia usados ao final de um descanso longo.",
+                                "Por exemplo, se você conhece a magia de 1º círculo {@spell égide}, e possui um espaço de magia de 1º círculo e um de 2º círculo, você pode conjurar {@spell égide} usando qualquer um desses espaços."
+                            ]
+                        },
+                        {
+                            "type": "entries",
+                            "name": "Magias Conhecidas de Acordo com o Nível",
+                            "entries": [
+                                "Você conhece três magias de mago de 1º círculo à sua escolha, duas das quais deve escolher dentre as magias de abjuração e evocação da lista de magias de mago.",
+                                "A coluna Magias, da tabela de Conjuração: Cavaleiro Místico, mostra quando você aprende magias de mago do 1º círculo em diante. Toda magia aprendida deve pertencer às escolas de abjuração ou evocação, e deve pertencer a um círculo para o qual você tenha espaços de magia. Por exemplo, ao alcançar o 7º nível nesta classe, você pode aprender uma nova magia de 1º ou 2º círculo.",
+                                "As magias que você aprende nos 8º, 14º e 20º níveis podem pertencer a quaisquer escolas de magia.",
+                                "Sempre que você ganhar um nível nesta classe, poderá substituir uma das suas magias de mago por outra magia de mago à sua escolha. A nova magia deve pertencer a um nível para o qual você tenha espaços de magia, e às escolas de abjuração ou evocação, a menos que você esteja substituindo magias adquiridas nos 3º, 8º, 14º ou 20º níveis: nesse caso, a nova magia pode pertencer a qualquer escola."
+                            ]
+                        },
+                        {
+                            "type": "entries",
+                            "name": "Atributo de Conjuração",
+                            "entries": [
+                                "Inteligência é o atributo usado para a conjuração das suas magias de mago, pois sua magia vem do estudo e da memorização. Você deve usar Inteligência sempre que uma magia fizer referência ao seu atributo de conjuração. Além disso, você usa o seu modificador de Inteligência tanto para definir a CD de uma salvaguarda feita para evitar uma magia de mago conjurada por você, quanto para realizar uma jogada de ataque com uma magia de mago.",
+                                "<b>CD para evitar suas magias =</b> 8 + seu bônus de proficiência+ seu modificador de Inteligência",
+                                "<b>Modificador de ataque mágico =</b> seu bônus de proficiência+ seu modificador de Inteligência"
+                            ]
+                        },
+                        "<h5><b>Conjuração: Cavaleiro Místico</b></h5>",
+                        "<div class=\"table-responsive\"><table class=\"table table-bordered table-striped compact-table\" style=\"font-size: 0.9em; margin-bottom: 35px\"><thead><tr><th rowspan=\"2\" class=\"text-center align-middle\" scope=\"col\">Nível de Guerreiro </th><th rowspan=\"2\" class=\"text-center align-middle\" scope=\"col\">Truques</th><th rowspan=\"2\" class=\"text-center align-middle\" scope=\"col\">Magias</th><th colspan=\"4\" class=\"text-center\">Espaços de Magia por Nível</th></tr><tr><th rowspan=\"2\" class=\"text-center\" scope=\"col\">1º</th><th rowspan=\"2\" class=\"text-center\" scope=\"col\">2º</th><th rowspan=\"2\" class=\"text-center\" scope=\"col\">3º</th><th rowspan=\"2\" class=\"text-center\" scope=\"col\">4º</th></tr></thead><tbody><tr><th class=\"text-center\" scope=\"row\">3º</th><td class=\"text-center\">2</td><td class=\"text-center\">3</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">4º</th><td class=\"text-center\">2</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">5º</th><td class=\"text-center\">2</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">6º</th><td class=\"text-center\">2</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">7º</th><td class=\"text-center\">2</td><td class=\"text-center\">5</td><td class=\"text-center\">4</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">8º</th><td class=\"text-center\">2</td><td class=\"text-center\">6</td><td class=\"text-center\">4</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">9º</th><td class=\"text-center\">2</td><td class=\"text-center\">6</td><td class=\"text-center\">4</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">10º</th><td class=\"text-center\">3</td><td class=\"text-center\">7</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">11º</th><td class=\"text-center\">3</td><td class=\"text-center\">8</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">12º</th><td class=\"text-center\">3</td><td class=\"text-center\">8</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">13º</th><td class=\"text-center\">3</td><td class=\"text-center\">9</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">14º</th><td class=\"text-center\">3</td><td class=\"text-center\">10</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">15º</th><td class=\"text-center\">3</td><td class=\"text-center\">10</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">2</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">16º</th><td class=\"text-center\">3</td><td class=\"text-center\">11</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">17º</th><td class=\"text-center\">3</td><td class=\"text-center\">11</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">18º</th><td class=\"text-center\">3</td><td class=\"text-center\">11</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">3</td><td class=\"text-center\">—</td></tr><tr><th class=\"text-center\" scope=\"row\">19º</th><td class=\"text-center\">3</td><td class=\"text-center\">12</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">3</td><td class=\"text-center\">1</td></tr><tr><th class=\"text-center\" scope=\"row\">20º</th><td class=\"text-center\">3</td><td class=\"text-center\">13</td><td class=\"text-center\">4</td><td class=\"text-center\">3</td><td class=\"text-center\">3</td><td class=\"text-center\">1</td></tr></tbody></table></div>"
                     ]
                 },
                 {
-                    "name": "Remarkable Athlete",
+                    "name": "Vínculo com Arma",
                     "source": "PHB",
-                    "page": 72,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Fighter",
+                    "page": 93,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Champion",
+                    "subclassShortName": "Cavaleiro Místico",
+                    "subclassSource": "PHB",
+                    "level": 3,
+                    "header": 1,
+                    "entries": [
+                        "No 3º nível, você aprende um ritual que cria uma ligação mágica entre você e uma arma. O ritual deve ser executado ao longo de 1 hora, o que pode ser feito durante um descanso curto. A arma deve estar ao seu alcance durante todo o ritual, ao fim do qual você forja a ligação ao tocá-la.",
+                        "Uma vez estabelecido o vínculo, você não pode ser desarmado enquanto estiver empunhando essa arma, a menos que esteja {@condition incapacitado}. Se a arma estiver no mesmo plano de existência que você, é possível invocá-la com uma ação bônus, fazendo com que ela se teleporte instantaneamente para a sua mão.",
+                        "É possível ter até duas armas vinculadas, mas só se pode invocar uma delas por ação bônus. Para estabelecer o vínculo com uma terceira arma, você deve desfazer um dos vínculos anteriores."
+                    ]
+                },
+                {
+                    "name": "Magia de Guerra",
+                    "source": "PHB",
+                    "page": 93,
+                    "className": "Guerreiro",
+                    "classSource": "PHB",
+                    "subclassShortName": "Cavaleiro Místico",
                     "subclassSource": "PHB",
                     "level": 7,
                     "header": 2,
                     "entries": [
-                        "Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn't already use your proficiency bonus.",
-                        "In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier."
+                        "A partir do 7º nível, ao usar uma ação para conjurar um truque, você pode realizar um ataque armado como sua ação bônus."
                     ]
                 },
                 {
-                    "name": "Additional Fighting Style",
+                    "name": "Golpe Místico",
                     "source": "PHB",
-                    "page": 72,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Fighter",
+                    "page": 93,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Champion",
+                    "subclassShortName": "Cavaleiro Místico",
                     "subclassSource": "PHB",
                     "level": 10,
                     "header": 2,
                     "entries": [
-                        "At 10th level, you can choose a second option from the Fighting Style class feature."
+                        "No 10º nível, você aprende a fazer com que os golpes da sua arma enfraqueçam a resistência do alvo contra suas magias. Ao atingir uma criatura com um ataque armado, ela terá desvantagem na próxima salvaguarda realizada contra uma magia conjurada por você antes do final do seu próximo turno."
                     ]
                 },
                 {
-                    "name": "Superior Critical",
+                    "name": "Investida Mística",
                     "source": "PHB",
-                    "page": 72,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Fighter",
+                    "page": 93,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Champion",
+                    "subclassShortName": "Cavaleiro Místico",
                     "subclassSource": "PHB",
                     "level": 15,
                     "header": 2,
                     "entries": [
-                        "Starting at 15th level, your weapon attacks score a critical hit on a roll of 18-20."
+                        "No 15º nível, ao usar Surto de Ação, você pode se teleportar para um espaço desocupado que você possa ver, a até 9 metros de distância. Isso pode ser feito antes ou depois da sua ação extra."
                     ]
                 },
                 {
-                    "name": "Survivor",
+                    "name": "Magia de Guerra Aprimorada",
                     "source": "PHB",
-                    "page": 72,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Fighter",
+                    "page": 93,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Champion",
+                    "subclassShortName": "Cavaleiro Místico",
                     "subclassSource": "PHB",
                     "level": 18,
                     "header": 2,
                     "entries": [
-                        "At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don't gain this benefit if you have 0 hit points."
+                        "A partir do 18º nível, ao usar sua ação para conjurar uma magia, você pode realizar um ataque armado como sua ação bônus."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Eldritch Knight",
-			"shortName": "Eldritch Knight",
-			"source": "PHB",
-			"className": "Fighter",
-			"classSource": "PHB",
-			"page": 74,
-			"spellcastingAbility": "int",
-			"casterProgression": "1/3",
-			"cantripProgression": [
-				0,
-				0,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3
-			],
-			"spellsKnownProgression": [
-				0,
-				0,
-				3,
-				4,
-				4,
-				4,
-				5,
-				6,
-				6,
-				7,
-				8,
-				8,
-				9,
-				10,
-				10,
-				11,
-				11,
-				11,
-				12,
-				13
-			],
-			"subclassTableGroups": [
-				{
-					"subclasses": [
-						{
-							"name": "Eldritch Knight",
-							"source": "PHB"
-						}
-					],
-					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|subclass=Fighter: Eldritch Knight}",
-						"{@filter Spells Known|spells|subclass=Fighter: Eldritch Knight}"
-					],
-					"rows": [
-						[
-							0,
-							0
-						],
-						[
-							0,
-							0
-						],
-						[
-							2,
-							3
-						],
-						[
-							2,
-							4
-						],
-						[
-							2,
-							4
-						],
-						[
-							2,
-							4
-						],
-						[
-							2,
-							5
-						],
-						[
-							2,
-							6
-						],
-						[
-							2,
-							6
-						],
-						[
-							3,
-							7
-						],
-						[
-							3,
-							8
-						],
-						[
-							3,
-							8
-						],
-						[
-							3,
-							9
-						],
-						[
-							3,
-							10
-						],
-						[
-							3,
-							10
-						],
-						[
-							3,
-							11
-						],
-						[
-							3,
-							11
-						],
-						[
-							3,
-							11
-						],
-						[
-							3,
-							12
-						],
-						[
-							3,
-							13
-						]
-					]
-				},
-				{
-					"title": "Spell Slots per Spell Level",
-					"subclasses": [
-						{
-							"name": "Eldritch Knight",
-							"source": "PHB"
-						}
-					],
-					"colLabels": [
-						"{@filter 1st|spells|level=1|subclass=Fighter: Eldritch Knight}",
-						"{@filter 2nd|spells|level=2|subclass=Fighter: Eldritch Knight}",
-						"{@filter 3rd|spells|level=3|subclass=Fighter: Eldritch Knight}",
-						"{@filter 4th|spells|level=4|subclass=Fighter: Eldritch Knight}"
-					],
-					"rowsSpellProgression": [
-						[
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							1
-						]
-					]
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "Eldritch Knight",
-                    "source": "PHB",
-                    "page": 74,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Eldritch Knight",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "entries": [
-                        "The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic\u2014abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter's reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Spellcasting|Fighter||Eldritch Knight||3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Weapon Bond|Fighter||Eldritch Knight||3"
-                        }
-                    ]
-                },
-                {
-                    "name": "Spellcasting",
-                    "source": "PHB",
-                    "page": 74,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Eldritch Knight",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "When you reach 3rd level, you augment your martial prowess with the ability to cast spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter wizard spell list|spells|class=wizard}.",
-                        {
-                            "type": "entries",
-                            "name": "Cantrips",
-                            "entries": [
-                                "You learn two cantrips of your choice from the {@filter wizard spell list|spells|class=wizard}. You learn an additional wizard cantrip of your choice at 10th level."
-                            ]
-                        },
-                        {
-                            "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Spell Slots",
-                                    "entries": [
-                                        "The Eldritch Knight Spellcasting table shows how many spell slots you have to cast your {@filter wizard spells|spells|class=wizard} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-                                        "For example, if you know the 1st-level spell {@spell shield} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell shield} using either slot."
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Spells Known of 1st-Level and Higher",
-                                    "entries": [
-                                        "You know three 1st-level wizard spells of your choice, two of which you must choose from the abjuration and evocation spells on the wizard spell list.",
-                                        "The Spells Known column of the Eldritch Knight Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be an abjuration or evocation spell of your choice, and must be of a level for which you have spell slots. For instance, when you reach 7th level in this class, you can learn one new spell of 1st or 2nd level.",
-                                        "The spells you learn at 8th, 14th, and 20th level can come from any school of magic.",
-                                        "Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be an abjuration or evocation spell, unless you're replacing the spell you gained at 3rd, 8th, 14th, or 20th level from any school of magic."
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Spellcasting Ability",
-                                    "entries": [
-                                        "Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
-                                        {
-                                            "type": "abilityDc",
-                                            "name": "Spell",
-                                            "attributes": [
-                                                "int"
-                                            ]
-                                        },
-                                        {
-                                            "type": "abilityAttackMod",
-                                            "name": "Spell",
-                                            "attributes": [
-                                                "int"
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Weapon Bond",
-                    "source": "PHB",
-                    "page": 74,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Eldritch Knight",
-                    "subclassSource": "PHB",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "At 3rd level, you learn a ritual that creates a magical bond between yourself and one weapon. You perform the ritual over the course of 1 hour, which can be done during a short rest. The weapon must be within your reach throughout the ritual, at the conclusion of which you touch the weapon and forge the bond.",
-                        "Once you have bonded a weapon to yourself, you can't be disarmed of that weapon unless you are {@condition incapacitated}. If it is on the same plane of existence, you can summon that weapon as a bonus action on your turn, causing it to teleport instantly to your hand.",
-                        "You can have up to two bonded weapons, but can summon only one at a time with your bonus action. If you attempt to bond with a third weapon, you must break the bond with one of the other two."
-                    ]
-                },
-                {
-                    "name": "War Magic",
-                    "source": "PHB",
-                    "page": 74,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Eldritch Knight",
-                    "subclassSource": "PHB",
-                    "level": 7,
-                    "header": 2,
-                    "entries": [
-                        "Beginning at 7th level, when you use your action to cast a cantrip, you can make one weapon attack as a bonus action."
-                    ]
-                },
-                {
-                    "name": "Eldritch Strike",
-                    "source": "PHB",
-                    "page": 74,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Eldritch Knight",
-                    "subclassSource": "PHB",
-                    "level": 10,
-                    "header": 2,
-                    "entries": [
-                        "At 10th level, you learn how to make your weapon strikes undercut a creature's resistance to your spells. When you hit a creature with a weapon attack, that creature has disadvantage on the next saving throw it makes against a spell you cast before the end of your next turn."
-                    ]
-                },
-                {
-                    "name": "Arcane Charge",
-                    "source": "PHB",
-                    "page": 74,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Eldritch Knight",
-                    "subclassSource": "PHB",
-                    "level": 15,
-                    "header": 2,
-                    "entries": [
-                        "At 15th level, you gain the ability to teleport up to 30 feet to an unoccupied space you can see when you use your Action Surge. You can teleport before or after the additional action."
-                    ]
-                },
-                {
-                    "name": "Improved War Magic",
-                    "source": "PHB",
-                    "page": 74,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Eldritch Knight",
-                    "subclassSource": "PHB",
-                    "level": 18,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 18th level, when you use your action to cast a spell, you can make one weapon attack as a bonus action."
-                    ]
-                }
-			]
-		},
-		{
-			"name": "Purple Dragon Knight (Banneret)",
-			"shortName": "Purple Dragon Knight (Banneret)",
+			"name": "Cavaleiro Dragão Púrpura (Banerete)",
+			"shortName": "Banerete",
+            "id": "cavaleirodragaopurpura",
 			"source": "SCAG",
-			"className": "Fighter",
+			"className": "Guerreiro",
 			"classSource": "PHB",
-			"page": 128,
+			"page": 133,
+            "level": 3,
+            "restriction": "Título de Cavaleiro",
+            "entries": [
+                "Os cavaleiros Dragão Púrpura são combatentes que vêm do reino de Cormyr. Juramentados a proteger a coroa, eles levam a luta contra o mal para além das fronteiras de seu reino. Eles têm a tarefa de vagar pelas terras como cavaleiros errantes, confiando em seu julgamento, bravura e fidelidade ao código de cavalaria para guiá-los no enfrentamento aos malfeitores.",
+                "Um cavaleiro Dragão Púrpura inspira a grandeza nos outros ao praticar atos de bravura em batalha. A mera presença de um cavaleiro em um vilarejo é o suficiente para fazer com que alguns orcs e bandidos procurem uma presa mais fácil. Um cavaleiro sozinho já é um combatente habilidoso, mas um cavaleiro liderando um bando de aliados pode transformar até mesmo a milícia mais mal equipada em um grupo de guerra feroz.",
+                "Um cavaleiro prefere liderar através de seus feitos, não de palavras. Quando um cavaleiro lidera um ataque, suas ações podem despertar em um aliado a coragem e convicção que estavam escondidas, algo que ele próprio jamais suspeitou que tinha."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Purple Dragon Knight (Banneret)",
-                    "source": "SCAG",
-                    "page": 128,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Purple Dragon Knight (Banneret)",
-                    "subclassSource": "SCAG",
-                    "level": 3,
-                    "entries": [
-                        "Purple Dragon Knights are warriors who hail from the kingdom of Cormyr. Pledged to protect the crown, they take the fight against evil beyond the kingdom's borders. They are tasked with wandering the land as knights errant, relying on their judgment, bravery, and fidelity to guide them in defeating evildoers.",
-                        "A Purple Dragon Knight inspires greatness in others by committing brave deeds in battle. The mere presence of a knight in a hamlet is enough to cause some orcs and bandits to seek easier prey. A lone knight is a skilled warrior, but a knight leading a band of allies can transform even the most poorly equipped militia into a ferocious war band.",
-                        "A knight prefers to lead through deeds, not words. As a knight spearheads an attack, the knight's actions can awaken reserves of courage and conviction in allies that they never suspected they had.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Restriction: Knighthood|Fighter||Purple Dragon Knight (Banneret)|SCAG|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Rallying Cry|Fighter||Purple Dragon Knight (Banneret)|SCAG|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Rallying Cry",
+                    "name": "Restrição: Título de Cavaleiro",
                     "source": "SCAG",
-                    "page": 128,
-                    "className": "Fighter",
+                    "page": 133,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Purple Dragon Knight (Banneret)",
+                    "subclassShortName": "Banerete",
                     "subclassSource": "SCAG",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you choose this archetype at 3rd level, you learn how to inspire your allies to fight on past their injuries.",
-                        "When you use your Second Wind feature, you can choose up to three creatures within 60 feet of you that are allied with you. Each one regains hit points equal to your fighter level, provided that the creature can see or hear you."
+                        "Cavaleiros Dragão Púrpura são ligados a um tipo específico de ordem de cavalaria cormyreana.",
+                        "<b>Banerete</b> serve como um nome genérico para este arquétipo se você usá-lo em outros cenários de campanha ou para criar modelos de senhores da guerra que não sejam cavaleiros Dragão Púrpura."
                     ]
                 },
                 {
-                    "name": "Restriction: Knighthood",
+                    "name": "Grito de Guerra",
                     "source": "SCAG",
-                    "page": 128,
-                    "className": "Fighter",
+                    "page": 133,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Purple Dragon Knight (Banneret)",
+                    "subclassShortName": "Banerete",
                     "subclassSource": "SCAG",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Purple Dragon Knights are tied to a specific order of Cormyrean knighthood.",
-                        "Banneret serves as the generic name for this archetype if you use it in other campaign settings or to model warlords other than the Purple Dragon Knights."
+                        "Ao escolher este arquétipo no 3º nível, você aprende como inspirar seus aliados a luta superando seus ferimentos.",
+                        "Quando usa a característica Recuperar o Fôlego, você pode escolher até três criaturas a até 18 metros de você que sejam aliadas. Cada uma recupera pontos de vida equivalentes ao seu nível de guerreiro, desde que a criatura possa vê-lo ou ouvi-lo."
                     ]
                 },
                 {
-                    "name": "Royal Envoy",
+                    "name": "Emissário Real",
                     "source": "SCAG",
-                    "page": 128,
-                    "className": "Fighter",
+                    "page": 133,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Purple Dragon Knight (Banneret)",
+                    "subclassShortName": "Banerete",
                     "subclassSource": "SCAG",
                     "level": 7,
                     "header": 2,
                     "entries": [
-                        "A Purple Dragon Knight serves as an envoy of the Cormyrean crown. Knights of high standing are expected to conduct themselves with grace.",
-                        "At 7th level, you gain proficiency in the {@skill Persuasion} skill. If you are already proficient in it, you gain proficiency in one of the following skills of your choice: {@skill Animal Handling}, {@skill Insight}, {@skill Intimidation}, or {@skill Performance}.",
-                        "Your proficiency bonus is doubled for any ability check you make that uses {@skill Persuasion}. You receive this benefit regardless of the skill proficiency you gain from this feature."
+                        "Um cavaleiro Dragão Púrpura serve como um emissário para a coroa cormyreana. Espera-se que cavaleiros de alta posição tenham uma conduta elegante.",
+                        "No 7º nível, você ganha proficiência na perícia Persuasão. Se já é proficiente nela, você ganha proficiência em uma das seguintes perícias de sua escolha: Atuação, Intimidação, Intuição ou Lidar com Animais.",
+                        "Seu bônus de proficiência é duplicado para qualquer teste de atributo que você fizer e que use Persuasão. Você recebe este benefício independentemente da proficiência em perícia que ganha com esta característica."
                     ]
                 },
                 {
-                    "name": "Inspiring Surge",
+                    "name": "Inspirar Surto",
                     "source": "SCAG",
-                    "page": 128,
-                    "className": "Fighter",
+                    "page": 133,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Purple Dragon Knight (Banneret)",
+                    "subclassShortName": "Banerete",
                     "subclassSource": "SCAG",
                     "level": 10,
                     "header": 2,
                     "entries": [
-                        "Starting at 10th level, when you use your Action Surge feature, you can choose one creature within 60 feet of you that is allied with you. That creature can make one melee or ranged weapon attack with its reaction, provided that it can see or hear you.",
-                        "Starting at 18th level, you can choose two allies within 60 feet of you, rather than one."
+                        "No 10º nível, ao usar sua característica Surto de Ação, você pode escolher uma criatura a até 18 metros de você que seja sua aliada. Esta criatura pode fazer um ataque corpo a corpo ou à distância com a reação dela, desde que possa vê-lo ou ouvi-lo.",
+                        "No 18º nível, em vez de um, você escolhe dois aliados a até 18 metros de você."
                     ]
                 },
                 {
-                    "name": "Bulwark",
+                    "name": "Baluarte",
                     "source": "SCAG",
-                    "page": 128,
-                    "className": "Fighter",
+                    "page": 133,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Purple Dragon Knight (Banneret)",
+                    "subclassShortName": "Banerete",
                     "subclassSource": "SCAG",
                     "level": 15,
                     "header": 2,
                     "entries": [
-                        "Beginning at 15th level, you can extend the benefit of your Indomitable feature to an ally. When you decide to use Indomitable to reroll an Intelligence, a Wisdom, or a Charisma saving throw and you aren't {@condition incapacitated}, you can choose one ally within 60 feet of you that also failed its saving throw against the same effect. If that creature can see or hear you, it can reroll its saving throw and must use the new roll."
+                        "No 15º nível, você pode estender o benefício de sua característica Indomável para um aliado. Ao usar Indomável para jogar novamente uma salvaguarda de Inteligência, Sabedoria ou Carisma e você não estiver {@condition incapacitado}, você pode escolher um aliado a até 18 metros de você que também tenha falhado na salvaguarda contra o mesmo efeito. Se a criatura puder vê-lo ou ouvi-lo, ela pode jogar novamente a salvaguarda e deve usar o novo resultado."
                     ]
                 },
                 {
-                    "name": "Inspiring Surge",
+                    "name": "Inspirar Surto",
                     "source": "SCAG",
-                    "page": 128,
-                    "className": "Fighter",
+                    "page": 133,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Purple Dragon Knight (Banneret)",
+                    "subclassShortName": "Banerete",
                     "subclassSource": "SCAG",
                     "level": 18,
                     "header": 2,
                     "entries": [
-                        "Starting at 18th level, you can choose two allies within 60 feet of you, rather than one."
+                        "No 18º nível, você escolhe dois aliados a até 18 metros de você, em vez de um."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Arcane Archer",
-			"shortName": "Arcane Archer",
+			"name": "Arqueiro Arcano",
+			"shortName": "Arqueiro Arcano",
+            "id": "arqueiroarcano",
 			"source": "XGE",
-			"className": "Fighter",
+			"className": "Guerreiro",
 			"classSource": "PHB",
-			"page": 28,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"prestidigitation#c"
-						]
-					}
-				},
-				{
-					"known": {
-						"3": [
-							"druidcraft#c"
-						]
-					}
-				}
-			],
+			"page": 42,
+            "level": 3,
+            "entries": [
+                "Um Arqueiro Arcano estuda um método élfico único de arqueria que entrelaça magia em ataque para produzir efeitos sobrenaturais. Arqueiros Arcanos estão entre os maiores guerreiros de elite dos elfos. Eles vigiam os rincões dos domínios élficos, mantendo o olhar atento sobre transgressores e usando flechas mágicas para derrotar monstros e invasores antes que estes possam alcançar assentamentos élficos.",
+                "Ao longo dos séculos, os métodos desses arqueiros elfos tem sido aprendidos por membros de outras raças que se mostraram capazes de equilibrar aptidão arcana e a arte da arqueria."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Arcane Archer",
-                    "source": "XGE",
-                    "page": 28,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Arcane Archer",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "An Arcane Archer studies a unique elven method of archery that weaves magic into attacks to produce supernatural effects. Arcane Archers are some of the most elite warriors among the elves. They stand watch over the fringes of elven domains, keeping a keen eye out for trespassers and using magic-infused arrows to defeat monsters and invaders before they can reach elven settlements. Over the centuries, the methods of these elf archers have been learned by members of other races who can also balance arcane aptitude with archery.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Arcane Archer Lore|Fighter||Arcane Archer|XGE|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Arcane Shot|Fighter||Arcane Archer|XGE|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Arcane Shot Options|Fighter||Arcane Archer|XGE|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Arcane Archer Lore",
+                    "name": "Arte da Arqueria Arcana",
                     "source": "XGE",
-                    "page": 28,
-                    "className": "Fighter",
+                    "page": 42,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Archer",
+                    "subclassShortName": "Arqueiro Arcano",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "At 3rd level, you learn magical theory or some of the secrets of nature\u2014typical for practitioners of this elven martial tradition. You choose to gain proficiency in either the {@skill Arcana} or the {@skill Nature} skill, and you choose to learn either the {@spell prestidigitation} or the {@spell druidcraft} cantrip."
+                        "No 3º nível, você aprende teoria mágica ou alguns dos segredos da natureza — típico para praticantes desta tradição marcial élfica. Você escolhe ganhar proficiência com uma perícia. Arcanismo ou Natureza, e escolhe aprender um truque dentre {@spell prestidigitação arcana} ou {@spell arte druídica}."
                     ]
                 },
                 {
-                    "name": "Arcane Shot",
+                    "name": "Disparo Arcano",
                     "source": "XGE",
-                    "page": 28,
-                    "className": "Fighter",
+                    "page": 42,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Archer",
+                    "subclassShortName": "Arqueiro Arcano",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "At 3rd level, you learn to unleash special magical effects with some of your shots. When you gain this feature, you learn two Arcane Shot options of your choice (see \"Arcane Shot Options\" below).",
-                        "Once per turn when you fire an arrow from a shortbow or longbow as part of the {@action Attack} action, you can apply one of your Arcane Shot options to that arrow. You decide to use the option when the arrow hits a creature, unless the option doesn't involve an attack roll. You have two uses of this ability, and you regain all expended uses of it when you finish a short or long rest.",
-                        "You gain an additional Arcane Shot option of your choice when you reach certain levels in this class: 7th, 10th, 15th, and 18th level. Each option also improves when you become an 18th-level fighter."
+                        "No 3º nível, você aprende a usar efeitos mágicos especiais com alguns dos seus disparos. Ao ganhar esta característica, você aprende duas opção de Disparo Arcano, à sua escolha (veja \"Opção de Disparo Arcano\" abaixo).",
+                        "Uma vez por turno, ao disparar uma flecha com um arco curto ou um arco longo como parte de ação Atacar, você pode aplicar uma de suas opções de Disparo Arcano nessa flecha. Você deve decidir usar a opção quando a flecha atinge uma criatura, a menos que a opção não envolva uma jogada de ataque. Você possui dois usos desta habilidade, recuperando todos os usos gastos ao terminar um descanso curto ou longo.",
+                        "Você ganha uma opção adicional de Disparo Arcano, à sua escolha, ao alcançar determinados níveis nesta classe: 7º, 10º, 15º e 18º. Cada opção também melhora quando você se torna um guerreiro de 18º nível."
                     ]
                 },
                 {
-                    "name": "Arcane Shot Options",
+                    "name": "Opções de Disparo Arcano",
                     "source": "XGE",
-                    "page": 28,
-                    "className": "Fighter",
+                    "page": 42,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Archer",
+                    "subclassShortName": "Arqueiro Arcano",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "The Arcane Shot feature lets you choose options for it at certain levels. The options are presented here in alphabetical order. They are all magical effects, and each one is associated with one of the schools of magic.",
-                        "If an option requires a saving throw, your Arcane Shot save DC is calculated as follows:",
-                        {
-                            "type": "abilityDc",
-                            "name": "Arcane Shot",
-                            "attributes": [
-                                "int"
-                            ]
-                        },
+                        "A característica Disparo Arcano permite que você escolha opções para ela em determinados níveis. As opções são apresentadas aqui em ordem alfabética. Trata-se, em todos os casos, de efeitos mágicos, e cada um está associado a uma escola de magia.",
+                        "Se uma opção exige uma salvaguarda, a CD para evitar seu Disparo Arcano é 8 + seu bônus de proficiência + seu modificador de Inteligência.",
                         {
                             "type": "options",
                             "count": 2,
                             "entries": [
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Banishing Arrow|XGE"
+                                    "name": "Flecha de Banimento",
+                                    "entries": [
+                                        "Você usa magia de abjuração para tentar banir temporariamente seu alvo para uma localização inócua em Faéria. A criatura atingida pela flecha também deve ser bem-sucedida numa salvaguarda de Carisma ou ser banida. Enquanto banido desse modo, o deslocamento do alvo é 0 e ele fica incapacitado. No final do próximo turno dele, o alvo reaparece no espaço que ocupava antes de desaparecer, ou no espaço desocupado mais próximo, caso aquele espaço esteja ocupado.",
+                                        "Após você alcançar o 18º nível nesta classe, um alvo também sofre 2d6 pontos de dano energético quando a flecha o atinge."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Beguiling Arrow|XGE"
+                                    "name": "Flecha de Compressão",
+                                    "entries": [
+                                        "Quando esta flecha atinge o alvo, este é envolto por ramos venenosos criados por magia de invocação. A criatura atingida pela flecha sofre 2d6 pontos de dano venenoso adicional, seu deslocamento é reduzido em 3 metros e ela recebe 2d6 pontos de dano cortante na primeira vez em cada turno que se mover 30 centímetros ou mais sem se teleportar. O alvo ou qualquer criatura que possa alcançá-lo pode usar sua ação para remover os ramos com um teste bem-sucedido de Força (Atletismo) contra a CD para evitar seu Disparo Arcano. Caso contrário, os ramos persistem por 1 minuto ou até que você use esta opção outra vez.",
+                                        "Tanto o dano venenoso quanto o cortante aumentam para 4d6 quando você alcança o 18º nível nesta classe."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Bursting Arrow|XGE"
+                                    "name": "Flecha Debilitante",
+                                    "entries": [
+                                        "Você entrelaça magia necromântica em sua flecha. A criatura atingida pela flecha sofre 2d6 pontos de dano necrótico adicional. O alvo deve ser bem-sucedido em uma salvaguarda de Constituição, ou o dano causado pelos ataques armados dele é diminuído pela metade até o começo do seu próximo turno.",
+                                        "O dano necrótico aumenta para 4d6 quando você alcança o 18º nível nesta classe."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Enfeebling Arrow|XGE"
+                                    "name": "Flecha Explosiva",
+                                    "entries": [
+                                        "Você impregna sua flecha com energia extraída da escola de evocação. A energia explode após seu ataque. Imediatamente após a flecha atingir seu alvo, este e todas as criaturas a até 3 metros dele sofrem 2d6 pontos de dano energético cada.",
+                                        "O dano energético aumenta para 4d6 quando você alcança o 18º nível nesta classe."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Grasping Arrow|XGE"
+                                    "name": "Flecha Feiticeira",
+                                    "entries": [
+                                        "Sua magia de encantamento faz com que esta flecha enfeitice temporariamente seu alvo. A criatura atingida pela flecha sofre 2d6 pontos de dano psíquico adicional e deve escolher um de seus aliados a até 9 metros dela. Ela deve ser bem-sucedida em uma salvaguarda de Sabedoria ou fica enfeitiçada pelo aliado escolhido até o começo do seu próximo turno. Esse efeito termina mais cedo se o aliado escolhido atacar a criatura enfeitiçada, causar dano a ela ou forçá-la a realizar uma salvaguarda.",
+                                        "O dano psíquico aumenta para 4d6 quando você alcança o 18º nível nesta classe."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Piercing Arrow|XGE"
+                                    "name": "Flecha Perfurante",
+                                    "entries": [
+                                        "Você usa magia de transmutação para dar á sua flecha uma qualidade etérea. Ao usar esta opção, você não faz uma jogada de ataque para o disparo. Em vez disso, a flecha dispara adiante numa linha reta com 30 centímetros de largura e 9 metros de comprimento, antes de desaparecer. A flecha atravessa objetos sem causar dano, ignorando cobertura. Cada criatura nesse trajeto deve realizar uma salvaguarda de Destreza. Cada criatura que falhar sofre dano como se tivesse sido atingida pela flecha, além de 1d6 pontos de dano perfurante adicional. Cada criatura que obtiver sucesso sofre metade desse dano.",
+                                        "O dano perfurante aumenta para 2d6 quando você alcança o 18º nível nesta classe."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Seeking Arrow|XGE"
+                                    "name": "Flecha Perseguidora",
+                                    "entries": [
+                                        "Usando magia de adivinhação, você concede à sua flecha a habilidade de perseguir um alvo. Ao usar esta opção, você não realiza uma jogada de ataque para o disparo. Em vez disso, escolha uma criatura que você tenha visto no minuto anterior. A flecha voa na direção dessa criatura, contornando cantos se necessário e ignorando cobertura de três quartos e cobertura parcial. Se o alvo estiver dentro do alcance da arma e houver um caminho largo o suficiente para a flecha viajar até ele, é preciso que ele realize uma salvaguarda de Destreza. Caso contrário, a flecha desaparece após percorrer a maior distância possível. Em caso de falha na salvaguarda, o alvo recebe dano como se tivesse sido atingido pela flecha, além de 1d6 pontos de dano energético, e você fica sabendo a localização atual dele. Em caso de sucesso, o alvo recebe metade do dano, e você não fica sabendo a localização dele.",
+                                        "O dano energético aumenta para 2d6 quando você alcança o 18º nível nesta classe."
+                                    ]
                                 },
                                 {
                                     "type": "refOptionalfeature",
-                                    "optionalfeature": "Shadow Arrow|XGE"
+                                    "name": "Flecha de Sombra",
+                                    "entries": [
+                                        "Você entrelaça magia de ilusão em sua flecha, fazendo com que ela obstrua a visão do seu inimigo com sombras. A criatura atingida sofre 2d6 pontos de dano psíquico adicional, e deve ser bem-sucedida em uma salvaguarda de Sabedoria, ou fica incapaz de ver qualquer coisa a uma distância superior a 1,5 metro até o final do seu próximo turno.",
+                                        "O dano psíquico aumenta para 4d6 quando você alcança o 18º nível nesta classe."
+                                    ]
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Additional Arcane Shot Option",
+                    "name": "Opção Adicional de Disparo Arcano",
                     "source": "XGE",
-                    "page": 28,
-                    "className": "Fighter",
+                    "page": 42,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Archer",
+                    "subclassShortName": "Arqueiro Arcano",
                     "subclassSource": "XGE",
                     "level": 7,
                     "header": 2,
                     "entries": [
-                        "You gain an additional Arcane Shot option of your choice when you reach 7th level."
+                        "Você ganha um opção adicional de Disparo Arcano quando alcança o 7º nível."
                     ]
                 },
                 {
-                    "name": "Curving Shot",
+                    "name": "Flecha Mágica",
                     "source": "XGE",
-                    "page": 28,
-                    "className": "Fighter",
+                    "page": 42,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Archer",
+                    "subclassShortName": "Arqueiro Arcano",
                     "subclassSource": "XGE",
                     "level": 7,
                     "header": 2,
                     "entries": [
-                        "At 7th level, you learn how to direct an errant arrow toward a new target. When you make an attack roll with a magic arrow and miss, you can use a bonus action to reroll the attack roll against a different target within 60 feet of the original target."
+                        "No 7º nível, você ganha a habilidade de imbuir flechas com magia. Sempre que disparar uma flecha não mágica com um arco curto ou um arco longo, você pode torná-la mágica no que tange superar resistência e imunidade a ataques e dano não mágicos. A magia desaparece da flecha imediatamente após ela atingir ou errar o alvo."
                     ]
                 },
                 {
-                    "name": "Magic Arrow",
+                    "name": "Disparo em Curva",
                     "source": "XGE",
-                    "page": 28,
-                    "className": "Fighter",
+                    "page": 42,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Archer",
+                    "subclassShortName": "Arqueiro Arcano",
                     "subclassSource": "XGE",
                     "level": 7,
                     "header": 2,
                     "entries": [
-                        "At 7th level, you gain the ability to infuse arrows with magic. Whenever you fire a nonmagical arrow from a shortbow or longbow, you can make it magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. The magic fades from the arrow immediately after it hits or misses its target."
+                        "No 7º nível, você aprende como redirecionar uma flecha mal disparada para um novo alvo. Ao realizar uma jogada de ataque com uma flecha mágica e errar, você pode usar uma ação bônus para refazer a jogada de ataque contra um alvo diferente a até 18 metros do alvo original."
                     ]
                 },
                 {
-                    "name": "Additional Arcane Shot Option",
+                    "name": "Opção Adicional de Disparo Arcano",
                     "source": "XGE",
-                    "page": 28,
-                    "className": "Fighter",
+                    "page": 42,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Archer",
+                    "subclassShortName": "Arqueiro Arcano",
                     "subclassSource": "XGE",
                     "level": 10,
                     "header": 2,
                     "entries": [
-                        "You gain an additional Arcane Shot option of your choice when you reach 10th level."
+                        "Você ganha um opção adicional de Disparo Arcano quando alcança o 10º nível."
                     ]
                 },
                 {
-                    "name": "Additional Arcane Shot Option",
+                    "name": "Opção Adicional de Disparo Arcano",
                     "source": "XGE",
-                    "page": 28,
-                    "className": "Fighter",
+                    "page": 42,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Archer",
+                    "subclassShortName": "Arqueiro Arcano",
                     "subclassSource": "XGE",
                     "level": 15,
                     "header": 2,
                     "entries": [
-                        "You gain an additional Arcane Shot option of your choice when you reach 15th level."
+                        "Você ganha um opção adicional de Disparo Arcano quando alcança o 15º nível."
                     ]
                 },
                 {
-                    "name": "Ever-Ready Shot",
+                    "name": "Disparo Sempre Pronto",
                     "source": "XGE",
-                    "page": 28,
-                    "className": "Fighter",
+                    "page": 42,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Archer",
+                    "subclassShortName": "Arqueiro Arcano",
                     "subclassSource": "XGE",
                     "level": 15,
                     "header": 2,
                     "entries": [
-                        "Starting at 15th level, your magical archery is available whenever battle starts. If you roll initiative and have no uses of Arcane Shot remaining, you regain one use of it."
+                        "A partir do 15º nível, sua arqueria mágica está disponível sempre que uma batalha tem início. Ao jogar a iniciativa e não ter nenhum uso de Disparo Arcano sobrando, você recupera um uso."
                     ]
                 },
                 {
-                    "name": "Additional Arcane Shot Option",
+                    "name": "Opção Adicional de Disparo Arcano",
                     "source": "XGE",
-                    "page": 28,
-                    "className": "Fighter",
+                    "page": 42,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcane Archer",
+                    "subclassShortName": "Arqueiro Arcano",
                     "subclassSource": "XGE",
                     "level": 18,
                     "header": 2,
                     "entries": [
-                        "You gain an additional Arcane Shot option of your choice when you reach 18th level. Each option also improves when you become an 18th-level fighter."
+                        "Você ganha um opção adicional de Disparo Arcano quando alcança o 18º nível. Cada opção também melhora quando você se torna um guerreiro de 18º nível."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Cavalier",
-			"shortName": "Cavalier",
+			"name": "Cavaleiro",
+			"shortName": "Cavaleiro",
+            "id": "cavaleiro",
 			"source": "XGE",
-			"className": "Fighter",
+			"className": "Guerreiro",
 			"classSource": "PHB",
-			"page": 30,
+			"page": 44,
+            "level": 3,
+            "entries": [
+                "O cavaleiro arquetípico distingue-se em combate montado.",
+                "Quase sempre nascido entre a nobreza e criado na corte, um Cavaleiro sente-se em casa tanto ao liderar uma carga de cavalaria quanto fazendo política num jantar de estado. Cavaleiros também aprendem como proteger aqueles sob sua responsabilidade, não raro servindo como protetores de seus superiores e dos oprimidos. Compelidos a corrigir injustiças ou angariar prestígio, muitos desses combatentes abandonam suas vidas de conforto para embarcar em gloriosas aventuras."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Cavalier",
-                    "source": "XGE",
-                    "page": 30,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Cavalier",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "The archetypal Cavalier excels at mounted combat. Usually born among the nobility and raised at court, a Cavalier is equally at home leading a cavalry charge or exchanging repartee at a state dinner. Cavaliers also learn how to guard those in their charge from harm, often serving as the protectors of their superiors and of the weak. Compelled to right wrongs or earn prestige, many of these fighters leave their lives of comfort to embark on glorious adventure.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiency|Fighter||Cavalier|XGE|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Born to the Saddle|Fighter||Cavalier|XGE|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Unwavering Mark|Fighter||Cavalier|XGE|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Bonus Proficiency",
+                    "name": "Proficiência Bônus",
                     "source": "XGE",
-                    "page": 30,
-                    "className": "Fighter",
+                    "page": 44,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Cavalier",
+                    "subclassShortName": "Cavaleiro",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you choose this archetype at 3rd level, you gain proficiency in one of the following skills of your choice: {@skill Animal Handling}, {@skill History}, {@skill Insight}, {@skill Performance}, or {@skill Persuasion}. Alternatively, you learn one language of your choice."
+                        "Ao escolher este arquétipo no 3º nível, você ganha proficiência em uma das seguintes perícias à sua escolha: Atuação, História, Intuição, Lidar com Animais ou Persuasão. Opcionalmente, você aprende um idioma à sua escolha no lugar de uma perícia."
                     ]
                 },
                 {
-                    "name": "Born to the Saddle",
+                    "name": "Nascido para a Sela",
                     "source": "XGE",
-                    "page": 30,
-                    "className": "Fighter",
+                    "page": 44,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Cavalier",
+                    "subclassShortName": "Cavaleiro",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Starting at 3rd level, your mastery as a rider becomes apparent. You have advantage on saving throws made to avoid falling off your mount. If you fall off your mount and descend no more than 10 feet, you can land on your feet if you're not {@condition incapacitated}.",
-                        "Finally, mounting or dismounting a creature costs you only 5 feet of movement, rather than half your speed."
+                        "A partir do 3º nível, seu domínio da equitação torna-se evidente. Você passa a ter vantagem em salvaguardas realizadas para evitar cair da sua montaria. Se você cair por não mais do que 3 metros, posar em pé, caso não esteja {@condition incapacitado}.",
+                        "Por fim, montar ou desmontar uma criatura custa 1,5 metro, em vez de metade do seu deslocamento."
                     ]
                 },
                 {
-                    "name": "Unwavering Mark",
+                    "name": "Marca Inabalável",
                     "source": "XGE",
-                    "page": 30,
-                    "className": "Fighter",
+                    "page": 44,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Cavalier",
+                    "subclassShortName": "Cavaleiro",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Starting at 3rd level, you can menace your foes, foiling their attacks and punishing them for harming others. When you hit a creature with a melee weapon attack, you can mark the creature until the end of your next turn. This effect ends early if you are {@condition incapacitated} or you die, or if someone else marks the creature.",
-                        "While it is within 5 feet of you, a creature marked by you has disadvantage on any attack roll that doesn't target you.",
-                        "In addition, if a creature marked by you deals damage to anyone other than you, you can make a special melee weapon attack against the marked creature as a bonus action on your next turn. You have advantage on the attack roll, and if it hits, the attack's weapon deals extra damage to the target equal to half your fighter level.",
-                        "Regardless of the number of creatures you mark, you can make this special attack a number of times equal to your Strength modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
+                        "A partir do 3º nível, você pode ameaçar seus inimigos, frustrando os ataques deles e punindo-os por causarem dano a terceiros. Ao atingir uma criatura com uma arma de combate corpo a corpo, você pode marca-la até o final do seu próximo turno. Este efeito termina mais cedo se você ficar {@condition incapacitado} ou morrer, ou se outro personagem marcar a criatura.",
+                        "Enquanto estiver a até 1,5 metro de você, a criatura marcada tem desvantagem em qualquer jogada de ataque que não o tenha como alvo.",
+                        "Além disso, se uma criatura marcada por você causar dano a qualquer um que não seja você, isso lhe dá direito a realizar um ataque especial com uma arma de combate corpo a corpo contra a criatura marcada como uma ação bônus no seu próximo turno. Você tem vantagem na jogada de ataque, e caso acerte, a arma usada no ataque causa uma quantidade de dano adicional ao alvo igual a metade do seu nível como guerreiro.",
+                        "Independentemente da quantidade de criaturas que você marque, você pode realizar este ataque especial um número de vezes igual ao seu modificador de Força (no mínimo um), recuperando todos os usos gastos desta habilidade ao terminar um descanso longo."
                     ]
                 },
                 {
-                    "name": "Warding Maneuver",
+                    "name": "Manobra Defensiva",
                     "source": "XGE",
-                    "page": 30,
-                    "className": "Fighter",
+                    "page": 44,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Cavalier",
+                    "subclassShortName": "Cavaleiro",
                     "subclassSource": "XGE",
                     "level": 7,
                     "header": 2,
                     "entries": [
-                        "At 7th level, you learn to fend off strikes directed at you, your mount, or other creatures nearby. If you or a creature you can see within 5 feet of you is hit by an attack, you can roll {@dice 1d8} as a reaction if you're wielding a melee weapon or a shield. Roll the die, and add the number rolled to the target's AC against that attack. If the attack still hits, the target has resistance against the attack's damage.",
-                        "You can use this feature a number of times equal to your Constitution modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
+                        "No 7º nível, você aprende a desviar ataques direcionados a você, à sua montaria ou a outras criaturas próximas. Se você ou uma criatura à sua vista e a até 1,5 metro de você for atingido por um ataque, você pode jogar 1d8 como uma reação, caso esteja empunhando uma arma de combate corpo a corpo ou um escudo. Jogue o dado e adicione o resultado à CA do alvo contra aquele ataque. Se o ataque ainda assim for bem-sucedido, o alvo tem resistência contra o dano provocado pelo ataque.",
+                        "Você pode usar esta característica uma quantidade de vezes igual ao seu modificador de Constituição (no mínimo uma vez), recuperando todos os usos gastos desta habilidade ao terminar um descanso longo."
                     ]
                 },
                 {
-                    "name": "Hold the Line",
+                    "name": "Manter a Formação",
                     "source": "XGE",
-                    "page": 30,
-                    "className": "Fighter",
+                    "page": 44,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Cavalier",
+                    "subclassShortName": "Cavaleiro",
                     "subclassSource": "XGE",
                     "level": 10,
                     "header": 2,
                     "entries": [
-                        "At 10th level, you become a master of locking down your enemies. Creatures provoke an opportunity attack from you when they move 5 feet or more while within your reach, and if you hit a creature with an opportunity attack, the target's speed is reduced to 0 until the end of the current turn."
+                        "No 10º nível, você se torna mestre em travar seus inimigos. Criaturas provocam um ataque de oportunidade seu quando se deslocam 1,5 metro ou mais enquanto estão dentro do seu alcance, e se você atingir uma criatura com um ataque de oportunidade, o deslocamento dela é reduzido a 0 até o final do turno atual."
                     ]
                 },
                 {
-                    "name": "Ferocious Charger",
+                    "name": "Carga Feroz",
                     "source": "XGE",
-                    "page": 30,
-                    "className": "Fighter",
+                    "page": 44,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Cavalier",
+                    "subclassShortName": "Cavaleiro",
                     "subclassSource": "XGE",
                     "level": 15,
                     "header": 2,
                     "entries": [
-                        "Starting at 15th level, you can run down your foes, whether you're mounted or not. If you move at least 10 feet in a straight line right before attacking a creature and you hit it with the attack, that target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier) or be knocked {@condition prone}. You can use this feature only once on each of your turns."
+                        "A partir do 15º nível, montado ou desmontado, você pode atropelar seus inimigos. Se você se mover pelo menos 3 metros em linha reta antes de atacar uma criatura com sucesso, ela deve ser bem-sucedida numa salvaguarda de Força (CD 8 + seu bônus de proficiência + seu modificador de Força) ou ficar {@condition caída}. Você pode usar esta característica apenas uma vez em cada um dos seus turnos."
                     ]
                 },
                 {
-                    "name": "Vigilant Defender",
+                    "name": "Defensor Vigilante",
                     "source": "XGE",
-                    "page": 30,
-                    "className": "Fighter",
+                    "page": 44,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Cavalier",
+                    "subclassShortName": "Cavaleiro",
                     "subclassSource": "XGE",
                     "level": 18,
                     "header": 2,
                     "entries": [
-                        "Starting at 18th level, you respond to danger with extraordinary vigilance. In combat, you get a special reaction that you can take once on every creature's turn, except your turn. You can use this special reaction only to make an opportunity attack, and you can't use it on the same turn that you take your normal reaction."
+                        "A partir do 18º nível, você responde ao perigo com vigilância extraordinária. Em combate, você tem um reação especial que pode usar uma vez no turno de toda criatura, exceto no seu próprio. Você pode usar esta reação especial apenas para realizar um ataque de oportunidade, e não pode usá-la no mesmo turno em que usa sua reação normal."
                     ]
                 }
 			]
@@ -1491,117 +1073,101 @@
 		{
 			"name": "Samurai",
 			"shortName": "Samurai",
+            "id": "samurai",
 			"source": "XGE",
-			"className": "Fighter",
+			"className": "Guerreiro",
 			"classSource": "PHB",
-			"page": 31,
+			"page": 45,
+            "level": 3,
+            "entries": [
+                "O Samurai é um guerreiro que emprega um implacável espírito de luta para superar seus inimigos. A determinação de um Samurai é praticamente inquebrável, e seus inimigos têm duas escolhas: render-se ou morrer lutando."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Samurai",
-                    "source": "XGE",
-                    "page": 31,
-                    "className": "Fighter",
-                    "classSource": "PHB",
-                    "subclassShortName": "Samurai",
-                    "subclassSource": "XGE",
-                    "level": 3,
-                    "entries": [
-                        "The Samurai is a fighter who draws on an implacable fighting spirit to overcome enemies. A Samurai's resolve is nearly unbreakable, and the enemies in a Samurai's path have two choices: yield or die fighting.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiency|Fighter||Samurai|XGE|3"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Fighting Spirit|Fighter||Samurai|XGE|3"
-                        }
-                    ]
-                },
                 {
-                    "name": "Bonus Proficiency",
+                    "name": "Proficiência Bônus",
                     "source": "XGE",
-                    "page": 31,
-                    "className": "Fighter",
+                    "page": 45,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
                     "subclassShortName": "Samurai",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "When you choose this archetype at 3rd level, you gain proficiency in one of the following skills of your choice: {@skill History}, {@skill Insight}, {@skill Performance}, or {@skill Persuasion}. Alternatively, you learn one language of your choice."
+                        "Ao escolher este arquétipo no 3º nível, você ganha proficiência em uma das seguintes perícias à sua escolha: Atuação, História, Intuição ou Persuasão. Opcionalmente, você aprende um idioma à sua escolha no lugar de uma perícia."
                     ]
                 },
                 {
-                    "name": "Fighting Spirit",
+                    "name": "Espírito Guerreiro",
                     "source": "XGE",
-                    "page": 31,
-                    "className": "Fighter",
+                    "page": 45,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
                     "subclassShortName": "Samurai",
                     "subclassSource": "XGE",
                     "level": 3,
                     "header": 1,
                     "entries": [
-                        "Starting at 3rd level, your intensity in battle can shield you and help you strike true. As a bonus action on your turn, you can give yourself advantage on weapon attack rolls until the end of the current turn. When you do so, you also gain 5 temporary hit points. The number of temporary hit points increases when you reach certain levels in this class, increasing to 10 at 10th level and 15 at 15th level.",
-                        "You can use this feature three times, and you regain all expended uses of it when you finish a long rest."
+                        "A partir do 3º nível, sua intensidade em batalha pode servir de escudo e ajudá-lo a atacar com maior potência e precisão. Como uma ação bônus no seu turno, você pode dar a si mesmo vantagem em jogadas de ataques armados até o final do seu turno atual. Ao fazê-lo, você ganha 5 pontos de vida temporários. O número de pontos de vida temporários aumenta quando você alcança certos níveis nesta classe, passando para 10 no 10º e 15 no 15º nível.",
+                        "Você pode usar esta característica três vezes, recuperando todos os usos gastos dela ao terminar um descanso longo."
                     ]
                 },
                 {
-                    "name": "Elegant Courtier",
+                    "name": "Cortesão Elegante",
                     "source": "XGE",
-                    "page": 31,
-                    "className": "Fighter",
+                    "page": 45,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
                     "subclassShortName": "Samurai",
                     "subclassSource": "XGE",
                     "level": 7,
                     "header": 2,
                     "entries": [
-                        "Starting at 7th level, your discipline and attention to detail allow you to excel in social situations. Whenever you make a Charisma ({@skill Persuasion}) check, you gain a bonus to the check equal to your Wisdom modifier.",
-                        "Your self-control also causes you to gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)."
+                        "A partir do 7º nível, sua disciplina e atenção aos detalhes permitem que você se destaque em situações sociais. Todos os seus testes de Carisma (Persuasão) são realizados com um bônus igual ao seu modificador de Sabedoria.",
+                        "Seu autocontrole também lhe rende proficiência em salvaguardas de Sabedoria. Caso já possua essa proficiência, em vez disso você ganha proficiência em salvaguardas de Inteligência ou Carisma (à sua escolha)."
                     ]
                 },
                 {
-                    "name": "Tireless Spirit",
+                    "name": "Espírito Incansável",
                     "source": "XGE",
-                    "page": 31,
-                    "className": "Fighter",
+                    "page": 45,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
                     "subclassShortName": "Samurai",
                     "subclassSource": "XGE",
                     "level": 10,
                     "header": 2,
                     "entries": [
-                        "Starting at 10th level, when you roll initiative and have no uses of Fighting Spirit remaining, you regain one use."
+                        "A partir do 10º nível, sempre que você jogar iniciativa e não tiver nenhum uso de Espírito Guerreiro sobrando, você recupera um uso."
                     ]
                 },
                 {
-                    "name": "Rapid Strike",
+                    "name": "Golpe Rápido",
                     "source": "XGE",
-                    "page": 31,
-                    "className": "Fighter",
+                    "page": 45,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
                     "subclassShortName": "Samurai",
                     "subclassSource": "XGE",
                     "level": 15,
                     "header": 2,
                     "entries": [
-                        "Starting at 15th level, you learn to trade accuracy for swift strikes. If you take the {@action Attack} action on your turn and have advantage on an attack roll against one of the targets, you can forgo the advantage for that roll to make an additional weapon attack against that target, as part of the same action. You can do so no more than once per turn."
+                        "A partir do 15º nível, você aprende a trocar precisão por rapidez. Se você usar a ação Ataque no seu turno e possuir vantagem numa jogada de Ataque no seu turno e possuir vantagem numa jogada de ataque contra um de seus alvos, você pode renunciar à vantagem na jogada para realizar um ataque armado adicional contra aquele alvo, como parte da mesma ação. Você não pode fazer isso mais do que uma vez por turno."
                     ]
                 },
                 {
-                    "name": "Strength before Death",
+                    "name": "Força Perante a Morte",
                     "source": "XGE",
-                    "page": 31,
-                    "className": "Fighter",
+                    "page": 45,
+                    "className": "Guerreiro",
                     "classSource": "PHB",
                     "subclassShortName": "Samurai",
                     "subclassSource": "XGE",
                     "level": 18,
                     "header": 2,
                     "entries": [
-                        "Starting at 18th level, your fighting spirit can delay the grasp of death. If you take damage that reduces you to 0 hit points and doesn't kill you outright, you can use your reaction to delay falling {@condition unconscious}, and you can immediately take an extra turn, interrupting the current turn. While you have 0 hit points during that extra turn, taking damage causes death saving throw failures as normal, and three death saving throw failures can still kill you. When the extra turn ends, you fall {@condition unconscious} if you still have 0 hit points.",
-                        "Once you use this feature, you can't use it again until you finish a long rest."
+                        "A partir do 18º nível, seu espírito de luta pode adiar o abraço da morte. Se você sofrer dano que o reduza a 0 ponto de vida mas não o mate de uma vez, você pode usar sua reação para adiar ficar {@condition inconsciente}, e pode ganhar imediatamente um turno extra, interrompendo o atual. Enquanto você estiver com 0 pontos de vida durante o turno extra, sofrer dano resulta em falhas de salvaguarda como sempre, e três dessas falhas ainda podem matá-lo. Quando o turno extra termina, você cai {@condition inconsciente} se ainda estiver com 0 ponto de vida.",
+                        "Após usar esta característica, você não pode usá-la novamente até terminar um descanso longo."
                     ]
                 }
 			]

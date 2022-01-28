@@ -1,7 +1,7 @@
 "use strict";
 const JSON_URL = "/data/talentos.json";
 
-async function loadIntoPage(url) {
+async function loadTalentosIntoPage(url) {
   const sectionBody = document.getElementsByClassName("talentos");
 
   await $.getJSON(url, function (talentos) {
@@ -176,7 +176,7 @@ async function loadIntoPage(url) {
   });
 }
 
-async function loadIntoSideMenu(url) {
+async function loadTalentosIntoSideMenu(url) {
   const quickMenu = document.getElementById("quick-menu");
 
   await $.getJSON(url, function (talentos) {
@@ -222,7 +222,7 @@ async function loadIntoSideMenu(url) {
   });
 }
 
-async function loadIntoMobileMenu(url) {
+async function loadTalentosIntoMobileMenu(url) {
     const mobileMenu = document.getElementsByClassName("secondary-content-mobile");
   
     await $.getJSON(url, function (talentos) {
@@ -257,13 +257,13 @@ async function loadIntoMobileMenu(url) {
   }
 
 $(document).ready(async function () {
-    await loadIntoPage(JSON_URL);
+    await loadTalentosIntoPage(JSON_URL);
 });
 
 $(document).ready(async function () {
-    await loadIntoSideMenu(JSON_URL);
+    await loadTalentosIntoSideMenu(JSON_URL);
 });
 
 $(document).ready(async function () {
-    await loadIntoMobileMenu(JSON_URL);
+    await loadTalentosIntoMobileMenu(JSON_URL);
 });

@@ -1,8 +1,8 @@
 {
 	"class": [
 		{
-			"name": "clerigo",
-			"subclassTitle": "Divine Domain",
+			"name": "Clérigo",
+			"subclassTitle": "Domínios Divinos",
 			"multiclassing": {
 				"requirements": {
 					"wis": 13
@@ -14,62 +14,36 @@
 						"{@item shield|phb|shields}"
 					]
 				}
-			}
+			},
+            "entries": [
+                "Em um panteão, cada divindade exerce influência sobre um aspecto único da vida e da civilização mortal, o qual chamamos de domínio. Ao conjunto dos domínios de uma divindade damos o nome de portfólio. Por exemplo, o portfólio do deus grego Apolo inclui os domínios do Conhecimento, da Vida e da Luz. Como clérigo, você deve escolher um aspecto do portfólio da sua divindade como principal, recebendo poderes relacionados a ele.",
+                "A sua escolha pode corresponder a um culto específico dedicado à sua divindade. Apolo, por exemplo, podia ser adorado em uma região como Apolo Febo (\"radiante\"), enfatizando sua influência sobre o domínio da Luz, e em outro como Apolo Acésio (\"cura\"), enfatizando sua associação com o domínio da Vida. Ou então a sua escolha de domínio pode estar ligada simplesmente a uma questão de preferência pessoal.",
+                "A descrição de cada domínio contém exemplos de divindades que exercem influência sobre ele. Foram incluídos deuses de Forgotten Realms, Greyhawk, Dragonlance e Eberron, além daqueles pertencentes aos panteões celta, grego, nórdico e egípcio da antiguidade."
+            ]
 		}
 	],
-	"subclass": [
+	"subclasses": [
 		{
-			"name": "Knowledge Domain",
-			"shortName": "Knowledge",
+			"name": "Domínio do Conhecimento",
+			"shortName": "Conhecimento",
+            "id": "conhecimento",
 			"source": "PHB",
-			"className": "Cleric",
+			"className": "Clérigo",
 			"classSource": "PHB",
-			"page": 59,
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"command",
-							"identify"
-						],
-						"3": [
-							"augury",
-							"suggestion"
-						],
-						"5": [
-							"nondetection",
-							"speak with dead"
-						],
-						"7": [
-							"arcane eye",
-							"confusion"
-						],
-						"9": [
-							"legend lore",
-							"scrying"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "Knowledge Domain",
-                    "source": "PHB",
-                    "page": 59,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Knowledge",
-                    "subclassSource": "PHB",
-                    "level": 1,
+			"page": 66,
+            "entries": [
+                "Os deuses do conhecimento - incluindo Oghma, Boccob, Gilean, Aureon e Thoth - valorizam a aprendizagem e a compreensão acima de tudo. Alguns ensinam que o conhecimento deve ser reunido e compartilhado em bibliotecas e universidades, ou promovem o conhecimento prático, advindo da experiência e da invenção. Algumas divindades acumulam o conhecimento e guardam os segredos para si. Outras prometem aos seus seguidores um vasto poder, caso desvendem os segredos do multiverso. Os seguidores desses deuses estudam a tradição esotérica, recolhem tomos antigos, exploram lugares secretos e aprendem tudo o quanto podem. Alguns deuses deste domínio promovem o conhecimento prático do ofício e da invenção, incluindo as divindades ferreiras como Gond, Reorx, Onatar, Moradin, Hefesto e Goibhniu.",
+                {
+                    "type": "entries",
+                    "name": "Magias de Domínio",
                     "entries": [
-                        "The gods of knowledge\u2014including {@deity Oghma}, {@deity Boccob|Greyhawk}, {@deity Gilean|Dragonlance}, {@deity Aureon|Eberron}, and {@deity Thoth|Egyptian}\u2014value learning and understanding above all. Some teach that knowledge is to be gathered and shared in libraries and universities, or promote the practical knowledge of craft and invention. Some deities hoard knowledge and keep its secrets to themselves. And some promise their followers that they will gain tremendous power if they unlock the secrets of the multiverse. Followers of these gods study esoteric lore, collect old tomes, delve into the secret places of the earth, and learn all they can. Some gods of knowledge promote the practical knowledge of craft and invention, including smith deities like {@deity Gond}, {@deity Reorx|Dragonlance}, {@deity Onatar|Eberron}, {@deity Moradin|Nonhuman}, {@deity Hephaestus|Greek}, and {@deity Goibhniu|Celtic}.",
-                        "At each indicated cleric level, you add the listed spells to your spells prepared.",
+                        "Você ganha magias de domínio nos níveis de clérigo listados na tabela Magias do Domínio do Conhecimento.",
                         {
                             "type": "table",
-                            "caption": "Knowledge Domain Spells",
+                            "caption": "Magias do Domínio do Conhecimento",
                             "colLabels": [
-                                "Cleric Level",
-                                "Spells"
+                                "Nível de Clérigo",
+                                "Magias"
                             ],
                             "colStyles": [
                                 "col-2 text-center",
@@ -77,158 +51,120 @@
                             ],
                             "rows": [
                                 [
-                                    "1st",
-                                    "{@spell command}, {@spell identify}"
+                                    "1º",
+                                    "{@spell comando}, {@spell identificar}"
                                 ],
                                 [
-                                    "3rd",
-                                    "{@spell augury}, {@spell suggestion}"
+                                    "3º",
+                                    "{@spell augúrio}, {@spell sugestão}"
                                 ],
                                 [
-                                    "5th",
-                                    "{@spell nondetection}, {@spell speak with dead}"
+                                    "5º",
+                                    "{@spell falar com mortos}, {@spell indetectável}"
                                 ],
                                 [
-                                    "7th",
-                                    "{@spell arcane eye}, {@spell confusion}"
+                                    "7º",
+                                    "{@spell confusão}, {@spell olho arcano}"
                                 ],
                                 [
-                                    "9th",
-                                    "{@spell legend lore}, {@spell scrying}"
+                                    "9º",
+                                    "{@spell lendas e histórias}, {@spell vidência}"
                                 ]
                             ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Blessings of Knowledge|Cleric||Knowledge||1"
                         }
                     ]
-                },
+                }
+            ],
+			"subclassFeatures": [
                 {
-                    "name": "Blessings of Knowledge",
+                    "name": "Bênçãos do Conhecimento",
                     "source": "PHB",
-                    "page": 59,
-                    "className": "Cleric",
+                    "page": 66,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Knowledge",
+                    "subclassShortName": "Conhecimento",
                     "subclassSource": "PHB",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "At 1st level, you learn two languages of your choice. You also become proficient in your choice of two of the following skills: {@skill Arcana}, {@skill History}, {@skill Nature}, or {@skill Religion}.",
-                        "Your proficiency bonus is doubled for any ability check you make that uses either of those skills."
+                        "No 1º nível, você aprende dois idiomas à sua escolha. Você também se torna proficiente em duas das seguintes perícias: Arcanismo, História, Natureza ou Religião.",
+                        "Seu bônus de proficiência é duplicado em testes de atributo que utilizem uma das duas perícias escolhidas."
                     ]
                 },
                 {
-                    "name": "Channel Divinity: Knowledge of the Ages",
+                    "name": "Canalizar Divindade: Conhecimento das Eras",
                     "source": "PHB",
-                    "page": 59,
-                    "className": "Cleric",
+                    "page": 66,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Knowledge",
+                    "subclassShortName": "Conhecimento",
                     "subclassSource": "PHB",
                     "level": 2,
                     "header": 2,
                     "entries": [
-                        "Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool."
+                        "A partir do 2º nível, você pode usar sua característica Canalizar Divindade para beber da fonte divina do conhecimento. Como sua ação, você escolhe uma perícia ou ferramenta, adquirindo proficiência com ela durante 10 minutos."
                     ]
                 },
                 {
-                    "name": "Channel Divinity: Read Thoughts",
+                    "name": "Canalizar Divindade: Ler Pensamentos",
                     "source": "PHB",
-                    "page": 59,
-                    "className": "Cleric",
+                    "page": 66,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Knowledge",
+                    "subclassShortName": "Conhecimento",
                     "subclassSource": "PHB",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "At 6th level, you can use your Channel Divinity to read a creature's thoughts. You can then use your access to the creature's mind to command it.",
-                        "As an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can't use this feature on it again until you finish a long rest.",
-                        "If the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.",
-                        "During that time, you can use your action to end this effect and cast the {@spell suggestion} spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell."
+                        "No 6º nível, você pode usar sua característica Canalizar Divindade para ler os pensamentos de uma criatura. Em seguida, pode usar seu acesso à mente dela para comandá-la.",
+                        "Ao fazer isso, escolha uma criatura que você possa ver e que esteja a até 9 metros de distância. Ela deve realizar um teste de salvaguarda usando Sabedoria. Em caso de sucesso, você não poderá voltar a usar esta característica na criatura até ter completado um descanso longo.",
+                        "Em caso de falha, você será capaz de ler os pensamentos superficiais dela (tais como emoções, percepções, memórias e imagens do momento) enquanto ela estiver a até 18 metros de distância de você. Este efeito dura 1 minuto.",
+                        "Durante esse tempo, você pode usar sua ação para terminar este efeito e usar a magia {@spell sugestão} na criatura sem gastar um espaço de magia. Ela falhará automaticamente em sua salvaguarda contra esta magia."
                     ]
                 },
                 {
-                    "name": "Blessed Strikes",
-                    "source": "TCE",
-                    "page": 30,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Knowledge",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Potent Spellcasting feature}",
-                        "You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "UAClassFeatureVariants",
-                    "page": 4,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Knowledge",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric Divine Domain feature (replaces Potent Spellcasting)}",
-                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Potent Spellcasting",
+                    "name": "Conjuração Poderosa",
                     "source": "PHB",
-                    "page": 59,
-                    "className": "Cleric",
+                    "page": 66,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Knowledge",
+                    "subclassShortName": "Conhecimento",
                     "subclassSource": "PHB",
                     "level": 8,
                     "header": 2,
                     "entries": [
-                        "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+                        "A partir do 8º nível, você adiciona seu modificador de Sabedoria ao dano causado por seus truques de clérigo."
                     ]
                 },
                 {
-                    "name": "Visions of the Past",
+                    "name": "Visões do Passado",
                     "source": "PHB",
-                    "page": 59,
-                    "className": "Cleric",
+                    "page": 66,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Knowledge",
+                    "subclassShortName": "Conhecimento",
                     "subclassSource": "PHB",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell.",
-                        "Once you use this feature, you can't use it again until you finish a short or long rest.",
+                        "A partir do 17º nível, você pode invocar visões do passado que se relacionam com um objeto que você tenha em mãos, ou com os seus arredores imediatos. Após gastar pelo menos 1 minuto em meditação e oração, você recebe vislumbres oníricos e nebulosos de eventos recentes. Você pode meditar dessa forma por uma quantidade de minutos igual ao seu valor de Sabedoria, e precisa manter a concentração durante esse tempo como se estivesse conjurando uma magia.",
+                        "Após usar esta característica, não pode utilizá-la novamente até terminar um período de descanso curto ou longo.",
                         {
-                            "type": "entries",
+                            "type": "options",
+                            "count": 1,
                             "entries": [
                                 {
                                     "type": "entries",
-                                    "name": "Object Reading",
+                                    "name": "Leitura de Objeto",
                                     "entries": [
-                                        "Holding an object as you meditate, you can see visions of the object's previous owner. After meditating for 1 minute, you learn how the owner acquired and lost the object, as well as the most recent significant event involving the object and that owner. If the object was owned by another creature in the recent past (within a number of days equal to your Wisdom score), you can spend 1 additional minute for each owner to learn the same information about that creature."
+                                        "Ao segurar um objeto enquanto medita, você é capaz de ter visões do último proprietário dele. Após meditar por 1 minuto, você aprende como o proprietário adquiriu e perdeu o objeto, e qual foi o evento significativo mais recente envolvendo ambos. Se o objeto pertenceu a outras criaturas recentemente (um número de dias igual ao seu valor de Sabedoria), você pode empregar 1 minuto adicional por proprietário, com o intuito de obter as mesmas informações descritas acima."
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "entries",
-                            "entries": [
+                                },
                                 {
                                     "type": "entries",
-                                    "name": "Area Reading",
+                                    "name": "Leitura de Área",
                                     "entries": [
-                                        "As you meditate, you see visions of recent events in your immediate vicinity (a room, street, tunnel, clearing, or the like, up to a 50-foot cube), going back a number of days equal to your Wisdom score. For each minute you meditate, you learn about one significant event, beginning with the most recent. Significant events typically involve powerful emotions, such as battles and betrayals, marriages and murders, births and funerals. However, they might also include more mundane events that are nevertheless important in your current situation."
+                                        "Ao meditar, você tem visões de eventos recentes em sua vizinhança imediata (uma sala, rua, túnel, clareira, etc., até uma área de formato cúbico com 15 metros de lado), voltando no passado um número de dias igual ao seu valor de Sabedoria. Cada minuto de meditação lhe rende informações sobre um evento significativo, começando pelo mais recente. Eventos significativos costumam envolver emoções fortes e intensas, como aquelas evocadas em batalhas e traições, casamentos e assassinatos, nascimentos e funerais. No entanto, a leitura também pode incluir eventos mais comuns que, no entanto sejam relevantes para a sua situação atual."
                                     ]
                                 }
                             ]
@@ -237,62 +173,725 @@
                 }
 			]
 		},
-		{
-			"name": "Life Domain",
-			"shortName": "Life",
+        {
+			"name": "Domínio da Guerra",
+			"shortName": "Guerra",
+            "id": "guerra",
 			"source": "PHB",
-			"className": "Cleric",
+			"className": "Clérigo",
 			"classSource": "PHB",
-			"page": 60,
+			"page": 67,
+            "level": 1,
+            "entries": [
+                "A guerra se manifesta de muitas formas. Ela transforma pessoas comuns em heróis. Mas também pode ser desesperada e horrível, com atos de crueldade e covardia que nublam os exemplos de excelência e coragem. Em ambos os casos, os deuses da guerra zelam pelos guerreiros, e os recompensam por seus grandes feitos. Os clérigos desses deuses se destacam em batalha, inspirando seus companheiros a lutar o bom combate, ou oferecendo atos de violência como Preces. Os deuses da guerra incluem campeões de honra e cavalheirismo como Torm, Heironeous e Kiri-Jolith, os deuses da destruição e pilhagem, como Erythnul, as Fúrias, Gruumsh e Ares, e também as divindades da conquista e da dominação, como Bane, Hextor e Maglubiyet. Outros deuses da guerra, como Tempus, Nike e Nuada, assumem uma posição mais neutra, promovendo a guerra em todas as suas manifestações e apoiando guerreiros em todas as circunstâncias.",
+                {
+                    "type": "entries",
+                    "name": "Magias de Domínio",
+                    "entries": [
+                        "Você ganha magias de domínio nos níveis de clérigo listados na tabela Magias do Domínio da Guerra.",
+                        {
+                            "type": "table",
+                            "caption": "Magias do Domínio da Guerra",
+                            "colLabels": [
+                                "Nível de Clérigo",
+                                "Magias"
+                            ],
+                            "colStyles": [
+                                "col-2 text-center",
+                                "col-10"
+                            ],
+                            "rows": [
+                                [
+                                    "1º",
+                                    "{@spell escudo da fé}, {@spell favor divino}"
+                                ],
+                                [
+                                    "3º",
+                                    "{@spell arma espiritual}, {@spell arma mágica}"
+                                ],
+                                [
+                                    "5º",
+                                    "{@spell guardiões espirituais}, {@spell manto do cruzado}"
+                                ],
+                                [
+                                    "7º",
+                                    "{@spell movimentação livre}, {@spell pele-rocha}"
+                                ],
+                                [
+                                    "9º",
+                                    "{@spell coluna de chamas}, {@spell imobilizar monstro}"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ],
+			"subclassFeatures": [
+                {
+                    "name": "Proficiência Bônus",
+                    "source": "PHB",
+                    "page": 67,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Guerra",
+                    "subclassSource": "PHB",
+                    "level": 1,
+                    "header": 1,
+                    "entries": [
+                        "No 1º nível, você ganha proficiência com armas marciais e armaduras pesadas."
+                    ]
+                },
+                {
+                    "name": "Sacerdote da Guerra",
+                    "source": "PHB",
+                    "page": 67,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Guerra",
+                    "subclassSource": "PHB",
+                    "level": 1,
+                    "header": 1,
+                    "entries": [
+                        "A partir do 1º nível, seu deus lhe envia ondas de inspiração enquanto durar o seu engajamento no combate. Ao usar a ação Atacar, você pode realizar um ataque armado como sua ação bônus.",
+                        "Você pode usar esta característica uma quantidade de vezes igual ao seu modificador de Sabedoria (mínimo de uma vez), recuperando os usos gastos após um descanso longo."
+                    ]
+                },
+                {
+                    "name": "Canalizar Divindade: Ataque Direcionado",
+                    "source": "PHB",
+                    "page": 67,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Guerra",
+                    "subclassSource": "PHB",
+                    "level": 2,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 2º nível, você pode usar sua característica Canalizar Divindade para atacar com precisão sobrenatural. Ao realizar uma jogada de ataque, você pode usar Canalizar Divindade para ganhar um bônus de +10 na jogada. É preciso fazer essa escolha após checar o resultado da jogada, mas antes que o DM diga se o ataque foi bem ou malsucedido."
+                    ]
+                },
+                {
+                    "name": "Canalizar Divindade: Bênção do Deus da Guerra",
+                    "source": "PHB",
+                    "page": 67,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Guerra",
+                    "subclassSource": "PHB",
+                    "level": 6,
+                    "header": 2,
+                    "entries": [
+                        "No 6º nível, quando uma criatura a até 10 metros de você realiza uma jogada de ataque, você pode usar sua reação para conceder a ela um bônus de +10 na jogada. Você deve fazer essa escolha após ver o resultado da jogada, mas antes que o DM diga se o ataque foi bem ou malsucedido."
+                    ]
+                },
+                {
+                    "name": "Golpe Divino",
+                    "source": "PHB",
+                    "page": 67,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Guerra",
+                    "subclassSource": "PHB",
+                    "level": 8,
+                    "header": 2,
+                    "entries": [
+                        "No 8º nível, você ganha a habilidade de infundir os golpes da sua arma com energia divina. Uma vez por turno, sempre que atingir uma criatura com um ataque armado, o seu ataque causa 1d8 pontos de dano radiante adicionais. Ao alcançar o 14º nível, o dano adicional aumenta para 2d8."
+                    ]
+                },
+                {
+                    "name": "Avatar da Guerra",
+                    "source": "PHB",
+                    "page": 67,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Guerra",
+                    "subclassSource": "PHB",
+                    "level": 17,
+                    "header": 2,
+                    "entries": [
+                        "No 17º nível, você se torna resistente a dano contundente, cortante e perfurante, causado por armas não mágicas."
+                    ]
+                }
+			]
+		},
+        {
+			"name": "Domínio da Luz",
+			"shortName": "Luz",
+            "id": "luz",
+			"source": "PHB",
+			"className": "Clérigo",
+			"classSource": "PHB",
+			"page": 67,
+            "level": 1,
+            "entries": [
+                "Os deuses da luz – incluindo Helm, Lathander, Pholtus, Branchala, a Chama de Prata, Beleno, Apolo e Re-Horakhty – promovem os ideais de renascimento e renovação, verdade, vigilância e beleza, muitas vezes empregando o símbolo do sol. Alguns desses deuses são retratados como o próprio sol ou como um cocheiro que guia o astro rei através do céu. Outros são sentinelas incansáveis, cujos olhos atravessam cada sombra e veem através de cada mentira. Existem também as divindades da beleza, para as quais a arte é um veículo para a melhoria da alma. Clérigos de um deus da luz são almas iluminadas, infundidas com o brilho e o poder da visão lúcida dos seus deuses, e encarregadas de desmascarar mentiras e iluminar as trevas.",
+                {
+                    "type": "entries",
+                    "name": "Magias de Domínio",
+                    "entries": [
+                        "Você ganha magias de domínio nos níveis de clérigo listados na tabela Magias do Domínio da Luz.",
+                        {
+                            "type": "table",
+                            "caption": "Magias do Domínio da Luz",
+                            "colLabels": [
+                                "Nível de Clérigo",
+                                "Magias"
+                            ],
+                            "colStyles": [
+                                "col-2 text-center",
+                                "col-10"
+                            ],
+                            "rows": [
+                                [
+                                    "1º",
+                                    "{@spell fogo das fadas}, {@spell mãos flamejantes}"
+                                ],
+                                [
+                                    "3º",
+                                    "{@spell esfera flamejante}, {@spell raio ardente}"
+                                ],
+                                [
+                                    "5º",
+                                    "{@spell bola de fogo}, {@spell luz do dia}"
+                                ],
+                                [
+                                    "7º",
+                                    "{@spell defensor da fé}, {@spell muralha de fogo}"
+                                ],
+                                [
+                                    "9º",
+                                    "{@spell coluna de chamas}, {@spell vidência}"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ],
+			"subclassFeatures": [
+                {
+                    "name": "Truque Bônus",
+                    "source": "PHB",
+                    "page": 68,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Luz",
+                    "subclassSource": "PHB",
+                    "level": 1,
+                    "header": 1,
+                    "entries": [
+                        "Ao escolher este domínio no 1º nível, você recebe o truque {@spell luz}, caso ainda não o possua."
+                    ]
+                },
+                {
+                    "name": "Labareda Protetora",
+                    "source": "PHB",
+                    "page": 68,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Luz",
+                    "subclassSource": "PHB",
+                    "level": 1,
+                    "header": 1,
+                    "entries": [
+                        "Também no 1º nível, você pode interpor a luz divina entre você e um inimigo. O ataque de uma criatura que você possa ver e que esteja a uma distância de até 9 metros permite que você use sua reação para impor desvantagem à jogada de ataque dela, fazendo com que labaredas de luz se interponham entre vocês. Um atacante que não possa ser {@condition cegado} é imune a esta característica.",
+                        "Você pode usar esta característica uma quantidade de vezes igual ao seu modificador de Sabedoria (mínimo de uma vez). Os usos desta característica são recuperados após um descanso longo."
+                    ]
+                },
+                {
+                    "name": "Canalizar Divindade: Brilho do Amanhecer",
+                    "source": "PHB",
+                    "page": 68,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Luz",
+                    "subclassSource": "PHB",
+                    "level": 2,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 2º nível, você pode usar sua característica Canalizar Divindade para canalizar a luz solar, banindo a escuridão e causando dano radiante em seus inimigos.",
+                        "Como sua ação no turno, você ergue seu símbolo sagrado, dissipando qualquer escuridão mágica a uma distância de até 10 metros. Além disso, cada criatura hostil a até 9 metros de você deve realizar um teste de salvaguarda usando Constituição. Em caso de falha, a criatura sofre 2d10 de dano radiante + seu nível de clérigo, e metade disso no caso de sucesso. Uma criatura sob cobertura total não é afetada."
+                    ]
+                },
+                {
+                    "name": "Labareda Aprimorada",
+                    "source": "PHB",
+                    "page": 68,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Luz",
+                    "subclassSource": "PHB",
+                    "level": 6,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 6º nível, você também pode usar a sua característica Labareda Protetora quando uma criatura que você possa ver e que esteja a até 10 metros de distância atacar um outro alvo diferente de você."
+                    ]
+                },
+                {
+                    "name": "Conjuração Poderosa",
+                    "source": "PHB",
+                    "page": 68,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Luz",
+                    "subclassSource": "PHB",
+                    "level": 8,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 8º nível, você adiciona seu modificador de Sabedoria ao dano causado por seus truques de clérigo."
+                    ]
+                },
+                {
+                    "name": "Coroa de Luz",
+                    "source": "PHB",
+                    "page": 68,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Luz",
+                    "subclassSource": "PHB",
+                    "level": 17,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 17º nível, você pode usar sua ação para ativar uma aura de luz solar que dura um minuto, ou até que você a cancele usando outra ação. A aura também emite luz plena em um raio de 18 metros e meia-luz em 9 metros adicionais. Qualquer inimigo atingido pela luz brilhante tem desvantagem em salvaguardas contra quaisquer magias que causem dano ígneo ou radiante."
+                    ]
+                }
+			]
+		},
+		{
+			"name": "Domínio da Natureza",
+			"shortName": "Natureza",
+            "id": "natureza",
+			"source": "PHB",
+			"className": "Clérigo",
+			"classSource": "PHB",
+			"page": 68,
+            "level": 1,
+            "entries": [
+                "Os deuses da natureza são tão variados quanto o próprio mundo natural, indo desde os inescrutáveis deuses das florestas profundas (como Silvano, Obad-Hai, Chislev, Balinor e Pã), até divindades amistosas, associadas a rios e bosques específicos (como Eldath). Os druidas veneram a natureza como um todo e podem servir a uma dessas divindades, praticando rituais misteriosos e recitando orações quase esquecidas em sua própria língua secreta. Mas muitos desses deuses também empregam clérigos, campeões que assumem um papel mais ativo na busca pelos interesses de um deus da natureza em particular. Esses clérigos podem caçar as monstruosidades malignas que destroem as florestas, abençoar a colheita dos fiéis, ou murchar as colheitas daqueles que enfurecem seus deuses.",
+                {
+                    "type": "entries",
+                    "name": "Magias de Domínio",
+                    "entries": [
+                        "Você ganha magias de domínio nos níveis de clérigo listados na tabela Magias do Domínio da Natureza.",
+                        {
+                            "type": "table",
+                            "caption": "Magias do Domínio da Natureza",
+                            "colLabels": [
+                                "Nível de Clérigo",
+                                "Magias"
+                            ],
+                            "colStyles": [
+                                "col-2 text-center",
+                                "col-10"
+                            ],
+                            "rows": [
+                                [
+                                    "1º",
+                                    "{@spell amizade animal}, {@spell falar com animais}"
+                                ],
+                                [
+                                    "3º",
+                                    "{@spell pele-casca}, {@spell crescer espinhos}"
+                                ],
+                                [
+                                    "5º",
+                                    "{@spell crescimento de plantas}, {@spell muralha de vento}"
+                                ],
+                                [
+                                    "7º",
+                                    "{@spell dominar fera}, {@spell vinha esmagadora}"
+                                ],
+                                [
+                                    "9º",
+                                    "{@spell praga de insetos}, {@spell passo arbóreo}"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ],
+			"subclassFeatures": [
+                {
+                    "name": "Acólito da Natureza",
+                    "source": "PHB",
+                    "page": 68,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Natureza",
+                    "subclassSource": "PHB",
+                    "level": 1,
+                    "header": 1,
+                    "entries": [
+                        "No 1º nível, você aprende um truque de druida à sua escolha. Você também ganha proficiência em uma das seguintes perícias à sua escolha: Adestrar Animais, Natureza ou Sobrevivência."
+                    ]
+                },
+                {
+                    "name": "Proficiência Bônus",
+                    "source": "PHB",
+                    "page": 69,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Natureza",
+                    "subclassSource": "PHB",
+                    "level": 1,
+                    "header": 1,
+                    "entries": [
+                        "Ainda no 1º nível, você ganha proficiência com armaduras pesadas."
+                    ]
+                },
+                {
+                    "name": "Canalizar Divindade: Enfeitiçar Animais e Plantas",
+                    "source": "PHB",
+                    "page": 69,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Natureza",
+                    "subclassSource": "PHB",
+                    "level": 2,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 2º nível, você pode usar sua característica Canalizar Divindade para enfeitiçar animais e plantas",
+                        "Como sua ação no turno, você ergue seu símbolo sagrado e invoca o nome da sua divindade. Cada animal ou planta que puder vê-lo ou ouvi-lo e estiver a até 9 metros de distância deverá fazer uma salvaguarda de Sabedoria. Em caso de falha, estará {@condition enfeitiçada} por você durante um minuto ou até sofrer dano. Enquanto estiver {@condition enfeitiçada}, será amigável com você e com aqueles que você escolher."
+                    ]
+                },
+                {
+                    "name": "Enfraquecer os Elementos",
+                    "source": "PHB",
+                    "page": 69,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Natureza",
+                    "subclassSource": "PHB",
+                    "level": 6,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 6º nível, quando você ou uma criatura a até 9 metros de distância sofrerem dano ácido, enregelante, flamejante, elétrico ou trovejante, você poderá usar sua reação para conceder resistência contra o dano a si mesmo ou à criatura."
+                    ]
+                },
+                {
+                    "name": "Golpe Divino",
+                    "source": "PHB",
+                    "page": 69,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Natureza",
+                    "subclassSource": "PHB",
+                    "level": 8,
+                    "header": 2,
+                    "entries": [
+                        "No 8º nível, você ganha a habilidade de infundir os golpes da sua arma com energia divina. Uma vez a cada turno em que você atinge uma criatura com um ataque armado, pode fazer com que o ataque cause 1d8 pontos de dano elétrico, enregelante ou flamejante adicionais (a sua escolha). Ao alcançar o 14º nível, o dano adicional aumenta para 2d8."
+                    ]
+                },
+                {
+                    "name": "Mestre da Natureza",
+                    "source": "PHB",
+                    "page": 69,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Natureza",
+                    "subclassSource": "PHB",
+                    "level": 17,
+                    "header": 2,
+                    "entries": [
+                        "No 17º nível, você ganha a habilidade de comandar animais e plantas. Enquanto as criaturas estiverem {@condition enfeitiçadas} pela sua característica Enfeitiçar Animais e Plantas, você pode realizar uma ação bônus no seu turno para comandar verbalmente os atos de cada uma, no próximo turno delas."
+                    ]
+                }
+			]
+		},
+		{
+			"name": "Domínio da Tempestade",
+			"shortName": "Tempestade",
+            "id": "tempestade",
+			"source": "PHB",
+			"className": "Clérigo",
+			"classSource": "PHB",
+			"page": 69,
+            "level": 1,
+            "entries": [
+                "Dentre os deuses cujos portfólios incluem o domínio da tempestade estão Talos, Umberlee, Kord, Zeboim, o Devorador, Zeus e Thor, todos governantes das tormentas, dos mares e dos céus. Esses são os deuses dos relâmpagos, trovões e terremotos, ou do fogo, da violência, da força física e da coragem. Em alguns panteões, um deus deste domínio governa sobre todas as outras divindades e é conhecido por sua justiça \"feita por meio de raios\". Nos panteões dos navegadores, os deuses deste domínio são divindades oceânicas e patronos dos marinheiros. Os deuses da tempestade enviam seus clérigos para inspirar o medo na população, seja para manter as pessoas no caminho reto ou para encorajá-las a oferecer sacrifícios de apaziguamento, com o intuito de afastar a ira divina.",
+                {
+                    "type": "entries",
+                    "name": "Magias de Domínio",
+                    "entries": [
+                        "Você ganha magias de domínio nos níveis de clérigo listados na tabela Magias do Domínio da Tempestade.",
+                        {
+                            "type": "table",
+                            "caption": "Magias do Domínio da Tempestade",
+                            "colLabels": [
+                                "Nível de Clérigo",
+                                "Magias"
+                            ],
+                            "colStyles": [
+                                "col-2 text-center",
+                                "col-10"
+                            ],
+                            "rows": [
+                                [
+                                    "1º",
+                                    "{@spell névoa obscurecente}, {@spell onda trovejante}"
+                                ],
+                                [
+                                    "3º",
+                                    "{@spell despedaçar}, {@spell lufada de vento}"
+                                ],
+                                [
+                                    "5º",
+                                    "{@spell convocar relâmpagos}, {@spell nevasca}"
+                                ],
+                                [
+                                    "7º",
+                                    "{@spell controlar água}, {@spell tempestade de gelo}"
+                                ],
+                                [
+                                    "9º",
+                                    "{@spell onda destrutiva}, {@spell praga de insetos}"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ],
+			"subclassFeatures": [
+                {
+                    "name": "Proficiência Bônus",
+                    "source": "PHB",
+                    "page": 69,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Tempestade",
+                    "subclassSource": "PHB",
+                    "level": 1,
+                    "header": 1,
+                    "entries": [
+                        "No 1º nível, você ganha proficiência com armas marciais e armaduras pesadas."
+                    ]
+                },
+                {
+                    "name": "Ira da Tempestade",
+                    "source": "PHB",
+                    "page": 69,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Tempestade",
+                    "subclassSource": "PHB",
+                    "level": 1,
+                    "header": 1,
+                    "entries": [
+                        "Ainda no 1º nível, você pode responder violentamente a ataques. Quando for atingido por um ataque de uma criatura que esteja a 1,5 metro de distância, caso possa enxergá-la, você pode usar a sua reação para forçá-la a realizar uma salvaguarda de Destreza. Em caso de falha, ela sofre 2d8 pontos de dano elétrico ou trovejante (à sua escolha), e metade disso caso seja bem-sucedida.",
+                        "Você pode usar esta característica uma quantidade de vezes igual ao seu modificador de Sabedoria (mínimo de uma vez), recuperando os usos gastos após um descanso longo."
+                    ]
+                },
+                {
+                    "name": "Canalizar Divindade: Ira Destruidora",
+                    "source": "PHB",
+                    "page": 69,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Tempestade",
+                    "subclassSource": "PHB",
+                    "level": 2,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 2º nível, você pode usar sua característica Canalizar Divindade para usar o poder da tempestade com ferocidade desmedida.",
+                        "Ao determinar suas jogadas de dano elétrico ou trovejante, você pode usar a característica Canalizar Divindade para garantir o dano máximo, ao invés do resultado obtido nos dados."
+                    ]
+                },
+                {
+                    "name": "Ataque Relampejante",
+                    "source": "PHB",
+                    "page": 69,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Tempestade",
+                    "subclassSource": "PHB",
+                    "level": 6,
+                    "header": 2,
+                    "entries": [
+                        "No 6º nível, sempre que causar dano elétrico em uma criatura Grande ou menor, você também pode empurrá-la a até 3 metros de distância."
+                    ]
+                },
+                {
+                    "name": "Golpe Divino",
+                    "source": "PHB",
+                    "page": 69,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Tempestade",
+                    "subclassSource": "PHB",
+                    "level": 8,
+                    "header": 2,
+                    "entries": [
+                        "No 8º nível, você ganha a habilidade de infundir os golpes da sua arma com energia divina. Uma vez por turno, ao atingir uma criatura com um ataque armado, o ataque causa 1d8 pontos de dano elétrico adicionais. Ao alcançar o 14º nível, o dano adicional aumenta para 2d8."
+                    ]
+                },
+                {
+                    "name": "Filho da Tempestade",
+                    "source": "PHB",
+                    "page": 69,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Tempestade",
+                    "subclassSource": "PHB",
+                    "level": 17,
+                    "header": 2,
+                    "entries": [
+                        "No 17º nível, sempre que você não estiver no subsolo ou no interior de construções, você passa a ter deslocamento de voo igual ao seu deslocamento de caminhada atual."
+                    ]
+                }
+			]
+		},
+		{
+			"name": "Domínio da Trapaça",
+			"shortName": "Trapaça",
+            "id": "trapaca",
+			"source": "PHB",
+			"className": "Clérigo",
+			"classSource": "PHB",
+			"page": 69,
+            "level": 1,
+            "entries": [
+                "Os deuses da trapaça - tais como Tymora, Beshaba, Olidammara, o Viajante, Garl Brilhouro Resplandecente e Loki - são pregadores de peças e incitadores que desafiam constantemente a ordem aceita entre os deuses e os mortais. Eles são os patronos dos ladrões, trapaceiros, apostadores, rebeldes e libertadores. Seus clérigos são uma força de perturbação no mundo, ferindo orgulhos, zombando dos tiranos, roubando dos ricos, libertando cativos e desprezando tradições decadentes. Eles favorecem o subterfúgio, as trapaças, as fraudes e o roubo em lugar do confronto direto.",
+                {
+                    "type": "entries",
+                    "name": "Magias de Domínio",
+                    "entries": [
+                        "Você ganha magias de domínio nos níveis de clérigo listados na tabela Magias do Domínio da Trapaça.",
+                        {
+                            "type": "table",
+                            "caption": "Magias do Domínio da Trapaça",
+                            "colLabels": [
+                                "Nível de Clérigo",
+                                "Magias"
+                            ],
+                            "colStyles": [
+                                "col-2 text-center",
+                                "col-10"
+                            ],
+                            "rows": [
+                                [
+                                    "1º",
+                                    "{@spell disfarçar-se}, {@spell enfeitiçar pessoa}"
+                                ],
+                                [
+                                    "3º",
+                                    "{@spell passo sem rastro}, {@spell reflexos}"
+                                ],
+                                [
+                                    "5º",
+                                    "{@spell dissipar magia}, {@spell piscar}"
+                                ],
+                                [
+                                    "7º",
+                                    "{@spell polimorfia}, {@spell porta dimensional}"
+                                ],
+                                [
+                                    "9º",
+                                    "{@spell dominar pessoa}, {@spell modificar memória}"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ],
+			"subclassFeatures": [
+                {
+                    "name": "Bênção do Trapaceiro",
+                    "source": "PHB",
+                    "page": 70,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Trapaça",
+                    "subclassSource": "PHB",
+                    "level": 1,
+                    "header": 1,
+                    "entries": [
+                        "No 1º nível, você pode usar sua ação para conceder vantagem em testes de Destreza (Furtividade) a uma criatura que aceite ser tocada e que não seja você mesmo. Esta bênção dura uma hora ou até que você use esta característica novamente."
+                    ]
+                },
+                {
+                    "name": "Canalizar Divindade: Invocar Duplicidade",
+                    "source": "PHB",
+                    "page": 70,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Trapaça",
+                    "subclassSource": "PHB",
+                    "level": 2,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 2º nível, você pode usar sua característica Canalizar Divindade para criar um duplo ilusório de si mesmo.",
+                        "Como sua ação no turno, você cria uma ilusão perfeita de si próprio por um minuto, ou até perder a sua concentração (semelhante à concentração em uma magia). A ilusão aparece em um espaço desocupado à sua vista e que esteja a até 9 metros de distância. Com uma ação bônus, você pode mover a ilusão até 9 metros para um espaço que possa ver, mas ela deve permanecer no limite de 36 metros de você.",
+                        "Por toda a duração, você pode conjurar magias como se estivesse no lugar da ilusão, devendo usar, no entanto, seus próprios sentidos. Além disso, quando você e a ilusão estiverem a 1,5 metro de uma criatura que possa ver a ilusão e por ela ser distraída, você ganha vantagem em jogadas de ataque contra essa criatura."
+                    ]
+                },
+                {
+                    "name": "Canalizar Divindade: Manto da Sombra",
+                    "source": "PHB",
+                    "page": 70,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Trapaça",
+                    "subclassSource": "PHB",
+                    "level": 6,
+                    "header": 2,
+                    "entries": [
+                        "A partir do 6º nível, você pode usar Canalizar Divindade para desaparecer.",
+                        "Com uma ação, você se torna {@condition invisível} até o final do seu próximo turno. Você permanece {@condition invisível} até realizar um ataque ou conjurar uma magia."
+                    ]
+                },
+                {
+                    "name": "Golpe Divino",
+                    "source": "PHB",
+                    "page": 70,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Trapaça",
+                    "subclassSource": "PHB",
+                    "level": 8,
+                    "header": 2,
+                    "entries": [
+                        "No 8º nível, você ganha a habilidade de infundir veneno mágico em seus ataques com uma arma - uma dádiva do seu deus. Uma vez a cada turno, ao atingir uma criatura com um ataque da sua arma, o ataque pode causar 1d8 pontos de dano venenoso adicionais ao alvo. Quando você alcança o 14º nível, o dano adicional aumenta para 2d8."
+                    ]
+                },
+                {
+                    "name": "Duplicidade Aprimorada",
+                    "source": "PHB",
+                    "page": 70,
+                    "className": "Clérigo",
+                    "classSource": "PHB",
+                    "subclassShortName": "Trapaça",
+                    "subclassSource": "PHB",
+                    "level": 17,
+                    "header": 2,
+                    "entries": [
+                        "No 17º nível, ao usar Invocar Duplicidade, em vez de um, você pode criar até quatro duplicatas de si mesmo. Como sua ação bônus, você pode mover quantos deles quiser por até 9 metros, a uma distância máxima de 36 metros."
+                    ]
+                }
+			]
+		},
+        {
+			"name": "Domínio da Vida",
+			"shortName": "Vida",
+            "id": "vida",
+			"source": "PHB",
+			"className": "Clérigo",
+			"classSource": "PHB",
+			"page": 70,
 			"srd": true,
 			"basicRules": true,
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"bless",
-							"cure wounds"
-						],
-						"3": [
-							"lesser restoration",
-							"spiritual weapon"
-						],
-						"5": [
-							"beacon of hope",
-							"revivify"
-						],
-						"7": [
-							"death ward",
-							"guardian of faith"
-						],
-						"9": [
-							"mass cure wounds",
-							"raise dead"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "Life Domain",
-                    "source": "PHB",
-                    "page": 60,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Life",
-                    "subclassSource": "PHB",
-                    "level": 1,
+            "level": 1,
+            "entries": [
+                "O domínio da Vida concentra-se na vibrante energia positiva - uma das forças fundamentais do universo, e que sustenta toda a vida. Os deuses da vida promovem a vitalidade e a saúde por meio da cura de doentes e feridos, cuidando dos mais necessitados e espantando as forças da morte e as hordas de mortos-vivos. Na prática, qualquer divindade não maligna pode reivindicar influência sobre este domínio, especialmente as divindades agrícolas (como Chaufitea, Arawai e Dernéter), os deuses do sol (Lathander, Pelor e Re-Horakhty), os deuses da cura ou da persistência (Ilmater, Mishakal, Apolo e Diancecht) e os deuses do lar e da comunidade (Héstia, Hathor e Boldrei).",
+                {
+                    "type": "entries",
+                    "name": "Magias de Domínio",
                     "entries": [
-                        "The Life domain focuses on the vibrant positive energy\u2014one of the fundamental forces of the universe\u2014that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities (such as {@deity Chauntea}, {@deity Arawai|Eberron}, and {@deity Demeter|Greek}), sun gods (such as {@deity Lathander}, {@deity Pelor|Greyhawk}, and {@deity Re-Horakhty|Egyptian}), gods of healing or endurance (such as {@deity Ilmater}, {@deity Mishakal|Dragonlance}, {@deity Apollo|Greek}, and {@deity Diancecht|Celtic}), and gods of home and community (such as {@deity Hestia|Greek}, {@deity Hathor|Egyptian}, and {@deity Boldrei|Eberron}).",
-                        "At each indicated cleric level, you add the listed spells to your spells prepared.",
+                        "Você ganha magias de domínio nos níveis de clérigo listados na tabela Magias do Domínio da Vida.",
                         {
                             "type": "table",
-                            "caption": "Life Domain Spells",
+                            "caption": "Magias do Domínio da Vida",
                             "colLabels": [
-                                "Cleric Level",
-                                "Spells"
+                                "Nível de Clérigo",
+                                "Magias"
                             ],
                             "colStyles": [
                                 "col-2 text-center",
@@ -300,1264 +899,152 @@
                             ],
                             "rows": [
                                 [
-                                    "1st",
-                                    "{@spell bless}, {@spell cure wounds}"
+                                    "1º",
+                                    "{@spell bênção}, {@spell curar ferimentos}"
                                 ],
                                 [
-                                    "3rd",
-                                    "{@spell lesser restoration}, {@spell spiritual weapon}"
+                                    "3º",
+                                    "{@spell arma espiritual}, {@spell restauração menor}"
                                 ],
                                 [
-                                    "5th",
-                                    "{@spell beacon of hope}, {@spell revivify}"
+                                    "5º",
+                                    "{@spell revivificar}, {@spell sinal de esperança}"
                                 ],
                                 [
-                                    "7th",
-                                    "{@spell death ward}, {@spell guardian of faith}"
+                                    "7º",
+                                    "{@spell defensor da fé}, {@spell proteção contra morte}"
                                 ],
                                 [
-                                    "9th",
-                                    "{@spell mass cure wounds}, {@spell raise dead}"
+                                    "9º",
+                                    "{@spell curar ferimentos em massa}, {@spell reviver os mortos}"
                                 ]
                             ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiency|Cleric||Life||1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Disciple of Life|Cleric||Life||1"
                         }
                     ]
-                },
-                {
-                    "name": "Bonus Proficiency",
-                    "source": "PHB",
-                    "page": 60,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Life",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "header": 1,
-                    "entries": [
-                        "When you choose this domain at 1st level, you gain proficiency with heavy armor."
-                    ]
-                },
-                {
-                    "name": "Disciple of Life",
-                    "source": "PHB",
-                    "page": 60,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Life",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "header": 1,
-                    "entries": [
-                        "Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level."
-                    ]
-                },
-                {
-                    "name": "Channel Divinity: Preserve Life",
-                    "source": "PHB",
-                    "page": 60,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Life",
-                    "subclassSource": "PHB",
-                    "level": 2,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.",
-                        "As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct."
-                    ]
-                },
-                {
-                    "name": "Blessed Healer",
-                    "source": "PHB",
-                    "page": 60,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Life",
-                    "subclassSource": "PHB",
-                    "level": 6,
-                    "header": 2,
-                    "entries": [
-                        "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "TCE",
-                    "page": 30,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Life",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Divine Strike feature}",
-                        "You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "UAClassFeatureVariants",
-                    "page": 4,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Life",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric Divine Domain feature (replaces Divine Strike)}",
-                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Divine Strike",
-                    "source": "PHB",
-                    "page": 60,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Life",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "header": 2,
-                    "entries": [
-                        "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} radiant damage to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
-                    ]
-                },
-                {
-                    "name": "Supreme Healing",
-                    "source": "PHB",
-                    "page": 60,
-                    "srd": true,
-                    "basicRules": true,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Life",
-                    "subclassSource": "PHB",
-                    "level": 17,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 17th level, when you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die. For example, instead of restoring {@dice 2d6} hit points to a creature, you restore 12."
-                    ]
                 }
-			]
-		},
-		{
-			"name": "Light Domain",
-			"shortName": "Light",
-			"source": "PHB",
-			"className": "Cleric",
-			"classSource": "PHB",
-			"page": 60,
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"burning hands",
-							"faerie fire"
-						],
-						"3": [
-							"flaming sphere",
-							"scorching ray"
-						],
-						"5": [
-							"daylight",
-							"fireball"
-						],
-						"7": [
-							"guardian of faith",
-							"wall of fire"
-						],
-						"9": [
-							"flame strike",
-							"scrying"
-						]
-					},
-					"known": {
-						"1": [
-							"light#c"
-						]
-					}
-				}
-			],
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Light Domain",
-                    "source": "PHB",
-                    "page": 60,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Light",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "entries": [
-                        "Gods of light\u2014including {@deity Helm}, {@deity Lathander}, {@deity Pholtus|Greyhawk}, {@deity Branchala|Dragonlance}, {@deity the Silver Flame|Eberron}, {@deity Belenus|Celtic}, {@deity Apollo|Greek}, and {@deity Re-Horakhty|Egyptian}\u2014promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun. Some of these gods are portrayed as the sun itself or as a charioteer who guides the sun across the sky. Others are tireless sentinels whose eyes pierce every shadow and see through every deception. Some are deities of beauty and artistry, who teach that art is a vehicle for the soul's improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods' discerning vision, charged with chasing away lies and burning away darkness.",
-                        "At each indicated cleric level, you add the listed spells to your spells prepared.",
-                        {
-                            "type": "table",
-                            "caption": "Light Domain Spells",
-                            "colLabels": [
-                                "Cleric Level",
-                                "Spells"
-                            ],
-                            "colStyles": [
-                                "col-2 text-center",
-                                "col-10"
-                            ],
-                            "rows": [
-                                [
-                                    "1st",
-                                    "{@spell burning hands}, {@spell faerie fire}"
-                                ],
-                                [
-                                    "3rd",
-                                    "{@spell flaming sphere}, {@spell scorching ray}"
-                                ],
-                                [
-                                    "5th",
-                                    "{@spell daylight}, {@spell fireball}"
-                                ],
-                                [
-                                    "7th",
-                                    "{@spell guardian of faith}, {@spell wall of fire}"
-                                ],
-                                [
-                                    "9th",
-                                    "{@spell flame strike}, {@spell scrying}"
-                                ]
-                            ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Cantrip|Cleric||Light||1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Warding Flare|Cleric||Light||1"
-                        }
-                    ]
-                },
                 {
-                    "name": "Bonus Cantrip",
+                    "name": "Proficiência Bônus",
                     "source": "PHB",
-                    "page": 60,
-                    "className": "Cleric",
+                    "page": 70,
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Light",
+                    "subclassShortName": "Vida",
                     "subclassSource": "PHB",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "When you choose this domain at 1st level, you gain the {@spell light} cantrip if you don't already know it. This cantrip doesn't count against the number of cleric cantrips you know."
+                        "Ao escolher este domínio no 1º nível, você ganha proficiência com armaduras pesadas."
                     ]
                 },
                 {
-                    "name": "Warding Flare",
+                    "name": "Discípulo da Vida",
                     "source": "PHB",
-                    "page": 60,
-                    "className": "Cleric",
+                    "page": 70,
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Light",
+                    "subclassShortName": "Vida",
                     "subclassSource": "PHB",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "Also at 1st level, you can interpose divine light between yourself and an attacking enemy. When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing light to flare before the attacker before it hits or misses. An attacker that can't be {@condition blinded} is immune to this feature.",
-                        "You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+                        "Também a partir do 1º nível, suas magias de cura tornam-se mais eficazes. Sempre que usar uma magia de 1º círculo ou maior para restaurar pontos de vida a uma criatura, ela recupera uma quantidade de pontos de vida adicionais igual a 2 + o círculo da magia."
                     ]
                 },
                 {
-                    "name": "Channel Divinity: Radiance of the Dawn",
+                    "name": "Canalizar Divindade: Preservar a Vida",
                     "source": "PHB",
-                    "page": 60,
-                    "className": "Cleric",
+                    "page": 70,
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Light",
+                    "subclassShortName": "Vida",
                     "subclassSource": "PHB",
                     "level": 2,
                     "header": 2,
                     "entries": [
-                        "Starting at 2nd level, you can use your Channel Divinity to harness sunlight, banishing darkness and dealing radiant damage to your foes.",
-                        "As an action, you present your holy symbol, and any magical darkness within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature takes radiant damage equal to {@dice 2d10} + your cleric level on a failed saving throw, and half as much damage on a successful one. A creature that has total cover from you is not affected."
+                        "A partir do 2º nível, você pode usar sua característica Canalizar Divindade para curar os gravemente feridos.",
+                        "Como sua ação no turno, você exibe o seu símbolo sagrado, e evoca a energia curativa, capaz de restaurar um número de pontos de vida igual a cinco vezes o seu nível de clérigo. Escolha quaisquer criaturas a até 9 metros de você e divida esses pontos de vida entre elas. Esta característica só pode restaurar a uma criatura metade da sua quantidade máxima de pontos de vida. Você não pode usar esta característica em um constructo ou morto-vivo."
                     ]
                 },
                 {
-                    "name": "Improved Flare",
+                    "name": "Curandeiro Abençoado",
                     "source": "PHB",
-                    "page": 60,
-                    "className": "Cleric",
+                    "page": 70,
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Light",
+                    "subclassShortName": "Vida",
                     "subclassSource": "PHB",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "Starting at 6th level, you can also use your Warding Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you."
+                        "A partir do 6º nível, suas magias de cura conjuradas sobre terceiros também o curam. Ao conjurar uma magia de 1º círculo ou superior, que restaure pontos de vida a outrem, você recupera uma quantidade de pontos de vida igual a 2 + o círculo da magia."
                     ]
                 },
                 {
-                    "name": "Blessed Strikes",
-                    "source": "TCE",
-                    "page": 30,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Light",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Potent Spellcasting feature}",
-                        "You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "UAClassFeatureVariants",
-                    "page": 4,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Light",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric Divine Domain feature (replaces Potent Spellcasting)}",
-                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Potent Spellcasting",
+                    "name": "Golpe Divino",
                     "source": "PHB",
-                    "page": 60,
-                    "className": "Cleric",
+                    "page": 70,
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Light",
+                    "subclassShortName": "Vida",
                     "subclassSource": "PHB",
                     "level": 8,
                     "header": 2,
                     "entries": [
-                        "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+                        "No 8º nível, você ganha a habilidade de infundir os golpes da sua arma com energia divina. Uma vez por turno em que você atingir uma criatura com um ataque feito com uma arma, o ataque causa 1d8 pontos de dano radiante adicionais. Quando você alcança o 14º nível, o dano adicional aumenta para 2d8."
                     ]
                 },
                 {
-                    "name": "Corona of Light",
+                    "name": "Cura Suprema",
                     "source": "PHB",
-                    "page": 60,
-                    "className": "Cleric",
+                    "page": 70,
+                    "srd": true,
+                    "basicRules": true,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Light",
+                    "subclassShortName": "Vida",
                     "subclassSource": "PHB",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "Starting at 17th level, you can use your action to activate an aura of sunlight that lasts for 1 minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals fire or radiant damage."
+                        "A partir do 17º nível, ao invés de jogar dados para determinar a quantidade de pontos de vida restaurados por uma magia, você pode usar diretamente o maior resultado possível. Por exemplo, em vez de recuperar 2d6 pontos de vida de uma criatura, você recupera 12 pontos."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Nature Domain",
-			"shortName": "Nature",
-			"source": "PHB",
-			"className": "Cleric",
-			"classSource": "PHB",
-			"page": 61,
-			"additionalSpells": [
-				{
-					"known": {
-						"1": {
-							"_": [
-								{
-									"choose": "level=0|class=Druid"
-								}
-							]
-						}
-					},
-					"prepared": {
-						"1": [
-							"animal friendship",
-							"speak with animals"
-						],
-						"3": [
-							"barkskin",
-							"spike growth"
-						],
-						"5": [
-							"plant growth",
-							"wind wall"
-						],
-						"7": [
-							"dominate beast",
-							"grasping vine"
-						],
-						"9": [
-							"insect plague",
-							"tree stride"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "Nature Domain",
-                    "source": "PHB",
-                    "page": 61,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Nature",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "entries": [
-                        "Gods of nature are as varied as the natural world itself, from inscrutable gods of the deep forests (such as {@deity Silvanus}, {@deity Obad-Hai|Greyhawk}, {@deity Chislev|Dragonlance}, {@deity Balinor|Eberron}, and {@deity Pan|Greek}) to friendly deities associated with particular springs and groves (such as {@deity Eldath}). Druids revere nature as a whole and might serve one of these deities, practicing mysterious rites and reciting all-but-forgotten prayers in their own secret tongue. But many of these gods have clerics as well, champions who take a more active role in advancing the interests of a particular nature god. These clerics might hunt the evil monstrosities that despoil the woodlands, bless the harvest of the faithful, or wither the crops of those who anger their gods.",
-                        "At each indicated cleric level, you add the listed spells to your spells prepared.",
-                        {
-                            "type": "table",
-                            "caption": "Nature Domain Spells",
-                            "colLabels": [
-                                "Cleric Level",
-                                "Spells"
-                            ],
-                            "colStyles": [
-                                "col-2 text-center",
-                                "col-10"
-                            ],
-                            "rows": [
-                                [
-                                    "1st",
-                                    "{@spell animal friendship}, {@spell speak with animals}"
-                                ],
-                                [
-                                    "3rd",
-                                    "{@spell barkskin}, {@spell spike growth}"
-                                ],
-                                [
-                                    "5th",
-                                    "{@spell plant growth}, {@spell wind wall}"
-                                ],
-                                [
-                                    "7th",
-                                    "{@spell dominate beast}, {@spell grasping vine}"
-                                ],
-                                [
-                                    "9th",
-                                    "{@spell insect plague}, {@spell tree stride}"
-                                ]
-                            ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Acolyte of Nature|Cleric||Nature||1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiency|Cleric||Nature||1"
-                        }
-                    ]
-                },
-                {
-                    "name": "Acolyte of Nature",
-                    "source": "PHB",
-                    "page": 61,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Nature",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "header": 1,
-                    "entries": [
-                        "At 1st level, you learn one druid cantrip of your choice. This cantrip doesn't count against the number of cleric cantrips you know. You also gain proficiency in one of the following skills of your choice: {@skill Animal Handling}, {@skill Nature}, or {@skill Survival}."
-                    ]
-                },
-                {
-                    "name": "Bonus Proficiency",
-                    "source": "PHB",
-                    "page": 61,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Nature",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "header": 1,
-                    "entries": [
-                        "Also at 1st level, you gain proficiency with heavy armor."
-                    ]
-                },
-                {
-                    "name": "Channel Divinity: Charm Animals and Plants",
-                    "source": "PHB",
-                    "page": 61,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Nature",
-                    "subclassSource": "PHB",
-                    "level": 2,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 2nd level, you can use your Channel Divinity to charm animals and plants.",
-                        "As an action, you present your holy symbol and invoke the name of your deity. Each beast or plant creature that can see you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is {@condition charmed} by you for 1 minute or until it takes damage. While it is {@condition charmed} by you, it is friendly to you and other creatures you designate."
-                    ]
-                },
-                {
-                    "name": "Dampen Elements",
-                    "source": "PHB",
-                    "page": 61,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Nature",
-                    "subclassSource": "PHB",
-                    "level": 6,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 6th level, when you or a creature within 30 feet of you takes acid, cold, fire, lightning, or thunder damage, you can use your reaction to grant resistance to the creature against that instance of the damage."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "TCE",
-                    "page": 30,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Nature",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Divine Strike feature}",
-                        "You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "UAClassFeatureVariants",
-                    "page": 4,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Nature",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric Divine Domain feature (replaces Divine Strike)}",
-                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Divine Strike",
-                    "source": "PHB",
-                    "page": 61,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Nature",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "header": 2,
-                    "entries": [
-                        "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} cold, fire, or lightning damage (your choice) to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
-                    ]
-                },
-                {
-                    "name": "Master of Nature",
-                    "source": "PHB",
-                    "page": 61,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Nature",
-                    "subclassSource": "PHB",
-                    "level": 17,
-                    "header": 2,
-                    "entries": [
-                        "At 17th level, you gain the ability to command animals and plant creatures. While creatures are {@condition charmed} by your Charm Animals and Plants feature, you can take a bonus action on your turn to verbally command what each of those creatures will do on its next turn."
-                    ]
-                }
-			]
-		},
-		{
-			"name": "Tempest Domain",
-			"shortName": "Tempest",
-			"source": "PHB",
-			"className": "Cleric",
-			"classSource": "PHB",
-			"page": 62,
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"fog cloud",
-							"thunderwave"
-						],
-						"3": [
-							"gust of wind",
-							"shatter"
-						],
-						"5": [
-							"call lightning",
-							"sleet storm"
-						],
-						"7": [
-							"control water",
-							"ice storm"
-						],
-						"9": [
-							"destructive wave",
-							"insect plague"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "Tempest Domain",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Tempest",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "entries": [
-                        "Gods whose portfolios include the Tempest domain\u2014including {@deity Talos}, {@deity Umberlee}, {@deity Kord|Greyhawk}, {@deity Zeboim|Dragonlance}, {@deity the Devourer|Eberron}, {@deity Zeus|Greek}, and {@deity Thor|Norse}\u2014govern storms, sea, and sky. They include gods of lightning and thunder, gods of earthquakes, some fire gods, and certain gods of violence, physical strength, and courage. In some pantheons, a god of this domain rules over other deities and is known for swift justice delivered by thunderbolts. In the pantheons of seafaring people, gods of this domain are ocean deities and the patrons of sailors. Tempest gods send their clerics to inspire fear in the common folk, either to keep those folk on the path of righteousness or to encourage them to offer sacrifices of propitiation to ward off divine wrath.",
-                        "At each indicated cleric level, you add the listed spells to your spells prepared.",
-                        {
-                            "type": "table",
-                            "caption": "Tempest Domain Spells",
-                            "colLabels": [
-                                "Cleric Level",
-                                "Spells"
-                            ],
-                            "colStyles": [
-                                "col-2 text-center",
-                                "col-10"
-                            ],
-                            "rows": [
-                                [
-                                    "1st",
-                                    "{@spell fog cloud}, {@spell thunderwave}"
-                                ],
-                                [
-                                    "3rd",
-                                    "{@spell gust of wind}, {@spell shatter}"
-                                ],
-                                [
-                                    "5th",
-                                    "{@spell call lightning}, {@spell sleet storm}"
-                                ],
-                                [
-                                    "7th",
-                                    "{@spell control water}, {@spell ice storm}"
-                                ],
-                                [
-                                    "9th",
-                                    "{@spell destructive wave}, {@spell insect plague}"
-                                ]
-                            ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiencies|Cleric||Tempest||1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Wrath of the Storm|Cleric||Tempest||1"
-                        }
-                    ]
-                },
-                {
-                    "name": "Bonus Proficiencies",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Tempest",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "header": 1,
-                    "entries": [
-                        "At 1st level, you gain proficiency with martial weapons and heavy armor."
-                    ]
-                },
-                {
-                    "name": "Wrath of the Storm",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Tempest",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "header": 1,
-                    "entries": [
-                        "Also at 1st level, you can thunderously rebuke attackers. When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. The creature takes {@damage 2d8} lightning or thunder damage (your choice) on a failed saving throw, and half as much damage on a successful one.",
-                        "You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
-                    ]
-                },
-                {
-                    "name": "Channel Divinity: Destructive Wrath",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Tempest",
-                    "subclassSource": "PHB",
-                    "level": 2,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 2nd level, you can use your Channel Divinity to wield the power of the storm with unchecked ferocity.",
-                        "When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling."
-                    ]
-                },
-                {
-                    "name": "Thunderbolt Strike",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Tempest",
-                    "subclassSource": "PHB",
-                    "level": 6,
-                    "header": 2,
-                    "entries": [
-                        "At 6th level, when you deal lightning damage to a Large or smaller creature, you can also push it up to 10 feet away from you."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "TCE",
-                    "page": 30,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Tempest",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Divine Strike feature}",
-                        "You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "UAClassFeatureVariants",
-                    "page": 4,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Tempest",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric Divine Domain feature (replaces Divine Strike)}",
-                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Divine Strike",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Tempest",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "header": 2,
-                    "entries": [
-                        "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} thunder damage to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
-                    ]
-                },
-                {
-                    "name": "Stormborn",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Tempest",
-                    "subclassSource": "PHB",
-                    "level": 17,
-                    "header": 2,
-                    "entries": [
-                        "At 17th level, you have a flying speed equal to your current walking speed whenever you are not underground or indoors."
-                    ]
-                }
-			]
-		},
-		{
-			"name": "Trickery Domain",
-			"shortName": "Trickery",
-			"source": "PHB",
-			"className": "Cleric",
-			"classSource": "PHB",
-			"page": 62,
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"charm person",
-							"disguise self"
-						],
-						"3": [
-							"mirror image",
-							"pass without trace"
-						],
-						"5": [
-							"blink",
-							"dispel magic"
-						],
-						"7": [
-							"dimension door",
-							"polymorph"
-						],
-						"9": [
-							"dominate person",
-							"modify memory"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "Trickery Domain",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Trickery",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "entries": [
-                        "Gods of trickery\u2014such as {@deity Tymora}, {@deity Beshaba}, {@deity Olidammara|Greyhawk}, {@deity the Traveler|Eberron}, {@deity Garl Glittergold|Nonhuman}, and {@deity Loki|Norse}\u2014are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals. They're patrons of thieves, scoundrels, gamblers, rebels, and liberators. Their clerics are a disruptive force in the world, puncturing pride, mocking tyrants, stealing from the rich, freeing captives, and flouting hollow traditions. They prefer subterfuge, pranks, deception, and theft rather than direct confrontation.",
-                        "At each indicated cleric level, you add the listed spells to your spells prepared.",
-                        {
-                            "type": "table",
-                            "caption": "Trickery Domain Spells",
-                            "colLabels": [
-                                "Cleric Level",
-                                "Spells"
-                            ],
-                            "colStyles": [
-                                "col-2 text-center",
-                                "col-10"
-                            ],
-                            "rows": [
-                                [
-                                    "1st",
-                                    "{@spell charm person}, {@spell disguise self}"
-                                ],
-                                [
-                                    "3rd",
-                                    "{@spell mirror image}, {@spell pass without trace}"
-                                ],
-                                [
-                                    "5th",
-                                    "{@spell blink}, {@spell dispel magic}"
-                                ],
-                                [
-                                    "7th",
-                                    "{@spell dimension door}, {@spell polymorph}"
-                                ],
-                                [
-                                    "9th",
-                                    "{@spell dominate person}, {@spell modify memory}"
-                                ]
-                            ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Blessing of the Trickster|Cleric||Trickery||1"
-                        }
-                    ]
-                },
-                {
-                    "name": "Blessing of the Trickster",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Trickery",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "header": 1,
-                    "entries": [
-                        "Starting when you choose this domain at 1st level, you can use your action to touch a willing creature other than yourself to give it advantage on Dexterity ({@skill Stealth}) checks. This blessing lasts for 1 hour or until you use this feature again."
-                    ]
-                },
-                {
-                    "name": "Channel Divinity: Invoke Duplicity",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Trickery",
-                    "subclassSource": "PHB",
-                    "level": 2,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 2nd level, you can use your Channel Divinity to create an illusory duplicate of yourself.",
-                        "As an action, you create a perfect illusion of yourself that lasts for 1 minute, or until you lose your concentration (as if you were concentrating on a spell). The illusion appears in an unoccupied space that you can see within 30 feet of you. As a bonus action on your turn, you can move the illusion up to 30 feet to a space you can see, but it must remain within 120 feet of you.",
-                        "For the duration, you can cast spells as though you were in the illusion's space, but you must use your own senses. Additionally, when both you and your illusion are within 5 feet of a creature that can see the illusion, you have advantage on attack rolls against that creature, given how distracting the illusion is to the target."
-                    ]
-                },
-                {
-                    "name": "Channel Divinity: Cloak of Shadows",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Trickery",
-                    "subclassSource": "PHB",
-                    "level": 6,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 6th level, you can use your Channel Divinity to vanish.",
-                        "As an action, you become {@condition invisible} until the end of your next turn. You become visible if you attack or cast a spell."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "TCE",
-                    "page": 30,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Trickery",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Divine Strike feature}",
-                        "You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "UAClassFeatureVariants",
-                    "page": 4,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Trickery",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric Divine Domain feature (replaces Divine Strike)}",
-                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Divine Strike",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Trickery",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "header": 2,
-                    "entries": [
-                        "At 8th level, you gain the ability to infuse your weapon strikes with poison\u2014a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} poison damage to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
-                    ]
-                },
-                {
-                    "name": "Improved Duplicity",
-                    "source": "PHB",
-                    "page": 62,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Trickery",
-                    "subclassSource": "PHB",
-                    "level": 17,
-                    "header": 2,
-                    "entries": [
-                        "At 17th level, you can create up to four duplicates of yourself, instead of one, when you use Invoke Duplicity. As a bonus action on your turn, you can move any number of them up to 30 feet, to a maximum range of 120 feet."
-                    ]
-                }
-			]
-		},
-		{
-			"name": "War Domain",
-			"shortName": "War",
-			"source": "PHB",
-			"className": "Cleric",
-			"classSource": "PHB",
-			"page": 63,
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"divine favor",
-							"shield of faith"
-						],
-						"3": [
-							"magic weapon",
-							"spiritual weapon"
-						],
-						"5": [
-							"crusader's mantle",
-							"spirit guardians"
-						],
-						"7": [
-							"freedom of movement",
-							"stoneskin"
-						],
-						"9": [
-							"flame strike",
-							"hold monster"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "War Domain",
-                    "source": "PHB",
-                    "page": 63,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "War",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "entries": [
-                        "War has many manifestations. It can make heroes of ordinary people. It can be desperate and horrific, with acts of cruelty and cowardice eclipsing instances of excellence and courage. In either case, the gods of war watch over warriors and reward them for their great deeds. The clerics of such gods excel in battle, inspiring others to fight the good fight or offering acts of violence as prayers. Gods of war include champions of honor and chivalry (such as {@deity Torm}, {@deity Heironeous|Greyhawk}, and {@deity Kiri-Jolith|Dragonlance}) as well as gods of destruction and pillage (such as {@deity Erythnul|Greyhawk}, {@deity the Fury|Eberron}, {@deity Gruumsh|Nonhuman}, and {@deity Ares|Greek}) and gods of conquest and domination (such as {@deity Bane}, {@deity Hextor|Greyhawk}, and {@deity Maglubiyet|Nonhuman}). Other war gods (such as {@deity Tempus}, {@deity Nike|Greek}, and {@deity Nuada|Celtic}) take a more neutral stance, promoting war in all its manifestations and supporting warriors in any circumstance.",
-                        "At each indicated cleric level, add the listed spells to your spells prepared.",
-                        {
-                            "type": "table",
-                            "caption": "War Domain Spells",
-                            "colLabels": [
-                                "Cleric Level",
-                                "Spells"
-                            ],
-                            "colStyles": [
-                                "col-2 text-center",
-                                "col-10"
-                            ],
-                            "rows": [
-                                [
-                                    "1st",
-                                    "{@spell divine favor}, {@spell shield of faith}"
-                                ],
-                                [
-                                    "3rd",
-                                    "{@spell magic weapon}, {@spell spiritual weapon}"
-                                ],
-                                [
-                                    "5th",
-                                    "{@spell crusader's mantle}, {@spell spirit guardians}"
-                                ],
-                                [
-                                    "7th",
-                                    "{@spell freedom of movement}, {@spell stoneskin}"
-                                ],
-                                [
-                                    "9th",
-                                    "{@spell flame strike}, {@spell hold monster}"
-                                ]
-                            ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiencies|Cleric||War||1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "War Priest|Cleric||War||1"
-                        }
-                    ]
-                },
-                {
-                    "name": "Bonus Proficiencies",
-                    "source": "PHB",
-                    "page": 63,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "War",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "header": 1,
-                    "entries": [
-                        "At 1st level, you gain proficiency with martial weapons and heavy armor."
-                    ]
-                },
-                {
-                    "name": "War Priest",
-                    "source": "PHB",
-                    "page": 63,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "War",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "header": 1,
-                    "entries": [
-                        "From 1st level, your god delivers bolts of inspiration to you while you are engaged in battle. When you use the {@action Attack} action, you can make one weapon attack as a bonus action. You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
-                    ]
-                },
-                {
-                    "name": "Channel Divinity: Guided Strike",
-                    "source": "PHB",
-                    "page": 63,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "War",
-                    "subclassSource": "PHB",
-                    "level": 2,
-                    "header": 2,
-                    "entries": [
-                        "Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
-                    ]
-                },
-                {
-                    "name": "Channel Divinity: War God's Blessing",
-                    "source": "PHB",
-                    "page": 63,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "War",
-                    "subclassSource": "PHB",
-                    "level": 6,
-                    "header": 2,
-                    "entries": [
-                        "At 6th level, when a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "TCE",
-                    "page": 30,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "War",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Divine Strike feature}",
-                        "You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "UAClassFeatureVariants",
-                    "page": 4,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "War",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric Divine Domain feature (replaces Divine Strike)}",
-                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Divine Strike",
-                    "source": "PHB",
-                    "page": 63,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "War",
-                    "subclassSource": "PHB",
-                    "level": 8,
-                    "header": 2,
-                    "entries": [
-                        "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
-                    ]
-                },
-                {
-                    "name": "Avatar of Battle",
-                    "source": "PHB",
-                    "page": 63,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "War",
-                    "subclassSource": "PHB",
-                    "level": 17,
-                    "header": 2,
-                    "entries": [
-                        "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
-                    ]
-                }
-			]
-		},
-		{
-			"name": "Death Domain",
-			"shortName": "Death",
+			"name": "Domínio da Morte",
+			"shortName": "Morte",
+            "id": "morte",
 			"source": "DMG",
-			"className": "Cleric",
+			"className": "Clérigo",
 			"classSource": "PHB",
 			"page": 96,
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"false life",
-							"ray of sickness"
-						],
-						"3": [
-							"blindness/deafness",
-							"ray of enfeeblement"
-						],
-						"5": [
-							"animate dead",
-							"vampiric touch"
-						],
-						"7": [
-							"blight",
-							"death ward"
-						],
-						"9": [
-							"antilife shell",
-							"cloudkill"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "Death Domain",
-                    "source": "DMG",
-                    "page": 96,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Death",
-                    "subclassSource": "DMG",
-                    "level": 1,
+            "level": 1,
+            "entries": [
+                "O Domínio da Morte relaciona-se com as forças que causam a morte, bem como a energia negativa que dá origem a criaturas mortas-vivas. Divindades como Chemosh, Myrkul e Wee Jas são patronas de necromantes, cavaleiros da morte, liches, múmias reais e vampiros. Os deuses do domínio da Morte também encarnam o assassinato (Anúbis, Bhaal e Pyremius), a dor (Iuz ou Loviatar), a doença ou veneno (Incabulos, Talona ou Morgion) e o submundo (Hades e Hel).",
+                {
+                    "type": "entries",
+                    "name": "Magias de Domínio",
                     "entries": [
-                        "The Death domain is concerned with the forces that cause death, as well as the negative energy that gives rise to undead creatures. Deities such as {@deity Chemosh|Dragonlance}, {@deity Myrkul}, and {@deity Wee Jas|Greyhawk} are patrons of necromancers, death knights, liches, mummy lords, and vampires. Gods of the Death domain also embody murder ({@deity Anubis|Egyptian}, {@deity Bhaal}, and Pyremius), pain ({@deity Iuz|Greyhawk} or {@deity Loviatar}), disease or poison ({@deity Incabulos|Greyhawk}, {@deity Talona}, or {@deity Morgion|Dragonlance}), and the underworld ({@deity Hades|Greek} and {@deity Hel|Norse}).",
-                        "At each indicated cleric level, add the listed spells to your spells prepared. They do not count towards your limit.",
+                        "Você ganha magias de domínio nos níveis de clérigo listados na tabela Magias do Domínio da Morte.",
                         {
                             "type": "table",
-                            "caption": "Death Domain Spells",
+                            "caption": "Magias do Domínio da Morte",
                             "colLabels": [
-                                "Cleric Level",
-                                "Spells"
+                                "Nível de Clérigo",
+                                "Magias"
                             ],
                             "colStyles": [
                                 "col-2 text-center",
@@ -1565,219 +1052,141 @@
                             ],
                             "rows": [
                                 [
-                                    "1st",
-                                    "{@spell false life}, {@spell ray of sickness}"
+                                    "1º",
+                                    "{@spell nauseante}, {@spell vitalidade vazia}"
                                 ],
                                 [
-                                    "3rd",
-                                    "{@spell blindness/deafness}, {@spell ray of enfeeblement}"
+                                    "3º",
+                                    "{@spell cegueira/surdez}, {@spell raio de enfraquecimento}"
                                 ],
                                 [
-                                    "5th",
-                                    "{@spell animate dead}, {@spell vampiric touch}"
+                                    "5º",
+                                    "{@spell animar mortos}, {@spell toque vampírico}"
                                 ],
                                 [
-                                    "7th",
-                                    "{@spell blight}, {@spell death ward}"
+                                    "7º",
+                                    "{@spell malogro}, {@spell proteção contra morte}"
                                 ],
                                 [
-                                    "9th",
-                                    "{@spell antilife shell}, {@spell cloudkill}"
+                                    "9º",
+                                    "{@spell cúpula antivida}, {@spell névoa mortal}"
                                 ]
                             ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiency|Cleric||Death|DMG|1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Reaper|Cleric||Death|DMG|1"
                         }
                     ]
-                },
+                }
+            ],
+			"subclassFeatures": [
                 {
-                    "name": "Bonus Proficiency",
+                    "name": "Bônus de Proficiência",
                     "source": "DMG",
                     "page": 96,
-                    "className": "Cleric",
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Death",
+                    "subclassShortName": "Morte",
                     "subclassSource": "DMG",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "When the cleric chooses this domain at 1st level, he or she gains proficiency with martial weapons."
+                        "Quando o clérigo escolhe este domínio no 1º nível, ele ganha proficiência com armas marciais."
                     ]
                 },
                 {
-                    "name": "Reaper",
+                    "name": "Ceifador",
                     "source": "DMG",
                     "page": 96,
-                    "className": "Cleric",
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Death",
+                    "subclassShortName": "Morte",
                     "subclassSource": "DMG",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "At 1st level, the cleric learns one {@filter necromancy cantrip|spells|level=0|school=N} of his or her choice from any spell list. When the cleric casts a necromancy cantrip that normally targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other."
+                        "No 1º nível, o clérigo aprende um truque de necromancia de qualquer lista de magias, à sua escolha. Quando o clérigo conjura um truque de necromancia que normalmente tem como alvo apenas uma criatura, a magia pode, em vez disso, atingir duas criaturas dentro do alcance, a até 1,5 metro uma da outra."
                     ]
                 },
                 {
-                    "name": "Channel Divinity: Touch of Death",
+                    "name": "Canalizar Divindade: Toque da Morte",
                     "source": "DMG",
                     "page": 96,
-                    "className": "Cleric",
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Death",
+                    "subclassShortName": "Morte",
                     "subclassSource": "DMG",
                     "level": 2,
                     "header": 2,
                     "entries": [
-                        "Starting at 2nd level, the cleric can use Channel Divinity to destroy another creature's life force by touch.",
-                        "When the cleric hits a creature with a melee attack, the cleric can use Channel Divinity to deal extra necrotic damage to the target. The damage equals 5 + twice his or her cleric level."
+                        "A partir do 2º nível, o clérigo pode usar Canalizar Divindade para destruir a força vital de outra criatura através do toque.",
+                        "Quando acerta uma criatura com um ataque corpo a corpo, o clérigo pode usar Canalizar Divindade para causar dano necrótico adicional ao alvo. O dano é igual a 5 + o dobro do nível do clérigo."
                     ]
                 },
                 {
-                    "name": "Inescapable Destruction",
+                    "name": "Destruição Inevitável",
                     "source": "DMG",
                     "page": 96,
-                    "className": "Cleric",
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Death",
+                    "subclassShortName": "Morte",
                     "subclassSource": "DMG",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "Starting at 6th level, the cleric's ability to channel negative energy becomes more potent. Necrotic damage dealt by the character's cleric spells and Channel Divinity options ignores resistance to necrotic damage."
+                        "A partir do 6º nível, a habilidade do clérigo de canalizar energia negativa torna-se mais potente. O dano necrótico, causado pelas magias de clérigo e pelas opções de Canalizar Divindade do personagem, ignora a resistência a dano necrótico."
                     ]
                 },
                 {
-                    "name": "Blessed Strikes",
-                    "source": "TCE",
-                    "page": 30,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Death",
-                    "subclassSource": "DMG",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Divine Strike feature}",
-                        "You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "UAClassFeatureVariants",
-                    "page": 4,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Death",
-                    "subclassSource": "DMG",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric Divine Domain feature (replaces Divine Strike)}",
-                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Divine Strike",
+                    "name": "Golpe Divino",
                     "source": "DMG",
                     "page": 96,
-                    "className": "Cleric",
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Death",
+                    "subclassShortName": "Morte",
                     "subclassSource": "DMG",
                     "level": 8,
                     "header": 2,
                     "entries": [
-                        "At 8th level, the cleric gains the ability to infuse his or her weapon strikes with necrotic energy. Once on each of the cleric's turns when he or she hits a creature with a weapon attack, the cleric can cause the attack to deal an extra {@damage 1d8} necrotic damage to the target. When the cleric reaches 14th level, the extra damage increases to {@dice 2d8}."
+                        "No 8º nível, o clérigo ganha a habilidade de infundir sua arma com energia necrótica. Uma vez em cada um dos seus turnos, quando o clérigo atinge uma criatura com um ataque armado, ele pode fazer com que o ataque cause 1d8 pontos de dano necrótico adicionais. Quando o clérigo alcança o 14º nível, o dano adicional aumenta para 2d8."
                     ]
                 },
                 {
-                    "name": "Improved Reaper",
+                    "name": "Ceifador Aprimorado",
                     "source": "DMG",
                     "page": 96,
-                    "className": "Cleric",
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Death",
+                    "subclassShortName": "Morte",
                     "subclassSource": "DMG",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "Starting at 17th level, when the cleric casts a Necromancy spell of 1st through 5th-level that targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other. If the spell consumes its material components, the cleric must provide them for each target."
+                        "A partir do 17º nível, quando o clérigo conjurar uma magia de necromancia de 1º a 5º círculo que tenha como alvo apenas uma criatura, a magia pode, em vez disso, atingir duas criaturas dentro do alcance, a até 1,5 metro uma da outra. Se a magia consumir componentes materiais, o clérigo deve fornecê-los para cada alvo."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Arcana Domain",
-			"shortName": "Arcana",
+			"name": "Domínio Arcano",
+			"shortName": "Arcano",
+            "id": "arcano",
 			"source": "SCAG",
-			"className": "Cleric",
+			"className": "Clérigo",
 			"classSource": "PHB",
-			"page": 125,
-			"additionalSpells": [
-				{
-					"known": {
-						"1": {
-							"_": [
-								{
-									"choose": "level=0|class=Wizard",
-									"count": 2
-								}
-							]
-						}
-					},
-					"prepared": {
-						"1": [
-							"detect magic",
-							"magic missile"
-						],
-						"3": [
-							"magic weapon",
-							"Nystul's magic aura"
-						],
-						"5": [
-							"dispel magic",
-							"magic circle"
-						],
-						"7": [
-							"arcane eye",
-							"Leomund's secret chest"
-						],
-						"9": [
-							"planar binding",
-							"teleportation circle"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "Arcana Domain",
-                    "source": "SCAG",
-                    "page": 125,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Arcana",
-                    "subclassSource": "SCAG",
-                    "level": 1,
+			"page": 127,
+            "level": 1,
+            "entries": [
+                "A magia é uma energia que permeia o multiverso e que alimenta tanto as forças de criação quanto de destruição. Os deuses do domínio Arcano conhecem intimamente os segredos e o potencial da magia. Para alguns desses deuses, o conhecimento da magia é uma tremenda responsabilidade que vem com um entendimento especial da natureza da realidade. Outros deuses do domínio Arcano enxergam a magia como poder bruto, a ser usado como aquele que o manipula achar melhor.",
+                "Os deuses deste domínio frequentemente estão associados ao conhecimento, já que o aprendizado e o poder arcano costumam ser passados juntos. Nos Reinos, divindades deste domínio incluem Azuth e Mystra, bem como Corellon Larethian do panteão élfico. Em outros mundo, este domínio inclui Hecate, Math Mathonwy e Isis; a tríade de deuses lunares de Solinari, Lunitari e Nuitari de Krynn; e Boccob, Vecna e Wee Jas de Greyhawk.",
+                {
+                    "type": "entries",
+                    "name": "Magias de Domínio",
                     "entries": [
-                        "Magic is an energy that suffuses the multiverse and that fuels both destruction and creation. Gods of the Arcana domain know the secrets and potential of magic intimately. For some of these gods, magical knowledge is a great responsibility that comes with a special understanding of the nature of reality. Other gods of Arcana see magic as pure power, to be used as its wielder sees fit.",
-                        "The gods of this domain are often associated with knowledge, as learning and arcane power tend to go hand-in-hand. In the Realms, deities of this domain include {@deity Azuth|Faerûnian|SCAG} and {@deity Mystra|Faerûnian|SCAG}, as well as {@deity Corellon|Dawn War|DMG} Larethian of the elven pantheon. In other worlds, this domain includes {@deity Hecate|Greek}, {@deity Math Mathonwy|Celtic}, and {@deity Isis|Egyptian}; the triple moon gods of {@deity Solinari|Dragonlance}, {@deity Lunitari|Dragonlance}, and {@deity Nuitari|Dragonlance} of Krynn; and {@deity Boccob|Greyhawk}, {@deity Vecna|Greyhawk}, and {@deity Wee Jas|Greyhawk} of Greyhawk.",
-                        "At each indicated cleric level, add the listed spells to your spells prepared. They do not count towards your limit.",
+                        "Você ganha magias de domínio nos níveis de clérigo listados na tabela Magias do Domínio Arcano.",
                         {
                             "type": "table",
-                            "caption": "Arcana Domain Spells",
+                            "caption": "Magias do Domínio Arcano",
                             "colLabels": [
-                                "Cleric Level",
-                                "Spells"
+                                "Nível de Clérigo",
+                                "Magias"
                             ],
                             "colStyles": [
                                 "col-2 text-center",
@@ -1785,68 +1194,66 @@
                             ],
                             "rows": [
                                 [
-                                    "1st",
-                                    "{@spell detect magic}, {@spell magic missile}"
+                                    "1º",
+                                    "{@spell detectar magia}, {@spell mísseis mágicos}"
                                 ],
                                 [
-                                    "3rd",
-                                    "{@spell magic weapon}, {@spell Nystul's magic aura}"
+                                    "3º",
+                                    "{@spell arma mágica}, {@spell aura mágica de Nystul}"
                                 ],
                                 [
-                                    "5th",
-                                    "{@spell dispel magic}, {@spell magic circle}"
+                                    "5º",
+                                    "{@spell círculo mágico}, {@spell dissipar magia}"
                                 ],
                                 [
-                                    "7th",
-                                    "{@spell arcane eye}, {@spell Leomund's secret chest}"
+                                    "7º",
+                                    "{@spell arca secreta de Leomund}, {@spell olho arcano}"
                                 ],
                                 [
-                                    "9th",
-                                    "{@spell planar binding}, {@spell teleportation circle}"
+                                    "9º",
+                                    "{@spell âncora planar}, {@spell círculo de teleporte}"
                                 ]
                             ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Arcane Initiate|Cleric||Arcana|SCAG|1"
                         }
                     ]
-                },
+                }
+            ],
+			"subclassFeatures": [
                 {
-                    "name": "Arcane Initiate",
+                    "name": "Iniciado Arcano",
                     "source": "SCAG",
-                    "page": 125,
-                    "className": "Cleric",
+                    "page": 127,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcana",
+                    "subclassShortName": "Arcano",
                     "subclassSource": "SCAG",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "When you choose this domain at 1st level, you gain proficiency in the {@skill Arcana} skill, and you gain two cantrips of your choice from the wizard spell list. For you, these cantrips count as cleric cantrips."
+                        "Quando escolhe este domínio no 1º nível, você ganha proficiência na perícia Arcanismo, e ganha dois truques de sua escolha da lista de magias do mago. Para você, estes truques contam como truques de clérigo."
                     ]
                 },
                 {
-                    "name": "Channel Divinity: Arcane Abjuration",
+                    "name": "Canalizar Divindade: Abjuração Arcana",
                     "source": "SCAG",
-                    "page": 125,
-                    "className": "Cleric",
+                    "page": 127,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcana",
+                    "subclassShortName": "Arcano",
                     "subclassSource": "SCAG",
                     "level": 2,
                     "header": 2,
                     "entries": [
-                        "Starting at 2nd level, you can use your Channel Divinity to abjure otherworldly creatures.",
-                        "As an action, you present your holy symbol, and one celestial, elemental, fey, or fiend of your choice that is within 30 feet of you must make a Wisdom saving throw, provided that the creature can see or hear you. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.",
-                        "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly end its move in a space within 30 feet of you. It also can't take reactions. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, then the creature can use the {@action Dodge} action.",
-                        "After you reach 5th level, when a creature fails its saving throw against your Arcane Abjuration feature, the creature is banished for 1 minute (as in the {@spell banishment} spell, no concentration required) if it isn't on its plane of origin, and its challenge rating is at or below a certain threshold, as shown below.",
+                        "A partir do 2º nível, você pode usar seu Canalizar Divindade para repelir criaturas sobrenaturais.",
+                        "Com uma ação, você mostra seu símbolo sagrado, e um celestial, elemental, feérico ou ínfero de sua escolha que esteja a até 9 metros de você deve fazer uma salvaguarda de Sabedoria, desde que tal criatura possa vê-lo ou ouvi-lo. Se a criatura falhar na salvaguarda, ela é expulsa por 1 minuto ou até sofrer qualquer dano.",
+                        "Uma criatura expulsa deve gastar seus turnos tentando se afastar ao máximo de você, e não pode se aproximar a menos de 9 metros por vontade própria. Ela também não pode usar reações. Como suas ações, a criatura deve apenas executar a ação Correr ou tentar escapar de um efeito que a previna de se mover. Se não tiver para onde se mover, a criatura pode usar a ação Esquivar.",
+                        "Após você alcançar o 5º nível, quando uma criatura falhar na salvaguarda contra sua característica Abjuração Arcana, ela é banida durante 1 minuto (como na magia {@spell banimento}, sem a necessidade de usar concentração) caso não esteja no plano de origem dela e se o nível de desafio dela estiver em um certo limite ou abaixo dele, conforme mostrado na tabela Banimento Arcano.",
                         {
                             "type": "table",
-                            "caption": "Arcane Banishment",
+                            "caption": "Banimento Arcano",
                             "colLabels": [
-                                "Cleric level",
-                                "Banishes Creatures of CR..."
+                                "Nível de Clérigo",
+                                "Bane Criatura de ND..."
                             ],
                             "colStyles": [
                                 "col-2 text-center",
@@ -1854,157 +1261,95 @@
                             ],
                             "rows": [
                                 [
-                                    "5th",
-                                    "1/2 or lower"
+                                    "5º",
+                                    "1/2 ou menor"
                                 ],
                                 [
-                                    "8th",
-                                    "1 or lower"
+                                    "8º",
+                                    "1 ou menor"
                                 ],
                                 [
-                                    "11th",
-                                    "2 or lower"
+                                    "11º",
+                                    "2 ou menor"
                                 ],
                                 [
-                                    "14th",
-                                    "3 or lower"
+                                    "14º",
+                                    "3 ou menor"
                                 ],
                                 [
-                                    "17th",
-                                    "4 or lower"
+                                    "17º",
+                                    "4 ou menor"
                                 ]
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Spell Breaker",
+                    "name": "Rompedor de Magia",
                     "source": "SCAG",
-                    "page": 125,
-                    "className": "Cleric",
+                    "page": 127,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcana",
+                    "subclassShortName": "Arcano",
                     "subclassSource": "SCAG",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "Starting at 6th level, when you restore hit points to an ally with a spell of 1st level or higher, you can also end one spell of your choice on that creature. The level of the spell you end must be equal to or lower than the level of the spell slot you use to cast the healing spell."
+                        "A partir do 6º nível, quando você restaura os pontos de vida de um aliado com uma magia do 1º círculo ou superior, você também encerra uma magia de sua escolha que esteja sobre esta criatura. O círculo da magia que você encerra deve ser equivalente ou inferior ao círculo do espaço de magia que você está usando para conjurar a magia curativa."
                     ]
                 },
                 {
-                    "name": "Blessed Strikes",
-                    "source": "TCE",
-                    "page": 30,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Arcana",
-                    "subclassSource": "SCAG",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Potent Spellcasting feature}",
-                        "You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "UAClassFeatureVariants",
-                    "page": 4,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Arcana",
-                    "subclassSource": "SCAG",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric Divine Domain feature (replaces Potent Spellcasting)}",
-                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Potent Spellcasting",
+                    "name": "Conjuração Poderosa",
                     "source": "SCAG",
-                    "page": 125,
-                    "className": "Cleric",
+                    "page": 127,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcana",
+                    "subclassShortName": "Arcano",
                     "subclassSource": "SCAG",
                     "level": 8,
                     "header": 2,
                     "entries": [
-                        "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+                        "A partir do 8º nível, você adiciona seu modificador de Sabedoria ao dano causado por seus truques do clérigo."
                     ]
                 },
                 {
-                    "name": "Arcane Mastery",
+                    "name": "Maestria Arcana",
                     "source": "SCAG",
-                    "page": 125,
-                    "className": "Cleric",
+                    "page": 127,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Arcana",
+                    "subclassShortName": "Arcano",
                     "subclassSource": "SCAG",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "At 17th level, you choose four spells from the Wizard spell list, one from each of the following levels: 6th, 7th, 8th, and 9th. You add them to your list of domain spells. Like your other domain spells, they are always prepared and count as cleric spells for you."
+                        "No 17º nível, você escolhe quatro magias da lista de magia do mago, uma de cada um dos seguintes círculos: 6º, 7º, 8º e 9º. Você as acrescenta à sua lista de magias de domínio. Assim como suas outras magias de domínio, elas estão sempre preparadas e contam como magias de clérigo para você."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Forge Domain",
-			"shortName": "Forge",
+			"name": "Domínio da Forja",
+			"shortName": "Forja",
+            "id": "forja",
 			"source": "XGE",
-			"className": "Cleric",
+			"className": "Clérigo",
 			"classSource": "PHB",
-			"page": 18,
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"identify",
-							"searing smite"
-						],
-						"3": [
-							"heat metal",
-							"magic weapon"
-						],
-						"5": [
-							"elemental weapon",
-							"protection from energy"
-						],
-						"7": [
-							"fabricate",
-							"wall of fire"
-						],
-						"9": [
-							"animate objects",
-							"creation"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "Forge Domain",
-                    "source": "XGE",
-                    "page": 18,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Forge",
-                    "subclassSource": "XGE",
-                    "level": 1,
+			"page": 23,
+            "level": 1,
+            "entries": [
+                "Os deuses da forja são patronos de artesãos que trabalham o metal, desde um humilde ferreiro que fabrica as ferraduras de uma vila até o poderoso artesão elfo, cujas flechas com pontas de mitral em forma de diamante derrubam lordes demônios. Os deuses da forja ensinam que, com paciência e trabalho duro, até o metal mais intratável pode ser transformado de uma porção de minério em um objeto belamente forjado. Clérigos dessas divindades recuperam objetos que foram perdidos para as forças das trevas, libertam minas invadidas por orcs e encontram materiais raros e maravilhosos necessários à criação de potentes itens mágicos. Seguidores desses deuses têm muito orgulho de seu trabalho, estando dispostos a usar armaduras e armas poderosas para protegê-los. Divindades deste domínio incluem Gond, Reorx, Onatar, Moradin, Hefesto e Goibhniu.",
+                {
+                    "type": "entries",
+                    "name": "Magias de Domínio",
                     "entries": [
-                        "The gods of the forge are patrons of artisans who work with metal, from a humble blacksmith who keeps a village in horseshoes and plow blades to the mighty elf artisan whose diamond-tipped arrows of mithral have felled demon lords. The gods of the forge teach that, with patience and hard work, even the most intractable metal can be transformed from a lump of ore to a beautifully wrought object. Clerics of these deities search for objects lost to the forces of darkness, liberate mines overrun by orcs, and uncover rare and wondrous materials necessary to create potent magic items. Followers of these gods take great pride in their work, and they are willing to craft and use heavy armor and powerful weapons to protect them. Deities of this domain include {@deity Gond}, {@deity Reorx|Dragonlance}, {@deity Onatar|Eberron}, {@deity Moradin|Nonhuman}, {@deity Hephaestus|Greek}, and {@deity Goibhniu|Celtic}.",
-                        "At each indicated cleric level, add the listed spells to your spells prepared.",
+                        "Você ganha magias de domínio nos níveis de clérigo listados na tabela Magias do Domínio da Forja.",
                         {
                             "type": "table",
-                            "caption": "Forge Domain Spells",
+                            "caption": "Magias do Domínio da Forja",
                             "colLabels": [
-                                "Cleric Level",
-                                "Spells"
+                                "Nível de Clérigo",
+                                "Magias"
                             ],
                             "colStyles": [
                                 "col-2 text-center",
@@ -2012,166 +1357,129 @@
                             ],
                             "rows": [
                                 [
-                                    "1st",
-                                    "{@spell identify}, {@spell searing smite}"
+                                    "1º",
+                                    "{@spell destruição cauterizante}, {@spell identificar}"
                                 ],
                                 [
-                                    "3rd",
-                                    "{@spell heat metal}, {@spell magic weapon}"
+                                    "3º",
+                                    "{@spell arma mágica}, {@spell esquentar metal}"
                                 ],
                                 [
-                                    "5th",
-                                    "{@spell elemental weapon}, {@spell protection from energy}"
+                                    "5º",
+                                    "{@spell arma elemental}, {@spell proteção contra energia}"
                                 ],
                                 [
-                                    "7th",
-                                    "{@spell fabricate}, {@spell wall of fire}"
+                                    "7º",
+                                    "{@spell fabricar}, {@spell muralha de fogo}"
                                 ],
                                 [
-                                    "9th",
-                                    "{@spell animate objects}, {@spell creation}"
+                                    "9º",
+                                    "{@spell animar objetos}, {@spell criação}"
                                 ]
                             ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Bonus Proficiency|Cleric||Forge|XGE|1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Blessing of the Forge|Cleric||Forge|XGE|1"
                         }
                     ]
-                },
+                }
+            ],
+			"subclassFeatures": [
                 {
-                    "name": "Blessing of the Forge",
+                    "name": "Proficiências Bônus",
                     "source": "XGE",
-                    "page": 18,
-                    "className": "Cleric",
+                    "page": 23,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Forge",
+                    "subclassShortName": "Forja",
                     "subclassSource": "XGE",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "At 1st level, you gain the ability to imbue magic into a weapon or armor. At the end of a long rest, you can touch one nonmagical object that is a suit of armor or a simple or martial weapon. Until the end of your next long rest or until you die, the object becomes a magic item, granting a +1 bonus to AC if it's armor or a +1 bonus to attack and damage rolls if it's a weapon.",
-                        "Once you use this feature, you can't use it again until you finish a long rest."
+                        "Ao escolher este domínio no 1º nível, você ganha proficiência com armadura pesada e ferramentas de ferreiro."
                     ]
                 },
                 {
-                    "name": "Bonus Proficiency",
+                    "name": "Benção da Forja",
                     "source": "XGE",
-                    "page": 18,
-                    "className": "Cleric",
+                    "page": 23,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Forge",
+                    "subclassShortName": "Forja",
                     "subclassSource": "XGE",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "When you choose this domain at 1st level, you gain proficiency with heavy armor and {@item smith's tools|phb}."
+                        "No 1º nível, você ganha a habilidade de imbuir uma arma ou armadura com magia. Ao final de um descanso longo, você pode tocar um objeto não mágico que seja uma armadura, uma arma simples ou marcial. Até o final do seu próximo descanso longo, ou até que você morra, o objeto torna-se um item mágico, fornecendo um bônus de +1 para a CA, no caso de uma armadura, ou +1 para jogadas de ataque e de dano, no caso de uma arma.",
+                        "Após usar esta característica, você não pode usá-la novamente até terminar um descanso longo."
                     ]
                 },
                 {
-                    "name": "Channel Divinity: Artisan's Blessing",
+                    "name": "Canalizar Divindade: Benção do Artesão",
                     "source": "XGE",
-                    "page": 18,
-                    "className": "Cleric",
+                    "page": 23,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Forge",
+                    "subclassShortName": "Forja",
                     "subclassSource": "XGE",
                     "level": 2,
                     "header": 2,
                     "entries": [
-                        "Starting at 2nd level, you can use your Channel Divinity to create simple items.",
-                        "You conduct an hour-long ritual that crafts a nonmagical item that must include some metal: a simple or martial weapon, a suit of armor, ten pieces of ammunition, a set of tools, or another metal object (see chapter 5, \"Equipment,\" in the Player's Handbook for examples of these items). The creation is completed at the end of the hour, coalescing in an unoccupied space of your choice on a surface within 5 feet of you.",
-                        "The thing you create can be something that is worth no more than 100 gp. As part of this ritual, you must lay out metal, which can include coins, with a value equal to the creation. The metal irretrievably coalesces and transforms into the creation at the ritual's end, magically forming even nonmetal parts of the creation. The ritual can create a duplicate of a nonmagical item that contains metal, such as a key, if you possess the original during the ritual."
+                        "A partir do 2º nível, você pode usar Canalizar Divindade para criar itens simples.",
+                        "Você conduz um ritual com uma hora de duração, no qual cria um item não mágico que deve incluir algum metal: uma arma simples ou marcial, uma armadura, dez peças de munição, um kit de ferramentas ou outro objeto de metal. A criação é completada no final da hora, coalescendo em um espaço desocupado à sua escolha, sobre uma superfície a até 1,5 metro de você.",
+                        "O objeto que você criou não pode ter um valor maior do que 100 PO. Como parte deste ritual, você deve espalhar metal sobre a superfície, incluindo moedas, com um valor igual ao do item que será criado. O metal coalesce, sem retorno, no objeto criado ao final do ritual, formando magicamente até mesmo as partes não metálicas da criação.",
+                        "O ritual pode criar uma duplicata de um item não mágico que contenha metal, como uma chave, se você estiver em posse do original durante o ritual."
                     ]
                 },
                 {
-                    "name": "Soul of the Forge",
+                    "name": "Alma da Forja",
                     "source": "XGE",
-                    "page": 18,
-                    "className": "Cleric",
+                    "page": 23,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Forge",
+                    "subclassShortName": "Forja",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "Starting at 6th level, your mastery of the forge grants you special abilities:",
+                        "A partir do 6º nível, seu domínio da forja lhe garante as seguintes habilidades:",
                         {
                             "type": "list",
                             "items": [
-                                "You gain resistance to fire damage.",
-                                "While wearing heavy armor, you gain a +1 bonus to AC."
+                                "Você ganha resistência a dano ígneo.",
+                                "Enquanto estiver usando armadura pesada, você ganha um bônus de +1 na sua CA."
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Blessed Strikes",
-                    "source": "TCE",
-                    "page": 30,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Forge",
-                    "subclassSource": "XGE",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Divine Strike feature}",
-                        "You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "UAClassFeatureVariants",
-                    "page": 4,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Forge",
-                    "subclassSource": "XGE",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric Divine Domain feature (replaces Divine Strike)}",
-                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Divine Strike",
+                    "name": "Golpe Divino",
                     "source": "XGE",
-                    "page": 18,
-                    "className": "Cleric",
+                    "page": 23,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Forge",
+                    "subclassShortName": "Forja",
                     "subclassSource": "XGE",
                     "level": 8,
                     "header": 2,
                     "entries": [
-                        "At 8th level, you gain the ability to infuse your weapon strikes with the fiery power of the forge. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} fire damage to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
+                        "No 8º nível, você ganha a habilidade de infundir seus ataques armados com o abrasador poder da forja. Uma vez em casa um dos seus turnos, ao atingir uma criatura com um ataque armado, você pode fazer com que o ataque cause 1d8 pontos de dano ígneo adicional no alvo. Ao alcançar o nível 14º, o dano adicional aumenta para 2d8."
                     ]
                 },
                 {
-                    "name": "Saint of Forge and Fire",
+                    "name": "Santo da Forja e do Fogo",
                     "source": "XGE",
-                    "page": 18,
-                    "className": "Cleric",
+                    "page": 23,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Forge",
+                    "subclassShortName": "Forja",
                     "subclassSource": "XGE",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "At 17th level, your blessed affinity with fire and metal becomes more powerful:",
+                        "No 17º nível, sua afinidade abençoada com o fogo e com os metais torna-se poderosa:",
                         {
                             "type": "list",
                             "items": [
-                                "You gain immunity to fire damage",
-                                "While wearing heavy armor, you have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
+                                "Você ganha imunidade a dano ígneo.",
+                                "Enquanto estiver usando armadura pesada, você tem resistência a dano contundente, perfurante e cortante oriundo de ataques não mágicos."
                             ]
                         }
                     ]
@@ -2179,61 +1487,28 @@
 			]
 		},
 		{
-			"name": "Grave Domain",
-			"shortName": "Grave",
+			"name": "Domínio do Túmulo",
+			"shortName": "Túmulo",
+            "id": "tumulo",
 			"source": "XGE",
-			"className": "Cleric",
+			"className": "Clérigo",
 			"classSource": "PHB",
-			"page": 19,
-			"additionalSpells": [
-				{
-					"prepared": {
-						"1": [
-							"bane",
-							"false life"
-						],
-						"3": [
-							"gentle repose",
-							"ray of enfeeblement"
-						],
-						"5": [
-							"revivify",
-							"vampiric touch"
-						],
-						"7": [
-							"blight",
-							"death ward"
-						],
-						"9": [
-							"antilife shell",
-							"raise dead"
-						]
-					},
-					"known": {
-						"1": [
-							"spare the dying#c"
-						]
-					}
-				}
-			],
-			"subclassFeatures": [
-				{
-                    "name": "Grave Domain",
-                    "source": "XGE",
-                    "page": 19,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Grave",
-                    "subclassSource": "XGE",
-                    "level": 1,
+			"page": 24,
+            "level": 1,
+            "entries": [
+                "Deuses dos túmulos vigiam a linha entre a vida e a morte. Para essas divindades, a morte e a vida após a morte são parte fundacional do multiverso. Profanar a paz dos mortos é uma abominação. Divindades dos túmulos incluem Kelemvor, Wee Jas, os espíritos ancestrais da Corte Imortal, Hades, Anúbis e Osíris. Seguidores dessas divindades procuram colocar os espíritos errantes para descansar, destruir mortos-vivos e aplacar o sofrimento dos moribundos. Sua magia também permite que protelem a morte por um tempo, particularmente para pessoas que ainda têm trabalhos importantes a realizar no mundo.",
+                "Trata-se de um adiamento da morte, e não de sua anulação pois eventualmente a morte vem para todos.",
+                {
+                    "type": "entries",
+                    "name": "Magias de Domínio",
                     "entries": [
-                        "Gods of the grave watch over the line between life and death. To these deities, death and the afterlife are a foundational part of the multiverse. To desecrate the peace of the dead is an abomination. Deities of the grave include {@deity Kelemvor}, {@deity Wee Jas|Greyhawk}, the ancestral spirits of {@deity the Undying Court|Eberron}, {@deity Hades|Greek}, {@deity Anubis|Egyptian}, and {@deity Osiris|Egyptian}. Followers of these deities seek to put wandering spirits to rest, destroy the undead, and ease the suffering of the dying. Their magic also allows them to stave off death for a time, particularly for a person who still has some great work to accomplish in the world. This is a delay of death, not a denial of it, for death will eventually get its due.",
+                        "Você ganha magias de domínio nos níveis de clérigo listados na tabela Magias do Domínio do Túmulo.",
                         {
                             "type": "table",
-                            "caption": "Grave Domain Spells",
+                            "caption": "Magias do Domínio do Túmulo",
                             "colLabels": [
-                                "Cleric Level",
-                                "Spells"
+                                "Nível de Clérigo",
+                                "Magias"
                             ],
                             "colStyles": [
                                 "col-2 text-center",
@@ -2241,155 +1516,117 @@
                             ],
                             "rows": [
                                 [
-                                    "1st",
-                                    "{@spell bane}, {@spell false life}"
+                                    "1º",
+                                    "{@spell perdição}, {@spell vitalidade vazia}"
                                 ],
                                 [
-                                    "3rd",
-                                    "{@spell gentle repose}, {@spell ray of enfeeblement}"
+                                    "3º",
+                                    "{@spell raio do enfraquecimento}, {@spell repouso tranquilo}"
                                 ],
                                 [
-                                    "5th",
-                                    "{@spell revivify}, {@spell vampiric touch}"
+                                    "5º",
+                                    "{@spell revivificar}, {@spell toque vampírico}"
                                 ],
                                 [
-                                    "7th",
-                                    "{@spell blight}, {@spell death ward}"
+                                    "7º",
+                                    "{@spell malogro}, {@spell proteção contra morte}"
                                 ],
                                 [
-                                    "9th",
-                                    "{@spell antilife shell}, {@spell raise dead}"
+                                    "9º",
+                                    "{@spell cúpula antivida}, {@spell reviver os mortos}"
                                 ]
                             ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Circle of Mortality|Cleric||Grave|XGE|1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Eyes of the Grave|Cleric||Grave|XGE|1"
                         }
                     ]
-                },
+                }
+            ],
+			"subclassFeatures": [
                 {
-                    "name": "Circle of Mortality",
+                    "name": "Círculo de Mortalidade",
                     "source": "XGE",
-                    "page": 19,
-                    "className": "Cleric",
+                    "page": 25,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Grave",
+                    "subclassShortName": "Túmulo",
                     "subclassSource": "XGE",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "At 1st level, you gain the ability to manipulate the line between life and death. When you would normally roll one or more dice to restore hit points with a spell to a creature at 0 hit points, you instead use the highest number possible for each die.",
-                        "In addition, you learn the {@spell spare the dying} cantrip, which doesn't count against the number of cleric cantrips you know. For you, it has a range of 30 feet, and you can cast it as a bonus action."
+                        "No 1º nível, você ganha a habilidade de manipular a linha entre a vida e a morte. Em vez de jogar um ou mais dados para restaurar pontos de vida a uma criatura com 0 ponto de vida usando uma magia, use o maior número possível para cada dado.",
+                        "Além disso, você aprende o truque {@spell acudir os moribundos}, que não conta para o número de truques de clérigo que você conhece. Para você, ele tem um alcance de 9 metros e pode ser lançado como uma ação bônus."
                     ]
                 },
                 {
-                    "name": "Eyes of the Grave",
+                    "name": "Olhos do Túmulo",
                     "source": "XGE",
-                    "page": 19,
-                    "className": "Cleric",
+                    "page": 25,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Grave",
+                    "subclassShortName": "Túmulo",
                     "subclassSource": "XGE",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "At 1st level, you gain the ability to occasionally sense the presence of the undead, whose existence is an insult to the natural cycle of life. As an action, you can open your awareness to magically detect undead. Until the end of your next turn, you know the location of any undead within 60 feet of you that isn't behind total cover and that isn't protected from divination magic. This sense doesn't tell you anything about a creature's capabilities or identity.",
-                        "You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest."
+                        "No 1º nível, você ganha a habilidade de sentir ocasionalmente a presença de mortos-vivos, cuja existência é um insulto ao ciclo natural da vida. Como uma ação, você pode ampliar sua percepção para detectar mortos-vivos magicamente. Até o final do seu próximo turno, você descobre a localização de qualquer morto-vivo a até 18 metros de você, que não esteja protegido contra magia de adivinhação. Esse sentido não diz a você nada sobre as capacidades da criatura ou a identidade dela.",
+                        "Você pode usar esta característica um número de vezes igual ao seu modificador de Sabedoria (no mínimo uma vez). Você recupera todos os usos gastos desta característica ao terminar um descanso longo."
                     ]
                 },
                 {
-                    "name": "Channel Divinity: Path to the Grave",
+                    "name": "Canalizar Divindade: Caminho da Cova",
                     "source": "XGE",
-                    "page": 19,
-                    "className": "Cleric",
+                    "page": 25,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Grave",
+                    "subclassShortName": "Túmulo",
                     "subclassSource": "XGE",
                     "level": 2,
                     "header": 2,
                     "entries": [
-                        "Starting at 2nd level, you can use your Channel Divinity to mark another creature's life force for termination.",
-                        "As an action, you choose one creature you can see within 30 feet of you, cursing it until the end of your next turn. The next time you or an ally of yours hits the cursed creature with an attack, the creature has vulnerability to all of that attack's damage, and then the curse ends."
+                        "A partir do 2º nível, você pode usar Canalizar Divindade para demarcar o fim da força vital de outra criatura.",
+                        "Como uma ação, você escolhe uma criatura à sua vista e que esteja a até 9 metros de você, e a amaldiçoa até o final do seu próximo turno. A próxima vez que você ou um aliado seu atingir a criatura com um ataque, ela terá vulnerabilidade a todo o dano desse ataque, em seguida a maldição terminará."
                     ]
                 },
                 {
-                    "name": "Sentinel at Death's Door",
+                    "name": "Sentinela do Portão da Morte",
                     "source": "XGE",
-                    "page": 19,
-                    "className": "Cleric",
+                    "page": 25,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Grave",
+                    "subclassShortName": "Túmulo",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "At 6th level, you gain the ability to impede death's progress. As a reaction when you or a creature you can see within 30 feet of you suffers a critical hit, you can turn that hit into a normal hit. Any effects triggered by a critical hit are canceled.",
-                        "You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest."
+                        "No 6º nível, você ganha a habilidade de impedir o avanço da morte. Como uma reação, quando você ou uma criatura à sua vista e que esteja a até 9 metros de você sofrer um acerto crítico, esse acerto vira um acerto normal. Todos os efeitos ativados por um acerto crítico são cancelados.",
+                        "Você pode usar esta característica um número de vezes igual ao seu modificador de Sabedoria (no mínimo uma vez). Você recupera todos os usos gastos desta característica ao terminar um descanso longo."
                     ]
                 },
                 {
-                    "name": "Blessed Strikes",
-                    "source": "TCE",
-                    "page": 30,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Grave",
-                    "subclassSource": "XGE",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Potent Spellcasting feature}",
-                        "You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Blessed Strikes",
-                    "source": "UAClassFeatureVariants",
-                    "page": 4,
-                    "className": "Cleric",
-                    "classSource": "PHB",
-                    "subclassShortName": "Grave",
-                    "subclassSource": "XGE",
-                    "level": 8,
-                    "isClassFeatureVariant": true,
-                    "header": 2,
-                    "entries": [
-                        "{@i 8th-level cleric Divine Domain feature (replaces Potent Spellcasting)}",
-                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
-                    ]
-                },
-                {
-                    "name": "Potent Spellcasting",
+                    "name": "Conjuração Poderosa",
                     "source": "XGE",
-                    "page": 19,
-                    "className": "Cleric",
+                    "page": 25,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Grave",
+                    "subclassShortName": "Túmulo",
                     "subclassSource": "XGE",
                     "level": 8,
                     "header": 2,
                     "entries": [
-                        "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+                        "A partir do 8º nível, você soma seu modificador de Sabedoria ao dano causado por você com qualquer truque do clérigo."
                     ]
                 },
                 {
-                    "name": "Keeper of Souls",
+                    "name": "Guardião das Almas",
                     "source": "XGE",
-                    "page": 19,
-                    "className": "Cleric",
+                    "page": 25,
+                    "className": "Clérigo",
                     "classSource": "PHB",
-                    "subclassShortName": "Grave",
+                    "subclassShortName": "Túmulo",
                     "subclassSource": "XGE",
                     "level": 17,
                     "header": 2,
                     "entries": [
-                        "Starting at 17th level, you can seize a trace of vitality from a parting soul and use it to heal the living. When an enemy you can see dies within 60 feet of you, you or one creature of your choice that is within 60 feet of you regains hit points equal to the enemy's number of Hit Dice. You can use this feature only if you aren't {@condition incapacitated}. Once you use it, you can't do so again until the start of your next turn."
+                        "A partir do 17º nível, você pode usar um traço de vitalidade de uma alma em partida para curar os vivos. Quando um inimigo que você possa ver e que esteja a até 18 metros de você morre, uma criatura à sua escolha que esteja a até 18 metros de você ou você próprio recupera uma quantidade de pontos de vida igual ao número de Dados de Vida do inimigo. Você só pode usar esta característica se não estiver {@condition incapacitado}. Após usá-la, não pode voltar a fazê-lo até o começo do seu próximo turno."
                     ]
                 }
 			]

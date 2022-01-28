@@ -1,82 +1,52 @@
 {
 	"class": [
 		{
-			"name": "feiticeiro",
-			"subclassTitle": "Sorcerous Origin",
+			"name": "Feiticeiro",
+			"subclassTitle": "Origens Feiticeiras",
 			"multiclassing": {
 				"requirements": {
 					"cha": 13
 				}
-			}
+			},
+            "entries": [
+                "Diferentes feiticeiros têm diferentes origens para suas magias inatas. Apesar de existirem muitas variações, a maioria dessas origens se encaixa em duas categorias: linhagem dracônica ou magia selvagem."
+            ]
 		}
 	],
-	"subclass": [
+	"subclasses": [
 		{
-			"name": "Draconic Bloodline",
-			"shortName": "Draconic",
+			"name": "Linhagem Dracônica",
+			"shortName": "Dracônica",
+            "id": "draconica",
 			"source": "PHB",
-			"className": "Sorcerer",
+			"className": "Feiticeiro",
 			"classSource": "PHB",
-			"page": 102,
+			"page": 80,
 			"srd": true,
+            "level": 1,
+            "entries": [
+                "Sua magia inata vem da magia dracônica misturada ao seu sangue ou ao sangue dos seus ancestrais. Geralmente, os feiticeiros com esta origem traçam sua ascendência até algum feiticeiro poderoso de épocas ancestrais, que fez um acordo com um dragão ou pode, de fato, ter sido um descendente direto de um dragão. Algumas dessas linhagens são bem estabelecidas no mundo, mas muitas são obscuras. Qualquer feiticeiro pode ser o primeiro de uma nova linhagem, como resultado de um pacto ou de alguma outra circunstância excepcional."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Draconic Bloodline",
-                    "source": "PHB",
-                    "page": 102,
-                    "srd": true,
-                    "className": "Sorcerer",
-                    "classSource": "PHB",
-                    "subclassShortName": "Draconic",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "entries": [
-                        "Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Dragon Ancestor|Sorcerer||Draconic||1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Draconic Resilience|Sorcerer||Draconic||1"
-                        }
-                    ]
-                },
                 {
-                    "name": "Draconic Resilience",
+                    "name": "Ancestral Dragão",
                     "source": "PHB",
-                    "page": 102,
+                    "page": 80,
                     "srd": true,
-                    "className": "Sorcerer",
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Draconic",
+                    "subclassShortName": "Dracônica",
                     "subclassSource": "PHB",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "As magic flows through your body, it causes physical traits of your dragon ancestors to emerge. At 1st level, your hit point maximum increases by 1 and increases by 1 again whenever you gain a level in this class.",
-                        "Additionally, parts of your skin are covered by a thin sheen of dragon-like scales. When you aren't wearing armor, your AC equals 13 + your Dexterity modifier."
-                    ]
-                },
-                {
-                    "name": "Dragon Ancestor",
-                    "source": "PHB",
-                    "page": 102,
-                    "srd": true,
-                    "className": "Sorcerer",
-                    "classSource": "PHB",
-                    "subclassShortName": "Draconic",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "header": 1,
-                    "entries": [
-                        "At 1st level, you choose one type of dragon as your ancestor. The damage type associated with each dragon is used by features you gain later.",
+                        "No 1º nível, você deve escolher um tipo de dragão como seu ancestral. O tipo de dano associado a cada dragão se expressa nas características que você recebe posteriormente.",
                         {
                             "type": "table",
-                            "caption": "Draconic Ancestry",
+                            "caption": "Herança Dracônica",
                             "colLabels": [
-                                "Dragon",
-                                "Damage Type"
+                                "Dragão",
+                                "Tipo de Dano"
                             ],
                             "colStyles": [
                                 "col-6 text-center",
@@ -84,161 +54,146 @@
                             ],
                             "rows": [
                                 [
-                                    "Black",
-                                    "{@filter Acid|spells|damage type=acid|class=sorcerer}"
+                                    "Azul",
+                                    "Elétrico"
                                 ],
                                 [
-                                    "Blue",
-                                    "{@filter Lightning|spells|damage type=lightning|class=sorcerer}"
-                                ],
-                                [
-                                    "Brass",
-                                    "{@filter Fire|spells|damage type=fire|class=sorcerer}"
+                                    "Branco",
+                                    "Gélido"
                                 ],
                                 [
                                     "Bronze",
-                                    "{@filter Lightning|spells|damage type=lightning|class=sorcerer}"
+                                    "Elétrico"
                                 ],
                                 [
-                                    "Copper",
-                                    "{@filter Acid|spells|damage type=acid|class=sorcerer}"
+                                    "Cobre",
+                                    "Corrosivo"
                                 ],
                                 [
-                                    "Gold",
-                                    "{@filter Fire|spells|damage type=fire|class=sorcerer}"
+                                    "Latão",
+                                    "Ígneo"
                                 ],
                                 [
-                                    "Green",
-                                    "{@filter Poison|spells|damage type=poison|class=sorcerer}"
+                                    "Negro",
+                                    "Corrosivo"
                                 ],
                                 [
-                                    "Red",
-                                    "{@filter Fire|spells|damage type=fire|class=sorcerer}"
+                                    "Ouro",
+                                    "Ígneo"
                                 ],
                                 [
-                                    "Silver",
-                                    "{@filter Cold|spells|damage type=cold|class=sorcerer}"
+                                    "Prata",
+                                    "Gélido"
                                 ],
                                 [
-                                    "White",
-                                    "{@filter Cold|spells|damage type=cold|class=sorcerer}"
+                                    "Verde",
+                                    "Venenoso"
+                                ],
+                                [
+                                    "Vermelho",
+                                    "Ígneo"
                                 ]
                             ]
                         },
-                        "You can speak, read, and write {@language Draconic}. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check."
+                        "Você pode falar, ler e escrever Dracônico. Além disso, sempre que realizar um teste de Carisma para interagir com dragões, dobre o seu bônus de proficiência, caso aplicável."
                     ]
                 },
                 {
-                    "name": "Elemental Affinity",
+                    "name": "Resiliência Dracônica",
                     "source": "PHB",
-                    "page": 102,
+                    "page": 80,
                     "srd": true,
-                    "className": "Sorcerer",
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Draconic",
+                    "subclassShortName": "Dracônica",
+                    "subclassSource": "PHB",
+                    "level": 1,
+                    "header": 1,
+                    "entries": [
+                        "Conforme a magia flui através de seu corpo, ela faz com que traços físicos dos seus ancestrais dragões aflorem. No 1º nível, seus pontos de vida máximos aumentam em 1, e novamente em 1 sempre que você ganhar um nível nesta classe.",
+                        "Além disso, partes da sua pele são cobertas por finas escamas reluzentes, semelhantes às de um dragão. Quando não estiver usando armadura, sua CA passa a ser igual a 13 + seu modificador de Destreza."
+                    ]
+                },
+                {
+                    "name": "Afinidade Elemental",
+                    "source": "PHB",
+                    "page": 80,
+                    "srd": true,
+                    "className": "Feiticeiro",
+                    "classSource": "PHB",
+                    "subclassShortName": "Dracônica",
                     "subclassSource": "PHB",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "Starting at 6th level, when you cast a spell that deals damage of the type associated with your draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour."
+                        "A partir do 6º nível, ao conjurar uma magia que cause dano do tipo associado com a sua ancestralidade dracônica, você pode adicionar seu modificador de Carisma a uma jogada de dano com essa magia. Ao mesmo tempo, pode gastar 1 ponto de feitiçaria para ganhar resistência contra aquele tipo de dano durante 1 hora."
                     ]
                 },
                 {
-                    "name": "Dragon Wings",
+                    "name": "Asas de Dragão",
                     "source": "PHB",
-                    "page": 102,
+                    "page": 80,
                     "srd": true,
-                    "className": "Sorcerer",
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Draconic",
+                    "subclassShortName": "Dracônica",
                     "subclassSource": "PHB",
                     "level": 14,
                     "header": 2,
                     "entries": [
-                        "At 14th level, you gain the ability to sprout a pair of dragon wings from your back, gaining a flying speed equal to your current speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn.",
-                        "You can't manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them."
+                        "No 14º nível, você pode fazer surgir um par de asas de dragão nas suas costas, ganhando deslocamento de voo igual ao seu deslocamento atual. Você pode criar essas asas usando a ação bônus no seu turno. Elas duram até você dispensá-las com outra ação bônus no seu turno.",
+                        "Você não pode manifestar suas asas enquanto estiver usando armadura, a não ser que esta seja feita especialmente para acomodá-las. Qualquer roupa que não tenha sido feita para acomodar suas asas pode ser destruída quando você as manifestar."
                     ]
                 },
                 {
-                    "name": "Draconic Presence",
+                    "name": "Presença Dracônica",
                     "source": "PHB",
-                    "page": 102,
+                    "page": 81,
                     "srd": true,
-                    "className": "Sorcerer",
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Draconic",
+                    "subclassShortName": "Dracônica",
                     "subclassSource": "PHB",
                     "level": 18,
                     "header": 2,
                     "entries": [
-                        "Beginning at 18th level, you can channel the dread presence of your dragon ancestor, causing those around you to become awestruck or {@condition frightened}. As an action, you can spend 5 sorcery points to draw on this power and exude an aura of awe or fear (your choice) to a distance of 60 feet. For 1 minute or until you lose your concentration (as if you were casting a concentration spell), each hostile creature that starts its turn in this aura must succeed on a Wisdom saving throw or be {@condition charmed} (if you chose awe) or {@condition frightened} (if you chose fear) until the aura ends. A creature that succeeds on this saving throw is immune to your aura for 24 hours."
+                        "Começando no 18º nível, você pode canalizar a presença assustadora do seu ancestral dragão, fazendo com que aqueles que estejam ao seu redor fiquem impressionados ou {@condition amedrontados}. Com uma ação, você pode gastar 5 pontos de feitiçaria para utilizar este poder, e emanar uma aura de reverência ou medo (à sua escolha) a uma distância de até 18 metros. Durante 1 minuto, ou até que você perca a concentração (como se estivesse conjurando uma magia que exija concentração), cada criatura hostil que começar o turno dela dentro do raio de ação desta aura, deve ser bem-sucedida em uma salvaguarda de Sabedoria, ou será {@condition enfeitiçada} (se você escolheu reverência) ou {@condition amedrontada} (se você escolheu medo) até a aura acabar. Uma criatura que seja bem-sucedida nessa salvaguarda fica imune a sua aura por 24 horas."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Wild Magic",
-			"shortName": "Wild",
+			"name": "Magia Selvagem",
+			"shortName": "Selvagem",
+            "id": "selvagem",
 			"source": "PHB",
-			"className": "Sorcerer",
+			"className": "Feiticeiro",
 			"classSource": "PHB",
-			"page": 103,
+			"page": 81,
+            "level": 1,
+            "entries": [
+                "Sua magia inata vem das forças do caos que estão na base da criação. Você pode ter sofrido uma exposição à magia bruta, talvez por meio de um portal planar conectado diretamente ao Limbo, aos Planos Elementais ou ao Reino Distante. Talvez você tenha sido abençoado por um ser feérico ou marcado por um demônio. Quem sabe a sua magia não seja obra do acaso agindo sobre o seu nascimento, sem nenhuma outra causa aparente. Seja como for, tal magia se agita dentro de você, à espera de qualquer brecha para se manifestar."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Wild Magic",
-                    "source": "PHB",
-                    "page": 103,
-                    "className": "Sorcerer",
-                    "classSource": "PHB",
-                    "subclassShortName": "Wild",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "entries": [
-                        "Your innate magic comes from the wild forces of chaos that underlie the order of creation. You might have endured exposure to some form of raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the mysterious Far Realm. Perhaps you were blessed by a powerful fey creature or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause or reason. However it came to be, this chaotic magic churns within you, waiting for any outlet.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Wild Magic Surge|Sorcerer||Wild||1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Tides of Chaos|Sorcerer||Wild||1"
-                        }
-                    ]
-                },
                 {
-                    "name": "Tides of Chaos",
+                    "name": "Surto de Magia Selvagem",
                     "source": "PHB",
-                    "page": 103,
-                    "className": "Sorcerer",
+                    "page": 81,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Wild",
+                    "subclassShortName": "Selvagem",
                     "subclassSource": "PHB",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "Starting at 1st level, you can manipulate the forces of chance and chaos to gain advantage on one attack roll, ability check, or saving throw. Once you do so, you must finish a long rest before you can use this feature again.",
-                        "Any time before you regain the use of this feature, the DM can have you roll on the {@table Wild Magic Surge|PHB} table immediately after you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature."
-                    ]
-                },
-                {
-                    "name": "Wild Magic Surge",
-                    "source": "PHB",
-                    "page": 103,
-                    "className": "Sorcerer",
-                    "classSource": "PHB",
-                    "subclassShortName": "Wild",
-                    "subclassSource": "PHB",
-                    "level": 1,
-                    "header": 1,
-                    "entries": [
-                        "Starting when you choose this origin at 1st level, your spellcasting can unleash surges of untamed magic. Immediately after you cast a sorcerer spell of 1st level or higher, the DM can have you roll a {@dice d20}. If you roll a 1, roll on the Wild Magic Surge table to create a random magical effect. A Wild Magic Surge can happen once per turn.",
-                        "If a Wild Magic effect is a spell, it's too wild to be affected by Metamagic. If it normally requires concentration, it doesn't require concentration in this case; the spell lasts for its full duration.",
+                        "A partir do 1º nível, suas conjurações podem desencadear surtos de magia indomável. Uma vez por turno, o DM pode pedir que você jogue 1d20 imediatamente após conjurar uma magia de feiticeiro de 1º círculo ou superior. Se você tirar 1, deverá jogar na tabela Surto de Magia Selvagem para criar um efeito mágico.",
+                        "Se o efeito for uma magia, ela é selvagem demais para ser afetada pela sua Metamagia, e caso exija concentração, não precisará neste caso. A duração da magia não é afetada.",
                         {
                             "type": "table",
-                            "caption": "Wild Magic Surge",
+                            "caption": "Surto de Magia Selvagem",
                             "colLabels": [
-                                "{@dice d100}",
-                                "Effect"
+                                "d100",
+                                "Efeito"
                             ],
                             "colStyles": [
                                 "col-1 text-center",
@@ -247,347 +202,300 @@
                             "rows": [
                                 [
                                     "01-02",
-                                    "Roll on this table at the start of each of your turns for the next minute, ignoring this result on subsequent rolls."
+                                    "Jogue nesta tabela no começo de cada um dos seus turnos pelo próximo minuto, ignorando este resultado em jogadas subsequentes."
                                 ],
                                 [
                                     "03-04",
-                                    "For the next minute, you can see any {@condition invisible} creature if you have line of sight to it."
+                                    "Por um minuto, você pode ver qualquer criatura {@condition invisível} em sua linha de visão."
                                 ],
                                 [
                                     "05-06",
-                                    "A {@filter modron|bestiary|source=mm|search=modron} chosen and controlled by the DM appears in an unoccupied space within 5 feet of you, then disappears 1 minute later."
+                                    "Um modron escolhido e controlado pelo DM aprece em um espaço desocupado, a 1,5 metro de distância de você e desaparece 1 minuto depois.."
                                 ],
                                 [
                                     "07-08",
-                                    "You cast {@spell fireball} as a 3rd-level spell centered on yourself."
+                                    "Você conjura {@spell bola de fogo} como uma magia de 3º círculo centrada em você."
                                 ],
                                 [
                                     "09-10",
-                                    "You cast {@spell magic missile} as a 5th-level spell."
+                                    "Você conjura {@spell mísseis mágicos} como uma magia de 5º círculo."
                                 ],
                                 [
                                     "11-12",
-                                    "Roll a {@dice d10}. Your height changes by a number of inches equal to the roll. If the roll is odd, you shrink. If the roll is even, you grow."
+                                    "Jogue 1d20+1d6. Sua altura é alterada em um número de centímetros igual ao resultado obtido. Se a jogada for ímpar, você encolhe. Se for par, você cresce."
                                 ],
                                 [
                                     "13-14",
-                                    "You cast {@spell confusion} centered on yourself."
+                                    "Você conjura a magia {@spell confusão} centrada em você."
                                 ],
                                 [
                                     "15-16",
-                                    "For the next minute, you regain 5 hit points at the start of each of your turns."
+                                    "Por um minuto, você recupera 5 pontos de vida no começo de cada um dos seus turnos."
                                 ],
                                 [
                                     "17-18",
-                                    "You grow a long beard made of feathers that remains until you sneeze, at which point the feathers explode out from your face."
+                                    "Uma longa barba feita de penas cresce em você e permanece até você espirrar, fazendo com que as penas explodam para fora do seu rosto."
                                 ],
                                 [
                                     "19-20",
-                                    "You cast {@spell grease} centered on yourself."
+                                    "Você conjura {@spell graxa} centrada em você."
                                 ],
                                 [
                                     "21-22",
-                                    "Creatures have disadvantage on saving throws against the next spell you cast in the next minute that involves a saving throw."
+                                    "Criaturas têm desvantagem em salvaguardas contra a próxima magia que você conjurar no próximo minuto, desde que ela envolva uma salvaguarda."
                                 ],
                                 [
                                     "23-24",
-                                    "Your skin turns a vibrant shade of blue. A {@spell remove curse} spell can end this effect."
+                                    "Sua pele adquire um tom vibrante de azul. A magia {@spell remover maldição} pode encerrar esse efeito."
                                 ],
                                 [
                                     "25-26",
-                                    "An eye appears on your forehead for the next minute. During that time, you have advantage on Wisdom ({@skill Perception}) checks that rely on sight."
+                                    "Um olho aparece na sua testa por um minuto. Durante esse tempo, você tem vantagem em testes de Sabedoria (Percepção) que dependam da visão."
                                 ],
                                 [
                                     "27-28",
-                                    "For the next minute, all your spells with a casting time of 1 action have a casting time of 1 bonus action."
+                                    "Por um minuto, todas as suas magias com um tempo de conjuração de uma ação passam a ter um tempo de conjuração de uma ação bônus."
                                 ],
                                 [
                                     "29-30",
-                                    "You teleport up to 60 feet to an unoccupied space of your choice that you can see."
+                                    "Você se teleporta à até 18 metros para um espaço desocupado que você possa ver, à sua escolha."
                                 ],
                                 [
                                     "31-32",
-                                    "You are transported to the Astral Plane until the end of your next turn, after which time you return to the space you previously occupied or the nearest unoccupied space if that space is occupied."
+                                    "Você é transportado para o Plano Astral até o final do seu próximo turno; após esse tempo, você retorna para o espaço que ocupava ou para o espaço desocupado mais próximo, caso o espaço original esteja ocupado."
                                 ],
                                 [
                                     "33-34",
-                                    "Maximize the damage of the next damaging spell you cast within the next minute."
+                                    "Maximize o dano da sua próxima magia que cause dano, conjurada no próximo minuto."
                                 ],
                                 [
                                     "35-36",
-                                    "Roll a {@dice d10}. Your age changes by a number of years equal to the roll. If the roll is odd, you get younger (minimum 1 year old). If the roll is even, you get older."
+                                    "Jogue 1d10. Sua idade muda em um número de anos igual ao resultado da jogada. Se o resultado for ímpar, você fica mais jovem (no mínimo 1 ano de idade). Se o resultado for par, você fica mais velho."
                                 ],
                                 [
                                     "37-38",
-                                    "{@dice 1d6} {@creature flumph||flumphs} controlled by the DM appear in unoccupied spaces within 60 feet of you and are {@condition frightened} of you. They vanish after 1 minute."
+                                    "1d6 flunfs controlados pelo DM aparecem em espaços desocupados num raio de 18 metros e ficam {@condition amedrontados} por você. Eles desaparecem após 1 minuto."
                                 ],
                                 [
                                     "39-40",
-                                    "You regain {@dice 2d10} hit points."
+                                    "Você recupera 2d10 pontos de vida."
                                 ],
                                 [
                                     "41-42",
-                                    "You turn into a potted plant until the start of your next turn. While a plant, you are {@condition incapacitated} and have vulnerability to all damage. If you drop to 0 hit points, your pot breaks, and your form reverts."
+                                    "Você se transforma em uma planta envasada até o começo de seu próximo turno. Enquanto estiver sob a forma de planta, estará {@condition incapacitado} e vulnerável a todos os tipos de dano. Se ficar com 0 pontos de vida, seu vaso se quebra e você volta à sua forma normal."
                                 ],
                                 [
                                     "43-44",
-                                    "For the next minute, you can teleport up to 20 feet as a bonus action on each of your turns."
+                                    "Por um minuto, com o uso de uma ação bônus no começo de cada um dos seus turnos, você pode se teleportar a até 6 metros de distância."
                                 ],
                                 [
                                     "45-46",
-                                    "You cast {@spell levitate} on yourself."
+                                    "Você conjura {@spell levitação} em si mesmo."
                                 ],
                                 [
                                     "47-48",
-                                    "A {@creature unicorn} controlled by the DM appears in a space within 5 feet of you, then disappears 1 minute later."
+                                    "Um unicórnio controlado pelo DM aparece em um espaço a até 1,5 metro de você e desaparece após 1 minuto."
                                 ],
                                 [
                                     "49-50",
-                                    "You can't speak for the next minute. Whenever you try, pink bubbles float out of your mouth."
+                                    "Você não pode falar por um minuto. Sempre que tentar, bolhas rosas sairão da sua boca."
                                 ],
                                 [
                                     "51-52",
-                                    "A spectral shield hovers near you for the next minute, granting you a +2 bonus to AC and immunity to {@spell magic missile}."
+                                    "Um escudo espectral flutua perto de você por um minuto, concedendo um bônus de +2 para a sua CA e imunidade a {@spell mísseis mágicos}."
                                 ],
                                 [
                                     "53-54",
-                                    "You are immune to being intoxicated by alcohol for the next {@dice 5d6} days."
+                                    "Você fica imune a intoxicação por álcool pelo próximos 5d6 dias."
                                 ],
                                 [
                                     "55-56",
-                                    "Your hair falls out but grows back within 24 hours."
+                                    "Seu cabelo cai, mas cresce de volta dentro de 24 horas."
                                 ],
                                 [
                                     "57-58",
-                                    "For the next minute, any flammable object you touch that isn't being worn or carried by another creature bursts into flame."
+                                    "Por um minuto, qualquer objeto inflamável que você tocar e que não esteja sendo vestido ou carregado por outra criatura explode em chamas."
                                 ],
                                 [
                                     "59-60",
-                                    "You regain your lowest-level expended spell slot."
+                                    "Você recupera o espaço de magia de menor círculo que tenha gasto."
                                 ],
                                 [
                                     "61-62",
-                                    "For the next minute, you must shout when you speak."
+                                    "Por um minuto, você deve gritar ao falar."
                                 ],
                                 [
                                     "63-64",
-                                    "You cast {@spell fog cloud} centered on yourself."
+                                    "Você conjura {@spell névoa obscurecente} centrada em você."
                                 ],
                                 [
                                     "65-66",
-                                    "Up to three creatures you choose within 30 feet of you take {@damage 4d10} lightning damage."
+                                    "Até três criaturas, à sua escolha, e que estejam no máximo a 9 metros de distância, sofrem 4d10 pontos de dano elétrico."
                                 ],
                                 [
                                     "67-68",
-                                    "You are {@condition frightened} by the nearest creature until the end of your next turn."
+                                    "Você fica {@condition amedrontado} pela criatura mais próxima até o final do seu próximo turno."
                                 ],
                                 [
                                     "69-70",
-                                    "Each creature within 30 feet of you becomes {@condition invisible} for the next minute. The invisibility ends on a creature when it attacks or casts a spell."
+                                    "Cada criatura a até 9 metros de distância fica {@condition invisível} por um minuto. A invisibilidade se encerra para uma criatura quando ela ataca ou conjura uma magia."
                                 ],
                                 [
                                     "71-72",
-                                    "You gain resistance to all damage for the next minute."
+                                    "Você ganha resistência a todos os tipos de dano por 1 minuto."
                                 ],
                                 [
                                     "73-74",
-                                    "A random creature within 60 feet of you becomes {@condition poisoned} for {@dice 1d4} hours."
+                                    "Uma criatura a até 18 metros distante de você, e escolhida ao acaso, fica {@condition envenenada} por 1d4 horas."
                                 ],
                                 [
                                     "75-76",
-                                    "You glow with bright light in a 30-foot radius for the next minute. Any creature that ends its turn within 5 feet of you is {@condition blinded} until the end of its next turn."
+                                    "Você brilha com luz plena num raio de 18 metros por um minuto. Qualquer criatura que encerre o turno dela a até 1,5 metros de distância de você ficará {@condition cega} até o final do próximo turno dela."
                                 ],
                                 [
                                     "77-78",
-                                    "You cast {@spell polymorph} on yourself. If you fail the saving throw, you turn into a sheep for the spell's duration."
+                                    "Você conjura {@spell polimorfia} em si mesmo. Se falhar na salvaguarda, transforma-se numa ovelha pela duração da magia."
                                 ],
                                 [
                                     "79-80",
-                                    "Illusory butterflies and flower petals flutter in the air within 10 feet of you for the next minute."
+                                    "Borboletas e pétalas de flores ilusórias flutuam no ar a até 3 metros de distância de você por um minuto."
                                 ],
                                 [
                                     "81-82",
-                                    "You can take one additional action immediately."
+                                    "Você pode realizar outra ação imediatamente."
                                 ],
                                 [
                                     "83-84",
-                                    "Each creature within 30 feet of you takes {@damage 1d10} necrotic damage. You regain hit points equal to the sum of the necrotic damage dealt."
+                                    "Qualquer criatura a até 9 metros de distância de você sofre 1d10 pontos de dano necrótico. Você recupera uma quantidade de pontos de vida igual à soma do dano necrótico causado."
                                 ],
                                 [
                                     "85-86",
-                                    "You cast {@spell mirror image}."
+                                    "Você conjura {@spell reflexos}."
                                 ],
                                 [
                                     "87-88",
-                                    "You cast {@spell fly} on a random creature within 60 feet of you."
+                                    "Você conjura {@spell voo} em uma criatura aleatória e que esteja a até 18 metros de distância de você."
                                 ],
                                 [
                                     "89-90",
-                                    "You become {@condition invisible} for the next minute. During that time, other creatures can't hear you. The invisibility ends if you attack or cast a spell."
+                                    "Você {@condition invisível} por um minuto. Durante esse tempo, outras criaturas não podem ouvi-lo. O efeito termina se você atacar ou conjurar uma magia."
                                 ],
                                 [
                                     "91-92",
-                                    "If you die within the next minute, you immediately come back to life as if by the {@spell reincarnate} spell."
+                                    "Se você morrer no próximo minuto, voltará imediatamente à vida como se tivesse sido alvo da magia {@spell reencarnar}."
                                 ],
                                 [
                                     "93-94",
-                                    "Your size increases by one size category for the next minute."
+                                    "Seu tamanho aumenta em uma categoria por um minuto."
                                 ],
                                 [
                                     "95-96",
-                                    "You and all creatures within 30 feet of you gain vulnerability to piercing damage for the next minute."
+                                    "Você e todas as criaturas a até 9 metros de distância ficam vulneráveis a dano perfurante por um minuto."
                                 ],
                                 [
                                     "97-98",
-                                    "You are surrounded by faint, ethereal music for the next minute."
+                                    "Você é envolto por uma tênue música etérea por um minuto."
                                 ],
                                 [
                                     "99-00",
-                                    "You regain all expended sorcery points."
+                                    "Você recupera todos os seus pontos de feitiçaria gastos."
                                 ]
-                            ],
-                            "data": {
-                                "tableInclude": true
-                            }
+                            ]
                         }
                     ]
                 },
                 {
-                    "name": "Bend Luck",
+                    "name": "Marés do Caos",
                     "source": "PHB",
-                    "page": 103,
-                    "className": "Sorcerer",
+                    "page": 81,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Wild",
+                    "subclassShortName": "Selvagem",
+                    "subclassSource": "PHB",
+                    "level": 1,
+                    "header": 1,
+                    "entries": [
+                        "A partir do 1º nível, você pode manipular as forças do acaso e do caos para ganhar vantagem em um teste de atributo, salvaguarda ou jogada de ataque. Ao fazer isso, precisará completar um descanso longo antes que possa utilizar esta característica novamente.",
+                        "A qualquer momento antes de recuperar o uso desta característica, e imediatamente após conjurar uma magia de feiticeiro de 1º círculo ou maior, o DM pode pedir que você jogue na tabela de Magia Selvagem. Só então você recuperará o uso desta característica."
+                    ]
+                },
+                {
+                    "name": "Distorcer a Sorte",
+                    "source": "PHB",
+                    "page": 81,
+                    "className": "Feiticeiro",
+                    "classSource": "PHB",
+                    "subclassShortName": "Selvagem",
                     "subclassSource": "PHB",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "Starting at 6th level, you have the ability to twist fate using your wild magic. When another creature you can see makes an attack roll, an ability check, or a saving throw, you can use your reaction and spend 2 sorcery points to roll {@dice 1d4} and apply the number rolled as a bonus or penalty (your choice) to the creature's roll. You can do so after the creature rolls but before any effects of the roll occur."
+                        "A partir do 6º nível, você ganha a habilidade de distorcer o destino. Quando outra criatura que você possa ver realizar um teste de atributo, salvaguarda, ou uma jogada de ataque, com o gasto de 2 pontos de feitiçaria, você pode usar sua reação para jogar 1d4 e aplicar o número sorteado como um bônus ou penalidade (à sua escolha) na jogada da criatura. Você pode fazer isso após a jogada, mas antes de os efeitos dela serem aplicados."
                     ]
                 },
                 {
-                    "name": "Controlled Chaos",
+                    "name": "Caos Controlado",
                     "source": "PHB",
-                    "page": 103,
-                    "className": "Sorcerer",
+                    "page": 81,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Wild",
+                    "subclassShortName": "Selvagem",
                     "subclassSource": "PHB",
                     "level": 14,
                     "header": 2,
                     "entries": [
-                        "At 14th level, you gain a modicum of control over the surges of your wild magic. Whenever you roll on the {@table Wild Magic Surge|PHB} table, you can roll twice and use either number."
+                        "No 14º nível você ganha um pequeno controle sobre os seus surtos de magia selvagem. Sempre que jogar na tabela de Surto de Magia Selvagem, poderá jogar duas vezes e escolher um dos dois números."
                     ]
                 },
                 {
-                    "name": "Spell Bombardment",
+                    "name": "Bombardeio de Magia",
                     "source": "PHB",
-                    "page": 103,
-                    "className": "Sorcerer",
+                    "page": 81,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Wild",
+                    "subclassShortName": "Selvagem",
                     "subclassSource": "PHB",
                     "level": 18,
                     "header": 2,
                     "entries": [
-                        "Beginning at 18th level, the harmful energy of your spells intensifies. When you roll damage for a spell and roll the highest number possible on any of the dice, choose one of those dice, roll it again and add that roll to the damage. You can use the feature only once per turn."
+                        "A partir do 18º nível, a energia nociva das suas magias se intensifica. Ao jogar o dano para uma magia e obter o resultado máximo em qualquer um dos dados, escolha um desses dados, jogue-o novamente, e adicione o resultado ao dano. Esta característica só pode ser usada uma vez por turnon."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Divine Soul",
-			"shortName": "Divine Soul",
+			"name": "Alma Divina",
+			"shortName": "Alma Divina",
+            "id": "almadivina",
 			"source": "XGE",
-			"className": "Sorcerer",
+			"className": "Feiticeiro",
 			"classSource": "PHB",
-			"page": 50,
-			"additionalSpells": [
-				{
-					"name": "Good",
-					"known": {
-						"1": [
-							"cure wounds"
-						]
-					}
-				},
-				{
-					"name": "Evil",
-					"known": {
-						"1": [
-							"inflict wounds"
-						]
-					}
-				},
-				{
-					"name": "Law",
-					"known": {
-						"1": [
-							"bless"
-						]
-					}
-				},
-				{
-					"name": "Chaos",
-					"known": {
-						"1": [
-							"bane"
-						]
-					}
-				},
-				{
-					"name": "Neutrality",
-					"known": {
-						"1": [
-							"protection from evil and good"
-						]
-					}
-				}
-			],
+			"page": 34,
+            "level": 1,
+            "entries": [
+                "Às vezes a centelha da magia que nutre um feiticeiro vem de uma fonte divina que cintila no interior da alma. Possuir uma alma assim abençoada é sinal de que sua magia inata pode ter origem em um distante, mas poderoso, parentesco com um ser divino. Talvez seu ancestral seja um anjo transformado em mortal e enviado para lutar em nome de um deus. Ou seu nascimento poderia estar alinhado a uma antiga profecia, o que faria de você um servo dos deuses ou um repositório de magia divina.",
+                "Uma Alma Divina, devido ao seu magnetismo natural, é vista como uma ameaça por algumas hierarquias religiosas. Como um forasteiro que comanda poder sagrado, uma Alma Divina pode minar uma ordem existente ao reivindicar ligação direta com o divino.",
+                "Em algumas culturas, apenas aqueles capazes de provar-se Almas Divinas podem exercer poder religioso. Nessas terras, as posições eclesiásticas são dominadas por umas poucas linhagens, e mantidas por gerações."
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Divine Soul",
-                    "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
-                    "classSource": "PHB",
-                    "subclassShortName": "Divine Soul",
-                    "subclassSource": "XGE",
-                    "level": 1,
-                    "entries": [
-                        "Sometimes the spark of magic that fuels a sorcerer comes from a divine source that glimmers within the soul. Having such a blessed soul is a sign that your innate magic might come from a distant but powerful familial connection to a divine being. Perhaps your ancestor was an angel, transformed into a mortal and sent to fight in a god's name.",
-                        "Or your birth might align with an ancient prophecy, marking you as a servant of the gods or a chosen vessel of divine magic.",
-                        "A Divine Soul, with a natural magnetism, is seen as a threat by some religious hierarchies. As an outsider who commands sacred power, a Divine Soul can undermine an existing order by claiming a direct tie to the divine.",
-                        "In some cultures, only those who can claim the power of a Divine Soul may command religious power. In these lands, ecclesiastical positions are dominated by a few bloodlines and preserved over generations.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Divine Magic|Sorcerer||Divine Soul|XGE|1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Favored by the Gods|Sorcerer||Divine Soul|XGE|1"
-                        }
-                    ]
-                },
                 {
-                    "name": "Divine Magic",
+                    "name": "Magia Divina",
                     "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
+                    "page": 34,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Divine Soul",
+                    "subclassShortName": "Alma Divina",
                     "subclassSource": "XGE",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "Your link to the divine allows you to learn spells from the cleric class. When your Spellcasting feature lets you learn or replace a sorcerer cantrip or a sorcerer spell of 1st level or higher, you can choose the new spell from the cleric spell list or the sorcerer spell list. You must otherwise obey all the restrictions for selecting the spell, and it becomes a sorcerer spell for you.",
-                        "In addition, choose an affinity for the source of your divine power: good, evil, law, chaos, or neutrality. You learn an additional spell based on that affinity, as shown below. It is a sorcerer spell for you, but it doesn't count against your number of sorcerer spells known. If you later replace this spell, you must replace it with a spell from the cleric spell list.",
+                        "Sua ligação com o divino permite que você aprenda magias da classe clérigo. Quando a sua característica Conjuração permite que você aprenda ou substitua um truque ou magia de feiticeiro de 1º círculo ou superior, você pode escolher a nova magia da lista de magias de clérigo ou da lista de magias de feiticeiro. Fora isso, você deve obedecer a todas as restrições para a seleção da magia, que se torna uma magia de feiticeiro para você.",
+                        "Além disso, escolha uma afinidade para a fonte de seu poder divino: bem, mal, ordem, caos ou neutralidade. Você aprende uma magia adicional baseada nessa afinidade, conforme mostrado abaixo. Trata-se de uma magia de feiticeiro para você, mas ela não conta para o número de magias de feiticeiro que você conhece. Caso venha a substituir essa magia, você deve fazê-lo por uma magia da lista de magias de clérigo.",
                         {
                             "type": "table",
                             "colLabels": [
-                                "Affinity",
-                                "Spell"
+                                "Afinidade",
+                                "Magia"
                             ],
                             "colStyles": [
                                 "col-5",
@@ -595,258 +503,240 @@
                             ],
                             "rows": [
                                 [
-                                    "Good",
-                                    "{@spell cure wounds}"
+                                    "Bem",
+                                    "{@spell curar ferimentos}"
                                 ],
                                 [
-                                    "Evil",
-                                    "{@spell inflict wounds}"
+                                    "Mal",
+                                    "{@spell infligir ferimentos}"
                                 ],
                                 [
-                                    "Law",
-                                    "{@spell bless}"
+                                    "Ordem",
+                                    "{@spell bênção}"
                                 ],
                                 [
-                                    "Chaos",
-                                    "{@spell bane}"
+                                    "Caos",
+                                    "{@spell perdição}"
                                 ],
                                 [
-                                    "Neutrality",
-                                    "{@spell protection from evil and good}"
+                                    "Neutralidade",
+                                    "{@spell proteção contra o bem e o mal}"
                                 ]
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Favored by the Gods",
+                    "name": "Favorecido pelos Deuses",
                     "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
+                    "page": 34,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Divine Soul",
+                    "subclassShortName": "Alma Divina",
                     "subclassSource": "XGE",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "Starting at 1st level, divine power guards your destiny. If you fail a saving throw or miss with an attack roll, you can roll {@dice 2d4} and add it to the total, possibly changing the outcome. Once you use this feature, you can't use it again until you finish a short or long rest."
+                        "A partir do 1º nível, seu destino é protegido por poderes divinos. Caso falhe em uma salvaguarda ou em uma jogada de ataque, você pode jogar 2d4 e adicionar o resultado ao total.",
+                        "Após usar esta característica, você não pode voltar a fazê-lo até terminar um descanso curto ou longo."
                     ]
                 },
                 {
-                    "name": "Empowered Healing",
+                    "name": "Cura Potencializada",
                     "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
+                    "page": 34,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Divine Soul",
+                    "subclassShortName": "Alma Divina",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "Starting at 6th level, the divine energy coursing through you can empower healing spells. Whenever you or an ally within 5 feet of you rolls dice to determine the number of hit points a spell restores, you can spend 1 sorcery point to reroll any number of those dice once, provided you aren't {@condition incapacitated}. You can use this feature only once per turn."
+                        "A partir do 6º nível, a energia divina que percorre seu corpo pode potencializar magias de cura. Sempre que você ou um aliado a até 1,5 metro de você jogar dados para determinar a quantidade de pontos de vida recuperados por uma magia, você pode gastar 1 ponto de feitiçaria para jogar novamente qualquer quantidade desses dados uma vez, contanto que você não esteja {@condition incapacitado}. Você só pode usar esta característica uma vez por turno."
                     ]
                 },
                 {
-                    "name": "Otherworldly Wings",
+                    "name": "Asas Sobrenaturais",
                     "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
+                    "page": 34,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Divine Soul",
+                    "subclassShortName": "Alma Divina",
                     "subclassSource": "XGE",
                     "level": 14,
                     "header": 2,
                     "entries": [
-                        "Starting at 14th level, you can use a bonus action to manifest a pair of spectral wings from your back. While the wings are present, you have a flying speed of 30 feet. The wings last until you're {@condition incapacitated}, you die, or you dismiss them as a bonus action.",
-                        "The affinity you chose for your Divine Magic feature determines the appearance of the spectral wings: eagle wings for good or law, bat wings for evil or chaos, and dragonfly wings for neutrality."
+                        "A partir do 14º nível, você pode usar uma ação bônus para manifestar um par de asas espectrais a partir das suas costas. Enquanto as asas estiverem presentes, você conta com um deslocamento de voo de 9 metros. As asas duram até você ficar {@condition incapacitado}, morrer, ou dissipá-las com uma ação bônus.",
+                        "A afinidade que você escolhe para sua característica Magia Divina determina a aparência das asas espectrais: asas de águia para bem e ordem, asas de morcego para mal e caos, e asas de libélula para neutralidade."
                     ]
                 },
                 {
-                    "name": "Unearthly Recovery",
+                    "name": "Recuperação Sobrenatural",
                     "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
+                    "page": 34,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Divine Soul",
+                    "subclassShortName": "Alma Divina",
                     "subclassSource": "XGE",
                     "level": 18,
                     "header": 2,
                     "entries": [
-                        "At 18th level, you gain the ability to overcome grievous injuries. As a bonus action when you have fewer than half of your hit points remaining, you can regain a number of hit points equal to half your hit point maximum.",
-                        "Once you use this feature, you can't use it again until you finish a long rest."
+                        "No 18º nível, você ganha a habilidade de superar ferimentos graves. Como uma ação bônus quando estiver com menos do que a metade dos seus pontos de vida, você pode recuperar uma quantidade de pontos de vida igual à metade dos seus pontos de vida máximo.",
+                        "Após usar esta característica, você não pode usá-la novamente até terminar um descanso longo."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Shadow Magic",
-			"shortName": "Shadow",
+			"name": "Magia das Sombras",
+			"shortName": "Sombras",
+            "id": "sombras",
 			"source": "XGE",
-			"className": "Sorcerer",
+			"className": "Feiticeiro",
 			"classSource": "PHB",
-			"page": 50,
-			"additionalSpells": [
-				{
-					"known": {
-						"3": [
-							"darkness"
-						]
-					}
-				}
-			],
+			"page": 34,
+            "level": 1,
+            "entries": [
+                "Você é uma criatura das sombras, pois a sua magia vem do próprio Sombral. Você é capaz de traçar sua linhagem até uma entidade daquele reino, ou talvez tenha sido submetido à energia cruel e transformadora de lá.",
+                "O poder da magia das sombras lança uma estranha mortalha sobre sua aparência física. Você pode escolher ou jogar na tabela Peculiaridades do Feiticeiro das Sombras, ou criar uma peculiaridade para seu personagem.",
+                {
+                    "type": "table",
+                    "caption": "Peculiaridades do Feiticeiro das Sombras",
+                    "colLabels": [
+                        "d6",
+                        "Peculiaridade"
+                    ],
+                    "colStyles": [
+                        "col-2 text-center",
+                        "col-10"
+                    ],
+                    "rows": [
+                        [
+                            "1",
+                            "Você está sempre gelado ao toque."
+                        ],
+                        [
+                            "2",
+                            "Parece que você não respira quando está dormindo (mas sua respiração é apenas imperceptível)."
+                        ],
+                        [
+                            "3",
+                            "Você quase não sangra, mesmo gravemente ferido."
+                        ],
+                        [
+                            "4",
+                            "Seu coração bate uma vez por minuto. Às vezes, uma das batidas o surpreende."
+                        ],
+                        [
+                            "5",
+                            "Você tem dificuldade em lembrar que deveria tratar seres vivos diferentemente do modo como trata cadáveres."
+                        ],
+                        [
+                            "6",
+                            "Você piscou. Uma vez. Semana passada."
+                        ]
+                    ]
+                }
+            ],
 			"subclassFeatures": [
-				{
-                    "name": "Shadow Magic",
-                    "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
-                    "classSource": "PHB",
-                    "subclassShortName": "Shadow",
-                    "subclassSource": "XGE",
-                    "level": 1,
-                    "entries": [
-                        "You are a creature of shadow, for your innate magic comes from the Shadowfell itself. You might trace your lineage to an entity from that place, or perhaps you were exposed to its fell energy and transformed by it.",
-                        "The power of shadow magic casts a strange pall over your physical presence. The spark of life that sustains you is muffled, as if it struggles to remain viable against the dark energy that imbues your soul. At your option, you can pick from or roll on the Shadow Sorcerer Quirks table to create a quirk for your character.",
-                        {
-                            "type": "table",
-                            "caption": "Shadow Sorcerer Quirks",
-                            "colLabels": [
-                                "d6",
-                                "Quirk"
-                            ],
-                            "colStyles": [
-                                "col-2 text-center",
-                                "col-10"
-                            ],
-                            "rows": [
-                                [
-                                    "1",
-                                    "You are always icy cold to the touch."
-                                ],
-                                [
-                                    "2",
-                                    "When you are asleep, you don't appear to breathe (though you must still breathe to survive)."
-                                ],
-                                [
-                                    "3",
-                                    "You barely bleed, even when badly injured."
-                                ],
-                                [
-                                    "4",
-                                    "Your heart beats once per minute. This event sometimes surprises you."
-                                ],
-                                [
-                                    "5",
-                                    "You have trouble remembering that living creatures and corpses should be treated differently."
-                                ],
-                                [
-                                    "6",
-                                    "You blinked. Once. Last week."
-                                ]
-                            ]
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Eyes of the Dark|Sorcerer||Shadow|XGE|1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Strength of the Grave|Sorcerer||Shadow|XGE|1"
-                        }
-                    ]
-                },
                 {
-                    "name": "Eyes of the Dark",
+                    "name": "Olhos das Sombras",
                     "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
+                    "page": 34,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Shadow",
+                    "subclassShortName": "Sombras",
                     "subclassSource": "XGE",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "Starting at 1st level, you have {@sense darkvision} with a range of 120 feet.",
-                        "When you reach 3rd level in this class, you learn the {@spell darkness} spell, which doesn't count against your number of sorcerer spells known. In addition, you can cast it by spending 2 sorcery points or by expending a spell slot. If you cast it with sorcery points, you can see through the {@spell darkness} created by the spell."
+                        "A partir do 1º nível, você tem visão no escuro com alcance de 36 metros.",
+                        "Ao chegar no 3º nível nesta classe, você aprende a magia {@spell escuridão}, que não conta para o número de magias de feiticeiro que você conhece. Além disso, você pode conjurá-la gastando 2 pontos de feitiçaria ou um espaço de magia. Caso escolha a primeira opção, você pode ver através de trevas criadas pela magia."
                     ]
                 },
                 {
-                    "name": "Strength of the Grave",
+                    "name": "Força do Túmulo",
                     "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
+                    "page": 34,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Shadow",
+                    "subclassShortName": "Sombras",
                     "subclassSource": "XGE",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "Starting at 1st level, your existence in a twilight state between life and death makes you difficult to defeat. When damage reduces you to 0 hit points, you can make a Charisma saving throw (DC 5 + the damage taken). On a success, you instead drop to 1 hit point. You can't use this feature if you are reduced to 0 hit points by radiant damage or by a critical hit.",
-                        "After the saving throw succeeds, you can't use this feature again until you finish a long rest."
+                        "A partir do 1º nível, o fato de você existir em um estado intermediário entre vida e morte torna difícil derrotá-lo. Quando dano o reduz a 0 pontos de vida, você pode realizar uma salvaguarda de Carisma (CD 5 + o dano sofrido). Em caso de sucesso, você volta a ter 1 ponto de vida. Você não pode usar esta característica se tiver sido reduzido a 0 ponto de vida por dano radiante ou por um acerto crítico.",
+                        "Após obter sucesso na salvaguarda, você não pode voltar a usar esta característica até terminar um descanso longo."
                     ]
                 },
                 {
-                    "name": "Hound of Ill Omen",
+                    "name": "Sabujo de Mau Agouro",
                     "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
+                    "page": 34,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Shadow",
+                    "subclassShortName": "Sombras",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "At 6th level, you gain the ability to call forth a howling creature of darkness to harass your foes. As a bonus action, you can spend 3 sorcery points to magically summon a hound of ill omen to target one creature you can see within 120 feet of you. The hound uses the {@creature dire wolf}'s statistics (see the Monster Manual or appendix C in the Player's Handbook), with the following changes:",
+                        "No 6º nível, você ganha a habilidade de invocar uma uivante criatura das trevas contra seus inimigos. Como uma ação bônus, você pode gastar 3 pontos de feitiçaria para invocar magicamente um sabujo de mau agouro contra uma criatura à sua vista e a até 36 metros de você. O sabujo usa as estatísticas do {@creature lobo atroz}, com as seguintes alterações:",
                         {
                             "type": "list",
                             "items": [
-                                "The hound is size Medium, not Large, and it counts as a monstrosity, not a beast.",
-                                "It appears with a number of temporary hit points equal to half your sorcerer level.",
-                                "It can move through other creatures and objects as if they were difficult terrain. The hound takes 5 force damage if it ends its turn inside an object.",
-                                "At the start of its turn, the hound automatically knows its target's location. If the target was hidden, it is no longer hidden from the hound."
+                                "O tamanho do sabujo é Médio, não Grande, e ele conta como uma monstruosidade e não como uma fera.",
+                                "Ele aparece com uma quantidade de pontos de vida temporários igual a metade do seu nível como feiticeiro.",
+                                "Ele pode se mover através de outras criaturas e objetos como se eles fossem terreno difícil. O sabujo sofre 5 pontos de dano energético caso termine o turno dele dentro de um objeto.",
+                                "No começo do turno dele, o sabujo sabe automaticamente a localização do alvo. Se este estiver escondido, não estará escondido do sabujo."
                             ]
                         },
-                        "The hound appears in an unoccupied space of your choice within 30 feet of the target. Roll initiative for the hound. On its turn, it can move only toward its target by the most direct route, and it can use its action only to attack its target. The hound can make opportunity attacks, but only against its target. Additionally, while the hound is within 5 feet of the target, the target has disadvantage on saving throws against any spell you cast. The hound disappears if it is reduced to 0 hit points, if its target is reduced to 0 hit points, or after 5 minutes."
+                        "O sabujo aparece em um espaço desocupado à sua escolha e a até 9 metros do alvo. Jogue iniciativa para o sabujo. No turno dele, ele só pode se mover na direção do alvo por meio da rota mais direta, podendo usar uma ação apenas para atacar o alvo. O sabujo pode realizar ataques de oportunidade, mas só contra o alvo. Além disso, enquanto o sabujo estiver a até 1,5 metro do alvo, este tem desvantagem em salvaguardas contra qualquer magia conjurada por você. O sabujo desaparece caso seja reduzido a 0 pontos de vida, caso o alvo seja reduzido a 0 pontos de vida, ou após 5 minutos."
                     ]
                 },
                 {
-                    "name": "Shadow Walk",
+                    "name": "Caminhante das Sombras",
                     "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
+                    "page": 34,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Shadow",
+                    "subclassShortName": "Sombras",
                     "subclassSource": "XGE",
                     "level": 14,
                     "header": 2,
                     "entries": [
-                        "At 14th level, you gain the ability to step from one shadow into another. When you are in dim light or darkness, as a bonus action, you can magically teleport up to 120 feet to an unoccupied space you can see that is also in dim light or darkness."
+                        "No 14º nível, você ganha a habilidade de saltar entre sombras. Ao se encontrar em meia-luz ou escuridão, como uma ação bônus, você pode teleportar-se magicamente a até 36 metros para um espaço desocupado, à sua vista, que também esteja sob meia-luz ou escuridão."
                     ]
                 },
                 {
-                    "name": "Umbral Form",
+                    "name": "Forma Umbrosa",
                     "source": "XGE",
-                    "page": 50,
-                    "className": "Sorcerer",
+                    "page": 34,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Shadow",
+                    "subclassShortName": "Sombras",
                     "subclassSource": "XGE",
                     "level": 18,
                     "header": 2,
                     "entries": [
-                        "Starting at 18th level, you can spend 6 sorcery points as a bonus action to magically transform yourself into a shadowy form. In this form, you have resistance to all damage except force and radiant damage, and you can move through other creatures and objects as if they were difficult terrain. You take 5 force damage if you end your turn inside an object.",
-                        "You remain in this form for 1 minute. It ends early if you are {@condition incapacitated}, if you die, or if you dismiss it as a bonus action."
+                        "A partir do 18º nível, você pode gastar 6 pontos de feitiçaria como uma ação bônus para transformar-se magicamente numa forma sombria. Nessa forma, você tem resistência a todo tipo de dano, exceto energético e radiante, e você pode se mover através de outras criaturas e objetos como se eles fossem terreno difícil. Você sofre 5 pontos de dano energético caso termine seu turno dentro de um objeto.",
+                        "Você permanece nessa forma por 1 minuto. Ela termina antes se você ficar {@condition incapacitado}, morrer ou dissipá-la como uma ação bônus."
                     ]
                 }
 			]
 		},
 		{
-			"name": "Storm Sorcery",
-			"shortName": "Storm",
+			"name": "Feitiçaria da Tempestade",
+			"shortName": "Tempestade",
+            "id": "tempestade",
 			"source": "XGE",
-			"className": "Sorcerer",
+			"className": "Feiticeiro",
 			"classSource": "PHB",
-			"page": 51,
+			"page": 35,
+            "level": 1,
+            "entries": [
+                "Sua feitiçaria inata vem do poder do ar elemental. Muitos com este poder podem ligar as origens de sua magia a uma experiência de quase morte causada pela Grande Chuva, mas talvez você tenha nascido durante um vendaval uivante tão poderoso que o povo ainda conta história sobre ele, ou sua linhagem pode incluir a influência de potentes criaturas do ar, como os djinn. Qualquer que seja o caso, a magia da tempestade permeia seu ser.",
+                "Feiticeiros da Tempestade são membros inestimáveis da tripulação de qualquer navio. Sua magia permite que exerçam controle sobre o vento e o clima na sua área imediata. Suas habilidades também se provam úteis em rechaçar ataques de sahuagins, piratas e outras ameaças marinhas."
+            ],
 			"otherSources": [
 				{
 					"source": "SCAG",
@@ -854,113 +744,91 @@
 				}
 			],
 			"subclassFeatures": [
-				{
-                    "name": "Storm Sorcery",
-                    "source": "XGE",
-                    "page": 51,
-                    "className": "Sorcerer",
-                    "classSource": "PHB",
-                    "subclassShortName": "Storm",
-                    "subclassSource": "XGE",
-                    "level": 1,
-                    "entries": [
-                        "Your innate magic comes from the power of elemental air. Many with this power can trace their magic back to a near-death experience caused by the Great Rain, but perhaps you were born during a howling gale so powerful that folk still tell stories of it, or your lineage might include the influence of potent air creatures such as djinn. Whatever the case, the magic of the storm permeates your being.",
-                        "Storm sorcerers are invaluable members of a ship's crew. Their magic allows them to exert control over wind and weather in their immediate area. Their abilities also prove useful in repelling attacks by sahuagin, pirates, and other waterborne threats.",
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Wind Speaker|Sorcerer||Storm|XGE|1"
-                        },
-                        {
-                            "type": "refSubclassFeature",
-                            "subclassFeature": "Tempestuous Magic|Sorcerer||Storm|XGE|1"
-                        }
-                    ]
-                },
                 {
-                    "name": "Tempestuous Magic",
+                    "name": "Orador do Vento",
                     "source": "XGE",
-                    "page": 51,
-                    "className": "Sorcerer",
+                    "page": 35,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Storm",
+                    "subclassShortName": "Tempestade",
                     "subclassSource": "XGE",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "Starting at 1st level, you can use a bonus action on your turn to cause whirling gusts of elemental air to briefly surround you, immediately before or after you cast a spell of 1st level or higher. Doing so allows you to fly up to 10 feet without provoking opportunity attacks."
+                        "A magia arcana que você comanda é permeada por ar elemental. Você pode falar, ler e escrever Primordial. Conhecer essa língua permite que você entenda e seja entendido por aqueles que falam seus dialetos: Aquan, Auran, Ignan e Terran."
                     ]
                 },
                 {
-                    "name": "Wind Speaker",
+                    "name": "Magia Tempestuosa",
                     "source": "XGE",
-                    "page": 51,
-                    "className": "Sorcerer",
+                    "page": 35,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Storm",
+                    "subclassShortName": "Tempestade",
                     "subclassSource": "XGE",
                     "level": 1,
                     "header": 1,
                     "entries": [
-                        "The arcane magic you command is infused with elemental air. You can speak, read, and write {@language Primordial}. Knowing this language allows you to understand and be understood by those who speak its dialects: {@language Aquan}, {@language Auran}, {@language Ignan}, and {@language Terran}."
+                        "A partir do 1º nível, você pode usar uma ação bônus no seu turno para fazer com que rajadas de ar elemental rodopiante cerquem-no, imediatamente antes ou depois de ter conjurado uma magia de 1º círculo ou maior. Isso permite que você voe até 3 metros sem provocar ataques de oportunidade.."
                     ]
                 },
                 {
-                    "name": "Heart of the Storm",
+                    "name": "Coração da Tormenta",
                     "source": "XGE",
-                    "page": 51,
-                    "className": "Sorcerer",
+                    "page": 35,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Storm",
+                    "subclassShortName": "Tempestade",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "At 6th level, you gain resistance to lightning and thunder damage. In addition, whenever you start casting a spell of 1st level or higher that deals lightning or thunder damage, stormy magic erupts from you. This eruption causes creatures of your choice that you can see within 10 feet of you to take lightning or thunder damage (choose each time this ability activates) equal to half your sorcerer level."
+                        "No 6º nível, você ganha resistência a dano elétrico e trovejante. Além disso, sempre que você começar a conjurar uma magia de 1º círculo ou maior que cause dano elétrico ou trovejante, magia tempestuosa irrompe de você. Essa erupção provoca a criaturas à sua escolha, à sua vista e que estejam a até 3 metros de você dano elétrico ou trovejante (escolha o tipo toda vez que esta habilidade for ativada) igual a metade do seu nível como feiticeiro."
                     ]
                 },
                 {
-                    "name": "Storm Guide",
+                    "name": "Guia da Tempestade",
                     "source": "XGE",
-                    "page": 51,
-                    "className": "Sorcerer",
+                    "page": 35,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Storm",
+                    "subclassShortName": "Tempestade",
                     "subclassSource": "XGE",
                     "level": 6,
                     "header": 2,
                     "entries": [
-                        "At 6th level, you gain the ability to subtly control the weather around you.",
-                        "If it is raining, you can use an action to cause the rain to stop falling in a 20-foot-radius sphere centered on you. You can end this effect as a bonus action.",
-                        "If it is windy, you can use a bonus action each round to choose the direction that the wind blows in a 100-foot-radius sphere centered on you. The wind blows in that direction until the end of your next turn. This feature doesn't alter the speed of the wind."
+                        "No 6º nível, você ganha a habilidade de controlar sutilmente o clima ao seu redor.",
+                        "Se estiver chovendo, você pode usar uma ação para fazer com que a chuva pare de cair dentro de uma esfera com raio de 6 metros centrada em você. Você pode terminar este efeito como uma ação bônus.",
+                        "Caso o clima esteja ventoso, você pode usar uma ação bônus a cada rodada para controlar a direção em que o vento sopra dentro de uma esfera com raio de 30 metros centrada em você. O vento sopra na direção que você determinou até o final do seu próximo turno. Esta característica não altera a velocidade do vento."
                     ]
                 },
                 {
-                    "name": "Storm's Fury",
+                    "name": "Fúria da Tempestade",
                     "source": "XGE",
-                    "page": 51,
-                    "className": "Sorcerer",
+                    "page": 35,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Storm",
+                    "subclassShortName": "Tempestade",
                     "subclassSource": "XGE",
                     "level": 14,
                     "header": 2,
                     "entries": [
-                        "Starting at 14th level, when you are hit by a melee attack, you can use your reaction to deal lightning damage to the attacker. The damage equals your sorcerer level. The attacker must also make a Strength saving throw against your sorcerer spell save DC. On a failed save, the attacker is pushed in a straight line up to 20 feet away from you."
+                        "A partir do 14º nível, ao ser atingido por um ataque de combate corpo a corpo, você pode usar sua reação para causar dano elétrico na atacante. A quantidade de dano é igual a seu nível como feiticeiro. O atacante pode também deve realizar uma salvaguarda de Força contra a CD para evitar suas magias. Em caso de falha, ele é empurrado em uma linha reta a até 6 metros para longe de você."
                     ]
                 },
                 {
-                    "name": "Wind Soul",
+                    "name": "Alma Zéfira",
                     "source": "XGE",
-                    "page": 51,
-                    "className": "Sorcerer",
+                    "page": 35,
+                    "className": "Feiticeiro",
                     "classSource": "PHB",
-                    "subclassShortName": "Storm",
+                    "subclassShortName": "Tempestade",
                     "subclassSource": "XGE",
                     "level": 18,
                     "header": 2,
                     "entries": [
-                        "At 18th level, you gain immunity to lightning and thunder damage.",
-                        "You also gain a magical flying speed of 60 feet. As an action, you can reduce your flying speed to 30 feet for 1 hour and choose a number of creatures within 30 feet of you equal to 3 + your Charisma modifier. The chosen creatures gain a magical flying speed of 30 feet for 1 hour. Once you reduce your flying speed in this way, you can't do so again until you finish a short or long rest."
+                        "No 18º nível, você ganha imunidade a dano elétrico e trovejante.",
+                        "Você também ganha deslocamento mágico de voo igual a 18 metros. Como uma ação, você pode reduzir esse deslocamento para 9 metros por 1 hora, e escolher uma quantidade de criaturas a até 9 metros de você igual a 3 + seu modificador de Carisma. Essas criaturas ganham deslocamento de voo de 9 metros por 1 hora. Após reduzir seu deslocamento mágico de voo desse modo, você não pode voltar a fazê-lo até terminar um descanso curto ou longo."
                     ]
                 }
 			]
