@@ -53,6 +53,11 @@ i, em {
     font-style: italic;
 }
 
+b, strong {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
 a {
     color: #dc3545;
 }
@@ -347,6 +352,12 @@ h4.subtitulo {
     color: #000000;
 }
 
+.subtitulo .sSource {
+    font-weight: 500;
+    font-size: 16px;
+    color: #7e7e7e;
+}
+
 .subtitulo::after {
     content: "";
     width: 100%;
@@ -381,8 +392,17 @@ h4.subtitulo {
     padding: 1rem;
 }
 
-.relac-raca .card-body p {
+.relac-raca .card-body p,
+.relac-raca .card-body ul {
     font-size: 13px;
+}
+
+.relac-raca .card-body h6 span {
+    font-size: 12px;
+    font-weight: 400;
+    color: #939393;
+    text-transform: none;
+    margin-left: 0.1rem;
 }
 
 .relac-raca .card-body :last-child {

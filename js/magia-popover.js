@@ -4,7 +4,7 @@
 //     loadMPopIntoPage("/data/magias.json", magiaNomeUrl);
 // });
 $(document).on("mouseover", ".magias-hover", function (){
-    console.log("passou aqui");
+    // console.log("passou aqui");
     var magiaNomeUrl = $(this).attr("id");
     
     loadMPopIntoPage("/data/magias.json", magiaNomeUrl);
@@ -61,7 +61,7 @@ function loadMPopIntoPage(data, id) {
         r[13] = '<p><span class="badge badge-spells" style="padding:8px;font-size:14px;">ACESSE A PÁGINA PARA VER MAIS</span></p>';
         r[14] = '</div></div></div></div></div>';
         $(".tooltip-inner").html(r.join(''));
-        console.log(r);
+        //console.log(r);
     });
 };
 
