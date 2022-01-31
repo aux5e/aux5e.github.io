@@ -21,7 +21,7 @@
     <script src="/js/active-menu-link.js" type="text/javascript"></script>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#sidebar-menu" tabindex="0">
 
     <div data-include="header"></div>
 
@@ -42,9 +42,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <section class="secondary-content">
-                    <nav class="sidebar-menu" style="top: auto; position: unset;">
-                        <div id="quick-menu-div"><!-- Lista de Talentos --></div>
-                    </nav>
+                    <div id="quick-menu-div"><!-- Lista de Talentos --></div>
                 </section>
                 <section class="secondary-content-mobile"><!-- Lista de Talentos --></section>
             </div>

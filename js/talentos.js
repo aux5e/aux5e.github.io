@@ -189,33 +189,37 @@ async function loadTalentosIntoSideMenu(url) {
     // Popular o corpo do menu
     var rQM = [];
     var c = -1;
-    rQM[++c] = '<nav class="sidebar-menu" style="top: auto; position: unset;">';
+    // rQM[++c] = '<nav class="sidebar-menu" style="top: auto; position: unset;">';
+    // rQM[++c] = '<ul id="quick-menu" class="quick-menu-tier-1">';
+    // rQM[++c] = '<li class="quick-menu-item">';
+    // rQM[++c] = '<div class="quick-menu-item-label">';
+    // rQM[++c] =  '<a class="quick-menu-item-link" href="#TalentosDetalhes">Talentos</a>';
+    // rQM[++c] = '</div>';
+    // rQM[++c] = '</li>';
+    // rQM[++c] = '<ul id="quick-menu-tier2" class="quick-menu-tier-2">';
+    rQM[++c] = '<nav id="sidebar-menu" style="top: auto; position: unset;">';
     rQM[++c] = '<ul id="quick-menu" class="quick-menu-tier-1">';
     rQM[++c] = '<li class="quick-menu-item">';
     rQM[++c] = '<div class="quick-menu-item-label">';
-    rQM[++c] =  '<a class="quick-menu-item-link" href="#TalentosDetalhes">Talentos</a>';
-    rQM[++c] = '</div>';
-    rQM[++c] = '</li>';
-    rQM[++c] = '<ul id="quick-menu-tier2" class="quick-menu-tier-2">';
+    rQM[++c] = '<a class="quick-menu-item-link" href="#TalentosDetalhes">Talentos</a>';
+    rQM[++c] = '</div></li>';
+    rQM[++c] = '<nav class="nav nav-pills flex-column">';
+    rQM[++c] = '<ul id="quick-menu-tier2" class="quick-menu-tier-2 nav">';
 
     for (var row = 0; row < talentosLenght; row++) {
       var talentoNameLink = talento[row].name.replace(/\s/g, '').replace(/[àáâãäå]/g, "a").replace(/ç/g,"c").replace(/[èéêë]/g,"e").replace(/[ìíîï]/g,"i").replace(/[òóôõö]/g,"o").replace(/[ùúûü]/g,"u").replace("-", '').replace(/ /g, '');
 
-      rQM[++c] = '<li class="quick-menu-item">';
-      rQM[++c] = '<div class="quick-menu-item-label">';
+      rQM[++c] = '<li class="quick-menu-item"><div class="quick-menu-item-label">';
 
-      rQM[++c] = '<a class="quick-menu-item-link"';
+      rQM[++c] = '<a class="nav-link quick-menu-item-link"';
       rQM[++c] = 'href="#Talentos' + talentoNameLink + '">';
       rQM[++c] = talento[row].name;
       rQM[++c] = '</a>';
 
-      rQM[++c] = '</div>';
-      rQM[++c] = "</li>";
+      rQM[++c] = '</div></li>';
     }
     
-    rQM[++c] = '</ul>';
-    rQM[++c] = '</ul>';
-    rQM[++c] = '</nav>';
+    rQM[++c] = '</ul></nav></nav>';
     
     $(quickMenu).html(rQM.join(""));    
 

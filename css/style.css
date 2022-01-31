@@ -1000,7 +1000,7 @@ ul.main-list {
     text-decoration: none;
 }
 
-.quick-menu-active {
+.quick-menu-item-link.active {
     border-left: 3px solid #ee8600;
 }
 
@@ -1017,9 +1017,10 @@ ul.main-list {
     background-color: #f7f7f7 !important;
 }
 
-#quick-menu-tier2 .quick-menu-item:hover .quick-menu-item-link {
+#quick-menu-tier2>.quick-menu-item .quick-menu-item-link:hover {
     border-left: 3px solid #ee8600;
     color:#ee8600;
+    transition: all 1s;
 }
 
 .quick-menu-item-opened>.quick-menu {
@@ -1035,6 +1036,22 @@ ul.main-list {
     align-items: center;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+}
+
+#sidebar-menu .nav {
+    display: inline-block;
+    width: 100%;
+}
+
+#sidebar-menu .nav-pills .nav-link {
+    border-radius: 0rem !important;
+}
+
+#sidebar-menu .nav-pills .nav-link.active, #sidebar-menu .nav-pills .show>.nav-link {
+    color: inherit !important;
+    background-color: transparent !important;
+    border-left: 3px solid #ee8600 !important;
+    transition: all 1s;
 }
 
 .quick-menu-tier-2 .quick-menu-item-link {
@@ -1087,7 +1104,15 @@ ul.main-list {
 }
 
 .panel-collapse .quick-menu-item-link {
-    padding: 0.5rem 0.5rem 0.5rem 1.2rem !important;
+    padding: 0.5rem 0.5rem 0.5rem 1rem !important;
+    border-left: 6px solid #fff!important;
+}
+
+#quick-menu-tier2 .panel-collapse .quick-menu-item:hover .quick-menu-item-link,
+#sidebar-menu .panel-collapse .nav-pills .nav-link.active {
+    border-left: 6px solid #ee8600!important;
+    color:#ee8600;
+    transition: all 500ms;
 }
 
 .panel-heading a:before {
@@ -1096,13 +1121,16 @@ ul.main-list {
     content: "\f105";
     float: right;
     transition: all 0.5s;
-}
-
-.panel-heading.active a:before {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
+    /* .panel-heading.active a:before {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        transform: rotate(90deg);
+    } */
 
 /** ================ FIM QUICK MENU ================ **/
 

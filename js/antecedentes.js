@@ -135,18 +135,26 @@ async function loadAntecedentesIntoPage(url) {
         var bgSMIncrement = -1;
 
         // abre div do menu (INICIO)
-        bgSideMenu[++bgSMIncrement] = '<nav class="sidebar-menu" style="top: auto; position: unset;">';
+        // bgSideMenu[++bgSMIncrement] = '<nav class="sidebar-menu" style="top: auto; position: unset;">';
+        // bgSideMenu[++bgSMIncrement] = '<ul id="quick-menu" class="quick-menu-tier-1">';
+        // bgSideMenu[++bgSMIncrement] = '<li class="quick-menu-item">';
+        // bgSideMenu[++bgSMIncrement] = '<div class="quick-menu-item-label">';
+        // bgSideMenu[++bgSMIncrement] = '<a class="quick-menu-item-link" href="#AntecedentesDetalhes">Antecedentes</a>';
+        // bgSideMenu[++bgSMIncrement] = '</div></li>';
+        // bgSideMenu[++bgSMIncrement] = '<ul id="quick-menu-tier2" class="quick-menu-tier-2 nav">';
+        bgSideMenu[++bgSMIncrement] = '<nav id="sidebar-menu" style="top: auto; position: unset;">';
         bgSideMenu[++bgSMIncrement] = '<ul id="quick-menu" class="quick-menu-tier-1">';
         bgSideMenu[++bgSMIncrement] = '<li class="quick-menu-item">';
         bgSideMenu[++bgSMIncrement] = '<div class="quick-menu-item-label">';
         bgSideMenu[++bgSMIncrement] = '<a class="quick-menu-item-link" href="#AntecedentesDetalhes">Antecedentes</a>';
         bgSideMenu[++bgSMIncrement] = '</div></li>';
-        bgSideMenu[++bgSMIncrement] = '<ul id="quick-menu-tier2" class="quick-menu-tier-2">';
+        bgSideMenu[++bgSMIncrement] = '<nav class="nav nav-pills flex-column">';
+        bgSideMenu[++bgSMIncrement] = '<ul id="quick-menu-tier2" class="quick-menu-tier-2 nav">';
 
         // popular menu com os nomes dos antecedentes
         for (var antecedente = 0; antecedente < ANTECEDENTES_LENGHT; antecedente++) {
             bgSideMenu[++bgSMIncrement] = '<li class="quick-menu-item"><div class="quick-menu-item-label">';
-            bgSideMenu[++bgSMIncrement] = '<a class="quick-menu-item-link" href="#' + ANTECEDENTES[antecedente].id + '">';
+            bgSideMenu[++bgSMIncrement] = '<a class="nav-link quick-menu-item-link" href="#' + ANTECEDENTES[antecedente].id + '">';
 
             if (ANTECEDENTES[antecedente].isVariant === true) {
                 bgSideMenu[++bgSMIncrement] = ANTECEDENTES[antecedente].menuName;
@@ -154,12 +162,23 @@ async function loadAntecedentesIntoPage(url) {
                 bgSideMenu[++bgSMIncrement] = ANTECEDENTES[antecedente].name;
             }
             
-            bgSideMenu[++bgSMIncrement] = '</a></div></li>';
+            bgSideMenu[++bgSMIncrement] = '</li></a>';
+            // bgSideMenu[++bgSMIncrement] = '<li class="quick-menu-item"><div class="quick-menu-item-label">';
+            // bgSideMenu[++bgSMIncrement] = '<a class="quick-menu-item-link" href="#' + ANTECEDENTES[antecedente].id + '">';
+
+            // if (ANTECEDENTES[antecedente].isVariant === true) {
+            //     bgSideMenu[++bgSMIncrement] = ANTECEDENTES[antecedente].menuName;
+            // } else {
+            //     bgSideMenu[++bgSMIncrement] = ANTECEDENTES[antecedente].name;
+            // }
+            
+            // bgSideMenu[++bgSMIncrement] = '</a></div></li>';
             
         }
 
         // fecha div do menu (FIM)
-        bgSideMenu[++bgSMIncrement] = '</ul></ul></nav>';
+        // bgSideMenu[++bgSMIncrement] = '</ul></ul></nav>';
+        bgSideMenu[++bgSMIncrement] = '</ul></nav></nav>';
 
         // retorna o conteudo das arrays
         $(SECTION_BODY).html(bgContent.join(""));
