@@ -1,0 +1,4414 @@
+{
+	"_meta": {
+		"internalCopies": [
+			"background"
+		]
+	},
+	"background": [
+		{
+			"name": "Acadêmico Recluso",
+            "id": "academico-recluso",
+			"source": "SCAG",
+			"page": 145,
+			"entries": [
+                "Quando criança, você era curioso enquanto seus companheiros eram possessivos ou barulhentos. Em seus anos de formação, você ingressou em um dos grandes institutos de ensino de Faerûn, onde aprendeu e foi ensinado que o conhecimento é um tesouro mais valioso do que ouro ou pedras preciosas. Agora você está pronto para sair de casa — não para abandoná-lo, mas para buscar novos conhecimentos para aumentar seu estoque de saber.",
+                "A mais conhecida das fontes de conhecimento de Faerûn é o Candlekeep (Forte da Vela). A grande biblioteca está sempre precisando de trabalhadores e auxiliares, alguns dos quais sobem na hierarquia para assumir papéis de maior responsabilidade e destaque. Você pode ser um membro do Candlekeep (Forte da Vela), dedicado à curadoria do que é provavelmente o conjunto mais completo de conhecimento e história de todo o mundo.",
+                "Ou talvez você tenha sido atraído pelos estudiosos da Câmara dos Sábios ou da Casa dos Mapas em Lua Argêntea, e agora se esforçou para aumentar seu conhecimento e se ofereceu para ajudar aqueles em outros lugares que buscam os seus conhecimentos. Você pode ser um dos poucos que ajudam a Fortaleza do Arauto, ajudando a catalogar e manter registros das informações que chegam lá, diariamente, de todo canto de Faerûn.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "História, e mais uma a sua escolha entre Arcanismo, Natureza e Religião"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Dois de sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Os trajes de estudioso do seu claustro, um kit de escrita (algibeira pequena com uma pena, tinta, pergaminho dobrado e um pequeno canivete), um livro emprestado sobre o assunto que está estudando no momento e uma algibeira contendo 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Acesso à Biblioteca",
+					"type": "entries",
+					"entries": [
+						"Embora outras pessoas precisem ter que aguentar extensas entrevistas e pagar taxas significativas para obter acesso até aos arquivos mais comuns da sua biblioteca, você tem acesso fácil e gratuito à maior parte da biblioteca, embora também possa haver repositórios de conhecimento que são valiosos demais, mágicos ou secretos, para que seja permitido acesso imediato a qualquer pessoa.",
+						"Você tem um conhecimento prático do pessoal e da burocracia do seu claustro e sabe como lidar com essas conexões com alguma facilidade.",
+						"Além disso, é provável que você obtenha tratamento preferencial em outras bibliotecas dos Reinos, como uma cortesia profissional mostrada a um colega estudioso."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Características Sugeridas",
+					"entries": [
+						"Use as tabelas do antecedente <a href=\"#sabio\">sábio</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como um estudioso enclausurado.",
+						"Seu vínculo está quase que certamente associado ao local em que você cresceu ou ao conhecimento que espera adquirir através do meio de vida aventureiro. Seu ideal está, sem dúvida, relacionado a como você vê a busca pelo conhecimento e pela verdade - talvez como uma meta digna por si só, ou talvez como um meio para um fim almejado."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Agente de Facção",
+            "id": "agente-de-faccao",
+			"source": "SCAG",
+			"page": 145,
+			"entries": [
+                "Muitas organizações em atividade no Norte e por toda Faerûn não são limitadas por restrições geográficas. Tais facções perseguem seus objetivos sem se preocupar com fronteiras políticas, e seus membros atuam em qualquer lugar que a organização julgue necessário. Estes grupos empregam ouvintes, boateiros, contrabandistas, mercenários, depositários (pessoas que guardam tesouros monetários ou mágicos para uso dos agentes da facção), encarregados de esconderijos e mensageiros, apenas para citar alguns. No centro de cada facção estão aqueles que simplesmente não cumprem uma mera função para a organização, mas que servem como suas mãos, cabeça e coração.",
+                "Como um prelúdio para sua carreira de aventuras (e em preparação a ela), você serviu como um agente de uma determinada facção em Faerûn. Você pode ter operado abertamente ou em segredo, dependendo da facção e dos objetivos dela, bem como tais objetivos combinam com os seus próprios. Tornar-se um aventureiro não exige necessariamente que você renuncie sua filiação à facção (embora você possa escolher fazê-lo), e poderia elevar seu status dentro dela.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Intuição e uma perícia, à sua escolha, baseada em Inteligência, Sabedoria ou Carisma e conforme for mais adequado a sua facção"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Dois de sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Insígnia ou emblema de sua facção, uma cópia de um texto de referência da facção (ou um livro-código para uma facção secreta), um conjunto de roupas comuns e uma algibeira contendo 15 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Refúgio Seguro",
+					"type": "entries",
+					"entries": [
+						"Como um agente da facção, você tem acesso a uma rede secreta de apoiadores e integrantes que podem lhe fornecer ajuda em suas aventuras. Você sabe vários sinais secretos e senhas que pode usar para identificar tais pessoas, que podem lhe oferecer acesso a um esconderijo secreto, alojamento e alimentação gratuitos ou auxílio na obtenção de informações. Tais agentes jamais arriscam suas próprias vidas por você, tampouco arriscam a revelar suas verdadeiras identidades."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Características Sugeridas",
+					"entries": [
+						"Use as tabelas para o antecedente <a href=\"#acolito\">acólito</a> no Player's Handbook: Livro do Jogador como uma base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como um agente de facção (por exemplo, considere as palavras \"fé\" e \"facção\" como sendo intercambiáveis).",
+						"Seu vínculo pode estar associado a outros membros de sua facção, ou a um local ou objeto que seja importante para sua organização. O ideal que você almeja provavelmente é se ater aos dogmas e princípios de sua facção, mas pode ser algo de natureza mais pessoal."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Acólito",
+            "id": "acolito",
+			"source": "PHB",
+			"page": 127,
+			"srd": true,
+			"basicRules": true,
+			"entries": [
+                "Você dedicou sua vida a servir no templo de uma determinada divindade ou panteão de deuses. Você age como um intermediário entre o reino dos deuses e o mundo mortal, realizando ritos sagrados e oferecendo sacrifícios de modo a conduzir os fiéis à presença do divino. Você não é necessariamente um clérigo - realizar os ritos sagrados não é a mesma coisa que canalizar a energia divina.",
+                "Escolha um deus, um panteão ou qualquer outro ser semidivino dentre aqueles listados no apêndice B ou especificados pelo seu DM, e converse com este último para detalhar a natureza do seu serviço religioso. Você era um funcionário menor, criado desde a infância para ajudar os sacerdotes nos ritos sagrados? Ou era o sumo sacerdote que, de repente, despertou diante de um chamado para servir ao seu deus de alguma outra forma? Talvez você tenha sido o líder de um pequeno culto alheio a qualquer estrutura de templo estabelecida, ou mesmo um culto secreto dedicado a um mestre cruel que agora você renega?",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Intuição e Religião"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Dois à sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um símbolo sagrado (um presente dado a você quando entrou no sacerdócio), um livro de orações ou uma roda de oração, 5 varetas de incenso, vestimentas, um conjunto de roupas comuns e uma algibeira contendo 15 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Abrigo dos Fiéis",
+					"type": "entries",
+					"entries": [
+						"Como um acólito, você recebe o respeito daqueles que partilham de sua fé, e é capaz de conduzir as cerimônias religiosas de sua divindade. Você e seus companheiros de aventuras podem contar com a cura e os cuidados gratuitos de um templo, santuário, outro local ou representante da sua fé, embora precisem fornecer quaisquer componentes materiais necessários para a execução de magias. Aqueles que compartilham da sua religião podem sustentá-lo (mas somente a você) em um estilo de vida modesto.",
+						"Você também pode ter laços com algum templo específico dedicado à sua divindade ou panteão, onde pode encontrar abrigo. Este pode ser o mesmo templo onde você costumava servir, caso tenha mantido boas relações ali, ou pode se tratar de outro templo, onde você encontrou um novo lar. Em todo caso, quando estiver próximo do seu templo, você pode pedir a ajuda dos sacerdotes, desde que isso não envolva nenhum perigo e que o mantenha bem relacionado com o templo."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Acólitos são moldados por sua experiência nos templos ou em outras comunidades religiosas. Os estudos que realizam sobre a história e os princípios de sua fé e suas relações com templos, santuários ou hierarquias afetam seu comportamento e seus ideais. Como defeitos, sugere-se certa hipocrisia disfarçada, ideia herética ou algum ideal ou vínculo levados ao extremo.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu idolatro um determinado herói da minha fé e me refiro constantemente aos seus exemplos e ações."
+								],
+								[
+									"2",
+									"Eu posso criar uma ponte entre os inimigos mais ferozes, sentir empatia para com eles e sempre trabalhar na busca pela paz."
+								],
+								[
+									"3",
+									"Eu vejo presságios em todos os eventos e ações. Os deuses tentam falar conosco, só precisamos ouvir."
+								],
+								[
+									"4",
+									"Nada pode abalar minha atitude otimista."
+								],
+								[
+									"5",
+									"Eu cito (corretamente ou não) textos sagrados e provérbios em quase todas as situações."
+								],
+								[
+									"6",
+									"Eu sou tolerante (ou intolerante) para com outras religiões, e respeito (ou condeno) a adoração a outros deuses."
+								],
+								[
+									"7",
+									"Eu desfrutava de boa comida, bebida e da alta sociedade na elite do meu templo. A vida dura me irrita."
+								],
+								[
+									"8",
+									"Eu passei tanto tempo no templo que possuo pouca experiência em lidar com as pessoas no mundo exterior."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Tradição. As antigas tradições de adoração e sacrifício devem ser preservadas e mantidas (Ordeiro)."
+								],
+								[
+									"2",
+									"Caridade. Eu sempre tento ajudar aqueles em necessidade, não importa o custo pessoal (Bom)."
+								],
+								[
+									"3",
+									"Mudança. Devemos ajudar a trazer as mudanças que os deuses estão constantemente planejando para o mundo (Caótico)."
+								],
+								[
+									"4",
+									"Poder. Espero um dia subir até o topo da hierarquia religiosa da minha fé (Ordeiro)."
+								],
+								[
+									"5",
+									"Fé. Creio que minha divindade guiará minhas ações. Tenho fé que, se eu me esforçar, tudo vai correr bem (Ordeiro)."
+								],
+								[
+									"6",
+									"Aspiração. Procuro provar que sou digno do favor da minha divindade ao orientar minhas ações segundo os seus ensinamentos (Qualquer)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu seria capaz de morrer para recuperar uma antiga relíquia da minha fé, há muito perdida."
+								],
+								[
+									"2",
+									"Um dia, terei minha vingança contra a hierarquia corrupta do templo, que me declarou herege."
+								],
+								[
+									"3",
+									"Eu devo minha vida ao sacerdote que me acolheu quando meus pais morreram."
+								],
+								[
+									"4",
+									"Tudo o que faço é pelas pessoas comuns."
+								],
+								[
+									"5",
+									"Farei qualquer coisa para proteger o templo onde servi."
+								],
+								[
+									"6",
+									"Eu procuro preservar um texto sagrado que meus inimigos consideram herético e desejam destruir."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu julgo os outros de forma dura, e a mim mesmo de modo ainda mais severo."
+								],
+								[
+									"2",
+									"Eu deposito muita confiança naqueles que exercem o poder na hierarquia do meu templo."
+								],
+								[
+									"3",
+									"Minha piedade, por vezes, me leva a confiar cegamente naqueles que professam a fé na minha divindade."
+								],
+								[
+									"4",
+									"Eu sou inflexível no meu modo de pensar."
+								],
+								[
+									"5",
+									"Eu desconfio de estranhos e sempre espero o pior deles."
+								],
+								[
+									"6",
+									"Quando escolho um objetivo, fico obcecado com ele, em detrimento de tudo o mais na minha vida."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Artesão de Clã",
+            "id": "artesao-de-cla",
+			"source": "SCAG",
+			"page": 146,
+			"entries": [
+                "O Povo Robusto é bem conhecido por seu artesanato e pelo valor de suas obras manuais, e você foi treinado nessa antiga tradição. Durante anos, você trabalhou sob a tutela de um anão mestre do ofício, suportando longas horas de trabalho e sendo desdenhado por um temperamento ranzinza, a fim de obter as excelentes habilidades que possui hoje.",
+                "É provável que você seja um anão, mas não necessariamente — principalmente no Norte, os clãs dos anos do escudo aprenderam há muito tempo que apenas tolos orgulhosos que estão mais preocupados com seus egos do que com seus ofícios rejeitam aprendizes promissores mesmo os que são de outras raças. Todavia, se você não é um anão, então fez um juramento solene de nunca assumir um aprendiz no ofício: os não-anoes jamais devem transmitir as habilidades dos filhos prediletos de Moradin. Ainda assim, você não teria dificuldade em encontrar um mestre anão que estivesse disposto a receber potenciais aprendizes que se apresentariam mediante sua recomendação.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "História, Intuição"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de ferramentas de artesão"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Anão ou um outro idioma à sua escolha se você ia falar Anão"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um conjunto de ferramentas de artesão com as quais você é proficiente, um cinzel usado para marcar sua obra com o símbolo do clã de artesãos com quem aprendeu sua habilidade, um conjunto de roupas de viajante e uma algibeira contendo 5 PO e uma pedra preciosa de 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Respeito do Povo Robusto",
+					"type": "entries",
+					"entries": [
+						"Por mais respeitados que os artesãos de clãs sejam entre estrangeiros, ninguém os estima tanto quanto os anões. Você sempre tem espaço e hospedagem gratuitos em qualquer lugar onde moram anões do escudo ou anões do ouro, e os indivíduos em tal povoado podem competir entre si para determinar quem pode oferecer a você (e possivelmente a seus compatriotas) as melhores acomodações e ajuda."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Características Sugeridas",
+					"entries": [
+						"Use as tabelas do antecedente <a href=\"#artesao-de-guilda\">artesão de guilda</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como artesão do clã (por exemplo, considere as palavras \"guilda\" e \"clã\" como sendo intercambiáveis).",
+						"Seu vínculo está quase que certamente relacionado ao mestre ou ao clã que o ensinou, ou ao trabalho que você produz. Seu ideal pode ter a ver com a manutenção da alta qualidade do seu trabalho ou com a preservação das tradições anãs do artesanato."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Artesão de Guilda",
+            "id": "artesao-de-guilda",
+			"source": "PHB",
+			"page": 128,
+			"entries": [
+                "Você é membro de uma guilda de artesãos, sendo hábil em um determinado ofício e intimamente ligado a seus outros praticantes. Você é um profissional estabelecido no mundo mercantil e seu talento e riqueza libertaram-no das amarras da sociedade feudal. Sob o patrocínio da sua guilda, você desenvolveu suas habilidades como aprendiz de um mestre artesão até se tornar um mestre você mesmo.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Intuição e Persuasão"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de ferramentas de artesão"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Um à sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "um conjunto de ferramentas de artesão (à sua escolha), uma carta de apresentação da sua guilda, um conjunto de roupas de viajante e uma bolsa contendo 15 PO"
+						}
+					]
+				},
+				{
+					"name": "Negócios da Guilda",
+					"type": "entries",
+					"entries": [
+						"As guildas normalmente são encontradas em cidades grandes o suficiente para apoiar vários artesãos praticantes do mesmo ofício. No entanto, a sua guilda pode ser uma rede de artesãos que trabalham em várias aldeias dentro de um reino maior. Converse com o seu Mestre para determinar a natureza da sua guilda. Você pode escolher o ramo em que ela atua a partir da tabela Negócios da Guilda, ou jogar aleatoriamente.",
+                        "Como membro de sua guilda, você domina as habilidades necessárias para a criação, a partir de matérias-primas, de belos itens acabados (o que se reflete em sua proficiência com um certo tipo de ferramentas de artesão), bem como os princípios do comércio e as boas práticas dos negócios. A questão agora é se você abandonou seu comércio pela aventura, ou se assumiu o esforço adicional necessário para conciliar ambos.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d20",
+								"Negócios da Guilda"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Alquimistas e apotecários"
+								],
+								[
+									"2",
+									"Armoreiros, chaveiros, ferramenteiros"
+								],
+								[
+									"3",
+									"Cervejeiros, destiladores e viticultores"
+								],
+								[
+									"4",
+									"Calígrafos, escribas e escrivães"
+								],
+								[
+									"5",
+									"Carpinteiros, reparadores de telhado e estucadores"
+								],
+								[
+									"6",
+									"Cartógrafos, agrimensores e mapeadores"
+								],
+								[
+									"7",
+									"Remendeiros e sapateiros"
+								],
+								[
+									"8",
+									"Cozinheiros e padeiros"
+								],
+								[
+									"9",
+									"Sopradores de vidro e vidraceiros"
+								],
+								[
+									"10",
+									"Joalheiros e lapidadores"
+								],
+								[
+									"11",
+									"Coureiros, peleiros e curtidores"
+								],
+								[
+									"12",
+									"Construtores e pedreiros"
+								],
+								[
+									"13",
+									"Pintores, retratistas e sinalizadores"
+								],
+								[
+									"14",
+									"Oleiros e lajoteiros"
+								],
+								[
+									"15",
+									"Construtores de embarcações e fabricantes de velas navais"
+								],
+								[
+									"16",
+									"Ferreiros e forjadores de metal"
+								],
+								[
+									"17",
+									"Funileiros, soldadores e folheadores"
+								],
+								[
+									"18",
+									"Carruageiros e fabricantes de rodas"
+								],
+								[
+									"19",
+									"Tecelões e tintureiros"
+								],
+								[
+									"20",
+									"Entalhadores, tanoeiros e fabricantes de arcos"
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Característica: Membro de Guilda",
+					"type": "entries",
+					"entries": [
+						"Como membro estabelecido e respeitado de uma guilda, você pode contar com certos benefícios que acompanham essa adesão. Seus colegas de guilda lhe fornecerão alojamento e comida e pagarão pelo seu funeral, se necessário. Em algumas cidades e aldeias, uma guilda pode contar com um local de reunião, um bom lugar para se conhecer potenciais clientes, aliados ou funcionários.",
+						"Muitas vezes, as guildas exercem um enorme poder político. Se você for acusado de um crime e for possível construir um bom caso para provar a sua inocência, ou o crime for justificável, sua guilda o apoiará. Caso você seja um membro proeminente dentro da guilda, também poderá ter acesso a figuras políticas poderosas através dela. Essas conexões podem exigir a doação de dinheiro ou itens mágicos para os cofres da guilda.",
+						"Você deve pagar taxas de 5 PO por mês para a sua guilda. Caso não pague, será preciso honrar suas dívidas antes de voltar às boas graças dela."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Os artesãos das guildas estão entre as pessoas mais comuns do mundo - até aposentarem as ferramentas e iniciarem uma carreira de aventuras. Eles entendem o valor do trabalho duro e a importância da comunidade, mas são vulneráveis aos pecados da ganância e da cobiça.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Acredito que qualquer coisa que valha a pena fazer, deve ser bem-feita. Não consigo evitar - sou um perfeccionista."
+								],
+								[
+									"2",
+									"Eu sou um esnobe que olha com desprezo para aqueles que não apreciam as coisas bem-feitas."
+								],
+								[
+									"3",
+									"Quero sempre saber como as coisas funcionam e o que faz as pessoas vibrarem."
+								],
+								[
+									"4",
+									"Sou cheio de frases prontas e tenho um provérbio para cada ocasião."
+								],
+								[
+									"5",
+									"Eu sou rude com pessoas que não têm o mesmo compromisso que eu com o trabalho duro e o jogo limpo."
+								],
+								[
+									"6",
+									"Eu gosto de falar muito sobre a minha profissão."
+								],
+								[
+									"7",
+									"Eu não me separo do meu dinheiro com facilidade e negocio incansavelmente até conseguir o melhor acordo possível."
+								],
+								[
+									"8",
+									"Sou conhecido pelo meu trabalho e quero que todos o apreciem. Fico sempre surpreendido quando as pessoas não ouviram falar de mim."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Comunhão. É dever de todos os povos civilizados fortalecer os laços de comunidade e segurança da civilização (Ordeiro)."
+								],
+								[
+									"2",
+									"Generosidade. Meus talentos me foram dados para que eu pudesse usá-los em benefício do mundo (Bom)."
+								],
+								[
+									"3",
+									"Liberdade. Todos devem ser livres para seguir o seu próprio meio de vida (Caótico)."
+								],
+								[
+									"4",
+									"Ganância. Só estou nisto pelo dinheiro (Mau)."
+								],
+								[
+									"5",
+									"Pessoas. Eu estou comprometido com aqueles com quem me preocupo, não com ideais (Neutro)."
+								],
+								[
+									"6",
+									"Aspiração. Eu me esforço muito para ser o melhor de todos no meu ofício (Qualquer)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"A oficina onde aprendi o meu ofício é o lugar mais importante do mundo para mim."
+								],
+								[
+									"2",
+									"Eu criei uma grande obra para alguém, e depois achei a pessoa indigna de recebê-la. Eu ainda estou à procura de alguém digno."
+								],
+								[
+									"3",
+									"Eu tenho uma grande dívida com a minha guilda por ter me transformado na pessoa que sou hoje."
+								],
+								[
+									"4",
+									"Eu busco riqueza para garantir o amor de alguém."
+								],
+								[
+									"5",
+									"Um dia voltarei à minha guilda e provarei que sou o maior artesão de todos."
+								],
+								[
+									"6",
+									"Eu me vingarei das forças malignas que destruíram o meu local de trabalho e arruinaram o meu sustento."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu farei qualquer coisa para pôr as mãos em algo raro ou inestimável."
+								],
+								[
+									"2",
+									"Sou rápido em desconfiar que alguém está tentando me enganar."
+								],
+								[
+									"3",
+									"Ninguém jamais deve saber que roubei dinheiro dos cofres da guilda."
+								],
+								[
+									"4",
+									"Eu nunca estou satisfeito com o que eu tenho - eu sempre quero mais."
+								],
+								[
+									"5",
+									"Eu seria capaz de matar para adquirir um título de nobreza."
+								],
+								[
+									"6",
+									"Tenho um medo terrível de alguém ofuscar o meu trabalho. Para onde quer que eu vá, estou sempre rodeado de rivais."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Variante de Artesão de Guilda (Comerciante de Guilda)",
+            "id": "comerciante-de-guilda",
+            "isVariant": true,
+            "menuName": "Artesão de Guilda (Comerciante de Guilda)",
+			"source": "PHB",
+			"page": 129,
+			"entries": [
+                "Em vez de uma guilda de artesãos, você pode pertencer a uma guilda de comerciantes, mestres de caravanas ou lojistas. Você não cria itens - em vez disso, ganha a vida comprando e vendendo o trabalho dos outros (ou as matérias¬-primas que os artesãos precisam para praticar seu ofício). Sua guilda pode ser um grande consórcio mercantil (ou família) com interesses em toda a região. Talvez você tenha transportado mercadorias de um lugar para outro, por navio, carroça ou caravana, ou as tenha comprado de comerciantes para vender em sua própria loja. De certo modo, a vida do caixeiro viajante combina muito mais com aventuras do que a vida de um artesão.",
+                "Em vez de dominar as ferramentas de artesão, você pode ser proficiente com as ferramentas de navegador ou com um idioma adicional. E em vez de ferramentas de artesão, você pode começar com uma mula e uma carroça.",
+                {
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Intuição e Persuasão"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de ferramentas de artesão"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Um à sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "um conjunto de ferramentas de artesão (à sua escolha), uma carta de apresentação da sua guilda, um conjunto de roupas de viajante e uma bolsa contendo 15 PO"
+						}
+					]
+				},
+                {
+                    "name": "Características Sugeridas",
+                    "type": "entries",
+                    "entries": [
+                        "Use as tabelas do antecedente <a href=\"#artesao-de-guilda\">artesão de guilda</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como comerciante de guilda."
+                    ]
+                }
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Artista",
+            "id": "artista",
+			"source": "PHB",
+			"page": 129,
+			"entries": [
+                "Você adora uma plateia. E sabe como envolvê-la, entretê-la, e até mesmo inspirá-la. Sua poesia pode acelerar os corações daqueles que a ouvem, despertando tristeza ou alegria, risos ou raiva. A sua música eleva os ânimos ou acalenta a tristeza. Sua dança é cativante, o seu humor é rápido. Quaisquer que sejam as técnicas usadas, sua arte é sua vida.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Acrobacia e Atuação"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Kit de disfarce e um instrumento musical à sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um instrumento musical (à sua escolha), lembrança de um admirador (carta de amor, mecha de cabelo ou bugiganga), uma fantasia e uma bolsa contendo 15 PO"
+						}
+					]
+				},
+				{
+					"name": "Atrações",
+					"type": "entries",
+					"entries": [
+						"Um bom artista é versátil, temperando cada apresentação com uma variedade de números ou atrações. Escolha de uma a três atrações ou jogue na tabela abaixo para definir as áreas em que possui experiência como artista.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d10",
+								"Atrações"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Acrobata"
+								],
+								[
+									"2",
+									"Ator"
+								],
+								[
+									"3",
+									"Bufão"
+								],
+								[
+									"4",
+									"Cantor"
+								],
+								[
+									"5",
+									"Contador de Histórias"
+								],
+								[
+									"6",
+									"Dançarino"
+								],
+								[
+									"7",
+									"Engolidor de fogo"
+								],
+								[
+									"8",
+									"Malabarista"
+								],
+								[
+									"9",
+									"Músico"
+								],
+								[
+									"10",
+									"Poeta"
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Característica: Por Apelo Popular",
+					"type": "entries",
+					"entries": [
+						"Você sempre consegue encontrar um lugar para se apresentar, geralmente em uma estalagem ou taverna, mas possivelmente em um circo, teatro ou até mesmo na corte de um nobre. Nesses locais, você recebe alojamento gratuito e alimentos de um padrão modesto ou confortável (dependendo da qualidade do estabelecimento), desde que se apresente todas as noites. Além disso, o seu desempenho torna-o uma figura local conhecida. Quando estranhos o reconhecem em uma cidade onde já tenha se apresentado, eles costumam gostar de você."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Os artistas de sucesso têm que ser capazes de atrair e manter a atenção do público, por isso tendem a ter personalidades fortes ou extravagantes. Eles estão inclinados para o romântico e, muitas vezes, agarram-se a ideais bastante liberais com relação à prática da arte e à apreciação da beleza.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu conheço uma história relevante para quase todas as situações."
+								],
+								[
+									"2",
+									"Sempre que chego a um lugar novo, começo a juntar rumores e espalhar boatos."
+								],
+								[
+									"3",
+									"Sou um romântico incurável, sempre à procura daquele \"alguém especial\"."
+								],
+								[
+									"4",
+									"Ninguém fica zangado comigo ou perto de mim por muito tempo, pois eu consigo desarmar qualquer tensão."
+								],
+								[
+									"5",
+									"Eu adoro um bom insulto, mesmo quando é dirigido a mim."
+								],
+								[
+									"6",
+									"Eu fico chateado quando não sou o centro das atenções."
+								],
+								[
+									"7",
+									"Eu não me contento com nada menos do que a perfeição."
+								],
+								[
+									"8",
+									"Eu mudo de humor ou de ideias tão depressa quanto mudo de tom em uma canção."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Beleza. Quando me apresento, torno o mundo melhor do que era (Bom)."
+								],
+								[
+									"2",
+									"Tradição. As histórias, lendas e canções do passado nunca devem ser esquecidas, pois elas nos ensinam quem somos (Ordeiro)."
+								],
+								[
+									"3",
+									"Criatividade. O mundo precisa de novas ideias e de ações ousadas (Caótico)."
+								],
+								[
+									"4",
+									"Ganância. Eu só estou nisso pelo dinheiro e pela fama (Mau)."
+								],
+								[
+									"5",
+									"Povo. Eu gosto de ver o sorriso na cara das pessoas quando me apresento. Isso é tudo o que importa (Neutro)."
+								],
+								[
+									"6",
+									"Honestidade. A arte deve refletir a alma; deve vir de dentro e revelar quem realmente somos (Qualquer)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"O meu instrumento é o meu bem mais precioso, e me faz lembrar de alguém que amo."
+								],
+								[
+									"2",
+									"Alguém roubou o meu precioso instrumento, e um dia vou recuperá-lo."
+								],
+								[
+									"3",
+									"Quero ser famoso, custe o que custar."
+								],
+								[
+									"4",
+									"Idolatro um herói das velhas histórias e comparo as minhas ações com as dele."
+								],
+								[
+									"5",
+									"Farei de tudo para provar que sou superior ao meu odiado rival."
+								],
+								[
+									"6",
+									"Eu faria qualquer coisa pelos outros membros da minha antiga trupe."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Sou capaz de tudo para ganhar fama e renome."
+								],
+								[
+									"2",
+									"Eu sou louco por um rosto bonito."
+								],
+								[
+									"3",
+									"Um escândalo me impede de voltar para casa. Esse tipo de problema parece me seguir."
+								],
+								[
+									"4",
+									"Certa vez, satirizei um nobre que ainda quer a minha cabeça. Foi um erro que provavelmente repetirei."
+								],
+								[
+									"5",
+									"Tenho dificuldade em esconder os meus verdadeiros sentimentos. A minha língua afiada sempre me coloca em confusões."
+								],
+								[
+									"6",
+									"Apesar de todos os meus esforços, não inspiro a confiança dos meus amigos."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Variante de Artista (Gladiador)",
+            "id": "gladiador",
+            "isVariant": true,
+            "menuName": "Artista (Gladiador)",
+			"source": "PHB",
+			"page": 131,
+            "entries": [
+                "Um gladiador é tão artista quanto qualquer menestrel ou circense, tendo sido treinado para fazer das artes do combate um espetáculo de que a multidão possa desfrutar. Esse tipo de combate de exibição é a sua rotina de artista, embora você também possa ter alguma habilidade como acrobata ou ator. Ao usar a sua característica Por Apelo Popular, você é capaz de encontrar um espaço para se apresentar em qualquer estabelecimento que ofereça combate de entretenimento - talvez uma arena de gladiadores ou um clube de lutas secreto. Você pode substituir o instrumento musical em seu pacote de equipamentos por uma arma barata, porém incomum, como um tridente ou rede.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Acrobacia e Atuação"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Kit de disfarce e um instrumento musical à sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um instrumento musical (à sua escolha), lembrança de um admirador (carta de amor, mecha de cabelo ou bugiganga), uma fantasia e uma bolsa contendo 15 PO"
+						}
+					]
+				},
+                {
+                    "name": "Características Sugeridas",
+                    "type": "entries",
+                    "entries": [
+                        "Use as tabelas do antecedente <a href=\"#artista\">artista</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como gladiador."
+                    ]
+                }
+            ],
+			"hasFluff": true
+		},
+		{
+			"name": "Caçador de Recompensas Urbano",
+            "id": "cacador-de-recompensas-urbano",
+			"source": "SCAG",
+			"page": 146,
+			"entries": [
+                "Antes de se tornar aventureiro, sua vida já era repleta de conflito e emoção, já que você ganhava a vida rastreando o paradeiro de pessoas em troca de dinheiro. Todavia, diferente de algumas pessoas que coletam recompensas, você não é um selvagem que segue uma presa através dos ermos. Você está envolvido com uma atividade lucrativa onde vive, algo que testa suas habilidades e instintos de sobrevivência diariamente. E mais, diferente de um caçador de recompensas dos ermos, você não está sozinho nessa: você interage constantemente com o submundo do crime e com outros caçadores de recompensa, mantendo contatos de ambos os lados para que possa ser bem-sucedido no ramo.",
+                "Você pode ser um astuto apanhador de ladrões, vagando pelos telhados em busca de pegar um dos vários larápios da cidade. Talvez você seja alguém que tem seus próprios ouvidos pelas ruas, ciente dos feitos das guildas de ladrões e das gangues de rua. Você pode ser um caçador de recompensas \"máscara de veludo\", alguém que se mistura com a alta sociedade e círculos de nobreza de modo a apanhar criminosos que visam os ricos, sejam batedores de carteiras ou golpistas. A comunidade onde você atua pode ter sido uma das grandes metrópoles de Faerûn, como Waterdeep (Águas Profundas) ou Baldur's Gate (Portão Baldur), ou um local menos populoso, talvez Luskan ou Yartar — qualquer lugar grande o suficiente para que haja um suprimento constante de presas em potencial.",
+                "Como membro de um grupo de aventureiros, você pode achar um pouco mais difícil perseguir um objetivo pessoal que não se adeque aos objetivos do grupo — mas por outro lado, você pode ser capaz de pegar alvos muito mais formidáveis com o auxílio de seus companheiros.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Escolha duas entre Enganação, Furtividade, Intuição e Persuasão"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Escolha duas entre um tipo de kit de jogo, um instrumento musical e ferramentas de ladrão"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um conjunto de roupas adequadas às suas atividades e uma algibeira contendo 20 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Rede de Contatos",
+					"type": "entries",
+					"entries": [
+						"Você está em contato direto com as pessoas de determinado setor da sociedade no qual suas presas costumam frequentar. Essas pessoas podem estar associadas ao submundo do crime, às pessoas barras-pesadas das ruas ou aos membros da alta sociedade. Essa conexão aparece na forma de um contato em qualquer cidade que esteja visitando, uma pessoa que fornece informação sobre as pessoas e locais na região."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Características Sugeridas",
+					"entries": [
+						"Use as tabelas do antecedente <a href=\"#criminoso\">criminoso</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como caçador de recompensas.",
+						"Por exemplo, seu vínculo poderia envolver outros caçadores de recompensas, as organizações ou indivíduos que empregaram você. Seu ideal poderia estar associado com sua determinação em pegar sua presa ou seu desejo de manter sua reputação por ser alguém confiável."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Cavaleiro da Ordem",
+            "id": "cavaleiro-da-ordem",
+			"source": "SCAG",
+			"page": 147,
+			"entries": [
+                "Você pertence a uma ordem de cavaleiros que prestaram juramento almejando um certo objetivo. A natureza deste objetivo depende da ordem que você serve, mas aos seus olhos este objetivo é sem sombra de dúvidas uma busca vital e honrada. Faerûn possui uma variedade de ordens de cavalaria, todas elas possuindo um ponto de vista bastante parecido no que diz respeito às suas respectivas ações e responsabilidades.",
+                "Embora o termo \"cavaleiro\" possa transmitir a ideia de combatentes de sangue nobre, montados e trajando pesadas armaduras, a maioria das ordens de cavalaria em Faerûn não se limita a ter membros como esse modelo. Os objetivos e filosofias da ordem são muito mais importantes do que o equipamento e o estilo de luta de seus membros, e a maioria destas ordens não são limitadas pela forma com que lutam, sendo abertas a todo tipo de pessoas que estão dispostas a combater ou morrer pela causa da ordem.",
+                "A barra lateral \"Ordens de Cavalaria de Faerûn\" detalha várias das ordens que estão ativas no momento e foi criada para auxiliá-lo a decidir sobre qual grupo você deve lealdade.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Persuasão, mais uma entre Arcanismo, História, Natureza e Religião, conforme apropriado para sua ordem"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de kit de jogo ou instrumento musical"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Um de sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um conjunto de roupas de viajante, um sinete, estandarte ou selo que representa sua posição ou posto dentro da ordem e uma uma algibeira contendo 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Reconhecimento à Cavalaria",
+					"type": "entries",
+					"entries": [
+						"Você recebe abrigo e auxílio dos membros de sua ordem de cavalaria e daqueles que simpatizam com seus objetivos. Se a sua ordem é religiosa, você pode receber ajuda de templos e de outras comunidades religiosas de sua divindade. Cavaleiros de ordens civis podem conseguir ajuda da comunidade — seja de um povoado isolado ou de uma grande nação — a qual servem, e cavaleiros de ordens filosóficas podem encontrar ajuda naqueles a quem ajudaram na busca de seus ideais e também naqueles que compartilham desses ideais.",
+						"Essa ajuda pode vir na forma de abrigo e de refeições, e cura quando apropriado. Também pode ser oferecida ajuda sob risco, como quando um grupo de moradores locais se reúne para ajudar uma cavaleira acuada em uma luta, ou quando ajudam um cavaleiro a fugir da cidade quando ele está sendo injustamente perseguido."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Características Sugeridas",
+					"entries": [
+						"Use as tabelas para o antecedente <a href=\"#soldado\">soldado</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como cavaleiro de sua ordem.",
+						"Seu vínculo quase sempre envolve a ordem a qual você pertence (ou ao menos aos principais membros dela), e é bastante incomum que o ideal de um cavaleiro não reflita os objetivos, sentimentos ou filosofia de sua ordem."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Charlatão",
+            "id": "charlatao",
+			"source": "PHB",
+			"page": 131,
+			"entries": [
+                "Você sempre teve jeito para lidar com as pessoas. Você percebe o que as instiga, sendo capaz de atiçar os desejos em seus corações com alguns minutos de conversa. Com poucas perguntas certeiras, consegue lê-las como se fossem livros abertos. Esse é um talento útil que você está totalmente disposto a usar em benefício próprio.",
+                "Você sabe o que as pessoas querem e dá isso a elas, ou melhor, promete que dará. O bom senso deveria afastar as pessoas de tudo o que parece ser bom demais para ser verdade, mas o bom senso parece estar em falta quando você está por perto. Aquela garrafa de líquido cor-de-rosa ali com certeza cura essa estranha coceira; esta pomada aqui — que nada mais é do que um pouco de gordura misturada a uma pitada de pó de prata - pode restaurar a juventude e o vigor; e existe, sim, uma ponte na cidade que, por acaso, está à venda. Essas maravilhas parecem impossíveis, mas você faz com que pareçam verdadeiras.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Enganação e Prestidigitação"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Kit de disfarce e kit de falsificação"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um conjunto de roupas finas, um kit de disfarce, ferramentas de trapaceiro à sua escolha (dez garrafas com rolha cheias com líquido colorido, um conjunto de dados viciados, um baralho de cartas marcadas ou um anel de sinete de um duque imaginário), e uma bolsa contendo 15 PO"
+						}
+					]
+				},
+				{
+					"name": "Esquemas Favoritos",
+					"type": "entries",
+					"entries": [
+						"Cada charlatão tem uma abordagem preferida, sendo essa a que usa com maior frequência. Escolha um golpe favorito ou jogue na tabela abaixo.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Golpes e Esquemas"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu trapaceio nos jogos de azar."
+								],
+								[
+									"2",
+									"Eu falsifico moedas ou documentos."
+								],
+								[
+									"3",
+									"Eu me meto na vida das pessoas para me aproveitar de suas fraquezas e me beneficiar de suas fortunas."
+								],
+								[
+									"4",
+									"Eu troco de identidade como troco de roupa."
+								],
+								[
+									"5",
+									"Eu sou o trombadinha da esquina."
+								],
+								[
+									"6",
+									"Eu convenço as pessoas de que essas quinquilharias inúteis valem o rico dinheiro delas."
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Característica: Identidade Falsa",
+					"type": "entries",
+					"entries": [
+						"Você criou uma segunda identidade que inclui documentação, pessoas conhecidas e disfarces que lhe permitem assumi-la. Além disso, você é capaz de falsificar documentos, incluindo papéis oficiais e cartas pessoais, desde que tenha visto um exemplo desse tipo de documento ou a caligrafia que está tentando copiar."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Charlatões são personagens cheios de recursos que escondem sua verdadeira natureza por detrás das máscaras que eles mesmos constroem. Eles refletem o que as pessoas querem ver, aquilo no que querem acreditar e a forma como enxergam o mundo. Mas lá no fundo, podem não passar de pessoas atormentadas por uma consciência inquieta, por um velho inimigo ou questões de confiança profundamente enraizadas.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu me apaixono e perco o interesse facilmente. Estou sempre à procura de alguém."
+								],
+								[
+									"2",
+									"Eu tenho uma piada para cada ocasião, especialmente em situações onde o humor é inapropriado."
+								],
+								[
+									"3",
+									"A bajulação é o meu truque favorito para conseguir o que quero."
+								],
+								[
+									"4",
+									"Eu sou um apostador inato que não consegue resistir ao risco de uma recompensa em potencial."
+								],
+								[
+									"5",
+									"Eu minto sobre quase tudo, até mesmo quando não há um bom motivo para mentir."
+								],
+								[
+									"6",
+									"Sarcasmo e insultos são as minhas armas prediletas."
+								],
+								[
+									"7",
+									"Eu carrego vários símbolos sagrados e invoco qualquer divindade que possa ser útil em dado momento."
+								],
+								[
+									"8",
+									"Eu guardo no bolso tudo o que vejo e que possa ter algum valor."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Independência. Eu tenho um espírito livre - ninguém me diz o que fazer (Caótico)."
+								],
+								[
+									"2",
+									"Justiça. Eu nunca aplico meus golpes em pessoas que não possam dispor de algumas moedas (Ordeiro)."
+								],
+								[
+									"3",
+									"Caridade. Eu distribuo o dinheiro que consigo entre as pessoas que realmente precisam (Bom)."
+								],
+								[
+									"4",
+									"Criatividade. Eu nunca aplico o mesmo golpe duas vezes (Caótico)."
+								],
+								[
+									"5",
+									"Amizade. Bens materiais vêm e vão. Laços de amizade duram para sempre (Bom)."
+								],
+								[
+									"6",
+									"Aspiração. Estou determinado a me tornar alguém importante (Qualquer)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu extorqui a pessoa errada e agora preciso me esforçar para garantir que esse indivíduo nunca cruze o meu caminho ou o das pessoas com quem me preocupo."
+								],
+								[
+									"2",
+									"Devo tudo ao meu mentor - uma pessoa horrível que provavelmente está apodrecendo na prisão."
+								],
+								[
+									"3",
+									"Em algum lugar, tenho um filho ou filha que não me conhece. E estou tornando o mundo um lugar melhor para ele ou ela."
+								],
+								[
+									"4",
+									"Venho de uma família nobre e um dia serei capaz de recuperar as minhas terras e o título daqueles que me roubaram."
+								],
+								[
+									"5",
+									"Uma pessoa poderosa matou alguém que eu amava. Cedo ou tarde terei minha vingança."
+								],
+								[
+									"6",
+									"Eu enganei e arruinei uma pessoa que não merecia. Desde então, procuro redenção pelos meus erros, mas talvez nunca consiga me perdoar."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu não resisto a um rosto bonito."
+								],
+								[
+									"2",
+									"Estou sempre em dívida. Gasto os meus ganhos ilícitos em luxo e futilidades mais depressa do que consigo repô-los."
+								],
+								[
+									"3",
+									"Estou convencido de que ninguém é capaz de me enganar como eu engano os outros."
+								],
+								[
+									"4",
+									"Sou ganancioso demais para o meu próprio bem. E não resisto a correr riscos se houver dinheiro envolvido."
+								],
+								[
+									"5",
+									"Não resisto a enganar pessoas que sejam mais poderosas do que eu."
+								],
+								[
+									"6",
+									"Eu detesto admitir e vou me odiar por isso, mas fujo para salvar minha própria pele quando as coisas ficam ruins."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Cortesão",
+            "id": "cortesao",
+			"source": "SCAG",
+			"page": 148,
+			"entries": [
+                "Em dias passados, você era uma figura com alguma importância em uma corte nobre ou em uma organização burocrática. Você pode ou não vir de uma família de classe alta; seus talentos, e não as circunstâncias de sem nascimento, poderiam ter garantido a você essa posição.",
+                "Você pode ter sido um dos muitos funcionários. assistentes e outros tipos de bajuladores da corte de Lua Argêntea, ou talvez tenha circulado pelo pomposo e por vezes cruel conglomerado de guildas nobres, aventureiros e sociedades secretas de Waterdeep (Águas Profundas). Você pode ter sido um dos detentores das leis ou funcionário público atuando nos bastidores de Baldur's Gate (Portão de Baldur) ou Neverwinter (Nevenunca), ou ainda pode ter crescido dentro e ao redor do castelo de Vau da Adaga.",
+                "Mesmo que você não seja mais um membro de pleno direito do grupo que lhe iniciou na vida, seu relacionamento com seus ex-colegas pode ser uma vantagem para você e seus companheiros de aventura. Você pode realizar missões com seus novos companheiros que aumentem o interesse da organização na qual você iniciou sua vida. De qualquer forma, as habilidades que você aperfeiçoou ao servir como cortesão o manterão em boa posição como aventureiro.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Intuição, Persuasão"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Dois de sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um conjunto de roupas finas e uma algibeira contendo 5 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Funcionário da Corte",
+					"type": "entries",
+					"entries": [
+						"Seu conhecimento de como as burocracias funcionam permite que você obtenha acesso aos registros e ao funcionamento interno de qualquer corte da nobreza ou governo que encontrar. Você sabe quem são os manda-chuvas, a quem recorrer em busca dos favores que precisa e quais são as atuais intrigas de interesse no grupo."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Características Sugeridas",
+					"entries": [
+						"Use as tabelas do antecedente <a href=\"artesaos-da-guilda\">artesãos da guilda</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como cortesão.",
+						"A corte da nobreza ou organização burocrática onde você começou sua carreira está direta ou indiretamente associada ao seu vínculo (que pode pertencer a certas pessoas do grupo, como seu patrocinador ou mentor). Seu ideal pode estar preocupado com a filosofia predominante de sua corte ou organização."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Criança de Rua",
+            "id": "crianca-de-rua",
+			"source": "PHB",
+			"page": 132,
+			"entries": [
+                "Você cresceu órfão, pobre e sozinho nas ruas. Não havia ninguém para sustentá-lo, por isso você aprendeu a cuidar de si mesmo, lutando ferozmente por comida e segurança. Você dormiu nos telhados e em becos, exposto aos elementos, e suportou a doença sem o conforto da medicina ou de um lugar para se recuperar. Apesar de todas as probabilidades contrárias, você sobreviveu, e o fez lançando mão de astúcia, força, velocidade ou uma combinação de todos.",
+                "Você inicia sua carreira de aventuras com dinheiro para viver modestamente, porém em segurança, por pelo menos dez dias. Como você arranjou esse dinheiro? O que permitiu que você se libertasse das circunstâncias desesperadoras em que estava e embarcasse em uma vida melhor?",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Furtividade e Prestidigitação"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Kit de disfarce, ferramentas de ladrão"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Uma faca pequena, um mapa da cidade onde cresceu, um rato de estimação, um símbolo para lembrar-se dos seus pais, um conjunto de roupas comuns e uma bolsa contendo 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Segredos da Cidade",
+					"type": "entries",
+					"entries": [
+						"Você conhece os padrões e caminhos secretos das cidades, conseguindo encontrar passagens em meio ao tecido urbano que os outros jamais notariam. Quando não está em combate, você (e os companheiros que lidera) podem viajar entre quaisquer dois pontos da cidade, duas vezes mais rápido do que o seu deslocamento permite."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Crianças de rua são moldadas por vidas de pobreza desesperada, para o bem e para o mal. Elas tendem a ser impulsionadas por um compromisso com as pessoas com quem compartilhavam a vida nas ruas, ou por um desejo ardente de encontrar uma vida melhor - e talvez obter alguma revanche contra as pessoas ricas que as mal trataram.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu escondo restos de comida e bugigangas nos bolsos."
+								],
+								[
+									"2",
+									"Eu faço muitas perguntas."
+								],
+								[
+									"3",
+									"Durmo de costas para uma parede ou árvore, com tudo o que tenho embrulhado em um pacote nos meus braços."
+								],
+								[
+									"4",
+									"Eu como feito um porco e me porto mal."
+								],
+								[
+									"5",
+									"Eu acho que quem é simpático comigo está escondendo más intenções."
+								],
+								[
+									"6",
+									"Eu não gosto de tomar banho."
+								],
+								[
+									"7",
+									"Eu digo sem rodeios o que as outras pessoas estão insinuando ou escondendo."
+								],
+								[
+									"8",
+									"Eu gosto de me espremer em lugares pequenos onde mais ninguém consegue chegar até mim."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Respeito. Todas as pessoas, ricas ou pobres, merecem respeito (Bom)."
+								],
+								[
+									"2",
+									"Comunhão. Nós temos de cuidar uns dos outros, porque ninguém mais fará isso por nós (Ordeiro)."
+								],
+								[
+									"3",
+									"Mudança. Os de baixo se erguerão e os de cima serão derrubados. A mudança é da natureza das coisas (Caótico)."
+								],
+								[
+									"4",
+									"Retribuição. Os ricos precisam ver como são a vida e a morte nas sarjetas (Mau)."
+								],
+								[
+									"5",
+									"Pessoas. Eu ajudo as pessoas que me ajudam, é isso que nos mantém vivos (Neutro)."
+								],
+								[
+									"6",
+									"Aspiração. Eu vou provar que mereço uma vida melhor."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"A minha aldeia ou cidade é a minha casa, e lutarei para defendê-la."
+								],
+								[
+									"2",
+									"Eu patrocino um orfanato para impedir que outros passem pelo que fui forçado a passar."
+								],
+								[
+									"3",
+									"Eu devo a minha sobrevivência a outro órfão que me ensinou a viver nas ruas."
+								],
+								[
+									"4",
+									"Eu tenho uma dívida que nunca poderei pagar à pessoa que teve pena de mim."
+								],
+								[
+									"5",
+									"Eu escapei da minha vida de pobreza ao roubar uma pessoa importante, e sou procurado por isso."
+								],
+								[
+									"6",
+									"Ninguém mais deveria ter de suportar as dificuldades por que passei."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Se eu estiver em desvantagem, fujo da luta."
+								],
+								[
+									"2",
+									"O ouro me parece muito dinheiro, e eu faço qualquer coisa para ter mais dele."
+								],
+								[
+									"3",
+									"Jamais confiarei totalmente em ninguém além de mim."
+								],
+								[
+									"4",
+									"Eu prefiro matar alguém enquanto dorme a lutar limpo."
+								],
+								[
+									"5",
+									"Não é roubar se eu precisar mais do que a outra pessoa."
+								],
+								[
+									"6",
+									"As pessoas que não sabem cuidar de si mesmas recebem o que merecem."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Criminoso",
+            "id": "criminoso",
+			"source": "PHB",
+			"page": 132,
+			"basicRules": true,
+			"entries": [
+                "Você é um criminoso experiente, com um histórico de violação da lei. Você passou muito tempo entre criminosos e ainda mantém contatos no submundo do crime. Você está muito mais perto do que a maioria das pessoas do mundo sombrio dos assassinatos, roubos e violência que infesta o ventre da civilização. E você sobreviveu até agora, mesmo desrespeitando as regras e os regulamentos da sociedade.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Enganação e Furtividade"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de kit de jogos e ferramentas de ladrão"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um pé-de-cabra, um conjunto de roupas comuns de cor escura, incluindo um capuz, e uma bolsa com 15 PO"
+						}
+					]
+				},
+				{
+					"name": "Especialidade Criminal",
+					"type": "entries",
+					"entries": [
+						"Há muitos tipos de criminosos e, dentro de uma guilda de ladrões ou outra organização criminosa semelhante, cada membro tem suas especialidades. Mesmo os criminosos que operam fora dessas organizações costumam ter preferência por certos tipos de crimes. Escolha sua especialidade na vida criminosa ou jogue na tabela abaixo.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Especialidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Assaltante"
+								],
+								[
+									"2",
+									"Assassino"
+								],
+								[
+									"3",
+									"Chantagista"
+								],
+								[
+									"4",
+									"Contrabandista"
+								],
+								[
+									"5",
+									"Executor"
+								],
+								[
+									"6",
+									"Ladrão das Estradas"
+								],
+								[
+									"7",
+									"Trombadinha"
+								],
+								[
+									"8",
+									"Receptador"
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Característica: Contato Criminoso",
+					"type": "entries",
+					"entries": [
+						"Você conhece alguém seguro e confiável que atua como seu contato em uma rede de criminosos. Você pode trocar mensagens com o seu contato mesmo a grandes distâncias; isso porque você conhece os mensageiros locais, os mestres de caravanas corruptos e os marinheiros malandros capazes de repassar essas mensagens."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Os criminosos podem parecer vilões por fora (e muitos são vilões por dentro também), mas alguns possuem características cativantes, ou mesmo redentoras. Pode haver honra entre ladrões, mas os criminosos raramente demonstram apreço pela lei ou pela autoridade.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu tenho sempre um plano e sei o que fazer quando as coisas dão errado."
+								],
+								[
+									"2",
+									"Estou sempre calmo, independentemente da situação. E nunca levanto a voz ou deixo que as emoções me controlem."
+								],
+								[
+									"3",
+									"A primeira coisa que faço em um lugar novo é observar tudo o que é valioso - ou onde essas coisas podem ser escondidas."
+								],
+								[
+									"4",
+									"Eu prefiro fazer um novo amigo a um novo inimigo."
+								],
+								[
+									"5",
+									"Eu demoro muito tempo para confiar em alguém. Aqueles que parecem mais justos muitas vezes são os que têm mais a esconder."
+								],
+								[
+									"6",
+									"Eu não presto atenção aos riscos de uma determinada situação. Nunca me diga qual é a chance de sucesso."
+								],
+								[
+									"7",
+									"A melhor maneira de conseguir que eu faça alguma coisa é me dizer que não consigo fazê-la."
+								],
+								[
+									"8",
+									"Sou capaz de explodir diante do menor insulto."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Honra. Eu não roubo de colegas do ramo (Ordeiro)."
+								],
+								[
+									"2",
+									"Liberdade. As correntes devem ser quebradas, assim como aqueles que as forjaram (Caótico)."
+								],
+								[
+									"3",
+									"Caridade. Eu roubo dos ricos para ajudar as pessoas que precisam (Bom)."
+								],
+								[
+									"4",
+									"Ganância. Faria o que for preciso para fica rico (Mau)."
+								],
+								[
+									"5",
+									"Pessoas. Sou leal aos meus amigos, não a ideais e, se depender de mim, que todo o resto faça uma boa viagem pelo rio Estige (Neutro)."
+								],
+								[
+									"6",
+									"Redenção. Há uma faísca do bem em todo mundo (Bom)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Estou tentando pagar uma dívida antiga com um benfeitor generoso."
+								],
+								[
+									"2",
+									"Os meus ganhos ilícitos sustentam a minha família."
+								],
+								[
+									"3",
+									"Algo importante foi roubado de mim, e pretendo roubá-lo de volta."
+								],
+								[
+									"4",
+									"Vou me tornar o maior ladrão que já existiu."
+								],
+								[
+									"5",
+									"Eu sou culpado de um crime terrível. E espero poder me redimir disso."
+								],
+								[
+									"6",
+									"Alguém que eu amava morreu por causa de um erro que cometi. Isso não voltará a acontecer."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Quando vejo algo valioso, só consigo pensar em como roubá-lo."
+								],
+								[
+									"2",
+									"Quando confrontado com uma escolha entre o dinheiro e os meus amigos, normalmente escolho o dinheiro."
+								],
+								[
+									"3",
+									"Se houver um plano, eu esqueço. E quando não esqueço, ignoro."
+								],
+								[
+									"4",
+									"Tenho um \"tique\" que revela quando estou mentindo."
+								],
+								[
+									"5",
+									"Viro-me e saio correndo quando as coisas dão errado."
+								],
+								[
+									"6",
+									"Uma pessoa inocente está na prisão por um crime que eu cometi. Por mim, tudo bem."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Variante de Criminoso (Espião)",
+            "id": "espiao",
+            "isVariant": true,
+            "menuName": "Criminoso (Espião)",
+			"source": "PHB",
+			"page": 133,
+			"basicRules": true,
+            "entries": [
+                "Você é um criminoso experiente, com um histórico de violação da lei. Você passou muito tempo entre criminosos e ainda mantém contatos no submundo do crime. Você está muito mais perto do que a maioria das pessoas do mundo sombrio dos assassinatos, roubos e violência que infesta o ventre da civilização. E você sobreviveu até agora, mesmo desrespeitando as regras e os regulamentos da sociedade.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Enganação e Furtividade"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de kit de jogos e ferramentas de ladrão"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um pé-de-cabra, um conjunto de roupas comuns de cor escura, incluindo um capuz, e uma bolsa com 15 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Contato Espião",
+					"type": "entries",
+					"entries": [
+						"Você conhece alguém seguro e confiável que atua como seu contato em uma rede de criminosos. Você pode trocar mensagens com o seu contato mesmo a grandes distâncias; isso porque você conhece os mensageiros locais, os mestres de caravanas corruptos e os marinheiros malandros capazes de repassar essas mensagens."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+                {
+                    "name": "Características Sugeridas",
+                    "type": "entries",
+                    "entries": [
+                        "Use as tabelas do antecedente <a href=\"#criminoso\">criminoso</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como espião."
+                    ]
+                }
+            ],
+			"hasFluff": true
+		},
+		{
+			"name": "Eremita",
+            "id": "eremita",
+			"source": "PHB",
+			"page": 134,
+			"entries": [
+                "Você viveu em isolamento - quem sabe em uma comunidade protegida, como um mosteiro, ou completamente sozinho - durante um período formador na sua vida. Em seu tempo afastado da agitação da sociedade, encontrou sossego, solidão e, talvez, algumas das respostas que estava procurando.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Medicina e Religião"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Kit de herbalismo"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Um a sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um kit de pergaminhos cheio de anotações dos seus estudos ou orações, um cobertor de inverno, um conjunto de roupas comuns, um kit de herbalismo e 5 PO"
+						}
+					]
+				},
+				{
+					"name": "Vida de Reclusão",
+					"type": "entries",
+					"entries": [
+						"Qual foi a razão para o seu isolamento e o que mudou para que você o encerrasse? Você pode trabalhar com o seu Mestre para determinar a natureza exata desse evento, ou pode escolher ou jogar na tabela abaixo.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Vida de Reclusão"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu estava à procura de iluminação espiritual."
+								],
+								[
+									"2",
+									"Eu participei de um modo de vida comunitário, de acordo com os ditames de uma ordem religiosa."
+								],
+								[
+									"3",
+									"Eu fui exilado por um crime que não cometi."
+								],
+								[
+									"4",
+									"Eu me afastei da sociedade depois de um evento que mudou minha vida."
+								],
+								[
+									"5",
+									"Eu precisava de um lugar sossegado para trabalhar minha arte, literatura, música ou manifesto."
+								],
+								[
+									"6",
+									"Eu precisava comungar com a natureza, longe da civilização."
+								],
+								[
+									"7",
+									"Eu are o guardião de uma antiga ruína ou relíquia."
+								],
+								[
+									"8",
+									"Eu era um peregrino em busca de uma pessoa, lugar ou relíquia de significado espiritual."
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Característica: Descoberta",
+					"type": "entries",
+					"entries": [
+						"A silenciosa reclusão do seu longo isolamento lhe deu acesso a uma descoberta única e poderosa. A natureza exata dessa revelação depende do seu tipo de isolamento. Talvez se trate de uma grande verdade sobre o cosmos, as divindades, os seres poderosos dos planos externos ou as forças da natureza. Pode se tratar de um local que ninguém mais viu. Você pode ter descoberto algum fato há muito esquecido, ou desenterrado uma relíquia capaz de reescrever a história. Pode ser que essa informação possa prejudicar as pessoas que o mandaram para o exílio, daí a razão para o seu regresso à sociedade.",
+						"Trabalhe com o seu DM para determinar os detalhes da sua descoberta e o seu impacto na campanha."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Alguns eremitas são bem adaptados a uma vida de reclusão, enquanto outros se entediam e passam a ansiar por companhia. Quer abracem a solidão ou anseiem escapar dela, a vida solitária molda as atitudes e ideais dos eremitas. Alguns chegam ficar levemente enlouquecidos por causa dos anos longe da sociedade.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu estou isolado há tanto tempo que raramente falo, preferindo gestos ou grunhidos ocasionais."
+								],
+								[
+									"2",
+									"Eu sou absolutamente sereno, mesmo diante do desastre."
+								],
+								[
+									"3",
+									"O líder da minha comunidade tinha algo de sábio a dizer sobre todos os assuntos, e estou ansioso para compartilhar essa sabedoria."
+								],
+								[
+									"4",
+									"Eu sinto uma tremenda empatia por todos os que sofrem."
+								],
+								[
+									"5",
+									"Eu ignoro a etiqueta e as expectativas sociais."
+								],
+								[
+									"6",
+									"Eu conecto tudo o que me acontece a um grande plano cósmico."
+								],
+								[
+									"7",
+									"Muitas vezes me perco em meus próprios pensamentos e contemplações, alheio ao que está ao meu redor."
+								],
+								[
+									"8",
+									"Estou trabalhando em uma grande teoria filosófica e adoro compartilhar minhas ideias."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Bem Maior. Meus dons devem ser compartilhados com todos, e não usados em meu próprio benefício (Bom)."
+								],
+								[
+									"2",
+									"Lógica. As emoções não devem nublar a nossa noção do que é certo e verdadeiro, ou o nosso pensamento lógico (Ordeiro)."
+								],
+								[
+									"3",
+									"Liberdade de Pensamento. A investigação e a curiosidade são os pilares do progresso (Caótico)."
+								],
+								[
+									"4",
+									"Poder. A solidão e a contemplação são caminhos para o poder místico ou mágico (Mau)."
+								],
+								[
+									"5",
+									"Viva e Deixe Viver. Intrometer-se nos assuntos dos outros só causa problemas (Neutro)."
+								],
+								[
+									"6",
+									"Autoconhecimento. Se você conhece a si mesmo, não há mais nada a saber (Qualquer)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Nada é mais importante do que os outros membros do meu monastério, ordem ou associação."
+								],
+								[
+									"2",
+									"Eu me recolhi para me esconder daqueles que ainda podem estar me caçando. Um dia precisarei confrontá-los."
+								],
+								[
+									"3",
+									"Ainda procuro a iluminação que persegui durante minha reclusão, e ela continua se afastando de mim."
+								],
+								[
+									"4",
+									"Eu entrei em reclusão porque amava alguém que não podia ter."
+								],
+								[
+									"5",
+									"Se minha descoberta vier à tona, isso poderia trazer a ruína ao mundo."
+								],
+								[
+									"6",
+									"O meu isolamento me deu uma grande visão de um mal maior, que só eu posso destruir."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Agora que voltei ao mundo, tenho desfrutado exageradamente dos seus prazeres."
+								],
+								[
+									"2",
+									"Tenho pensamentos sombrios e sedentos de sangue que o meu isolamento e meditação não conseguiram reprimir."
+								],
+								[
+									"3",
+									"Eu sou dogmático nos meus pensamentos e na minha filosofia."
+								],
+								[
+									"4",
+									"Eu permiti que minha necessidade de ganhar as discussões ameaçasse as amizades e a harmonia."
+								],
+								[
+									"5",
+									"Eu aceito correr muitos riscos em troca de um pouco de conhecimento oculto."
+								],
+								[
+									"6",
+									"Gosto de guardar segredos e não os divido com ninguém."
+								]
+							]
+						},
+                        {
+                            "name": "Outros Eremitas",
+                            "type": "entries",
+                            "entries": [
+                                "O antecedente eremita pressupõe um tipo de reclusão contemplativa na qual existe muito espaço para estudos e orações. Se você prefere ser um solitário selvagem que vive longe de tudo e evita a companhia de outras pessoas, veja o antecedente forasteiro. Por outro lado, se deseja seguir um conceito ainda mais religioso, o acólito pode ser exatamente o que você procura. Você ainda poderia ser um charlatão fazendo-se passar por uma pessoa sábia e santa, sustentada pelos tolos e piedosos."
+                            ],
+                            "data": {
+                                "isFeature": true
+                            }
+                        }
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Forasteiro",
+            "id": "forasteiro",
+			"source": "PHB",
+			"page": 135,
+			"entries": [
+                "Você cresceu nos ermos, longe da civilização e dos confortos da cidade e da tecnologia. Você testemunhou a migração de manadas maiores do que florestas, sobreviveu ao clima mais extremo que qualquer habitante da cidade poderia conceber, e, como única criatura pensante num raio de muitos quilômetros, desfrutou de esplêndida solidão. Os ermos estão no seu sangue, quer você seja um nômade, um explorador, um recluso, um caçador-coletor ou até mesmo um saqueador. Você consegue se orientar mesmo em ermos desconhecidos.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Atletismo e Sobrevivência"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de instrumento musical"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Um à sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um cajado, uma armadilha de caça, um troféu de um animal que você matou, um conjunto de roupas de viajante e uma bolsa com 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Origem",
+					"type": "entries",
+					"entries": [
+						"Você esteve em lugares estranhos e viu coisas que outras pessoas não podem entender. Considere algumas das terras distantes que visitou e como elas o impressionaram. Você pode jogar na tabela a seguir para determinar a sua ocupação durante o seu tempo na natureza selvagem, ou pode escolher aquela que melhor se adaptar ao seu gosto.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d10",
+								"Origem"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Agricultor"
+								],
+								[
+									"2",
+									"Armadilheiro"
+								],
+								[
+									"3",
+									"Caçador-coletor"
+								],
+								[
+									"4",
+									"Caçador de recompensas"
+								],
+								[
+									"5",
+									"Guia"
+								],
+								[
+									"6",
+									"Exilado ou proscrito"
+								],
+								[
+									"7",
+									"Nômade tribal"
+								],
+								[
+									"8",
+									"Peregrino"
+								],
+								[
+									"9",
+									"Saqueador tribal"
+								],
+								[
+									"10",
+									"Silvicultor"
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Característica: Andarilho",
+					"type": "entries",
+					"entries": [
+						"Você possui uma excelente memória para mapas e geografia, conseguindo sempre se lembrar da configuração geral de um terreno, dos assentamentos e de outras características ao seu redor. Além disso, você pode encontrar comida e água para si mesmo e para até cinco outras pessoas todos os dias, desde que a terra ofereça frutas, pequenos animais, água, etc."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Muitas vezes considerados rudes e grosseiros pelas pessoas civilizadas, os forasteiros têm pouco respeito pelas delicadezas da vida urbana. Os laços da tribo, clã, família e o mundo selvagem do qual fazem parte são os vínculos mais importantes para a maioria dos personagens deste antecedente.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu sou guiado por uma vontade de viajar que me levou para longe de casa."
+								],
+								[
+									"2",
+									"Eu cuido dos meus amigos como se fossem uma ninhada de filhotes recém-nascidos."
+								],
+								[
+									"3",
+									"Uma vez corri quarenta quilômetros sem parar para avisar o meu clã sobre uma horda de orcs que se aproximava. Eu o faria novamente, se preciso."
+								],
+								[
+									"4",
+									"Eu tenho um ensinamento para cada situação, tirado da observação da natureza."
+								],
+								[
+									"5",
+									"Eu não conto com pessoas ricas ou bem-educadas. Dinheiro e boas maneiras não salvam você de um urso-coruja esfomeado."
+								],
+								[
+									"6",
+									"Estou sempre pegando coisas, mexendo com elas distraidamente e, às vezes, quebrando-as acidentalmente."
+								],
+								[
+									"7",
+									"Eu me sinto muito mais à vontade perto de animais do que de pessoas."
+								],
+								[
+									"8",
+									"Na verdade, eu fui criado por lobos."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Mudança. A vida é como as estações, em constante mudança, e devemos mudar com ela (Caótico)."
+								],
+								[
+									"2",
+									"Bem Maior. É responsabilidade de cada indivíduo trazer a felicidade maior para toda a tribo (Bom)."
+								],
+								[
+									"3",
+									"Natureza. O mundo natural é mais importante do que todas as construções da civilização (Neutro)."
+								],
+								[
+									"4",
+									"Honra. Se me desonro, desonro todo o meu clã (Ordeiro)."
+								],
+								[
+									"5",
+									"Poder. Os mais fortes estão destinados a governar (Mau)."
+								],
+								[
+									"6",
+									"Glória. Tenho de ganhar glória em batalha, por mim e pelo meu clã (Qualquer)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Minha família, clã ou tribo é a coisa mais importante na minha vida, mesmo quando estão longe de mim."
+								],
+								[
+									"2",
+									"Um golpe contra a natureza intocada do meu lar é um golpe contra mim."
+								],
+								[
+									"3",
+									"Eu derramarei toda a minha ira sobre os malfeitores que destruíram a minha terra natal."
+								],
+								[
+									"4",
+									"Sou o último da minha tribo, cabendo a mim assegurar que seu nome entre para as lendas."
+								],
+								[
+									"5",
+									"Sofro terríveis visões de um desastre iminente e farei de tudo para evita-lo."
+								],
+								[
+									"6",
+									"É meu dever ter filhos para manter a tribo."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Sou demasiado apaixonado por cerveja, vinho e outros entorpecentes."
+								],
+								[
+									"2",
+									"Não há espaço para cautela em uma vida vivida ao extremo."
+								],
+								[
+									"3",
+									"Eu me lembro de todos os insultos que recebi e nutro um ressentimento silencioso por qualquer um que tenha me ofendido."
+								],
+								[
+									"4",
+									"Tenho muita dificuldade em confiar em membros de outras raças, tribos e sociedades."
+								],
+								[
+									"5",
+									"A violência é a minha resposta para quase todos os desafios."
+								],
+								[
+									"6",
+									"Não espere que eu salve aqueles que não podem se salvar. É a maneira com que a natureza faz com que os mais fortes prosperem e os mais fracos pereçam."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Herói do Povo",
+            "id": "heroi-do-povo",
+			"source": "PHB",
+			"page": 136,
+			"basicRules": true,
+			"entries": [
+                "Você vem de uma posição social humilde, mas está destinado a muito mais. O povo da sua aldeia já o considera um campeão, e o seu destino o convoca a enfrentar os tiranos e monstros que ameaçam as pessoas comuns ao seu redor.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Lidar com Animais e Sobrevivência"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de ferramenta de artesão, veículo (terrestre)"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um conjunto de ferramentas de artesão (à sua escolha), uma pá, um pote de ferro, um conjunto de roupas comuns e uma bolsa contendo 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Evento Definidor",
+					"type": "entries",
+					"entries": [
+						"No passado, você tinha uma profissão simples entre os camponeses, talvez fazendeiro, mineiro, servo, pastor, lenhador ou coveiro. Mas aconteceu alguma coisa, um evento definidor que mudou o seu caminho, colocando-o na trilha da grandeza. Escolha ou determine aleatoriamente um evento definidor que o marcou como um herói do povo.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d10",
+								"Evento Definidor"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu enfrentei os agentes de um tirano."
+								],
+								[
+									"2",
+									"Eu salvei as pessoas de um desastre natural."
+								],
+								[
+									"3",
+									"Eu lutei sozinho contra um monstro terrível."
+								],
+								[
+									"4",
+									"Eu roubei de um mercador corrupto para ajudar os pobres."
+								],
+								[
+									"5",
+									"Eu liderei uma milícia para combater um exército invasor."
+								],
+								[
+									"6",
+									"Eu invadi o castelo de um tirano e roubei suas armas para equipar o povo."
+								],
+								[
+									"7",
+									"Eu treinei os camponeses para que usassem ferramentas agrícolas como armas contra os soldados de um tirano."
+								],
+								[
+									"8",
+									"Um lorde cancelou um decreto impopular depois de eu ter liderado um ato simbólico de protesto contra ele."
+								],
+								[
+									"9",
+									"Uma criatura celestial, feérica ou semelhante me concedeu uma bênção ou revelou minha origem secreta."
+								],
+								[
+									"10",
+									"Recrutado para o exército de um lorde, eu cheguei à liderança e fui elogiado pelo meu heroísmo."
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Característica: Hospitalidade Rústica",
+					"type": "entries",
+					"entries": [
+						"Vindo do povo, você se encaixa com facilidade entre eles, sendo capaz de encontrar um lugar para se esconder, descansar ou se recuperar em meio a outros plebeus, a não ser que tenha se mostrado uma ameaça para eles. Eles o protegerão da lei ou de qualquer outra pessoa que o procure, embora não estejam dispostos a arriscar suas vidas por você."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Um herói do povo é uma pessoa comum, para o bem ou para o mal. A maioria dos heróis do povo encara sua origem humilde como uma virtude, não como deficiência, e sua comunidade natal permanece como uma referência importante.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu julgo as pessoas por suas ações, não por suas palavras."
+								],
+								[
+									"2",
+									"Se alguém está em apuros, estou sempre pronto para ajudar."
+								],
+								[
+									"3",
+									"Quando ponho uma coisa na cabeça, sigo em frente, não importa o que se coloque no meu caminho."
+								],
+								[
+									"4",
+									"Eu tenho um forte sentido de igualdade e tento sempre encontrar a solução mais equilibrada para argumentar."
+								],
+								[
+									"5",
+									"Tenho confiança nas minhas capacidades e faço o possível para transmitir essa confiança para os outros."
+								],
+								[
+									"6",
+									"Pensar é para os outros. Eu prefiro agir."
+								],
+								[
+									"7",
+									"Eu emprego mal as palavras longas quando tento parecer mais inteligente."
+								],
+								[
+									"8",
+									"Eu me entedio facilmente. Quando continuarei perseguindo o meu destino?"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Respeito. As pessoas merecer ser tratadas com dignidade e respeito (Bom)."
+								],
+								[
+									"2",
+									"Justiça. Ninguém deve receber tratamento preferencial perante a lei, e ninguém está acima dela (Ordeiro)."
+								],
+								[
+									"3",
+									"Liberdade. Não deve ser permitido aos tiranos oprimir o seu povo (Caótico)."
+								],
+								[
+									"4",
+									"Poder. Se eu me tornar forte o suficiente, serei capaz de conseguir o que quero — e o que eu mereço (Mau)."
+								],
+								[
+									"5",
+									"Sinceridade. Não vale a pena fingir ser o que não sou (Neutro)."
+								],
+								[
+									"6",
+									"Destino. Nada e nem ninguém vai me afastar da minha vocação maior (Qualquer)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu tenho família, mas não faço ideia de onde estão. Um dia, espero vê-los novamente."
+								],
+								[
+									"2",
+									"Eu trabalhei a terra, eu amo a terra e a protegerei."
+								],
+								[
+									"3",
+									"Um nobre orgulhoso me deu uma surra terrível, e eu vou me vingar em qualquer valentão que encontrar."
+								],
+								[
+									"4",
+									"As minhas ferramentas não símbolos do meu passado, e eu as trago comigo para que nunca me esqueça das minhas raízes."
+								],
+								[
+									"5",
+									"Eu protejo aqueles que não se conseguem proteger a si mesmos."
+								],
+								[
+									"6",
+									"Eu queria que meu amor de infância estivesse ao meu lado quando eu realizar o meu destino."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"O tirano que governa a minha terra não desistirá até me ver morto."
+								],
+								[
+									"2",
+									"Estou convencido do significado do meu destino, e não enxergo os meus defeitos ou o risco do fracasso."
+								],
+								[
+									"3",
+									"As pessoas que me conheciam quando eu era jovem conhecem meu segredo vergonhoso, por isso nunca poderei voltar para casa."
+								],
+								[
+									"4",
+									"Eu tenho uma fraqueza pelos vícios da cidade, especialmente a bebedeira."
+								],
+								[
+									"5",
+									"Secretamente, acredito que as coisas seriam melhores se eu fosse o tirano que governa a terra."
+								],
+								[
+									"6",
+									"Tenho dificuldade em confiar nos meus aliados."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Marinheiro",
+            "id": "marinheiro",
+			"source": "PHB",
+			"page": 137,
+			"entries": [
+                "Você navegou em uma embarcação marítima por anos. Durante esse tempo, enfrentou tempestades poderosas, monstros abissais e aqueles que queriam afundar o seu trabalho nas profundezas desconhecidas. Seu primeiro amor é a distante linha do horizonte, mas chegou o momento de partir em busca de algo novo.",
+                "Discuta com o seu Mestre a natureza do navio no qual trabalhou. Tratava-se de um navio mercante, militar, exploratório ou pirata? Quão famoso (ou infame) e viajado ele era? Ainda está na ativa ou está desaparecido juntamente com a tripulação?",
+                "Quais eram os seus deveres a bordo - contramestre, capitão, navegador, cozinheiro ou outra posição? Quem eram o capitão e seu imediato? Você saiu da embarcação em bons termos com os seus companheiros ou fugiu?",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Atletismo e Percepção"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Ferramentas de navegador, veículos (aquáticos)"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um pino de segurança (clava), 15 metros de corda de seda, um amuleto da sorte, como um pé de coelho ou uma pequena pedra com um furo no centro (ou você pode sortear uma bugiganga na tabela Bugigangas, no capítulo 5), um conjunto de roupas comuns e uma bolsa contendo 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Passagem de Navio",
+					"type": "entries",
+					"entries": [
+						"Sempre que precisar, você pode garantir passagem livre em um barco à vela para si e para seus companheiros. Você pode navegar na embarcação na qual serviu ou em outro navio com o qual tenha boas relações (possivelmente comandado por um antigo colega de tripulação). Como se trata de um favor, não é possível garantir um horário ou rota que satisfaça todas as suas necessidades. O seu DM determinará quanto tempo leva para chegar onde você precisa ir. Em troca da sua passagem livre, espera-se que você e seus companheiros ajudem a tripulação durante a viagem."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Marinheiros podem ser muito rudes, mas as responsabilidades da vida em um navio costumam torná-los confiáveis. Esse estilo de vida molda sua perspectiva e forma seus vínculos mais importantes.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Meus amigos sabem que podem confiar em mim, aconteça o que acontecer."
+								],
+								[
+									"2",
+									"Eu trabalho duro para poder me divertir quando o trabalho estiver feito."
+								],
+								[
+									"3",
+									"Eu gosto de velejar em novos portos e fazer novos amigos com uma caneca de cerveja."
+								],
+								[
+									"4",
+									"Eu aumento a verdade para melhorar uma história."
+								],
+								[
+									"5",
+									"Para mim, uma briga de taverna é uma boa maneira de conhecer uma nova cidade."
+								],
+								[
+									"6",
+									"Eu nunca perco uma aposta amigável."
+								],
+								[
+									"7",
+									"O meu jeito de falar é tão sujo quanto um ninho de otyugh."
+								],
+								[
+									"8",
+									"Eu gosto de um trabalho bem-feito, especialmente quando eu convenço outra pessoa a fazê-lo."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Respeito. O que mantém um navio unido é o respeito mútuo entre capitão e tripulação (Bom)."
+								],
+								[
+									"2",
+									"Justiça. Todos fazemos o trabalho, por isso partilhamos as recompensas (Ordeiro)."
+								],
+								[
+									"3",
+									"Liberdade. O mar é liberdade - a liberdade de ir a qualquer lugar e fazer qualquer coisa (Caótico)."
+								],
+								[
+									"4",
+									"Domínio. Eu sou um predador, e os outros navios no mar são minhas presas (Mau)."
+								],
+								[
+									"5",
+									"Povo. Estou comprometido com os meus camaradas, não com ideais (Neutro)."
+								],
+								[
+									"6",
+									"Aspiração. Um dia serei dono da minha própria embarcação e mapearei o meu próprio destino (Qualquer)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Sou leal ao meu capitão em primeiro lugar, a tudo o mais em segundo."
+								],
+								[
+									"2",
+									"Eu sempre me lembrarei do meu primeiro navio."
+								],
+								[
+									"3",
+									"O navio é o mais importante - tripulantes e capitães vêm e vão."
+								],
+								[
+									"4",
+									"Eu fui enganado sobre a minha parte nos lucros, e quero receber o que me devem."
+								],
+								[
+									"5",
+									"Em uma cidade portuária, tenho uma amante cujos olho; quase me roubaram do mar."
+								],
+								[
+									"6",
+									"Piratas cruéis assassinaram o meu capitão e os meus colegas de tripulação, saquearam o nosso navio e me deixaram para morrer. A vingança será minha."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu sigo ordens, mesmo que as ache erradas."
+								],
+								[
+									"2",
+									"Eu digo qualquer coisa para evitar ter que fazer trabalho extra."
+								],
+								[
+									"3",
+									"Quando alguém questiona a minha coragem, eu nunca recuo, por mais perigosa que seja a situação."
+								],
+								[
+									"4",
+									"Quando começo a beber, é difícil me fazer parar."
+								],
+								[
+									"5",
+									"Eu não consigo deixar de guardar moedas soltas e outras bugigangas com que me deparo."
+								],
+								[
+									"6",
+									"O meu orgulho provavelmente me levará à destruição."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Variante de Marinheiro (Pirata)",
+            "id": "pirata",
+            "isVariant": true,
+            "menuName": "Marinheiro (Pirata)",
+			"source": "PHB",
+			"page": 139,
+            "entries": [
+                "Você passou a sua juventude sob o domínio de um terrível pirata, um assassino cruel que o ensinou a sobreviver em um mundo de tubarões e selvagens. Você se entregou a roubos em alto mar e enviou mais de uma alma merecedora para um túmulo salgado. O medo e o derramamento de sangue são seus conhecidos, e com isso você conquistou uma reputação um tanto desagradável em muitas cidades portuárias. Se decidir que sua carreira de navegação envolveu a pirataria, você pode escolher a característica Má Reputação (veja a barra lateral) em vez da característica Passagem de Navio.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Atletismo e Percepção"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Ferramentas de navegador, veículos (aquáticos)"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um pino de segurança (clava), 15 metros de corda de seda, um amuleto da sorte, como um pé de coelho ou uma pequena pedra com um furo no centro (ou você pode sortear uma bugiganga na tabela Bugigangas, no capítulo 5), um conjunto de roupas comuns e uma bolsa contendo 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Variante de Característica: Má Reputação",
+					"type": "entries",
+					"entries": [
+                        "Se o seu personagem possui um antecedente marinheiro, você pode escolher esta característica de antecedente em vez de Passagem de Navio.",
+						"Não importa para onde você vá, as pessoas o temem devido à sua reputação. Quando estiver em qualquer povoado civilizado, pode sair impune a crimes menores, como se recusar a pagar por comida em uma taverna ou arrombar portas de uma loja local, pois a maioria das pessoas terá medo de relatar a sua atividade às autoridades."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Use as tabelas do antecedente <a href=\"#marinheiro\">marinheiro</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como pirata."
+                    ]
+                }
+            ],
+			"hasFluff": true
+		},
+		{
+			"name": "Herdeiro",
+            "id": "herdeiro",
+			"source": "SCAG",
+			"page": 149,
+			"entries": [
+                "Você herdeiro de algo de grande valor não de meras moedas ou riqueza material, mas de um objeto que foi confiado à você e somente à você. Sua herança pode ter vindo diretamente de um membro de sua família, por direito de nascença, ou pode ter sido deixado a você por um amigo, um mentor, um professor ou por qualquer outra pessoa importante na sua vida. A revelação de sua herança mudou sua vida, e pode ter lhe colocado no caminho da aventura, mas também pode trazer consigo muitos perigos, incluindo aqueles que cobiçam seu presente e querem tira-lo de você — à força, se necessário for.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Sobrevivência, mais uma entre Arcanismo, História e Religião"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Qualquer um de sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Sua escolha de um kit de jogos ou um instrumento musical"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Sua herança, um conjunto de roupas de viajante, a ferramenta que você escolhe para a proficiência com ferramentas deste antecedente e uma algibeira contendo 15 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Herança",
+					"type": "entries",
+					"entries": [
+						"Escolha ou determine aleatoriamente sua herança entre as possibilidades apresentadas na tabela abaixo. Discuta com o seu Dungeon Master a elaboração de outros detalhes: Por que sua herança é tão importante, e qual a verdadeira história dela? Você pode preferir que o DM invente estes detalhes como parte do jogo, permitindo que você descubra mais sobre a herança junto com seu personagem.",
+						"O Dungeon Master é livre para usar sua herança como um gancho de história, enviando você em missões para descobrir mais sobre a história ou verdadeira natureza dela, ou para colocar você diante de inimigos que também a desejam ou que querem evitar que você descubra mais sobre ela. O DM também determina as propriedades de sua herança e como elas se encaixam na história e importância do item. Por exemplo, o objeto pode ser um item mágico menor, ou um que comece apresentando uma habilidade modesta e que aumenta de potência com o passar do tempo. Ou então, a verdadeira natureza de sua herança pode não ser aparente em um primeiro momento e é revelada apenas quando certas condições são atendidas.",
+						"Quando inicia sua carreira de aventureiro, você pode decidir se conta ou não aos seus companheiros sobre esta sua herança. Em vez de atrair atenção para si mesmo, você pode querer manter sua herança em segredo até descobrir mais sobre o que ela significa e o que ela pode fazer por você.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Objeto ou Item"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Um documento como um mapa, uma carta ou um diário"
+								],
+								[
+									"2-3",
+									"Uma bugiganga (veja \"Bugigangas\" no capítulo 5 do Player's Handbook: Livro do Jogador)"
+								],
+								[
+									"4",
+									"Uma peça de roupa"
+								],
+								[
+									"5",
+									"O pedaço de uma joia"
+								],
+								[
+									"6",
+									"Um livro ou formulário arcano"
+								],
+								[
+									"7",
+									"Uma história, canção, poema ou segredo escrito"
+								],
+								[
+									"8",
+									"Uma tatuagem ou outra marca no corpo"
+								]
+							]
+						}
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Características Sugeridas",
+					"entries": [
+						"Use as tabelas do antecedente <a href=\"#heroi-do-povo\">herói do povo</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como herdeiro.",
+						"Seu vínculo pode estar diretamente relacionado com sua herança ou com a pessoa de quem você a recebeu. Seu ideal pode ser influenciado por sobre o que você sabe a respeito da herança ou pelo que você pretende fazer com ela uma vez que descubra do que ela é capaz."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Mercenário Veterano",
+            "id": "mercenario-veterano",
+			"source": "SCAG",
+			"page": 149,
+			"entries": [
+                "Assim como os espadas-de-aluguel que lutam em batalhas em troco de moedas, você é bem familiarizado com a tarefa de colocar em risco a perda de um membro ou a própria vida em troco da parcela de um tesouro. Agora, você almeja seguir adiante no trabalho de combater inimigos e recolher recompensas cada vez maiores como um aventureiro. Sua experiência lhe permite estar familiarizado com os detalhes da vida de mercenário, e você provavelmente possui histórias tensas sobre eventos ocorridos em campo de batalha. Você pode ter servido com um grupo grande como os Zhentarim, ou com um pequeno bando de espadas-de-aluguel, talvez até em mais que um (veja a barra lateral \"Mercenários do Norte\" para algumas possibilidades).",
+                "No momento você está procurando por algo a mais, talvez uma recompensa maior pelos riscos que assume ou talvez a liberdade de escolher suas próprias atividades. Seja qual for a razão, você está deixando para trás a vida de soldado de aluguel, mas suas habilidades são inegavelmente adequadas para a batalha, então agora você luta por outros objetivos.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Atletismo, Persuasão"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de kit de jogos, veículos (terrestres)"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um uniforme da sua companhia (roupas de viajante de qualidade), uma insígnia de seu posto, um kit de jogos de sua escolha e uma algibeira contendo os restos de sua última remuneração (10 PO)"
+						}
+					]
+				},
+				{
+					"name": "Característica: Vida Mercenária",
+					"type": "entries",
+					"entries": [
+						"Você conhece a vida de mercenário como somente alguém que a viveu poderia saber. Você é capaz de identificar companhias de mercenários pelos emblemas que elas ostentam, e você sabe alguma coisa a respeito de tal companhia, incluindo os nomes e as reputações de seus comandantes e líderes, e quem os contratou recentemente Você pode encontrar tavernas e salões de festas nos quais mercenários frequentam em qualquer área, desde que você fale o idioma local. Você pode encontrar trabalho para um mercenário entre as aventuras em uma quantidade suficiente para manter um estilo de vida confortável (veja \"Exercer uma Profissão\" em \"Atividades em Tempo Livre\" no capítulo 8 do Player's Handbook: Livro do Jogador)."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Características Sugeridas",
+					"entries": [
+						"Use as tabelas do antecedente <a href=\"#soldado\">soldado</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como cortesão.",
+						"Seu vínculo pode estar associado à companhia com a qual viajou antes, ou com algum dos camaradas com o qual serviu. O ideal que você adota depende essencialmente de sua visão de mundo e da sua motivação para lutar."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Membro da Tribo Uthgardt",
+            "id": "membro-da-tribo-uthgardt",
+			"source": "SCAG",
+			"page": 150,
+			"entries": [
+                "Embora você possa ser um recém chegado nas terras civilizadas, você não é alheio aos valores de cooperação e esforço em grupo quando está lutando para se destacar. Você aprendeu estes princípios e muitos outros como membro de uma tribo Uthgardt.",
+                "Seu povo sempre tentou se ater aos antigos costumes. Tradição e tabu manteve os Uthgadt fortes enquanto outros reinos desmoronaram em caos e ruínas. Porém, nas últimas gerações, alguns grupos entre as tribos sentiram-se tentados em se assentar, viver em paz, manter comércio e até mesmo construir aldeias. Talvez seja por isso que Uthgar tenham escolhido adotar totems entre as pessoas como personificações vivas de seu poder. Talvez eles tenham que se lembrar de quem eram e de onde vieram. O Escolhido de Uthgar liderou grupos de volta para os antigos costumes, e a maior parte do seu povo abandonou os brandos meios de vida da civilização.",
+                "Você pode ter crescido em uma das tribos que decidiu se assentar, e agora que eles abandonaram o caminho você sente-se deslocado. Ou você pode ter vindo de um segmento dos Uthgardt que segue as tradições, mas você busca trazer a glória para sua tribo ao alcançar grandes feitos como um aventureiro formidável.",
+                "Veja a seção \"Terras Uthgardt\" no capítulo 2 para mais detalhes sobre o território e as atividades de cada tribo que irão ajudá-lo a escolher a qual você pertence.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Atletismo, Sobrevivência"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Um de sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de instrumento musical ou ferramentas de artesão"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Uma armadilha de caça, uma insígnia totêmica ou um conjunto de tatuagens que indicam sua lealdade para com Uthgar e o totem de sua tribo, um conjunto de roupas de viajante e uma algibeira contendo 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Herança Uthgardt",
+					"type": "entries",
+					"entries": [
+						"Você tem um excelente conhecimento não somente do território de sua tribo, mas também dos terrenos e recursos naturais do restante do Norte. Você está bastante familiarizado com os ermos da região, de modo que encontra água e comida duas vezes mais rápido do que encontraria quando forrageia nestes locais.",
+						"Além disso, você pode recorrer à hospitalidade de seu povo e das pessoas aliadas à sua tribo, o que frequentemente inclui círculos druídicos, tribos de elfos nômades, os Harpistas e o sacerdócio devoto aos deuses do Primeiro Círculo."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "section",
+					"name": "Características Sugeridas",
+					"entries": [
+						"Use as tabelas para o antecedente <a href=\"#forasteiro\">forasteiro</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como membro da tribo Uthgardt.",
+						"Mesmo que você tenha deixado sua tribo para trás (pelo menos por enquanto), você segue as tradições do seu povo. Você nunca corta uma árvore ainda viva e pode não tolerar tal ato sendo executado em sua presença. Os túmulos ancestrais dos Uthgardt - grandes morros onde os espíritos totêmicos foram derrotados por Uthgar e onde os heróis das tribos são enterrados - são sagrados para você.",
+						"Seu vínculo indubitavelmente está associado com sua tribo ou com algum aspecto da filosofia ou cultura Uthgardt (talvez com o próprio Uthgar). Seu ideal é uma escolha pessoal que provavelmente segue de perto o comportamento de seu povo e certamente não contradiz ou compromete o que significa ser um Uthgardt."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Nobre",
+            "id": "nobre",
+			"source": "PHB",
+			"page": 138,
+			"basicRules": true,
+			"entries": [
+                "Você entende a riqueza, o poder e o privilégio. Você ostenta um título da nobreza e sua família é dona de terras, cobra impostos e exerce grande influência política. Você pode ser um aristocrata mimado que simplesmente desconhece o trabalho ou o desconforto, um ex-comerciante que ascendeu à nobreza, um patife deserdado com um senso desproporcional de autoimportância, ou um proprietário de terras honesto e trabalhador, profundamente preocupado com as pessoas que vivem e trabalham em sua terra e ciente de sua responsabilidade para com elas.",
+                "Converse com seu DM para determinar o título e a autoridade do seu personagem. Um título de nobreza não existe por si só- ele está ligado a uma família inteira, e será herdado por seus filhos. Logo, é preciso trabalhar com o DM para descrever sua família e a influência que ela tem sobre você.",
+                "Trata-se de uma família antiga e estabelecida, ou seu título foi concedido recentemente? Quanta influência sua família exerce e em que território? Qual a reputação dela entre os outros aristocratas da região? Como as pessoas comuns a consideram?",
+                "Qual é sua posição na família? Você é o herdeiro principal? Já herdou o título? Como se sente em relação a essa responsabilidade? Ou você está tão abaixo na hierarquia que ninguém se importa com o que você faz, desde que não envergonhe seus parentes? O que o chefe da família acha da sua carreira de aventureiro? Você está em boas graças com a família ou é desprezado por todos?",
+                "A sua família possui um brasão de armas? Uma insígnia que você pode usar em um anel de sinete? Talvez cores que você usa o tempo todo? Algum animal que você considera símbolo da sua linhagem ou quem sabe um membro espiritual da família?",
+                "Esses detalhes ajudam a estabelecer a sua linhagem e seu título como pertencentes ao mundo da campanha.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "História e Persuasão"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de kit de jogos"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Um à sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um conjunto de roupas finas, um anel de sinete, um pergaminho de ascendência familiar e uma bolsa com 25 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Posição de Privilégio",
+					"type": "entries",
+					"entries": [
+						"Graças ao seu berço nobre, as pessoas estão inclinadas a pensar o melhor a seu respeito. Você é bem-vindo na alta sociedade, e as pessoas assumem que você tem o direito de estar onde quiser. As pessoas comuns fazem todos os esforços para acomodá-lo e evitar o seu desagrado, enquanto outros nobres tratam-no como um membro da mesma esfera social. Você pode garantir uma audiência com um nobre local, se precisar."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Nobres como você nascem e crescem dentro de um estilo de vida muito diferente do que a maioria das pessoas já experimentou, e sua personalidade reflete essa educação. Um título de nobreza traz uma infinidade de laços- responsabilidades para com a família, para com outros nobres (incluindo o soberano), para com as pessoas sob os cuidados da família, ou mesmo para com o próprio título. Muitas vezes essa responsabilidade constitui um bom modo de derrubar um nobre.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Meu elogio eloquente faz com que qualquer um se sinta como a pessoa mais importante do mundo."
+								],
+								[
+									"2",
+									"As pessoas comuns me adoram pela minha bondade e generosidade."
+								],
+								[
+									"3",
+									"Olhando para a minha aparência régia, ninguém duvidaria de que eu pertenço a uma camada acima da plebe ignara."
+								],
+								[
+									"4",
+									"Eu faço grandes sacrifícios para estar sempre com a melhor aparência e seguir a última moda."
+								],
+								[
+									"5",
+									"Não gosto de sujar as mãos, e nem morto eu aceitaria acomodações inadequadas."
+								],
+								[
+									"6",
+									"Apesar do berço nobre, não me coloco acima dos outros. Todos temos o mesmo sangue."
+								],
+								[
+									"7",
+									"O meu favor, uma vez perdido, foi perdido para sempre."
+								],
+								[
+									"8",
+									"Se você me magoar, vou esmagá-lo, arruinar o seu nome e salgar os seus campos."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Respeito. Eu mereço respeito por causa da minha posição, mas todas as pessoas, independentemente do posto, merecem ser tratadas com dignidade (Bom)."
+								],
+								[
+									"2",
+									"Responsabilidade. É meu dever respeitar a autoridade daqueles acima de mim, assim como aqueles abaixo de mim devem respeitar a minha (Ordeiro)."
+								],
+								[
+									"3",
+									"Independência. Tenho que provar que consigo cuidar de mim mesmo sem os cuidados da minha família (Caótico)."
+								],
+								[
+									"4",
+									"Poder. Se eu conseguir mais poder, ninguém me dirá o que fazer (Mau)."
+								],
+								[
+									"5",
+									"Família. O sangue é mais espesso que a água (Qualquer)."
+								],
+								[
+									"6",
+									"Obrigações da Nobreza. É meu dever proteger e cuidar das pessoas abaixo de mim (Bom)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Enfrentarei qualquer desafio para ganhar a aprovação da minha família."
+								],
+								[
+									"2",
+									"Nada é mais importante do que os outros membros da minha família."
+								],
+								[
+									"3",
+									"Estou apaixonado pelo herdeiro de uma família que a minha família despreza."
+								],
+								[
+									"4",
+									"A minha lealdade ao meu soberano é inabalável."
+								],
+								[
+									"5",
+									"As pessoas comuns devem me ver como um herói do povo."
+								],
+								[
+									"6",
+									"A aliança da minha casa com uma outra família nobre deve ser sustentada a qualquer custo."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu acredito secretamente que todos estão abaixo de mim."
+								],
+								[
+									"2",
+									"Eu escondo um segredo verdadeiramente escandaloso que pode arruinar a minha família para sempre."
+								],
+								[
+									"3",
+									"Eu sempre ouço ameaças e insultos velados em todas as palavras que me são dirigidas, e me irrito facilmente."
+								],
+								[
+									"4",
+									"Eu tenho um desejo insaciável de prazeres carnais."
+								],
+								[
+									"5",
+									"Na verdade, o mundo gira à minha volta."
+								],
+								[
+									"6",
+									"Através das minhas palavras e ações, muitas vezes trago vergonha à minha família."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Variante de Nobre (Cavaleiro)",
+            "id": "cavaleiro",
+			"source": "PHB",
+			"page": 139,
+            "entries": [
+                "Você entende a riqueza, o poder e o privilégio. Você ostenta um título da nobreza e sua família é dona de terras, cobra impostos e exerce grande influência política. Você pode ser um aristocrata mimado que simplesmente desconhece o trabalho ou o desconforto, um ex-comerciante que ascendeu à nobreza, um patife deserdado com um senso desproporcional de autoimportância, ou um proprietário de terras honesto e trabalhador, profundamente preocupado com as pessoas que vivem e trabalham em sua terra e ciente de sua responsabilidade para com elas.",
+                "Converse com seu DM para determinar o título e a autoridade do seu personagem. Um título de nobreza não existe por si só- ele está ligado a uma família inteira, e será herdado por seus filhos. Logo, é preciso trabalhar com o DM para descrever sua família e a influência que ela tem sobre você.",
+                "Trata-se de uma família antiga e estabelecida, ou seu título foi concedido recentemente? Quanta influência sua família exerce e em que território? Qual a reputação dela entre os outros aristocratas da região? Como as pessoas comuns a consideram?",
+                "Qual é sua posição na família? Você é o herdeiro principal? Já herdou o título? Como se sente em relação a essa responsabilidade? Ou você está tão abaixo na hierarquia que ninguém se importa com o que você faz, desde que não envergonhe seus parentes? O que o chefe da família acha da sua carreira de aventureiro? Você está em boas graças com a família ou é desprezado por todos?",
+                "A sua família possui um brasão de armas? Uma insígnia que você pode usar em um anel de sinete? Talvez cores que você usa o tempo todo? Algum animal que você considera símbolo da sua linhagem ou quem sabe um membro espiritual da família?",
+                "Esses detalhes ajudam a estabelecer a sua linhagem e seu título como pertencentes ao mundo da campanha.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "História e Persuasão"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de kit de jogos"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Um à sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um conjunto de roupas finas, um anel de sinete, um pergaminho de ascendência familiar e uma bolsa com 25 PO"
+						}
+					]
+				},
+                {
+                    "name": "Variante de Característica: Servos",
+                    "type": "entries",
+                    "entries": [
+                        "Se o seu personagem possui o antecedente nobre, você pode escolher esta característica de antecedente em vez de Posição de Privilégio.",
+                        "Neste caso passa a contar com o apoio de três servos leais à sua família. Eles podem ser criados ou mensageiros, e um deles pode ser um mordomo. Eles são plebeus capazes de realizar tarefas mundanas, mas que não lutarão por você, não o seguirão em áreas evidentemente perigosas (como masmorras) e o abandonarão se forem ameaçados ou abusados com frequência."
+                    ],
+                    "data": {
+                        "isFeature": true
+                    }
+                },
+                {
+                    "name": "Características Sugeridas",
+                    "type": "entries",
+                    "entries": [
+                        "Use as tabelas do antecedente <a href=\"#nobre\">nobre</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como cavaleiro."
+                    ]
+                }
+            ],
+			"hasFluff": true
+		},
+		{
+			"name": "Nobre Aguaprofundense",
+            "id": "nobre-aguaprofundense",
+			"source": "SCAG",
+			"page": 151,
+			"entries": [
+                "Você é descendente de uma das grandes famílias de Weterdeep (Águas Profundas). Famílias humanas que protegem zelosamente seus privilégios e posição na Cidade dos Esplendores, os nobres aguaprofundenses possuem grande reputação em toda Faerûn por serem excêntricos, mimados, corruptos e, acima de tudo isso, ricos.",
+                "Se você é o perfeito exemplo da razão para este tipo de reputação ou uma das provas que sempre há uma exceção para a regra, as pessoas esperam coisas de você quando tomam ciência de seu sobrenome e o que ele significa. Seus motivos para se aventurar provavelmente envolvem sua família em algum aspecto: Você é a ovelha negra da família, que prefere se enfurnar em masmorras fedorentas do que beber zzar em um baile? Ou você decidiu pegar em uma espada ou usar magia em nome da família, garantindo que eles tivessem alguém de renome para cuidar do seu legado?",
+                "Converse com o seu DM para decidirem a qual família você faz parte — há cerca de setenta e cinco linhagens em Waterdeep (Águas Profundas), cada qual com suas próprias finanças, interesses, especialidades e tramas. Você pode ser membro da linhagem principal da família, possivelmente na sucessão para a liderança, algum dia. Ou você pode ser um de vários primos, com menos prestígio, mas também com menos responsabilidades.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "História, Persuasão"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Um de sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de kit de jogo ou um instrumento musical"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um conjunto de roupas finas, um anel de sinete ou broche, um pergaminho de genealogia, um odre de um fino zzar ou vinho e uma bolsa contendo 20 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: No Estilo",
+					"type": "entries",
+					"entries": [
+						"Enquanto estiver em Waterdeep (Águas Profundas) ou em qualquer outro lugar no Norte, sua casa lhe sana as necessidades diárias. Seu nome e sinete são o suficiente para arcar a maioria dos gastos; as estalagens, tavernas e salões de festa que você frequente registra seus débitos com um sorriso no rosto e enviam a conta para a mansão de sua família em Waterdeep (Águas Profundas) para fechar a conta que você deixou.",
+						"Esta vantagem permite que você tenha um estilo confortável de vida sem que para tanto tenha que pagar 2 PO por dia, ou reduz o custo do estilo de vida abastado ou aristocrático para este valor. Você não pode manter um estilo de vida menos rico e usar a diferença como renda - o benefício é uma linha de crédito, não uma recompensa em dinheiro."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "section",
+					"name": "Características Sugeridas",
+					"entries": [
+						"Use as tabelas do antecedente <a href=\"#nobre\">nobre</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como membro de uma família aguaprofundense.",
+						"Assim como outros nobres, você nasceu e foi criado em um mundo diferente daquele que a maioria das pessoas conhece — um mundo que lhe garante privilégios, mas que também o convoca a cumprir um dever condizente com sua posição. Seu vínculo pode estar associado apenas com sua família, ou poderia dizer respeito a outra casa nobre que está lado a lado ou que se opõe à sua casa. Seu ideal depende, até certo ponto, de como você enxerga seu papel dentro da família e em como você pretende conduzir-se perante o mundo como um importante representante de sua casa."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Sábio",
+            "id": "sabio",
+			"source": "PHB",
+			"page": 139,
+			"basicRules": true,
+			"entries": [
+                "Você passou anos aprendendo a cultura do multiverso. Você pesquisou manuscritos, estudou pergaminhos e ouviu os maiores especialistas sobre os assuntos do seu interesse. Os seus esforços fizeram de você um mestre nas suas áreas de estudo.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Arcanismo e História"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Dois à sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um frasco com tinta preta, uma pena, uma faca pequena, uma carta de um colega morto contendo uma pergunta que você ainda não foi capaz de responder, um conjunto de roupas comuns e uma bolsa contendo 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Especialidade",
+					"type": "entries",
+					"entries": [
+						"Para determinar a natureza do seu treinamento acadêmico, jogue um d8 ou escolha entre as opções da tabela abaixo.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Área de Estudo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Acadêmico difamado"
+								],
+								[
+									"2",
+									"Alquimista"
+								],
+								[
+									"3",
+									"Aprendiz de mago"
+								],
+								[
+									"4",
+									"Astrônomo"
+								],
+								[
+									"5",
+									"Bibliotecário"
+								],
+								[
+									"6",
+									"Escriba"
+								],
+								[
+									"7",
+									"Pesquisador"
+								],
+								[
+									"8",
+									"Professor"
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Característica: Pesquisador",
+					"type": "entries",
+					"entries": [
+						"Ao tentar aprender ou lembrar um determinado conhecimento, geralmente você sabe onde e a quem recorrer para obtê-lo. Essa informação costuma vir de uma biblioteca, escritório, universidade, sábio ou outra pessoa ou criatura culta. O seu DM pode decidir que o cohecimento que você procura está escondido em um lugar quase inacessível, ou que simplesmente não pode ser encontrado. Desenterrar os segredos mais profundos do multiverso pode exigir uma aventura ou mesmo uma campanha inteira."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Os sábios são definidos pelos extensos estudos que fazem, e suas características refletem essa vida de erudição. Dedicado a atividades acadêmicas, um personagem com este antecedente valoriza muito o conhecimento - às vezes em seu próprio benefício, às vezes como meio para atingir outros fins.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu uso palavras polissilábicas, que transmitem a impressão de grande erudição."
+								],
+								[
+									"2",
+									"Eu li todos os livros das maiores bibliotecas do mundo - ou gosto de me gabar disso."
+								],
+								[
+									"3",
+									"Não há nada que eu aprecie mais do que um bom mistério."
+								],
+								[
+									"4",
+									"Estou disposto a ouvir todos os lados de uma discussão antes de fazer o meu próprio julgamento."
+								],
+								[
+									"5",
+									"Eu... falo... lentamente... quando... converso... com... idiotas... ou... seja... com... quase... todos... se... comparados... a... mim."
+								],
+								[
+									"6",
+									"Eu sou esquisito, horrivelmente esquisito em situações sociais."
+								],
+								[
+									"7",
+									"Estou convencido de que as pessoas estão sempre tentando roubar os meus segredos."
+								],
+								[
+									"8",
+									"Estou habituado a ajudar aqueles menos espertos do que eu, a quem explico pacientemente."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Conhecimento. O caminho para o poder e para o autoaperfeiçoamento é o do conhecimento (Neutro)."
+								],
+								[
+									"2",
+									"Beleza. O que é belo nos orienta para além da beleza, orienta para o que é verdadeiro (Bom)."
+								],
+								[
+									"3",
+									"Lógica. As emoções não podem nublar nosso pensamento lógico (Ordeiro)."
+								],
+								[
+									"4",
+									"Sem Limites. Nada deveria impedir as infinitas possibilidades inerentes a toda a existência (Caótico)."
+								],
+								[
+									"5",
+									"Poder. O conhecimento é o caminho para o poder e para a dominação (Mau)."
+								],
+								[
+									"6",
+									"Autoaperfeiçoamento. O objetivo de uma vida de estudo é melhorar a si próprio (Qualquer)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"É meu dever proteger os meus alunos."
+								],
+								[
+									"2",
+									"Eu possuo um texto antigo que guarda segredos terríveis e que não pode cair nas mãos erradas."
+								],
+								[
+									"3",
+									"Eu trabalho para preservar uma biblioteca, universidade, escritório ou monastério."
+								],
+								[
+									"4",
+									"O trabalho da minha vida consiste em uma série de tomos relacionados a um campo específico do conhecimento."
+								],
+								[
+									"5",
+									"Toda a minha vida procurei a resposta para uma pergunta específica."
+								],
+								[
+									"6",
+									"Vendi minha alma em troca do conhecimento. Espero realizar grandes feitos e recuperá-la."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu me distraio facilmente com a promessa de informação."
+								],
+								[
+									"2",
+									"A maioria das pessoas grita e foge quando vê um demônio. Eu paro e tomo notas sobre sua anatomia."
+								],
+								[
+									"3",
+									"Desvendar um mistério antigo vale o preço de uma civilização."
+								],
+								[
+									"4",
+									"Eu ignoro soluções óbvias em favor de soluções complicadas."
+								],
+								[
+									"5",
+									"Eu falo sem pensar nas minhas palavras, invariavelmente insultando os outros."
+								],
+								[
+									"6",
+									"Não sou capaz de guardar um segredo para salvar a minha vida, ou a de qualquer outra pessoa."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Soldado",
+            "id": "soldado",
+			"source": "PHB",
+			"page": 140,
+			"basicRules": true,
+			"entries": [
+                "A guerra tem sido a sua vida desde que você se entende por gente. Você treinou desde jovem, estudou o uso de armas e armaduras, aprendeu técnicas básicas de sobrevivência, incluindo como permanecer vivo no campo de batalha. Você pode ter feito parte de um exército nacional permanente ou de uma companhia de mercenários, ou talvez tenha sido membro de uma milícia local que ganhou destaque durante uma guerra recente.",
+                "Ao escolher este antecedente, trabalhe com o seu DM para determinar a qual organização militar você pertenceu, até que patente progrediu dentro dela e que tipo de experiências teve durante a sua carreira militar. Tratava-se de um exército permanente, uma guarda municipal ou uma milícia de vilarejo? Talvez o exército particular de um nobre ou mercador ou uma companhia de mercenários.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Atletismo e Intimidação"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Um tipo de kit de jogos e veículos (terrestres)"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Uma insígnia de posto militar, um troféu retirado de um inimigo caído (uma adaga, lâmina quebrada ou pedaço de um estandarte), um conjunto de dados de osso ou baralho de cartas, um conjunto de roupas comuns e uma bolsa contendo 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Especialidade",
+					"type": "entries",
+					"entries": [
+						"Durante o seu tempo como soldado, você teve um papel específico a desempenhar na sua unidade ou exército. Jogue um d8 ou escolha entre as opções na tabela abaixo para determinar o seu papel:",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Função"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Oficial"
+								],
+								[
+									"2",
+									"Batedor"
+								],
+								[
+									"3",
+									"Infantaria"
+								],
+								[
+									"4",
+									"Cavalaria"
+								],
+								[
+									"5",
+									"Curandeiro"
+								],
+								[
+									"6",
+									"Intendente"
+								],
+								[
+									"7",
+									"Porta-estandarte"
+								],
+								[
+									"8",
+									"Equipe de apoio (cozinheiro, ferreiro ou similares)"
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Característica: Posto Militar",
+					"type": "entries",
+					"entries": [
+						"Você possui uma patente militar devido à sua carreira como soldado. Os soldados leais à sua antiga organização ainda reconhecem a sua autoridade e influência, e, caso sejam de uma patente inferior, obedecerão suas ordens. Você pode invocar seu posto para exercer influência sobre outros soldados e requisitar equipamentos simples ou cavalos para uso temporário. Você também pode ter acesso a acampamentos e fortalezas militares amigáveis onde sua patente seja reconhecida."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						"Os horrores da guerra combinados com a disciplina rígida do serviço militar deixam sua marca em todos os soldados, moldando seus ideais, criando laços fortes e, muitas vezes, deixando-os marcados e vulneráveis ao medo, vergonha e ódio.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d8",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu sou sempre educado e respeitoso."
+								],
+								[
+									"2",
+									"Eu sou assombrado pelas memórias da guerra. E não consigo tirar as imagens de violência da minha mente."
+								],
+								[
+									"3",
+									"Eu perdi amigos demais e tenho dificuldade em fazer novas amizades."
+								],
+								[
+									"4",
+									"Tenho histórias inspiradoras sobre a minha experiência militar, as quais podem ser relevantes em quase todas as situações de combate."
+								],
+								[
+									"5",
+									"Eu consigo encarar um sabujo infernal sem hesitar."
+								],
+								[
+									"6",
+									"Eu gosto de ser forte e de quebrar coisas."
+								],
+								[
+									"7",
+									"Tenho um senso de humor grosseiro."
+								],
+								[
+									"8",
+									"Eu enfrento os problemas de frente. Uma solução simples e direta é o melhor caminho para o sucesso."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Bem Maior. O nosso destino é dar as nossas vidas em defesa dos outros (Bom)."
+								],
+								[
+									"2",
+									"Responsabilidade. Eu faço o que devo e obedeço à autoridade justa (Ordeiro)."
+								],
+								[
+									"3",
+									"Independência. Quando as pessoas seguem ordens cegamente, abraçam uma espécie de tirania (Caótico)."
+								],
+								[
+									"4",
+									"Poder. Na vida, assim como na guerra, vence o mais forte (Mau)."
+								],
+								[
+									"5",
+									"Viva e Deixe Viver. Ideais não valem a morte ou lutar na guerra (Neutro)."
+								],
+								[
+									"6",
+									"Nação. A minha cidade, nação ou povo é tudo o que importa (Qualquer)."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu ainda daria a minha vida pelas pessoas com quem servi."
+								],
+								[
+									"2",
+									"Alguém me salvou a vida no campo de batalha. Depois disso, nunca deixo um amigo para trás."
+								],
+								[
+									"3",
+									"A minha honra é a minha vida."
+								],
+								[
+									"4",
+									"Eu nunca esquecerei a derrota esmagadora que a minha companhia sofreu ou os inimigos que a causaram."
+								],
+								[
+									"5",
+									"Aqueles que lutam ao meu lado são aqueles por quem vale a pena morrer."
+								],
+								[
+									"6",
+									"Luto por aqueles que não podem lutar por si mesmos."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"O inimigo monstruoso que enfrentamos em batalha ainda me deixa tremendo de medo."
+								],
+								[
+									"2",
+									"Tenho pouco respeito por quem não é um guerreiro colocado à prova."
+								],
+								[
+									"3",
+									"Eu cometi um erro terrível em uma batalha, o qual custou muitas vidas, e faria qualquer coisa para manter esse erro em segredo."
+								],
+								[
+									"4",
+									"O meu ódio pelos meus inimigos é cego e irracional."
+								],
+								[
+									"5",
+									"Eu obedeço à lei, mesmo que a lei cause miséria."
+								],
+								[
+									"6",
+									"Eu prefiro comer a minha armadura a admitir que estou errado."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Viajante Distante",
+            "id": "viajante-distante",
+			"source": "SCAG",
+			"page": 152,
+			"entries": [
+                "Quase todas as pessoas comuns e outros povos que alguém poderia encontrar ao longo da Costa da Espada possuem uma coisa em comum: eles vivem suas vidas sem sequer ter viajado mais do que alguns quilômetros para longe do local onde nasceram.",
+                "Você não é uma dessas pessoas.",
+                "Você vem de uma terra distante, um lugar tão remoto que poucas pessoas comuns do Norte sequer sabem que existe, e há boas chances de que, se até mesmo as pessoas que você encontra tenham ouvido falar de sua terra natal, elas saibam apenas o nome e algumas histórias absurdas de lá. Você veio até esta parte de Faerûn por sua própria escolha, que você pode ou não compartilhar com os outros.",
+                "Embora sem sombra de dúvida você ache os modos desta terra algo estranhos e desconcertantes, ao mesmo tempo você sabe de que algumas coisas que as pessoas ali tomam como cotidianas lhe parecerão, aos seus olhos, novas maravilhas. Da mesma forma, você é uma pessoa que se destaca diante das pessoas ao redor onde quer que vá, seja para o bem ou para o mal.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Intuição, Percepção"
+						},
+						{
+							"type": "item",
+							"name": "Proficiência com Ferramentas",
+							"entry": "Qualquer instrumento musical ou kit de jogos de sua escolha, muito provavelmente algo originário de sua pátria."
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Qualquer um de sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um conjunto de roupas de viajante, qualquer instrumento musical ou kit de jogos no qual é proficiente, mapas mal feitos de sua terra natal que mostram onde ele fica em Faerûn, uma pequena peça de joalheria no valor de 10 PO feito no estilo de ofício sua pátria e uma algibeira contendo 5 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Olhares Voltados Para Você",
+					"type": "entries",
+					"entries": [
+						"Seu sotaque, trejeitos, figuras de linguagem e talvez até mesmo sua aparência podem entregá-lo como um estrangeiro, Olhares curiosos são lançados diretamente à sua pessoa onde quer que você vá, algo que pode ser incômodo, mas que por outro lado atrai o interesse amigável de estudiosos e outras pessoas intrigadas por terras distantes. Acrescente a isso as pessoas que encontra no dia-a-dia, sempre dispostas a ouvir histórias de sua pátria.",
+						"Você pode usar essa atenção toda a seu favor para ganhar acesso à pessoas e lugares que de outra forma você não conseguiria, tanto para você quanto para seus companheiros de viagem. Nobres lordes, estudiosos e príncipes mercantes, apenas para citar alguns, poderiam estar interessados em ouvir mais sobre você e sobre sua pátria e compatriotas que ficaram lá longe."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Por Que Você Está Aqui?",
+					"type": "entries",
+					"entries": [
+						"Um viajante que veio de longe pode ter se colocado nessa jornada por uma infinidade de razões, e a partida de sua pátria pode ter sido voluntária ou não. Para determinar porque você está tão longe de casa, jogue na tabela abaixo ou escolha uma das opções oferecidas. A seção a seguir, que discute as possíveis terras natais, incluem algumas razões sugeridas que sejam apropriadas para cada local.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Razão"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Emissário"
+								],
+								[
+									"2",
+									"Exilado"
+								],
+								[
+									"3",
+									"Fugitivo"
+								],
+								[
+									"4",
+									"Peregrino"
+								],
+								[
+									"5",
+									"Turista"
+								],
+								[
+									"6",
+									"Andarilho"
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Características Sugeridas",
+					"type": "entries",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Traço de Personalidade"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Eu tenho conceitos diferentes com relação ao espaço pessoal daqueles ao meu redor, e invado alegre e inocentemente o espaço dos outros ou reajo mal à invasão de meu próprio espaço."
+								],
+								[
+									"2",
+									"Eu tenho minhas próprias ideias sobre o que é comida e o que não é, e acho os hábitos alimentares dos outros ao meu redor fascinantes, confusos ou repugnantes."
+								],
+								[
+									"3",
+									"Eu tenho um forte código de honra ou senso de propriedade que os outros não entendem."
+								],
+								[
+									"4",
+									"Eu expresso afeição ou contentamento de maneiras que não são facilmente reconhecidas pelos outros."
+								],
+								[
+									"5",
+									"Eu honro minhas divindades através de práticas que são alheias a esta terra."
+								],
+								[
+									"6",
+									"Eu inicio e encerro o meu dia com pequenos rituais tradicionais que são desconhecidos por aqueles ao meu redor."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Aberto. Eu tenho muito a aprender com as pessoas gentis que encontro pelo caminho. (Bom)"
+								],
+								[
+									"2",
+									"Reservado. Como alguém novo nestas terras estranhas, eu sou cauteloso e respeitoso em minhas relações. (Ordeiro)"
+								],
+								[
+									"3",
+									"Aventura. Eu estou longe de casa, e tudo é estranho e maravilhoso! (Caótico)"
+								],
+								[
+									"4",
+									"Astuto. Embora eu possa não saber seus modos, nem eles sabem os meus, o que pode ser uma vantagem para mim. (Mau)"
+								],
+								[
+									"5",
+									"Questionador. Tudo é novo, mas tenho sede de aprendizado. (Neutro)"
+								],
+								[
+									"6",
+									"Desconfiado. Eu devo ser cuidadoso, pois não consigo diferenciar um amigo de um inimigo aqui. (Qualquer)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Vínculo"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Enquanto eu tiver comigo este símbolo de minha pátria, posso encarar qualquer adversidade nesta terra estranha."
+								],
+								[
+									"2",
+									"Os deuses de meu povo são um conforto para mim estando tão longe de casa."
+								],
+								[
+									"3",
+									"Eu não tenho causa maior do que o serviço que presto para o meu povo."
+								],
+								[
+									"4",
+									"Minha liberdade é o meu bem mais precioso. Eu jamais deixarei que alguém a tome de mim novamente."
+								],
+								[
+									"5",
+									"Eu estou fascinado pelas belezas e maravilhas desta nova terra."
+								],
+								[
+									"6",
+									"Embora eu não tenha escolha, lamento ter deixado a(s) pessoa(s) que amo para trás. Eu espero poder vê-la(s) novamente algum dia."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"colLabels": [
+								"d6",
+								"Fraqueza"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Secretamente, eu estou convencido (ou não) da superioridade da minha própria cultura sobre a desta terra estranha."
+								],
+								[
+									"2",
+									"Eu finjo não entender o idioma local para evitar interações que preferiria não ter."
+								],
+								[
+									"3",
+									"Eu tenho uma queda por novos métodos de me intoxicar e por outros prazeres desta terra."
+								],
+								[
+									"4",
+									"Eu não respondo de forma gentil às ações e motivações das pessoas desta terra, pois elas são muito diferentes de mim."
+								],
+								[
+									"5",
+									"Eu considero os adoradores de outros deuses no mínimo iludidos, no máximo tolos ignorantes."
+								],
+								[
+									"6",
+									"Eu tenho uma queda pelas belezas exóticas das pessoas destas terras."
+								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Vigília da Cidade",
+            "id": "vigilia-da-cidade",
+			"source": "SCAG",
+			"page": 154,
+			"entries": [
+                "Você serviu a comunidade onde cresceu, permanecendo como sua primeira linha de defesa contra o crime. Você não é um soldado que volta seu olhar para possíveis inimigos. Em vez disso, seu serviço para com sua cidade natal era ajudar a policiar a população, protegendo os cidadãos de infratores da lei e criminosos de todos os tipos.",
+                "Você pode ter feito parte da Vigília da Cidade de Waterdeep (Águas Profundas), a força policial da Cidade dos Esplendores, protegendo o povo comum de ladrões e nobres turbulentos. Ou você pode ter sido um dos valentes defensores de Lua Argêntea, um membro da Vigília Argêntea ou até mesmo um dos usuários de magia da Guarda Mágica.",
+                "Talvez você tenha vindo de Neverwinter (Nevenunca) e tenha servido como um de seus vigias no Escudo Invernal, a recém-fundada ramificação da guarda que jura manter segura a Cidade das Mãos Hábeis.",
+                "Mesmo que você não seja nascido ou criado na cidade, este antecedente pode descrever seus primeiros anos como um membro da força policial. A maioria dos povoados de qualquer tamanho tem seus próprios condestáveis e forças policiais, e comunidades ainda menores têm autoridades policiais e meirinhos que estão prontos para proteger sua comunidade.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Atletismo, Intuição"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Dois de sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um uniforme no estilo de sua unidade e o indicativo de sua patente, uma corneta com a qual convocar ajuda, um par de algemas e uma algibeira contendo 10 PO"
+						}
+					]
+				},
+				{
+					"name": "Característica: Olho Vigilante",
+					"type": "entries",
+					"entries": [
+						"Sua experiência em fazer cumprir a lei e em lidar com infratores te dá uma noção das leis e dos criminosos locais. Você pode encontrar com facilidade o posto avançado da vigília local ou uma organização similar e, com a mesma facilidade, identificar os antros de atividades criminosas em uma comunidade, embora é mais provável que você seja bem-vindo nos locais citados primeiro e não neste último."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Características Sugeridas",
+					"entries": [
+						"Use as tabelas para o antecedente do <a href=\"#soldado\">soldado</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como membro da vigília da cidade.",
+						"É provável que seu vínculo esteja associado aos seus companheiros de vigília ou à própria organização de vigília e quase certamente diz respeito à sua comunidade. Seu ideal provavelmente envolve a promoção da paz e da segurança. É provável que um investigador tenha um ideal conectado à obtenção de justiça através da resolução bem-sucedida dos crimes."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Variante Vigília da Cidade (Investigador)",
+            "id": "investigador",
+            "isVariant": true,
+            "menuName": "Vigília da Cidade (Investigador)",
+			"source": "SCAG",
+			"page": 154,
+			"entries": [
+                "Mais raros do que membros da vigília ou patrulha são os investigadores da comunidade, que são os responsáveis por resolver os crimes após eles terem ocorrido. Embora essas pessoas raramente sejam encontradas nas áreas rurais, quase todos os povoados de tamanho razoável têm pelo menos um ou dois membros da vigília que têm a habilidade de investigar cenas de crimes e rastrear criminosos. Se sua experiência anterior é como investigador, você tem proficiência em Investigação em vez de Atletismo.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Proficiência em Perícias",
+							"entry": "Atletismo, Intuição"
+						},
+						{
+							"type": "item",
+							"name": "Idiomas",
+							"entry": "Dois de sua escolha"
+						},
+						{
+							"type": "item",
+							"name": "Equipamento",
+							"entry": "Um uniforme no estilo de sua unidade e o indicativo de sua patente, uma corneta com a qual convocar ajuda, um par de algemas e uma algibeira contendo 10 PO"
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Características Sugeridas",
+					"entries": [
+                        "Use as tabelas para o antecedente do <a href=\"soldado\">soldado</a> no Player's Handbook: Livro do Jogador como base para seus traços de personalidade e motivações, modificando as opções quando apropriado para se adequar à sua identidade como investigador da vigília da cidade.",
+                        "É provável que seu vínculo esteja associado aos seus companheiros de vigília ou à própria organização de vigília e quase certamente diz respeito à sua comunidade. Seu ideal provavelmente envolve a promoção da paz e da segurança. É provável que um investigador tenha um ideal conectado à obtenção de justiça através da resolução bem-sucedida dos crimes."
+					]
+				}
+			],
+			"hasFluff": true
+		}
+	]
+}

@@ -177,7 +177,7 @@ async function loadTalentosIntoPage(url) {
 }
 
 async function loadTalentosIntoSideMenu(url) {
-  const quickMenu = document.getElementById("quick-menu");
+  const quickMenu = document.getElementById("quick-menu-div");
 
   await $.getJSON(url, function (talentos) {
     const talento = Object.values(talentos.feat);

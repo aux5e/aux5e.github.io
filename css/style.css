@@ -76,7 +76,7 @@ header {
 
 input,
 select {
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 select {
@@ -429,6 +429,11 @@ h4.subtitulo {
     /* padding: 2rem 1rem 1rem;
     border: 1px solid #ee8600;
     background: rgba(255,255,255,0.92); */
+}
+
+.list-hang-notitle {
+    list-style-type: none;
+    padding-left: 0rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -986,6 +991,11 @@ ul.main-list {
 }
 
 .quick-menu-item-link {
+    border-left: 3px solid #f7f7f7;
+    text-decoration: none;
+}
+
+#quick-menu-tier2 .quick-menu-item-link {
     border-left: 3px solid #fff;
     text-decoration: none;
 }
@@ -999,13 +1009,17 @@ ul.main-list {
     font-size: 15px;
     font-weight: 600;
     color: #000;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0.8rem 0.5rem;
 }
 
 .quick-menu-tier-1>.quick-menu-item {
     border-bottom: 1px solid #dadada;
     background-color: #f7f7f7 !important;
+}
+
+#quick-menu-tier2 .quick-menu-item:hover .quick-menu-item-link {
+    border-left: 3px solid #ee8600;
+    color:#ee8600;
 }
 
 .quick-menu-item-opened>.quick-menu {
@@ -1025,11 +1039,12 @@ ul.main-list {
 
 .quick-menu-tier-2 .quick-menu-item-link {
     padding-left: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 14px !important;
 }
 
 .quick-menu-item .quick-menu-item-link {
-    padding: 8px 8px 8px 12px;
+    padding: 0.5rem;
     color: #111;
     display: block;
     -webkit-flex-grow: 1;
@@ -1072,7 +1087,7 @@ ul.main-list {
 }
 
 .panel-collapse .quick-menu-item-link {
-    padding: 8px 8px 8px 25px !important;
+    padding: 0.5rem 0.5rem 0.5rem 1.2rem !important;
 }
 
 .panel-heading a:before {
