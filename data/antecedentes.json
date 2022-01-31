@@ -3441,6 +3441,8 @@
 		{
 			"name": "Variante de Nobre (Cavaleiro)",
             "id": "cavaleiro",
+            "isVariant": true,
+            "menuName": "Nobre (Cavaleiro)",
 			"source": "PHB",
 			"page": 139,
             "entries": [
