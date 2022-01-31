@@ -1706,6 +1706,8 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dt
     margin-left: 0.5rem;
     vertical-align: middle;
     background-color: #ee8600;
+    padding-top: 0.4rem;
+    padding-bottom: 0.3rem;
 }
 
 @media only screen and (max-width: 576px) {
