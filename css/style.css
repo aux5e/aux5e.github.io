@@ -1708,6 +1708,12 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dt
     background-color: #ee8600;
 }
 
+@media only screen and (max-width: 576px) {
+    .subClass__Btn .subClass__Title .badge {
+        display: table-cell;
+    }
+}
+
 /* .subClass__Btn .subClass__Title h3::after {
     content: "";
     width: 100%;
