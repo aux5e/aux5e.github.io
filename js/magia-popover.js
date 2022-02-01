@@ -17,30 +17,38 @@ function loadMPopIntoPage(data, id) {
     
     $.getJSON(data, function (magias) {
         // Achar os dados dentro do json e definir uma variavel para cada informação relevante
-        const magiasNomes = Object.values(magias);
-        const magiaName = magiasNomes[0][id].nome;
+        const DATA_MAGIAS = Object.values(magias);
+        const NOME_MAGIA = DATA_MAGIAS[0][id].nome;
+
         var magiaCirculo = "";
-        if (magiasNomes[0][id].circulo != 0) {
-        var magiaCirculo = magiasNomes[0][id].circulo + "º círculo";
+        if (DATA_MAGIAS[0][id].circulo != 0) {
+        var magiaCirculo = DATA_MAGIAS[0][id].circulo + "º círculo";
         } else {
         var magiaCirculo = "Truque";
         }
-        var magiaEscola = magiasNomes[0][id].escola;
-        if (magiasNomes[0][id].ritual == true) {
+
+        var magiaEscola = DATA_MAGIAS[0][id].escola;
+        if (DATA_MAGIAS[0][id].ritual == true) {
         magiaEscola += " (ritual)";
         }
-        const magiaConjuracao = magiasNomes[0][id].tempo_conjuracao;
-        const magiaAlcance = magiasNomes[0][id].alcance;
-        const magiaDuracao = magiasNomes[0][id].duracao;
-        var magiaComponentes = magiasNomes[0][id].componentes;
-        if (typeof magiasNomes[0][id].componentes_extra !== "undefined") {
+
+        var magiaConjuracao = DATA_MAGIAS[0][id].tempo_conjuracao;
+        
+        var magiaAlcance = DATA_MAGIAS[0][id].alcance;
+        
+        var magiaDuracao = DATA_MAGIAS[0][id].duracao;
+        
+        var magiaComponentes = DATA_MAGIAS[0][id].componentes;
+        if (typeof DATA_MAGIAS[0][id].componentes_extra !== "undefined") {
         magiaComponentes += " *";
         }
-        const magiaDescricao =
-        magiasNomes[0][id].descricao.substring(0, 1000) + "[...]";
+        
+        var magiaDescricao =
+        DATA_MAGIAS[0][id].descricao.substring(0, 1000) + "[...]";
+        
         var magiaComponentesExtra = "";
-        if (typeof magiasNomes[0][id].componentes_extra !== "undefined") {
-        magiaComponentesExtra = " " + magiasNomes[0][id].componentes_extra;
+        if (typeof DATA_MAGIAS[0][id].componentes_extra !== "undefined") {
+        magiaComponentesExtra = " " + DATA_MAGIAS[0][id].componentes_extra;
         }
 
         // Array para criação do tooltip com as infos do json
@@ -49,7 +57,7 @@ function loadMPopIntoPage(data, id) {
         r[1] = '<div class="tooltiptext">'
         r[2] = '<div id="popover_html" class="popover">';
         r[3] = '<div class="popover-header">';
-        r[4] = '<h4>' + magiaName + '</span></h4>';
+        r[4] = '<h4>' + NOME_MAGIA + '</span></h4>';
         r[5] = ' <h6 class="popover-subtitle">' + magiaCirculo + ', ' + magiaEscola + '</h6>';
         r[6] = '</div><div class="popover-body">';
         r[7] = '<div class="popover-infos popover-magias">';
