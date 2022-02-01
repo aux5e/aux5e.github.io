@@ -9,8 +9,6 @@ async function loadAntecedentesIntoPage(url) {
     await $.getJSON(url, function (bgDt) {
         const ANTECEDENTES = Object.values(bgDt.background);
         const ANTECEDENTES_LENGHT = ANTECEDENTES.length;
-        console.log(ANTECEDENTES);
-        console.log(ANTECEDENTES_LENGHT);
 
         // Limpa o corpo da pagina
         SECTION_BODY.innerHTML = "";
