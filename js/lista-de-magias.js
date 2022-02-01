@@ -1,51 +1,51 @@
 async function loadIntoTable(url, table) {
-  const tableBody = document.getElementById("tbody-lista-de-magias");
+  const TABLE_BODY = document.getElementById("tbody-lista-de-magias");
 
   await $.getJSON(url, function (magias) {
-    const magiasValues = Object.keys(magias.data);
-    const siteUrl = "https://aux5e.github.io";
-    const magiasArray = Object.values(magias.data);
-    const magiasLenght = Object.keys(magias.data).length;
+    const DATA_MAGIA = Object.keys(magias.data);
+    const SITE_URL = "https://aux5e.github.io";
+    const MAGIAS_ARRAY = Object.values(magias.data);
+    const MAGIAS_LENGHT = Object.keys(magias.data).length;
 
     // Limpa o corpo da tabela
-    tableBody.innerHTML = "";
+    TABLE_BODY.innerHTML = "";
 
     // Popular o corpo da tabela
     var r = [];
     var j = -1;
-    for (var row = 0; row < magiasLenght; row++) {
+    for (var row = 0; row < MAGIAS_LENGHT; row++) {
       r[++j] = '<tr onclick=';
-      r[++j] = 'window.location="' + siteUrl + "/magias.html?nome=" + magiasValues[row];
+      r[++j] = 'window.location="' + SITE_URL + "/magias.html?nome=" + DATA_MAGIA[row];
       r[++j] =
         '"><th scope="row" class="text-center align-middle magiaCirculoCol">';
-      if (magiasArray[row].circulo == 0) {
+      if (MAGIAS_ARRAY[row].circulo == 0) {
         r[++j] =
           '<span style="visibility:hidden;">0</span>Truque<span style="visibility:hidden;">0</span>';
       } else {
-        r[++j] = magiasArray[row].circulo;
+        r[++j] = MAGIAS_ARRAY[row].circulo;
         r[++j] = "º";
       }
       r[++j] = "</th>";
       r[++j] = '<td><div class="magiaNomeRow1">';
-      r[++j] = magiasArray[row].nome;
-      if (magiasArray[row].concentracao == true) {
+      r[++j] = MAGIAS_ARRAY[row].nome;
+      if (MAGIAS_ARRAY[row].concentracao == true) {
         r[++j] = '<span class="concentSpan"></span>';
       }
       r[++j] = '</div><div class="magiaNomeRow2">';
-      r[++j] = magiasArray[row].escola + " • " + magiasArray[row].componentes;
+      r[++j] = MAGIAS_ARRAY[row].escola + " • " + MAGIAS_ARRAY[row].componentes;
       r[++j] = "</div></td>";
       r[++j] = '<td class="align-middle magiaInglesCol">';
-      r[++j] = magiasArray[row].nome_ingles;
+      r[++j] = MAGIAS_ARRAY[row].nome_ingles;
       r[++j] = '</td><td class="align-middle magiaOutrasCol">';
-      r[++j] = magiasArray[row].duracao;
+      r[++j] = MAGIAS_ARRAY[row].duracao;
       r[++j] = '</td><td class="align-middle magiaOutrasCol">';
-      r[++j] = magiasArray[row].alcance;
+      r[++j] = MAGIAS_ARRAY[row].alcance;
       r[++j] = '</td><td class="text-center align-middle magiaOutrasCol">';
-      r[++j] = magiasArray[row].fonte;
+      r[++j] = MAGIAS_ARRAY[row].fonte;
       r[++j] = "</td></tr>";
     }
 
-    $(tableBody).html(r.join(""));
+    $(TABLE_BODY).html(r.join(""));
   });
 }
 
