@@ -61,7 +61,7 @@
 				{
 					"race": [
 						{
-							"name": "elf",
+							"name": "elfo",
 							"subrace": "drow"
 						}
 					]
@@ -179,10 +179,10 @@
 				{
 					"race": [
 						{
-							"name": "dwarf"
+							"name": "anão"
 						},
 						{
-							"name": "small race"
+							"name": "raças pequenas"
 						}
 					]
 				}
@@ -218,7 +218,7 @@
 				{
 					"race": [
 						{
-							"name": "tiefling"
+							"name": "tiferino"
 						}
 					]
 				}
@@ -312,7 +312,7 @@
 				{
 					"race": [
 						{
-							"name": "tiefling"
+							"name": "tiferino"
 						}
 					]
 				}
@@ -354,7 +354,7 @@
 				{
 					"race": [
 						{
-							"name": "gnome"
+							"name": "gnomo"
 						}
 					]
 				}
@@ -405,7 +405,7 @@
 				{
 					"race": [
 						{
-							"name": "dragonborn"
+							"name": "draconato"
 						}
 					]
 				}
@@ -591,7 +591,7 @@
 				{
 					"race": [
 						{
-							"name": "dwarf"
+							"name": "anão"
 						}
 					]
 				}
@@ -617,7 +617,7 @@
 				{
 					"race": [
 						{
-							"name": "half-orc"
+							"name": "meio-orc"
 						}
 					]
 				}
@@ -745,8 +745,8 @@
 				{
 					"race": [
 						{
-							"name": "elf",
-							"subrace": "wood"
+							"name": "elfo",
+							"subrace": "silvestre"
 						}
 					]
 				}
@@ -763,7 +763,7 @@
 				{
 					"race": [
 						{
-							"name": "dragonborn"
+							"name": "draconato"
 						}
 					]
 				}
@@ -954,10 +954,10 @@
 				{
 					"race": [
 						{
-							"name": "elf"
+							"name": "elfo"
 						},
 						{
-							"name": "half-elf"
+							"name": "meio-elfo"
 						}
 					]
 				}
@@ -993,13 +993,13 @@
 				{
 					"race": [
 						{
-							"name": "half-elf"
+							"name": "meio-elfo"
 						},
 						{
-							"name": "half-orc"
+							"name": "meio-orc"
 						},
 						{
-							"name": "human"
+							"name": "humano"
 						}
 					]
 				}
@@ -1070,7 +1070,7 @@
 				{
 					"race": [
 						{
-							"name": "halfling"
+							"name": "pequenino"
 						}
 					]
 				}
@@ -1146,7 +1146,7 @@
             {
               "race": [
                 {
-                  "name": "halfling"
+                  "name": "pequenino"
                 }
               ]
             }
@@ -1177,8 +1177,8 @@
 				{
 					"race": [
 						{
-							"name": "elf",
-							"subrace": "high"
+							"name": "elfo",
+							"subrace": "alto"
 						}
 					]
 				}
