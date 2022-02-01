@@ -545,867 +545,867 @@ function pointsReset() {
   getTotals();
 }
 
-function getRace(hsubrace, hattr1, hattr2) {
-  $("select#Race").change(function (e) {
-    e.preventDefault();
-  });
-  $.getJSON("json/races_20201118.json", function (data) {
-    var html = [];
-    var RaceChoice = $("select#Race").val();
-    var subraceLoad = "race" + RaceChoice;
+// function getRace(hsubrace, hattr1, hattr2) {
+//   $("select#Race").change(function (e) {
+//     e.preventDefault();
+//   });
+//   $.getJSON("json/races_20201118.json", function (data) {
+//     var html = [];
+//     var RaceChoice = $("select#Race").val();
+//     var subraceLoad = "race" + RaceChoice;
 
-    if (RaceChoice !== "CustomRace") {
-      $.each(data[RaceChoice].Subrace, function (key) {
-        var trimKey = key.replace(/-|'| /g, "").toLowerCase();
-        var apostKey = key.replace(/'/g, "'");
-        html.push(
-          '<option value="' +
-            apostKey +
-            '" data-srchoice="' +
-            trimKey +
-            '">' +
-            key +
-            "</option>"
-        );
-      });
+//     if (RaceChoice !== "CustomRace") {
+//       $.each(data[RaceChoice].Subrace, function (key) {
+//         var trimKey = key.replace(/-|'| /g, "").toLowerCase();
+//         var apostKey = key.replace(/'/g, "'");
+//         html.push(
+//           '<option value="' +
+//             apostKey +
+//             '" data-srchoice="' +
+//             trimKey +
+//             '">' +
+//             key +
+//             "</option>"
+//         );
+//       });
 
-      $("input#RacialStr").val("0");
-      $("input#RacialDex").val("0");
-      $("input#RacialCon").val("0");
-      $("input#RacialInt").val("0");
-      $("input#RacialWis").val("0");
-      $("input#RacialCha").val("0");
-    }
+//       $("input#RacialStr").val("0");
+//       $("input#RacialDex").val("0");
+//       $("input#RacialCon").val("0");
+//       $("input#RacialInt").val("0");
+//       $("input#RacialWis").val("0");
+//       $("input#RacialCha").val("0");
+//     }
 
-    var addSelect = html.join("");
-    var subraceSelect =
-      '<select id="subRace" onchange="race' +
-      RaceChoice +
-      '()" style="width: 90%;"><option value="selectSub" disabled selected>Select Subrace</option>' +
-      addSelect +
-      "</select>";
-    var subraceVariant =
-      '<select id="subRace" onchange="race' +
-      RaceChoice +
-      '()" style="width: 90%;"><option value="selectSub" selected data-srchoice="disabled">Disabled</option>' +
-      addSelect +
-      "</select>";
+//     var addSelect = html.join("");
+//     var subraceSelect =
+//       '<select id="subRace" onchange="race' +
+//       RaceChoice +
+//       '()" style="width: 90%;"><option value="selectSub" disabled selected>Select Subrace</option>' +
+//       addSelect +
+//       "</select>";
+//     var subraceVariant =
+//       '<select id="subRace" onchange="race' +
+//       RaceChoice +
+//       '()" style="width: 90%;"><option value="selectSub" selected data-srchoice="disabled">Disabled</option>' +
+//       addSelect +
+//       "</select>";
 
-    raceReset();
+//     raceReset();
 
-    if (RaceChoice === "Aarakocra") {
-      jsonRace();
-    } else if (RaceChoice === "Aasimar") {
-      $("td#SubraceOption").html("Aasimar Subrace:");
-      $("td#SelectSubrace").html(subraceSelect);
-    } else if (RaceChoice === "Bugbear") {
-      jsonRace();
-    } else if (RaceChoice === "Centaur") {
-      jsonRace();
-    } else if (RaceChoice === "Changeling") {
-      jsonRace();
-      $("select#ability1 option").eq(hattr1).prop("selected", true);
-      $("select#ability1")
-        .children("option[value=selected], option[value=RacialCha]")
-        .attr("disabled", true);
-      $("select#ability1").change();
-    } else if (RaceChoice === "Dragonborn") {
-      jsonRace();
-      $(document).ready(chooseType());
-    } else if (RaceChoice === "Dwarf") {
-      $("td#SubraceOption").html("Dwarf Subrace:");
-      $("td#SelectSubrace").html(subraceSelect);
-      jsonRace();
-    } else if (RaceChoice === "Elf") {
-      $("td#SubraceOption").html("Elf Subrace:");
-      $("td#SelectSubrace").html(subraceSelect);
-      jsonRace();
-    } else if (RaceChoice === "Firbolg") {
-      jsonRace();
-    } else if (RaceChoice === "Genasi") {
-      $("td#SubraceOption").html("Genasi Subrace:");
-      $("td#SelectSubrace").html(subraceSelect);
-      jsonRace();
-    } else if (RaceChoice === "Gith") {
-      $("td#SubraceOption").html("Gith Subrace:");
-      $("td#SelectSubrace").html(subraceSelect);
-      jsonRace();
-    } else if (RaceChoice === "Gnome") {
-      $("td#SubraceOption").html("Gnome Subrace:");
-      $("td#SelectSubrace").html(subraceSelect);
-    } else if (RaceChoice === "Goblin") {
-      jsonRace();
-    } else if (RaceChoice === "Goliath") {
-      jsonRace();
-    } else if (RaceChoice === "Grung") {
-      jsonRace();
-    } else if (RaceChoice === "HalfElf") {
-      $("td#SubraceOption").html("Variant Half-Elf:");
-      $("td#SelectSubrace").html(subraceVariant);
-      $("select#ability1 option").eq(hattr1).prop("selected", true);
-      $("select#ability2 option").eq(hattr2).prop("selected", true);
-    } else if (RaceChoice === "HalfOrc") {
-      $("td#SubraceOption").html("Half-Orc Subrace:");
-      $("td#SelectSubrace").html(subraceVariant);
-    } else if (RaceChoice === "Halfling") {
-      $("td#SubraceOption").html("Halfling Subrace:");
-      $("td#SelectSubrace").html(subraceSelect);
-      jsonRace();
-    } else if (RaceChoice === "Hobgoblin") {
-      jsonRace();
-    } else if (RaceChoice === "Human") {
-      $("td#SubraceOption").html("Variant Human:");
-      $("td#SelectSubrace").html(subraceVariant);
-      $("select#ability1 option").eq(hattr1).prop("selected", true);
-      $("select#ability2 option").eq(hattr2).prop("selected", true);
-    } else if (RaceChoice === "Kalashtar") {
-      jsonRace();
-    } else if (RaceChoice === "Kenku") {
-      jsonRace();
-    } else if (RaceChoice === "Kobold") {
-      jsonRace();
-    } else if (RaceChoice === "Leonin") {
-      jsonRace();
-    } else if (RaceChoice === "Lizardfolk") {
-      jsonRace();
-    } else if (RaceChoice === "Locathah") {
-      jsonRace();
-    } else if (RaceChoice === "Loxodon") {
-      jsonRace();
-    } else if (RaceChoice === "Minotaur") {
-      jsonRace();
-    } else if (RaceChoice === "Orc") {
-      $("td#SubraceOption").html("Variant Orc:");
-      $("td#SelectSubrace").html(subraceVariant);
-    } else if (RaceChoice === "Satyr") {
-      jsonRace();
-    } else if (RaceChoice === "Shifter") {
-      $("td#SubraceOption").html("Shifter Subrace:");
-      $("td#SelectSubrace").html(subraceSelect);
-      jsonRace();
-    } else if (RaceChoice === "SimicHybrid") {
-      jsonRace();
-      $("select#ability1")
-        .children("option[value=selected], option[value=RacialCon]")
-        .attr("disabled", true);
-      $("select#ability1 option").eq(hattr1).prop("selected", true);
-      $("select#ability1").change();
-    } else if (RaceChoice === "Tiefling") {
-      $("td#SubraceOption").html("Variant Tiefling");
-      $("td#SelectSubrace").html(
-        '<select id="subRace" onchange="raceTiefling()" style="width: 90%;"><option value="selectSub" selected data-srchoice="disabled">Disabled</option><option value="Devil\'s Tongue Tiefling" data-srchoice="devilstonguetielfling">Devil&#39;s Tongue Tiefling</option><option value="Feral Tiefling" data-srchoice="feraltiefling">Feral Tiefling</option><option value="Hellfire Tiefling" data-srchoice="hellfiretiefling">Hellfire Tiefling</option><option value="Winged Tiefling" data-srchoice="wingedtiefling">Winged Tiefling</option><option value="Descendant of Asmodeus" data-srchoice="asmodeus">Descendant of Asmodeus</option><option value="Descendant of Baalzebul" data-srchoice="baalzebul">Descendant of Baalzebul</option><option value="Descendant of Dispater" data-srchoice="dispater">Descendant of Dispater</option><option value="Descendant of Fierna" data-srchoice="fierna">Descendant of Fierna</option><option value="Descendant of Glasya" data-srchoice="glasya">Descendant of Glasya</option><option value="Descendant of Levistus" data-srchoice="levistus">Descendant of Levistus</option><option value="Descendant of Mammon" data-srchoice="mammon">Descendant of Mammon</option><option value="Descendant of Mephistopheles" data-srchoice="mephistopheles">Descendant of Mephistopheles</option><option value="Descendant of Zariel" data-srchoice="zariel">Descendant of Zariel</option></select>'
-      );
-    } else if (RaceChoice === "Tabaxi") {
-      jsonRace();
-    } else if (RaceChoice === "Tortle") {
-      jsonRace();
-    } else if (RaceChoice === "Triton") {
-      jsonRace();
-    } else if (RaceChoice === "Vedalken") {
-      jsonRace();
-    } else if (RaceChoice === "Warforged") {
-      jsonRace();
-      $("select#ability1 option").eq(hattr1).prop("selected", true);
-      $("select#ability1")
-        .children("option[value=selected], option[value=RacialCon]")
-        .attr("disabled", true);
-      $("select#ability1").change();
-    } else if (RaceChoice === "YuanTi") {
-      jsonRace();
-    } else if (RaceChoice === "CustomRace") {
-      raceCustomRace();
-    }
+//     if (RaceChoice === "Aarakocra") {
+//       jsonRace();
+//     } else if (RaceChoice === "Aasimar") {
+//       $("td#SubraceOption").html("Aasimar Subrace:");
+//       $("td#SelectSubrace").html(subraceSelect);
+//     } else if (RaceChoice === "Bugbear") {
+//       jsonRace();
+//     } else if (RaceChoice === "Centaur") {
+//       jsonRace();
+//     } else if (RaceChoice === "Changeling") {
+//       jsonRace();
+//       $("select#ability1 option").eq(hattr1).prop("selected", true);
+//       $("select#ability1")
+//         .children("option[value=selected], option[value=RacialCha]")
+//         .attr("disabled", true);
+//       $("select#ability1").change();
+//     } else if (RaceChoice === "Dragonborn") {
+//       jsonRace();
+//       $(document).ready(chooseType());
+//     } else if (RaceChoice === "Dwarf") {
+//       $("td#SubraceOption").html("Dwarf Subrace:");
+//       $("td#SelectSubrace").html(subraceSelect);
+//       jsonRace();
+//     } else if (RaceChoice === "Elf") {
+//       $("td#SubraceOption").html("Elf Subrace:");
+//       $("td#SelectSubrace").html(subraceSelect);
+//       jsonRace();
+//     } else if (RaceChoice === "Firbolg") {
+//       jsonRace();
+//     } else if (RaceChoice === "Genasi") {
+//       $("td#SubraceOption").html("Genasi Subrace:");
+//       $("td#SelectSubrace").html(subraceSelect);
+//       jsonRace();
+//     } else if (RaceChoice === "Gith") {
+//       $("td#SubraceOption").html("Gith Subrace:");
+//       $("td#SelectSubrace").html(subraceSelect);
+//       jsonRace();
+//     } else if (RaceChoice === "Gnome") {
+//       $("td#SubraceOption").html("Gnome Subrace:");
+//       $("td#SelectSubrace").html(subraceSelect);
+//     } else if (RaceChoice === "Goblin") {
+//       jsonRace();
+//     } else if (RaceChoice === "Goliath") {
+//       jsonRace();
+//     } else if (RaceChoice === "Grung") {
+//       jsonRace();
+//     } else if (RaceChoice === "HalfElf") {
+//       $("td#SubraceOption").html("Variant Half-Elf:");
+//       $("td#SelectSubrace").html(subraceVariant);
+//       $("select#ability1 option").eq(hattr1).prop("selected", true);
+//       $("select#ability2 option").eq(hattr2).prop("selected", true);
+//     } else if (RaceChoice === "HalfOrc") {
+//       $("td#SubraceOption").html("Half-Orc Subrace:");
+//       $("td#SelectSubrace").html(subraceVariant);
+//     } else if (RaceChoice === "Halfling") {
+//       $("td#SubraceOption").html("Halfling Subrace:");
+//       $("td#SelectSubrace").html(subraceSelect);
+//       jsonRace();
+//     } else if (RaceChoice === "Hobgoblin") {
+//       jsonRace();
+//     } else if (RaceChoice === "Human") {
+//       $("td#SubraceOption").html("Variant Human:");
+//       $("td#SelectSubrace").html(subraceVariant);
+//       $("select#ability1 option").eq(hattr1).prop("selected", true);
+//       $("select#ability2 option").eq(hattr2).prop("selected", true);
+//     } else if (RaceChoice === "Kalashtar") {
+//       jsonRace();
+//     } else if (RaceChoice === "Kenku") {
+//       jsonRace();
+//     } else if (RaceChoice === "Kobold") {
+//       jsonRace();
+//     } else if (RaceChoice === "Leonin") {
+//       jsonRace();
+//     } else if (RaceChoice === "Lizardfolk") {
+//       jsonRace();
+//     } else if (RaceChoice === "Locathah") {
+//       jsonRace();
+//     } else if (RaceChoice === "Loxodon") {
+//       jsonRace();
+//     } else if (RaceChoice === "Minotaur") {
+//       jsonRace();
+//     } else if (RaceChoice === "Orc") {
+//       $("td#SubraceOption").html("Variant Orc:");
+//       $("td#SelectSubrace").html(subraceVariant);
+//     } else if (RaceChoice === "Satyr") {
+//       jsonRace();
+//     } else if (RaceChoice === "Shifter") {
+//       $("td#SubraceOption").html("Shifter Subrace:");
+//       $("td#SelectSubrace").html(subraceSelect);
+//       jsonRace();
+//     } else if (RaceChoice === "SimicHybrid") {
+//       jsonRace();
+//       $("select#ability1")
+//         .children("option[value=selected], option[value=RacialCon]")
+//         .attr("disabled", true);
+//       $("select#ability1 option").eq(hattr1).prop("selected", true);
+//       $("select#ability1").change();
+//     } else if (RaceChoice === "Tiefling") {
+//       $("td#SubraceOption").html("Variant Tiefling");
+//       $("td#SelectSubrace").html(
+//         '<select id="subRace" onchange="raceTiefling()" style="width: 90%;"><option value="selectSub" selected data-srchoice="disabled">Disabled</option><option value="Devil\'s Tongue Tiefling" data-srchoice="devilstonguetielfling">Devil&#39;s Tongue Tiefling</option><option value="Feral Tiefling" data-srchoice="feraltiefling">Feral Tiefling</option><option value="Hellfire Tiefling" data-srchoice="hellfiretiefling">Hellfire Tiefling</option><option value="Winged Tiefling" data-srchoice="wingedtiefling">Winged Tiefling</option><option value="Descendant of Asmodeus" data-srchoice="asmodeus">Descendant of Asmodeus</option><option value="Descendant of Baalzebul" data-srchoice="baalzebul">Descendant of Baalzebul</option><option value="Descendant of Dispater" data-srchoice="dispater">Descendant of Dispater</option><option value="Descendant of Fierna" data-srchoice="fierna">Descendant of Fierna</option><option value="Descendant of Glasya" data-srchoice="glasya">Descendant of Glasya</option><option value="Descendant of Levistus" data-srchoice="levistus">Descendant of Levistus</option><option value="Descendant of Mammon" data-srchoice="mammon">Descendant of Mammon</option><option value="Descendant of Mephistopheles" data-srchoice="mephistopheles">Descendant of Mephistopheles</option><option value="Descendant of Zariel" data-srchoice="zariel">Descendant of Zariel</option></select>'
+//       );
+//     } else if (RaceChoice === "Tabaxi") {
+//       jsonRace();
+//     } else if (RaceChoice === "Tortle") {
+//       jsonRace();
+//     } else if (RaceChoice === "Triton") {
+//       jsonRace();
+//     } else if (RaceChoice === "Vedalken") {
+//       jsonRace();
+//     } else if (RaceChoice === "Warforged") {
+//       jsonRace();
+//       $("select#ability1 option").eq(hattr1).prop("selected", true);
+//       $("select#ability1")
+//         .children("option[value=selected], option[value=RacialCon]")
+//         .attr("disabled", true);
+//       $("select#ability1").change();
+//     } else if (RaceChoice === "YuanTi") {
+//       jsonRace();
+//     } else if (RaceChoice === "CustomRace") {
+//       raceCustomRace();
+//     }
 
-    $("select#subRace").val("selectSub");
-    if (hsubrace !== "None" || null || undefined || "NA") {
-      $('select#subRace option[data-srchoice="' + hsubrace + '"]').prop(
-        "selected",
-        true
-      );
-      window[subraceLoad]();
-    } else if (hsubrace == "None") {
-      $("td#SelectSubrace").html(subraceSelect);
-    }
-  });
-}
+//     $("select#subRace").val("selectSub");
+//     if (hsubrace !== "None" || null || undefined || "NA") {
+//       $('select#subRace option[data-srchoice="' + hsubrace + '"]').prop(
+//         "selected",
+//         true
+//       );
+//       window[subraceLoad]();
+//     } else if (hsubrace == "None") {
+//       $("td#SelectSubrace").html(subraceSelect);
+//     }
+//   });
+// }
 
-function jsonRace() {
-  initialLoad = false;
-  $("div#RacialTraits").html(
-    '<dl id="RacialTraits"><h3>Racial Traits</h3></dl>'
-  );
-  $.getJSON("json/races_20201118.json", function (data) {
-    var race = $("select#Race").val();
-    var subrace = $("select#subRace").val();
-    var html = [];
-    $.each(data[race].Traits, function (key, val) {
-      if (key == "Types") return undefined;
-      else if (key == "Constructs") return undefined;
-      else
-        html.push(
-          "<dt><b>" + key + "</b></dt><dd><span>" + val + "</span></dd>"
-        );
-    });
-    $("<dl/>", {
-      class: "RacialTraits",
-      html: html.join(""),
-    }).appendTo("div#RacialTraits");
+// function jsonRace() {
+//   initialLoad = false;
+//   $("div#RacialTraits").html(
+//     '<dl id="RacialTraits"><h3>Racial Traits</h3></dl>'
+//   );
+//   $.getJSON("json/races_20201118.json", function (data) {
+//     var race = $("select#Race").val();
+//     var subrace = $("select#subRace").val();
+//     var html = [];
+//     $.each(data[race].Traits, function (key, val) {
+//       if (key == "Types") return undefined;
+//       else if (key == "Constructs") return undefined;
+//       else
+//         html.push(
+//           "<dt><b>" + key + "</b></dt><dd><span>" + val + "</span></dd>"
+//         );
+//     });
+//     $("<dl/>", {
+//       class: "RacialTraits",
+//       html: html.join(""),
+//     }).appendTo("div#RacialTraits");
 
-    if (
-      race === "Changeling" ||
-      race === "SimicHybrid" ||
-      race === "Warforged" ||
-      subrace === "Dragonmark of Detection" ||
-      subrace === "Dragonmark of Handling" ||
-      subrace === "Dragonmark of Making" ||
-      subrace === "Dragonmark of Passage"
-    ) {
-      $("td#AbilityOption1, td#AbilityMod1").css("display", "table-cell");
-      $("td#AbilityOption2, td#AbilityMod2").css("display", "none");
-    } else if (
-      (race === "HalfElf" && subrace === "selectSub") ||
-      (race === "HalfElf" && subrace === "Half-Elf Variant") ||
-      (race === "Human" && subrace === "Human Variant")
-    ) {
-      $(
-        "td#AbilityOption1, td#AbilityMod1, td#AbilityOption2, td#AbilityMod2"
-      ).css("display", "table-cell");
-    } else {
-      $(
-        "td#AbilityOption1, td#AbilityMod1, td#AbilityOption2, td#AbilityMod2"
-      ).css("display", "none");
-    }
+//     if (
+//       race === "Changeling" ||
+//       race === "SimicHybrid" ||
+//       race === "Warforged" ||
+//       subrace === "Dragonmark of Detection" ||
+//       subrace === "Dragonmark of Handling" ||
+//       subrace === "Dragonmark of Making" ||
+//       subrace === "Dragonmark of Passage"
+//     ) {
+//       $("td#AbilityOption1, td#AbilityMod1").css("display", "table-cell");
+//       $("td#AbilityOption2, td#AbilityMod2").css("display", "none");
+//     } else if (
+//       (race === "HalfElf" && subrace === "selectSub") ||
+//       (race === "HalfElf" && subrace === "Half-Elf Variant") ||
+//       (race === "Human" && subrace === "Human Variant")
+//     ) {
+//       $(
+//         "td#AbilityOption1, td#AbilityMod1, td#AbilityOption2, td#AbilityMod2"
+//       ).css("display", "table-cell");
+//     } else {
+//       $(
+//         "td#AbilityOption1, td#AbilityMod1, td#AbilityOption2, td#AbilityMod2"
+//       ).css("display", "none");
+//     }
 
-    if (subrace == "Dragonmark of Passage") {
-      $("span#RacialDex").html(data[race].AbilityScores.Dexterity);
-    } else if (race == "SimicHybrid" || race == "Warforged") {
-      $("span#RacialCon").html(data[race].AbilityScores.Constitution);
-    } else if (subrace == "Dragonmark of Making") {
-      $("span#RacialInt").html(data[race].AbilityScores.Intelligence);
-    } else if (
-      subrace == "Dragonmark of Detection" ||
-      subrace == "Dragonmark of Handling"
-    ) {
-      $("span#RacialWis").html(data[race].AbilityScores.Wisdom);
-    } else if (
-      race == "Changeling" ||
-      (race == "HalfElf" && subrace !== "Dragonmark of Detection")
-    ) {
-      $("span#RacialCha").html(data[race].AbilityScores.Charisma);
-    } else {
-      $("span#RacialStr").html(data[race].AbilityScores.Strength);
-      $("span#RacialDex").html(data[race].AbilityScores.Dexterity);
-      $("span#RacialCon").html(data[race].AbilityScores.Constitution);
-      $("span#RacialInt").html(data[race].AbilityScores.Intelligence);
-      $("span#RacialWis").html(data[race].AbilityScores.Wisdom);
-      $("span#RacialCha").html(data[race].AbilityScores.Charisma);
-    }
-    if (race === "HalfElf" && subrace === "selectSub") {
-      $("select#ability1").change();
-      $("select#ability2").change();
-    }
-    getTotals();
-  });
-}
+//     if (subrace == "Dragonmark of Passage") {
+//       $("span#RacialDex").html(data[race].AbilityScores.Dexterity);
+//     } else if (race == "SimicHybrid" || race == "Warforged") {
+//       $("span#RacialCon").html(data[race].AbilityScores.Constitution);
+//     } else if (subrace == "Dragonmark of Making") {
+//       $("span#RacialInt").html(data[race].AbilityScores.Intelligence);
+//     } else if (
+//       subrace == "Dragonmark of Detection" ||
+//       subrace == "Dragonmark of Handling"
+//     ) {
+//       $("span#RacialWis").html(data[race].AbilityScores.Wisdom);
+//     } else if (
+//       race == "Changeling" ||
+//       (race == "HalfElf" && subrace !== "Dragonmark of Detection")
+//     ) {
+//       $("span#RacialCha").html(data[race].AbilityScores.Charisma);
+//     } else {
+//       $("span#RacialStr").html(data[race].AbilityScores.Strength);
+//       $("span#RacialDex").html(data[race].AbilityScores.Dexterity);
+//       $("span#RacialCon").html(data[race].AbilityScores.Constitution);
+//       $("span#RacialInt").html(data[race].AbilityScores.Intelligence);
+//       $("span#RacialWis").html(data[race].AbilityScores.Wisdom);
+//       $("span#RacialCha").html(data[race].AbilityScores.Charisma);
+//     }
+//     if (race === "HalfElf" && subrace === "selectSub") {
+//       $("select#ability1").change();
+//       $("select#ability2").change();
+//     }
+//     getTotals();
+//   });
+// }
 
-function jsonSubrace() {
-  $.getJSON("json/races_20201118.json", function (data) {
-    var race = $("select#Race").val();
-    var subrace = $("select#subRace").val();
-    var html = [];
-    $.each(data[race].Subrace[subrace].Changes, function (key, val) {
-      var raceChanges = $("div#RacialTraits")
-        .html()
-        .replace(
-          "<dt><b>" + key + "</b></dt><dd><span>" + val + "</span></dd>",
-          "<dt><s>" + key + "</s></dt><dd><span><s>" + val + "</s></span></dd>"
-        );
-      $("div#RacialTraits").html(raceChanges);
-    });
-    $.each(data[race].Subrace[subrace].Traits, function (key, val) {
-      if (key == "Types") return undefined;
-      else
-        html.push(
-          "<dt><b>" + key + "</b></dt><dd><span>" + val + "</span></dd>"
-        );
-    });
-    $("div#SubraceTraits").html(
-      '<dl id="SubraceTraits"><h4>' + subrace + " Traits</h4></dl>"
-    );
-    $("<dl/>", {
-      class: "SubraceTraits",
-      html: html.join(""),
-    }).appendTo("div#SubraceTraits");
-    $("span#RacialStr").html(
-      data[race].Subrace[subrace].AbilityScores.Strength
-    );
-    $("span#RacialDex").html(
-      data[race].Subrace[subrace].AbilityScores.Dexterity
-    );
-    $("span#RacialCon").html(
-      data[race].Subrace[subrace].AbilityScores.Constitution
-    );
-    $("span#RacialInt").html(
-      data[race].Subrace[subrace].AbilityScores.Intelligence
-    );
-    $("span#RacialWis").html(data[race].Subrace[subrace].AbilityScores.Wisdom);
-    $("span#RacialCha").html(
-      data[race].Subrace[subrace].AbilityScores.Charisma
-    );
-    if (
-      subrace === "Human Variant" ||
-      subrace === "Half-Elf Variant" ||
-      subrace === "Dragonmark of Detection" ||
-      subrace === "Dragonmark of Handling" ||
-      subrace === "Dragonmark of Making" ||
-      subrace === "Dragonmark of Passage"
-    ) {
-      $("select#ability1").change();
-      $("select#ability2").change();
-    }
-    getTotals();
-  });
-}
+// function jsonSubrace() {
+//   $.getJSON("json/races_20201118.json", function (data) {
+//     var race = $("select#Race").val();
+//     var subrace = $("select#subRace").val();
+//     var html = [];
+//     $.each(data[race].Subrace[subrace].Changes, function (key, val) {
+//       var raceChanges = $("div#RacialTraits")
+//         .html()
+//         .replace(
+//           "<dt><b>" + key + "</b></dt><dd><span>" + val + "</span></dd>",
+//           "<dt><s>" + key + "</s></dt><dd><span><s>" + val + "</s></span></dd>"
+//         );
+//       $("div#RacialTraits").html(raceChanges);
+//     });
+//     $.each(data[race].Subrace[subrace].Traits, function (key, val) {
+//       if (key == "Types") return undefined;
+//       else
+//         html.push(
+//           "<dt><b>" + key + "</b></dt><dd><span>" + val + "</span></dd>"
+//         );
+//     });
+//     $("div#SubraceTraits").html(
+//       '<dl id="SubraceTraits"><h4>' + subrace + " Traits</h4></dl>"
+//     );
+//     $("<dl/>", {
+//       class: "SubraceTraits",
+//       html: html.join(""),
+//     }).appendTo("div#SubraceTraits");
+//     $("span#RacialStr").html(
+//       data[race].Subrace[subrace].AbilityScores.Strength
+//     );
+//     $("span#RacialDex").html(
+//       data[race].Subrace[subrace].AbilityScores.Dexterity
+//     );
+//     $("span#RacialCon").html(
+//       data[race].Subrace[subrace].AbilityScores.Constitution
+//     );
+//     $("span#RacialInt").html(
+//       data[race].Subrace[subrace].AbilityScores.Intelligence
+//     );
+//     $("span#RacialWis").html(data[race].Subrace[subrace].AbilityScores.Wisdom);
+//     $("span#RacialCha").html(
+//       data[race].Subrace[subrace].AbilityScores.Charisma
+//     );
+//     if (
+//       subrace === "Human Variant" ||
+//       subrace === "Half-Elf Variant" ||
+//       subrace === "Dragonmark of Detection" ||
+//       subrace === "Dragonmark of Handling" ||
+//       subrace === "Dragonmark of Making" ||
+//       subrace === "Dragonmark of Passage"
+//     ) {
+//       $("select#ability1").change();
+//       $("select#ability2").change();
+//     }
+//     getTotals();
+//   });
+// }
 
-function raceReset() {
-  var race = $("select#Race").val();
-  $("span#RacialStr").html("0");
-  $("span#RacialDex").html("0");
-  $("span#RacialCon").html("0");
-  $("span#RacialInt").html("0");
-  $("span#RacialWis").html("0");
-  $("span#RacialCha").html("0");
-  $("div#RacialTraits").html(
-    '<dl id="RacialTraits"><h3>Racial Traits</h3></dl>'
-  );
-  $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
-  $("td#SubraceOption").html("");
-  $("td#SelectSubrace").html("");
+// function raceReset() {
+//   var race = $("select#Race").val();
+//   $("span#RacialStr").html("0");
+//   $("span#RacialDex").html("0");
+//   $("span#RacialCon").html("0");
+//   $("span#RacialInt").html("0");
+//   $("span#RacialWis").html("0");
+//   $("span#RacialCha").html("0");
+//   $("div#RacialTraits").html(
+//     '<dl id="RacialTraits"><h3>Racial Traits</h3></dl>'
+//   );
+//   $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
+//   $("td#SubraceOption").html("");
+//   $("td#SelectSubrace").html("");
 
-  $("div#customStr").css("display", "none");
-  $("span#RacialStr").css("display", "block");
+//   $("div#customStr").css("display", "none");
+//   $("span#RacialStr").css("display", "block");
 
-  $("div#customDex").css("display", "none");
-  $("span#RacialDex").css("display", "block");
+//   $("div#customDex").css("display", "none");
+//   $("span#RacialDex").css("display", "block");
 
-  $("div#customCon").css("display", "none");
-  $("span#RacialCon").css("display", "block");
+//   $("div#customCon").css("display", "none");
+//   $("span#RacialCon").css("display", "block");
 
-  $("div#customInt").css("display", "none");
-  $("span#RacialInt").css("display", "block");
+//   $("div#customInt").css("display", "none");
+//   $("span#RacialInt").css("display", "block");
 
-  $("div#customWis").css("display", "none");
-  $("span#RacialWis").css("display", "block");
+//   $("div#customWis").css("display", "none");
+//   $("span#RacialWis").css("display", "block");
 
-  $("div#customCha").css("display", "none");
-  $("span#RacialCha").css("display", "block");
+//   $("div#customCha").css("display", "none");
+//   $("span#RacialCha").css("display", "block");
 
-  $("select#ability1 option").eq(0).prop("selected", true);
-  $("select#ability2 option").eq(0).prop("selected", true);
+//   $("select#ability1 option").eq(0).prop("selected", true);
+//   $("select#ability2 option").eq(0).prop("selected", true);
 
-  if (race !== "HalfElf" || race !== "Human") {
-    $("select#ability1, select#ability2")
-      .children()
-      .attr("disabled", true)
-      .siblings()
-      .removeAttr("disabled");
-    $("select#ability1, select#ability2")
-      .children("option[value=selected]")
-      .attr("disabled", true);
-  }
-  //  if ( race == 'Changeling' ) {
-  //    $('select').change(function() {
-  //      $('select#ability1').children('option[value=selected]').attr('disabled', true).siblings().removeAttr('disabled');
-  //    });
-  //  }
-  //  initialLoad = true;
-  getTotals();
-}
+//   if (race !== "HalfElf" || race !== "Human") {
+//     $("select#ability1, select#ability2")
+//       .children()
+//       .attr("disabled", true)
+//       .siblings()
+//       .removeAttr("disabled");
+//     $("select#ability1, select#ability2")
+//       .children("option[value=selected]")
+//       .attr("disabled", true);
+//   }
+//   //  if ( race == 'Changeling' ) {
+//   //    $('select').change(function() {
+//   //      $('select#ability1').children('option[value=selected]').attr('disabled', true).siblings().removeAttr('disabled');
+//   //    });
+//   //  }
+//   //  initialLoad = true;
+//   getTotals();
+// }
 
-function raceCustomRace(hrstr, hrdex, hrcon, hrint, hrwis, hrcha) {
-  $("div#customStr").css("display", "block");
-  $("input#RacialStr").val("0");
-  $("span#RacialStr").css("display", "none");
+// function raceCustomRace(hrstr, hrdex, hrcon, hrint, hrwis, hrcha) {
+//   $("div#customStr").css("display", "block");
+//   $("input#RacialStr").val("0");
+//   $("span#RacialStr").css("display", "none");
 
-  $("div#customDex").css("display", "block");
-  $("input#RacialDex").val("0");
-  $("span#RacialDex").css("display", "none");
+//   $("div#customDex").css("display", "block");
+//   $("input#RacialDex").val("0");
+//   $("span#RacialDex").css("display", "none");
 
-  $("div#customCon").css("display", "block");
-  $("input#RacialCon").val("0");
-  $("span#RacialCon").css("display", "none");
+//   $("div#customCon").css("display", "block");
+//   $("input#RacialCon").val("0");
+//   $("span#RacialCon").css("display", "none");
 
-  $("div#customInt").css("display", "block");
-  $("input#RacialInt").val("0");
-  $("span#RacialInt").css("display", "none");
+//   $("div#customInt").css("display", "block");
+//   $("input#RacialInt").val("0");
+//   $("span#RacialInt").css("display", "none");
 
-  $("div#customWis").css("display", "block");
-  $("input#RacialWis").val("0");
-  $("span#RacialWis").css("display", "none");
+//   $("div#customWis").css("display", "block");
+//   $("input#RacialWis").val("0");
+//   $("span#RacialWis").css("display", "none");
 
-  $("div#customCha").css("display", "block");
-  $("input#RacialCha").val("0");
-  $("span#RacialCha").css("display", "none");
+//   $("div#customCha").css("display", "block");
+//   $("input#RacialCha").val("0");
+//   $("span#RacialCha").css("display", "none");
 
-  if (isNaN(hrstr, hrdex, hrcon, hrint, hrwis, hrcha)) {
-  } else {
-    $("input#RacialStr").val(hrstr);
-    $("input#RacialDex").val(hrdex);
-    $("input#RacialCon").val(hrcon);
-    $("input#RacialInt").val(hrint);
-    $("input#RacialWis").val(hrwis);
-    $("input#RacialCha").val(hrcha);
-  }
+//   if (isNaN(hrstr, hrdex, hrcon, hrint, hrwis, hrcha)) {
+//   } else {
+//     $("input#RacialStr").val(hrstr);
+//     $("input#RacialDex").val(hrdex);
+//     $("input#RacialCon").val(hrcon);
+//     $("input#RacialInt").val(hrint);
+//     $("input#RacialWis").val(hrwis);
+//     $("input#RacialCha").val(hrcha);
+//   }
 
-  //  initialLoad = false;
-  getTotals();
-}
+//   //  initialLoad = false;
+//   getTotals();
+// }
 
-function raceAasimar() {
-  var aasimarRacial = $("select#subRace").val();
-  if (aasimarRacial === "Protector Aasimar") {
-    jsonRace();
-    jsonSubrace();
-  } else if (aasimarRacial === "Scourge Aasimar") {
-    jsonRace();
-    jsonSubrace();
-  } else if (aasimarRacial === "Fallen Aasimar") {
-    jsonRace();
-    jsonSubrace();
-  } else if (aasimarRacial === "Aasimar DMG") {
-    jsonRace();
-    jsonSubrace();
-  } else {
-    jsonRace();
-    $("div#SubraceTraits").html("");
-  }
-}
+// function raceAasimar() {
+//   var aasimarRacial = $("select#subRace").val();
+//   if (aasimarRacial === "Protector Aasimar") {
+//     jsonRace();
+//     jsonSubrace();
+//   } else if (aasimarRacial === "Scourge Aasimar") {
+//     jsonRace();
+//     jsonSubrace();
+//   } else if (aasimarRacial === "Fallen Aasimar") {
+//     jsonRace();
+//     jsonSubrace();
+//   } else if (aasimarRacial === "Aasimar DMG") {
+//     jsonRace();
+//     jsonSubrace();
+//   } else {
+//     jsonRace();
+//     $("div#SubraceTraits").html("");
+//   }
+// }
 
-function raceDwarf() {
-  var dwarfRacial = $("select#subRace").val();
-  if (dwarfRacial === "Hill Dwarf") {
-    jsonSubrace();
-  } else if (dwarfRacial === "Mountain Dwarf") {
-    jsonSubrace();
-  } else if (dwarfRacial === "Duergar") {
-    jsonSubrace();
-  } else if (dwarfRacial === "Dragonmark of Warding") {
-    jsonSubrace();
-    $(document).ready(chooseType());
-  } else {
-    $("div#SubraceTraits").html("");
-  }
-}
+// function raceDwarf() {
+//   var dwarfRacial = $("select#subRace").val();
+//   if (dwarfRacial === "Hill Dwarf") {
+//     jsonSubrace();
+//   } else if (dwarfRacial === "Mountain Dwarf") {
+//     jsonSubrace();
+//   } else if (dwarfRacial === "Duergar") {
+//     jsonSubrace();
+//   } else if (dwarfRacial === "Dragonmark of Warding") {
+//     jsonSubrace();
+//     $(document).ready(chooseType());
+//   } else {
+//     $("div#SubraceTraits").html("");
+//   }
+// }
 
-function raceElf() {
-  var elfRacial = $("select#subRace").val();
-  if (elfRacial === "Drow") {
-    jsonSubrace();
-  } else if (elfRacial === "Eladrin") {
-    jsonSubrace();
-  } else if (elfRacial === "Eladrin MToF") {
-    jsonSubrace();
-  } else if (elfRacial === "High Elf") {
-    jsonSubrace();
-  } else if (elfRacial === "Wood Elf") {
-    jsonSubrace();
-  } else if (elfRacial === "Sea Elf") {
-    jsonSubrace();
-  } else if (elfRacial === "Shadar-Kai") {
-    jsonSubrace();
-  } else if (elfRacial === "Dragonmark of Shadow") {
-    jsonSubrace();
-    $(document).ready(chooseType());
-  } else {
-    $("div#SubraceTraits").html("");
-  }
-}
+// function raceElf() {
+//   var elfRacial = $("select#subRace").val();
+//   if (elfRacial === "Drow") {
+//     jsonSubrace();
+//   } else if (elfRacial === "Eladrin") {
+//     jsonSubrace();
+//   } else if (elfRacial === "Eladrin MToF") {
+//     jsonSubrace();
+//   } else if (elfRacial === "High Elf") {
+//     jsonSubrace();
+//   } else if (elfRacial === "Wood Elf") {
+//     jsonSubrace();
+//   } else if (elfRacial === "Sea Elf") {
+//     jsonSubrace();
+//   } else if (elfRacial === "Shadar-Kai") {
+//     jsonSubrace();
+//   } else if (elfRacial === "Dragonmark of Shadow") {
+//     jsonSubrace();
+//     $(document).ready(chooseType());
+//   } else {
+//     $("div#SubraceTraits").html("");
+//   }
+// }
 
-function raceGenasi() {
-  var genasiRacial = $("select#subRace").val();
-  if (genasiRacial === "Air Genasi") {
-    jsonSubrace();
-  } else if (genasiRacial === "Earth Genasi") {
-    jsonSubrace();
-  } else if (genasiRacial === "Fire Genasi") {
-    jsonSubrace();
-  } else if (genasiRacial === "Water Genasi") {
-    jsonSubrace();
-  } else {
-    $("div#SubraceTraits").html("");
-  }
-}
+// function raceGenasi() {
+//   var genasiRacial = $("select#subRace").val();
+//   if (genasiRacial === "Air Genasi") {
+//     jsonSubrace();
+//   } else if (genasiRacial === "Earth Genasi") {
+//     jsonSubrace();
+//   } else if (genasiRacial === "Fire Genasi") {
+//     jsonSubrace();
+//   } else if (genasiRacial === "Water Genasi") {
+//     jsonSubrace();
+//   } else {
+//     $("div#SubraceTraits").html("");
+//   }
+// }
 
-function raceGith() {
-  var githRacial = $("select#subRace").val();
-  if (githRacial === "Githyanki") {
-    jsonSubrace();
-  } else if (githRacial === "Githzerai") {
-    jsonSubrace();
-  } else {
-    $("div#SubraceTraits").html("");
-  }
-}
+// function raceGith() {
+//   var githRacial = $("select#subRace").val();
+//   if (githRacial === "Githyanki") {
+//     jsonSubrace();
+//   } else if (githRacial === "Githzerai") {
+//     jsonSubrace();
+//   } else {
+//     $("div#SubraceTraits").html("");
+//   }
+// }
 
-function raceGnome() {
-  jsonRace();
-  var gnomeRacial = $("select#subRace").val();
-  if (gnomeRacial === "Forest Gnome") {
-    jsonSubrace();
-  } else if (gnomeRacial === "Rock Gnome") {
-    jsonSubrace();
-    $(document).ready(chooseType());
-  } else if (gnomeRacial === "Deep Gnome") {
-    jsonSubrace();
-  } else if (gnomeRacial === "Dragonmark of Scribing") {
-    jsonSubrace();
-    $(document).ready(chooseType());
-  } else {
-    $("div#SubraceTraits").html("");
-  }
-}
+// function raceGnome() {
+//   jsonRace();
+//   var gnomeRacial = $("select#subRace").val();
+//   if (gnomeRacial === "Forest Gnome") {
+//     jsonSubrace();
+//   } else if (gnomeRacial === "Rock Gnome") {
+//     jsonSubrace();
+//     $(document).ready(chooseType());
+//   } else if (gnomeRacial === "Deep Gnome") {
+//     jsonSubrace();
+//   } else if (gnomeRacial === "Dragonmark of Scribing") {
+//     jsonSubrace();
+//     $(document).ready(chooseType());
+//   } else {
+//     $("div#SubraceTraits").html("");
+//   }
+// }
 
-function raceHalfElf() {
-  jsonRace();
-  var halfelfRacial = $("select#subRace").val();
+// function raceHalfElf() {
+//   jsonRace();
+//   var halfelfRacial = $("select#subRace").val();
 
-  $("select#subRace").change(function () {
-    $("select#ability1, select#ability2").prop("disabled", false);
-    $("select#ability1").val("selected");
-    $("select#ability2").val("selected");
-    $("select#ability1").change();
-    $("select#ability2").change();
-  });
+//   $("select#subRace").change(function () {
+//     $("select#ability1, select#ability2").prop("disabled", false);
+//     $("select#ability1").val("selected");
+//     $("select#ability2").val("selected");
+//     $("select#ability1").change();
+//     $("select#ability2").change();
+//   });
 
-  if (halfelfRacial === "Half-Elf Variant") {
-    $("select").change(function () {
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=" + this.value + "]")
-        .prop("disabled", true)
-        .siblings()
-        .prop("disabled", false);
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=selected], option[value=RacialCha]")
-        .prop("disabled", true);
-    });
-    $("select#ability1, select#ability2")
-      .children("option[value=selected], option[value=RacialCha]")
-      .prop("disabled", true);
-  } else if (halfelfRacial === "Dragonmark of Detection") {
-    $("select#ability1, select#ability2").prop("disabled", false);
-    $("select").change(function () {
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=" + this.value + "]")
-        .prop("disabled", true)
-        .siblings()
-        .prop("disabled", false);
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=selected], option[value=RacialWis]")
-        .prop("disabled", true);
-    });
-    $("select#ability1 option[value=RacialWis]").prop("disabled", true);
-  } else if (halfelfRacial === "Dragonmark of Storm") {
-  } else if (halfelfRacial === "selectSub") {
-    $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
-    $("select").change(function () {
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=" + this.value + "]")
-        .prop("disabled", true)
-        .siblings()
-        .prop("disabled", false);
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=selected], option[value=RacialCha]")
-        .prop("disabled", true);
-    });
-    $("select#ability1, select#ability2")
-      .children("option[value=selected], option[value=RacialCha]")
-      .prop("disabled", true);
-  }
+//   if (halfelfRacial === "Half-Elf Variant") {
+//     $("select").change(function () {
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=" + this.value + "]")
+//         .prop("disabled", true)
+//         .siblings()
+//         .prop("disabled", false);
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=selected], option[value=RacialCha]")
+//         .prop("disabled", true);
+//     });
+//     $("select#ability1, select#ability2")
+//       .children("option[value=selected], option[value=RacialCha]")
+//       .prop("disabled", true);
+//   } else if (halfelfRacial === "Dragonmark of Detection") {
+//     $("select#ability1, select#ability2").prop("disabled", false);
+//     $("select").change(function () {
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=" + this.value + "]")
+//         .prop("disabled", true)
+//         .siblings()
+//         .prop("disabled", false);
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=selected], option[value=RacialWis]")
+//         .prop("disabled", true);
+//     });
+//     $("select#ability1 option[value=RacialWis]").prop("disabled", true);
+//   } else if (halfelfRacial === "Dragonmark of Storm") {
+//   } else if (halfelfRacial === "selectSub") {
+//     $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
+//     $("select").change(function () {
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=" + this.value + "]")
+//         .prop("disabled", true)
+//         .siblings()
+//         .prop("disabled", false);
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=selected], option[value=RacialCha]")
+//         .prop("disabled", true);
+//     });
+//     $("select#ability1, select#ability2")
+//       .children("option[value=selected], option[value=RacialCha]")
+//       .prop("disabled", true);
+//   }
 
-  jsonSubrace();
-  $(document).ready(chooseType());
-}
+//   jsonSubrace();
+//   $(document).ready(chooseType());
+// }
 
-function raceHalfOrc() {
-  var halforcRacial = $("select#subRace").val();
-  jsonRace();
-  if (halforcRacial === "Dragonmark of Finding") {
-    jsonSubrace();
-    $(document).ready(chooseType());
-  } else {
-    $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
-  }
-}
+// function raceHalfOrc() {
+//   var halforcRacial = $("select#subRace").val();
+//   jsonRace();
+//   if (halforcRacial === "Dragonmark of Finding") {
+//     jsonSubrace();
+//     $(document).ready(chooseType());
+//   } else {
+//     $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
+//   }
+// }
 
-function raceHalfling() {
-  var halflingRacial = $("select#subRace").val();
-  if (halflingRacial === "Ghostwise Halfling") {
-    jsonSubrace();
-  } else if (halflingRacial === "Lightfoot Halfling") {
-    jsonSubrace();
-  } else if (halflingRacial === "Stout Halfling") {
-    jsonSubrace();
-  }
-  if (halflingRacial === "Dragonmark of Healing") {
-    jsonSubrace();
-    $(document).ready(chooseType());
-  }
-  if (halflingRacial === "Dragonmark of Hospitality") {
-    jsonSubrace();
-    $(document).ready(chooseType());
-  } else {
-    $("div#SubraceTraits").html("");
-  }
-}
+// function raceHalfling() {
+//   var halflingRacial = $("select#subRace").val();
+//   if (halflingRacial === "Ghostwise Halfling") {
+//     jsonSubrace();
+//   } else if (halflingRacial === "Lightfoot Halfling") {
+//     jsonSubrace();
+//   } else if (halflingRacial === "Stout Halfling") {
+//     jsonSubrace();
+//   }
+//   if (halflingRacial === "Dragonmark of Healing") {
+//     jsonSubrace();
+//     $(document).ready(chooseType());
+//   }
+//   if (halflingRacial === "Dragonmark of Hospitality") {
+//     jsonSubrace();
+//     $(document).ready(chooseType());
+//   } else {
+//     $("div#SubraceTraits").html("");
+//   }
+// }
 
-function raceHuman() {
-  jsonRace();
-  var humanRacial = $("select#subRace").val();
+// function raceHuman() {
+//   jsonRace();
+//   var humanRacial = $("select#subRace").val();
 
-  $("select#subRace").change(function () {
-    $("select#ability1, select#ability2").prop("disabled", false);
-    $("select#ability1").val("selected");
-    $("select#ability2").val("selected");
-    $("select#ability1").change();
-    $("select#ability2").change();
-  });
+//   $("select#subRace").change(function () {
+//     $("select#ability1, select#ability2").prop("disabled", false);
+//     $("select#ability1").val("selected");
+//     $("select#ability2").val("selected");
+//     $("select#ability1").change();
+//     $("select#ability2").change();
+//   });
 
-  if (humanRacial === "Human Variant") {
-    $("select").change(function () {
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=" + this.value + "]")
-        .attr("disabled", true)
-        .siblings()
-        .removeAttr("disabled");
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=selected]")
-        .attr("disabled", true);
-    });
-    $("div#raceDescription").html("");
-    $("dl#humanSubrace").html("");
-  } else if (humanRacial === "Dragonmark of Finding") {
-  } else if (humanRacial === "Dragonmark of Handling") {
-    $("select#ability1, select#ability2").prop("disabled", false);
-    $("select").change(function () {
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=" + this.value + "]")
-        .prop("disabled", true)
-        .siblings()
-        .prop("disabled", false);
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=selected], option[value=RacialWis]")
-        .prop("disabled", true);
-    });
-    $("select#ability1 option[value=RacialWis]").prop("disabled", true);
-  } else if (humanRacial === "Dragonmark of Making") {
-    $("select#ability1, select#ability2").prop("disabled", false);
-    $("select").change(function () {
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=" + this.value + "]")
-        .prop("disabled", true)
-        .siblings()
-        .prop("disabled", false);
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=selected], option[value=RacialInt]")
-        .prop("disabled", true);
-    });
-    $("select#ability1 option[value=RacialWis]").prop("disabled", true);
-  } else if (humanRacial === "Dragonmark of Passage") {
-    $("select#ability1, select#ability2").prop("disabled", false);
-    $("select").change(function () {
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=" + this.value + "]")
-        .prop("disabled", true)
-        .siblings()
-        .prop("disabled", false);
-      $("select#ability1, select#ability2")
-        .not(this)
-        .children("option[value=selected], option[value=RacialDex]")
-        .prop("disabled", true);
-    });
-    $("select#ability1 option[value=RacialWis]").prop("disabled", true);
-  } else if (humanRacial === "Dragonmark of Sentinel") {
-  } else {
-    $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
-    $("select#ability1").val("selected");
-    $("select#ability2").val("selected");
-    $("select#ability1, select#ability2")
-      .children("option")
-      .attr("disabled", true)
-      .siblings()
-      .removeAttr("disabled");
-    $("select#ability1, select#ability2")
-      .children("option[value=selected]")
-      .attr("disabled", true);
-  }
+//   if (humanRacial === "Human Variant") {
+//     $("select").change(function () {
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=" + this.value + "]")
+//         .attr("disabled", true)
+//         .siblings()
+//         .removeAttr("disabled");
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=selected]")
+//         .attr("disabled", true);
+//     });
+//     $("div#raceDescription").html("");
+//     $("dl#humanSubrace").html("");
+//   } else if (humanRacial === "Dragonmark of Finding") {
+//   } else if (humanRacial === "Dragonmark of Handling") {
+//     $("select#ability1, select#ability2").prop("disabled", false);
+//     $("select").change(function () {
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=" + this.value + "]")
+//         .prop("disabled", true)
+//         .siblings()
+//         .prop("disabled", false);
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=selected], option[value=RacialWis]")
+//         .prop("disabled", true);
+//     });
+//     $("select#ability1 option[value=RacialWis]").prop("disabled", true);
+//   } else if (humanRacial === "Dragonmark of Making") {
+//     $("select#ability1, select#ability2").prop("disabled", false);
+//     $("select").change(function () {
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=" + this.value + "]")
+//         .prop("disabled", true)
+//         .siblings()
+//         .prop("disabled", false);
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=selected], option[value=RacialInt]")
+//         .prop("disabled", true);
+//     });
+//     $("select#ability1 option[value=RacialWis]").prop("disabled", true);
+//   } else if (humanRacial === "Dragonmark of Passage") {
+//     $("select#ability1, select#ability2").prop("disabled", false);
+//     $("select").change(function () {
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=" + this.value + "]")
+//         .prop("disabled", true)
+//         .siblings()
+//         .prop("disabled", false);
+//       $("select#ability1, select#ability2")
+//         .not(this)
+//         .children("option[value=selected], option[value=RacialDex]")
+//         .prop("disabled", true);
+//     });
+//     $("select#ability1 option[value=RacialWis]").prop("disabled", true);
+//   } else if (humanRacial === "Dragonmark of Sentinel") {
+//   } else {
+//     $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
+//     $("select#ability1").val("selected");
+//     $("select#ability2").val("selected");
+//     $("select#ability1, select#ability2")
+//       .children("option")
+//       .attr("disabled", true)
+//       .siblings()
+//       .removeAttr("disabled");
+//     $("select#ability1, select#ability2")
+//       .children("option[value=selected]")
+//       .attr("disabled", true);
+//   }
 
-  jsonSubrace();
-  $(document).ready(chooseType());
-}
+//   jsonSubrace();
+//   $(document).ready(chooseType());
+// }
 
-function raceOrc() {
-  var orcRacial = $("select#subRace").val();
-  jsonRace();
-  if (orcRacial === "Eberron Orc") {
-    jsonSubrace();
-  } else {
-    $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
-  }
-}
+// function raceOrc() {
+//   var orcRacial = $("select#subRace").val();
+//   jsonRace();
+//   if (orcRacial === "Eberron Orc") {
+//     jsonSubrace();
+//   } else {
+//     $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
+//   }
+// }
 
-function raceShifter() {
-  var shifterRacial = $("select#subRace").val();
-  if (shifterRacial === "Beasthide Shifter") {
-    jsonSubrace();
-  } else if (shifterRacial === "Longtooth Shifter") {
-    jsonSubrace();
-  } else if (shifterRacial === "Swiftstride Shifter") {
-    jsonSubrace();
-  } else if (shifterRacial === "Wildhunt Shifter") {
-    jsonSubrace();
-  } else {
-    $("div#SubraceTraits").html("");
-  }
-}
+// function raceShifter() {
+//   var shifterRacial = $("select#subRace").val();
+//   if (shifterRacial === "Beasthide Shifter") {
+//     jsonSubrace();
+//   } else if (shifterRacial === "Longtooth Shifter") {
+//     jsonSubrace();
+//   } else if (shifterRacial === "Swiftstride Shifter") {
+//     jsonSubrace();
+//   } else if (shifterRacial === "Wildhunt Shifter") {
+//     jsonSubrace();
+//   } else {
+//     $("div#SubraceTraits").html("");
+//   }
+// }
 
-function raceTiefling() {
-  jsonRace();
-  var tieflingRacial = $("select#subRace")
-    .find("option:selected")
-    .attr("data-srchoice");
-  if (tieflingRacial === "feraltiefling") {
-    jsonSubrace();
-  } else if (tieflingRacial === "devilstonguetielfling") {
-    jsonSubrace();
-  } else if (tieflingRacial === "hellfiretiefling") {
-    jsonSubrace();
-  } else if (tieflingRacial === "wingedtiefling") {
-    jsonSubrace();
-  } else if (tieflingRacial === "asmodeus") {
-    jsonSubrace();
-  } else if (tieflingRacial === "baalzebul") {
-    jsonSubrace();
-  } else if (tieflingRacial === "dispater") {
-    jsonSubrace();
-  } else if (tieflingRacial === "fierna") {
-    jsonSubrace();
-  } else if (tieflingRacial === "glasya") {
-    jsonSubrace();
-  } else if (tieflingRacial === "levistus") {
-    jsonSubrace();
-  } else if (tieflingRacial === "mammon") {
-    jsonSubrace();
-  } else if (tieflingRacial === "mephistopheles") {
-    jsonSubrace();
-  } else if (tieflingRacial === "zariel") {
-    jsonSubrace();
-  } else {
-    $("div#RacialTraits").html(
-      '<dl id="RacialTraits"><h3>Racial Traits</h3></dl>'
-    );
-    $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
-  }
-}
+// function raceTiefling() {
+//   jsonRace();
+//   var tieflingRacial = $("select#subRace")
+//     .find("option:selected")
+//     .attr("data-srchoice");
+//   if (tieflingRacial === "feraltiefling") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "devilstonguetielfling") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "hellfiretiefling") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "wingedtiefling") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "asmodeus") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "baalzebul") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "dispater") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "fierna") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "glasya") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "levistus") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "mammon") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "mephistopheles") {
+//     jsonSubrace();
+//   } else if (tieflingRacial === "zariel") {
+//     jsonSubrace();
+//   } else {
+//     $("div#RacialTraits").html(
+//       '<dl id="RacialTraits"><h3>Racial Traits</h3></dl>'
+//     );
+//     $("div#SubraceTraits").html('<dl id="SubraceTraits"></dl>');
+//   }
+// }
 
-function chooseType() {
-  $.getJSON("json/races_20201118.json", function (data) {
-    var html = [];
-    var race = $("select#Race").val();
-    var subrace = $("select#subRace").val();
-    if (
-      race === "Dragonborn" ||
-      subrace === "Dragonmark of Detection" ||
-      subrace === "Dragonmark of Finding" ||
-      subrace === "Dragonmark of Handling" ||
-      subrace === "Dragonmark of Healing" ||
-      subrace === "Dragonmark of Hospitality" ||
-      subrace === "Dragonmark of Making" ||
-      subrace === "Dragonmark of Passage" ||
-      subrace === "Dragonmark of Scribing" ||
-      subrace === "Dragonmark of Sentinel" ||
-      subrace === "Dragonmark of Shadow" ||
-      subrace === "Dragonmark of Storm" ||
-      subrace === "Dragonmark of Warding"
-    ) {
-      if (race === "Dragonborn") {
-        $("div#RacialTraits").append(
-          '<table class="TypesTable"><thead><tr><th style="width: 10%;" ></th><th style="width: 20%; text-align: left;">' +
-            "Dragon" +
-            '</th><th style="width: 20%; text-align: left;">' +
-            "Damage Type" +
-            '</th><th style="width: 40%; text-align: left;">' +
-            "Breath Weapon" +
-            '</th><th style="width: 10%;"></th></tr></thead><tbody id="Join">'
-        );
-        for (var i = 0; i < data[race].Traits.Types.length; i++) {
-          html = $("<tr/>", { class: "Types" });
-          html.append("<td></td>");
-          html.append("<td>" + data[race].Traits.Types[i].tdata1 + "</td>");
-          html.append("<td>" + data[race].Traits.Types[i].tdata2 + "</td>");
-          html.append("<td>" + data[race].Traits.Types[i].tdata3 + "</td>");
-          html.append("<td></td>");
-          $("tbody#Join").append(html);
-        }
-      } else {
-        $("div#SubraceTraits").append(
-          '<table class="TypesTable"><thead><tr><th style="width: 10%;" ></th><th style="width: 10%; text-align: left;">' +
-            "Spell Level" +
-            '</th><th style="width: 70%; text-align: left;">' +
-            "Spells" +
-            '</th><th style="width: 10%; text-align: left;"></th></tr></thead><tbody id="Join">'
-        );
-        for (
-          var j = 0;
-          j < data[race].Subrace[subrace].Traits.Types.length;
-          j++
-        ) {
-          html = $("<tr/>", { class: "Types" });
-          html.append("<td></td>");
-          html.append(
-            "<td>" +
-              data[race].Subrace[subrace].Traits.Types[j].tdata1 +
-              "</td>"
-          );
-          html.append(
-            "<td>" +
-              data[race].Subrace[subrace].Traits.Types[j].tdata2 +
-              "</td>"
-          );
-          html.append("<td></td>");
-          $("tbody#Join").append(html);
-        }
-      }
-      $("div#RacialTraits").append("</tbody></table>");
-    } else if (subrace === "Half-Elf Variant" || subrace === "Rock Gnome") {
-      $("div#SubraceTraits").append(
-        '<table><tbody><tr><td style="width: 5%;"></td><td style="width: 95%;" id="Types" class="Types"></td><td></td>'
-      );
-      $.each(data[race].Subrace[subrace].Traits.Types, function (key, val) {
-        html.push(
-          "<dt><b>" + key + "</b></dt><dd><span>" + val + "</span></dd>"
-        );
-      });
-      $("<dl/>", {
-        class: "Types",
-        html: html.join(""),
-      }).appendTo("td#Types");
-      $("div#SubraceTraits").append("</tr></tbody></table>");
-    }
-  });
-}
+// function chooseType() {
+//   $.getJSON("json/races_20201118.json", function (data) {
+//     var html = [];
+//     var race = $("select#Race").val();
+//     var subrace = $("select#subRace").val();
+//     if (
+//       race === "Dragonborn" ||
+//       subrace === "Dragonmark of Detection" ||
+//       subrace === "Dragonmark of Finding" ||
+//       subrace === "Dragonmark of Handling" ||
+//       subrace === "Dragonmark of Healing" ||
+//       subrace === "Dragonmark of Hospitality" ||
+//       subrace === "Dragonmark of Making" ||
+//       subrace === "Dragonmark of Passage" ||
+//       subrace === "Dragonmark of Scribing" ||
+//       subrace === "Dragonmark of Sentinel" ||
+//       subrace === "Dragonmark of Shadow" ||
+//       subrace === "Dragonmark of Storm" ||
+//       subrace === "Dragonmark of Warding"
+//     ) {
+//       if (race === "Dragonborn") {
+//         $("div#RacialTraits").append(
+//           '<table class="TypesTable"><thead><tr><th style="width: 10%;" ></th><th style="width: 20%; text-align: left;">' +
+//             "Dragon" +
+//             '</th><th style="width: 20%; text-align: left;">' +
+//             "Damage Type" +
+//             '</th><th style="width: 40%; text-align: left;">' +
+//             "Breath Weapon" +
+//             '</th><th style="width: 10%;"></th></tr></thead><tbody id="Join">'
+//         );
+//         for (var i = 0; i < data[race].Traits.Types.length; i++) {
+//           html = $("<tr/>", { class: "Types" });
+//           html.append("<td></td>");
+//           html.append("<td>" + data[race].Traits.Types[i].tdata1 + "</td>");
+//           html.append("<td>" + data[race].Traits.Types[i].tdata2 + "</td>");
+//           html.append("<td>" + data[race].Traits.Types[i].tdata3 + "</td>");
+//           html.append("<td></td>");
+//           $("tbody#Join").append(html);
+//         }
+//       } else {
+//         $("div#SubraceTraits").append(
+//           '<table class="TypesTable"><thead><tr><th style="width: 10%;" ></th><th style="width: 10%; text-align: left;">' +
+//             "Spell Level" +
+//             '</th><th style="width: 70%; text-align: left;">' +
+//             "Spells" +
+//             '</th><th style="width: 10%; text-align: left;"></th></tr></thead><tbody id="Join">'
+//         );
+//         for (
+//           var j = 0;
+//           j < data[race].Subrace[subrace].Traits.Types.length;
+//           j++
+//         ) {
+//           html = $("<tr/>", { class: "Types" });
+//           html.append("<td></td>");
+//           html.append(
+//             "<td>" +
+//               data[race].Subrace[subrace].Traits.Types[j].tdata1 +
+//               "</td>"
+//           );
+//           html.append(
+//             "<td>" +
+//               data[race].Subrace[subrace].Traits.Types[j].tdata2 +
+//               "</td>"
+//           );
+//           html.append("<td></td>");
+//           $("tbody#Join").append(html);
+//         }
+//       }
+//       $("div#RacialTraits").append("</tbody></table>");
+//     } else if (subrace === "Half-Elf Variant" || subrace === "Rock Gnome") {
+//       $("div#SubraceTraits").append(
+//         '<table><tbody><tr><td style="width: 5%;"></td><td style="width: 95%;" id="Types" class="Types"></td><td></td>'
+//       );
+//       $.each(data[race].Subrace[subrace].Traits.Types, function (key, val) {
+//         html.push(
+//           "<dt><b>" + key + "</b></dt><dd><span>" + val + "</span></dd>"
+//         );
+//       });
+//       $("<dl/>", {
+//         class: "Types",
+//         html: html.join(""),
+//       }).appendTo("td#Types");
+//       $("div#SubraceTraits").append("</tr></tbody></table>");
+//     }
+//   });
+// }
 
 function increment(e) {
   var e = window.event || e;
