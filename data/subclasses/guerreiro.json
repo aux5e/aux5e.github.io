@@ -1,51 +1,45 @@
 {
-	"class": [
-		{
-			"name": "Guerreiro",
-            "subclassTitle": "Arquétipos Marciais",
-			"multiclassing": {
-				"requirements": {
-					"or": [
-						{
-							"str": 13,
-							"dex": 13
-						}
-					]
-				},
-				"proficienciesGained": {
-					"armor": [
-						"light",
-						"medium",
-						"{@item shield|phb|shields}"
-					],
-					"weapons": [
-						"simple",
-						"martial"
-					]
-				}
-			},
-            "entries": [
-                "Diferentes guerreiros escolhem diferentes abordagens para aperfeiçoar suas habilidades de combate. O arquétipo marcial que você escolhe reflete a sua abordagem."
-            ]
-		}
-	],
-	"subclasses": [
-		{
-			"name": "Campeão",
-			"shortName": "Campeão",
+    "class": [{
+        "name": "Guerreiro",
+        "subclassTitle": "Arquétipos Marciais",
+        "multiclassing": {
+            "requirements": {
+                "or": [{
+                    "str": 13,
+                    "dex": 13
+                }]
+            },
+            "proficienciesGained": {
+                "armor": [
+                    "light",
+                    "medium",
+                    "{@item shield|phb|shields}"
+                ],
+                "weapons": [
+                    "simple",
+                    "martial"
+                ]
+            }
+        },
+        "entries": [
+            "Diferentes guerreiros escolhem diferentes abordagens para aperfeiçoar suas habilidades de combate. O arquétipo marcial que você escolhe reflete a sua abordagem."
+        ]
+    }],
+    "subclasses": [{
+            "name": "Campeão",
+            "shortName": "Campeão",
             "id": "campeao",
-			"source": "PHB",
-			"className": "Guerreiro",
-			"classSource": "PHB",
-			"page": 90,
-			"srd": true,
-			"basicRules": true,
+            "source": "PHB",
+            "className": "Guerreiro",
+            "classSource": "PHB",
+            "page": 90,
+            "srd": true,
+            "basicRules": true,
             "level": 3,
             "entries": [
                 "O arquétipo Campeão se concentra no desenvolvimento da força física, cultivando uma perfeição mortífera. Aqueles que se inspiram neste arquétipo combinam o treinamento rigoroso com a excelência física, desferindo golpes devastadores."
             ],
-			"subclassFeatures": [
-                {
+            "subclassFeatures": [{
                     "name": "Crítico Aprimorado",
                     "source": "PHB",
                     "page": 90,
@@ -126,22 +120,21 @@
                         "No 18º nível, você alcança o ápice da resistência em combate. No começo de cada um dos seus turnos, caso tenha menos do que metade dos seus pontos de vida sobrando, você recupera uma quantidade de pontos de vida igual a 5 + seu modificador de Constituição. Você não ganha esse benefício caso esteja com 0 pontos de vida."
                     ]
                 }
-			]
-		},
+            ]
+        },
         {
-			"name": "Mestre da Batalha",
-			"shortName": "Mestre da Batalha",
+            "name": "Mestre da Batalha",
+            "shortName": "Mestre da Batalha",
             "id": "mestredabatalha",
-			"source": "PHB",
-			"className": "Guerreiro",
-			"classSource": "PHB",
-			"page": 91,
+            "source": "PHB",
+            "className": "Guerreiro",
+            "classSource": "PHB",
+            "page": 91,
             "level": 3,
             "entries": [
                 "Aqueles que incorporam o arquétipo Mestre da Batalha empregam técnicas marciais transmitidas através das gerações. Para um Mestre da Batalha, o combate é um campo de estudos, às vezes incluindo temas que vão além da batalha, como armamentos e caligrafia. Nem todos os lutadores absorvem as lições de história, teoria e arte que são refletidas no arquétipo Mestre da Batalha, mas aqueles que o fazem são guerreiros completos, reunindo grande habilidade e conhecimento."
             ],
-			"subclassFeatures": [
-                {
+            "subclassFeatures": [{
                     "name": "Superioridade em Combate",
                     "source": "PHB",
                     "page": 91,
@@ -155,40 +148,34 @@
                         "Ao escolher este arquétipo no 3º nível, você aprende manobras que são alimentadas por dados especiais, chamados dados de superioridade.",
                         {
                             "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Manobras",
-                                    "entries": [
-                                        "Você aprende três manobras à sua escolha, detalhadas abaixo. Muitas manobras melhoram um ataque de alguma forma. Só se pode usar uma manobra por ataque. Você pode escolher duas manobras extras no 7º, 10º e 15º níveis. Toda vez que aprender novas manobras, também poderá substituir uma manobra antiga por uma diferente."
-                                    ]
-                                }
-                            ]
+                            "entries": [{
+                                "type": "entries",
+                                "name": "Manobras",
+                                "entries": [
+                                    "Você aprende três manobras à sua escolha, detalhadas abaixo. Muitas manobras melhoram um ataque de alguma forma. Só se pode usar uma manobra por ataque. Você pode escolher duas manobras extras no 7º, 10º e 15º níveis. Toda vez que aprender novas manobras, também poderá substituir uma manobra antiga por uma diferente."
+                                ]
+                            }]
                         },
                         {
                             "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Dados de Superioridade",
-                                    "entries": [
-                                        "Você possui 4d8 de superioridade. Um dado de superioridade é gasto ao ser utilizado. Você recupera todos os dados gastos após completar um descanso curto ou longo. Você ganha mais um dado de superioridade no 7º nível e outro no 15º nível."
-                                    ]
-                                }
-                            ]
+                            "entries": [{
+                                "type": "entries",
+                                "name": "Dados de Superioridade",
+                                "entries": [
+                                    "Você possui 4d8 de superioridade. Um dado de superioridade é gasto ao ser utilizado. Você recupera todos os dados gastos após completar um descanso curto ou longo. Você ganha mais um dado de superioridade no 7º nível e outro no 15º nível."
+                                ]
+                            }]
                         },
                         {
                             "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Salvaguardas",
-                                    "entries": [
-                                        "Algumas das suas manobras exigem que seus alvos realizem testes de salvaguarda para resistirem aos seus efeitos. A CD dos testes de salvaguarda é calculada da seguinte forma:",
-                                        "<b>CD contra suas manobras =</b> 8 + seu bônus de proficiência+ seu modificador de Força ou Destreza (à sua escolha)"
-                                    ]
-                                }
-                            ]
+                            "entries": [{
+                                "type": "entries",
+                                "name": "Salvaguardas",
+                                "entries": [
+                                    "Algumas das suas manobras exigem que seus alvos realizem testes de salvaguarda para resistirem aos seus efeitos. A CD dos testes de salvaguarda é calculada da seguinte forma:",
+                                    "<b>CD contra suas manobras =</b> 8 + seu bônus de proficiência+ seu modificador de Força ou Destreza (à sua escolha)"
+                                ]
+                            }]
                         }
                     ]
                 },
@@ -207,8 +194,7 @@
                         {
                             "type": "options",
                             "count": 3,
-                            "entries": [
-                                {
+                            "entries": [{
                                     "type": "refOptionalfeature",
                                     "name": "Aparar",
                                     "entries": [
@@ -476,22 +462,21 @@
                         "No 18º nível, seus dados de superioridade transformam-se em d12."
                     ]
                 }
-			]
-		},
-		{
-			"name": "Cavaleiro Místico",
-			"shortName": "Cavaleiro Místico",
+            ]
+        },
+        {
+            "name": "Cavaleiro Místico",
+            "shortName": "Cavaleiro Místico",
             "id": "cavaleiromistico",
-			"source": "PHB",
-			"className": "Guerreiro",
-			"classSource": "PHB",
-			"page": 92,
+            "source": "PHB",
+            "className": "Guerreiro",
+            "classSource": "PHB",
+            "page": 92,
             "level": 3,
             "entries": [
                 "O arquetípico Cavaleiro Místico combina o domínio marcial, comum a todos os guerreiros, com um minucioso estudo de magia. Os membros deste arquétipo usam técnicas similares àquelas praticadas pelos magos. Eles concentram seus estudos em duas das oito escolas de magia: abjuração e evocação. As magias de abjuração lhes conferem proteção extra em batalha, enquanto as de evocação causam dano diretamente a seus inimigos, aumentando o alcance do cavaleiro em combate. Os cavaleiros místicos aprendem uma quantidade de magias relativamente pequena, guardando-as na memória."
             ],
-			"subclassFeatures": [
-                {
+            "subclassFeatures": [{
                     "name": "Conjuração",
                     "source": "PHB",
                     "page": 93,
@@ -613,16 +598,16 @@
                         "A partir do 18º nível, ao usar sua ação para conjurar uma magia, você pode realizar um ataque armado como sua ação bônus."
                     ]
                 }
-			]
-		},
-		{
-			"name": "Cavaleiro Dragão Púrpura (Banerete)",
-			"shortName": "Banerete",
+            ]
+        },
+        {
+            "name": "Cavaleiro Dragão Púrpura (Banerete)",
+            "shortName": "Banerete",
             "id": "cavaleirodragaopurpura",
-			"source": "SCAG",
-			"className": "Guerreiro",
-			"classSource": "PHB",
-			"page": 133,
+            "source": "SCAG",
+            "className": "Guerreiro",
+            "classSource": "PHB",
+            "page": 133,
             "level": 3,
             "restriction": "Título de Cavaleiro",
             "entries": [
@@ -630,23 +615,7 @@
                 "Um cavaleiro Dragão Púrpura inspira a grandeza nos outros ao praticar atos de bravura em batalha. A mera presença de um cavaleiro em um vilarejo é o suficiente para fazer com que alguns orcs e bandidos procurem uma presa mais fácil. Um cavaleiro sozinho já é um combatente habilidoso, mas um cavaleiro liderando um bando de aliados pode transformar até mesmo a milícia mais mal equipada em um grupo de guerra feroz.",
                 "Um cavaleiro prefere liderar através de seus feitos, não de palavras. Quando um cavaleiro lidera um ataque, suas ações podem despertar em um aliado a coragem e convicção que estavam escondidas, algo que ele próprio jamais suspeitou que tinha."
             ],
-			"subclassFeatures": [
-                {
-                    "name": "Restrição: Título de Cavaleiro",
-                    "source": "SCAG",
-                    "page": 133,
-                    "className": "Guerreiro",
-                    "classSource": "PHB",
-                    "subclassShortName": "Banerete",
-                    "subclassSource": "SCAG",
-                    "level": 3,
-                    "header": 1,
-                    "entries": [
-                        "Cavaleiros Dragão Púrpura são ligados a um tipo específico de ordem de cavalaria cormyreana.",
-                        "<b>Banerete</b> serve como um nome genérico para este arquétipo se você usá-lo em outros cenários de campanha ou para criar modelos de senhores da guerra que não sejam cavaleiros Dragão Púrpura."
-                    ]
-                },
-                {
+            "subclassFeatures": [{
                     "name": "Grito de Guerra",
                     "source": "SCAG",
                     "page": 133,
@@ -720,23 +689,22 @@
                         "No 18º nível, você escolhe dois aliados a até 18 metros de você, em vez de um."
                     ]
                 }
-			]
-		},
-		{
-			"name": "Arqueiro Arcano",
-			"shortName": "Arqueiro Arcano",
+            ]
+        },
+        {
+            "name": "Arqueiro Arcano",
+            "shortName": "Arqueiro Arcano",
             "id": "arqueiroarcano",
-			"source": "XGE",
-			"className": "Guerreiro",
-			"classSource": "PHB",
-			"page": 42,
+            "source": "XGE",
+            "className": "Guerreiro",
+            "classSource": "PHB",
+            "page": 42,
             "level": 3,
             "entries": [
                 "Um Arqueiro Arcano estuda um método élfico único de arqueria que entrelaça magia em ataque para produzir efeitos sobrenaturais. Arqueiros Arcanos estão entre os maiores guerreiros de elite dos elfos. Eles vigiam os rincões dos domínios élficos, mantendo o olhar atento sobre transgressores e usando flechas mágicas para derrotar monstros e invasores antes que estes possam alcançar assentamentos élficos.",
                 "Ao longo dos séculos, os métodos desses arqueiros elfos tem sido aprendidos por membros de outras raças que se mostraram capazes de equilibrar aptidão arcana e a arte da arqueria."
             ],
-			"subclassFeatures": [
-                {
+            "subclassFeatures": [{
                     "name": "Arte da Arqueria Arcana",
                     "source": "XGE",
                     "page": 42,
@@ -782,8 +750,7 @@
                         {
                             "type": "options",
                             "count": 2,
-                            "entries": [
-                                {
+                            "entries": [{
                                     "type": "refOptionalfeature",
                                     "name": "Flecha de Banimento",
                                     "entries": [
@@ -949,23 +916,22 @@
                         "Você ganha um opção adicional de Disparo Arcano quando alcança o 18º nível. Cada opção também melhora quando você se torna um guerreiro de 18º nível."
                     ]
                 }
-			]
-		},
-		{
-			"name": "Cavaleiro",
-			"shortName": "Cavaleiro",
+            ]
+        },
+        {
+            "name": "Cavaleiro",
+            "shortName": "Cavaleiro",
             "id": "cavaleiro",
-			"source": "XGE",
-			"className": "Guerreiro",
-			"classSource": "PHB",
-			"page": 44,
+            "source": "XGE",
+            "className": "Guerreiro",
+            "classSource": "PHB",
+            "page": 44,
             "level": 3,
             "entries": [
                 "O cavaleiro arquetípico distingue-se em combate montado.",
                 "Quase sempre nascido entre a nobreza e criado na corte, um Cavaleiro sente-se em casa tanto ao liderar uma carga de cavalaria quanto fazendo política num jantar de estado. Cavaleiros também aprendem como proteger aqueles sob sua responsabilidade, não raro servindo como protetores de seus superiores e dos oprimidos. Compelidos a corrigir injustiças ou angariar prestígio, muitos desses combatentes abandonam suas vidas de conforto para embarcar em gloriosas aventuras."
             ],
-			"subclassFeatures": [
-                {
+            "subclassFeatures": [{
                     "name": "Proficiência Bônus",
                     "source": "XGE",
                     "page": 44,
@@ -1068,22 +1034,21 @@
                         "A partir do 18º nível, você responde ao perigo com vigilância extraordinária. Em combate, você tem um reação especial que pode usar uma vez no turno de toda criatura, exceto no seu próprio. Você pode usar esta reação especial apenas para realizar um ataque de oportunidade, e não pode usá-la no mesmo turno em que usa sua reação normal."
                     ]
                 }
-			]
-		},
-		{
-			"name": "Samurai",
-			"shortName": "Samurai",
+            ]
+        },
+        {
+            "name": "Samurai",
+            "shortName": "Samurai",
             "id": "samurai",
-			"source": "XGE",
-			"className": "Guerreiro",
-			"classSource": "PHB",
-			"page": 45,
+            "source": "XGE",
+            "className": "Guerreiro",
+            "classSource": "PHB",
+            "page": 45,
             "level": 3,
             "entries": [
                 "O Samurai é um guerreiro que emprega um implacável espírito de luta para superar seus inimigos. A determinação de um Samurai é praticamente inquebrável, e seus inimigos têm duas escolhas: render-se ou morrer lutando."
             ],
-			"subclassFeatures": [
-                {
+            "subclassFeatures": [{
                     "name": "Proficiência Bônus",
                     "source": "XGE",
                     "page": 45,
@@ -1170,7 +1135,7 @@
                         "Após usar esta característica, você não pode usá-la novamente até terminar um descanso longo."
                     ]
                 }
-			]
-		}
-	]
+            ]
+        }
+    ]
 }
