@@ -7,7 +7,7 @@ const JSON_URL = "/data/subclasses/" + pageName + ".json";
 async function loadSubClassIntoPage(url) {
     const sectionBody = document.getElementById("subclasses");
 
-    await $.getJSON(url, function (classeDt) {
+    await $.getJSON(url, function(classeDt) {
         const classe = Object.values(classeDt.class);
         console.log(Object.values(classeDt.subclasses));
         const subclasse = spellToLink(Object.values(classeDt.subclasses));
@@ -71,12 +71,12 @@ async function loadSubClassIntoPage(url) {
                 for (var cEntriesTableRow = 0; cEntriesTableRow < classeentriesLenght; cEntriesTableRow++) {
                     if (typeof subclasse[row].entries[cEntriesTableRow] === 'object' && subclasse[row].entries[cEntriesTableRow].type === "entries") {
                         if (subclasse[row].entries[cEntriesTableRow].name) {
-                            
+
                             // Nome da Lista de Magia 
                             if (subclasse[row].entries[cEntriesTableRow].name === "Lista Expandida de Magias") {
                                 r[++j] = '<h4>' + subclasse[row].entries[cEntriesTableRow].name + '</h4>';
                             }
-                            
+
                             // Entries comuns da Lista de Magias
                             var cleLenght = subclasse[row].entries[cEntriesTableRow].entries.length;
                             for (var i = 0; i < cleLenght; i++) {
@@ -116,7 +116,7 @@ async function loadSubClassIntoPage(url) {
                                 }
                             }
                         }
-                    }            
+                    }
                 }
             }
 
@@ -125,7 +125,7 @@ async function loadSubClassIntoPage(url) {
                 var scfeaturesLenght = subclasse[row].subclassFeatures.length;
 
                 for (var scfeaturesRow = 0; scfeaturesRow < scfeaturesLenght; scfeaturesRow++) {
-                    r[++j] = '<h4>' + '<span class="badge rounded-pill"><span>' + subclasse[row].subclassFeatures[scfeaturesRow].level + '</span></span>' + subclasse[row].subclassFeatures[scfeaturesRow].name + '</h4>';
+                    r[++j] = '<h4>' + '<span class="badge rounded-pill"><span>' + subclasse[row].subclassFeatures[scfeaturesRow].level + '</span></span>' + subclasse[row].subclassFeatures[scfeaturesRow].name + '<span class="sbFeatureSrc">(' + subclasse[row].subclassFeatures[scfeaturesRow].source + ' pg. ' + subclasse[row].subclassFeatures[scfeaturesRow].page + ')</span>' + '</h4>';
 
                     var scentries = subclasse[row].subclassFeatures[scfeaturesRow].entries;
                     var scentriesLenght = scentries.length;
@@ -139,28 +139,28 @@ async function loadSubClassIntoPage(url) {
                             r[++j] = '<div class="card relac-raca" style="margin-top: 22px;margin-bottom: 22px;">';
                             r[++j] = '<div class="card-body"">';
                             r[++j] = '<h6 style="text-transform: uppercase;">' + scentries[scfentriesRow].name + '</h6>';
-                            
+
                             var pLenght = scentries[scfentriesRow].entries.length;
                             for (var p = 0; p < pLenght; p++) {
                                 r[++j] = '<p>' + scentries[scfentriesRow].entries[p] + '</p>';
                             }
-                            
+
                             r[++j] = '</div></div>';
                         }
 
                         // ENTRIES WITH OPTIONS
                         if (typeof scentries[scfentriesRow] === 'object' && scentries[scfentriesRow].type === "options") {
-                            
+
                             var scoentriesLenght = scentries[scfentriesRow].entries.length;
                             for (var scoentriesRow = 0; scoentriesRow < scoentriesLenght; scoentriesRow++) {
-                                
+
                                 var scoeentriesLenght = scentries[scfentriesRow].entries[scoentriesRow].entries.length;
                                 for (var scoeentriesRow = 0; scoeentriesRow < scoeentriesLenght; scoeentriesRow++) {
                                     // Se a entry é string
                                     if (typeof scentries[scfentriesRow].entries[scoentriesRow].entries[scoeentriesRow] === 'string') {
                                         if (scoeentriesRow == 0) {
                                             r[++j] = '<p><strong>' + scentries[scfentriesRow].entries[scoentriesRow].name + '.</strong> ';
-                                        } else {r[++j] = '<p>'}
+                                        } else { r[++j] = '<p>' }
                                         r[++j] = scentries[scfentriesRow].entries[scoentriesRow].entries[scoeentriesRow];
                                         r[++j] = '</p>';
                                     }
@@ -168,12 +168,12 @@ async function loadSubClassIntoPage(url) {
                                     // Se a entry é uma lista
                                     if (typeof scentries[scfentriesRow].entries[scoentriesRow].entries[scoeentriesRow] === 'object' && scentries[scfentriesRow].entries[scoentriesRow].entries[scoeentriesRow].type === "list") {
                                         r[++j] = '<ul>'
-                                        
+
                                         var listEntriesLenght = scentries[scfentriesRow].entries[scoentriesRow].entries[scoeentriesRow].items.length;
                                         for (var listEntriesRow = 0; listEntriesRow < listEntriesLenght; listEntriesRow++) {
                                             r[++j] = '<li>' + scentries[scfentriesRow].entries[scoentriesRow].entries[scoeentriesRow].items[listEntriesRow] + '</li>';
                                         }
-            
+
                                         r[++j] = '</ul>';
                                     }
                                 }
@@ -182,13 +182,13 @@ async function loadSubClassIntoPage(url) {
 
                         // Entries de Entries
                         if (typeof scentries[scfentriesRow] === 'object' && scentries[scfentriesRow].type === "entries") {
-                            
+
                             var scoeentriesLenght = scentries[scfentriesRow].entries.length;
                             for (var scoeentriesRow = 0; scoeentriesRow < scoeentriesLenght; scoeentriesRow++) {
                                 if (typeof scentries[scfentriesRow].entries[scoeentriesRow] === 'string') {
                                     if (scoeentriesRow == 0) {
                                         r[++j] = '<p><strong>' + scentries[scfentriesRow].name + '.</strong> ';
-                                    } else {r[++j] = '<p>'}
+                                    } else { r[++j] = '<p>' }
 
                                     r[++j] = scentries[scfentriesRow].entries[scoeentriesRow];
                                     r[++j] = '</p>';
@@ -202,8 +202,8 @@ async function loadSubClassIntoPage(url) {
                                     for (var i = 0; i < scoeentriesLenght2; i++) {
                                         if (i == 0) {
                                             r[++j] = '<p><strong>' + scentries[scfentriesRow].entries[i].name + '.</strong> ';
-                                        } else {r[++j] = '<p>'}
-    
+                                        } else { r[++j] = '<p>' }
+
                                         r[++j] = scentries[scfentriesRow].entries[scoeentriesRow].entries[i];
                                         r[++j] = '</p>';
                                     }
@@ -214,7 +214,7 @@ async function loadSubClassIntoPage(url) {
                         // Entries de Listas
                         if (typeof scentries[scfentriesRow] === 'object' && scentries[scfentriesRow].type === "list") {
                             r[++j] = '<ul>'
-                            
+
                             var listEntriesLenght = scentries[scfentriesRow].items.length;
                             for (var listEntriesRow = 0; listEntriesRow < listEntriesLenght; listEntriesRow++) {
                                 r[++j] = '<li>' + scentries[scfentriesRow].items[listEntriesRow] + '</li>';
@@ -267,7 +267,7 @@ async function loadSubClassIntoPage(url) {
     });
 }
 
-$(document).ready(async function () {
+$(document).ready(async function() {
     await loadSubClassIntoPage(JSON_URL);
     $('.magias-hover').tooltip({
         template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
