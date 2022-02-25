@@ -125,7 +125,7 @@ async function loadSubClassIntoPage(url) {
                 var scfeaturesLenght = subclasse[row].subclassFeatures.length;
 
                 for (var scfeaturesRow = 0; scfeaturesRow < scfeaturesLenght; scfeaturesRow++) {
-                    r[++j] = '<h4>' + '<span class="badge rounded-pill"><span>' + subclasse[row].subclassFeatures[scfeaturesRow].level + '</span></span>' + subclasse[row].subclassFeatures[scfeaturesRow].name + '<span class="sbFeatureSrc">(' + subclasse[row].subclassFeatures[scfeaturesRow].source + ' pg. ' + subclasse[row].subclassFeatures[scfeaturesRow].page + ')</span>' + '</h4>';
+                    r[++j] = '<h4>' + '<span class="badge rounded-pill"><span>' + subclasse[row].subclassFeatures[scfeaturesRow].level + '</span></span>' + subclasse[row].subclassFeatures[scfeaturesRow].name + ' <span class="sbFeatureSrc">(' + subclasse[row].subclassFeatures[scfeaturesRow].source + ' pg. ' + subclasse[row].subclassFeatures[scfeaturesRow].page + ')</span>' + '</h4>';
 
                     var scentries = subclasse[row].subclassFeatures[scfeaturesRow].entries;
                     var scentriesLenght = scentries.length;
