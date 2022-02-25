@@ -26,16 +26,22 @@ li {
     font-size: 0.9em !important;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 700;
 }
 
@@ -48,12 +54,14 @@ h5 {
     font-size: 15px;
 }
 
-i, em {
+i,
+em {
     font-family: 'Roboto Condensed', sans-serif;
     font-style: italic;
 }
 
-b, strong {
+b,
+strong {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
@@ -108,7 +116,9 @@ footer {
     text-align: center;
 }
 
+
 /** ================ FIM TAGS ================ **/
+
 
 /** ================ NAVBAR ================ **/
 
@@ -151,7 +161,9 @@ footer {
     font-weight: 600;
 }
 
+
 /** ================ FIM NAVBAR ================ **/
+
 
 /** ================ FOOTER ================ **/
 
@@ -163,7 +175,9 @@ footer {
     left: 0;
 }
 
+
 /** ================ FIM FOOTER ================ **/
+
 
 /** ================ BREADCRUMB ================ **/
 
@@ -188,6 +202,7 @@ footer {
     text-decoration: none;
 }
 
+
 /** ================ FIM BREADCRUMB ================ **/
 
 .site-title {
@@ -203,6 +218,7 @@ footer {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
 }
+
 
 /** ================ CARDS ================ **/
 
@@ -265,7 +281,6 @@ footer {
     .row-w-cards {
         padding-bottom: 0px;
     }
-
     .card-alt {
         margin-bottom: 40px;
     }
@@ -277,7 +292,9 @@ footer {
     }
 }
 
+
 /** ================ FIM CARDS ================ **/
+
 
 /** ================ BUTÕES ================ **/
 
@@ -310,10 +327,11 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+
 /** ================ FIM BUTÕES ================ **/
 
-/** ================ TITULOS, SUBTITULOS E FONTS ================ **/
 
+/** ================ TITULOS, SUBTITULOS E FONTS ================ **/
 
 .titulo-span {
     font-family: 'Roboto', sans-serif;
@@ -340,7 +358,6 @@ footer {
     .titulo-span {
         font-size: 0.4em;
     }
-
     h1.titulo-detalhes {
         font-size: 1.8rem;
     }
@@ -443,7 +460,9 @@ h4.subtitulo {
     }
 }
 
+
 /** ================ FIM TITULOS, SUBTITULOS E FONTS ================ **/
+
 
 /** ================ LISTA DE MAGIAS ================ **/
 
@@ -539,7 +558,9 @@ table.dataTable.table-striped>tbody>tr.even {
     }
 }
 
+
 /** ================ FIM LISTA DE MAGIAS ================ **/
+
 
 /** ================ FILTRO DE MAGIAS ================ **/
 
@@ -627,18 +648,15 @@ ul.main-list {
         z-index: 1;
         position: relative;
     }
-
     .main-filter {
         overflow-x: visible;
         overflow-y: visible;
     }
-
     .main-filter {
         width: 100%;
         margin-top: 20px;
         margin-bottom: 0;
     }
-
     .main-list {
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
@@ -651,27 +669,23 @@ ul.main-list {
     .main-filter-container {
         height: 120px;
     }
-
     .main-filter {
         overflow-x: scroll;
         overflow-y: hidden;
         padding-bottom: 8px;
         width: 100%;
     }
-
     .main-list {
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
         justify-content: space-between;
         width: 920px;
     }
-
     .main-filter .main-list .item {
         width: 80px;
         height: 60px;
         margin-right: 12px;
     }
-
     .item span {
         width: 80px;
     }
@@ -738,7 +752,9 @@ ul.main-list {
     box-shadow: 0 0 0 0.25rem rgb(238 134 0 / 50%);
 }
 
+
 /** ================ FIM FILTRO DE MAGIAS ================ **/
+
 
 /** ================ CALCULADORA DE COMPRA POR PONTOS ================ **/
 
@@ -822,7 +838,9 @@ ul.main-list {
     width: 15px;
 }
 
+
 /** ================ FIM CALCULADORA DE COMPRA POR PONTOS ================ **/
+
 
 /** ================ PAGINA INTERNA MAGIAS ================ **/
 
@@ -896,16 +914,13 @@ ul.main-list {
         display: block;
         float: none;
     }
-
     .nome-magia-top,
     .magia-details {
         margin: 0;
     }
-
     .magia-col-details {
         order: 2;
     }
-
     .magia-col-image {
         order: 1;
         padding-bottom: 10px;
@@ -916,7 +931,6 @@ ul.main-list {
     .magia-details-top label {
         font-size: 0.7rem;
     }
-
     .magia-details-top p {
         font-size: 0.8em;
     }
@@ -956,7 +970,9 @@ ul.main-list {
     display: inline-block;
 }
 
+
 /** ================ FIM PAGINA INTERNA MAGIAS ================ **/
+
 
 /** ================ QUICK MENU ================ **/
 
@@ -1019,7 +1035,7 @@ ul.main-list {
 
 #quick-menu-tier2>.quick-menu-item .quick-menu-item-link:hover {
     border-left: 3px solid #ee8600;
-    color:#ee8600;
+    color: #ee8600;
     transition: all 1s;
 }
 
@@ -1047,7 +1063,8 @@ ul.main-list {
     border-radius: 0rem !important;
 }
 
-#sidebar-menu .nav-pills .nav-link.active, #sidebar-menu .nav-pills .show>.nav-link {
+#sidebar-menu .nav-pills .nav-link.active,
+#sidebar-menu .nav-pills .show>.nav-link {
     color: inherit !important;
     background-color: transparent !important;
     border-left: 3px solid #ee8600 !important;
@@ -1111,7 +1128,7 @@ ul.main-list {
 #quick-menu-tier2 .panel-collapse .quick-menu-item:hover .quick-menu-item-link,
 #sidebar-menu .panel-collapse .nav-pills .nav-link.active {
     border-left: 6px solid #ee8600!important;
-    color:#ee8600;
+    color: #ee8600;
     transition: all 500ms;
 }
 
@@ -1126,37 +1143,50 @@ ul.main-list {
     transform: rotate(90deg);
 }
 
-    /* .panel-heading.active a:before {
+
+/* .panel-heading.active a:before {
         -webkit-transform: rotate(90deg);
         -moz-transform: rotate(90deg);
         transform: rotate(90deg);
     } */
 
+
 /** ================ FIM QUICK MENU ================ **/
+
 
 /** SCROLLBAR P/ QUICK MENU ================ **/
 
+
 /* width */
+
 #quick-menu-tier2::-webkit-scrollbar {
     width: 3px;
 }
 
+
 /* Track */
+
 #quick-menu-tier2::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
+
 /* Handle */
+
 #quick-menu-tier2::-webkit-scrollbar-thumb {
     background: #888;
 }
 
+
 /* Handle on hover */
+
 #quick-menu-tier2::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
+
 /** FIM SCROLLBAR P/ QUICK MENU ================ **/
+
 
 /** ================ BUTÃO BACK TO TOP ================ **/
 
@@ -1200,7 +1230,9 @@ ul.main-list {
     visibility: visible;
 }
 
+
 /** ================ FIM BUTÃO TO TOP ================ **/
+
 
 /** ================ CARD HEADER PAGINA INICIAL ================ **/
 
@@ -1281,7 +1313,9 @@ ul.main-list {
     background-color: rgba(220, 53, 69, 0.8);
 }
 
+
 /** ================ FIM CARD HEADER PAGINA INICIAL ================ **/
+
 
 /** ================ TOOLTIP MAGIAS ================ **/
 
@@ -1324,6 +1358,7 @@ ul.main-list {
 .tooltip .arrow {
     display: none !important;
 }
+
 
 /** ================ POPOVER CUSTOM ================ **/
 
@@ -1440,9 +1475,12 @@ ul.main-list {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+
 /** ================ FIM POPOVER CUSTOM ================ **/
 
+
 /** ================ FIM TOOLTIP MAGIAS ================ **/
+
 
 /** ================ MONSTER BLOCK ================ **/
 
@@ -1521,7 +1559,9 @@ table.mb__stats {
     font-style: italic;
 }
 
+
 /** ================ FIM MONSTER BLOCK ================ **/
+
 
 /** ================ FORMS, TABLES E DATATABLES ================ **/
 
@@ -1593,7 +1633,8 @@ table.mb__stats {
     max-width: 60px;
 }
 
-table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
     display: none !important;
     /* z-index: 999 !important;
     font-family: "Roboto Condensed", "Roboto", sans-serif !important;
@@ -1602,7 +1643,8 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataT
     background-color: #704cd9 !important; */
 }
 
-table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control {
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control {
     padding-left: 12px !important;
 }
 
@@ -1610,49 +1652,42 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dt
     .magiaNomeRow1 {
         font-size: 13px;
     }
-
     .magiaNomeRow2 {
         font-size: 10px;
         font-weight: 500;
     }
-
     #table-lista-de-magias thead th {
         padding: 18px 12px !important;
     }
-
     #table-lista-de-magias .table tbody td {
         padding: 8px 12px !important;
     }
-
     .dataTables_length {
         padding-bottom: 0.5rem;
     }
-
     .dataTables_filter {
         padding-bottom: 0.25rem;
     }
-
     div.dataTables_wrapper div.dataTables_length,
     div.dataTables_wrapper div.dataTables_filter,
     div.dataTables_wrapper div.dataTables_info,
     div.dataTables_wrapper div.dataTables_paginate {
         text-align: left !important;
     }
-
     .table__nome_th {
         min-width: auto;
     }
-
     .dataTables_paginate {
         padding-top: 0.5rem;
     }
-
     .dataTables_paginate .pagination {
         font-size: 12px;
     }
 }
 
+
 /** ================ FIM FORMS, TABLES E DATATABLES ================ **/
+
 
 /** ================ CLASSES & SUBCLASSES ================ **/
 
@@ -1710,11 +1745,18 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dt
     padding-bottom: 0.3rem;
 }
 
+.sbFeatureSrc {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #b5b5b5;
+}
+
 @media only screen and (max-width: 576px) {
     .subClass__Btn .subClass__Title .badge {
         display: table-cell;
     }
 }
+
 
 /* .subClass__Btn .subClass__Title h3::after {
     content: "";
@@ -1782,5 +1824,6 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dt
 .accordion-body p:last-child {
     margin-bottom: 0rem;
 }
+
 
 /** ================ FIM CLASSES & SUBCLASSES ================ **/
