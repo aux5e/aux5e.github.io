@@ -20,6 +20,9 @@ async function loadIntoTable(url, table) {
     }
 
     const magiasArrayLenght = magiasArray.length;
+    function cleanspellname(spellname) {
+        return spellname.toLowerCase().replace(/\s/g, '-').replace(/[àáâãäå]/g, "a").replace(/ç/g, "c").replace(/[èéêë]/g,"e").replace(/[ìíîï]/g,"i").replace(/[òóôõö]/g,"o").replace(/[ùúûü]/g,"u").replace(/['/:]/g, '').replace(/ /g, '');
+      }
 
     // Limpa o corpo da tabela
     tableBody.innerHTML = "";
@@ -29,7 +32,9 @@ async function loadIntoTable(url, table) {
     var j = -1;
     for (var row = 0; row < magiasArrayLenght; row++) {
         r[++j] = '<tr onclick=';
-        r[++j] = 'window.location="' + siteUrl + "/magias.html?nome=" + magiasValues[row];
+        //console.log(magiasArray1[row]);
+        console.log(magiasValues[row]);
+        r[++j] = 'window.location="' + siteUrl + "/magias.html?nome=" + cleanspellname(magiasArray[row].nome);
         r[++j] =
           '"><th scope="row" class="text-center align-middle magiaCirculoCol">';
         if (magiasArray[row].circulo == 0) {
