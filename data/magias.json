@@ -1619,7 +1619,7 @@
       "id": 64,
       "nome": "Compulsão",
       "nome_ingles": "Compulsion",
-      "circulo": " 4º círculo",
+      "circulo": 4,
       "escola": "Encantamento",
       "ritual": false,
       "concentracao": true,
@@ -2833,7 +2833,7 @@
       "guardiao": false,
       "ladino": false,
       "mago": false,
-      "paladino": false,
+      "paladino": true,
       "fonte": "PHB",
       "pagina": "236"
     },
@@ -2858,7 +2858,7 @@
       "guardiao": false,
       "ladino": false,
       "mago": false,
-      "paladino": false,
+      "paladino": true,
       "fonte": "PHB",
       "pagina": "236"
     },
