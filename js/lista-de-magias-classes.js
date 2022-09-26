@@ -32,8 +32,6 @@ async function loadIntoTable(url, table) {
     var j = -1;
     for (var row = 0; row < magiasArrayLenght; row++) {
         r[++j] = '<tr onclick=';
-        //console.log(magiasArray1[row]);
-        console.log(magiasValues[row]);
         r[++j] = 'window.location="' + siteUrl + "/magias.html?nome=" + cleanspellname(magiasArray[row].nome);
         r[++j] =
           '"><th scope="row" class="text-center align-middle magiaCirculoCol">';
