@@ -34,7 +34,7 @@ async function loadIntoTable(url, table) {
       r[++j] = '</div><div class="magiaNomeRow2">';
       r[++j] = MAGIAS_ARRAY[row].escola;
       if (MAGIAS_ARRAY[row].ritual == true) {
-        r[++j] = '<span style="color:#a9a9a9;font-weight:500;"> (ritual)</span>';
+        r[++j] = '<span style="color: #3f3f3f; font-weight: 600;"> (ritual)</span>';
       }
       r[++j] = " • " + MAGIAS_ARRAY[row].componentes;
       r[++j] = "</div></td>";
