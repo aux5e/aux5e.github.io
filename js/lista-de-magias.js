@@ -31,11 +31,12 @@ async function loadIntoTable(url, table) {
       if (MAGIAS_ARRAY[row].concentracao == true) {
         r[++j] = '<span class="concentSpan"></span>';
       }
-      if (MAGIAS_ARRAY[row].ritual == true) {
-        r[++j] = '<span style="border: 1px solid #a9a9a9;border-radius: 999px;font-size: 9px;color: #a9a9a9;margin: 0 0 0 3px;padding: 0px 3px;">R</span>';
-      }
       r[++j] = '</div><div class="magiaNomeRow2">';
-      r[++j] = MAGIAS_ARRAY[row].escola + " • " + MAGIAS_ARRAY[row].componentes;
+      r[++j] = MAGIAS_ARRAY[row].escola;
+      if (MAGIAS_ARRAY[row].ritual == true) {
+        r[++j] = '<span style="color:#a9a9a9;font-weight:500;"> (ritual)</span>';
+      }
+      r[++j] = " • " + MAGIAS_ARRAY[row].componentes;
       r[++j] = "</div></td>";
       r[++j] = '<td class="align-middle magiaInglesCol">';
       r[++j] = MAGIAS_ARRAY[row].nome_ingles;
